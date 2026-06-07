@@ -4,7 +4,16 @@ title: To do
 sidebar_position: 99
 ---
 ### Model Hunter Gathererers
+- What are good determinants of "Camp"
+## Hub formatioen
+- as a bridge between hunter gateherers and settlers
+- What are good determinats of "Hub" (for more permanent settlement)
+  - Water/river
+  - Protection
+  - (Proximity access) to Leaderchip (Marbella: first the elite tourism then mass toerism; Hapton court)
+  - Scaleability/self fulfilling
 - Decisison to Fight-or-Flight
+
 #### eating
 =- More varied than setllers
 - Scavanging
