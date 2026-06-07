@@ -17,7 +17,7 @@ Before focusing on cooperation itself, it helps to clarify the broader frame. Hu
 The fuller definition of broad cooperation is developed in [What is Cooperation?](/what-is-cooperation). The adversarial side of the same interaction space is developed in [What is Adversarial Behavior?](/what-is-adversarial-behavior).
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/cooperation-in-perspective/display-1.svg" alt="Display 1: Cooperation interaction within human behavior" width="900" />
+  <img src="/img/cooperation-in-perspective/display-1.svg" alt="Display 1: Cooperation within the broader landscape of human behavior and human interaction" width="900" />
   <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Cooperation within the broader landscape of human behavior and human interaction.</figcaption>
 </figure>
 
@@ -26,6 +26,58 @@ Within the broad domain of human behavior, a major subset is human interaction: 
 In this broad sense, cooperation includes not only explicit teamwork or collective action, but also many everyday forms of mutual accommodation: helping, sharing, teaching, caregiving, turn-taking, politeness, tacit coordination, and routine civility. At the same time, not all interaction is cooperative. Human interaction can also be adversarial, including both competition, where actors rival one another for scarce goods, status, or advantage, and conflict, where interaction takes the form of more direct opposition, resistance, or obstruction.
 
 These modes are not clean opposites. People may cooperate internally in order to compete externally, as in team sports, business organizations, political coalitions, or military groups. Conflict can also serve cooperation, for example when free riders are punished to protect collective norms. Cooperation is therefore best understood not as the absence of conflict or competition, but as one side of a broader interactive landscape shaped by both compatible and incompatible interdependence.
+
+Display 1 is therefore best read as a broad orientation map rather than as a final taxonomy. The cooperative side can be subdivided into mutual accommodation, active support, shared coordination, and norm-sustaining cooperation. The adversarial side can be subdivided into competition, conflict, coercion or domination, and exploitation or sabotage. The overlap region includes cases where those modes are combined in the same social system.
+
+<figure style={{ margin: '0 0 2rem' }}>
+<div style={{ width: '100%', overflowX: 'auto' }}>
+  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
+    <colgroup>
+      <col style={{ width: '24%' }} />
+      <col style={{ width: '38%' }} />
+      <col style={{ width: '38%' }} />
+    </colgroup>
+    <thead>
+      <tr>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Region in Display 1</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Useful subdivisions</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Typical examples</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Cooperative</td>
+        <td>mutual accommodation; active support; shared coordination; norm-sustaining cooperation</td>
+        <td>turn-taking, helping, caregiving, teaching, teamwork, division of labor, civility, rule-following</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td>Adversarial</td>
+        <td>competition; conflict; coercion or domination; exploitation or sabotage</td>
+        <td>status rivalry, market competition, direct obstruction, protest, threat, forced compliance, undermining opponents</td>
+      </tr>
+      <tr>
+        <td>Mixed or overlapping</td>
+        <td>cooperation inside competition; conflict defending cooperation; institutionalized rivalry</td>
+        <td>sports teams, firms, political parties, sanctions against free riders, courts, elections, regulated markets</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 2:</strong> Subdivisions of cooperative, adversarial, and mixed interaction in the broad map.</figcaption>
+</figure>
+
+Another way to sharpen the same distinction is to classify interaction by two axes: whether the relation is based mainly on compatible or incompatible interdependence, and whether it is loosely organized or highly organized.
+
+<figure style={{ margin: '0 0 2rem', textAlign: 'center' }}>
+  <div style={{ width: '100%', maxWidth: '1180px', margin: '0 auto', overflow: 'hidden' }}>
+    <div style={{ backgroundColor: '#0F3368', padding: '20px 45px', color: '#FFFFFF', textAlign: 'left', fontFamily: 'IBM Plex Sans, Avenir Next, Segoe UI, sans-serif' }}>
+      <div style={{ fontSize: '20px', fontWeight: 700, lineHeight: 1.3 }}>Cooperative and Adversarial Interaction</div>
+      <div style={{ marginTop: '12px', fontSize: '14px', fontWeight: 400, lineHeight: 1.4 }}>A two-axis classification by compatibility of interests and degree of social organization.</div>
+    </div>
+    <img src="/img/cooperation-in-perspective/display-1-quadrants.svg" alt="Display 3: Four-quadrant model of cooperative and adversarial interaction by compatibility and organization" style={{ display: 'block', width: '100%', height: 'auto' }} />
+  </div>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 3:</strong> Four-quadrant model of cooperative and adversarial interaction by compatibility and organization.</figcaption>
+</figure>
 
 ### Overlap between cooperation and adversarial behavior
 
@@ -67,10 +119,10 @@ A compact way to summarize the main overlap patterns is the following:
     </tbody>
   </table>
 </div>
-<figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 2:</strong> Main ways cooperative and adversarial behavior overlap in practice.</figcaption>
+<figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 4:</strong> Main ways cooperative and adversarial behavior overlap in practice.</figcaption>
 </figure>
 
-### Interaction outside cooperative and adverserial behavior
+### Interaction outside cooperative and adversarial behavior
 
 If cooperation is interpreted broadly, then much ordinary interaction is already absorbed into cooperation. That means the region of human interaction strictly outside both cooperative and adversarial behavior becomes smaller.
 
@@ -117,7 +169,7 @@ Still, some interaction remains outside both. The clearest cases are forms of so
     </tbody>
   </table>
 </div>
-<figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 3:</strong> Compact taxonomy of broad cooperation, adversarial behavior, and interaction outside both.</figcaption>
+<figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 5:</strong> Compact taxonomy of broad cooperation, adversarial behavior, and interaction outside both.</figcaption>
 </figure>
 
 Borderline cases such as greeting, small talk, turn-taking, and authority should therefore be classified contextually. In most ordinary settings, greeting, small talk, and turn-taking belong inside broad cooperation because they sustain civility and mutual accommodation. Authority relations vary more sharply by context: some are cooperative, some adversarial, and some remain mainly formal rather than clearly either.
@@ -150,9 +202,9 @@ Herrmann et al. (2007) help make that point more precise. The comparison with cl
       <div style={{ fontSize: '20px', fontWeight: 700, lineHeight: 1.3 }}>Comparative Performance in Physical and Social Domains</div>
       <div style={{ marginTop: '12px', fontSize: '14px', fontWeight: 400, lineHeight: 1.4 }}>Comparison human children versus other primates in the physical domain (A) and the social domain(B).</div>
     </div>
-    <img src="/img/cooperation-in-perspective/display-2.png" alt="Display 4: 2.5-year-old children performed roughly like chimpanzees in the physical domain, with orangutans lower, but far better than both ape species in the social domain (Herrmann et al., 2007)" style={{ display: 'block', width: '100%', height: 'auto' }} />
+    <img src="/img/cooperation-in-perspective/display-2.png" alt="Display 6: 2.5-year-old children performed roughly like chimpanzees in the physical domain, with orangutans lower, but far better than both ape species in the social domain (Herrmann et al., 2007)" style={{ display: 'block', width: '100%', height: 'auto' }} />
   </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 4:</strong> 2.5-year-old children performed roughly like chimpanzees in the physical domain, with orangutans lower, but far better than both ape species in the social domain (Herrmann et al., 2007).</figcaption>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 6:</strong> 2.5-year-old children performed roughly like chimpanzees in the physical domain, with orangutans lower, but far better than both ape species in the social domain (Herrmann et al., 2007).</figcaption>
 </figure>
 
 The point is not that humans are superior at everything. The more relevant claim for this site is that humans show an early advantage in social cognition: attending to others, inferring goals, coordinating attention, and learning from social interaction. Those capacities do not amount to a fixed cooperative script, but they do provide part of the inherited background that makes cooperation developmentally and behaviorally possible.

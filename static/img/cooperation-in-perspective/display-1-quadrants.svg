@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="735" viewBox="0 0 1400 735" role="img" aria-labelledby="title desc">
+  <title id="title">Four-quadrant model of cooperative and adversarial interaction</title>
+  <desc id="desc">A two-axis display classifying interaction by compatible versus incompatible interdependence and low versus high organization.</desc>
+  <defs>
+    <style>
+      .font { font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", Arial, sans-serif; }
+      .axis-label { font-size: 22px; font-weight: 700; fill: #0f3368; }
+      .cell-title { font-size: 30px; font-weight: 700; fill: #0f3368; }
+      .cell-body { font-size: 23px; fill: #1f2d3d; }
+      .note { font-size: 20px; fill: #1f2d3d; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0f3368" />
+    </marker>
+  </defs>
+
+  <rect width="1400" height="735" fill="#ffffff" />
+  <rect x="185" y="95" width="1040" height="500" fill="#ffffff" stroke="#d6e4f5" stroke-width="3" />
+  <rect x="185" y="95" width="520" height="250" fill="#eaf2fb" />
+  <rect x="705" y="95" width="520" height="250" fill="#ffffff" />
+  <rect x="185" y="345" width="520" height="250" fill="#ffffff" />
+  <rect x="705" y="345" width="520" height="250" fill="#eaf2fb" />
+  <line x1="705" y1="95" x2="705" y2="595" stroke="#d6e4f5" stroke-width="3" />
+  <line x1="185" y1="345" x2="1225" y2="345" stroke="#d6e4f5" stroke-width="3" />
+
+  <line x1="185" y1="645" x2="1225" y2="645" stroke="#0f3368" stroke-width="3.5" marker-start="url(#arrow)" marker-end="url(#arrow)" />
+  <text class="font axis-label" x="185" y="690" text-anchor="start">Compatible interdependence</text>
+  <text class="font axis-label" x="1225" y="690" text-anchor="end">Incompatible interdependence</text>
+
+  <line x1="130" y1="595" x2="130" y2="95" stroke="#0f3368" stroke-width="3.5" marker-start="url(#arrow)" marker-end="url(#arrow)" />
+  <text class="font axis-label" x="86" y="105" text-anchor="middle" transform="rotate(-90 86 105)">High organization</text>
+  <text class="font axis-label" x="86" y="595" text-anchor="middle" transform="rotate(-90 86 595)">Low organization</text>
+
+  <text class="font cell-title" x="235" y="160">Organized cooperation</text>
+  <text class="font cell-body" x="235" y="215">teamwork</text>
+  <text class="font cell-body" x="235" y="253">division of labor</text>
+  <text class="font cell-body" x="235" y="291">institutions</text>
+  <text class="font cell-body" x="235" y="329">shared plans</text>
+
+  <text class="font cell-title" x="755" y="160">Organized rivalry</text>
+  <text class="font cell-body" x="755" y="215">markets</text>
+  <text class="font cell-body" x="755" y="253">elections</text>
+  <text class="font cell-body" x="755" y="291">courts</text>
+  <text class="font cell-body" x="755" y="329">war or formal conflict</text>
+
+  <text class="font cell-title" x="235" y="410">Low-level cooperation</text>
+  <text class="font cell-body" x="235" y="465">accommodation</text>
+  <text class="font cell-body" x="235" y="503">helping</text>
+  <text class="font cell-body" x="235" y="541">civility</text>
+  <text class="font cell-body" x="235" y="579">informal coordination</text>
+
+  <text class="font cell-title" x="755" y="410">Low-level opposition</text>
+  <text class="font cell-body" x="755" y="465">quarrels</text>
+  <text class="font cell-body" x="755" y="503">avoidance</text>
+  <text class="font cell-body" x="755" y="541">obstruction</text>
+  <text class="font cell-body" x="755" y="579">direct resistance</text>
+
+  <text class="font note" x="705" y="622" text-anchor="middle">The quadrants are analytical zones, not rigid boxes; many real interactions move between them.</text>
+</svg>
