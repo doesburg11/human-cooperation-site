@@ -61,6 +61,71 @@ Evolution therefore selects based on learning outcomes.
 
 ---
 
+## Baldwinian and Lamarckian Interaction
+
+The key distinction is what crosses the generational boundary.
+
+In a **Baldwinian** interaction, agents learn useful behavior during life, but the learned behavior itself is not inherited. Selection instead favors inherited traits that make the useful behavior easier, faster, or cheaper to learn. Learning affects fitness; fitness changes which learning-supporting traits persist.
+
+In a **Lamarckian** interaction, acquired characteristics are inherited directly. In biological evolution this means the learned or acquired trait itself is passed to offspring. In artificial learning systems, a Lamarckian analogue appears when a trained policy, learned neural-network weights, or acquired hyperparameter state is copied into descendants or replacement populations.
+
+<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
+  <img
+    src="/img/learning-selection-interaction/interaction-evolved-learned-cooperation/lamarck-darwin-baldwin-waddington.svg"
+    alt="Diagram comparing Lamarckian inheritance, Darwinian evolution, the Baldwin effect, and Waddington's genetic assimilation"
+    style={{ display: 'block', width: '100%', height: 'auto' }}
+  />
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Lamarckian inheritance passes acquired change directly, while the Baldwin effect lets learned behavior guide selection without direct inheritance of that learned behavior. Image by Ian Alexander, CC BY-SA 4.0.</figcaption>
+</figure>
+
+For the simulation family on this page, the intended mechanism is mainly Baldwinian: within-lifetime learning affects reproductive success, but descendants inherit learning-relevant settings rather than the final learned policy.
+
+The Predator-Prey-Grass project is a useful contrast. Its ecological reproduction and mutation mechanisms can still be selection-like when offspring inherit only type, speed, position, or starting energy. However, parts of the project are closer to artificial Lamarckism when learned policy state is copied, cloned, or continued across populations, as in population-based training or checkpoint-based policy continuation. In that case, the learned solution itself becomes part of what is transmitted.
+
+<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
+<div style={{ width: '100%', overflowX: 'auto' }}>
+  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
+    <colgroup>
+      <col style={{ width: '22%' }} />
+      <col style={{ width: '28%' }} />
+      <col style={{ width: '28%' }} />
+      <col style={{ width: '22%' }} />
+    </colgroup>
+    <thead>
+      <tr>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Mechanism</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>What is learned during life</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>What is inherited</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Project interpretation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Baldwinian</td>
+        <td>Behavior or policy improves through experience.</td>
+        <td>Parameters that support learning, not the acquired behavior itself.</td>
+        <td>Main framing for this two-timescale cooperation page.</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td>Lamarckian</td>
+        <td>Behavior, policy weights, or acquired parameter state changes through experience.</td>
+        <td>The acquired state itself is copied into descendants or replacement populations.</td>
+        <td>Closest fit for PredPreyGrass variants with policy cloning, continued weights, or PBT-style copying.</td>
+      </tr>
+      <tr>
+        <td>Darwinian selection without learning</td>
+        <td>No within-lifetime policy learning is required.</td>
+        <td>Heritable traits vary and are filtered by reproductive success.</td>
+        <td>Useful baseline, but too limited for learned cooperation.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 2:</strong> The distinction depends on what is transmitted across generations.</figcaption>
+</figure>
+
+---
+
 ## The Baldwin Effect
 
 The Baldwin effect describes how learning changes evolutionary trajectories without requiring inheritance of learned behavior. James Mark Baldwin proposed it in 1896–1897 under the name *Organic Selection*; George Gaylord Simpson gave it its modern name in 1953. The mechanism is Darwinian throughout — no acquired traits are inherited.
@@ -151,11 +216,13 @@ This creates a Baldwin-style pathway:
 
 1. Agents learn partner-contingent cooperation during life
 2. Learners with better long-run payoff leave more offspring
-3. Offspring inherit parameter settings that make successful learning more likely
+3. Offspring inherit parameter settings that make successful learning more likely, not the completed learned policy
 
 Cooperation shifts from:
 
 context-dependent learning alone -> learning supported by evolved predispositions
+
+This differs from a Lamarckian artificial-learning setup, where a trained policy or acquired policy weights are copied directly into later agents or replacement populations.
 
 ---
 
@@ -280,7 +347,7 @@ Within this project, Model 1 maps most directly to direct reciprocity and networ
     </tbody>
   </table>
 </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Related work positioned by proximity to this simulation family along key conceptual axes.</figcaption>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 3:</strong> Related work positioned by proximity to this simulation family along key conceptual axes.</figcaption>
 </figure>
 
 Taken together, these works capture the core logic behind the present simulation family: reciprocal altruism, repeated interaction, local network structure, and partner-contingent learning. The distinctive contribution here is that these ingredients are combined in a single two-timescale setup where learning unfolds within life and learning parameters themselves evolve across generations.
@@ -326,3 +393,5 @@ This interaction forms the core mechanism linking nurture and nature in the inte
 - <a href="https://www.jstor.org/stable/2453130">Baldwin, J.M. (1896). <em>A New Factor in Evolution.</em> The American Naturalist, 30(354), 441–451.</a>
 - <a href="https://www.cs.toronto.edu/~hinton/absps/evolution.pdf">Hinton, G.E. & Nowlan, S.J. (1987). <em>How Learning Can Guide Evolution.</em> Complex Systems, 1(3), 495–502.</a>
 - <a href="https://doi.org/10.1111/j.1558-5646.1953.tb00070.x">Waddington, C.H. (1953). <em>Genetic Assimilation of an Acquired Character.</em> Evolution, 7(2), 118–126.</a>
+- <a href="https://commons.wikimedia.org/wiki/File:Lamarck_Compared_to_Darwin,_Baldwin,_Waddington.svg">Alexander, I. (2018). <em>Lamarck Compared to Darwin, Baldwin, Waddington.svg.</em> Wikimedia Commons. CC BY-SA 4.0.</a>
+- <a href="https://en.wikipedia.org/wiki/Baldwin_effect">Wikipedia contributors. <em>Baldwin effect.</em> Wikipedia.</a>
