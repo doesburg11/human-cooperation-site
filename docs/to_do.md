@@ -3,6 +3,93 @@ id: to_do
 title: To do
 sidebar_position: 99
 ---
+## PredPreyGrass observation-space improvements
+
+Investigate whether agents need **derived internal-state and ecological-context features** in addition to the current raw observations.
+
+Current setup:
+
+```text
+local grid + own/other energy → movement
+```
+
+Agents currently have to learn by trial and error that:
+
+```text
+energy < starvation threshold → danger
+energy > reproduction threshold → reproduction opportunity
+nearby allies + combined energy → possible group kill
+nearby prey → chase value
+grass density direction → foraging opportunity
+enemy pressure direction → escape/flee pressure
+```
+
+Possible improvement:
+
+```text
+local grid + raw energy + derived drives/context → movement
+```
+
+Start with minimal biologically plausible derived features:
+
+```text
+hunger_pressure
+reproductive_readiness
+danger_pressure
+social_pressure / isolation
+```
+
+Avoid adding overly engineered features too early, such as:
+
+```text
+can_kill_this_prey = true
+best_escape_direction = north
+best_grass_direction = east
+```
+
+Reason:
+
+```text
+Raw observation:
+    more open-ended, less biased, harder to learn
+
+Derived internal drives:
+    more sample-efficient, biologically plausible, still not too hand-designed
+
+Detailed affordances:
+    faster learning perhaps, but more assumptions injected
+```
+
+Suggested experiment order:
+
+```text
+1. Baseline:
+   local grid + energy → movement
+
+2. Drive-conditioned version:
+   local grid + energy + hunger/reproduction/danger/social pressure → movement
+
+3. Optional later:
+   add ecological affordance features such as kill feasibility, grass gradient, escape availability
+
+4. Compare:
+   episode_len_mean
+   all-types-survive-to-horizon rate
+   predator/prey extinction timing
+   birth/death rates
+   group-hunt events
+   population stability
+   lineage persistence
+```
+
+Main principle:
+
+```text
+Keep the action space movement-only.
+Make behavior richer by improving what the agent observes,
+not by adding explicit actions like eat, reproduce, or attack.
+```
+
 ### Model Hunter Gathererers
 - What are good determinants of "Camp"
 ## Hub formatioen
