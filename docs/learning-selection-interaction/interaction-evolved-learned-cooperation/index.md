@@ -80,7 +80,7 @@ In a **Lamarckian** interaction, acquired characteristics are inherited directly
 
 For the simulation family on this page, the intended mechanism is mainly Baldwinian: within-lifetime learning affects reproductive success, but descendants inherit learning-relevant settings rather than the final learned policy.
 
-The Predator-Prey-Grass project is a useful contrast. Its ecological reproduction and mutation mechanisms can still be selection-like when offspring inherit only type, speed, position, or starting energy. However, parts of the project are closer to artificial Lamarckism when learned policy state is copied, cloned, or continued across populations, as in population-based training or checkpoint-based policy continuation. In that case, the learned solution itself becomes part of what is transmitted.
+In artificial systems, the same distinction depends on whether descendants receive only inherited settings that affect learnability, or whether they directly receive the acquired policy state produced by learning.
 
 <figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
 <div style={{ width: '100%', overflowX: 'auto' }}>
@@ -110,7 +110,7 @@ The Predator-Prey-Grass project is a useful contrast. Its ecological reproductio
         <td>Lamarckian</td>
         <td>Behavior, policy weights, or acquired parameter state changes through experience.</td>
         <td>The acquired state itself is copied into descendants or replacement populations.</td>
-        <td>Closest fit for PredPreyGrass variants with policy cloning, continued weights, or PBT-style copying.</td>
+        <td>Artificial analogue when trained policies, learned weights, or checkpoint state are copied forward.</td>
       </tr>
       <tr>
         <td>Darwinian selection without learning</td>

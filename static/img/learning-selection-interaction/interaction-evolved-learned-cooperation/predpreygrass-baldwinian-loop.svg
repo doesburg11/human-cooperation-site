@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="860" viewBox="0 0 1400 860" role="img" aria-labelledby="title desc">
+  <title id="title">PredPreyGrass Baldwinian eco-evolutionary loop</title>
+  <desc id="desc">Diagram showing inherited speed genomes shaping movement mechanics, learned policy behavior affecting ecological payoff, and reproduction passing mutated genomes but not acquired policy weights to offspring.</desc>
+  <defs>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0f3368"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#34785a"/>
+    </marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#9b6a08"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#9a3f44"/>
+    </marker>
+    <style>
+      .header { fill: #0f3368; }
+      .title { font: 700 30px "IBM Plex Sans", "Avenir Next", "Segoe UI", Arial, sans-serif; fill: #ffffff; }
+      .subtitle { font: 400 20px "IBM Plex Sans", "Avenir Next", "Segoe UI", Arial, sans-serif; fill: #ffffff; }
+      .label { font: 700 22px "IBM Plex Sans", "Avenir Next", "Segoe UI", Arial, sans-serif; fill: #1f2d3d; }
+      .small-label { font: 700 18px "IBM Plex Sans", "Avenir Next", "Segoe UI", Arial, sans-serif; fill: #1f2d3d; }
+      .body { font: 400 18px "IBM Plex Sans", "Avenir Next", "Segoe UI", Arial, sans-serif; fill: #1f2d3d; }
+      .small { font: 400 15px "IBM Plex Sans", "Avenir Next", "Segoe UI", Arial, sans-serif; fill: #1f2d3d; }
+      .tiny { font: 400 13px "IBM Plex Sans", "Avenir Next", "Segoe UI", Arial, sans-serif; fill: #1f2d3d; }
+      .panel { fill: #ffffff; stroke: #d6e4f5; stroke-width: 2; rx: 8; }
+      .panel-blue { fill: #eaf2fb; stroke: #78aae6; stroke-width: 2; rx: 8; }
+      .panel-green { fill: #edf7f1; stroke: #6aa982; stroke-width: 2; rx: 8; }
+      .panel-amber { fill: #fff7e3; stroke: #d9a83d; stroke-width: 2; rx: 8; }
+      .panel-red { fill: #fff1f1; stroke: #d08a8d; stroke-width: 2; rx: 8; }
+      .lane { fill: #f7faff; stroke: #d6e4f5; stroke-width: 1.5; rx: 8; }
+      .arrow-blue { fill: none; stroke: #0f3368; stroke-width: 4; marker-end: url(#arrow-blue); }
+      .arrow-green { fill: none; stroke: #34785a; stroke-width: 4; marker-end: url(#arrow-green); }
+      .arrow-amber { fill: none; stroke: #9b6a08; stroke-width: 4; marker-end: url(#arrow-amber); }
+      .arrow-red { fill: none; stroke: #9a3f44; stroke-width: 4; marker-end: url(#arrow-red); }
+      .dash-red { fill: none; stroke: #9a3f44; stroke-width: 3; stroke-dasharray: 10 8; marker-end: url(#arrow-red); }
+      .no-fill { fill: none; }
+      .muted { fill: #506176; }
+      .white { fill: #ffffff; }
+    </style>
+  </defs>
+
+  <rect class="header" x="0" y="0" width="1400" height="150"/>
+  <text class="title" x="70" y="58">Baldwinian Loop in PredPreyGrass Eco-Evolution</text>
+  <text class="subtitle" x="70" y="101">Learning changes ecological success; reproduction transmits mutated speed genomes, not acquired policy weights.</text>
+
+  <rect class="lane" x="55" y="185" width="360" height="430"/>
+  <rect class="lane" x="520" y="185" width="360" height="430"/>
+  <rect class="lane" x="985" y="185" width="360" height="430"/>
+
+  <text class="label" x="85" y="225">Generation g</text>
+  <text class="label" x="550" y="225">Lifetime ecology and learning</text>
+  <text class="label" x="1015" y="225">Generation g + 1</text>
+
+  <rect class="panel-blue" x="90" y="255" width="290" height="110"/>
+  <text class="small-label" x="115" y="292">Inherited genome</text>
+  <text class="body" x="115" y="324">speed value</text>
+  <text class="small" x="115" y="348">founder sample or parent genome</text>
+
+  <rect class="panel" x="90" y="415" width="290" height="145"/>
+  <text class="small-label" x="115" y="452">Trait expression</text>
+  <text class="small" x="115" y="485">eco_evolutionary:</text>
+  <text class="small" x="145" y="508">speed controls move distance</text>
+  <text class="small" x="115" y="535">eco_evolutionary_cadence:</text>
+  <text class="small" x="145" y="558">speed controls cooldown</text>
+
+  <rect class="panel-green" x="555" y="255" width="290" height="135"/>
+  <text class="small-label" x="580" y="292">Policy input</text>
+  <text class="small" x="580" y="322">grid observation</text>
+  <text class="small" x="580" y="347">+ speed channel</text>
+  <text class="small" x="580" y="372">+ move_available in cadence</text>
+
+  <rect class="panel-green" x="555" y="440" width="290" height="135"/>
+  <text class="small-label" x="580" y="477">Learned behavior</text>
+  <text class="small" x="580" y="507">PPO can learn speed-specific</text>
+  <text class="small" x="580" y="532">movement, fleeing, chasing,</text>
+  <text class="small" x="580" y="557">and energy-use strategies</text>
+
+  <rect class="panel-amber" x="1020" y="255" width="290" height="135"/>
+  <text class="small-label" x="1045" y="292">Ecological fitness</text>
+  <text class="small" x="1045" y="322">survival, grass intake, predation,</text>
+  <text class="small" x="1045" y="347">energy balance, offspring count</text>
+  <text class="small" x="1045" y="372">filter which genomes reproduce</text>
+
+  <rect class="panel-blue" x="1020" y="440" width="290" height="135"/>
+  <text class="small-label" x="1045" y="477">Offspring inheritance</text>
+  <text class="small" x="1045" y="507">parent speed genome</text>
+  <text class="small" x="1045" y="532">+ bounded mutation</text>
+  <text class="small" x="1045" y="557">fixed starting energy</text>
+
+  <path class="arrow-blue" d="M 380 310 C 445 310 490 308 552 308"/>
+  <text class="tiny muted" x="420" y="294">heritable trait becomes observable/mechanical</text>
+
+  <path class="arrow-green" d="M 700 390 L 700 435"/>
+  <text class="tiny muted" x="716" y="420">within-lifetime learning</text>
+
+  <path class="arrow-amber" d="M 845 510 C 910 510 955 330 1018 330"/>
+  <text class="tiny muted" x="900" y="417">behavior affects payoff</text>
+
+  <path class="arrow-blue" d="M 1165 390 L 1165 435"/>
+  <text class="tiny muted" x="1182" y="420">reproduction</text>
+
+  <path class="arrow-blue" d="M 1020 510 C 870 650 520 650 380 510"/>
+  <text class="tiny muted" x="600" y="682">only the genome crosses the generational boundary</text>
+
+  <path class="dash-red" d="M 845 545 C 950 625 1050 622 1150 575"/>
+  <text class="tiny" x="905" y="626" fill="#9a3f44">not transmitted in the base model: acquired PPO policy weights</text>
+  <line x1="1114" y1="584" x2="1162" y2="536" stroke="#9a3f44" stroke-width="4"/>
+  <line x1="1114" y1="536" x2="1162" y2="584" stroke="#9a3f44" stroke-width="4"/>
+
+  <rect class="panel" x="70" y="720" width="390" height="90"/>
+  <text class="small-label" x="95" y="754">Pure Darwinian treatment</text>
+  <text class="small" x="95" y="782">Speed affects movement and fitness,</text>
+  <text class="small" x="95" y="805">but the policy is blind to genome value.</text>
+
+  <rect class="panel-green" x="505" y="720" width="390" height="90"/>
+  <text class="small-label" x="530" y="754">Baldwinian treatment</text>
+  <text class="small" x="530" y="782">Policy conditions on speed and cadence,</text>
+  <text class="small" x="530" y="805">amplifying selection on heritable speed.</text>
+
+  <rect class="panel-red" x="940" y="720" width="390" height="90"/>
+  <text class="small-label" x="965" y="754">Lamarckian analogue</text>
+  <text class="small" x="965" y="782">Would copy trained policy state or</text>
+  <text class="small" x="965" y="805">checkpoint weights into descendants.</text>
+</svg>
