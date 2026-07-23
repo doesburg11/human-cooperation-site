@@ -5,8 +5,6 @@ sidebar_position: 1
 slug: /learning-selection-interaction/theory
 ---
 
-import BaldwinNeedleHaystack from '@site/src/components/BaldwinNeedleHaystack';
-
 # Interaction Evolved-Learned Cooperation
 
 ## A Two-Timescale Theory of Cooperation
@@ -158,8 +156,6 @@ In the cooperation context:
 - With learning: an agent with even a weak cooperative predisposition can learn to discriminate — cooperating with cooperators, withholding from defectors — and accumulate net positive payoff even in a mixed population.
 
 Learning rescues cooperative genotypes that selection alone would eliminate.
-
-<BaldwinNeedleHaystack />
 
 ### Learning creates new selection pressures
 

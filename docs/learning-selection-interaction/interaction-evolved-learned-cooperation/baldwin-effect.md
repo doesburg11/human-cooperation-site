@@ -5,6 +5,8 @@ sidebar_position: 3
 slug: /learning-selection-interaction/baldwin-effect
 ---
 
+import BaldwinNeedleHaystack from '@site/src/components/BaldwinNeedleHaystack';
+
 # The Baldwin Effect
 
 ## 1. The core idea in one sentence
@@ -62,6 +64,8 @@ The clearest illustration of the effect isn't biological at all — it's a small
 **Why this reveals the effect:** with an all-or-nothing fitness landscape and no learning, evolution has almost nothing to search on — nearly every genome scores the same low fitness, and only the one exact match stands out. There's no gradient to climb. But with `?` alleles in the mix, a genome that gets *most* of its genes right (with a few `?`s left over) has a real chance of stumbling onto the correct combination through blind guessing within its own lifetime. That chance is a small but real fitness signal, and it varies smoothly with how close the genome already is — turning the impossible spike into a landscape evolution can actually climb. Hinton and Nowlan showed that populations with this learning mechanism found good solutions far faster, across generations, than populations without it.
 
 *(This model has also drawn methodological criticism — some analyses argue its specific population size and trial-budget parameters were chosen in ways that flatter the effect, and that the advantage shrinks or vanishes under more realistic, resource-bounded assumptions. It remains the field's standard illustration, but not an uncontested one.)*
+
+<BaldwinNeedleHaystack />
 
 ### Computational demonstrations beyond Hinton-Nowlan
 
