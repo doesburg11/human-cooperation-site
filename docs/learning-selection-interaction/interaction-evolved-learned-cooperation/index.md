@@ -65,7 +65,7 @@ Evolution therefore selects based on learning outcomes.
 
 The key distinction is what crosses the generational boundary.
 
-In a **Baldwinian** interaction, agents learn useful behavior during life, but the learned behavior itself is not inherited. Selection instead favors inherited traits that make the useful behavior easier, faster, or cheaper to learn. Learning affects fitness; fitness changes which learning-supporting traits persist.
+In a **Baldwinian** interaction, agents learn useful behavior during life, but the learned behavior itself is not inherited. Selection instead favors inherited traits that make the useful behavior easier, faster, or cheaper to learn. Learning affects fitness; fitness changes which learning-supporting traits persist. See [The Baldwin Effect](/learning-selection-interaction/baldwin-effect) for the full history, mechanism, and computational demonstrations behind this idea.
 
 In a **Lamarckian** interaction, acquired characteristics are inherited directly. In biological evolution this means the learned or acquired trait itself is passed to offspring. In artificial learning systems, a Lamarckian analogue appears when a trained policy, learned neural-network weights, or acquired hyperparameter state is copied into descendants or replacement populations.
 
@@ -128,34 +128,14 @@ In artificial systems, the same distinction depends on whether descendants recei
 
 ## The Baldwin Effect
 
-The Baldwin effect describes how learning changes evolutionary trajectories without requiring inheritance of learned behavior. James Mark Baldwin proposed it in 1896–1897 under the name *Organic Selection*; George Gaylord Simpson gave it its modern name in 1953. The mechanism is Darwinian throughout — no acquired traits are inherited.
+The Baldwin effect describes how learning changes evolutionary trajectories without requiring inheritance of learned behavior: agents that can learn a beneficial behavior survive long enough to reproduce even before their genes encode that behavior directly, and over generations genetic variants that make the behavior easier to learn accumulate. The mechanism is Darwinian throughout — no acquired traits are inherited. See [The Baldwin Effect](/learning-selection-interaction/baldwin-effect) for the full history, the step-by-step mechanism, the Hinton and Nowlan (1987) computational demonstration and its extensions, and common misconceptions.
 
-The core insight: an organism that can learn a beneficial behavior survives long enough to reproduce even before its genes encode that behavior directly. Over generations, genetic variants that facilitate the learned behavior accumulate — not because the learned trait is passed on, but because those variants are selected for.
+Applied to cooperation specifically:
 
-Step 1 — Plasticity enables adaptive behavior  
-Individuals that can learn cooperative strategies survive and reproduce even when their starting genotype alone would not suffice. Plasticity keeps them viable while genetic variants that support cooperation spread through the population.
+- **Without learning**, a genotype predisposed to cooperate has low fitness unless partners are also cooperative, which is rare in a defector-dominated population — cooperative genotypes are eliminated before they can spread. This is the needle-in-a-haystack landscape Hinton and Nowlan describe.
+- **With learning**, an agent with even a weak cooperative predisposition can learn to discriminate — cooperating with cooperators, withholding from defectors — and accumulate net positive payoff even in a mixed population. Learning rescues cooperative genotypes that selection alone would eliminate, turning the fitness cliff into a slope evolution can climb.
 
-Step 2 — Selection favors learnability  
-Evolution favors traits that:
-
-- reduce learning cost
-- bias initial behavior toward cooperation
-- increase learning speed
-- improve partner discrimination
-
-Step 3 — Partial genetic assimilation  
-Cooperation becomes easier or faster to learn and may become partially innate. This is distinct from Waddington's *genetic assimilation*, where a trait becomes fully encoded and developmentally canalized. The Baldwin effect produces *facilitation* of learning — the learned behavior becomes cheaper or faster — rather than necessarily replacing it.
-
-### Why learning smooths the fitness landscape
-
-Hinton and Nowlan (1987) showed computationally that learning converts a needle-in-a-haystack fitness landscape into a smooth gradient that evolution can climb. Without learning, a cooperative genotype must be nearly complete to provide any fitness advantage. With learning, a partial genotype gets finished within a lifetime and still reproduces — turning a cliff into a slope.
-
-In the cooperation context:
-
-- Without learning: a genotype predisposed to cooperate has low fitness unless partners are also cooperative, which is rare in a defector-dominated population — cooperative genotypes are eliminated before they can spread.
-- With learning: an agent with even a weak cooperative predisposition can learn to discriminate — cooperating with cooperators, withholding from defectors — and accumulate net positive payoff even in a mixed population.
-
-Learning rescues cooperative genotypes that selection alone would eliminate.
+This is distinct from Waddington's *genetic assimilation*, where a trait becomes fully encoded and developmentally canalized — the Baldwin effect produces *facilitation* of learning rather than necessarily replacing it.
 
 ### Learning creates new selection pressures
 
@@ -166,23 +146,6 @@ A learned cooperative strategy, once widespread in the population, creates selec
 - discrimination thresholds can loosen as defectors become rarer
 
 This feedback loop — learning expands what is reachable; evolution consolidates what learning discovered — is the core dynamic this simulation family is designed to capture.
-
----
-
-## Fitness Landscape Interpretation
-
-Without learning:
-
-- cooperative strategies may have low initial fitness
-- evolution cannot discover them
-
-With learning:
-
-- agents discover cooperative policies during life
-- these increase reproductive success
-- evolution favors individuals predisposed to those behaviors
-
-Learning smooths the fitness landscape and guides selection.
 
 ---
 
@@ -390,8 +353,8 @@ This interaction forms the core mechanism linking nurture and nature in the inte
 
 ## References
 
-- <a href="https://www.jstor.org/stable/2453130">Baldwin, J.M. (1896). <em>A New Factor in Evolution.</em> The American Naturalist, 30(354), 441–451.</a>
 - <a href="https://www.cs.toronto.edu/~hinton/absps/evolution.pdf">Hinton, G.E. & Nowlan, S.J. (1987). <em>How Learning Can Guide Evolution.</em> Complex Systems, 1(3), 495–502.</a>
 - <a href="https://doi.org/10.1111/j.1558-5646.1953.tb00070.x">Waddington, C.H. (1953). <em>Genetic Assimilation of an Acquired Character.</em> Evolution, 7(2), 118–126.</a>
 - <a href="https://commons.wikimedia.org/wiki/File:Lamarck_Compared_to_Darwin,_Baldwin,_Waddington.svg">Alexander, I. (2018). <em>Lamarck Compared to Darwin, Baldwin, Waddington.svg.</em> Wikimedia Commons. CC BY-SA 4.0.</a>
-- <a href="https://en.wikipedia.org/wiki/Baldwin_effect">Wikipedia contributors. <em>Baldwin effect.</em> Wikipedia.</a>
+
+For the primary sources on Baldwin's original proposal, its history, and later computational demonstrations, see the references on [The Baldwin Effect](/learning-selection-interaction/baldwin-effect).
