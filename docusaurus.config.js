@@ -50,6 +50,11 @@ const config = {
     locales: ['en'],
   },
 
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
+
   presets: [
     [
       'classic',
@@ -78,6 +83,11 @@ const config = {
   ],
 
   themeConfig: {
+    mermaid: {
+      options: {
+        securityLevel: 'loose',
+      },
+    },
     navbar: {
       title: 'The Nature and Nurture of Cooperation and Competition',
       logo: {

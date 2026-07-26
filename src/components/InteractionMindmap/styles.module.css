@@ -1,0 +1,70 @@
+.container {
+  width: 100%;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+  background: var(--ifm-background-surface-color);
+  overflow: hidden;
+}
+
+.svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: grab;
+}
+
+.svg:active {
+  cursor: grabbing;
+}
+
+.link {
+  fill: none;
+  stroke-width: 1.5px;
+  opacity: 0.55;
+}
+
+.node {
+  user-select: none;
+}
+
+.foldCircle {
+  cursor: pointer;
+}
+
+.foreignObject {
+  overflow: visible;
+  pointer-events: none;
+}
+
+.content {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  white-space: nowrap;
+  color: var(--ifm-font-color-base);
+  line-height: 1.3;
+}
+
+.content :global(p) {
+  margin: 0;
+}
+
+.content :global(a) {
+  color: var(--ifm-link-color);
+  text-decoration: none;
+}
+
+.content :global(a:hover) {
+  text-decoration: underline;
+}
+
+.content :global(code) {
+  font-size: 0.85em;
+  padding: 0.05em 0.35em;
+  border-radius: 4px;
+  background: var(--ifm-color-emphasis-200);
+}
