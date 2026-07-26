@@ -14,11 +14,27 @@ const BRANCH_COLORS = [
   '#f39c12', '#2c3e50', '#00b894',
 ];
 
-const LEVEL_RADIUS = 210;
+const LEVEL_RADIUS = 240;
 const MIN_SCALE = 0.3;
 const MAX_SCALE = 3;
 const ROOT_RX = 115;
 const ROOT_RY = 28;
+const NODE_BOX_WIDTH = 220;
+
+// Labels vary a lot in length (plain topic vs. a topic plus a citation), and
+// with wrapping enabled a long label needs more vertical room than a short
+// one. Without this, long text would either overflow its fixed-height box
+// (spilling into neighboring nodes and covering their fold targets) or force
+// every box to be tall enough for the worst case. Estimate from stripped
+// plain text since `content` is markmap's HTML (links, <code>, etc.).
+function estimateBoxHeight(html, depth) {
+  if (depth === 0) return 44;
+  const fontSize = fontSizeForDepth(depth);
+  const text = html.replace(/<[^>]+>/g, '');
+  const charsPerLine = Math.max(10, Math.floor(NODE_BOX_WIDTH / (fontSize * 0.56)));
+  const lines = Math.max(1, Math.ceil(text.length / charsPerLine));
+  return Math.max(34, lines * fontSize * 1.3 + 12);
+}
 
 // Point on the root hub's boundary in the direction of `angle` (same polar
 // convention as d3.linkRadial: 0 = up, increasing clockwise).
@@ -126,7 +142,7 @@ function RadialMindmapCanvas({ markdown, height }) {
     const tree = d3
       .tree()
       .size([2 * Math.PI, maxRadius])
-      .separation((a, b) => (a.parent === b.parent ? 1.8 : 2.8) / a.depth);
+      .separation((a, b) => (a.parent === b.parent ? 2.6 : 3.8) / a.depth);
     tree(hierarchyRoot);
 
     hierarchyRoot.each((d) => {
@@ -216,8 +232,8 @@ function RadialMindmapCanvas({ markdown, height }) {
               const isCollapsedWithChildren =
                 node.data.hasChildren && node.data.children.length === 0;
               const isRight = depth === 0 || node.cx >= 0;
-              const boxWidth = 220;
-              const boxHeight = depth === 0 ? 44 : 34;
+              const boxWidth = NODE_BOX_WIDTH;
+              const boxHeight = estimateBoxHeight(node.data.content, depth);
               const gap = depth === 0 ? 0 : 12;
               const boxX = depth === 0 ? -boxWidth / 2 : isRight ? gap : -gap - boxWidth;
               return (
