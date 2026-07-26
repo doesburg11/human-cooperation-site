@@ -88,3 +88,53 @@ export const mindmapOutline = `
 A visual, foldable overview of the concepts covered on the [Interaction Evolved-Learned Cooperation](/learning-selection-interaction/theory) page. Click a node's circle to expand or collapse its branch, click its label to jump to that section, and drag or scroll to pan and zoom.
 
 <InteractionMindmap markdown={mindmapOutline} height="720px" />
+
+export const natureNurtureOutline = `
+# Nature vs Nurture
+
+## [Nature](/learning-selection-interaction/theory#slow-timescale--evolution)
+- *Evolutionary timescale* - population-level change across generations
+- [Slow: Evolution](/learning-selection-interaction/theory#slow-timescale--evolution)
+  - Population frequency dynamics
+  - Fitness from lifetime payoff
+
+### [Inherited Predispositions](/learning-selection-interaction/theory#what-can-evolve)
+- Trust priors - \`trust_prior\`
+- RL parameters - \`alpha\`, \`epsilon\`, \`gamma\`
+- Social-cognitive parameters
+
+### [Baldwinian Inheritance](/learning-selection-interaction/theory#baldwinian-and-lamarckian-interaction)
+- Inherit learning aptitude, not the learned behavior
+- [The Baldwin Effect](/learning-selection-interaction/baldwin-effect)
+  - Learning rescues cooperative genotypes
+  - New selection pressures loosen thresholds over generations
+
+### Darwinian Baseline
+- Heritable traits vary and are filtered by reproductive success
+- No within-lifetime learning required
+
+## [Nurture](/learning-selection-interaction/theory#fast-timescale--learning)
+- *Learning timescale* - behavioral adaptation within a lifetime
+- [Fast: Learning](/learning-selection-interaction/theory#fast-timescale--learning)
+  - Policy updates within a lifetime
+  - Donation-game payoffs
+
+### Environmental Shaping
+- Partner history and local interaction context
+- Discrimination between cooperators and defectors
+
+### Learning Mechanisms
+- Trust updating
+- Q-learning
+- Reputation and social-cognitive cues
+
+### [Lamarckian Analogue](/learning-selection-interaction/theory#baldwinian-and-lamarckian-interaction)
+- Acquired trait itself is inherited
+- Artificial analogue - copied policy weights or checkpoint state
+`;
+
+# Nature vs Nurture Mindmap
+
+The same concepts, reorganized around the classic nature-versus-nurture framing: evolutionary predispositions under **Nature**, within-lifetime learning under **Nurture**.
+
+<InteractionMindmap markdown={natureNurtureOutline} height="720px" />
