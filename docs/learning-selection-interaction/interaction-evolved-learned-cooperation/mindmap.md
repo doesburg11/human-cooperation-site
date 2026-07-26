@@ -138,3 +138,120 @@ export const natureNurtureOutline = `
 The same concepts, reorganized around the classic nature-versus-nurture framing: evolutionary predispositions under **Nature**, within-lifetime learning under **Nurture**.
 
 <InteractionMindmap markdown={natureNurtureOutline} height="720px" />
+
+export const algorithmicSolutionsOutline = `
+# Algorithmic Solutions
+
+## Nature
+- Evolutionary, innate mechanisms encode a solution before any lifetime experience
+- [Slow: Evolution](/learning-selection-interaction/theory#slow-timescale--evolution)
+
+### Genetic Algorithms
+- Holland (1975) - *Adaptation in Natural and Artificial Systems*
+- Encoded population - selection, crossover, mutation
+
+### Evolution Strategies
+- Rechenberg & Schwefel (1960s-70s) - mutation-driven parameter search
+- CMA-ES - Hansen & Ostermeier (2001), covariance-matrix adaptation
+
+### Neuroevolution
+- NEAT - Stanley & Miikkulainen (2002), evolves topology and weights jointly
+- HyperNEAT - Stanley, D'Ambrosio & Gauci (2009), indirect encoding for scale
+
+### Evolutionary Game Theory
+- Replicator dynamics - Taylor & Jonker (1978)
+- Maynard Smith (1982) - *Evolution and the Theory of Games*
+
+## Nurture
+- Behavior is acquired within a lifetime from experience and feedback
+- [Fast: Learning](/learning-selection-interaction/theory#fast-timescale--learning)
+
+### Reinforcement Learning
+- Q-learning - Watkins (1989)
+- Policy gradients - REINFORCE (Williams, 1992), PPO (Schulman et al., 2017)
+
+### Supervised / Deep Learning
+- Backpropagation - Rumelhart, Hinton & Williams (1986)
+- Deep Q-Networks - Mnih et al. (2015)
+
+### Multi-Agent Learning
+- Independent Q-learning - Tan (1993)
+- MADDPG - Lowe et al. (2017)
+
+### Bayesian Updating
+- Bayesian reinforcement learning - belief updating over unknown environments
+- [Trust priors](/learning-selection-interaction/theory#what-can-evolve) - updated online from interaction history
+
+## Nature & Nurture
+- Hybrid algorithms let evolution and learning shape one another
+- [Baldwinian vs Lamarckian](/learning-selection-interaction/theory#baldwinian-and-lamarckian-interaction)
+
+### The Baldwin Effect
+- Hinton & Nowlan (1987) - learning smooths a rugged fitness landscape
+- Full deep-dive: [The Baldwin Effect](/learning-selection-interaction/baldwin-effect)
+
+### Evolved Plasticity
+- Evolving learning rules or hyperparameters rather than fixed weights - Soltoggio, Stanley & Risi (2018)
+- [Inherited Predispositions](/learning-selection-interaction/theory#what-can-evolve) - \`alpha\`, \`epsilon\`, \`gamma\`
+
+### Evolution Strategies + RL Hybrids
+- Evolved Policy Gradients - Houthooft et al. (2018)
+- Evolution-guided policy gradient (CERL/ERL) - Khadka & Tumer (2018)
+
+### Meta-Learning
+- MAML - Finn, Abbeel & Levine (2017), a learned prior that adapts fast within a lifetime
+- Learned optimizers - Andrychowicz et al. (2016)
+
+### Open-Ended Coevolution
+- POET - Wang et al. (2019), coevolving environments and agents together
+`;
+
+# Algorithmic Solutions Mindmap
+
+Algorithms that computational and evolutionary biology, and machine learning, treat as the standard toolkit for each side of the nature-versus-nurture divide, plus the hybrid methods that combine both.
+
+<InteractionMindmap markdown={algorithmicSolutionsOutline} height="720px" />
+
+export const individualSocialOutline = `
+# Individual vs Social
+
+## Individual (Single-Agent)
+- Optimizes against a fixed environment or reward signal - no adapting opponents
+
+### Nature
+- Genetic Algorithms / Evolution Strategies tuning a solo controller
+- CMA-ES - Hansen & Ostermeier (2001)
+
+### Nurture
+- Single-agent RL - Q-learning (Watkins, 1989), DQN (Mnih et al., 2015)
+- Supervised / Deep Learning - Backpropagation (Rumelhart, Hinton & Williams, 1986)
+
+### Nature & Nurture
+- Baldwin Effect on a fixed target - Hinton & Nowlan (1987)
+- Full deep-dive: [The Baldwin Effect](/learning-selection-interaction/baldwin-effect)
+- Evolved plasticity for single-agent tasks - Soltoggio, Stanley & Risi (2018)
+
+## Social (Multi-Agent)
+- Faces other adapting agents - game-theoretic, non-stationary
+
+### Nature
+- Evolutionary Game Theory - replicator dynamics (Taylor & Jonker, 1978)
+- Axelrod-style tournaments - Axelrod & Hamilton (1981)
+- [Slow: Evolution](/learning-selection-interaction/theory#slow-timescale--evolution)
+
+### Nurture
+- Multi-Agent RL - Independent Q-learning (Tan, 1993), MADDPG (Lowe et al., 2017)
+- Opponent modeling and reputation tracking
+- [Fast: Learning](/learning-selection-interaction/theory#fast-timescale--learning)
+
+### Nature & Nurture
+- Evolved trust priors and plasticity in interacting populations
+- [Two-Timescale Theory](/learning-selection-interaction/theory#a-two-timescale-theory-of-cooperation)
+- [Inherited Predispositions](/learning-selection-interaction/theory#what-can-evolve) - \`trust_prior\`, \`alpha\`, \`epsilon\`, \`gamma\`
+`;
+
+# Individual vs Social Mindmap
+
+A fourth axis, orthogonal to nature-versus-nurture: whether the algorithm optimizes against a fixed environment (**Individual**) or against other adapting agents (**Social**). Each side is further split by how the solution is acquired, closing the loop with the earlier Algorithmic Solutions mindmap.
+
+<InteractionMindmap markdown={individualSocialOutline} height="720px" />
