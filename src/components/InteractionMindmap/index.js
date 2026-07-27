@@ -3,10 +3,15 @@ import BrowserOnly from '@docusaurus/BrowserOnly';
 import styles from './styles.module.css';
 
 /**
- * True radial (360-degree) mindmap rendered client-side. `markmap-lib` only
- * parses the markdown outline into a content tree; layout, folding, pan/zoom
- * and rendering are done with a small custom D3 radial-tree implementation,
- * since markmap-view's own renderer only lays out trees left-to-right.
+ * Left/right mindmap rendered client-side. `markmap-lib` only parses the
+ * markdown outline into a content tree; layout, folding, pan/zoom and
+ * rendering are done with a small custom implementation.
+ *
+ * Each top-level branch is pinned to a side (left or right of the root) and
+ * given a fixed vertical band sized from its *fully expanded* extent, not
+ * its currently visible extent. That band position never moves as nodes
+ * elsewhere are folded/unfolded, so expanding a node only grows its own
+ * branch locally instead of reflowing the whole diagram.
  */
 const BRANCH_COLORS = [
   '#e6550d', '#8e44ad', '#2980b9', '#27ae60', '#d35400',
@@ -15,6 +20,7 @@ const BRANCH_COLORS = [
 ];
 
 const LEVEL_RADIUS = 240;
+const VERTICAL_GAP = 14;
 const MIN_SCALE = 0.3;
 const MAX_SCALE = 3;
 const ROOT_RX = 115;
@@ -24,9 +30,9 @@ const NODE_BOX_WIDTH = 220;
 // Labels vary a lot in length (plain topic vs. a topic plus a citation), and
 // with wrapping enabled a long label needs more vertical room than a short
 // one. Without this, long text would either overflow its fixed-height box
-// (spilling into neighboring nodes and covering their fold targets) or force
-// every box to be tall enough for the worst case. Estimate from stripped
-// plain text since `content` is markmap's HTML (links, <code>, etc.).
+// (spilling into neighboring nodes) or force every box to be tall enough
+// for the worst case. Estimate from stripped plain text since `content` is
+// markmap's HTML (links, <code>, etc.).
 function estimateBoxHeight(html, depth) {
   if (depth === 0) return 44;
   const fontSize = fontSizeForDepth(depth);
@@ -34,12 +40,6 @@ function estimateBoxHeight(html, depth) {
   const charsPerLine = Math.max(10, Math.floor(NODE_BOX_WIDTH / (fontSize * 0.56)));
   const lines = Math.max(1, Math.ceil(text.length / charsPerLine));
   return Math.max(34, lines * fontSize * 1.3 + 12);
-}
-
-// Point on the root hub's boundary in the direction of `angle` (same polar
-// convention as d3.linkRadial: 0 = up, increasing clockwise).
-function hubBoundaryPoint(angle) {
-  return [ROOT_RX * Math.sin(angle), -ROOT_RY * Math.cos(angle)];
 }
 
 function fontSizeForDepth(depth) {
@@ -51,6 +51,54 @@ function fontSizeForDepth(depth) {
 
 function fontWeightForDepth(depth) {
   return depth <= 1 ? 700 : 400;
+}
+
+// Point on the root hub's ellipse boundary in the direction of (tx, ty).
+function rootBoundaryPoint(tx, ty) {
+  const angle = Math.atan2(ty, tx);
+  return [ROOT_RX * Math.cos(angle), ROOT_RY * Math.sin(angle)];
+}
+
+// Bottom-up pass: gives every node a `_extent` (total vertical space its
+// subtree needs) and a `_center` (that node's own vertical offset within
+// its subtree's block), and each child a `_top` (offset from the top of the
+// parent's block). Mutates `node` in place; returns the extent.
+function computeExtent(node, depth) {
+  const minExtent = estimateBoxHeight(node.content, depth) + VERTICAL_GAP;
+  if (!node.children || node.children.length === 0) {
+    node._extent = minExtent;
+    node._center = node._extent / 2;
+    return node._extent;
+  }
+  let cursor = 0;
+  node.children.forEach((child) => {
+    const extent = computeExtent(child, depth + 1);
+    child._top = cursor;
+    cursor += extent;
+  });
+  const childrenExtent = cursor;
+  const padding = Math.max(0, minExtent - childrenExtent) / 2;
+  if (padding > 0) {
+    node.children.forEach((child) => {
+      child._top += padding;
+    });
+  }
+  node._extent = Math.max(childrenExtent, minExtent);
+  const first = node.children[0];
+  const last = node.children[node.children.length - 1];
+  node._center = (first._top + first._center + last._top + last._center) / 2;
+  return node._extent;
+}
+
+// Top-down pass: turns each node's relative `_top`/`_center` into absolute
+// (cx, cy) coordinates. `dirSign` is +1 for the right side, -1 for the left.
+function assignPositions(node, depth, top, dirSign) {
+  node.depth = depth;
+  node.cy = top + node._center;
+  node.cx = dirSign * LEVEL_RADIUS * depth;
+  (node.children || []).forEach((child) => {
+    assignPositions(child, depth + 1, top + child._top, dirSign);
+  });
 }
 
 function RadialMindmapCanvas({ markdown, height }) {
@@ -78,8 +126,16 @@ function RadialMindmapCanvas({ markdown, height }) {
       const { root } = transformer.transform(markdown);
       setD3(() => d3lib);
       setRawRoot(root);
-      // Start with only the branch headers visible; deeper nodes reveal on click.
-      setCollapsed(new Set(root.children.map((_, i) => `root.${i}`)));
+      // Start with every node that has children collapsed, so unfolding one
+      // node reveals only its direct children, not the whole subtree.
+      const allCollapsed = new Set();
+      const collectCollapsible = (node, path) => {
+        if (node.children.length === 0) return;
+        allCollapsed.add(path);
+        node.children.forEach((child, i) => collectCollapsible(child, `${path}.${i}`));
+      };
+      root.children.forEach((child, i) => collectCollapsible(child, `root.${i}`));
+      setCollapsed(allCollapsed);
       setFitted(false);
     })();
     return () => {
@@ -112,11 +168,11 @@ function RadialMindmapCanvas({ markdown, height }) {
   };
 
   const layout = useMemo(() => {
-    if (!rawRoot || !d3) return null;
+    if (!rawRoot) return null;
 
-    // markmap-lib's Transformer only produces `content`/`children`; it does not
-    // assign node ids (that happens inside markmap-view's own renderer, which
-    // we don't use here), so keys are derived from each node's tree path.
+    // markmap-lib's Transformer only produces `content`/`children`; it does
+    // not assign node ids (that happens inside markmap-view's own renderer,
+    // which we don't use here), so keys are derived from each node's tree path.
     const buildVisible = (node, color, path) => ({
       key: path,
       content: node.content,
@@ -127,43 +183,81 @@ function RadialMindmapCanvas({ markdown, height }) {
         : node.children.map((child, i) => buildVisible(child, color, `${path}.${i}`)),
     });
 
+    const branchesVisible = rawRoot.children.map((child, i) =>
+      buildVisible(child, BRANCH_COLORS[i % BRANCH_COLORS.length], `root.${i}`),
+    );
+
+    branchesVisible.forEach((b) => computeExtent(b, 1));
+
+    // Alternate branches between the right and left side of the root. A
+    // branch's side never changes, and expanding/collapsing a node only
+    // resizes its own band and shifts branches *after* it on the same
+    // side — the opposite side is never touched.
+    const rightIdx = [];
+    const leftIdx = [];
+    branchesVisible.forEach((_, i) => (i % 2 === 0 ? rightIdx : leftIdx).push(i));
+
+    const positionSide = (idxList, dirSign) => {
+      const total = idxList.reduce((sum, i) => sum + branchesVisible[i]._extent, 0);
+      let top = -total / 2;
+      idxList.forEach((i) => {
+        assignPositions(branchesVisible[i], 1, top, dirSign);
+        top += branchesVisible[i]._extent;
+      });
+    };
+    positionSide(rightIdx, 1);
+    positionSide(leftIdx, -1);
+
     const visibleRoot = {
       key: 'root',
       content: rawRoot.content,
       color: null,
       hasChildren: rawRoot.children.length > 0,
-      children: rawRoot.children.map((child, i) =>
-        buildVisible(child, BRANCH_COLORS[i % BRANCH_COLORS.length], `root.${i}`),
-      ),
+      children: branchesVisible,
+      depth: 0,
+      cx: 0,
+      cy: 0,
     };
 
-    const hierarchyRoot = d3.hierarchy(visibleRoot);
-    const maxRadius = Math.max(1, hierarchyRoot.height) * LEVEL_RADIUS;
-    const tree = d3
-      .tree()
-      .size([2 * Math.PI, maxRadius])
-      .separation((a, b) => (a.parent === b.parent ? 2.6 : 3.8) / a.depth);
-    tree(hierarchyRoot);
+    const descendants = [];
+    const links = [];
+    const walk = (node, parent) => {
+      descendants.push(node);
+      if (parent) links.push({ source: parent, target: node });
+      (node.children || []).forEach((child) => walk(child, node));
+    };
+    walk(visibleRoot, null);
 
-    hierarchyRoot.each((d) => {
-      const angle = d.x - Math.PI / 2;
-      d.cx = d.y * Math.cos(angle);
-      d.cy = d.y * Math.sin(angle);
+    let minX = -ROOT_RX;
+    let maxX = ROOT_RX;
+    let minY = -ROOT_RY;
+    let maxY = ROOT_RY;
+    descendants.forEach((n) => {
+      if (n.depth === 0) return;
+      const left = n.cx >= 0 ? n.cx : n.cx - NODE_BOX_WIDTH - 20;
+      const right = n.cx >= 0 ? n.cx + NODE_BOX_WIDTH + 20 : n.cx;
+      minX = Math.min(minX, left);
+      maxX = Math.max(maxX, right);
+      minY = Math.min(minY, n.cy - 30);
+      maxY = Math.max(maxY, n.cy + 30);
     });
 
-    return { hierarchyRoot, maxRadius };
-  }, [rawRoot, collapsed, d3]);
+    return { descendants, links, bounds: { minX, maxX, minY, maxY } };
+  }, [rawRoot, collapsed]);
 
   // Fit the whole diagram inside the container on first render / data change.
   useEffect(() => {
     if (!layout || fitted) return;
-    const padding = 90;
-    const needed = layout.maxRadius * 2 + padding * 2;
+    const padding = 60;
+    const { minX, maxX, minY, maxY } = layout.bounds;
+    const neededW = maxX - minX + padding * 2;
+    const neededH = maxY - minY + padding * 2;
     const scale = Math.min(
       MAX_SCALE,
-      Math.max(MIN_SCALE, Math.min(size.width, size.height) / needed),
+      Math.max(MIN_SCALE, Math.min(size.width / neededW, size.height / neededH)),
     );
-    setTransform({ x: 0, y: 0, k: scale || 1 });
+    const k = scale || 1;
+    setTransform({ x: -((minX + maxX) / 2) * k, y: -((minY + maxY) / 2) * k, k });
     setFitted(true);
   }, [layout, size, fitted]);
 
@@ -196,18 +290,21 @@ function RadialMindmapCanvas({ markdown, height }) {
   }, [d3, fitted]);
 
   const viewBox = `${-size.width / 2} ${-size.height / 2} ${size.width} ${size.height}`;
-  const linkGenerator = d3
-    ? d3.linkRadial().angle((d) => d.x).radius((d) => d.y)
-    : null;
 
-  // First-level links leave the elliptical hub's boundary (at their own
-  // target's angle) instead of the exact center point, which is what made
-  // every ray appear to converge on a single pixel.
-  const rootLinkPath = (link) => {
-    const [sx, sy] = hubBoundaryPoint(link.target.x);
-    const [tx, ty] = [link.target.cx, link.target.cy];
-    const [mx, my] = [tx * 0.6, ty * 0.6];
-    return `M${sx},${sy} Q${mx},${my} ${tx},${ty}`;
+  // First-level links leave the elliptical hub's boundary (in the direction
+  // of their target) instead of the exact center point.
+  const linkPath = (link) => {
+    const tx = link.target.cx;
+    const ty = link.target.cy;
+    if (link.source.depth === 0) {
+      const [sx, sy] = rootBoundaryPoint(tx, ty);
+      const mx = (sx + tx) / 2;
+      return `M${sx},${sy} Q${mx},${sy} ${tx},${ty}`;
+    }
+    const sx = link.source.cx;
+    const sy = link.source.cy;
+    const mx = (sx + tx) / 2;
+    return `M${sx},${sy} C${mx},${sy} ${mx},${ty} ${tx},${ty}`;
   };
 
   return (
@@ -215,30 +312,26 @@ function RadialMindmapCanvas({ markdown, height }) {
       <svg ref={svgRef} viewBox={viewBox} className={styles.svg}>
         <g transform={`translate(${transform.x},${transform.y}) scale(${transform.k})`}>
           {layout &&
-            linkGenerator &&
-            layout.hierarchyRoot
-              .links()
-              .map((link) => (
-                <path
-                  key={`${link.source.data.key}-${link.target.data.key}`}
-                  d={link.source.depth === 0 ? rootLinkPath(link) : linkGenerator(link)}
-                  className={styles.link}
-                  stroke={link.target.data.color || 'var(--ifm-color-emphasis-500)'}
-                />
-              ))}
+            layout.links.map((link) => (
+              <path
+                key={`${link.source.key}-${link.target.key}`}
+                d={linkPath(link)}
+                className={styles.link}
+                stroke={link.target.color || 'var(--ifm-color-emphasis-500)'}
+              />
+            ))}
           {layout &&
-            layout.hierarchyRoot.descendants().map((node) => {
+            layout.descendants.map((node) => {
               const depth = node.depth;
-              const isCollapsedWithChildren =
-                node.data.hasChildren && node.data.children.length === 0;
+              const isCollapsedWithChildren = node.hasChildren && node.children.length === 0;
               const isRight = depth === 0 || node.cx >= 0;
               const boxWidth = NODE_BOX_WIDTH;
-              const boxHeight = estimateBoxHeight(node.data.content, depth);
+              const boxHeight = estimateBoxHeight(node.content, depth);
               const gap = depth === 0 ? 0 : 12;
               const boxX = depth === 0 ? -boxWidth / 2 : isRight ? gap : -gap - boxWidth;
               return (
                 <g
-                  key={node.data.key}
+                  key={node.key}
                   transform={`translate(${node.cx},${node.cy})`}
                   className={styles.node}
                 >
@@ -250,21 +343,21 @@ function RadialMindmapCanvas({ markdown, height }) {
                       stroke="var(--ifm-color-primary)"
                       strokeWidth={2}
                     />
-                  ) : node.data.hasChildren ? (
+                  ) : node.hasChildren ? (
                     <circle
                       r={7}
                       className={styles.foldCircle}
                       fill={
                         isCollapsedWithChildren
-                          ? node.data.color || 'var(--ifm-color-primary)'
+                          ? node.color || 'var(--ifm-color-primary)'
                           : 'var(--ifm-background-surface-color)'
                       }
-                      stroke={node.data.color || 'var(--ifm-color-primary)'}
+                      stroke={node.color || 'var(--ifm-color-primary)'}
                       strokeWidth={2}
-                      onClick={() => toggle(node.data.key)}
+                      onClick={() => toggle(node.key)}
                     />
                   ) : (
-                    <circle r={3} fill={node.data.color || 'var(--ifm-color-emphasis-500)'} />
+                    <circle r={3} fill={node.color || 'var(--ifm-color-emphasis-500)'} />
                   )}
                   <foreignObject
                     x={boxX}
@@ -282,7 +375,7 @@ function RadialMindmapCanvas({ markdown, height }) {
                         justifyContent: depth === 0 ? 'center' : isRight ? 'flex-start' : 'flex-end',
                         textAlign: depth === 0 ? 'center' : isRight ? 'left' : 'right',
                       }}
-                      dangerouslySetInnerHTML={{ __html: node.data.content }}
+                      dangerouslySetInnerHTML={{ __html: node.content }}
                     />
                   </foreignObject>
                 </g>
