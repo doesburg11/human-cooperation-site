@@ -12,7 +12,6 @@ export const natureNurtureOutline = `
 
 ## [Nature](/learning-selection-interaction/theory#slow-timescale--evolution)
 - Evolutionary, innate mechanisms encode a solution before any lifetime experience
-- [Slow: Evolution](/learning-selection-interaction/theory#slow-timescale--evolution)
 - 🧍 Genetic Algorithms - [Adaptation in Natural and Artificial Systems](https://mitpress.mit.edu/9780262581110/adaptation-in-natural-and-artificial-systems/) - Holland (1975)
 - 🧍 Evolution Strategies - Evolutionsstrategie: Optimierung technischer Systeme nach Prinzipien der biologischen Evolution - Rechenberg (1973)
 - 🧍 Evolution Strategies - Numerische Optimierung von Computer-Modellen mittels der Evolutionsstrategie - Schwefel (1977)
