@@ -13,24 +13,32 @@ export const natureNurtureOutline = `
 ## [Nature](/learning-selection-interaction/theory#slow-timescale--evolution)
 - Evolutionary, innate mechanisms encode a solution before any lifetime experience
 - [Slow: Evolution](/learning-selection-interaction/theory#slow-timescale--evolution)
-- 🧍 Genetic Algorithms - Holland (1975)
-- 🧍 Evolution Strategies - Rechenberg & Schwefel (1960s-70s); CMA-ES - Hansen & Ostermeier (2001)
-- 🧍 Neuroevolution - NEAT (Stanley & Miikkulainen, 2002), HyperNEAT (Stanley, D'Ambrosio & Gauci, 2009)
-- 👥 Evolutionary Game Theory - replicator dynamics (Taylor & Jonker, 1978)
-- 👥 Axelrod-style tournaments - Axelrod & Hamilton (1981)
+- 🧍 Genetic Algorithms - [Adaptation in Natural and Artificial Systems](https://mitpress.mit.edu/9780262581110/adaptation-in-natural-and-artificial-systems/) - Holland (1975)
+- 🧍 Evolution Strategies - Evolutionsstrategie: Optimierung technischer Systeme nach Prinzipien der biologischen Evolution - Rechenberg (1973)
+- 🧍 Evolution Strategies - Numerische Optimierung von Computer-Modellen mittels der Evolutionsstrategie - Schwefel (1977)
+- 🧍 CMA-ES - [Completely Derandomized Self-Adaptation in Evolution Strategies](https://direct.mit.edu/evco/article/9/2/159/892/Completely-Derandomized-Self-Adaptation-in) - Hansen & Ostermeier (2001)
+- 🧍 NEAT - [Evolving Neural Networks through Augmenting Topologies](https://nn.cs.utexas.edu/downloads/papers/stanley.ec02.pdf) - Stanley & Miikkulainen (2002)
+- 🧍 HyperNEAT - [A Hypercube-Based Encoding for Evolving Large-Scale Neural Networks](https://direct.mit.edu/artl/article-abstract/15/2/185/2634) - Stanley, D'Ambrosio & Gauci (2009)
+- 👥 Evolutionary Game Theory - [Evolutionarily Stable Strategies and Game Dynamics](http://dklevine.com/archive/refs4457.pdf) - Taylor & Jonker (1978)
+- 👥 Axelrod-style tournaments - [The Evolution of Cooperation](https://websites.umich.edu/~axe/research/Axelrod%20and%20Hamilton%20EC%201981.pdf) - Axelrod & Hamilton (1981)
 - 👥 [Inherited Predispositions](/learning-selection-interaction/theory#what-can-evolve) - trust priors selected across generations
 
 ## [Nurture](/learning-selection-interaction/theory#fast-timescale--learning)
 - Life-time Learning
   - Behavior is acquired within a lifetime from experience and feedback
   - Individual
-    - Reinforcement Learning - Q-learning (Watkins, 1989), Policy gradients (Williams, 1992; Schulman et al., 2017)
-    - Supervised / Deep Learning - Backpropagation (Rumelhart, Hinton & Williams, 1986), DQN (Mnih et al., 2015)
-    - Bayesian Updating - belief updating over unknown environments - Strens (2000)
+    - Q-learning - [Learning from Delayed Rewards](http://www.cs.rhul.ac.uk/~chrisw/new_thesis.pdf) - Watkins (1989)
+    - Policy gradients (REINFORCE) - [Simple Statistical Gradient-Following Algorithms for Connectionist Reinforcement Learning](https://link.springer.com/article/10.1007/BF00992696) - Williams (1992)
+    - Policy gradients (PPO) - [Proximal Policy Optimization Algorithms](https://arxiv.org/abs/1707.06347) - Schulman et al. (2017)
+    - Backpropagation - [Learning representations by back-propagating errors](https://www.nature.com/articles/323533a0) - Rumelhart, Hinton & Williams (1986)
+    - Deep Q-Networks - [Human-level control through deep reinforcement learning](https://www.nature.com/articles/nature14236) - Mnih et al. (2015)
+    - Bayesian Updating - [A Bayesian Framework for Reinforcement Learning](https://dl.acm.org/doi/10.5555/645529.658114) - Strens (2000)
   - Multi-Agent
-    - Multi-Agent RL - Independent Q-learning (Tan, 1993), MADDPG (Lowe et al., 2017)
-    - Sequential Social Dilemmas - Leibo et al. (2017)
-    - Opponent modeling and reputation tracking - He et al. (2016); Nowak & Sigmund (1998)
+    - Independent Q-learning - [Multi-Agent Reinforcement Learning: Independent versus Cooperative Agents](https://www.sciencedirect.com/science/chapter/monograph/abs/pii/B9781558603073500496) - Tan (1993)
+    - MADDPG - [Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments](https://arxiv.org/abs/1706.02275) - Lowe et al. (2017)
+    - Sequential Social Dilemmas - [Multi-agent Reinforcement Learning in Sequential Social Dilemmas](https://arxiv.org/abs/1702.03037) - Leibo et al. (2017)
+    - Opponent modeling - [Opponent Modeling in Deep Reinforcement Learning](https://arxiv.org/abs/1609.05559) - He et al. (2016)
+    - Reputation tracking - [Evolution of indirect reciprocity by image scoring](https://www.nature.com/articles/31225) - Nowak & Sigmund (1998)
     - Trust updating - [Trust priors](/learning-selection-interaction/theory#what-can-evolve) updated online from interaction history
 - Cultural Inheritance
   - Social transmission of behavior across generations, without genetic change
@@ -47,10 +55,10 @@ export const natureNurtureOutline = `
 ## Nature & Nurture Hybrids
 - Cut across both the Nature and Nurture branches above
 - [Baldwinian vs Lamarckian](/learning-selection-interaction/theory#baldwinian-and-lamarckian-interaction)
-- 🧍 The Baldwin Effect on a fixed target - Hinton & Nowlan (1987)
-- 🧍 Evolved plasticity for single-agent tasks - Soltoggio, Stanley & Risi (2018)
-- 🧍 Meta-Learning - MAML (Finn, Abbeel & Levine, 2017)
-- 👥 Evolved trust priors and plasticity in interacting populations - Ackley & Littman (1991)
+- 🧍 The Baldwin Effect on a fixed target - [How Learning Can Guide Evolution](https://www.cs.toronto.edu/~hinton/absps/evolution.htm) - Hinton & Nowlan (1987)
+- 🧍 Evolved plasticity for single-agent tasks - [Born to Learn: the Inspiration, Progress, and Future of Evolved Plastic Artificial Neural Networks](https://arxiv.org/abs/1703.10371) - Soltoggio, Stanley & Risi (2018)
+- 🧍 Meta-Learning (MAML) - [Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks](https://arxiv.org/abs/1703.03400) - Finn, Abbeel & Levine (2017)
+- 👥 Evolved trust priors and plasticity in interacting populations - [Interactions between Learning and Evolution](http://www2.hawaii.edu/~nreed/ics606/papers/Ackley91learningEvolution.pdf) - Ackley & Littman (1991)
 - 👥 Full deep-dive: [The Baldwin Effect](/learning-selection-interaction/baldwin-effect)
 - 👥 [Two-Timescale Theory](/learning-selection-interaction/theory#a-two-timescale-theory-of-cooperation)
   - Lifetime learning (fast) coupled with generational evolution (slow)
