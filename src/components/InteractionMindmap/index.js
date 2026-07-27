@@ -23,9 +23,14 @@ const LEVEL_RADIUS = 240;
 const VERTICAL_GAP = 14;
 const MIN_SCALE = 0.3;
 const MAX_SCALE = 3;
-const ROOT_RX = 115;
-const ROOT_RY = 28;
+const ROOT_BOX_WIDTH = 150;
+const ROOT_BOX_HEIGHT = 110;
+const ROOT_BOX_RADIUS = 20;
 const NODE_BOX_WIDTH = 220;
+const NODE_BOX_RADIUS = 10;
+// Same blue as the homepage's hero banner, for a consistent house style.
+const NODE_FILL = '#0f3368';
+const NODE_TEXT_COLOR = '#ffffff';
 
 // Labels vary a lot in length (plain topic vs. a topic plus a citation), and
 // with wrapping enabled a long label needs more vertical room than a short
@@ -37,7 +42,7 @@ function estimateBoxHeight(html, depth) {
   if (depth === 0) return 44;
   const fontSize = fontSizeForDepth(depth);
   const text = html.replace(/<[^>]+>/g, '');
-  const charsPerLine = Math.max(10, Math.floor(NODE_BOX_WIDTH / (fontSize * 0.56)));
+  const charsPerLine = Math.max(10, Math.floor((NODE_BOX_WIDTH - 20) / (fontSize * 0.56)));
   const lines = Math.max(1, Math.ceil(text.length / charsPerLine));
   return Math.max(34, lines * fontSize * 1.3 + 12);
 }
@@ -53,10 +58,15 @@ function fontWeightForDepth(depth) {
   return depth <= 1 ? 700 : 400;
 }
 
-// Point on the root hub's ellipse boundary in the direction of (tx, ty).
+// Point on the root hub's rounded-square boundary in the direction of (tx, ty).
 function rootBoundaryPoint(tx, ty) {
-  const angle = Math.atan2(ty, tx);
-  return [ROOT_RX * Math.cos(angle), ROOT_RY * Math.sin(angle)];
+  if (tx === 0 && ty === 0) return [0, 0];
+  const hw = ROOT_BOX_WIDTH / 2;
+  const hh = ROOT_BOX_HEIGHT / 2;
+  const tX = tx !== 0 ? hw / Math.abs(tx) : Infinity;
+  const tY = ty !== 0 ? hh / Math.abs(ty) : Infinity;
+  const t = Math.min(tX, tY);
+  return [tx * t, ty * t];
 }
 
 // Bottom-up pass: gives every node a `_extent` (total vertical space its
@@ -112,6 +122,11 @@ function RadialMindmapCanvas({ markdown, height }) {
   const [size, setSize] = useState({ width: 900, height: 720 });
   const [transform, setTransform] = useState({ x: 0, y: 0, k: 1 });
   const [fitted, setFitted] = useState(false);
+  const [focusKey, setFocusKey] = useState(null);
+  const transformRef = useRef(transform);
+  useEffect(() => {
+    transformRef.current = transform;
+  }, [transform]);
 
   // Parse the markdown outline into a plain node tree (once per markdown prop).
   useEffect(() => {
@@ -159,12 +174,16 @@ function RadialMindmapCanvas({ markdown, height }) {
   }, []);
 
   const toggle = (key) => {
+    const opening = collapsed.has(key);
     setCollapsed((prev) => {
       const next = new Set(prev);
       if (next.has(key)) next.delete(key);
       else next.add(key);
       return next;
     });
+    // Only re-center when unfolding — collapsing a branch shouldn't yank
+    // the view around.
+    if (opening) setFocusKey(key);
   };
 
   const layout = useMemo(() => {
@@ -228,10 +247,10 @@ function RadialMindmapCanvas({ markdown, height }) {
     };
     walk(visibleRoot, null);
 
-    let minX = -ROOT_RX;
-    let maxX = ROOT_RX;
-    let minY = -ROOT_RY;
-    let maxY = ROOT_RY;
+    let minX = -ROOT_BOX_WIDTH / 2;
+    let maxX = ROOT_BOX_WIDTH / 2;
+    let minY = -ROOT_BOX_HEIGHT / 2;
+    let maxY = ROOT_BOX_HEIGHT / 2;
     descendants.forEach((n) => {
       if (n.depth === 0) return;
       const left = n.cx >= 0 ? n.cx : n.cx - NODE_BOX_WIDTH - 20;
@@ -289,9 +308,34 @@ function RadialMindmapCanvas({ markdown, height }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [d3, fitted]);
 
+  // After unfolding a node, smoothly pan so the node and its newly revealed
+  // children are centered — otherwise they can land off-screen wherever the
+  // fixed layout happens to place them, and the user has to hunt for them.
+  useEffect(() => {
+    if (!layout || !focusKey || !d3 || !svgRef.current || !zoomRef.current) return;
+    const node = layout.descendants.find((n) => n.key === focusKey);
+    setFocusKey(null);
+    if (!node) return;
+    let targetX = node.cx;
+    let targetY = node.cy;
+    if (node.children && node.children.length > 0) {
+      const xs = [node.cx, ...node.children.map((c) => c.cx)];
+      const ys = [node.cy, ...node.children.map((c) => c.cy)];
+      targetX = (Math.min(...xs) + Math.max(...xs)) / 2;
+      targetY = (Math.min(...ys) + Math.max(...ys)) / 2;
+    }
+    const k = transformRef.current.k;
+    const identity = d3.zoomIdentity.translate(-targetX * k, -targetY * k).scale(k);
+    d3.select(svgRef.current)
+      .transition()
+      .duration(450)
+      .ease(d3.easeCubicOut)
+      .call(zoomRef.current.transform, identity);
+  }, [layout, focusKey, d3]);
+
   const viewBox = `${-size.width / 2} ${-size.height / 2} ${size.width} ${size.height}`;
 
-  // First-level links leave the elliptical hub's boundary (in the direction
+  // First-level links leave the root box's boundary (in the direction
   // of their target) instead of the exact center point.
   const linkPath = (link) => {
     const tx = link.target.cx;
@@ -325,8 +369,8 @@ function RadialMindmapCanvas({ markdown, height }) {
               const depth = node.depth;
               const isCollapsedWithChildren = node.hasChildren && node.children.length === 0;
               const isRight = depth === 0 || node.cx >= 0;
-              const boxWidth = NODE_BOX_WIDTH;
-              const boxHeight = estimateBoxHeight(node.content, depth);
+              const boxWidth = depth === 0 ? ROOT_BOX_WIDTH : NODE_BOX_WIDTH;
+              const boxHeight = depth === 0 ? ROOT_BOX_HEIGHT : estimateBoxHeight(node.content, depth);
               const gap = depth === 0 ? 0 : 12;
               const boxX = depth === 0 ? -boxWidth / 2 : isRight ? gap : -gap - boxWidth;
               return (
@@ -336,10 +380,14 @@ function RadialMindmapCanvas({ markdown, height }) {
                   className={styles.node}
                 >
                   {depth === 0 ? (
-                    <ellipse
-                      rx={ROOT_RX}
-                      ry={ROOT_RY}
-                      fill="var(--ifm-background-surface-color)"
+                    <rect
+                      x={-ROOT_BOX_WIDTH / 2}
+                      y={-ROOT_BOX_HEIGHT / 2}
+                      width={ROOT_BOX_WIDTH}
+                      height={ROOT_BOX_HEIGHT}
+                      rx={ROOT_BOX_RADIUS}
+                      ry={ROOT_BOX_RADIUS}
+                      fill={NODE_FILL}
                       stroke="var(--ifm-color-primary)"
                       strokeWidth={2}
                     />
@@ -359,6 +407,20 @@ function RadialMindmapCanvas({ markdown, height }) {
                   ) : (
                     <circle r={3} fill={node.color || 'var(--ifm-color-emphasis-500)'} />
                   )}
+                  {depth > 0 && (
+                    <rect
+                      x={boxX}
+                      y={-boxHeight / 2}
+                      width={boxWidth}
+                      height={boxHeight}
+                      rx={NODE_BOX_RADIUS}
+                      ry={NODE_BOX_RADIUS}
+                      className={styles.nodeBox}
+                      fill={NODE_FILL}
+                      stroke={node.color || 'var(--ifm-color-emphasis-400)'}
+                      strokeWidth={1.25}
+                    />
+                  )}
                   <foreignObject
                     x={boxX}
                     y={-boxHeight / 2}
@@ -374,6 +436,7 @@ function RadialMindmapCanvas({ markdown, height }) {
                         fontWeight: fontWeightForDepth(depth),
                         justifyContent: depth === 0 ? 'center' : isRight ? 'flex-start' : 'flex-end',
                         textAlign: depth === 0 ? 'center' : isRight ? 'left' : 'right',
+                        color: NODE_TEXT_COLOR,
                       }}
                       dangerouslySetInnerHTML={{ __html: node.content }}
                     />
