@@ -300,13 +300,17 @@ function RadialMindmapCanvas({ markdown, height }) {
   }, [d3]);
 
   // Keep d3-zoom's internal transform in sync when we programmatically fit.
+  // Deliberately keyed on `fitted` alone (not `d3`): both become available in
+  // the same commit, but `d3` flipping would fire this effect one commit
+  // early, before the fit effect's setTransform has been applied — reading a
+  // stale `transform` closure and clobbering the freshly computed fit.
   useEffect(() => {
-    if (!d3 || !svgRef.current || !zoomRef.current) return;
+    if (!fitted || !d3 || !svgRef.current || !zoomRef.current) return;
     const identity = d3.zoomIdentity.translate(transform.x, transform.y).scale(transform.k);
     d3.select(svgRef.current).call(zoomRef.current.transform, identity);
     // Only sync when the fit computation changes the transform, not on every drag tick.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [d3, fitted]);
+  }, [fitted]);
 
   // After unfolding a node, smoothly pan so the node and its newly revealed
   // children are centered — otherwise they can land off-screen wherever the
@@ -438,8 +442,13 @@ function RadialMindmapCanvas({ markdown, height }) {
                         textAlign: depth === 0 ? 'center' : isRight ? 'left' : 'right',
                         color: NODE_TEXT_COLOR,
                       }}
-                      dangerouslySetInnerHTML={{ __html: node.content }}
-                    />
+                    >
+                      {/* markmap emits mixed text + inline-element content (e.g. "text <a>link</a> text")
+                          as multiple direct children. Wrapped in its own span so it's a single flex
+                          item and flows as one paragraph, instead of each text/link run becoming its
+                          own flex column and wrapping independently. */}
+                      <span dangerouslySetInnerHTML={{ __html: node.content }} />
+                    </div>
                   </foreignObject>
                 </g>
               );

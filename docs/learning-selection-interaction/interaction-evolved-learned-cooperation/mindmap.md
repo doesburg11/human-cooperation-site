@@ -7,85 +7,65 @@ slug: /learning-selection-interaction/interaction-evolved-learned-cooperation/mi
 
 import InteractionMindmap from '@site/src/components/InteractionMindmap';
 
-export const natureNurtureIndividualMultiOutline = `
+export const natureNurtureOutline = `
 # Algorithmic Solutions
 
 ## [Nature](/learning-selection-interaction/theory#slow-timescale--evolution)
 - Evolutionary, innate mechanisms encode a solution before any lifetime experience
 - [Slow: Evolution](/learning-selection-interaction/theory#slow-timescale--evolution)
-
-### Individual
-- Genetic Algorithms - Holland (1975)
-- Evolution Strategies - Rechenberg & Schwefel (1960s-70s); CMA-ES - Hansen & Ostermeier (2001)
-- Neuroevolution - NEAT (Stanley & Miikkulainen, 2002), HyperNEAT (Stanley, D'Ambrosio & Gauci, 2009)
-
-### Multi-Agent
-- Evolutionary Game Theory - replicator dynamics (Taylor & Jonker, 1978)
-- Axelrod-style tournaments - Axelrod & Hamilton (1981)
-- [Inherited Predispositions](/learning-selection-interaction/theory#what-can-evolve) - trust priors selected across generations
+- 🧍 Genetic Algorithms - Holland (1975)
+- 🧍 Evolution Strategies - Rechenberg & Schwefel (1960s-70s); CMA-ES - Hansen & Ostermeier (2001)
+- 🧍 Neuroevolution - NEAT (Stanley & Miikkulainen, 2002), HyperNEAT (Stanley, D'Ambrosio & Gauci, 2009)
+- 👥 Evolutionary Game Theory - replicator dynamics (Taylor & Jonker, 1978)
+- 👥 Axelrod-style tournaments - Axelrod & Hamilton (1981)
+- 👥 [Inherited Predispositions](/learning-selection-interaction/theory#what-can-evolve) - trust priors selected across generations
 
 ## [Nurture](/learning-selection-interaction/theory#fast-timescale--learning)
-- Behavior is acquired within a lifetime from experience and feedback
-- [Fast: Learning](/learning-selection-interaction/theory#fast-timescale--learning)
-
-### Individual
-- Reinforcement Learning - Q-learning (Watkins, 1989), Policy gradients (Williams, 1992; Schulman et al., 2017)
-- Supervised / Deep Learning - Backpropagation (Rumelhart, Hinton & Williams, 1986), DQN (Mnih et al., 2015)
-- Bayesian Updating - belief updating over unknown environments - Strens (2000)
-
-### Multi-Agent
-- Multi-Agent RL - Independent Q-learning (Tan, 1993), MADDPG (Lowe et al., 2017)
-- Sequential Social Dilemmas - Leibo et al. (2017)
-- Opponent modeling and reputation tracking - He et al. (2016); Nowak & Sigmund (1998)
-- Trust updating - [Trust priors](/learning-selection-interaction/theory#what-can-evolve) updated online from interaction history
-
-#### Cultural Inheritance
-- Social transmission of behavior across generations, without genetic change
-
-##### Core / Foundational
-- [Cultural Transmission and Evolution: A Quantitative Approach](https://press.princeton.edu/books/paperback/9780691082837/cultural-transmission-and-evolution) - Cavalli-Sforza & Feldman (1981)
-- [Culture and the Evolutionary Process](https://press.uchicago.edu/ucp/books/book/chicago/C/bo5970597.html) - Boyd & Richerson (1985)
-- [Not by Genes Alone: How Culture Transformed Human Evolution](https://press.uchicago.edu/ucp/books/book/chicago/N/bo3615170.html) - Richerson & Boyd (2005)
-- [The Cultural Origins of Human Cognition](https://www.hup.harvard.edu/books/9780674005822) - Tomasello (1999)
-- [The Secret of Our Success](https://press.princeton.edu/books/paperback/9780691178431/the-secret-of-our-success) - Henrich (2015)
-
-##### Computational / Formal Models
-- [Does Biology Constrain Culture?](https://www.cognitionandculture.net/wp-content/uploads/Rogers-AA-90-819.pdf) - Rogers (1988), source of Rogers' Paradox
-- [An Evolutionary Model of Social Learning: The Effects of Spatial and Temporal Variation](https://www.researchgate.net/publication/233820578_An_evolutionary_model_of_social_learning_The_effects_of_spatial_and_temporal_variation) - Boyd & Richerson (1988)
-- [The Evolution of Conformist Transmission and the Emergence of Between-Group Differences](https://www.sciencedirect.com/science/article/abs/pii/S109051389800018X) - Henrich & Boyd (1998)
-- [The Evolution of Cultural Evolution](https://xcelab.net/rmpubs/henrich%20mcelreath%20EA%202003.pdf) - Henrich & McElreath (2003)
+- Life-time Learning
+  - Behavior is acquired within a lifetime from experience and feedback
+  - Individual
+    - Reinforcement Learning - Q-learning (Watkins, 1989), Policy gradients (Williams, 1992; Schulman et al., 2017)
+    - Supervised / Deep Learning - Backpropagation (Rumelhart, Hinton & Williams, 1986), DQN (Mnih et al., 2015)
+    - Bayesian Updating - belief updating over unknown environments - Strens (2000)
+  - Multi-Agent
+    - Multi-Agent RL - Independent Q-learning (Tan, 1993), MADDPG (Lowe et al., 2017)
+    - Sequential Social Dilemmas - Leibo et al. (2017)
+    - Opponent modeling and reputation tracking - He et al. (2016); Nowak & Sigmund (1998)
+    - Trust updating - [Trust priors](/learning-selection-interaction/theory#what-can-evolve) updated online from interaction history
+- Cultural Inheritance
+  - Social transmission of behavior across generations, without genetic change
+  - 📖 [Cultural Transmission and Evolution: A Quantitative Approach](https://press.princeton.edu/books/paperback/9780691082837/cultural-transmission-and-evolution) - Cavalli-Sforza & Feldman (1981)
+  - 📖 [Culture and the Evolutionary Process](https://press.uchicago.edu/ucp/books/book/chicago/C/bo5970597.html) - Boyd & Richerson (1985)
+  - 📖 [Not by Genes Alone: How Culture Transformed Human Evolution](https://press.uchicago.edu/ucp/books/book/chicago/N/bo3615170.html) - Richerson & Boyd (2005)
+  - 📖 [The Cultural Origins of Human Cognition](https://www.hup.harvard.edu/books/9780674005822) - Tomasello (1999)
+  - 📖 [The Secret of Our Success](https://press.princeton.edu/books/paperback/9780691178431/the-secret-of-our-success) - Henrich (2015)
+  - 🧮 [Does Biology Constrain Culture?](https://www.cognitionandculture.net/wp-content/uploads/Rogers-AA-90-819.pdf) - Rogers (1988), source of Rogers' Paradox
+  - 🧮 [An Evolutionary Model of Social Learning: The Effects of Spatial and Temporal Variation](https://www.researchgate.net/publication/233820578_An_evolutionary_model_of_social_learning_The_effects_of_spatial_and_temporal_variation) - Boyd & Richerson (1988)
+  - 🧮 [The Evolution of Conformist Transmission and the Emergence of Between-Group Differences](https://www.sciencedirect.com/science/article/abs/pii/S109051389800018X) - Henrich & Boyd (1998)
+  - 🧮 [The Evolution of Cultural Evolution](https://xcelab.net/rmpubs/henrich%20mcelreath%20EA%202003.pdf) - Henrich & McElreath (2003)
 
 ## Nature & Nurture Hybrids
 - Cut across both the Nature and Nurture branches above
 - [Baldwinian vs Lamarckian](/learning-selection-interaction/theory#baldwinian-and-lamarckian-interaction)
-
-### Individual
-- The Baldwin Effect on a fixed target - Hinton & Nowlan (1987)
-- Evolved plasticity for single-agent tasks - Soltoggio, Stanley & Risi (2018)
-- Meta-Learning - MAML (Finn, Abbeel & Levine, 2017)
-
-### Multi-Agent
-- Evolved trust priors and plasticity in interacting populations - Ackley & Littman (1991)
-- Full deep-dive: [The Baldwin Effect](/learning-selection-interaction/baldwin-effect)
-
-#### [Two-Timescale Theory](/learning-selection-interaction/theory#a-two-timescale-theory-of-cooperation)
-- Lifetime learning (fast) coupled with generational evolution (slow)
-
-##### Core / Foundational
-- [Evolution and Learning: The Baldwin Effect Reconsidered](https://www.researchgate.net/publication/272161432_Evolution_and_Learning_The_Baldwin_Effect_Reconsidered) - Weber & Depew (book)
-- [Interactions between Learning and Evolution: The Outstanding Strategy Generated by the Baldwin Effect](https://www.sciencedirect.com/science/article/abs/pii/S0303264704000565) - Arita & Suzuki (2000)
-
-##### Computational / Simulation
-- [How Learning Can Change the Course of Evolution](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0219502) - PLOS ONE (2019)
-- [Evolving Self-taught Neural Networks: The Baldwin Effect and the Emergence of Intelligence](https://arxiv.org/pdf/1906.08854) - arXiv (2019)
-- [Meta-Learning by the Baldwin Effect](https://arxiv.org/pdf/1806.07917) - arXiv (2018)
-- [Embodied Intelligence via Learning and Evolution](https://arxiv.org/pdf/2102.02202) - arXiv (2021)
-- [Learning to Acquire Novel Cognitive Tasks with Evolution, Plasticity and Meta-Meta-Learning](https://arxiv.org/pdf/2112.08588) - arXiv (2021)
-- [LaSER: How Learning Can Guide the Evolution of Equations](https://www.arxiv.org/pdf/2505.17309v1) - arXiv (2025)
+- 🧍 The Baldwin Effect on a fixed target - Hinton & Nowlan (1987)
+- 🧍 Evolved plasticity for single-agent tasks - Soltoggio, Stanley & Risi (2018)
+- 🧍 Meta-Learning - MAML (Finn, Abbeel & Levine, 2017)
+- 👥 Evolved trust priors and plasticity in interacting populations - Ackley & Littman (1991)
+- 👥 Full deep-dive: [The Baldwin Effect](/learning-selection-interaction/baldwin-effect)
+- 👥 [Two-Timescale Theory](/learning-selection-interaction/theory#a-two-timescale-theory-of-cooperation)
+  - Lifetime learning (fast) coupled with generational evolution (slow)
+  - 📖 [Evolution and Learning: The Baldwin Effect Reconsidered](https://www.researchgate.net/publication/272161432_Evolution_and_Learning_The_Baldwin_Effect_Reconsidered) - Weber & Depew (book)
+  - 📖 [Interactions between Learning and Evolution: The Outstanding Strategy Generated by the Baldwin Effect](https://www.sciencedirect.com/science/article/abs/pii/S0303264704000565) - Arita & Suzuki (2000)
+  - 🧮 [How Learning Can Change the Course of Evolution](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0219502) - PLOS ONE (2019)
+  - 🧮 [Evolving Self-taught Neural Networks: The Baldwin Effect and the Emergence of Intelligence](https://arxiv.org/pdf/1906.08854) - arXiv (2019)
+  - 🧮 [Meta-Learning by the Baldwin Effect](https://arxiv.org/pdf/1806.07917) - arXiv (2018)
+  - 🧮 [Embodied Intelligence via Learning and Evolution](https://arxiv.org/pdf/2102.02202) - arXiv (2021)
+  - 🧮 [Learning to Acquire Novel Cognitive Tasks with Evolution, Plasticity and Meta-Meta-Learning](https://arxiv.org/pdf/2112.08588) - arXiv (2021)
+  - 🧮 [LaSER: How Learning Can Guide the Evolution of Equations](https://www.arxiv.org/pdf/2505.17309v1) - arXiv (2025)
 `;
 
 # Mindmap
 
-A visual, foldable overview of the concepts covered on the [Interaction Evolved-Learned Cooperation](/learning-selection-interaction/theory) page. **Nature vs Nurture** is the top-level split, with **Individual vs Multi-Agent** nested beneath each side. Click a node's circle to expand or collapse its branch, click its label to jump to that section, and drag or scroll to pan and zoom.
+A visual, foldable overview of the concepts covered on the [Interaction Evolved-Learned Cooperation](/learning-selection-interaction/theory) page. **Nature vs Nurture** (plus a **Hybrids** branch) is the top-level split. Within Nurture, algorithms are grouped under **Life-time Learning** (behavior acquired within an agent's own lifetime, whether alone or amid other learning agents) and **Cultural Inheritance** (behavior transmitted across generations); Life-time Learning further splits into **Individual** and **Multi-Agent** contexts. In Nature and Hybrids, each algorithm is instead tagged 🧍 individual-level or 👥 multi-agent / social. Each reference is tagged 📖 core / foundational or 🧮 computational / formal / simulation. Click a node's circle to expand or collapse its branch, click its label to jump to that section, and drag or scroll to pan and zoom.
 
-<InteractionMindmap markdown={natureNurtureIndividualMultiOutline} height="720px" />
+<InteractionMindmap markdown={natureNurtureOutline} height="720px" />
