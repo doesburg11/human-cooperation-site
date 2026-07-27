@@ -19,6 +19,7 @@ export const natureNurtureOutline = `
 - 🧍 CMA-ES - [Completely Derandomized Self-Adaptation in Evolution Strategies](https://direct.mit.edu/evco/article/9/2/159/892/Completely-Derandomized-Self-Adaptation-in) - Hansen & Ostermeier (2001)
 - 🧍 NEAT - [Evolving Neural Networks through Augmenting Topologies](https://nn.cs.utexas.edu/downloads/papers/stanley.ec02.pdf) - Stanley & Miikkulainen (2002)
 - 🧍 HyperNEAT - [A Hypercube-Based Encoding for Evolving Large-Scale Neural Networks](https://direct.mit.edu/artl/article-abstract/15/2/185/2634) - Stanley, D'Ambrosio & Gauci (2009)
+- 👥 rtNEAT (multi-agent) - [Real-Time Neuroevolution in the NERO Video Game](https://www.cse.unr.edu/~bdbryant/papers/stanley-2005-tec.pdf) - Stanley, Bryant & Miikkulainen (2005)
 - 👥 Evolutionary Game Theory - [Evolutionarily Stable Strategies and Game Dynamics](http://dklevine.com/archive/refs4457.pdf) - Taylor & Jonker (1978)
 - 👥 Axelrod-style tournaments - [The Evolution of Cooperation](https://websites.umich.edu/~axe/research/Axelrod%20and%20Hamilton%20EC%201981.pdf) - Axelrod & Hamilton (1981)
 - 👥 [Inherited Predispositions](/learning-selection-interaction/theory#what-can-evolve) - trust priors selected across generations
