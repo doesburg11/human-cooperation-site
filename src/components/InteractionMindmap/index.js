@@ -31,6 +31,29 @@ const NODE_BOX_RADIUS = 10;
 // Same blue as the homepage's hero banner, for a consistent house style.
 const NODE_FILL = '#0f3368';
 const NODE_TEXT_COLOR = '#ffffff';
+// Literature/citation nodes (🧍 👥 📖 🧮 entries citing a paper) get an
+// inverted, reference-list look instead of the solid navy concept-node fill.
+const LITERATURE_FILL = '#ffffff';
+const LITERATURE_TEXT_COLOR = '#000000';
+const LITERATURE_UNDERLINE_COLOR = '#0f3368';
+
+// A node counts as "literature" when it's tagged with one of the four
+// citation markers *and* actually cites a work (an external link, a year in
+// parens, or "(book)") — this excludes tagged-but-non-citation nodes like
+// "Inherited Predispositions".
+function isLiteratureNode(html) {
+  // markmap's markdown-it renderer emits emoji as numeric HTML entities
+  // (e.g. "&#x1f9cd;"), not the literal character, and wraps content in a
+  // block tag — so the citation marker is neither literal nor first.
+  const text = html
+    .replace(/<[^>]+>/g, '')
+    .replace(/&#x([0-9a-fA-F]+);/g, (_, hex) => String.fromCodePoint(parseInt(hex, 16)))
+    .replace(/&#(\d+);/g, (_, dec) => String.fromCodePoint(parseInt(dec, 10)));
+  if (!/^\s*(🧍|👥|📖|🧮)/.test(text)) return false;
+  if (/<a\s+[^>]*href="https?:\/\//.test(html)) return true;
+  if (/\(\d{4}(s(-\d{2}s)?)?\)|\(book\)/.test(text)) return true;
+  return false;
+}
 
 // Labels vary a lot in length (plain topic vs. a topic plus a citation), and
 // with wrapping enabled a long label needs more vertical room than a short
@@ -372,6 +395,7 @@ function RadialMindmapCanvas({ markdown, height }) {
             layout.descendants.map((node) => {
               const depth = node.depth;
               const isCollapsedWithChildren = node.hasChildren && node.children.length === 0;
+              const isLit = depth > 0 && isLiteratureNode(node.content);
               const isRight = depth === 0 || node.cx >= 0;
               const boxWidth = depth === 0 ? ROOT_BOX_WIDTH : NODE_BOX_WIDTH;
               const boxHeight = depth === 0 ? ROOT_BOX_HEIGHT : estimateBoxHeight(node.content, depth);
@@ -420,7 +444,7 @@ function RadialMindmapCanvas({ markdown, height }) {
                       rx={NODE_BOX_RADIUS}
                       ry={NODE_BOX_RADIUS}
                       className={styles.nodeBox}
-                      fill={NODE_FILL}
+                      fill={isLit ? LITERATURE_FILL : NODE_FILL}
                       stroke={node.color || 'var(--ifm-color-emphasis-400)'}
                       strokeWidth={1.25}
                     />
@@ -434,13 +458,15 @@ function RadialMindmapCanvas({ markdown, height }) {
                   >
                     <div
                       xmlns="http://www.w3.org/1999/xhtml"
-                      className={styles.content}
+                      className={isLit ? `${styles.content} ${styles.literatureContent}` : styles.content}
                       style={{
                         fontSize: fontSizeForDepth(depth),
                         fontWeight: fontWeightForDepth(depth),
                         justifyContent: depth === 0 ? 'center' : isRight ? 'flex-start' : 'flex-end',
                         textAlign: depth === 0 ? 'center' : isRight ? 'left' : 'right',
-                        color: NODE_TEXT_COLOR,
+                        color: isLit ? LITERATURE_TEXT_COLOR : NODE_TEXT_COLOR,
+                        textDecoration: isLit ? 'underline' : 'none',
+                        textDecorationColor: isLit ? LITERATURE_UNDERLINE_COLOR : undefined,
                       }}
                     >
                       {/* markmap emits mixed text + inline-element content (e.g. "text <a>link</a> text")

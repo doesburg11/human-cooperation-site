@@ -78,3 +78,19 @@
   border-radius: 4px;
   background: rgba(255, 255, 255, 0.18);
 }
+
+.literatureContent :global(a) {
+  /* Overrides the white-on-navy default above for literature nodes, which
+     sit on a white box instead of the navy concept-node fill. */
+  color: #000000 !important;
+  text-decoration: underline;
+  text-decoration-color: #0f3368 !important;
+}
+
+.literatureContent :global(a:hover) {
+  text-decoration-color: currentColor;
+}
+
+.literatureContent :global(code) {
+  background: rgba(15, 51, 104, 0.1);
+}
