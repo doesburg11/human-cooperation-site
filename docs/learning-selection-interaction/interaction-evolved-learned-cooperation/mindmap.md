@@ -16,9 +16,13 @@ export const natureNurtureOutline = `
 - 🧍 Evolution Strategies - Evolutionsstrategie: Optimierung technischer Systeme nach Prinzipien der biologischen Evolution - Rechenberg (1973)
 - 🧍 Evolution Strategies - Numerische Optimierung von Computer-Modellen mittels der Evolutionsstrategie - Schwefel (1977)
 - 🧍 CMA-ES - [Completely Derandomized Self-Adaptation in Evolution Strategies](https://direct.mit.edu/evco/article/9/2/159/892/Completely-Derandomized-Self-Adaptation-in) - Hansen & Ostermeier (2001)
+- 🧍 OpenAI Evolution Strategies - [Evolution Strategies as a Scalable Alternative to Reinforcement Learning](https://arxiv.org/abs/1703.03864) - Salimans et al. (2017)
 - 🧍 NEAT - [Evolving Neural Networks through Augmenting Topologies](https://nn.cs.utexas.edu/downloads/papers/stanley.ec02.pdf) - Stanley & Miikkulainen (2002)
 - 🧍 HyperNEAT - [A Hypercube-Based Encoding for Evolving Large-Scale Neural Networks](https://direct.mit.edu/artl/article-abstract/15/2/185/2634) - Stanley, D'Ambrosio & Gauci (2009)
+- 🧍 Novelty Search - [Abandoning Objectives: Evolution Through the Search for Novelty Alone](https://www.cs.swarthmore.edu/~meeden/DevelopmentalRobotics/lehman_ecj11.pdf) - Lehman & Stanley (2011)
+- 🧍 Quality Diversity (MAP-Elites) - [Illuminating Search Spaces by Mapping Elites](https://arxiv.org/abs/1504.04909) - Mouret & Clune (2015)
 - 👥 rtNEAT (multi-agent) - [Real-Time Neuroevolution in the NERO Video Game](https://www.cse.unr.edu/~bdbryant/papers/stanley-2005-tec.pdf) - Stanley, Bryant & Miikkulainen (2005)
+- 👥 Kin Selection - [The Genetical Evolution of Social Behaviour I and II](https://www.discovermagazine.com/health/the-genetical-evolution-of-social-behaviour-i) - Hamilton (1964)
 - 👥 Evolutionary Game Theory - [Evolutionarily Stable Strategies and Game Dynamics](http://dklevine.com/archive/refs4457.pdf) - Taylor & Jonker (1978)
 - 👥 Axelrod-style tournaments - [The Evolution of Cooperation](https://websites.umich.edu/~axe/research/Axelrod%20and%20Hamilton%20EC%201981.pdf) - Axelrod & Hamilton (1981)
 - 👥 [Inherited Predispositions](/learning-selection-interaction/theory#what-can-evolve) - trust priors selected across generations
@@ -28,16 +32,22 @@ export const natureNurtureOutline = `
   - Behavior is acquired within a lifetime from experience and feedback
   - Individual
     - Q-learning - [Learning from Delayed Rewards](http://www.cs.rhul.ac.uk/~chrisw/new_thesis.pdf) - Watkins (1989)
+    - Temporal-Difference Learning - [Learning to Predict by the Methods of Temporal Differences](https://link.springer.com/article/10.1007/BF00115009) - Sutton (1988)
     - Policy gradients (REINFORCE) - [Simple Statistical Gradient-Following Algorithms for Connectionist Reinforcement Learning](https://link.springer.com/article/10.1007/BF00992696) - Williams (1992)
     - Policy gradients (PPO) - [Proximal Policy Optimization Algorithms](https://arxiv.org/abs/1707.06347) - Schulman et al. (2017)
+    - Actor-Critic - [Actor-Critic Algorithms](https://proceedings.neurips.cc/paper/1999/hash/6449f44a102fde848669bdd9eb6b76fa-Abstract.html) - Konda & Tsitsiklis (2000)
     - Backpropagation - [Learning representations by back-propagating errors](https://www.nature.com/articles/323533a0) - Rumelhart, Hinton & Williams (1986)
     - Deep Q-Networks - [Human-level control through deep reinforcement learning](https://www.nature.com/articles/nature14236) - Mnih et al. (2015)
     - Bayesian Updating - [A Bayesian Framework for Reinforcement Learning](https://dl.acm.org/doi/10.5555/645529.658114) - Strens (2000)
   - Multi-Agent
     - Independent Q-learning - [Multi-Agent Reinforcement Learning: Independent versus Cooperative Agents](https://www.sciencedirect.com/science/chapter/monograph/abs/pii/B9781558603073500496) - Tan (1993)
     - MADDPG - [Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments](https://arxiv.org/abs/1706.02275) - Lowe et al. (2017)
+    - Self-Play - [Mastering Chess and Shogi by Self-Play with a General Reinforcement Learning Algorithm](https://arxiv.org/abs/1712.01815) - Silver et al. (2017)
     - Sequential Social Dilemmas - [Multi-agent Reinforcement Learning in Sequential Social Dilemmas](https://arxiv.org/abs/1702.03037) - Leibo et al. (2017)
     - Opponent modeling - [Opponent Modeling in Deep Reinforcement Learning](https://arxiv.org/abs/1609.05559) - He et al. (2016)
+    - Opponent-Learning Awareness (LOLA) - [Learning with Opponent-Learning Awareness](https://ifaamas.org/Proceedings/aamas2018/pdfs/p122.pdf) - Foerster et al. (2018)
+    - Emergent Communication - [Learning to Communicate with Deep Multi-Agent Reinforcement Learning](https://arxiv.org/abs/1605.06676) - Foerster et al. (2016)
+    - Direct Reciprocity - [The Evolution of Reciprocal Altruism](https://www.journals.uchicago.edu/doi/10.1086/406755) - Trivers (1971)
     - Reputation tracking - [Evolution of indirect reciprocity by image scoring](https://www.nature.com/articles/31225) - Nowak & Sigmund (1998)
     - Trust updating - [Trust priors](/learning-selection-interaction/theory#what-can-evolve) updated online from interaction history
 - Cultural Inheritance
@@ -55,6 +65,8 @@ export const natureNurtureOutline = `
 ## Nature & Nurture Hybrids
 - Cut across both the Nature and Nurture branches above
 - [Baldwinian vs Lamarckian](/learning-selection-interaction/theory#baldwinian-and-lamarckian-interaction)
+- 🧍 The original Baldwin Effect proposal - [A New Factor in Evolution](https://brocku.ca/MeadProject/Baldwin/Baldwin_1896_h.html) - Baldwin (1896)
+- 🧍 Genetic Assimilation - [Genetic Assimilation of an Acquired Character](https://onlinelibrary.wiley.com/doi/10.1111/j.1558-5646.1953.tb00070.x) - Waddington (1953)
 - 🧍 The Baldwin Effect on a fixed target - [How Learning Can Guide Evolution](https://www.cs.toronto.edu/~hinton/absps/evolution.htm) - Hinton & Nowlan (1987)
 - 🧍 Evolved plasticity for single-agent tasks - [Born to Learn: the Inspiration, Progress, and Future of Evolved Plastic Artificial Neural Networks](https://arxiv.org/abs/1703.10371) - Soltoggio, Stanley & Risi (2018)
 - 🧍 Meta-Learning (MAML) - [Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks](https://arxiv.org/abs/1703.03400) - Finn, Abbeel & Levine (2017)
