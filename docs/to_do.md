@@ -766,3 +766,12 @@ https://github.com/ray-project/ray/blob/master/rllib/examples/algorithms/maml_lr
   https://www.nature.com/articles/s41467-025-67178-6
 - Neural Population Learning beyond Symmetric Zero-Sum Games (AAMAS 2024): population-level selection/equilibrium in general-sum MARL.  
   https://deepmind.google/research/publications/24820/
+
+
+- ### Comenius and Curriculum Learning
+
+Comenius argued that teaching should proceed from the easy to the difficult, so that new knowledge builds on what has already been learned. This principle closely resembles curriculum learning in reinforcement learning, where an agent first trains on simpler tasks before progressing to more complex ones.
+
+For PredPreyGrass, this could mean starting with easy survival conditions and gradually introducing scarcity, predators, competition, cooperation, and co-evolution. An adaptive curriculum may be especially useful, because the difficulty can change according to the agents’ current performance rather than following a fixed sequence. This connects Comenius’ educational principle with modern ideas in automatic curriculum learning and open-ended learning.
+
+- make a to do mindmap?
