@@ -330,11 +330,10 @@ These works are best understood here as adjacent environment or benchmark contex
 
 ## Simulation Companion
 
-The concrete two-timescale experiments documented for this site are available in:
+The concrete two-timescale experiments documented for this site are available in two companion tracks, one abstract and one ecological:
 
-- [Two-Timescale Simulations](/learning-selection-interaction/simulations)
-
-That section contains model-by-model results (trust learning, Q-learning, extended social mechanisms), the network-diversity experiment, and focused appendices.
+- [Two-Timescale Simulations](/learning-selection-interaction/simulations) — abstract ring-network models (trust learning, Q-learning, extended social mechanisms), the network-diversity experiment, and focused appendices. This track confirms the theory above cleanly: see its own theory-simulation correspondence table.
+- [Darwin/Baldwin Trial Log](/learning-selection-interaction/darwin-baldwin-trial-log) — the same two-timescale question asked inside a full predator-prey ecology (PredPreyGrass) rather than an abstract donation game. Eleven trials in, this track remains an open problem rather than a confirmed result — read there for why, and what the leading hypotheses are.
 
 ---
 

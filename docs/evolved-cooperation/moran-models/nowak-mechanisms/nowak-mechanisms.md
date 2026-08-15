@@ -229,6 +229,108 @@ Nowak's taxonomy is a useful compact framework but not an exhaustive list. Impor
 
 The shared condition across all of them mirrors the repo-level feedback framing: cooperation spreads when enough of the value it creates returns to cooperators or copies of the cooperative rule to outweigh the private cost.
 
+## Nowak's mechanisms on the nature-nurture spectrum
+
+The five mechanisms above are implemented here as fixed evolutionary rules — but applied to human cooperation specifically, none of them is purely a matter of nature or purely a matter of nurture. Evolution can supply the underlying capacity (a predisposition to help kin, to remember favors, to track reputation) while culture and individual development determine how that capacity actually gets used.
+
+<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
+  <div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
+    <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+      <colgroup>
+        <col style={{ width: '18%' }} />
+        <col style={{ width: '27%' }} />
+        <col style={{ width: '27%' }} />
+        <col style={{ width: '28%' }} />
+      </colgroup>
+      <thead>
+        <tr>
+          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Mechanism</th>
+          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>"Nature" side</th>
+          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>"Nurture" side</th>
+          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Human version</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Kin selection</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Strong. Selection favors helping genetic relatives because they share genes.</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Moderate. Humans learn who counts as "family"; culture can expand or weaken kin duties.</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>"I help my child, sibling, cousin, clan."</td>
+        </tr>
+        <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Direct reciprocity</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Strong-medium. Evolution favors memory, trust, gratitude, resentment, partner recognition.</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Strong. Individuals learn who helps, who cheats, who can be trusted.</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>"You helped me before, so I help you now."</td>
+        </tr>
+        <tr>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Indirect reciprocity</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Medium. Evolution favors reputation tracking, moral emotions, concern for social evaluation.</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Very strong. Reputation depends on language, gossip, norms, morality — all culturally transmitted.</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>"You helped others, so I trust/help you."</td>
+        </tr>
+        <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Network reciprocity</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Medium. Evolution can favor clustering, bonding, local loyalty, partner choice.</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Strong. Human networks are shaped by family, school, work, religion, and institutions.</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>"People in my circle help each other."</td>
+        </tr>
+        <tr>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Group selection</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Medium-strong. Groups with more internal cooperation may outcompete less cooperative groups.</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Very strong in humans. Group identity, norms, punishment, ritual, law, and ideology are culturally transmitted.</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>"We cooperate because we are part of this group."</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 8:</strong> Kin selection is the most nature-heavy of the five; indirect reciprocity and group selection are the most nurture/culture-heavy in humans. Direct and network reciprocity sit in between. None of the five is purely nature or purely nurture.</figcaption>
+</figure>
+
+A more useful division cuts across the five mechanisms rather than ranking them:
+
+<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
+  <div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
+    <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+      <colgroup>
+        <col style={{ width: '22%' }} />
+        <col style={{ width: '39%' }} />
+        <col style={{ width: '39%' }} />
+      </colgroup>
+      <thead>
+        <tr>
+          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Level</th>
+          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>What evolution supplies</th>
+          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>What learning/culture supplies</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Basic social architecture</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Attachment, social emotions, memory, recognition, fairness sensitivity, punishment motives.</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>—</td>
+        </tr>
+        <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Development</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Readiness to learn social rules.</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Who helped me, who cheated, whom to trust.</td>
+        </tr>
+        <tr>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Culture</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Capacity for norm learning.</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Actual rules: family duty, fairness, debt, gratitude, honor, punishment.</td>
+        </tr>
+        <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Institutions</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Capacity for group living.</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Law, religion, markets, reputation systems, contracts.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 9:</strong> Evolutionary selection does not produce a fixed rule such as "always cooperate" — too rigid, too easily exploited. Instead it favors learning systems that let humans become cooperative under the right conditions: help kin, reciprocate with reliable partners, track reputation, cluster with cooperators, follow group norms, and punish or avoid exploiters. See the [interaction between learning and selection](/learning-selection-interaction/theory) for how this site models that coupling directly.</figcaption>
+</figure>
+
 ## References
 
 - Nowak, M. A. (2006). *Five rules for the evolution of cooperation*. *Science*, 314(5805), 1560–1563. https://doi.org/10.1126/science.1133755

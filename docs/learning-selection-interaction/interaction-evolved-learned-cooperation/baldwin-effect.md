@@ -1,7 +1,7 @@
 ---
 id: baldwin-effect
 title: The Baldwin Effect
-sidebar_position: 3
+sidebar_position: 4
 slug: /learning-selection-interaction/baldwin-effect
 ---
 
@@ -154,6 +154,8 @@ To make this concrete, consider a predator–prey simulation where agents are tr
 In practice, running this kind of experiment surfaces exactly the difficulties the Baldwin effect's critics (Mayr, above) predicted: the signal is often weak until the policy is already competent, population crashes destroy usable data, and a population that starts near its fitness equilibrium may show no visible drift at all — even while selection pressure is technically present the whole time. Demonstrating a *complete*, causally verified Baldwin/Darwin loop — not just a plausible correlation — turns out to be a genuinely hard empirical bar to clear, in silico as much as in biology.
 
 This loop is exactly what the site's [PredPreyGrass](/learning-selection-interaction/predpreygrass) simulations are built to probe: agents inherit a speed genome, a shared PPO policy supplies the lifetime learning layer, and ecological success determines which genomes reproduce.
+
+The metabolic-rate scenario above is not hypothetical — it has been run for real, with a full neutral-drift control. The result: null. See the [Darwin/Baldwin Trial Log](/learning-selection-interaction/darwin-baldwin-trial-log) for that trial and ten others, including a deliberately overwhelming version of the same trait that recovered a weak real signal — evidence for population scale, not the underlying mechanism, being the current bottleneck.
 
 ## 9. Why demonstrating it is hard
 

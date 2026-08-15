@@ -7,6 +7,8 @@ slug: /learning-selection-interaction/predpreygrass
 
 # PredPreyGrass
 
+<div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '0.4rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>This page describes the conceptual mapping. For the actual trial-by-trial results — what has been tried, what worked, and what remains open — see the <a href="/learning-selection-interaction/darwin-baldwin-trial-log">Darwin/Baldwin Trial Log</a>.</div>
+
 ## A Concrete Eco-Evolutionary Analogue
 
 PredPreyGrass gives a concrete simulation analogue for the general distinction between Darwinian selection, Baldwinian interaction, and artificial Lamarckian inheritance.

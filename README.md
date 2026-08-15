@@ -17,6 +17,11 @@ Current required code-backed mappings:
   `EvolvedCooperation`
 - `docs/learned-cooperation/repeated-prisoners-dilemma/ppo-study.md` here <->
   `LearnedCooperation/`
+- `docs/learning-selection-interaction/interaction-evolved-learned-cooperation/predpreygrass.md`
+  and `.../darwin-baldwin-trial-log.md` here <-> `predpreygrass/evolutionary/`
+  (trial log, canonical source `predpreygrass/evolutionary/RESULTS.md`) and
+  `predpreygrass/non_evolutionary/drive_conditioned_environment/` in
+  `PredPreyGrass`
 
 The higher-level learned-cooperation pages also frame the
 `LearnedCooperation` repeated Prisoner's Dilemma experiment family:

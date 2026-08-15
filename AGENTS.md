@@ -16,7 +16,9 @@ Follow the `## References` rules in `HOUSE_STYLE.md` for docs pages.
   - `spatial_altruism` page/section in this repo <-> `spatial_altruism/` in `EvolvedCooperation`
   - `cooperative_hunting` page/section in this repo <-> `cooperative_hunting/` in `EvolvedCooperation`
   - `docs/learned-cooperation/repeated-prisoners-dilemma/ppo-study.md` in this repo <-> `LearnedCooperation/`
+  - `docs/learning-selection-interaction/interaction-evolved-learned-cooperation/predpreygrass.md` and `.../darwin-baldwin-trial-log.md` in this repo <-> `predpreygrass/evolutionary/` (canonical trial log: `predpreygrass/evolutionary/RESULTS.md`) and `predpreygrass/non_evolutionary/drive_conditioned_environment/` in `PredPreyGrass`
 - The higher-level learned-cooperation pages `docs/learned-cooperation/learned-cooperation.md`, `docs/learned-cooperation/prisoners-dilemma/prisoners-dilemma.md`, and `docs/learned-cooperation/repeated-prisoners-dilemma/repeated-prisoners-dilemma.md` provide conceptual framing around the `LearnedCooperation` repeated Prisoner's Dilemma experiment family and should stay consistent with concrete claims made there.
+- The Darwin/Baldwin Trial Log summarizes `PredPreyGrass/predpreygrass/evolutionary/RESULTS.md`; when that file's trial log changes (new trial, a trial's verdict changes, replication completes), update the trial-log page's ledger table and Key findings to match.
 - When modifying a code-backed page/section here, check whether the corresponding Python implementation or README in the source repo also needs an update.
 - When an implementation changes in `EvolvedCooperation` or `LearnedCooperation`, update the matching page here if the behavior, assumptions, or interpretation changed.
 
