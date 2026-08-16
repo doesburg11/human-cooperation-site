@@ -9,16 +9,18 @@ slug: /learning-selection-interaction/theory
 
 ## A Two-Timescale Theory of Cooperation
 
-Cooperation can emerge through two different adaptive processes:
+Cooperation, like adaptive behavior generally, can emerge through the interaction of two different adaptive processes — the same nature/nurture distinction long used in biology and psychology, applied here in a specific, simulatable form:
 
-- Learning within lifetimes (behavioral plasticity, reinforcement learning)
-- Selection across generations (evolutionary dynamics)
+- **Nurture** — within-lifetime learning (behavioral plasticity, reinforcement learning) is the specific mechanism this framework operationalizes and simulates. "Nurture" itself is broader than learning — it covers any non-genetic developmental influence (nutrition, epigenetics, culture, parental care) — but learning is the one instance modeled directly here.
+- **Nature** — selection across generations (evolutionary dynamics).
 
 These processes operate on entirely different timescales:
 
 `Learning timescale <<< Evolutionary timescale`
 
 In natural systems they interact. The two-timescale simulation family in this section provides a controlled framework where both processes can be analyzed together.
+
+Independent evidence that combining them is a genuinely productive mechanism — not just a plausible-sounding framing — comes from outside this project's own cooperation simulations. A from-scratch replication of [Ackley & Littman (1991)](/learning-selection-interaction/darwin-baldwin-trial-log#references), the original computational demonstration that evolution and learning combined can outperform either alone, reproduced that result with real statistical power: combined nature-and-nurture significantly beat evolution alone, learning alone, no adaptation, and pure random behavior (p < 0.00001 against all four, n = 100 seeds per condition). That result concerns general fitness-enhancing behavior in a predator-prey world, not cooperation specifically — it doesn't itself demonstrate cooperation emerging — but it is direct evidence for the core two-timescale mechanism this whole framework depends on. Full detail in the [Darwin/Baldwin Trial Log](/learning-selection-interaction/darwin-baldwin-trial-log).
 
 ---
 
