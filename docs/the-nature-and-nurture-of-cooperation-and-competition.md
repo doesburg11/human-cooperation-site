@@ -19,13 +19,15 @@ slug: /
   />
 </figure>
 
-## How does human cooperation emerge from evolution and learning?
+## How do nature and nurture combine to shape human behavior?
 
-Human cooperative behavior is one of the central puzzles in biology and the social sciences. This page treats cooperation as a two-timescale problem: some cooperative tendencies are shaped across generations by natural selection, and some are acquired within a lifetime through learning. 
+This project studies human behavior as a two-timescale problem: some behavioral tendencies are shaped across generations by natural selection, and some are acquired within a lifetime through learning. Neither timescale tells the full story on its own — [simulation evidence on this site](/learning-selection-interaction/theory) shows that combining generational selection with lifetime learning produces more effective behavior than either mechanism alone, or than chance.
 
-- **Nature** → Evolving cooperation over generations by natural selection
+- **Nature** → traits and tendencies shaped across generations by natural selection
 
-- **Nurture** → Learning to cooperate within a lifetime
+- **Nurture** → behavior acquired within a lifetime through learning and experience
+
+Cooperation is this project's flagship case study of that mechanism. It is one of the most distinctively human behavioral patterns — the load-bearing pattern behind families, institutions, and large-scale society — and one of the richest testbeds for watching nature and nurture interact in practice. The rest of this site develops that case study in depth: how cooperative tendencies can evolve, how they can be learned, and how the two timescales combine to produce it.
 
 ### What cooperation means here
 
