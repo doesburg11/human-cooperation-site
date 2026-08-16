@@ -21,7 +21,7 @@ slug: /
 
 ## How do nature and nurture combine to shape human behavior?
 
-This project studies human behavior as a two-timescale problem: some behavioral tendencies are shaped across generations by natural selection, and some are acquired within a lifetime through learning. Neither timescale tells the full story on its own — [simulation evidence on this site](/learning-selection-interaction/theory) shows that combining generational selection with lifetime learning produces more effective behavior than either mechanism alone, or than chance.
+This project studies human behavior as a two-timescale problem: some behavioral tendencies are shaped across generations by natural selection, and some are acquired within a lifetime through learning. Neither timescale tells the full story on its own — [a replication of a landmark 1991 evolutionary-computation experiment](/learning-selection-interaction/theory), run on this project's own simulations, found that combining generational selection with lifetime learning significantly outperforms either mechanism alone, or pure chance (p < 0.00001, n = 100 seeds per condition).
 
 - **Nature** → traits and tendencies shaped across generations by natural selection
 

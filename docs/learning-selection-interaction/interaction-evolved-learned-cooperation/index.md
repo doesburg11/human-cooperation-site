@@ -20,7 +20,14 @@ These processes operate on entirely different timescales:
 
 In natural systems they interact. The two-timescale simulation family in this section provides a controlled framework where both processes can be analyzed together.
 
-Independent evidence that combining them is a genuinely productive mechanism — not just a plausible-sounding framing — comes from outside this project's own cooperation simulations. A from-scratch replication of [Ackley & Littman (1991)](/learning-selection-interaction/darwin-baldwin-trial-log#references), the original computational demonstration that evolution and learning combined can outperform either alone, reproduced that result with real statistical power: combined nature-and-nurture significantly beat evolution alone, learning alone, no adaptation, and pure random behavior (p < 0.00001 against all four, n = 100 seeds per condition). That result concerns general fitness-enhancing behavior in a predator-prey world, not cooperation specifically — it doesn't itself demonstrate cooperation emerging — but it is direct evidence for the core two-timescale mechanism this whole framework depends on. Full detail in the [Darwin/Baldwin Trial Log](/learning-selection-interaction/darwin-baldwin-trial-log).
+<div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '1rem 1.25rem', margin: '1rem 0 1.5rem 0', color: '#1F2D3D' }}>
+  <p style={{ margin: '0 0 0.5rem 0' }}>
+    <strong style={{ color: '#0F3368' }}>Confirmed: nature and nurture combined beat either alone.</strong> A from-scratch replication of <a href="/learning-selection-interaction/darwin-baldwin-trial-log#references">Ackley &amp; Littman (1991)</a> — the original computational demonstration that evolution and learning combined can outperform either alone — reproduced that result with real statistical power: combined nature-and-nurture significantly beat evolution alone, learning alone, no adaptation, and pure random behavior, <strong>p &lt; 0.00001 against all four (Mann-Whitney U, n = 100 seeds per condition)</strong>.
+  </p>
+  <p style={{ margin: '0' }}>
+    That result concerns general fitness-enhancing survival behavior in a predator-prey world, not cooperation specifically — it doesn't itself demonstrate cooperation emerging — but it is direct evidence for the core two-timescale mechanism this whole framework depends on. Full detail in the <a href="/learning-selection-interaction/darwin-baldwin-trial-log">Darwin/Baldwin Trial Log</a>.
+  </p>
+</div>
 
 ---
 
@@ -335,7 +342,7 @@ These works are best understood here as adjacent environment or benchmark contex
 The concrete two-timescale experiments documented for this site are available in two companion tracks, one abstract and one ecological:
 
 - [Two-Timescale Simulations](/learning-selection-interaction/simulations) — abstract ring-network models (trust learning, Q-learning, extended social mechanisms), the network-diversity experiment, and focused appendices. This track confirms the theory above cleanly: see its own theory-simulation correspondence table.
-- [Darwin/Baldwin Trial Log](/learning-selection-interaction/darwin-baldwin-trial-log) — the same two-timescale question asked inside a full predator-prey ecology (PredPreyGrass) rather than an abstract donation game. Twelve trials in, this track has its first confirmed positive result — but only after trading its original shared-policy architecture for a per-agent one; read there for the ten nulls that preceded it and why the architecture change is what worked.
+- [Darwin/Baldwin Trial Log](/learning-selection-interaction/darwin-baldwin-trial-log) — the same two-timescale question asked inside a full predator-prey ecology rather than an abstract donation game. The first ten trials ran on this project's own PredPreyGrass ecology and came back null; the trial that finally produced a confirmed positive result traded that ecology for a from-scratch rebuild of Ackley & Littman's own World AL, alongside switching from a shared-policy to a per-agent architecture — read there for why both changes were needed.
 
 ---
 
