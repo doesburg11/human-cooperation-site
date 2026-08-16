@@ -155,7 +155,7 @@ In practice, running this kind of experiment surfaces exactly the difficulties t
 
 This loop is exactly what the site's [PredPreyGrass](/learning-selection-interaction/predpreygrass) simulations are built to probe: agents inherit a speed genome, a shared PPO policy supplies the lifetime learning layer, and ecological success determines which genomes reproduce.
 
-The metabolic-rate scenario above is not hypothetical — it has been run for real, with a full neutral-drift control. The result: null. See the [Darwin/Baldwin Trial Log](/learning-selection-interaction/darwin-baldwin-trial-log) for that trial and ten others, including a deliberately overwhelming version of the same trait that recovered a weak real signal — evidence for population scale, not the underlying mechanism, being the current bottleneck.
+The metabolic-rate scenario above is not hypothetical — it has been run for real, with a full neutral-drift control. The result: null, under the shared-PPO-policy architecture described in the previous paragraph. See the [Darwin/Baldwin Trial Log](/learning-selection-interaction/darwin-baldwin-trial-log) for that trial and the ten others that shared this architecture — and for the twelfth trial, which replaced it with a per-agent genome-and-network design and produced the track's first statistically decisive positive result (p < 0.00001 for combined evolution-and-learning against every degraded alternative).
 
 ## 9. Why demonstrating it is hard
 
