@@ -29,6 +29,15 @@ In natural systems they interact. The two-timescale simulation family in this se
   </p>
 </div>
 
+<div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '1rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>
+  <p style={{ margin: '0 0 0.5rem 0' }}>
+    <strong style={{ color: '#0F3368' }}>A second, independent replication: correlated traits relax the rules.</strong> A from-scratch replication of two models from <a href="https://github.com/doesburg11/CorrelatedBehavioursBaldwin">Prosser (2022)</a>, a University of Southampton PhD thesis, tested what happens when learning acts on genetically <em>correlated</em> groups of traits instead of single traits in isolation. The classical conditions long thought necessary for genetic assimilation — a cost of learning, a stable learnt target — turn out not to be required once learning and evolution share correlated structure.
+  </p>
+  <p style={{ margin: '0' }}>
+    In a multi-peaked fitness landscape, evolution with this kind of learning reached the exact global optimum and held it; evolution alone stayed well below optimum and never stabilized over the same run. The thesis itself establishes this reliably across 30 seeds — the replication here confirms the effect reproduces, not that reliability claim specifically. Code, equations, and validation runs are open in the <a href="https://github.com/doesburg11/CorrelatedBehavioursBaldwin">CorrelatedBehavioursBaldwin</a> repository.
+  </p>
+</div>
+
 ---
 
 ## Fast and Slow Dynamics
@@ -362,6 +371,8 @@ This interaction forms the core mechanism linking nurture and nature in the inte
 ## References
 
 - <a href="https://www.cs.toronto.edu/~hinton/absps/evolution.pdf">Hinton, G.E. & Nowlan, S.J. (1987). <em>How Learning Can Guide Evolution.</em> Complex Systems, 1(3), 495–502.</a>
+- Ackley, D.H. & Littman, M.L. (1991). <em>Interactions Between Learning and Evolution.</em> In Artificial Life II, 487–509. Addison-Wesley.
+- Prosser, D. (2022). <em>The Interaction Between Lifetime Learning and Evolution.</em> PhD thesis, University of Southampton.
 - <a href="https://doi.org/10.1111/j.1558-5646.1953.tb00070.x">Waddington, C.H. (1953). <em>Genetic Assimilation of an Acquired Character.</em> Evolution, 7(2), 118–126.</a>
 - <a href="https://commons.wikimedia.org/wiki/File:Lamarck_Compared_to_Darwin,_Baldwin,_Waddington.svg">Alexander, I. (2018). <em>Lamarck Compared to Darwin, Baldwin, Waddington.svg.</em> Wikimedia Commons. CC BY-SA 4.0.</a>
 
