@@ -303,22 +303,41 @@ function RadialMindmapCanvas({ markdown, height }) {
     setFitted(true);
   }, [layout, size, fitted]);
 
-  // Wire up d3-zoom for pan/scroll-zoom, keeping React state as the source of truth.
+  // Wire up d3-zoom for pan (drag) and pinch/ctrl-wheel zoom, keeping React
+  // state as the source of truth. Plain wheel scrolling is handled
+  // separately below as a pan gesture (see `handleWheel`), matching the
+  // scroll-to-pan convention used by maps/canvases rather than zooming.
   useEffect(() => {
     if (!d3 || !svgRef.current) return;
     const svgSel = d3.select(svgRef.current);
     const zoomBehavior = d3
       .zoom()
       .scaleExtent([MIN_SCALE, MAX_SCALE])
-      .filter((event) => !event.button && event.type !== 'dblclick')
+      .filter((event) => {
+        // Trackpad pinch-zoom and explicit ctrl/cmd+wheel still zoom; plain
+        // wheel scrolling is left for the manual pan handler below.
+        if (event.type === 'wheel') return event.ctrlKey || event.metaKey;
+        return !event.button && event.type !== 'dblclick';
+      })
       .on('zoom', (event) => {
         const { x, y, k } = event.transform;
         setTransform({ x, y, k });
       });
     zoomRef.current = zoomBehavior;
     svgSel.call(zoomBehavior);
+
+    const handleWheel = (event) => {
+      if (event.ctrlKey || event.metaKey) return; // handled by zoomBehavior above
+      event.preventDefault();
+      const k = transformRef.current.k;
+      zoomBehavior.translateBy(svgSel, -event.deltaX / k, -event.deltaY / k);
+    };
+    const svgNode = svgRef.current;
+    svgNode.addEventListener('wheel', handleWheel, { passive: false });
+
     return () => {
       svgSel.on('.zoom', null);
+      svgNode.removeEventListener('wheel', handleWheel);
     };
   }, [d3]);
 
