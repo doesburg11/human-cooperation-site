@@ -57,7 +57,7 @@ No information ever crosses from phenotype back into genotype. The loop closes e
 
 ## 4. The classic computational demonstration: Hinton & Nowlan (1987)
 
-The clearest illustration of the effect isn't biological at all — it's a small artificial model designed specifically to make the logic transparent.
+The clearest illustration of the effect isn't biological at all — it's a small artificial model designed specifically to make the logic transparent. A from-scratch reimplementation of this exact simulation is available in the [BaldwinEffect](https://github.com/doesburg11/BaldwinEffect) repository.
 
 **The setup:**
 - A genome is a string of 20 genes. Each gene can take one of three values: `1` (a connection is present), `0` (a connection is absent), or `?` (undetermined — left to be resolved by learning).
@@ -67,6 +67,8 @@ The clearest illustration of the effect isn't biological at all — it's a small
 **Why this reveals the effect:** with an all-or-nothing fitness landscape and no learning, evolution has almost nothing to search on — nearly every genome scores the same low fitness, and only the one exact match stands out. There's no gradient to climb. But with `?` alleles in the mix, a genome that gets *most* of its genes right (with a few `?`s left over) has a real chance of stumbling onto the correct combination through blind guessing within its own lifetime. That chance is a small but real fitness signal, and it varies smoothly with how close the genome already is — turning the impossible spike into a landscape evolution can actually climb. Hinton and Nowlan showed that populations with this learning mechanism found good solutions far faster, across generations, than populations without it.
 
 *(This model has also drawn methodological criticism — some analyses argue its specific population size and trial-budget parameters were chosen in ways that flatter the effect, and that the advantage shrinks or vanishes under more realistic, resource-bounded assumptions. It remains the field's standard illustration, but not an uncontested one.)*
+
+That reimplementation reproduces the paper's result: incorrect alleles collapse to near zero, correct alleles rise from ~25% to ~75%, and plastic alleles decline but persist at roughly 24% rather than disappearing entirely.
 
 <BaldwinNeedleHaystack />
 
