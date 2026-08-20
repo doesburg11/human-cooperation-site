@@ -233,6 +233,10 @@ A fundamental constraint runs through all research on the evolution of cooperati
 
 Given this constraint, the most defensible scientific strategy shifts from verification of past causes to prediction of present behavior. A model earns credibility not by reconstructing what happened but by generating specific, falsifiable predictions about what should be observable in human cooperative behavior today — and under which conditions those patterns should change. This is the standard this project holds itself to: models should make ex ante predictions that can be tested against controlled laboratory experiments, field data, or cross-cultural comparisons of cooperative behavior. The verification happens in the present, even if the mechanisms being modeled operate across evolutionary time.
 
+### The descriptive agenda
+
+The multi-agent reinforcement learning literature has a name for this stance: the *descriptive agenda*. Rather than treating a learning algorithm as a tool to solve a task, the descriptive agenda uses it as an idealized model of how a real agent — human or animal — adapts its behavior from experience, and then asks whether a population of such agents converges to patterns that match controlled experiments or field data on the real thing (Albrecht, Christianos, & Schäfer, 2024). This project's use of PPO-trained agents in PredPreyGrass and the other simulations follows that agenda directly: the learning rule is a claim about how real adaptation works, and that claim is falsifiable exactly where model and observation disagree.
+
 ### The tension between abstraction and behavioral fit
 
 This creates a genuine methodological tension. On one side, abstract models with few prior assumptions have the greatest inferential discipline. When cooperation emerges from a model that assumes very little about human nature, the result is informative precisely because little was smuggled in. Axelrod's tournament models and Nowak's five mechanisms work this way: their value comes from parsimony. On the other side, a model that closely mirrors known features of human behavior — social preferences, reputation, language, institutions, cultural norms, and group structure — may fit observed patterns well but explain less, because part of the explanation has already been built into the assumptions. This is the overfitting problem in a theoretical register: a model calibrated to reproduce what we already know about human cooperation has fewer degrees of freedom left to surprise us. It becomes descriptively rich but explanatorily constrained.
@@ -263,6 +267,8 @@ If cooperation depends on both lifetime learning and longer-run selection, then 
 
 - They also allow systematic comparison across conditions, helping us ask when cooperation is fragile, when it stabilizes, and when selection should favor more or less plasticity.
 
+Multi-agent settings add something single-agent reinforcement learning does not have: every agent is adapting to other agents who are simultaneously adapting to it. This can produce *autocurricula* — self-generated sequences of increasingly sophisticated strategy, where each adaptation on one side creates new pressure the other side has to answer in turn, without any external change to the task itself (Baker et al., 2020). It is why studying cooperation and competition here needs genuinely multi-agent tools, not just a harder single-agent problem.
+
 ## Where to go next
 
 - [**What is Cooperation?**](/what-is-cooperation) gives the broad definition used throughout the site.
@@ -281,5 +287,7 @@ If cooperation depends on both lifetime learning and longer-run selection, then 
 
 ## References
 
+- Albrecht, S. V., Christianos, F., & Schäfer, L. (2024). *Multi-Agent Reinforcement Learning: Foundations and Modern Approaches*. Cambridge, MA: MIT Press. https://www.marl-book.com
+- Baker, B., Kanitscheider, I., Markov, T., Wu, Y., Powell, G., McGrew, B., & Mordatch, I. (2020). *Emergent tool use from multi-agent autocurricula*. International Conference on Learning Representations (ICLR 2020). https://arxiv.org/abs/1909.07528
 - Chomsky, N. (1959). *Review of B. F. Skinner's Verbal Behavior*. *Language*, 35(1), 26-58. https://doi.org/10.2307/411334
 - Chomsky, N. (1965). *Aspects of the Theory of Syntax*. Cambridge, MA: MIT Press. https://mitpress.mit.edu/9780262527408/aspects-of-the-theory-of-syntax/
