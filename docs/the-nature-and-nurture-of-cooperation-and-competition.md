@@ -235,7 +235,7 @@ Given this constraint, the most defensible scientific strategy shifts from verif
 
 ### The descriptive agenda
 
-The multi-agent reinforcement learning literature has a name for this stance: the *descriptive agenda*. Rather than treating a learning algorithm as a tool to solve a task, the descriptive agenda uses it as an idealized model of how a real agent — human or animal — adapts its behavior from experience, and then asks whether a population of such agents converges to patterns that match controlled experiments or field data on the real thing (Albrecht, Christianos, & Schäfer, 2024). This project's use of PPO-trained agents in PredPreyGrass and the other simulations follows that agenda directly: the learning rule is a claim about how real adaptation works, and that claim is falsifiable exactly where model and observation disagree.
+The multi-agent reinforcement learning literature has a name for this stance: the *descriptive agenda*, one of several distinct agendas a MARL project can pursue (Shoham, Powers, & Grenager, 2007; Albrecht, Christianos, & Schäfer, 2024). Rather than treating a learning algorithm as a tool to solve a task, the descriptive agenda uses it as an idealized model of how a real agent — human or animal — adapts its behavior from experience, and then asks whether a population of such agents converges to patterns that match controlled experiments or field data on the real thing. This project's use of PPO-trained agents in PredPreyGrass and the other simulations follows that agenda directly: the learning rule is a claim about how real adaptation works, and that claim is falsifiable exactly where model and observation disagree.
 
 ### The tension between abstraction and behavioral fit
 
@@ -291,3 +291,4 @@ Multi-agent settings add something single-agent reinforcement learning does not 
 - Baker, B., Kanitscheider, I., Markov, T., Wu, Y., Powell, G., McGrew, B., & Mordatch, I. (2020). *Emergent tool use from multi-agent autocurricula*. International Conference on Learning Representations (ICLR 2020). https://arxiv.org/abs/1909.07528
 - Chomsky, N. (1959). *Review of B. F. Skinner's Verbal Behavior*. *Language*, 35(1), 26-58. https://doi.org/10.2307/411334
 - Chomsky, N. (1965). *Aspects of the Theory of Syntax*. Cambridge, MA: MIT Press. https://mitpress.mit.edu/9780262527408/aspects-of-the-theory-of-syntax/
+- Shoham, Y., Powers, R., & Grenager, T. (2007). *If multi-agent learning is the answer, what is the question?* *Artificial Intelligence*, 171(1), 365-377. https://doi.org/10.1016/j.artint.2006.02.006

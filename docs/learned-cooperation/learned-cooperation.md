@@ -172,7 +172,7 @@ This leads to:
 - metastable cooperative regimes,
 - sensitivity to population density and resource levels.
 
-Studying these instabilities is central to understanding when learning alone can sustain cooperation.
+Studying these instabilities is central to understanding when learning alone can sustain cooperation. For a fuller account of why multi-agent settings are structurally harder than single-agent RL — non-stationarity, credit assignment, partial observability, and more, worked through concretely in PredPreyGrass — see [Challenges of Multi-Agent Reinforcement Learning in PredPreyGrass](/learning-selection-interaction/marl-challenges-predpreygrass).
 
 ---
 

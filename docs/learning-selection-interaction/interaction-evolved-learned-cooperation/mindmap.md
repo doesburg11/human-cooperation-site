@@ -1,7 +1,7 @@
 ---
 id: mindmap
 title: Mindmap
-sidebar_position: 7
+sidebar_position: 8
 slug: /learning-selection-interaction/interaction-evolved-learned-cooperation/mindmap
 ---
 

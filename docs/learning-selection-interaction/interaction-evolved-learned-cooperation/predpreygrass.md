@@ -25,7 +25,7 @@ Predators die of starvation when their energy reaches zero; Prey die of starvati
   <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> A trained Predator, Prey, Grass environment.</figcaption>
 </figure>
 
-That covers the mechanics. For a closer look at the energy economics behind them — why passive decay, not movement or reproduction, is what actually forces the population to compete for a scarce resource — see [Energy and Entropy in PredPreyGrass](/learning-selection-interaction/predpreygrass-energy-entropy). The rest of this page builds on the mechanics to ask a different question: what crosses the generational boundary between parent and offspring, and what that implies about Darwinian, Baldwinian, and Lamarckian dynamics.
+That covers the mechanics. For a closer look at the energy economics behind them — why passive decay, not movement or reproduction, is what actually forces the population to compete for a scarce resource — see [Energy and Entropy in PredPreyGrass](/learning-selection-interaction/predpreygrass-energy-entropy). For why training agents to behave this way is a genuinely hard multi-agent learning problem, not just a bigger single-agent one, see [Challenges of Multi-Agent Reinforcement Learning in PredPreyGrass](/learning-selection-interaction/marl-challenges-predpreygrass). The rest of this page builds on the mechanics to ask a different question: what crosses the generational boundary between parent and offspring, and what that implies about Darwinian, Baldwinian, and Lamarckian dynamics.
 
 ## A Concrete Eco-Evolutionary Analogue
 
