@@ -55,3 +55,25 @@
     display: none;
   }
 }
+
+/* Blue title/subtitle banner used above diagram figures site-wide. */
+.blue-banner {
+  background-color: #0f3368;
+  padding: 20px 45px;
+  color: #ffffff;
+  text-align: left;
+  font-family: 'IBM Plex Sans', 'Avenir Next', 'Segoe UI', sans-serif;
+}
+
+.blue-banner-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.blue-banner-subtitle {
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+}

@@ -71,9 +71,9 @@ Display 1 gives one static read of the same frozen run used by the replay below.
 
 <figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
 	<div style={{ width: '100%', overflow: 'hidden', border: '1px solid #D6E4F5' }}>
-		<div style={{ backgroundColor: '#0F3368', padding: '20px 45px', color: '#FFFFFF', textAlign: 'left', fontFamily: 'IBM Plex Sans, Avenir Next, Segoe UI, sans-serif' }}>
-			<div style={{ fontSize: '20px', fontWeight: 700, lineHeight: 1.3 }}>Spatial Prisoner&apos;s Dilemma</div>
-			<div style={{ marginTop: '12px', fontSize: '14px', fontWeight: 400, lineHeight: 1.4 }}>Frozen website-demo case with seed = 0, same-trait strategy coloring, and snapshots at steps 0, 100, and 200</div>
+		<div className="blue-banner">
+			<div className="blue-banner-title">Spatial Prisoner&apos;s Dilemma</div>
+			<div className="blue-banner-subtitle">Frozen website-demo case with seed = 0, same-trait strategy coloring, and snapshots at steps 0, 100, and 200</div>
 		</div>
 		<img
 			src="/evolved-cooperation/spatial-prisoners-dilemma/spatial-prisoners-dilemma-overview-body.svg"

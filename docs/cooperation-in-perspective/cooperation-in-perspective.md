@@ -22,9 +22,9 @@ Before classifying behavior, it helps to ask what behavior is for. Maslow's hier
 
 <figure style={{ margin: '0 0 2rem', textAlign: 'center' }}>
   <div style={{ width: '100%', maxWidth: '1180px', margin: '0 auto', overflow: 'hidden' }}>
-    <div style={{ backgroundColor: '#0F3368', padding: '20px 45px', color: '#FFFFFF', textAlign: 'left', fontFamily: 'IBM Plex Sans, Avenir Next, Segoe UI, sans-serif' }}>
-      <div style={{ fontSize: '20px', fontWeight: 700, lineHeight: 1.3 }}>Maslow's Hierarchy and the Path to Cooperation</div>
-      <div style={{ marginTop: '12px', fontSize: '14px', fontWeight: 400, lineHeight: 1.4 }}>Physiological survival needs sit at the base; cooperation becomes possible once they are met.</div>
+    <div className="blue-banner">
+      <div className="blue-banner-title">Maslow's Hierarchy and the Path to Cooperation</div>
+      <div className="blue-banner-subtitle">Physiological survival needs sit at the base; cooperation becomes possible once they are met.</div>
     </div>
     <img src="/img/cooperation-in-perspective/display-maslow.svg" alt="Display 1: Maslow's hierarchy of needs, from Physiological at the base through Safety, Belonging and Cooperation, Esteem, to Self-Actualization, with PredPreyGrass mapped to the base layer and cooperation mapped to the Belonging layer" style={{ display: 'block', width: '100%', height: 'auto' }} />
   </div>
@@ -89,9 +89,9 @@ Another way to sharpen the same distinction is to classify interaction by two ax
 
 <figure style={{ margin: '0 0 2rem', textAlign: 'center' }}>
   <div style={{ width: '100%', maxWidth: '1180px', margin: '0 auto', overflow: 'hidden' }}>
-    <div style={{ backgroundColor: '#0F3368', padding: '20px 45px', color: '#FFFFFF', textAlign: 'left', fontFamily: 'IBM Plex Sans, Avenir Next, Segoe UI, sans-serif' }}>
-      <div style={{ fontSize: '20px', fontWeight: 700, lineHeight: 1.3 }}>Cooperative and Adversarial Interaction</div>
-      <div style={{ marginTop: '12px', fontSize: '14px', fontWeight: 400, lineHeight: 1.4 }}>A two-axis classification by compatibility of interests and degree of social organization.</div>
+    <div className="blue-banner">
+      <div className="blue-banner-title">Cooperative and Adversarial Interaction</div>
+      <div className="blue-banner-subtitle">A two-axis classification by compatibility of interests and degree of social organization.</div>
     </div>
     <img src="/img/cooperation-in-perspective/display-1-quadrants.svg" alt="Display 4: Four-quadrant model of cooperative and adversarial interaction by compatibility and organization" style={{ display: 'block', width: '100%', height: 'auto' }} />
   </div>
@@ -217,9 +217,9 @@ Herrmann et al. (2007) help make that point more precise. The comparison with cl
 
 <figure style={{ margin: '0 0 2rem', textAlign: 'center' }}>
   <div style={{ width: '100%', maxWidth: '1180px', margin: '0 auto', overflow: 'hidden' }}>
-    <div style={{ backgroundColor: '#0F3368', padding: '20px 45px', color: '#FFFFFF', textAlign: 'left', fontFamily: 'IBM Plex Sans, Avenir Next, Segoe UI, sans-serif' }}>
-      <div style={{ fontSize: '20px', fontWeight: 700, lineHeight: 1.3 }}>Comparative Performance in Physical and Social Domains</div>
-      <div style={{ marginTop: '12px', fontSize: '14px', fontWeight: 400, lineHeight: 1.4 }}>Comparison human children versus other primates in the physical domain (A) and the social domain(B).</div>
+    <div className="blue-banner">
+      <div className="blue-banner-title">Comparative Performance in Physical and Social Domains</div>
+      <div className="blue-banner-subtitle">Comparison human children versus other primates in the physical domain (A) and the social domain(B).</div>
     </div>
     <img src="/img/cooperation-in-perspective/display-2.png" alt="Display 7: 2.5-year-old children performed roughly like chimpanzees in the physical domain, with orangutans lower, but far better than both ape species in the social domain (Herrmann et al., 2007)" style={{ display: 'block', width: '100%', height: 'auto' }} />
   </div>

@@ -30,9 +30,9 @@ In `predpreygrass.eco_evolutionary_cadence`, speed controls movement frequency r
 
 <figure style={{ margin: '0 0 1.25rem 0', textAlign: 'center' }}>
   <div style={{ width: '100%', maxWidth: '1180px', margin: '0 auto', overflow: 'hidden' }}>
-    <div style={{ backgroundColor: '#0F3368', padding: '20px 45px', color: '#FFFFFF', textAlign: 'left', fontFamily: 'IBM Plex Sans, Avenir Next, Segoe UI, sans-serif' }}>
-      <div style={{ fontSize: '20px', fontWeight: 700, lineHeight: 1.3 }}>Baldwinian Loop in PredPreyGrass Eco-Evolution</div>
-      <div style={{ marginTop: '12px', fontSize: '14px', fontWeight: 400, lineHeight: 1.4 }}>Learning changes ecological success; reproduction transmits mutated speed genomes, not acquired policy weights.</div>
+    <div className="blue-banner">
+      <div className="blue-banner-title">Baldwinian Loop in PredPreyGrass Eco-Evolution</div>
+      <div className="blue-banner-subtitle">Learning changes ecological success; reproduction transmits mutated speed genomes, not acquired policy weights.</div>
     </div>
     <img
       src="/img/learning-selection-interaction/interaction-evolved-learned-cooperation/predpreygrass-baldwinian-loop.svg"

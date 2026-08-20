@@ -49,9 +49,9 @@ Display 1 is the baseline run. It uses the same initial population mix as Displa
 
 <figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
   <div style={{ width: '100%', overflow: 'hidden', border: '1px solid #D6E4F5' }}>
-    <div style={{ backgroundColor: '#0F3368', padding: '20px 45px', color: '#FFFFFF', textAlign: 'left', fontFamily: 'IBM Plex Sans, Avenir Next, Segoe UI, sans-serif' }}>
-      <div style={{ fontSize: '20px', fontWeight: 700, lineHeight: 1.3 }}>Spatial Altruism</div>
-      <div style={{ marginTop: '12px', fontSize: '14px', fontWeight: 400, lineHeight: 1.4 }}>Baseline steady-state case with harshness = 0 and disease = 0</div>
+    <div className="blue-banner">
+      <div className="blue-banner-title">Spatial Altruism</div>
+      <div className="blue-banner-subtitle">Baseline steady-state case with harshness = 0 and disease = 0</div>
     </div>
     <img
       src="/evolved-cooperation/spatial-altruism/spatial-altruism-overview-default-body.png"
@@ -127,9 +127,9 @@ Display 2 shows that altered selection environment.
 
 <figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
   <div style={{ width: '100%', overflow: 'hidden', border: '1px solid #D6E4F5' }}>
-    <div style={{ backgroundColor: '#0F3368', padding: '20px 45px', color: '#FFFFFF', textAlign: 'left', fontFamily: 'IBM Plex Sans, Avenir Next, Segoe UI, sans-serif' }}>
-      <div style={{ fontSize: '20px', fontWeight: 700, lineHeight: 1.3 }}>Spatial Altruism</div>
-      <div style={{ marginTop: '12px', fontSize: '14px', fontWeight: 400, lineHeight: 1.4 }}>Frozen website-demo case with harshness = 0.96 and disease = 0.213</div>
+    <div className="blue-banner">
+      <div className="blue-banner-title">Spatial Altruism</div>
+      <div className="blue-banner-subtitle">Frozen website-demo case with harshness = 0.96 and disease = 0.213</div>
     </div>
     <img
       src="/evolved-cooperation/spatial-altruism/spatial-altruism-overview-harshness-disease-body.png"

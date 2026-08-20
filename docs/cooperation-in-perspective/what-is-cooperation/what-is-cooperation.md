@@ -217,9 +217,9 @@ For **modern adult populations in OECD-like time-use-survey settings**, a plausi
 
 <figure style={{ margin: '0 0 1.25rem 0', textAlign: 'center' }}>
    <div style={{ width: '100%', maxWidth: '1180px', margin: '0 auto', overflow: 'hidden' }}>
-     <div style={{ backgroundColor: '#0F3368', padding: '20px 45px', color: '#FFFFFF', textAlign: 'left', fontFamily: 'IBM Plex Sans, Avenir Next, Segoe UI, sans-serif' }}>
-       <div style={{ fontSize: '20px', fontWeight: 700, lineHeight: 1.3 }}>Estimated Relative Division of Cooperative Time</div>
-       <div style={{ marginTop: '12px', fontSize: '14px', fontWeight: 400, lineHeight: 1.4 }}>Modern adult populations in OECD-like time-use-survey settings</div>
+     <div className="blue-banner">
+       <div className="blue-banner-title">Estimated Relative Division of Cooperative Time</div>
+       <div className="blue-banner-subtitle">Modern adult populations in OECD-like time-use-survey settings</div>
      </div>
      <img src="/img/cooperation-in-perspective/what-is-cooperation/display-1.svg" alt="Display 1: Time division of the four broad forms of cooperation" style={{ display: 'block', width: '100%', height: 'auto' }} />
    </div>
