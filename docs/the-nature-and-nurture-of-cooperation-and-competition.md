@@ -47,6 +47,10 @@ Cooperation is easy to observe, but hard to explain. In many environments, indiv
 
 Any serious explanation of cooperation therefore has to account for both fast and slow adaptation: how agents change within a lifetime, and how populations change across generations.
 
+### Behavior as a cost-benefit investment
+
+Underlying this puzzle is a more basic question: what is behavior for in the first place? At the broadest level, behavior can be understood as action taken to benefit an individual's well-being — a well-being that can itself be increased by improving the well-being of others, including relatives and social partners. Every behavior, cooperative or otherwise, can be viewed as an investment with an uncertain payoff: agents weigh alternative actions against their probable returns before acting, consciously or not, and natural selection favors those that achieve the greatest payoff for the least cost. Cooperation is a specific case of this general logic — a bet that helping, sharing, or coordinating with others will return more than it costs, whether through reciprocity, reputation, kin benefit, or shared access to resources.
+
 ### Nature and nurture as intertwined sources of cooperation
 
 Most research has focused either on evolutionary explanations for the emergence of cooperation or on learning-based explanations in isolation. Yet in natural systems, cooperation emerges from their interaction across two timescales.
