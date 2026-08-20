@@ -232,6 +232,12 @@ An influential line of work associated with Dunbar's social brain hypothesis mak
 
 On that view, cooperation is not an isolated add-on to human life. It is one expression of a broader system in which inherited social capacities and lifetime learning jointly shape how people interact.
 
+### Fast and slow paths to a cooperative decision
+
+Capacity is not the same as mechanism: knowing that humans are unusually well equipped for social cognition still leaves open how any single cooperative decision actually gets made. Neuroscience distinguishes three broad pathways from a stimulus to a behavioral response, differing mainly in speed and how much processing intervenes before a response is produced. A reflexive pathway generates fast, involuntary responses through the spinal cord or brainstem, bypassing conscious evaluation entirely — a reflex is not itself an emotion (Lazarus, 1991). A "low road" pathway routes sensory input rapidly through the amygdala, producing fast, largely automatic emotional appraisals before slower reasoning has time to engage. A "high road" pathway routes input through sensory cortex and hippocampus for slower, more deliberate evaluation, letting context, memory, and explicit reasoning shape the response.
+
+This distinction matters directly for cooperation. Rand, Greene, and Nowak (2012) found that in one-shot economic games, intuitive, time-pressured responses tended to favor cooperation, while giving people more time to deliberate shifted behavior toward self-interested calculation — a pattern they summarized as "spontaneous giving and calculated greed." The direction of the effect is not fixed; later work shows it depends on what a person's environment has reinforced as the default response. What the finding does establish is that cooperative behavior is not produced by a single decision process. A fast, low-road trust judgment and a slower, high-road reciprocity calculation can arrive at different answers to the same interaction, and an account of cooperation has to accommodate both.
+
 ### What follows
 
 For a more explicit definition of the cooperative side, see [What is Cooperation?](/what-is-cooperation). For the opposing side of the same broader interaction space, see [What is Adversarial Behavior?](/what-is-adversarial-behavior). For the two-timescale explanation of how cooperation emerges through evolution and learning, return to [The Nature and Nurture of Cooperation and Competition](/).
@@ -243,3 +249,5 @@ For a more explicit definition of the cooperative side, see [What is Cooperation
 - Herrmann, E., Call, J., Hernández-Lloreda, M. V., Hare, B., & Tomasello, M. (2007). *Humans Have Evolved Specialized Skills of Social Cognition: The Cultural Intelligence Hypothesis*. *Science*, 317(5843), 1360-1366. https://doi.org/10.1126/science.1146282
 - Dunbar, R. I. M. (1992). *Neocortex size as a constraint on group size in primates*. *Journal of Human Evolution*, 22(6), 469-493.
 - Dunbar, R. I. M. (1998). *The social brain hypothesis*. *Evolutionary Anthropology*, 6(5), 178-190.
+- Lazarus, R. S. (1991). *Emotion and Adaptation*. New York: Oxford University Press.
+- Rand, D. G., Greene, J. D., & Nowak, M. A. (2012). *Spontaneous giving and calculated greed*. *Nature*, 489(7416), 427-430. https://doi.org/10.1038/nature11467
