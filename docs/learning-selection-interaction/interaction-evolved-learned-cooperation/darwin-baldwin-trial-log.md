@@ -1,7 +1,7 @@
 ---
 id: darwin-baldwin-trial-log
 title: Darwin/Baldwin Trial Log
-sidebar_position: 3
+sidebar_position: 4
 slug: /learning-selection-interaction/darwin-baldwin-trial-log
 ---
 

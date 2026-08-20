@@ -1,7 +1,7 @@
 ---
 id: baldwin-effect
 title: The Baldwin Effect
-sidebar_position: 4
+sidebar_position: 5
 slug: /learning-selection-interaction/baldwin-effect
 ---
 
