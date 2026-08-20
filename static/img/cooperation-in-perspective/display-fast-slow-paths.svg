@@ -3,15 +3,15 @@
   <desc id="desc">A flowchart showing a social stimulus reaching the thalamus, which routes it along two pathways: a low road directly to the amygdala producing a fast, largely automatic trust judgment, and a high road through sensory cortex first, allowing slower, more deliberate evaluation, before it also reaches the amygdala. Both converge on motor systems, producing a cooperative or defective response. A separate, disconnected note explains that simple spinal reflexes bypass the brain entirely and never reach the thalamus, so they are not a third branch of this circuit.</desc>
 
   <defs>
-    <marker id="fsp-arrowhead" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
-      <path d="M 0 0 L 12 6 L 0 12 z" fill="#0f3368"/>
+    <marker id="fsp-arrowhead" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto">
+      <path d="M 0 0 L 9 4.5 L 0 9 z" fill="#0f3368"/>
     </marker>
     <style>
       .box { fill: #eaf2fb; stroke: #d6e4f5; stroke-width: 2; }
       .diamond { fill: #cfe0f5; stroke: #78aae6; stroke-width: 2; }
       .endbox { fill: #0f3368; stroke: #1c4b8f; stroke-width: 2; }
       .noteBox { fill: #ffffff; stroke: #b7c6da; stroke-width: 1.5; stroke-dasharray: 6 5; }
-      .arrow { stroke: #0f3368; stroke-width: 3; fill: none; marker-end: url(#fsp-arrowhead); }
+      .arrow { stroke: #0f3368; stroke-width: 2.5; fill: none; marker-end: url(#fsp-arrowhead); }
       .boxLabel {
         font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
         font-size: 19px;
@@ -56,36 +56,36 @@
   <!-- Stimulus -->
   <rect class="box" x="340" y="30" width="220" height="60" rx="30"/>
   <text class="boxLabel" x="450" y="66">Social stimulus</text>
-  <path class="arrow" d="M 450 90 L 450 112"/>
+  <path class="arrow" d="M 450 90 L 450 111"/>
 
   <!-- Thalamus -->
   <polygon class="diamond" points="450,113 562,170 450,227 338,170"/>
   <text class="boxLabel" x="450" y="176">Thalamus</text>
 
   <!-- Low road -->
-  <path class="arrow" d="M 450 227 L 450 288"/>
-  <text class="roadLabel" x="330" y="248" text-anchor="end">Low road</text>
-  <text class="noteLabel" x="330" y="268" text-anchor="end">fast trust judgment</text>
+  <path class="arrow" d="M 450 227 L 450 277"/>
+  <text class="roadLabel" x="330" y="246" text-anchor="end">Low road</text>
+  <text class="noteLabel" x="330" y="266" text-anchor="end">fast trust judgment</text>
 
   <!-- High road -->
-  <path class="arrow" d="M 562 170 L 700 170 C 730 170 745 190 745 220 L 745 268"/>
-  <text class="roadLabel" x="612" y="212">High road</text>
-  <text class="noteLabel" x="612" y="232">deliberate evaluation</text>
+  <path class="arrow" d="M 562 170 L 745 170 L 745 277"/>
+  <text class="roadLabel" x="653" y="145" text-anchor="middle">High road</text>
+  <text class="noteLabel" x="653" y="163" text-anchor="middle">deliberate evaluation</text>
 
   <!-- Sensory cortex -->
-  <rect class="box" x="650" y="270" width="190" height="60" rx="10"/>
-  <text class="boxLabel" x="745" y="306">Sensory cortex</text>
-  <path class="arrow" d="M 650 310 C 605 320 590 320 548 320"/>
+  <rect class="box" x="650" y="280" width="190" height="60" rx="10"/>
+  <text class="boxLabel" x="745" y="316">Sensory cortex</text>
+  <path class="arrow" d="M 650 310 L 549 310"/>
 
   <!-- Amygdala -->
-  <rect class="box" x="355" y="290" width="190" height="60" rx="10"/>
-  <text class="boxLabel" x="450" y="326">Amygdala</text>
-  <path class="arrow" d="M 450 350 L 450 382"/>
+  <rect class="box" x="355" y="280" width="190" height="60" rx="10"/>
+  <text class="boxLabel" x="450" y="316">Amygdala</text>
+  <path class="arrow" d="M 450 340 L 450 373"/>
 
   <!-- Motor systems -->
   <rect class="box" x="355" y="384" width="190" height="60" rx="10"/>
   <text class="boxLabel" x="450" y="420">Motor systems</text>
-  <path class="arrow" d="M 450 444 L 450 476"/>
+  <path class="arrow" d="M 450 444 L 450 467"/>
 
   <!-- Response -->
   <rect class="endbox" x="290" y="478" width="320" height="76" rx="14"/>
