@@ -249,6 +249,8 @@ Capacity is not the same as mechanism: knowing that humans are unusually well eq
 
 This distinction matters directly for cooperation. It parallels a broader dual-process account of judgment and decision-making — Kahneman's (2011) distinction between fast, intuitive "System 1" thinking and slower, effortful "System 2" reasoning — applied specifically to cooperative choice. Using that same dual-process framework, Rand, Greene, and Nowak (2012) found that in one-shot economic games, intuitive, time-pressured responses tended to favor cooperation, while giving people more time to deliberate shifted behavior toward self-interested calculation — a pattern they summarized as "spontaneous giving and calculated greed." The direction of the effect is not fixed; later work shows it depends on what a person's environment has reinforced as the default response. What the finding does establish is that cooperative behavior is not produced by a single decision process. A fast, low-road trust judgment and a slower, high-road reciprocity calculation can arrive at different answers to the same interaction, and an account of cooperation has to accommodate both.
 
+The low-road trust judgment is not just fast; it is also biologically tunable. Kosfeld, Heinrichs, Zak, Fischbacher, and Fehr (2005) found that intranasally administered oxytocin substantially increased trust behavior in an economic trust game — and that the effect was specific to trust in another person, not to risk tolerance more generally. Oxytocin does not decide whether a person cooperates, but it is one concrete mechanism through which the amygdala-based low road can be tuned toward or away from trusting another person before slower reasoning has a chance to weigh in.
+
 ### What follows
 
 For a more explicit definition of the cooperative side, see [What is Cooperation?](/what-is-cooperation). For the opposing side of the same broader interaction space, see [What is Adversarial Behavior?](/what-is-adversarial-behavior). For the two-timescale explanation of how cooperation emerges through evolution and learning, return to [The Nature and Nurture of Cooperation and Competition](/).
@@ -264,5 +266,6 @@ For a more explicit definition of the cooperative side, see [What is Cooperation
 - LeDoux, J. E. (2000). *Emotion circuits in the brain*. *Annual Review of Neuroscience*, 23, 155-184. https://doi.org/10.1146/annurev.neuro.23.1.155
 - Kandel, E. R., Schwartz, J. H., Jessell, T. M., Siegelbaum, S. A., & Hudspeth, A. J. (2013). *Principles of Neural Science* (5th ed.). New York: McGraw-Hill.
 - Kahneman, D. (2011). *Thinking, Fast and Slow*. New York: Farrar, Straus and Giroux.
+- Kosfeld, M., Heinrichs, M., Zak, P. J., Fischbacher, U., & Fehr, E. (2005). *Oxytocin increases trust in humans*. *Nature*, 435(7042), 673-676. https://doi.org/10.1038/nature03701
 - Lazarus, R. S. (1991). *Emotion and Adaptation*. New York: Oxford University Press.
 - Rand, D. G., Greene, J. D., & Nowak, M. A. (2012). *Spontaneous giving and calculated greed*. *Nature*, 489(7416), 427-430. https://doi.org/10.1038/nature11467
