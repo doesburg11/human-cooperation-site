@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="730" viewBox="0 0 1300 730" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="680" viewBox="0 0 1300 680" role="img" aria-labelledby="title desc">
   <title id="title">Maslow's Hierarchy and the Path to Cooperation</title>
   <desc id="desc">A five-layer pyramid from Physiological at the base up through Safety, Belonging and Cooperation, Esteem, to Self-Actualization at the apex, colored in a light-to-dark blue gradient. A left callout links the Physiological base layer to the PredPreyGrass simulations, and another left callout links the Belonging and Cooperation layer to this site's cooperation research.</desc>
 
   <defs>
     <style>
       .bg { fill: #ffffff; }
-      .header { fill: #0f3368; }
+      .header { fill: #0F3368; }
       .panel-soft { fill: #eaf2fb; stroke: #d6e4f5; stroke-width: 2; }
       .band { stroke: #0f3368; stroke-width: 1.5; }
       .band-highlight { stroke: #1c4b8f; stroke-width: 3.5; }
@@ -31,54 +31,54 @@
     </style>
   </defs>
 
-  <rect class="bg" x="0" y="0" width="1300" height="730"/>
-  <rect class="header" x="0" y="0" width="1300" height="150"/>
+  <rect class="bg" x="0" y="0" width="1300" height="680"/>
+  <rect class="header" x="0" y="0" width="1300" height="100"/>
 
-  <foreignObject x="0" y="0" width="1300" height="150">
-    <div xmlns="http://www.w3.org/1999/xhtml" style="box-sizing:border-box;width:100%;height:100%;padding:26px 70px;display:flex;flex-direction:column;justify-content:flex-start;gap:14px;color:#ffffff;font-family:'IBM Plex Sans','Avenir Next','Segoe UI',sans-serif;">
-      <div style="font-size:28px;font-weight:700;line-height:1.35;">Maslow's Hierarchy and the Path to Cooperation</div>
-      <div style="font-size:17px;font-weight:400;line-height:1.5;">Physiological survival needs sit at the base; cooperation becomes possible once they are met.</div>
+  <foreignObject x="0" y="0" width="1300" height="100">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="box-sizing:border-box;width:100%;height:100%;padding:20px 45px 20px 45px;display:flex;flex-direction:column;justify-content:flex-start;gap:12px;color:#ffffff;font-family:'IBM Plex Sans','Avenir Next','Segoe UI',sans-serif;">
+      <div style="font-size:20px;font-weight:700;line-height:1.3;">Maslow's Hierarchy and the Path to Cooperation</div>
+      <div style="font-size:14px;font-weight:400;line-height:1.4;">Physiological survival needs sit at the base; cooperation becomes possible once they are met.</div>
     </div>
   </foreignObject>
 
-  <!-- Pyramid bands, apex (550,200) to base (200,670)-(900,670) -->
-  <polygon class="band" points="550,200 620,294 480,294" fill="#eaf2fb"/>
-  <polygon class="band" points="480,294 620,294 690,388 410,388" fill="#cfe0f5"/>
-  <polygon class="band band-highlight" points="410,388 690,388 760,482 340,482" fill="#a9c8ec"/>
-  <polygon class="band" points="340,482 760,482 830,576 270,576" fill="#5f85bc"/>
-  <polygon class="band" points="270,576 830,576 900,670 200,670" fill="#0f3368"/>
+  <!-- Pyramid bands, apex (550,150) to base (200,620)-(900,620) -->
+  <polygon class="band" points="550,150 620,244 480,244" fill="#eaf2fb"/>
+  <polygon class="band" points="480,244 620,244 690,338 410,338" fill="#cfe0f5"/>
+  <polygon class="band band-highlight" points="410,338 690,338 760,432 340,432" fill="#a9c8ec"/>
+  <polygon class="band" points="340,432 760,432 830,526 270,526" fill="#5f85bc"/>
+  <polygon class="band" points="270,526 830,526 900,620 200,620" fill="#0f3368"/>
 
   <!-- Right-side connector lines and labels -->
-  <path class="connector" d="M 584 247 L 940 247"/>
-  <text class="label-title" x="950" y="253">Self-Actualization</text>
+  <path class="connector" d="M 584 197 L 940 197"/>
+  <text class="label-title" x="950" y="203">Self-Actualization</text>
 
-  <path class="connector" d="M 655 341 L 940 341"/>
-  <text class="label-title" x="950" y="347">Esteem</text>
+  <path class="connector" d="M 655 291 L 940 291"/>
+  <text class="label-title" x="950" y="297">Esteem</text>
 
-  <path class="connector" d="M 725 435 L 940 435"/>
-  <text class="label-title" x="950" y="441">Belonging &amp; Cooperation</text>
+  <path class="connector" d="M 725 385 L 940 385"/>
+  <text class="label-title" x="950" y="391">Belonging &amp; Cooperation</text>
 
-  <path class="connector" d="M 795 529 L 940 529"/>
-  <text class="label-title" x="950" y="535">Safety</text>
+  <path class="connector" d="M 795 479 L 940 479"/>
+  <text class="label-title" x="950" y="485">Safety</text>
 
-  <path class="connector" d="M 865 623 L 940 623"/>
-  <text class="label-title" x="950" y="629">Physiological</text>
+  <path class="connector" d="M 865 573 L 940 573"/>
+  <text class="label-title" x="950" y="579">Physiological</text>
 
   <!-- Left callouts -->
-  <path class="connector" d="M 375 435 L 260 435"/>
-  <rect class="panel-soft" x="20" y="360" width="240" height="150"/>
-  <text class="callout-title" x="40" y="392">Cooperation</text>
-  <text class="callout-body" x="40" y="420">
+  <path class="connector" d="M 375 385 L 260 385"/>
+  <rect class="panel-soft" x="20" y="310" width="240" height="150"/>
+  <text class="callout-title" x="40" y="342">Cooperation</text>
+  <text class="callout-body" x="40" y="370">
     <tspan x="40" dy="0">Once survival needs are met,</tspan>
     <tspan x="40" dy="22">agents can share resources,</tspan>
     <tspan x="40" dy="22">form alliances, and coordinate</tspan>
     <tspan x="40" dy="22">action — this site's focus.</tspan>
   </text>
 
-  <path class="connector" d="M 235 623 L 260 623"/>
-  <rect class="panel-soft" x="20" y="548" width="240" height="150"/>
-  <text class="callout-title" x="40" y="580">PredPreyGrass</text>
-  <text class="callout-body" x="40" y="608">
+  <path class="connector" d="M 235 573 L 260 573"/>
+  <rect class="panel-soft" x="20" y="498" width="240" height="150"/>
+  <text class="callout-title" x="40" y="530">PredPreyGrass</text>
+  <text class="callout-body" x="40" y="558">
     <tspan x="40" dy="0">Prey seek grass, predators</tspan>
     <tspan x="40" dy="22">hunt prey: agents driven</tspan>
     <tspan x="40" dy="22">purely by the physiological</tspan>

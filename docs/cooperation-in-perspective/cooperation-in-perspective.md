@@ -20,8 +20,8 @@ The fuller definition of broad cooperation is developed in [What is Cooperation?
 
 Before classifying behavior, it helps to ask what behavior is for. Maslow's hierarchy of needs offers one useful ordering: physiological survival needs sit at the base, and only once they are met does behavior tend to climb toward social needs such as belonging, esteem, and cooperation with others, as shown in Display 1.
 
-<figure style={{ textAlign: 'center' }}>
-  <img src="/img/cooperation-in-perspective/display-maslow.svg" alt="Display 1: Maslow's hierarchy of needs, from Physiological at the base through Safety, Belonging and Cooperation, Esteem, to Self-Actualization, with PredPreyGrass mapped to the base layer and cooperation mapped to the Belonging layer" width="900" />
+<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
+  <img src="/img/cooperation-in-perspective/display-maslow.svg" alt="Display 1: Maslow's hierarchy of needs, from Physiological at the base through Safety, Belonging and Cooperation, Esteem, to Self-Actualization, with PredPreyGrass mapped to the base layer and cooperation mapped to the Belonging layer" style={{ display: 'block', width: '100%', maxWidth: '100%', height: 'auto' }} />
   <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Maslow's hierarchy of needs and the path to cooperation.</figcaption>
 </figure>
 
