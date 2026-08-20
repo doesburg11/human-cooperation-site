@@ -247,7 +247,7 @@ Capacity is not the same as mechanism: knowing that humans are unusually well eq
   <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 8:</strong> Low-road and high-road pathways to a response, with spinal reflexes shown as a separate system.</figcaption>
 </figure>
 
-This distinction matters directly for cooperation. Rand, Greene, and Nowak (2012) found that in one-shot economic games, intuitive, time-pressured responses tended to favor cooperation, while giving people more time to deliberate shifted behavior toward self-interested calculation — a pattern they summarized as "spontaneous giving and calculated greed." The direction of the effect is not fixed; later work shows it depends on what a person's environment has reinforced as the default response. What the finding does establish is that cooperative behavior is not produced by a single decision process. A fast, low-road trust judgment and a slower, high-road reciprocity calculation can arrive at different answers to the same interaction, and an account of cooperation has to accommodate both.
+This distinction matters directly for cooperation. It parallels a broader dual-process account of judgment and decision-making — Kahneman's (2011) distinction between fast, intuitive "System 1" thinking and slower, effortful "System 2" reasoning — applied specifically to cooperative choice. Using that same dual-process framework, Rand, Greene, and Nowak (2012) found that in one-shot economic games, intuitive, time-pressured responses tended to favor cooperation, while giving people more time to deliberate shifted behavior toward self-interested calculation — a pattern they summarized as "spontaneous giving and calculated greed." The direction of the effect is not fixed; later work shows it depends on what a person's environment has reinforced as the default response. What the finding does establish is that cooperative behavior is not produced by a single decision process. A fast, low-road trust judgment and a slower, high-road reciprocity calculation can arrive at different answers to the same interaction, and an account of cooperation has to accommodate both.
 
 ### What follows
 
@@ -263,5 +263,6 @@ For a more explicit definition of the cooperative side, see [What is Cooperation
 - LeDoux, J. E. (1996). *The Emotional Brain: The Mysterious Underpinnings of Emotional Life*. New York: Simon & Schuster.
 - LeDoux, J. E. (2000). *Emotion circuits in the brain*. *Annual Review of Neuroscience*, 23, 155-184. https://doi.org/10.1146/annurev.neuro.23.1.155
 - Kandel, E. R., Schwartz, J. H., Jessell, T. M., Siegelbaum, S. A., & Hudspeth, A. J. (2013). *Principles of Neural Science* (5th ed.). New York: McGraw-Hill.
+- Kahneman, D. (2011). *Thinking, Fast and Slow*. New York: Farrar, Straus and Giroux.
 - Lazarus, R. S. (1991). *Emotion and Adaptation*. New York: Oxford University Press.
 - Rand, D. G., Greene, J. D., & Nowak, M. A. (2012). *Spontaneous giving and calculated greed*. *Nature*, 489(7416), 427-430. https://doi.org/10.1038/nature11467
