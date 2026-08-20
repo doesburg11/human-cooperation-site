@@ -18,9 +18,14 @@ The fuller definition of broad cooperation is developed in [What is Cooperation?
 
 ### Why behavior is needed at all
 
-Before classifying behavior, it helps to ask what behavior is for. Maslow's hierarchy of needs offers one useful ordering: physiological survival needs sit at the base, and only once they are met does behavior tend to climb toward social needs such as belonging, esteem, and cooperation with others.
+Before classifying behavior, it helps to ask what behavior is for. Maslow's hierarchy of needs offers one useful ordering: physiological survival needs sit at the base, and only once they are met does behavior tend to climb toward social needs such as belonging, esteem, and cooperation with others, as shown in Display 7.
 
-This project's [PredPreyGrass](/learning-selection-interaction/predpreygrass) simulations give a concrete, minimal illustration of the base of that hierarchy. Predators, prey, and grass are agents driven purely by the need to obtain energy: prey must find and consume grass, predators must hunt prey, and agents that fail to meet that physiological need perish. Nothing resembling cooperation is possible before that layer is secured. Once survival pressure eases, the same kind of multi-agent system can start to show agents forming alliances, sharing resources, or coordinating action — the social layer of the hierarchy, and the layer this site's broader cooperation research focuses on.
+<figure style={{ textAlign: 'center' }}>
+  <img src="/img/cooperation-in-perspective/display-maslow.svg" alt="Display 7: Maslow's hierarchy of needs, from Physiological at the base through Safety, Belonging and Cooperation, Esteem, to Self-Actualization, with PredPreyGrass mapped to the base layer and cooperation mapped to the Belonging layer" width="900" />
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 7:</strong> Maslow's hierarchy of needs and the path to cooperation.</figcaption>
+</figure>
+
+This project's [PredPreyGrass](/learning-selection-interaction/predpreygrass) simulations give a concrete, minimal illustration of the base of that hierarchy. Predators, prey, and grass are agents driven purely by the need to obtain energy: prey must find and consume grass, predators must hunt prey, and agents that fail to meet that physiological need perish. Nothing resembling cooperation is possible before that layer is secured. Once survival pressure eases, the same kind of multi-agent system can start to show agents forming alliances, sharing resources, or coordinating action — the belonging layer of the hierarchy, and the layer this site's broader cooperation research focuses on.
 
 Needs-based framings like this are a complement to, not a replacement for, the two-timescale (nature and nurture) account developed on [the front page](/): the hierarchy explains *why* cooperative behavior tends to appear only once survival is not in question, while nature and nurture explain *how* cooperative capacities are built and expressed.
 
