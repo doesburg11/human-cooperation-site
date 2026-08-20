@@ -1,7 +1,7 @@
 ---
 id: darwin-baldwin-trial-log
 title: Darwin/Baldwin Trial Log
-sidebar_position: 4
+sidebar_position: 5
 slug: /learning-selection-interaction/darwin-baldwin-trial-log
 ---
 
@@ -49,7 +49,7 @@ All work described here lives under [`predpreygrass/evolutionary/`](https://gith
 
 ## Two structural findings that outlast any single trial
 
-**A shared-policy blind spot runs through Trials 1–10 — and bypassing it is what worked.** Every one of those trials uses a single PPO policy shared across an entire species; the genome is a side-channel scalar the policy never observes directly. It can only ever act on genome differences indirectly, through population-level energy economics. Whether that architecture could support a detectable Baldwin signal at all was an open, untested hypothesis through Trial 11 (the extreme positive-control gradient) — Trial 12 tested it directly by removing the constraint entirely, giving each agent its own genome-initialized network, and got the track's first statistically decisive positive result. That doesn't retroactively prove the shared-policy architecture was *the* cause of every earlier null — many other things differ between Trial 12 and Trials 1–10 besides the policy architecture — but it's the strongest evidence yet that the architecture, not any individual trait's design, was the binding constraint.
+**A shared-policy blind spot runs through Trials 1–10 — and bypassing it is what worked.** Every one of those trials uses a single PPO policy shared across an entire species; the genome is a side-channel scalar the policy never observes directly. It can only ever act on genome differences indirectly, through population-level energy economics. Whether that architecture could support a detectable Baldwin signal at all was an open, untested hypothesis through Trial 11 (the extreme positive-control gradient) — Trial 12 tested it directly by removing the constraint entirely, giving each agent its own genome-initialized network, and got the track's first statistically decisive positive result. That doesn't retroactively prove the shared-policy architecture was *the* cause of every earlier null — many other things differ between Trial 12 and Trials 1–10 besides the policy architecture — but it's the strongest evidence yet that the architecture, not any individual trait's design, was the binding constraint. In the terms laid out in [What Counts as Evolution in PredPreyGrass?](/learning-selection-interaction/evolution-boundary-predpreygrass), Trials 1–10 never leave the "ecology + learning + morphological evolution" tier no matter which trait is varied, because the policy itself stays shared; Trial 12 is the one trial that crosses into genuine behavioral (policy) evolution.
 
 **A silent identity-conflation bug touched Trials 1–7.** While investigating reward density, two RLlib data-integrity bugs were found: a termination-reporting timing bug, and an agent-ID reuse bug that — combined with the first — silently stitched two unrelated individuals' trajectories into one fabricated episode roughly 75% of the time an agent was born. Both were fixed in three new `base_environment_*` reward-shaping modules and later in `base_environment` itself, but **never verified or fixed in any `eco_evolutionary_*` module** except `eco_evolutionary_nuptial_gift`, which had its own independent fix. Whether this materially affected Trials 1–7's null results is unconfirmed — but it is a real, previously-unknown confound in that history, not a hypothetical one.
 

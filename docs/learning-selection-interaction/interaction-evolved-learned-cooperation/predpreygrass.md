@@ -46,6 +46,8 @@ In `predpreygrass.eco_evolutionary`, the active heritable trait is a speed genom
 
 In `predpreygrass.eco_evolutionary_cadence`, speed controls movement frequency rather than movement distance. The policy can observe both the agent's speed and whether movement is available on the current step. This makes the Baldwinian mechanism especially explicit: inherited speed changes the body-environment interface, learning can condition behavior on that inherited trait, and ecological success determines which genomes reproduce.
 
+A heritable speed genome is *morphological* evolution — the body changes, not the strategy. The learned policy itself is still shared across the whole species in these experiments. For the precise distinction between that and genuine behavioral (policy) evolution, and why it matters for how to read the trial results below, see [What Counts as Evolution in PredPreyGrass?](/learning-selection-interaction/evolution-boundary-predpreygrass)
+
 <figure style={{ margin: '0 0 1.25rem 0', textAlign: 'center' }}>
   <div style={{ width: '100%', maxWidth: '1180px', margin: '0 auto', overflow: 'hidden' }}>
     <div className="blue-banner">
