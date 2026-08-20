@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="950" height="700" viewBox="0 0 950 700" role="img" aria-labelledby="title desc">
-  <title id="title">Three pathways from stimulus to cooperative response</title>
-  <desc id="desc">A flowchart showing a social stimulus reaching the thalamus, which routes it along three pathways: a reflexive road that bypasses evaluation and goes straight to motor systems, a low road through the amygdala producing a fast trust judgment, and a high road through sensory cortex and hippocampus into the amygdala producing a slower, deliberated reciprocity calculation. All three converge on motor systems, which produces a cooperative or defective response.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="950" height="600" viewBox="0 0 950 600" role="img" aria-labelledby="title desc">
+  <title id="title">Low-road and high-road pathways from stimulus to cooperative response</title>
+  <desc id="desc">A flowchart showing a social stimulus reaching the thalamus, which routes it along two pathways: a low road directly to the amygdala producing a fast, largely automatic trust judgment, and a high road through sensory cortex first, allowing slower, more deliberate evaluation, before it also reaches the amygdala. Both converge on motor systems, producing a cooperative or defective response. A separate, disconnected note explains that simple spinal reflexes bypass the brain entirely and never reach the thalamus, so they are not a third branch of this circuit.</desc>
 
   <defs>
     <marker id="fsp-arrowhead" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
@@ -10,6 +10,7 @@
       .box { fill: #eaf2fb; stroke: #d6e4f5; stroke-width: 2; }
       .diamond { fill: #cfe0f5; stroke: #78aae6; stroke-width: 2; }
       .endbox { fill: #0f3368; stroke: #1c4b8f; stroke-width: 2; }
+      .noteBox { fill: #ffffff; stroke: #b7c6da; stroke-width: 1.5; stroke-dasharray: 6 5; }
       .arrow { stroke: #0f3368; stroke-width: 3; fill: none; marker-end: url(#fsp-arrowhead); }
       .boxLabel {
         font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
@@ -37,6 +38,18 @@
         font-weight: 400;
         fill: #4e6279;
       }
+      .noteTitle {
+        font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        fill: #506176;
+      }
+      .noteBody {
+        font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        fill: #506176;
+      }
     </style>
   </defs>
 
@@ -49,45 +62,41 @@
   <polygon class="diamond" points="450,113 562,170 450,227 338,170"/>
   <text class="boxLabel" x="450" y="176">Thalamus</text>
 
-  <!-- Reflexive road -->
-  <path class="arrow" d="M 338 170 C 220 170 150 175 150 250 L 150 452"/>
-  <text class="roadLabel" x="60" y="200">Reflexive</text>
-  <text class="roadLabel" x="60" y="222">road</text>
-  <text class="noteLabel" x="20" y="246">bypasses evaluation</text>
-
   <!-- Low road -->
-  <path class="arrow" d="M 450 227 L 450 258"/>
+  <path class="arrow" d="M 450 227 L 450 288"/>
   <text class="roadLabel" x="330" y="248" text-anchor="end">Low road</text>
   <text class="noteLabel" x="330" y="268" text-anchor="end">fast trust judgment</text>
 
   <!-- High road -->
-  <path class="arrow" d="M 562 170 C 610 170 650 175 650 210 L 650 238"/>
-  <text class="roadLabel" x="668" y="188">High road</text>
-  <text class="noteLabel" x="668" y="208">deliberated reciprocity</text>
+  <path class="arrow" d="M 562 170 L 700 170 C 730 170 745 190 745 220 L 745 268"/>
+  <text class="roadLabel" x="612" y="212">High road</text>
+  <text class="noteLabel" x="612" y="232">deliberate evaluation</text>
 
   <!-- Sensory cortex -->
-  <rect class="box" x="555" y="240" width="190" height="60" rx="10"/>
-  <text class="boxLabel" x="650" y="276">Sensory cortex</text>
-  <path class="arrow" d="M 650 300 L 650 328"/>
-
-  <!-- Hippocampus -->
-  <rect class="box" x="555" y="330" width="190" height="60" rx="10"/>
-  <text class="boxLabel" x="650" y="366">Hippocampus</text>
-  <path class="arrow" d="M 555 360 L 460 360"/>
+  <rect class="box" x="650" y="270" width="190" height="60" rx="10"/>
+  <text class="boxLabel" x="745" y="306">Sensory cortex</text>
+  <path class="arrow" d="M 650 310 C 605 320 590 320 548 320"/>
 
   <!-- Amygdala -->
-  <rect class="box" x="355" y="330" width="190" height="60" rx="10"/>
-  <text class="boxLabel" x="450" y="366">Amygdala</text>
-  <path class="arrow" d="M 450 390 L 450 452"/>
+  <rect class="box" x="355" y="290" width="190" height="60" rx="10"/>
+  <text class="boxLabel" x="450" y="326">Amygdala</text>
+  <path class="arrow" d="M 450 350 L 450 382"/>
 
   <!-- Motor systems -->
-  <rect class="box" x="355" y="454" width="190" height="60" rx="10"/>
-  <text class="boxLabel" x="450" y="490">Motor systems</text>
-  <path class="arrow" d="M 150 482 L 355 482"/>
-  <path class="arrow" d="M 450 514 L 450 546"/>
+  <rect class="box" x="355" y="384" width="190" height="60" rx="10"/>
+  <text class="boxLabel" x="450" y="420">Motor systems</text>
+  <path class="arrow" d="M 450 444 L 450 476"/>
 
   <!-- Response -->
-  <rect class="endbox" x="290" y="548" width="320" height="76" rx="14"/>
-  <text class="endLabel" x="450" y="580">Cooperative or</text>
-  <text class="endLabel" x="450" y="604">defective response</text>
+  <rect class="endbox" x="290" y="478" width="320" height="76" rx="14"/>
+  <text class="endLabel" x="450" y="510">Cooperative or</text>
+  <text class="endLabel" x="450" y="534">defective response</text>
+
+  <!-- Separate, disconnected note: spinal reflex -->
+  <rect class="noteBox" x="20" y="384" width="260" height="110" rx="8"/>
+  <text class="noteTitle" x="38" y="408">A separate system</text>
+  <text class="noteBody" x="38" y="430">Simple spinal reflexes (e.g. the</text>
+  <text class="noteBody" x="38" y="448">knee-jerk) bypass the brain</text>
+  <text class="noteBody" x="38" y="466">entirely and never reach the</text>
+  <text class="noteBody" x="38" y="484">thalamus at all.</text>
 </svg>
