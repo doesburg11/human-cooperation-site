@@ -234,7 +234,18 @@ On that view, cooperation is not an isolated add-on to human life. It is one exp
 
 ### Fast and slow paths to a cooperative decision
 
-Capacity is not the same as mechanism: knowing that humans are unusually well equipped for social cognition still leaves open how any single cooperative decision actually gets made. Neuroscience distinguishes three broad pathways from a stimulus to a behavioral response, differing mainly in speed and how much processing intervenes before a response is produced. A reflexive pathway generates fast, involuntary responses through the spinal cord or brainstem, bypassing conscious evaluation entirely — a reflex is not itself an emotion (Lazarus, 1991). A "low road" pathway routes sensory input rapidly through the amygdala, producing fast, largely automatic emotional appraisals before slower reasoning has time to engage. A "high road" pathway routes input through sensory cortex and hippocampus for slower, more deliberate evaluation, letting context, memory, and explicit reasoning shape the response.
+Capacity is not the same as mechanism: knowing that humans are unusually well equipped for social cognition still leaves open how any single cooperative decision actually gets made. Neuroscience distinguishes three broad pathways from a stimulus to a behavioral response, differing mainly in speed and how much processing intervenes before a response is produced, as shown in Display 8. A reflexive pathway generates fast, involuntary responses through the spinal cord or brainstem, bypassing conscious evaluation entirely — a reflex is not itself an emotion (Lazarus, 1991). A "low road" pathway routes sensory input rapidly through the amygdala, producing fast, largely automatic emotional appraisals before slower reasoning has time to engage. A "high road" pathway routes input through sensory cortex and hippocampus for slower, more deliberate evaluation, letting context, memory, and explicit reasoning shape the response.
+
+<figure style={{ margin: '0 0 2rem', textAlign: 'center' }}>
+  <div style={{ width: '100%', maxWidth: '1180px', margin: '0 auto', overflow: 'hidden' }}>
+    <div className="blue-banner">
+      <div className="blue-banner-title">Three Pathways from Stimulus to Cooperative Response</div>
+      <div className="blue-banner-subtitle">The reflexive, low-road, and high-road pathways differ in speed and how much evaluation intervenes before a response.</div>
+    </div>
+    <img src="/img/cooperation-in-perspective/display-fast-slow-paths.svg" alt="Display 8: Flowchart from social stimulus through the thalamus, branching into a reflexive road that bypasses evaluation, a low road through the amygdala producing a fast trust judgment, and a high road through sensory cortex and hippocampus producing a deliberated reciprocity calculation, converging on motor systems and a cooperative or defective response" style={{ display: 'block', width: '100%', height: 'auto' }} />
+  </div>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 8:</strong> Three pathways from stimulus to cooperative response.</figcaption>
+</figure>
 
 This distinction matters directly for cooperation. Rand, Greene, and Nowak (2012) found that in one-shot economic games, intuitive, time-pressured responses tended to favor cooperation, while giving people more time to deliberate shifted behavior toward self-interested calculation — a pattern they summarized as "spontaneous giving and calculated greed." The direction of the effect is not fixed; later work shows it depends on what a person's environment has reinforced as the default response. What the finding does establish is that cooperative behavior is not produced by a single decision process. A fast, low-road trust judgment and a slower, high-road reciprocity calculation can arrive at different answers to the same interaction, and an account of cooperation has to accommodate both.
 
