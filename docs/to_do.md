@@ -253,9 +253,6 @@ Interpretation:
 
 ### layered cooperationn in SocialBehavior
 - Marl Book example
-- Display Maslow's Pyramid and describe project from bottom to top:
-- First layer: PredatorPreyGrass project. Typical for the first layer, physical need (eeating), survival an reproduction.
-- Second layer: social needs. Need to corporate 
 
 
 ### Dynamic training

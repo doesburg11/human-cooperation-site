@@ -16,6 +16,14 @@ Before focusing on cooperation itself, it helps to clarify the broader frame. Hu
 
 The fuller definition of broad cooperation is developed in [What is Cooperation?](/what-is-cooperation). The adversarial side of the same interaction space is developed in [What is Adversarial Behavior?](/what-is-adversarial-behavior).
 
+### Why behavior is needed at all
+
+Before classifying behavior, it helps to ask what behavior is for. Maslow's hierarchy of needs offers one useful ordering: physiological survival needs sit at the base, and only once they are met does behavior tend to climb toward social needs such as belonging, esteem, and cooperation with others.
+
+This project's [PredPreyGrass](/learning-selection-interaction/predpreygrass) simulations give a concrete, minimal illustration of the base of that hierarchy. Predators, prey, and grass are agents driven purely by the need to obtain energy: prey must find and consume grass, predators must hunt prey, and agents that fail to meet that physiological need perish. Nothing resembling cooperation is possible before that layer is secured. Once survival pressure eases, the same kind of multi-agent system can start to show agents forming alliances, sharing resources, or coordinating action — the social layer of the hierarchy, and the layer this site's broader cooperation research focuses on.
+
+Needs-based framings like this are a complement to, not a replacement for, the two-timescale (nature and nurture) account developed on [the front page](/): the hierarchy explains *why* cooperative behavior tends to appear only once survival is not in question, while nature and nurture explain *how* cooperative capacities are built and expressed.
+
 <figure style={{ textAlign: 'center' }}>
   <img src="/img/cooperation-in-perspective/display-1.svg" alt="Display 1: Cooperation within the broader landscape of human behavior and human interaction" width="900" />
   <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Cooperation within the broader landscape of human behavior and human interaction.</figcaption>
