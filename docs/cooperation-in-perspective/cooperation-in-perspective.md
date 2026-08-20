@@ -18,11 +18,11 @@ The fuller definition of broad cooperation is developed in [What is Cooperation?
 
 ### Why behavior is needed at all
 
-Before classifying behavior, it helps to ask what behavior is for. Maslow's hierarchy of needs offers one useful ordering: physiological survival needs sit at the base, and only once they are met does behavior tend to climb toward social needs such as belonging, esteem, and cooperation with others, as shown in Display 7.
+Before classifying behavior, it helps to ask what behavior is for. Maslow's hierarchy of needs offers one useful ordering: physiological survival needs sit at the base, and only once they are met does behavior tend to climb toward social needs such as belonging, esteem, and cooperation with others, as shown in Display 1.
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/cooperation-in-perspective/display-maslow.svg" alt="Display 7: Maslow's hierarchy of needs, from Physiological at the base through Safety, Belonging and Cooperation, Esteem, to Self-Actualization, with PredPreyGrass mapped to the base layer and cooperation mapped to the Belonging layer" width="900" />
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 7:</strong> Maslow's hierarchy of needs and the path to cooperation.</figcaption>
+  <img src="/img/cooperation-in-perspective/display-maslow.svg" alt="Display 1: Maslow's hierarchy of needs, from Physiological at the base through Safety, Belonging and Cooperation, Esteem, to Self-Actualization, with PredPreyGrass mapped to the base layer and cooperation mapped to the Belonging layer" width="900" />
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Maslow's hierarchy of needs and the path to cooperation.</figcaption>
 </figure>
 
 This project's [PredPreyGrass](/learning-selection-interaction/predpreygrass) simulations give a concrete, minimal illustration of the base of that hierarchy. Predators, prey, and grass are agents driven purely by the need to obtain energy: prey must find and consume grass, predators must hunt prey, and agents that fail to meet that physiological need perish. Nothing resembling cooperation is possible before that layer is secured. Once survival pressure eases, the same kind of multi-agent system can start to show agents forming alliances, sharing resources, or coordinating action — the belonging layer of the hierarchy, and the layer this site's broader cooperation research focuses on.
@@ -30,8 +30,8 @@ This project's [PredPreyGrass](/learning-selection-interaction/predpreygrass) si
 Needs-based framings like this are a complement to, not a replacement for, the two-timescale (nature and nurture) account developed on [the front page](/): the hierarchy explains *why* cooperative behavior tends to appear only once survival is not in question, while nature and nurture explain *how* cooperative capacities are built and expressed.
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/cooperation-in-perspective/display-1.svg" alt="Display 1: Cooperation within the broader landscape of human behavior and human interaction" width="900" />
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Cooperation within the broader landscape of human behavior and human interaction.</figcaption>
+  <img src="/img/cooperation-in-perspective/display-1.svg" alt="Display 2: Cooperation within the broader landscape of human behavior and human interaction" width="900" />
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 2:</strong> Cooperation within the broader landscape of human behavior and human interaction.</figcaption>
 </figure>
 
 Within the broad domain of human behavior, a major subset is human interaction: behavior in which people orient to, respond to, influence, or regulate one another. Within this interactive domain, cooperation is best viewed alongside adversarial interaction rather than as a stand-alone phenomenon.
@@ -40,7 +40,7 @@ In this broad sense, cooperation includes not only explicit teamwork or collecti
 
 These modes are not clean opposites. People may cooperate internally in order to compete externally, as in team sports, business organizations, political coalitions, or military groups. Conflict can also serve cooperation, for example when free riders are punished to protect collective norms. Cooperation is therefore best understood not as the absence of conflict or competition, but as one side of a broader interactive landscape shaped by both compatible and incompatible interdependence.
 
-Display 1 is therefore best read as a broad orientation map rather than as a final taxonomy. The cooperative side can be subdivided into mutual accommodation, active support, shared coordination, and norm-sustaining cooperation. The adversarial side can be subdivided into competition, conflict, coercion or domination, and exploitation or sabotage. The overlap region includes cases where those modes are combined in the same social system.
+Display 2 is therefore best read as a broad orientation map rather than as a final taxonomy. The cooperative side can be subdivided into mutual accommodation, active support, shared coordination, and norm-sustaining cooperation. The adversarial side can be subdivided into competition, conflict, coercion or domination, and exploitation or sabotage. The overlap region includes cases where those modes are combined in the same social system.
 
 <figure style={{ margin: '0 0 2rem' }}>
 <div style={{ width: '100%', overflowX: 'auto' }}>
@@ -52,7 +52,7 @@ Display 1 is therefore best read as a broad orientation map rather than as a fin
     </colgroup>
     <thead>
       <tr>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Region in Display 1</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Region in Display 2</th>
         <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Useful subdivisions</th>
         <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Typical examples</th>
       </tr>
@@ -76,7 +76,7 @@ Display 1 is therefore best read as a broad orientation map rather than as a fin
     </tbody>
   </table>
 </div>
-<figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 2:</strong> Subdivisions of cooperative, adversarial, and mixed interaction in the broad map.</figcaption>
+<figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 3:</strong> Subdivisions of cooperative, adversarial, and mixed interaction in the broad map.</figcaption>
 </figure>
 
 Another way to sharpen the same distinction is to classify interaction by two axes: whether the relation is based mainly on compatible or incompatible interdependence, and whether it is loosely organized or highly organized.
@@ -87,9 +87,9 @@ Another way to sharpen the same distinction is to classify interaction by two ax
       <div style={{ fontSize: '20px', fontWeight: 700, lineHeight: 1.3 }}>Cooperative and Adversarial Interaction</div>
       <div style={{ marginTop: '12px', fontSize: '14px', fontWeight: 400, lineHeight: 1.4 }}>A two-axis classification by compatibility of interests and degree of social organization.</div>
     </div>
-    <img src="/img/cooperation-in-perspective/display-1-quadrants.svg" alt="Display 3: Four-quadrant model of cooperative and adversarial interaction by compatibility and organization" style={{ display: 'block', width: '100%', height: 'auto' }} />
+    <img src="/img/cooperation-in-perspective/display-1-quadrants.svg" alt="Display 4: Four-quadrant model of cooperative and adversarial interaction by compatibility and organization" style={{ display: 'block', width: '100%', height: 'auto' }} />
   </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 3:</strong> Four-quadrant model of cooperative and adversarial interaction by compatibility and organization.</figcaption>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 4:</strong> Four-quadrant model of cooperative and adversarial interaction by compatibility and organization.</figcaption>
 </figure>
 
 ### Overlap between cooperation and adversarial behavior
@@ -132,7 +132,7 @@ A compact way to summarize the main overlap patterns is the following:
     </tbody>
   </table>
 </div>
-<figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 4:</strong> Main ways cooperative and adversarial behavior overlap in practice.</figcaption>
+<figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 5:</strong> Main ways cooperative and adversarial behavior overlap in practice.</figcaption>
 </figure>
 
 ### Interaction outside cooperative and adversarial behavior
@@ -182,7 +182,7 @@ Still, some interaction remains outside both. The clearest cases are forms of so
     </tbody>
   </table>
 </div>
-<figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 5:</strong> Compact taxonomy of broad cooperation, adversarial behavior, and interaction outside both.</figcaption>
+<figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 6:</strong> Compact taxonomy of broad cooperation, adversarial behavior, and interaction outside both.</figcaption>
 </figure>
 
 Borderline cases such as greeting, small talk, turn-taking, and authority should therefore be classified contextually. In most ordinary settings, greeting, small talk, and turn-taking belong inside broad cooperation because they sustain civility and mutual accommodation. Authority relations vary more sharply by context: some are cooperative, some adversarial, and some remain mainly formal rather than clearly either.
@@ -215,9 +215,9 @@ Herrmann et al. (2007) help make that point more precise. The comparison with cl
       <div style={{ fontSize: '20px', fontWeight: 700, lineHeight: 1.3 }}>Comparative Performance in Physical and Social Domains</div>
       <div style={{ marginTop: '12px', fontSize: '14px', fontWeight: 400, lineHeight: 1.4 }}>Comparison human children versus other primates in the physical domain (A) and the social domain(B).</div>
     </div>
-    <img src="/img/cooperation-in-perspective/display-2.png" alt="Display 6: 2.5-year-old children performed roughly like chimpanzees in the physical domain, with orangutans lower, but far better than both ape species in the social domain (Herrmann et al., 2007)" style={{ display: 'block', width: '100%', height: 'auto' }} />
+    <img src="/img/cooperation-in-perspective/display-2.png" alt="Display 7: 2.5-year-old children performed roughly like chimpanzees in the physical domain, with orangutans lower, but far better than both ape species in the social domain (Herrmann et al., 2007)" style={{ display: 'block', width: '100%', height: 'auto' }} />
   </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 6:</strong> 2.5-year-old children performed roughly like chimpanzees in the physical domain, with orangutans lower, but far better than both ape species in the social domain (Herrmann et al., 2007).</figcaption>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 7:</strong> 2.5-year-old children performed roughly like chimpanzees in the physical domain, with orangutans lower, but far better than both ape species in the social domain (Herrmann et al., 2007).</figcaption>
 </figure>
 
 The point is not that humans are superior at everything. The more relevant claim for this site is that humans show an early advantage in social cognition: attending to others, inferring goals, coordinating attention, and learning from social interaction. Those capacities do not amount to a fixed cooperative script, but they do provide part of the inherited background that makes cooperation developmentally and behaviorally possible.
