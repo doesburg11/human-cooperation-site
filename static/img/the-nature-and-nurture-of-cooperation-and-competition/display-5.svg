@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1150" viewBox="0 0 1400 1150" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1050" viewBox="0 0 1400 1050" role="img" aria-labelledby="title desc">
   <title id="title">Nature and Nurture Feedback Loop</title>
   <desc id="desc">A clockwise eco-evolutionary feedback loop with a blue header and white text, showing how evolution shapes learning capacities, learning reshapes ecological structure, ecological structure reshapes selection gradients, and plasticity closes the loop. Two boxes below contrast why higher plasticity can be favored in unstable environments and lower plasticity in stable environments.</desc>
 
@@ -8,21 +8,8 @@
     </marker>
     <style>
       .bg { fill: #ffffff; }
-      .header { fill: #0f3368; }
       .panel-soft { fill: #eaf2fb; stroke: #d6e4f5; stroke-width: 2; }
       .hub { fill: #f7fbff; stroke: #1c4b8f; stroke-width: 2.5; }
-      .title {
-        fill: #ffffff;
-        font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
-        font-size: 20px;
-        font-weight: 700;
-      }
-      .subtitle {
-        fill: #ffffff;
-        font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
-        font-size: 14px;
-        font-weight: 400;
-      }
       .eyebrow {
         fill: #0f3368;
         font-family: "IBM Plex Mono", "SFMono-Regular", "Menlo", monospace;
@@ -74,97 +61,89 @@
     </style>
   </defs>
 
-  <rect class="bg" x="0" y="0" width="1400" height="1150"/>
-  <rect class="header" x="0" y="0" width="1400" height="100"/>
+  <rect class="bg" x="0" y="0" width="1400" height="1050"/>
 
-  <foreignObject x="0" y="0" width="1400" height="100">
-    <div xmlns="http://www.w3.org/1999/xhtml" style="box-sizing:border-box;width:100%;height:100%;padding:20px 45px 20px 45px;display:flex;flex-direction:column;justify-content:flex-start;gap:12px;color:#ffffff;font-family:'IBM Plex Sans','Avenir Next','Segoe UI',sans-serif;">
-      <div style="font-size:20px;font-weight:700;line-height:1.3;">Nature and Nurture Feedback Loop</div>
-      <div style="font-size:14px;font-weight:400;line-height:1.4;">Learning changes ecological structure, ecological structure changes selection pressures, and selection changes which forms of plasticity persist.</div>
-    </div>
-  </foreignObject>
-
-  <rect class="panel-soft" x="70" y="140" width="500" height="250"/>
-  <text class="step-index" x="102" y="182">01</text>
-  <text class="step-title" x="102" y="230">
+  <rect class="panel-soft" x="70" y="40" width="500" height="250"/>
+  <text class="step-index" x="102" y="82">01</text>
+  <text class="step-title" x="102" y="130">
     <tspan x="102" dy="0">Evolution shapes</tspan>
     <tspan x="102" dy="30">learning capacities.</tspan>
   </text>
-  <text class="body" x="102" y="295">
+  <text class="body" x="102" y="195">
     <tspan x="102" dy="0">Selection determines which forms of</tspan>
     <tspan x="102" dy="28">adjustment are available, how fast they</tspan>
     <tspan x="102" dy="28">can respond, and what they cost.</tspan>
   </text>
 
-  <rect class="panel-soft" x="830" y="140" width="500" height="250"/>
-  <text class="step-index" x="862" y="182">02</text>
-  <text class="step-title" x="862" y="230">
+  <rect class="panel-soft" x="830" y="40" width="500" height="250"/>
+  <text class="step-index" x="862" y="82">02</text>
+  <text class="step-title" x="862" y="130">
     <tspan x="862" dy="0">Learning reshapes</tspan>
     <tspan x="862" dy="30">ecological structure.</tspan>
   </text>
-  <text class="body" x="862" y="295">
+  <text class="body" x="862" y="195">
     <tspan x="862" dy="0">Behavioral adjustment changes who</tspan>
     <tspan x="862" dy="28">survives, who interacts, and how local</tspan>
     <tspan x="862" dy="28">resource and social conditions are organized.</tspan>
   </text>
 
-  <rect class="panel-soft" x="830" y="490" width="500" height="250"/>
-  <text class="step-index" x="862" y="532">03</text>
-  <text class="step-title" x="862" y="580">
+  <rect class="panel-soft" x="830" y="390" width="500" height="250"/>
+  <text class="step-index" x="862" y="432">03</text>
+  <text class="step-title" x="862" y="480">
     <tspan x="862" dy="0">Ecological structure</tspan>
     <tspan x="862" dy="30">reshapes selection gradients.</tspan>
   </text>
-  <text class="body" x="862" y="645">
+  <text class="body" x="862" y="545">
     <tspan x="862" dy="0">Once ecology changes, the fitness</tspan>
     <tspan x="862" dy="28">landscape changes and different</tspan>
     <tspan x="862" dy="28">strategies gain or lose advantage.</tspan>
   </text>
 
-  <rect class="panel-soft" x="70" y="490" width="500" height="250"/>
-  <text class="step-index" x="102" y="532">04</text>
-  <text class="step-title" x="102" y="580">
+  <rect class="panel-soft" x="70" y="390" width="500" height="250"/>
+  <text class="step-index" x="102" y="432">04</text>
+  <text class="step-title" x="102" y="480">
     <tspan x="102" dy="0">Plasticity closes</tspan>
     <tspan x="102" dy="30">the loop.</tspan>
   </text>
-  <text class="body" x="102" y="645">
+  <text class="body" x="102" y="545">
     <tspan x="102" dy="0">Plasticity links short-run learning to</tspan>
     <tspan x="102" dy="28">long-run evolution by changing how</tspan>
     <tspan x="102" dy="28">organisms track conditions before</tspan>
     <tspan x="102" dy="28">selection acts on the result.</tspan>
   </text>
 
-  <circle class="hub" cx="700" cy="440" r="126"/>
-  <text class="hub-title" x="700" y="410" text-anchor="middle">
+  <circle class="hub" cx="700" cy="340" r="126"/>
+  <text class="hub-title" x="700" y="310" text-anchor="middle">
     <tspan x="700" dy="0">Feedback</tspan>
     <tspan x="700" dy="28">loop</tspan>
   </text>
-  <text class="hub-body" x="700" y="472" text-anchor="middle">
+  <text class="hub-body" x="700" y="372" text-anchor="middle">
     <tspan x="700" dy="0">Learning changes ecology.</tspan>
     <tspan x="700" dy="21">Ecology changes selection.</tspan>
     <tspan x="700" dy="21">Selection reshapes future</tspan>
     <tspan x="700" dy="21">learning capacity.</tspan>
   </text>
 
-  <path class="arrow-line" d="M 570 265 C 660 265, 740 265, 830 265"/>
-  <path class="arrow-line" d="M 1080 390 C 1080 430, 1080 450, 1080 490"/>
-  <path class="arrow-line" d="M 830 615 C 740 615, 660 615, 570 615"/>
-  <path class="arrow-line" d="M 320 490 C 320 450, 320 430, 320 390"/>
+  <path class="arrow-line" d="M 570 165 C 660 165, 740 165, 830 165"/>
+  <path class="arrow-line" d="M 1080 290 C 1080 330, 1080 350, 1080 390"/>
+  <path class="arrow-line" d="M 830 515 C 740 515, 660 515, 570 515"/>
+  <path class="arrow-line" d="M 320 390 C 320 350, 320 330, 320 290"/>
 
-  <line class="divider" x1="70" y1="820" x2="1330" y2="820"/>
+  <line class="divider" x1="70" y1="720" x2="1330" y2="720"/>
 
-  <text class="eyebrow" x="70" y="880">ENVIRONMENTAL IMPLICATION</text>
+  <text class="eyebrow" x="70" y="780">ENVIRONMENTAL IMPLICATION</text>
 
-  <rect class="panel-soft" x="70" y="915" width="610" height="180"/>
-  <text class="step-title" x="102" y="963">Unstable environments</text>
-  <text class="body" x="102" y="1015">
+  <rect class="panel-soft" x="70" y="815" width="610" height="180"/>
+  <text class="step-title" x="102" y="863">Unstable environments</text>
+  <text class="body" x="102" y="915">
     <tspan x="102" dy="0">Higher plasticity may be favored because</tspan>
     <tspan x="102" dy="28">rapid adjustment helps organisms track</tspan>
     <tspan x="102" dy="28">changing conditions.</tspan>
   </text>
 
-  <rect class="panel-soft" x="720" y="915" width="610" height="180"/>
-  <text class="step-title" x="752" y="963">Stable environments</text>
-  <text class="body" x="752" y="1015">
+  <rect class="panel-soft" x="720" y="815" width="610" height="180"/>
+  <text class="step-title" x="752" y="863">Stable environments</text>
+  <text class="body" x="752" y="915">
     <tspan x="752" dy="0">Lower plasticity may be favored because</tspan>
     <tspan x="752" dy="28">it avoids unnecessary cost and preserves</tspan>
     <tspan x="752" dy="28">reliable behavior.</tspan>

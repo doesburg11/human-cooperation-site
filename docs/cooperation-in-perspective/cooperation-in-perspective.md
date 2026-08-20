@@ -20,8 +20,14 @@ The fuller definition of broad cooperation is developed in [What is Cooperation?
 
 Before classifying behavior, it helps to ask what behavior is for. Maslow's hierarchy of needs offers one useful ordering: physiological survival needs sit at the base, and only once they are met does behavior tend to climb toward social needs such as belonging, esteem, and cooperation with others, as shown in Display 1.
 
-<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
-  <img src="/img/cooperation-in-perspective/display-maslow.svg" alt="Display 1: Maslow's hierarchy of needs, from Physiological at the base through Safety, Belonging and Cooperation, Esteem, to Self-Actualization, with PredPreyGrass mapped to the base layer and cooperation mapped to the Belonging layer" style={{ display: 'block', width: '100%', maxWidth: '100%', height: 'auto' }} />
+<figure style={{ margin: '0 0 2rem', textAlign: 'center' }}>
+  <div style={{ width: '100%', maxWidth: '1180px', margin: '0 auto', overflow: 'hidden' }}>
+    <div style={{ backgroundColor: '#0F3368', padding: '20px 45px', color: '#FFFFFF', textAlign: 'left', fontFamily: 'IBM Plex Sans, Avenir Next, Segoe UI, sans-serif' }}>
+      <div style={{ fontSize: '20px', fontWeight: 700, lineHeight: 1.3 }}>Maslow's Hierarchy and the Path to Cooperation</div>
+      <div style={{ marginTop: '12px', fontSize: '14px', fontWeight: 400, lineHeight: 1.4 }}>Physiological survival needs sit at the base; cooperation becomes possible once they are met.</div>
+    </div>
+    <img src="/img/cooperation-in-perspective/display-maslow.svg" alt="Display 1: Maslow's hierarchy of needs, from Physiological at the base through Safety, Belonging and Cooperation, Esteem, to Self-Actualization, with PredPreyGrass mapped to the base layer and cooperation mapped to the Belonging layer" style={{ display: 'block', width: '100%', height: 'auto' }} />
+  </div>
   <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Maslow's hierarchy of needs and the path to cooperation.</figcaption>
 </figure>
 
