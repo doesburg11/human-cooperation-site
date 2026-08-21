@@ -31,6 +31,20 @@ Applying these axes to the codebase gives three clearly different tiers, corresp
 
 **The `eco_evolutionary` family adds morphological evolution on top of that.** As described on [the PredPreyGrass page](/learning-selection-interaction/predpreygrass), a speed genome becomes a heritable, mutating body parameter: offspring inherit a mutated version of their parent's speed value. That is real morphological selection — different bodies with different movement costs compete, and speed values that work well become more common. The learned policy, however, is still shared and PPO-updated across the whole species, exactly as in the base environment. So this tier is ecology, plus learning, plus morphological evolution — but still not what the next section calls behavioral evolution, because the *policy* itself is not what's being inherited or selected between.
 
+An earlier, simpler module (a discrete two-class version — agents were either a "slow" type, moving within a 9-position Moore neighborhood, or a "fast" type, moving within an extended 25-position range, with a 5% chance of switching class on reproduction) produced a clean empirical example of what morphological selection looks like in practice, before the current continuous speed genome superseded it.
+
+<figure style={{ textAlign: 'center' }}>
+  <img src="/img/learning-selection-interaction/interaction-evolved-learned-cooperation/mutating-agents/action-spaces.png" alt="Display 1: Comparison of the movement range available to a slow agent (9-position Moore neighborhood) and a fast agent (25-position extended Moore neighborhood)" width="600" />
+  <figcaption><strong>Display 1:</strong> Movement range available to a "slow" versus a "fast" agent in the discrete two-class predecessor to the current speed genome.</figcaption>
+</figure>
+
+Starting from an all-slow population, both predators and prey drifted toward the fast phenotype through mutation and differential reproductive success alone — no reward was ever given for speed itself, only for reproducing. Prey shifted first; predators followed once fast prey had become common enough to make chasing them with a slow body unproductive:
+
+<figure style={{ textAlign: 'center' }}>
+  <img src="/img/learning-selection-interaction/interaction-evolved-learned-cooperation/mutating-agents/red-queen-population-shift.png" alt="Display 2: Percentage of high-speed agents over training steps, showing prey (blue) shifting to the fast phenotype starting around step 50 and reaching near 100%, followed by predators (red) beginning their shift around step 300 and catching up by step 800" width="600" />
+  <figcaption><strong>Display 2:</strong> Share of high-speed agents over training steps: prey shift first, predators follow — a Red Queen dynamic in which each side is adapting to keep up with the other, not to get ahead in absolute terms (Van Valen, 1973).</figcaption>
+</figure>
+
 **Crossing into true behavioral (policy) evolution requires something further.** The [Darwin/Baldwin Trial Log](/learning-selection-interaction/darwin-baldwin-trial-log) documents this distinction empirically, without originally framing it this way: ten trials (1-10) under the shared-policy architecture came back null or inconclusive on selection-driven drift, across six differently-mechanised heritable traits and two full statistical replications. Trial 12 changed one thing — giving each agent its own genome-initialized network instead of a policy shared across the species — and produced the track's first statistically decisive positive result (p < 0.00001 against every degraded condition). In the terms of this page, Trials 1-10 never left the "ecology + learning + morphological evolution" tier, no matter which trait was varied, because the policy itself stayed shared. Trial 12 crossed into genuine behavioral evolution: policy identity became heritable, and differential reproduction could change which policy variants persisted.
 
 ## A litmus test
@@ -42,3 +56,9 @@ One question distinguishes ecology-with-learning from genuine behavioral evoluti
 If no, the system has ecology and possibly learning and morphological evolution, but not behavioral evolution — strategy changes because agents learn, not because better strategies out-reproduce worse ones. If yes, the system crosses into the territory that genetic algorithms and Population-Based Training occupy by design: selection acting directly on strategies, not just on the bodies that carry them. Mutation is not required to cross this boundary — heritable variation and differential reproduction are sufficient on their own.
 
 None of this is a criticism of the base environment or the `eco_evolutionary` family — they implement real, non-trivial forms of selection, just not all three kinds at once. The value of drawing the line precisely is that it explains, in advance, why a shared-policy architecture structurally cannot show a behavioral-evolution signal no matter how the trait is designed — and why Trial 12 needed to change the architecture, not just try an eleventh trait.
+
+---
+
+## References
+
+- Van Valen, L. (1973). *A new evolutionary law*. *Evolutionary Theory*, 1, 1-30.
