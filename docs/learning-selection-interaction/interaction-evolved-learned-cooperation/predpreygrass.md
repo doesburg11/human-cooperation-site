@@ -25,6 +25,13 @@ Predators die of starvation when their energy reaches zero; Prey die of starvati
   <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> A trained Predator, Prey, Grass environment.</figcaption>
 </figure>
 
+Despite that sparse reward structure — or arguably because of it — training produces concrete, recognizable behavior: predators hunting prey, multiple predators collaborating (and competing) to raise their odds of a catch, predators hovering near grass patches to ambush prey that come to graze, and prey learning to find grass while evading predators. At the population level, trained policies keep the ecosystem running far longer than a random policy does, and population counts settle into a recognizable [Lotka-Volterra](https://en.wikipedia.org/wiki/Lotka%E2%80%93Volterra_equations) predator-prey cycle:
+
+<figure style={{ textAlign: 'center' }}>
+  <img src="/img/learning-selection-interaction/interaction-evolved-learned-cooperation/predpreygrass/lotka-volterra-population.png" alt="Display 2: Predator and prey population counts over roughly 800 time steps, oscillating in a Lotka-Volterra pattern with prey (blue) peaking before predators (red) rise and predation drives prey back down" width="700" />
+  <figcaption><strong>Display 2:</strong> Predator and prey population counts from a trained run, showing the classic Lotka-Volterra oscillation.</figcaption>
+</figure>
+
 That covers the mechanics. For a closer look at the energy economics behind them — why passive decay, not movement or reproduction, is what actually forces the population to compete for a scarce resource — see [Energy and Entropy in PredPreyGrass](/learning-selection-interaction/predpreygrass-energy-entropy). For why training agents to behave this way is a genuinely hard multi-agent learning problem, not just a bigger single-agent one, see [Challenges of Multi-Agent Reinforcement Learning in PredPreyGrass](/learning-selection-interaction/marl-challenges-predpreygrass). The rest of this page builds on the mechanics to ask a different question: what crosses the generational boundary between parent and offspring, and what that implies about Darwinian, Baldwinian, and Lamarckian dynamics.
 
 ## A Concrete Eco-Evolutionary Analogue
@@ -39,7 +46,7 @@ The general distinction is still the same: what matters is what crosses the gene
     alt="Diagram comparing Lamarckian inheritance, Darwinian evolution, the Baldwin effect, and Waddington's genetic assimilation"
     style={{ display: 'block', width: '100%', height: 'auto' }}
   />
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 2:</strong> Lamarckian inheritance passes acquired change directly, while the Baldwin effect lets learned behavior guide selection without direct inheritance of that learned behavior. Image by Ian Alexander, CC BY-SA 4.0.</figcaption>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 3:</strong> Lamarckian inheritance passes acquired change directly, while the Baldwin effect lets learned behavior guide selection without direct inheritance of that learned behavior. Image by Ian Alexander, CC BY-SA 4.0.</figcaption>
 </figure>
 
 In `predpreygrass.eco_evolutionary`, the active heritable trait is a speed genome. Offspring inherit the parent's speed genome with bounded mutation. The learned PPO policy weights are not part of the inherited genome in the base experiment.
@@ -60,7 +67,7 @@ A heritable speed genome is *morphological* evolution — the body changes, not 
       style={{ display: 'block', width: '100%', height: 'auto' }}
     />
   </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 3:</strong> PredPreyGrass as a Baldwinian loop: inherited speed genomes shape movement mechanics, learned behavior changes ecological success, and offspring inherit mutated genomes rather than acquired policy weights.</figcaption>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 4:</strong> PredPreyGrass as a Baldwinian loop: inherited speed genomes shape movement mechanics, learned behavior changes ecological success, and offspring inherit mutated genomes rather than acquired policy weights.</figcaption>
 </figure>
 
 ## Interpretation
@@ -104,5 +111,5 @@ A heritable speed genome is *morphological* evolution — the body changes, not 
     </tbody>
   </table>
 </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 4:</strong> PredPreyGrass changes interpretation depending on whether only the genome is inherited or learned policy state is copied forward.</figcaption>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 5:</strong> PredPreyGrass changes interpretation depending on whether only the genome is inherited or learned policy state is copied forward.</figcaption>
 </figure>
