@@ -251,6 +251,10 @@ This distinction matters directly for cooperation. It parallels a broader dual-p
 
 The low-road trust judgment is not just fast; it is also biologically tunable. Kosfeld, Heinrichs, Zak, Fischbacher, and Fehr (2005) found that intranasally administered oxytocin substantially increased trust behavior in an economic trust game — and that the effect was specific to trust in another person, not to risk tolerance more generally. Oxytocin does not decide whether a person cooperates, but it is one concrete mechanism through which the amygdala-based low road can be tuned toward or away from trusting another person before slower reasoning has a chance to weigh in.
 
+### Why cooperation needs an internal enforcer, not just external ones
+
+Most of the mechanisms discussed on this site — reciprocity, reputation, punishment, kin selection — work by making defection costly through some external channel: a partner who stops cooperating, a community that notices, a relative who shares your genes. Frank (1988) makes the case for a complementary mechanism that requires no external observer at all: emotions such as guilt, shame, and moral anger function as *commitment devices*, internal signals that make cooperative or vengeful behavior credible even when it isn't, in the moment, in a person's narrow self-interest. A person disposed to feel guilt about cheating a trusting partner is more trustworthy precisely because that guilt is hard to fake convincingly — which is what makes it a credible signal to others in the first place, not just a private cost. This is why cooperation can persist even under conditions where external enforcement is absent, unlikely, or delayed: the enforcement has been moved inside the agent, where it no longer depends on being caught.
+
 ### What follows
 
 For a more explicit definition of the cooperative side, see [What is Cooperation?](/what-is-cooperation). For the opposing side of the same broader interaction space, see [What is Adversarial Behavior?](/what-is-adversarial-behavior). For the two-timescale explanation of how cooperation emerges through evolution and learning, return to [The Nature and Nurture of Cooperation and Competition](/).
@@ -262,6 +266,7 @@ For a more explicit definition of the cooperative side, see [What is Cooperation
 - Herrmann, E., Call, J., Hernández-Lloreda, M. V., Hare, B., & Tomasello, M. (2007). *Humans Have Evolved Specialized Skills of Social Cognition: The Cultural Intelligence Hypothesis*. *Science*, 317(5843), 1360-1366. https://doi.org/10.1126/science.1146282
 - Dunbar, R. I. M. (1992). *Neocortex size as a constraint on group size in primates*. *Journal of Human Evolution*, 22(6), 469-493.
 - Dunbar, R. I. M. (1998). *The social brain hypothesis*. *Evolutionary Anthropology*, 6(5), 178-190.
+- Frank, R. H. (1988). *Passions Within Reason: The Strategic Role of the Emotions*. New York: W. W. Norton & Company.
 - LeDoux, J. E. (1996). *The Emotional Brain: The Mysterious Underpinnings of Emotional Life*. New York: Simon & Schuster.
 - LeDoux, J. E. (2000). *Emotion circuits in the brain*. *Annual Review of Neuroscience*, 23, 155-184. https://doi.org/10.1146/annurev.neuro.23.1.155
 - Kandel, E. R., Schwartz, J. H., Jessell, T. M., Siegelbaum, S. A., & Hudspeth, A. J. (2013). *Principles of Neural Science* (5th ed.). New York: McGraw-Hill.
