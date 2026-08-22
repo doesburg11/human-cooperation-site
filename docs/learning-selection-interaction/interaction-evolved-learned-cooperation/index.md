@@ -29,6 +29,21 @@ In natural systems they interact. The two-timescale simulation family in this se
   </p>
 </div>
 
+<figure style={{ margin: '0 0 1.25rem 0', textAlign: 'center' }}>
+  <div style={{ width: '100%', maxWidth: '1180px', margin: '0 auto', overflow: 'hidden' }}>
+    <div className="blue-banner">
+      <div className="blue-banner-title">Nature and Nurture Combined Beat Either Alone</div>
+      <div className="blue-banner-subtitle">Per-seed survival time across all 500 runs of the comparative study — ERL (evolution + learning combined), L (learning alone), E (evolution alone), F (neither — no learning, no evolutionary variation), B (luck alone, random behavior); n=100 seeds each.</div>
+    </div>
+    <img
+      src="/img/learning-selection-interaction/interaction-evolved-learned-cooperation/darwin-baldwin-trial-log/erl-survival-by-strategy.png"
+      alt="Display 1: Per-seed survival time (log scale) for all 500 Trial 12 runs, grouped by condition ERL, L, E, F, B — ERL clusters at the 1,000,000-step ceiling, while the other four conditions spread across a long tail of much earlier extinctions"
+      style={{ display: 'block', width: '100%', height: 'auto' }}
+    />
+  </div>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Every one of the 500 runs behind that result, not just its medians — nature and nurture combined (ERL) piling up at the step ceiling, versus either alone (L, E), neither (F), or pure luck (B) spread across a much shorter, longer-tailed distribution.</figcaption>
+</figure>
+
 <div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '1rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>
   <p style={{ margin: '0 0 0.5rem 0' }}>
     <strong style={{ color: '#0F3368' }}>A second, independent replication: correlated traits relax the rules.</strong> A from-scratch replication of two models from <a href="https://github.com/doesburg11/Prosser2022">Prosser (2022)</a>, a University of Southampton PhD thesis, tested what happens when learning acts on genetically <em>correlated</em> groups of traits instead of single traits in isolation. The classical conditions long thought necessary for genetic assimilation — a cost of learning, a stable learnt target — turn out not to be required once learning and evolution share correlated structure.
