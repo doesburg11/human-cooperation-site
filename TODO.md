@@ -97,11 +97,6 @@ Interpretation:
 - Determine success via fitness metrics and ability to co-adapt.
 - Curriculum reward tuning.
 
-### repo tit-for-tat
-- Iterative tit-for-tat.
-- Always ends in defection if the ending is finite and known.
-- MARL training with random ending periods (`max_steps`) might result in cooperation persisting instead.
-
 ### Malthusian trap / population cap
 - Limit population size of predators or prey — is that beneficial compared to unbounded reproduction?
 - LT-goal: acquire more wealth as a population. Energy as a proxy for wealth — what if only the top 10% of energy reproduces? Framing: escaping the Malthusian trap.
