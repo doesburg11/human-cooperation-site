@@ -206,6 +206,7 @@ For PredPreyGrass, this could mean starting with easy survival conditions and gr
 
 ## Site / meta
 
+- Make a template for presenting replicated research on the website (e.g. cultural-plasticity, metabolic-rate positive control, ERL Baldwin — multiple seeds/trials of the same experiment) so results are shown in a consistent format instead of ad hoc per-page write-ups.
 - Make available the full pre-cleanup archive content in a repository if ever needed — note: it's already fully recoverable from git history even though the pages were deleted from `docs/archive/` (2026-08-21 cleanup).
 - Consider posting about the project on LinkedIn.
 - Maybe make a to-do mindmap out of this file at some point.
