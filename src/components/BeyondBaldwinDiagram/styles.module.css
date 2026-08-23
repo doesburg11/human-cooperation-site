@@ -1,0 +1,212 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.panel {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+  background: var(--ifm-background-surface-color);
+  padding: 0.5rem 0.5rem 0.25rem;
+}
+
+.svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* rings & edges */
+
+.ring {
+  fill: none;
+  stroke: var(--ifm-color-emphasis-400);
+  stroke-width: 1.5;
+  stroke-dasharray: 4 7;
+}
+
+.edgeSlow {
+  stroke: #0f3368;
+  stroke-width: 3;
+}
+
+.edgeFast {
+  stroke: #b5731a;
+  stroke-width: 2;
+}
+
+.edgeFastDashed {
+  stroke: #b5731a;
+  stroke-width: 2;
+  stroke-dasharray: 6 5;
+}
+
+/* edge tag pills */
+
+.edgeLabel rect {
+  fill: var(--ifm-background-surface-color);
+  stroke: var(--ifm-color-emphasis-300);
+  stroke-width: 1;
+}
+
+.edgeLabel text {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-anchor: middle;
+  fill: var(--ifm-color-emphasis-700);
+}
+
+/* nodes */
+
+.nodeCenter circle {
+  fill: var(--ifm-font-color-base);
+}
+
+.nodeSlow circle {
+  fill: #0f3368;
+}
+
+.nodeFast circle {
+  fill: #b5731a;
+}
+
+.name,
+.nameCenter {
+  font-family: var(--ifm-font-family-monospace);
+  font-weight: 600;
+  font-size: 11.5px;
+  letter-spacing: 0.01em;
+  text-anchor: middle;
+  fill: #ffffff;
+}
+
+.nameCenter {
+  font-size: 14px;
+}
+
+.year {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 9.5px;
+  text-anchor: middle;
+  fill: rgba(255, 255, 255, 0.72);
+}
+
+.ringLabelMain {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-anchor: middle;
+  fill: var(--ifm-color-emphasis-700);
+}
+
+.ringLabelSub {
+  font-size: 12px;
+  font-style: italic;
+  text-anchor: middle;
+  fill: var(--ifm-color-emphasis-600);
+}
+
+/* legend */
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  padding: 0.75rem 0.5rem 0.6rem;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.78rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.swatchSlow,
+.swatchFast,
+.swatchFastDashed,
+.swatchRing {
+  display: inline-block;
+  width: 20px;
+  height: 0;
+  border-top: 3px solid #0f3368;
+}
+
+.swatchFast {
+  border-top-color: #b5731a;
+}
+
+.swatchFastDashed {
+  border-top-color: #b5731a;
+  border-top-style: dashed;
+}
+
+.swatchRing {
+  border-top: 1.5px dashed var(--ifm-color-emphasis-400);
+}
+
+/* notes list */
+
+.notes {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0;
+}
+
+.noteRow {
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  padding-top: 0.85rem;
+}
+
+.noteRow dt {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin-bottom: 0.3rem;
+  flex-wrap: wrap;
+}
+
+.noteWho {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.78rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.tagSlow,
+.tagFast {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+  border: 1px solid #0f3368;
+  color: #0f3368;
+}
+
+.tagFast {
+  border-color: #b5731a;
+  color: #b5731a;
+}
+
+.noteRow dd {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--ifm-font-color-base);
+}
+
+@media (max-width: 640px) {
+  .legend {
+    font-size: 0.7rem;
+  }
+}

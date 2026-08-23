@@ -6,6 +6,7 @@ slug: /learning-selection-interaction/baldwin-effect
 ---
 
 import BaldwinNeedleHaystack from '@site/src/components/BaldwinNeedleHaystack';
+import BeyondBaldwinDiagram from '@site/src/components/BeyondBaldwinDiagram';
 
 # The Baldwin Effect
 
@@ -216,6 +217,10 @@ The Baldwin effect connects nature and nurture on one specific axis: the evoluti
 - **Cultural evolution and iterated learning.** Linguistic structure emerges from repeated transmission through a **learning bottleneck**, with no genetic change and no individual insight required. This may actually *preempt* the Baldwin effect for language: cultural change is far too fast for genetic assimilation to track, so language plausibly adapts to brains rather than brains adapting to language.
 - **Niche construction.** Organisms modify their environments, and those modifications become selection pressures on themselves and their descendants — "ecological inheritance" as a third channel alongside genes and culture. Any simulation where agents deplete or reshape a resource they also depend on already contains this.
 - **Evolved inductive biases.** On this view the genome encodes not behavior but a *wiring rule* — a learning architecture with strong priors. Nature is the inductive bias; nurture is the data. Computationally this is meta-learning: an outer loop shaping what the inner loop finds easy to acquire. It has the same two-timescale structure as the Baldwin effect, but the object of selection is the *learning system* rather than a behavioral trait.
+
+Two further mechanisms belong in this family and aren't reflected in the bullets above: **genetic accommodation** (West-Eberhard, 2003), which generalizes genetic assimilation into selection that can just as easily *increase* plasticity as remove it — the Baldwin effect is the special case where it happens to hit zero; and **epigenetic inheritance** (Jablonka & Lamb, 1995), a third timescale of environmentally-induced marks on gene expression that outlive one lifetime without changing the DNA sequence. The diagram below places all six mechanisms — Baldwin included — on one map, showing which generalize it, which run in parallel through a different channel, and which invert its logic outright.
+
+<BeyondBaldwinDiagram />
 
 A structural note for anyone modelling these. Cultural transmission is **lossy**, and the loss is generative rather than merely degrading. A learner observes a finite sample of behavior, cannot see the reasoning behind it, and reconstructs the rest using their own inductive biases. That bottleneck acts as a *filter* selecting for whatever is learnable from partial data — which is exactly what structure provides. Remove the bottleneck and the pressure vanishes: lossless transmission preserves unstructured systems just as happily as structured ones. A model in which every agent shares one set of parameters therefore cannot exhibit cultural emergence — not because the transmission channel is weak, but because it is perfect, and there is no filter for anything to be selected through.
 
