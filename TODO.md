@@ -97,6 +97,22 @@ Interpretation:
 - Determine success via fitness metrics and ability to co-adapt.
 - Curriculum reward tuning.
 
+### Behavior-aware curriculum learning (VIP)
+
+Open-ended Multi-agent Autocurricula via Visual Inspection of Policies with Multi-modal LLMs — Pantè, Fanti & Capobianco, 9 July 2026 (arXiv).
+
+The paper introduces VIP (Visual Inspection of Policies): instead of deciding curriculum difficulty from scalar rewards or textual summaries, a video-language model watches actual MARL episodes and recommends what agents should train on next. On SMAC, this produced better curricula than learning-signal-based alternatives. A striking example is a policy with a 0% win rate that was nevertheless visibly close to a successful strategy; VIP recognized this and kept training the task, after which performance rose to roughly 80%.
+
+For PredPreyGrass, this is unusually relevant. Sparse reproduction rewards can make numerical learning-progress measures misleading: a population may be developing clustering, coordinated pursuit, avoidance, or proto-pack-hunting before those behaviours translate into reproduction. VIP suggests a new form of behavior-aware curriculum learning: periodically render evaluation episodes and use behavioral observations — not just reward — to decide whether to increase prey energy, alter population ratios, introduce faster prey, change resource scarcity, etc. Treat this as a promising experimental extension, not something to put in the core PPG loop yet.
+
+### Continual-adaptation evaluation (MEAL)
+
+MEAL: A Benchmark for Continual Multi-Agent Reinforcement Learning — Tomilin et al., ICML 2026, published 30 April and revised 24 June 2026 (OpenReview).
+
+MEAL positions continual MARL as a distinct evaluation problem: agents should not merely solve one stationary multi-agent environment, but maintain and acquire capabilities over extended sequences of changing tasks. The authors emphasize that existing continual-RL studies often use only a handful of tasks, whereas long-term multi-agent adaptation needs substantially longer and computationally practical sequences.
+
+This is highly relevant to the Red Queen evaluation problem. PPG should probably not be evaluated solely by final return or even all-species-survive-to-horizon. A stronger evaluation would explicitly measure adaptation over ecological regime changes. For example: train predator/prey populations → change prey speed → measure adaptation → change grass density → measure adaptation → restore an earlier environment → test whether previous competence survived. That gives three useful dimensions: adaptation speed, retention/forgetting, and robustness across ecological regimes. MEAL reinforces the idea that ongoing adaptability itself should be an evaluation target.
+
 ### Malthusian trap / population cap
 - Limit population size of predators or prey — is that beneficial compared to unbounded reproduction?
 - LT-goal: acquire more wealth as a population. Energy as a proxy for wealth — what if only the top 10% of energy reproduces? Framing: escaping the Malthusian trap.
