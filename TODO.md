@@ -169,6 +169,7 @@ A separate, non-PredPreyGrass simulation idea: modeling early human settlement p
 - **Differences**: "nature" is very binary (survival/reproduction); "nurture" is more continuous and less fatal.
 - **Having options makes people happy**: does changing seasons make people happier than a fixed climate? Implies a relationship between distance from the equator and happiness — unverified.
 - **Integrate Dynamic Field Theory** as a wrapper around brain/behavior modeling. Visualize first before building anything.
+- **Agency** = "Zeggenschap" in Dutch.
 - Loose brainstorm fragments: use Leary's Rose in Learned Cooperation? "The Inevitability of Selfishness" — cooperation is not trivial, competition is intuitively more sensible due to the inevitability of selfishness. "Layered cooperation" in a social-behavior sense — MARL Book example (undeveloped).
 
 ### Notes from Pranjal (2025-12-02)
