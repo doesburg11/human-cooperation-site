@@ -1,0 +1,224 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1560" height="760" viewBox="0 0 1560 760" role="img" aria-labelledby="title desc">
+  <title id="title">Summary of World AL (Ackley &amp; Littman, 1991)</title>
+  <desc id="desc">Three-panel recreation of Figure 4: an overview of world entities (walls, trees, plants, carnivores, agents), a closeup grid view of the southwest corner showing how those entities are arranged, and the seven-value observation vector each agent receives (visual detection north/south/east/west, in-tree status, health, energy, plus a constant bias unit), with a unit-value legend showing how magnitude is encoded as dot size.</desc>
+  <defs>
+    <style>
+      .panel { fill: #ffffff; stroke: #d6e4f5; stroke-width: 2; }
+      .label { font: 700 20px "IBM Plex Sans", "Avenir Next", "Segoe UI", Arial, sans-serif; fill: #0f3368; }
+      .small-label { font: 700 14px "IBM Plex Sans", "Avenir Next", "Segoe UI", Arial, sans-serif; fill: #1f2d3d; }
+      .body { font: 400 13px "IBM Plex Sans", "Avenir Next", "Segoe UI", Arial, sans-serif; fill: #1f2d3d; }
+      .muted { font: 400 12px "IBM Plex Sans", "Avenir Next", "Segoe UI", Arial, sans-serif; fill: #506176; }
+      .tiny-muted { font: 400 11px "IBM Plex Sans", "Avenir Next", "Segoe UI", Arial, sans-serif; fill: #506176; font-style: italic; }
+      .col-head { font: 700 13px "IBM Plex Sans", "Avenir Next", "Segoe UI", Arial, sans-serif; fill: #0f3368; text-anchor: middle; }
+    </style>
+
+    <!-- entity icons, each centered on (0,0) -->
+    <g id="icon-wall">
+      <rect x="-9" y="-9" width="18" height="18" fill="#3a3a3a"/>
+      <line x1="-9" y1="-3" x2="9" y2="-3" stroke="#6b6b6b" stroke-width="1"/>
+      <line x1="-9" y1="3" x2="9" y2="3" stroke="#6b6b6b" stroke-width="1"/>
+    </g>
+    <g id="icon-tree">
+      <rect x="-2.2" y="1" width="4.4" height="9" fill="#8b5a2b"/>
+      <circle cx="0" cy="-4" r="9.5" fill="#34785a"/>
+    </g>
+    <g id="icon-plant">
+      <line x1="0" y1="7" x2="-6" y2="-6" stroke="#34785a" stroke-width="2.6" stroke-linecap="round"/>
+      <line x1="0" y1="7" x2="0" y2="-9" stroke="#34785a" stroke-width="2.6" stroke-linecap="round"/>
+      <line x1="0" y1="7" x2="6" y2="-6" stroke="#34785a" stroke-width="2.6" stroke-linecap="round"/>
+    </g>
+    <g id="icon-carnivore">
+      <circle cx="0" cy="0" r="10" fill="#c0575c" stroke="#9a3f44" stroke-width="1.5"/>
+      <circle cx="-3.5" cy="-2" r="1.4" fill="#3a1416"/>
+      <circle cx="3.5" cy="-2" r="1.4" fill="#3a1416"/>
+      <path d="M -4 4 Q 0 1.2 4 4" stroke="#3a1416" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+    </g>
+    <g id="icon-agent">
+      <circle cx="0" cy="0" r="10" fill="#4f7fc4" stroke="#0f3368" stroke-width="1.5"/>
+      <circle cx="-3.5" cy="-2" r="1.4" fill="#0a1f3d"/>
+      <circle cx="3.5" cy="-2" r="1.4" fill="#0a1f3d"/>
+      <path d="M -4 5.5 Q 0 2.5 4 5.5" stroke="#0a1f3d" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+    </g>
+    <g id="icon-empty">
+      <circle cx="0" cy="0" r="8" fill="none" stroke="#b9c3d6" stroke-width="1.4" stroke-dasharray="3 2"/>
+    </g>
+
+    <!-- grid pattern for the landscape view -->
+    <pattern id="gridpat" width="58" height="58" patternUnits="userSpaceOnUse" x="562" y="110">
+      <rect width="58" height="58" fill="none" stroke="#e6ebf3" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- ============ PANEL 1: OVERVIEW ============ -->
+  <rect class="panel" x="30" y="30" width="470" height="700"/>
+  <text class="label" x="55" y="70">OVERVIEW</text>
+  <line x1="55" y1="82" x2="470" y2="82" stroke="#d6e4f5" stroke-width="1.5"/>
+
+  <text class="body" x="55" y="112">100×100 cell grid, non-toroidal, with</text>
+  <text class="body" x="55" y="130">asynchronous updates by entity type. A run</text>
+  <text class="body" x="55" y="148">ends after 1,000,000 steps or agent extinction.</text>
+
+  <!-- Trees -->
+  <use href="#icon-tree" x="55" y="190"/>
+  <text class="small-label" x="78" y="195">Trees</text>
+  <text class="body" x="55" y="212">Infrequent birth and death. Shelter from</text>
+  <text class="body" x="55" y="230">carnivores, not food — one agent per tree;</text>
+  <text class="body" x="55" y="248">occupant dies if its tree dies.</text>
+
+  <!-- Plants -->
+  <use href="#icon-plant" x="55" y="280"/>
+  <text class="small-label" x="78" y="285">Plants</text>
+  <text class="body" x="55" y="302">Geometric growth to a crowding limit. Only</text>
+  <text class="body" x="55" y="320">agents eat them; carnivores walk over them.</text>
+  <text class="body" x="55" y="338">Reseeded whenever fewer than 50 remain.</text>
+
+  <!-- Carnivores -->
+  <use href="#icon-carnivore" x="55" y="370"/>
+  <text class="small-label" x="78" y="375">Carnivores</text>
+  <text class="body" x="55" y="392">Hand-coded rule: seek the nearest agent</text>
+  <text class="body" x="55" y="410">visible N/S/E/W within 6 cells. Damage</text>
+  <text class="body" x="55" y="428">agents, eat the dead. One added every 200 steps.</text>
+
+  <!-- Agents -->
+  <use href="#icon-agent" x="55" y="460"/>
+  <text class="small-label" x="78" y="465">Agents</text>
+  <text class="body" x="55" y="482">Genome-initialized neural network. Sees the</text>
+  <text class="body" x="55" y="500">nearest object N/S/E/W within 4 cells (right).</text>
+  <text class="body" x="55" y="518">Eats plants and the dead; reproduces genetically.</text>
+
+  <!-- Walls -->
+  <use href="#icon-wall" x="55" y="550"/>
+  <text class="small-label" x="78" y="555">Walls</text>
+  <text class="body" x="55" y="572">Form the outer border plus scattered interior</text>
+  <text class="body" x="55" y="590">cells. Permanent — minor damage to anything</text>
+  <text class="body" x="55" y="608">that walks into one.</text>
+
+  <!-- ============ PANEL 2: LANDSCAPE VIEW ============ -->
+  <rect class="panel" x="530" y="30" width="470" height="700"/>
+  <text class="label" x="555" y="70">LANDSCAPE VIEW</text>
+  <line x1="555" y1="82" x2="970" y2="82" stroke="#d6e4f5" stroke-width="1.5"/>
+  <text class="tiny-muted" x="555" y="100">closeup of the southwest corner</text>
+
+  <rect x="562" y="110" width="406" height="464" fill="url(#gridpat)" stroke="#c7d4e8" stroke-width="1.5"/>
+
+  <!-- border walls: left column -->
+  <use href="#icon-wall" x="591" y="139"/>
+  <use href="#icon-wall" x="591" y="197"/>
+  <use href="#icon-wall" x="591" y="255"/>
+  <use href="#icon-wall" x="591" y="313"/>
+  <use href="#icon-wall" x="591" y="371"/>
+  <use href="#icon-wall" x="591" y="429"/>
+  <use href="#icon-wall" x="591" y="487"/>
+  <use href="#icon-wall" x="591" y="545"/>
+  <!-- border walls: bottom row -->
+  <use href="#icon-wall" x="649" y="545"/>
+  <use href="#icon-wall" x="707" y="545"/>
+  <use href="#icon-wall" x="765" y="545"/>
+  <use href="#icon-wall" x="823" y="545"/>
+  <use href="#icon-wall" x="881" y="545"/>
+  <use href="#icon-wall" x="939" y="545"/>
+
+  <!-- scattered interior walls -->
+  <use href="#icon-wall" x="765" y="197"/>
+  <use href="#icon-wall" x="881" y="255"/>
+  <use href="#icon-wall" x="707" y="371"/>
+  <use href="#icon-wall" x="823" y="487"/>
+
+  <!-- trees -->
+  <use href="#icon-tree" x="707" y="255"/>
+  <use href="#icon-tree" x="881" y="371"/>
+  <use href="#icon-tree" x="765" y="487"/>
+
+  <!-- plants -->
+  <use href="#icon-plant" x="649" y="197"/>
+  <use href="#icon-plant" x="823" y="197"/>
+  <use href="#icon-plant" x="939" y="313"/>
+  <use href="#icon-plant" x="881" y="487"/>
+  <use href="#icon-plant" x="649" y="429"/>
+
+  <!-- carnivores -->
+  <use href="#icon-carnivore" x="765" y="313"/>
+  <use href="#icon-carnivore" x="881" y="429"/>
+
+  <!-- agents -->
+  <use href="#icon-agent" x="649" y="255"/>
+  <use href="#icon-agent" x="649" y="371"/>
+  <use href="#icon-agent" x="765" y="139"/>
+  <use href="#icon-agent" x="823" y="313"/>
+  <use href="#icon-agent" x="707" y="487"/>
+  <use href="#icon-agent" x="939" y="429"/>
+  <use href="#icon-agent" x="939" y="197"/>
+
+  <text class="tiny-muted" x="562" y="600">Walls also line the top and right edges, just</text>
+  <text class="tiny-muted" x="562" y="616">beyond this cropped view.</text>
+  <text class="tiny-muted" x="562" y="648">Icon key: see OVERVIEW panel at left.</text>
+
+  <!-- ============ PANEL 3: INPUT TO AGENT ============ -->
+  <rect class="panel" x="1030" y="30" width="500" height="700"/>
+  <text class="label" x="1055" y="70">INPUT TO AGENT</text>
+  <line x1="1055" y1="82" x2="1525" y2="82" stroke="#d6e4f5" stroke-width="1.5"/>
+
+  <text class="small-label" x="1055" y="102">Closest object (example)</text>
+  <use href="#icon-carnivore" x="1115" y="132"/>
+  <use href="#icon-empty" x="1225" y="132"/>
+  <use href="#icon-plant" x="1335" y="132"/>
+  <use href="#icon-wall" x="1445" y="132"/>
+  <text class="col-head" x="1115" y="156">N</text>
+  <text class="col-head" x="1225" y="156">S</text>
+  <text class="col-head" x="1335" y="156">E</text>
+  <text class="col-head" x="1445" y="156">W</text>
+
+  <text class="tiny-muted" x="1055" y="180">Icons: wall / tree / plant / carnivore / agent / empty — see OVERVIEW.</text>
+
+  <text class="small-label" x="1055" y="210">Closeness (0 = nothing seen → 1 = adjacent)</text>
+  <circle cx="1115" cy="240" r="8" fill="none" stroke="#506176" stroke-width="1.3"/>
+  <circle cx="1115" cy="240" r="6.3" fill="#0f3368"/>
+  <circle cx="1225" cy="240" r="8" fill="none" stroke="#506176" stroke-width="1.3"/>
+  <circle cx="1335" cy="240" r="8" fill="none" stroke="#506176" stroke-width="1.3"/>
+  <circle cx="1335" cy="240" r="4.2" fill="#0f3368"/>
+  <circle cx="1445" cy="240" r="8" fill="none" stroke="#506176" stroke-width="1.3"/>
+  <circle cx="1445" cy="240" r="7" fill="#0f3368"/>
+
+  <line x1="1055" y1="270" x2="1525" y2="270" stroke="#e6ebf3" stroke-width="1.5"/>
+
+  <text class="body" x="1055" y="300">in tree?</text>
+  <circle cx="1490" cy="295" r="8" fill="none" stroke="#506176" stroke-width="1.3"/>
+
+  <text class="body" x="1055" y="330">health</text>
+  <circle cx="1490" cy="325" r="8" fill="none" stroke="#506176" stroke-width="1.3"/>
+  <circle cx="1490" cy="325" r="5.6" fill="#0f3368"/>
+
+  <text class="body" x="1055" y="360">energy</text>
+  <circle cx="1490" cy="355" r="8" fill="none" stroke="#506176" stroke-width="1.3"/>
+  <circle cx="1490" cy="355" r="3.5" fill="#0f3368"/>
+
+  <text class="body" x="1055" y="390">bias (constant)</text>
+  <circle cx="1490" cy="385" r="8" fill="none" stroke="#506176" stroke-width="1.3"/>
+  <circle cx="1490" cy="385" r="7" fill="#0f3368"/>
+
+  <line x1="1055" y1="415" x2="1525" y2="415" stroke="#d6e4f5" stroke-width="1.5"/>
+
+  <text class="label" x="1055" y="445" style="font-size:16px">UNIT VALUES</text>
+  <circle cx="1080" cy="478" r="8" fill="none" stroke="#506176" stroke-width="1.3"/>
+  <circle cx="1150" cy="478" r="8" fill="none" stroke="#506176" stroke-width="1.3"/>
+  <circle cx="1150" cy="478" r="1.75" fill="#0f3368"/>
+  <circle cx="1220" cy="478" r="8" fill="none" stroke="#506176" stroke-width="1.3"/>
+  <circle cx="1220" cy="478" r="3.5" fill="#0f3368"/>
+  <circle cx="1290" cy="478" r="8" fill="none" stroke="#506176" stroke-width="1.3"/>
+  <circle cx="1290" cy="478" r="5.25" fill="#0f3368"/>
+  <circle cx="1360" cy="478" r="8" fill="none" stroke="#506176" stroke-width="1.3"/>
+  <circle cx="1360" cy="478" r="7" fill="#0f3368"/>
+  <text class="body" x="1055" y="483">0</text>
+  <text class="body" x="1385" y="483">1</text>
+  <text class="tiny-muted" x="1055" y="505">Dot size encodes magnitude — empty ring = 0, full dot = 1.</text>
+
+  <line x1="1055" y1="525" x2="1525" y2="525" stroke="#d6e4f5" stroke-width="1.5"/>
+
+  <text class="label" x="1055" y="555" style="font-size:16px">AGENT OUTPUT</text>
+  <text class="body" x="1055" y="580">Two bits select one of four move directions</text>
+  <text class="body" x="1055" y="598">(N, S, E, or W) — no "stay" action exists.</text>
+
+  <text class="label" x="1055" y="638" style="font-size:16px">LEARNING vs. INHERITANCE</text>
+  <text class="body" x="1055" y="663">Only the genome-initialized weights are inherited;</text>
+  <text class="body" x="1055" y="681">the live network keeps learning within a lifetime.</text>
+</svg>
