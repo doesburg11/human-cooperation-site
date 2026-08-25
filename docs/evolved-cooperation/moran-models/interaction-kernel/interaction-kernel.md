@@ -608,10 +608,10 @@ Different biological or social theories would mainly differ in the specific form
 
 ## Python Module Layout
 
-The canonical implementation lives as a top-level module in the sibling <code>EvolvedCooperation</code> repository.
+The canonical implementation lives as a module in the sibling <code>EvolvedCooperation</code> repository, under <code>moran_models/interaction_kernel/</code>.
 
 ```text
-interaction_kernel/
+moran_models/interaction_kernel/
   __init__.py
   README.md
   interaction_kernel_model.py
