@@ -110,14 +110,6 @@ const config = {
           title: 'About',
           items: [
             {
-              label: 'GitHub Profile',
-              href: 'https://github.com/doesburg11',
-            },
-            {
-              label: 'human-cooperation-site (repo)',
-              href: 'https://github.com/doesburg11/human-cooperation-site',
-            },
-            {
               label: 'LinkedIn',
               href: 'https://www.linkedin.com/in/peter-van-doesburg/',
             },
@@ -127,12 +119,8 @@ const config = {
           title: 'Resources',
           items: [
             {
-              label: 'RLlib: Industry-Grade, Scalable Reinforcement Learning',
-              href: 'https://docs.ray.io/en/master/rllib/index.html#rllib-industry-grade-scalable-reinforcement-learning',
-            },
-            {
-              label: 'Multi-Agent Reinforcement Learning: Foundations and Modern Approaches.',
-              href: 'https://www.marl-book.com/download/marl-book.pdf',
+              label: 'GitHub',
+              href: 'https://github.com/doesburg11',
             },
           ],
         },
