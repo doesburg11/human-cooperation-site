@@ -5,7 +5,6 @@ sidebar_position: 8
 slug: /learning-selection-interaction/baldwin-effect
 ---
 
-import BaldwinNeedleHaystack from '@site/src/components/BaldwinNeedleHaystack';
 import BeyondBaldwinDiagram from '@site/src/components/BeyondBaldwinDiagram';
 
 # The Baldwin Effect
@@ -58,20 +57,11 @@ No information ever crosses from phenotype back into genotype. The loop closes e
 
 ## 4. The classic computational demonstration: Hinton & Nowlan (1987)
 
-The clearest illustration of the effect isn't biological at all — it's a small artificial model designed specifically to make the logic transparent. A from-scratch reimplementation of this exact simulation is available in the [HintonNowlan1987](https://github.com/doesburg11/HintonNowlan1987) repository.
-
-**The setup:**
-- A genome is a string of 20 genes. Each gene can take one of three values: `1` (a connection is present), `0` (a connection is absent), or `?` (undetermined — left to be resolved by learning).
-- There is exactly **one correct configuration** out of 2²⁰ possible genomes, and it's dramatically fitter than everything else — a fitness "needle in a haystack."
-- Genes fixed at `1` or `0` are hard-wired. Genes marked `?` are resolved by the simplest possible learning mechanism: blind guessing. On each of a fixed number of trials within its lifetime, the individual tries a random setting for its `?` genes. If a trial happens to land on the single correct configuration, the setting is frozen (learned); otherwise it keeps changing.
-
-**Why this reveals the effect:** with an all-or-nothing fitness landscape and no learning, evolution has almost nothing to search on — nearly every genome scores the same low fitness, and only the one exact match stands out. There's no gradient to climb. But with `?` alleles in the mix, a genome that gets *most* of its genes right (with a few `?`s left over) has a real chance of stumbling onto the correct combination through blind guessing within its own lifetime. That chance is a small but real fitness signal, and it varies smoothly with how close the genome already is — turning the impossible spike into a landscape evolution can actually climb. Hinton and Nowlan showed that populations with this learning mechanism found good solutions far faster, across generations, than populations without it.
+The clearest illustration of the effect isn't biological at all — it's a small artificial model designed specifically to make the logic transparent: a 20-gene bit-string genome, an all-or-nothing needle-in-a-haystack fitness landscape, and learning reduced to its simplest possible form — blind guessing at the genome's undetermined (`?`) genes. With learning in the loop, a genome that's *close* to the single correct answer has a real, calculable chance of stumbling onto it within its own lifetime — turning an impossible spike into a landscape evolution can actually climb. Hinton and Nowlan showed that populations with this mechanism found good solutions far faster, across generations, than populations without it: incorrect alleles collapse to near zero, correct alleles rise from ~25% to ~75%, and plastic alleles decline but persist at roughly 24% rather than disappearing entirely.
 
 *(This model has also drawn methodological criticism — some analyses argue its specific population size and trial-budget parameters were chosen in ways that flatter the effect, and that the advantage shrinks or vanishes under more realistic, resource-bounded assumptions. It remains the field's standard illustration, but not an uncontested one.)*
 
-That reimplementation reproduces the paper's result: incorrect alleles collapse to near zero, correct alleles rise from ~25% to ~75%, and plastic alleles decline but persist at roughly 24% rather than disappearing entirely.
-
-<BaldwinNeedleHaystack />
+See **[The Hinton & Nowlan (1987) Algorithm](/learning-selection-interaction/hinton-nowlan-1987)** for the full mechanism, the algorithm step by step, and an interactive figure — three landscape shapes, the manufactured gradient in closed form, and a live genetic-algorithm race you can run yourself. A from-scratch reimplementation is available in the [HintonNowlan1987](https://github.com/doesburg11/HintonNowlan1987) repository.
 
 ### Computational demonstrations beyond Hinton-Nowlan
 
@@ -82,6 +72,7 @@ Hinton & Nowlan (1987) is the field's standard reference, but it isn't the only 
 - **Arita & Suzuki (2000)** used the Iterated Prisoner's Dilemma to show plasticity-driven strategies first spreading through a population and then being replaced by a modest, evolutionarily stabilized level of plasticity — one of the few models in this line to study a *changing* environment rather than the fixed single-optimum landscape Hinton & Nowlan and most successors assume.
 - **Watson & Wiles (2002)** modeled genetic assimilation explicitly, rather than the Baldwin effect in general, in a neural-network setting — useful given Crispo's point (§12 below) that the two are often conflated even though genetic assimilation is only one specific outcome the Baldwin effect can produce.
 - **Dopazo, Gordon, Perazzo & Risau-Gusman (2001)** extended Hinton & Nowlan's model to perceptrons with a mix of rigid (genetically fixed) and learnable synapses, and found a **halting effect**: past a certain point, learning *hindered* rather than stimulated the transcription of environmental information into the genome — the opposite of the standard Baldwin-effect prediction. A useful reminder that the computational literature isn't uniformly supportive of the effect.
+- **[Prosser (2022)](/learning-selection-interaction/prosser-2022)** moved from independent traits to *correlated* ones, with the correlation structure itself evolving, and found that learning acting on correlated trait groups relaxes the classical prerequisites for genetic assimilation entirely — producing either a hard "Optimizing Effect" (learning that directly re-tests correlated behaviours reliably reaches the global optimum) or a softer "Expediting Effect" (learning that only selects among environments merely accelerates evolution), depending on how directly learning engages the same representation evolution is searching.
 
 A further extension worth noting is **Suzuki & Arita's** later work on spatial locality, which found that cooperative populations emerge more readily through the Baldwin effect as interaction becomes more local rather than random — connecting this line directly to the evolution of cooperation.
 
