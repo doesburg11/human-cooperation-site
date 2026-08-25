@@ -95,3 +95,17 @@
 [data-theme='dark'] .header-github-link::before {
   filter: invert(100%);
 }
+
+/* Push the Resources footer column to the far right instead of the
+   default equal-width split, since it now holds a single short link. */
+.footer-col--push-right {
+  flex: 0 0 auto;
+  margin-left: auto;
+}
+
+@media (max-width: 996px) {
+  .footer-col--push-right {
+    flex: 1 0;
+    margin-left: 0;
+  }
+}

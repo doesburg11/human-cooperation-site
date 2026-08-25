@@ -117,6 +117,7 @@ const config = {
         },
         {
           title: 'Resources',
+          className: 'footer-col--push-right',
           items: [
             {
               label: 'GitHub',
