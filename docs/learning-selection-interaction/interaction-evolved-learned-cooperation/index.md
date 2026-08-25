@@ -366,7 +366,7 @@ These works are best understood here as adjacent environment or benchmark contex
 The concrete two-timescale experiments documented for this site are available in two companion tracks, one abstract and one ecological:
 
 - [Two-Timescale Simulations](/learning-selection-interaction/simulations) — abstract ring-network models (trust learning, Q-learning, extended social mechanisms), the network-diversity experiment, and focused appendices. This track confirms the theory above cleanly: see its own theory-simulation correspondence table.
-- [Darwin/Baldwin Trial Log](/learning-selection-interaction/darwin-baldwin-trial-log) — the same two-timescale question asked inside a full predator-prey ecology rather than an abstract donation game. The first ten trials ran on this project's own PredPreyGrass ecology and came back null; the trial that finally produced a confirmed positive result traded that ecology for a from-scratch rebuild of Ackley & Littman's own World AL, alongside switching from a shared-policy to a per-agent architecture — read there for why both changes were needed.
+- [Darwin/Baldwin Trial Log](/learning-selection-interaction/darwin-baldwin-trial-log) — the same two-timescale question asked inside a full predator-prey ecology rather than an abstract donation game. The first ten trials ran on this project's own [PredPreyGrass](/learning-selection-interaction/predpreygrass) ecology and came back null; the trial that finally produced a confirmed positive result traded that ecology for a from-scratch rebuild of Ackley & Littman's own World AL, alongside switching from a shared-policy to a per-agent architecture — read there for why both changes were needed.
 
 ---
 

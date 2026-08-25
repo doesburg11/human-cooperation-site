@@ -180,7 +180,7 @@ This creates several possibilities:
 - Learning can alter ecological conditions and therefore selection pressures.
 - Plasticity can mediate the interaction between immediate adaptation and long-term evolution.
 
-Ecological systems like PredPreyGrass provide one way to study both timescales together, while simpler spatial models isolate the selection logic more cleanly.
+Ecological systems like [PredPreyGrass](/learning-selection-interaction/predpreygrass) provide one way to study both timescales together, while simpler spatial models isolate the selection logic more cleanly.
 
 ---
 
@@ -219,7 +219,7 @@ The current site includes four complementary evolved-cooperation examples:
 
 ## General Kernel Abstraction
 
-The current four case studies are implemented evolved-cooperation modules. The sibling `EvolvedCooperation` repository also now contains [Interaction Kernel](/evolved-cooperation/interaction-kernel), a general kernel engine that separates trait-dependent production, positive and negative effect routing, fitness score formation, local selection, and inheritance.
+The current four case studies are implemented evolved-cooperation modules. The sibling [`EvolvedCooperation`](https://github.com/doesburg11/EvolvedCooperation) repository also now contains [Interaction Kernel](/evolved-cooperation/interaction-kernel), a general kernel engine that separates trait-dependent production, positive and negative effect routing, fitness score formation, local selection, and inheritance.
 
 Interaction Kernel is not a replay case study yet. It is the reusable abstraction layer that can instantiate retained-benefit-like, kin-weighted, network-local, and mixed help-harm settings without duplicating the simulation core.
 

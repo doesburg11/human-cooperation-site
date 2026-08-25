@@ -137,7 +137,7 @@ Such settings are closer to natural systems than matrix games.
 
 ## Learned Cooperation in PredPreyGrass
 
-PredPreyGrass studies learned cooperation under the constraint that:
+[PredPreyGrass](/learning-selection-interaction/predpreygrass) studies learned cooperation under the constraint that:
 
 > **Reproduction is the only reward.**
 
