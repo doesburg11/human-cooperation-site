@@ -43,19 +43,19 @@ The common architecture is:
 			<tbody>
 				<tr>
 					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>1</td>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>two_timescale_reciprocity.py</td>
+					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><a href="https://github.com/doesburg11/EvolvedAndLearnedCooperation/blob/main/two_timescale_reciprocity.py">two_timescale_reciprocity.py</a></td>
 					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Simple trust update (Rescorla-Wagner style)</td>
 					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>None</td>
 				</tr>
 				<tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
 					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>2</td>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>two_timescale_q_learning.py</td>
+					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><a href="https://github.com/doesburg11/EvolvedAndLearnedCooperation/blob/main/two_timescale_q_learning.py">two_timescale_q_learning.py</a></td>
 					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Q-learning (action-value learning)</td>
 					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>None</td>
 				</tr>
 				<tr>
 					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>3</td>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>two_timescale_extended.py</td>
+					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><a href="https://github.com/doesburg11/EvolvedAndLearnedCooperation/blob/main/two_timescale_extended.py">two_timescale_extended.py</a></td>
 					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Q-learning</td>
 					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Reputation, partner choice, forgiveness</td>
 				</tr>

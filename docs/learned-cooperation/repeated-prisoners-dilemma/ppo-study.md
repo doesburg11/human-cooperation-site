@@ -7,11 +7,11 @@ sidebar_position: 2
 
 # Repeated Prisoner's Dilemma: PPO Study
 
-This case study summarizes the `LearnedCooperation` project, where two independently trained PPO agents repeatedly play a Prisoner's Dilemma game. The goal is to test whether learned behavior converges to persistent defection, cooperative conventions, or mixed horizon-dependent patterns.
+This case study summarizes the [`LearnedCooperation`](https://github.com/doesburg11/LearnedCooperation) project, where two independently trained PPO agents repeatedly play a Prisoner's Dilemma game. The goal is to test whether learned behavior converges to persistent defection, cooperative conventions, or mixed horizon-dependent patterns.
 
 ## Environment and Learning Setup
 
-- Environment: `envs/repeated_prisoners_dilemma_env.py`
+- Environment: [`envs/repeated_prisoners_dilemma_env.py`](https://github.com/doesburg11/LearnedCooperation/blob/main/envs/repeated_prisoners_dilemma_env.py)
 - Agents: `player_1` and `player_2`
 - Actions: `0 = cooperate`, `1 = defect`
 - Training algorithm: PPO (RLlib 2.54.0)

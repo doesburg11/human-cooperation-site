@@ -110,7 +110,7 @@ The broader interpretation is that adaptive human cooperation resembles selectiv
 
 *Applies to: Model 1 only.*
 
-Model 1 (`two_timescale_reciprocity.py`) describes its trust update as "Rescorla–Wagner style". This appendix explains what that means.
+Model 1 ([`two_timescale_reciprocity.py`](https://github.com/doesburg11/EvolvedAndLearnedCooperation/blob/main/two_timescale_reciprocity.py)) describes its trust update as "Rescorla–Wagner style". This appendix explains what that means.
 
 ### The Rescorla–Wagner model
 

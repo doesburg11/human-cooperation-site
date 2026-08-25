@@ -626,11 +626,11 @@ interaction_kernel/
 
 Core responsibilities:
 
-- <code>interaction_kernel_model.py</code>: simulation loop and state update logic
-- <code>kernels.py</code>: routing rules for positive and negative effects
-- <code>selection.py</code>: relative-success rule based on the vector of agent scores
-- <code>metrics.py</code>: trait, routed-effect, and fitness summary diagnostics
-- <code>config/interaction_kernel_config.py</code>: active runtime parameters
+- <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/interaction_kernel/interaction_kernel_model.py"><code>interaction_kernel_model.py</code></a>: simulation loop and state update logic
+- <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/interaction_kernel/kernels.py"><code>kernels.py</code></a>: routing rules for positive and negative effects
+- <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/interaction_kernel/selection.py"><code>selection.py</code></a>: relative-success rule based on the vector of agent scores
+- <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/interaction_kernel/metrics.py"><code>metrics.py</code></a>: trait, routed-effect, and fitness summary diagnostics
+- <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/interaction_kernel/config/interaction_kernel_config.py"><code>config/interaction_kernel_config.py</code></a>: active runtime parameters
 
 ## Current Implementation Scope
 
