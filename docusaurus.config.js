@@ -94,7 +94,14 @@ const config = {
         alt: 'Behavior Logo',
         src: 'img/logo.png',
       },
-      items: [],
+      items: [
+        {
+          href: 'https://github.com/doesburg11',
+          position: 'right',
+          className: 'header-github-link',
+          'aria-label': 'GitHub profile',
+        },
+      ],
     },
     footer: {
       style: 'dark',
@@ -102,11 +109,15 @@ const config = {
         {
           title: 'About',
           items: [
-            { 
-              label: 'GitHub',
+            {
+              label: 'GitHub Profile',
+              href: 'https://github.com/doesburg11',
+            },
+            {
+              label: 'human-cooperation-site (repo)',
               href: 'https://github.com/doesburg11/human-cooperation-site',
             },
-            { 
+            {
               label: 'LinkedIn',
               href: 'https://www.linkedin.com/in/peter-van-doesburg/',
             },
