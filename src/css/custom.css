@@ -102,10 +102,3 @@
   flex: 0 0 auto;
   margin-left: auto;
 }
-
-@media (max-width: 996px) {
-  .footer-col--push-right {
-    flex: 1 0;
-    margin-left: 0;
-  }
-}
