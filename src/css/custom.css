@@ -99,6 +99,8 @@
 /* Push the Resources footer column to the far right instead of the
    default equal-width split, since it now holds a single short link. */
 .footer-col--push-right {
-  flex: 0 0 auto;
-  margin-left: auto;
+  flex: 0 0 auto !important;
+  width: auto !important;
+  max-width: none !important;
+  margin-left: auto !important;
 }
