@@ -6,7 +6,6 @@ Working notes and research ideas for the human-cooperation-site project. Not pub
 
 ## Quick / misc
 
-- GitHub CLI second opinion.
 - RustDesk for Android.
 
 ---
