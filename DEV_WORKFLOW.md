@@ -2,7 +2,7 @@
 
 This is the current workflow for working on `human-cooperation-site` from multiple devices.
 
-Publishing is now handled automatically by GitHub Actions when you push to `main`.
+Publishing is handled automatically by GitHub Actions when you push to `main`.
 
 ## One-Time Setup (per device)
 
@@ -22,10 +22,17 @@ Notes:
 ## One-Time Setup (repository, already done)
 
 This repo has a GitHub Actions deploy workflow:
-- `.github/workflows/deploy-to-pages-repo.yml`
+- `.github/workflows/deploy-to-github-pages.yml`
 
-It requires a repository secret in `doesburg11/human-cooperation-site`:
-- `DEPLOY_REPO_PAT` (PAT with write access to `doesburg11/doesburg11.github.io`)
+The workflow uses GitHub Pages' artifact deployment flow:
+- Node 24 via `actions/setup-node`
+- `npm ci`
+- `npm run build`
+- `build/CNAME` verification
+- `actions/upload-pages-artifact`
+- `actions/deploy-pages`
+
+No separate Pages repository, deploy PAT, `gh-pages` branch, or local deploy script is required.
 
 ## Regular Workflow (per session)
 
@@ -62,36 +69,25 @@ npm run start
 To publish changes:
 
 ```bash
-git add -A
+git add -- <changed-files>
 git commit -m "Describe changes"
 git push origin main
 ```
 
 What happens next:
 - Push to `main` triggers GitHub Actions deploy
-- GitHub builds Docusaurus
-- GitHub pushes generated files to `doesburg11/doesburg11.github.io`
+- GitHub installs dependencies with `npm ci`
+- GitHub builds Docusaurus with `npm run build`
+- GitHub uploads the generated `build/` directory as a Pages artifact
+- GitHub Pages deploys that artifact
 - The live site updates if the workflow succeeds
 
 Check deploy status in GitHub:
-- `human-cooperation-site` -> `Actions` -> `Deploy Site To Pages Repo`
+- `human-cooperation-site` -> `Actions` -> `Deploy Site To GitHub Pages`
 
 Important:
 - `commit` alone does not publish
 - `push` to `main` publishes (via GitHub Actions)
-
-## Manual Deploy (Fallback only)
-
-Use this only if GitHub Actions is unavailable and you need a manual deploy:
-
-```bash
-./deploy.sh
-```
-
-This script:
-- Builds the site
-- Syncs `build/` into the Pages repo
-- Commits/pushes only when there are actual deploy changes
 
 ## Quick Rule of Thumb
 
@@ -106,15 +102,8 @@ This script:
   - `commit` only saves locally. Run `git push origin main`.
 
 - I pushed, but nothing published:
-  - Check `human-cooperation-site` -> `Actions` -> `Deploy Site To Pages Repo`.
+  - Check `human-cooperation-site` -> `Actions` -> `Deploy Site To GitHub Pages`.
   - If the workflow failed, open the failed step and read the error lines.
-
-- Workflow says `No deploy changes.`:
-  - The build output did not change (normal if your edits do not affect generated files).
-
-- Workflow fails with missing secret / auth error:
-  - Verify repository secret `DEPLOY_REPO_PAT` exists in `doesburg11/human-cooperation-site`.
-  - Verify the PAT has write access to `doesburg11/doesburg11.github.io`.
 
 - Workflow does not start after push:
   - Make sure you pushed to `main` (the deploy workflow only triggers on `main`).

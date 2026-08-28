@@ -5,8 +5,7 @@
   "scripts": {
     "start": "docusaurus start --poll 1000",
     "build": "docusaurus build && node scripts/generate_archive_redirects.js",
-    "serve": "docusaurus serve",
-    "deploy": "./deploy.sh"
+    "serve": "docusaurus serve"
   },
   "dependencies": {
     "@docsearch/react": "^3.0.0",
