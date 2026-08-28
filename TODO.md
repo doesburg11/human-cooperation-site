@@ -225,6 +225,7 @@ A separate, non-PredPreyGrass simulation idea: modeling early human settlement p
 - Evolutionary MARL in Group Social Dilemmas (Chaos, 2025): evolutionary pressure on RL traits in social dilemmas. https://pubmed.ncbi.nlm.nih.gov/39937196/
 - Iterated + Evolutionary Games with MARL (Nature Communications, 2025): MARL-discovered strategies tested in evolving populations. https://www.nature.com/articles/s41467-025-67178-6
 - Neural Population Learning beyond Symmetric Zero-Sum Games (AAMAS 2024): population-level selection/equilibrium in general-sum MARL. https://deepmind.google/research/publications/24820/
+- Inequity Aversion Improves Cooperation in Intertemporal Social Dilemmas (Hughes, Leibo, Phillips, Tuyls, Dueñez-Guzman, Castañeda, Dunning, Zhu, McKee, Koster, Zhu, Roff & Graepel, NeurIPS 2018): agents with an inequity-aversion reward term (disutility from both advantageous and disadvantageous inequity) sustain cooperation in sequential social dilemmas better than purely selfish agents.
 
 ### Examples to try out
 - Meta-learning example, RLlib ("learning-to-learn"): https://github.com/ray-project/ray/blob/master/rllib/examples/algorithms/maml_lr_supervised_learning.py
