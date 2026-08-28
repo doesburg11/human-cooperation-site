@@ -34,10 +34,6 @@ When an implementation changes in a source repo, review and update the matching
 page here. When the website explanation changes here, keep it faithful to the
 Python implementation there.
 
-## Acknowledgments
-
-Developed with AI coding assistance from [Claude](https://claude.com/claude-code) (Anthropic), which does the implementation, with [Codex](https://openai.com/codex) (OpenAI) acting as an independent second opinion, peer-reviewing Claude's nontrivial code changes.
-
 ## Installation
 
 ```bash
@@ -75,3 +71,7 @@ GIT_USER=<Your GitHub username> yarn deploy
 ```
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+
+## Acknowledgments
+
+Developed with AI coding assistance from [Claude](https://claude.com/claude-code) (Anthropic), which does the implementation, with [Codex](https://openai.com/codex) (OpenAI) acting as an independent second opinion, peer-reviewing Claude's nontrivial code changes.
