@@ -1,6 +1,7 @@
 export default {
   tutorialSidebar: [
     'the-nature-and-nurture-of-cooperation-and-competition',
+    'start-here',
     {
       type: 'category',
       label: 'Cooperation in Perspective',

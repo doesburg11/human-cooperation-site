@@ -274,6 +274,8 @@ Multi-agent settings add something single-agent reinforcement learning does not 
 
 ## Where to go next
 
+- [**Start Here:**](/start-here) gives first-time readers a guided path through the argument, evidence, model pages, and research logs.
+
 - [**What is Cooperation?**](/what-is-cooperation) gives the broad definition used throughout the site.
 
 - [**What is Adversarial Behavior?**](/what-is-adversarial-behavior) explains the main opposing category.
