@@ -24,6 +24,7 @@ export default {
         'learning-selection-interaction/interaction-evolved-learned-cooperation/foundational-theory/baldwin-effect',
       ],
     },
+    'evidence-so-far',
     {
       type: 'category',
       label: 'Evolved Cooperation Models',

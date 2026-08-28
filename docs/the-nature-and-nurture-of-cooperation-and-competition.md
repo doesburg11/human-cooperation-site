@@ -44,15 +44,16 @@ The project studies that human problem with agent-based models, evolutionary sim
 If you are new to the project, use this path:
 
 1. [How do nature and nurture combine to shape human behavior?](/nature-nurture-human-behavior) for the full conceptual argument.
-2. [What is Cooperation?](/what-is-cooperation) for the definition used across the site.
-3. [Cooperation in Perspective](/cooperation-in-perspective) for where cooperation fits within human behavior more broadly.
-4. [Evolved Cooperation](/evolved-cooperation) for cooperation shaped by selection across generations.
-5. [Learned Cooperation](/learned-cooperation) for cooperation acquired through experience within a lifetime.
-6. [Interaction Evolved-Learned Cooperation](/learning-selection-interaction/theory) for the two-timescale argument connecting both processes.
+2. [Evidence So Far](/evidence-so-far) for what is confirmed, null, demonstrated, or still open.
+3. [What is Cooperation?](/what-is-cooperation) for the definition used across the site.
+4. [Cooperation in Perspective](/cooperation-in-perspective) for where cooperation fits within human behavior more broadly.
+5. [Evolved Cooperation](/evolved-cooperation) for cooperation shaped by selection across generations.
+6. [Learned Cooperation](/learned-cooperation) for cooperation acquired through experience within a lifetime.
+7. [Interaction Evolved-Learned Cooperation](/learning-selection-interaction/theory) for the two-timescale argument connecting both processes.
 
 ## If You Want the Evidence First
 
-Start with the strongest current result:
+Start with [Evidence So Far](/evidence-so-far) for the current status of the argument. Then use these source pages:
 
 - [Interaction Evolved-Learned Cooperation](/learning-selection-interaction/theory) summarizes the replicated finding that combined evolution and learning outperform either mechanism alone in the Ackley & Littman style survival task.
 - [Darwin/Baldwin Trial Log](/learning-selection-interaction/darwin-baldwin-trial-log) gives the trial history behind that result, including what did not work.
@@ -75,6 +76,7 @@ Use this path if you are mainly interested in the simulations:
 The site mixes three kinds of material:
 
 - **Concept pages** define the argument and vocabulary: [How do nature and nurture combine to shape human behavior?](/nature-nurture-human-behavior), [What is Cooperation?](/what-is-cooperation), [What is Adversarial Behavior?](/what-is-adversarial-behavior), [Cooperation in Perspective](/cooperation-in-perspective), [Evolved Cooperation](/evolved-cooperation), [Learned Cooperation](/learned-cooperation), and [Interaction Evolved-Learned Cooperation](/learning-selection-interaction/theory).
+- **Evidence overview** separates confirmed results, demonstrations, null results, and open questions: [Evidence So Far](/evidence-so-far).
 - **Model pages** describe simulation systems and what each one is meant to isolate: [Nowak Mechanisms](/evolved-cooperation/nowak-mechanisms), [Spatial Altruism](/evolved-cooperation/spatial-altruism), [Cooperative Hunting](/evolved-cooperation/cooperative-hunting), [Spatial Prisoner's Dilemma](/evolved-cooperation/spatial-prisoners-dilemma), [Retained Benefit](/evolved-cooperation/retained-benefit), [PredPreyGrass](/learning-selection-interaction/predpreygrass), and [Two-Timescale Simulations](/learning-selection-interaction/simulations).
 - **Research-log pages** preserve trial history, null results, failures, and open questions: [Darwin/Baldwin Trial Log](/learning-selection-interaction/darwin-baldwin-trial-log), [Related Research](/learning-selection-interaction/related-research-predpreygrass), and [Mindmap](/learning-selection-interaction/interaction-evolved-learned-cooperation/mindmap).
 
