@@ -24,9 +24,9 @@ slug: /
 
 ## How to Read This Site
 
-This site is ultimately about human cooperation and competition: how people learn to help, coordinate, reciprocate, punish, compete, and form stable social patterns when individual and collective incentives partly conflict.
+This site asks how human cooperation and competition can be explained from simpler adaptive processes: how people learn to help, coordinate, reciprocate, punish, compete, and form stable social patterns when individual and collective incentives partly conflict.
 
-It approaches that human question through two simpler adaptive processes:
+The two adaptive processes are:
 
 - **evolution across generations**, which changes inherited tendencies through selection
 - **learning within lifetimes**, which changes behavior through experience
