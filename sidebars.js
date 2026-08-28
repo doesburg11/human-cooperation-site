@@ -1,7 +1,7 @@
 export default {
   tutorialSidebar: [
     'the-nature-and-nurture-of-cooperation-and-competition',
-    'start-here',
+    'nature-nurture-human-behavior',
     {
       type: 'category',
       label: 'Cooperation in Perspective',

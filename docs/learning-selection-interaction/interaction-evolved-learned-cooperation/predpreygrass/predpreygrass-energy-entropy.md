@@ -82,7 +82,7 @@ This is also why food chains stay short in both the simulation and in nature: ea
 
 ## Implications
 
-Selection in this environment operates on exactly the same logic developed elsewhere on this site: [behavior as a cost-benefit investment](/#behavior-as-a-cost-benefit-investment). Passive decay is a fixed, unavoidable cost that every agent pays every step regardless of what it does. Movement and foraging choices are the investment side of the ledger — an agent that finds grass or prey efficiently outpaces its own decay and can reach the reproduction threshold; one that doesn't, starves. Because decay is constant and energy income is capped by grass regeneration, PredPreyGrass gives natural selection a genuinely scarce resource to select over, without needing to build in any explicit cost for movement or reproduction at all.
+Selection in this environment operates on exactly the same logic developed elsewhere on this site: [behavior as a cost-benefit investment](/nature-nurture-human-behavior#behavior-as-a-cost-benefit-investment). Passive decay is a fixed, unavoidable cost that every agent pays every step regardless of what it does. Movement and foraging choices are the investment side of the ledger — an agent that finds grass or prey efficiently outpaces its own decay and can reach the reproduction threshold; one that doesn't, starves. Because decay is constant and energy income is capped by grass regeneration, PredPreyGrass gives natural selection a genuinely scarce resource to select over, without needing to build in any explicit cost for movement or reproduction at all.
 
 ---
 
