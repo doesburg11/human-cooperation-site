@@ -1,7 +1,7 @@
 ---
 id: the-nature-and-nurture-of-cooperation-and-competition
 title: The Nature and Nurture of Cooperation and Competition
-description: A guided entry point to research on how evolution and lifetime learning interact to shape cooperation and competition.
+description: A guided entry point to research on how evolution and lifetime learning interact to shape human cooperation and competition.
 hide_title: true
 sidebar_position: 1
 slug: /
@@ -24,7 +24,9 @@ slug: /
 
 ## How to Read This Site
 
-This site asks how cooperation and competition can emerge from the interaction between two adaptive processes:
+This site is ultimately about human cooperation and competition: how people learn to help, coordinate, reciprocate, punish, compete, and form stable social patterns when individual and collective incentives partly conflict.
+
+It approaches that human question through two simpler adaptive processes:
 
 - **evolution across generations**, which changes inherited tendencies through selection
 - **learning within lifetimes**, which changes behavior through experience
@@ -35,7 +37,7 @@ The central idea is that neither process is enough on its own. Evolution shapes 
 
 Cooperation is treated here as a behavioral pattern that can emerge when helping, coordinating, or sharing creates enough future benefit to outweigh its immediate cost. The difficult case is not cooperation between already-aligned agents, but cooperation among agents whose interests partly conflict.
 
-The project studies that problem with agent-based models, evolutionary simulations, and reinforcement-learning agents. These models are not intended to prove what happened in human evolutionary history. They are tools for asking which mechanisms could generate cooperation under controlled assumptions, and which predictions those mechanisms make about behavior today.
+The project studies that human problem with agent-based models, evolutionary simulations, and reinforcement-learning agents. The current models are mechanism tests rather than complete descriptions of human social life. They isolate ingredients likely to matter for humans, including learning, selection, reciprocity, resource scarcity, reputation, partner choice, and ecological feedback.
 
 ## What to Read Next
 
