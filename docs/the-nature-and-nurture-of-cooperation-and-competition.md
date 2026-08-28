@@ -1,6 +1,7 @@
 ---
 id: the-nature-and-nurture-of-cooperation-and-competition
 title: The Nature and Nurture of Cooperation and Competition
+description: Research on how evolution and lifetime learning interact to shape cooperation and competition, using agent-based models, reinforcement learning, and open simulations.
 hide_title: true
 sidebar_position: 1
 slug: /
@@ -18,6 +19,8 @@ slug: /
     className="home-hero-banner__logo"
   />
 </figure>
+
+<h1 className="sr-only">The Nature and Nurture of Cooperation and Competition</h1>
 
 ## How do nature and nurture combine to shape human behavior?
 
