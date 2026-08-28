@@ -64,6 +64,12 @@ Local preview:
 npm run start
 ```
 
+## Static Assets
+
+Keep `static/` for assets the site actually renders, such as diagrams, generated figures, replay data, videos, favicon/logo files, and `CNAME`.
+
+Do not vendor scholarly papers as local PDFs. Link to canonical DOI, arXiv, publisher, proceedings, or author/institution pages instead. If a third-party asset must be bundled, record its source, license/reuse basis, reason for bundling, and site usage in `ASSET_PROVENANCE.md`.
+
 ## Publish (Recommended: automatic)
 
 To publish changes:

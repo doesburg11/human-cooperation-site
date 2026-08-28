@@ -66,6 +66,10 @@ The workflow lives at `.github/workflows/deploy-to-github-pages.yml`. It uses No
 
 Check deployment status in GitHub under `Actions` -> `Deploy Site To GitHub Pages`.
 
+## Static Assets
+
+Scholarly papers should be linked by canonical DOI, arXiv, publisher, proceedings, or author/institution URLs rather than vendored as local PDFs. See [ASSET_PROVENANCE.md](ASSET_PROVENANCE.md) for the static asset policy and PDF audit record.
+
 ## Acknowledgments
 
 Developed with AI coding assistance from [Claude](https://claude.com/claude-code) (Anthropic), which does the implementation, with [Codex](https://openai.com/codex) (OpenAI) acting as an independent second opinion, peer-reviewing Claude's nontrivial code changes.
