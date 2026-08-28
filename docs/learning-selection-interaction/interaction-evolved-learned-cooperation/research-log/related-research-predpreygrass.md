@@ -29,9 +29,9 @@ Artificial life platforms such as Avida (Ofria & Wilke, 2004) and Tierra (Ray, 1
 
 Across this body of work, no single framework we are aware of combines all of: a three-level trophic ecology (grass, prey, predators); energy-based metabolism and resource flow; birth, death, reproduction, and multi-generational population turnover; mutation-driven lineage diversification; multiple co-evolving behavioral variants within a species; deep multi-agent RL for within-lifetime behavioral adaptation; and long-run, open-ended eco-evolutionary dynamics. The comparison below summarizes where PredPreyGrass sits relative to a representative sample of adjacent environments and toolkits (✓ present, — absent, ~ partial or abstracted).
 
-<figure style={{ margin: '0 0 2rem' }}>
-<div style={{ width: '100%', overflowX: 'auto' }}>
-  <table style={{ display: 'table', width: '100%', minWidth: '900px', tableLayout: 'fixed' }}>
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--striped site-table--wide">
     <colgroup>
       <col style={{ width: '22%' }} />
       <col style={{ width: '13%' }} />
@@ -43,12 +43,12 @@ Across this body of work, no single framework we are aware of combines all of: a
     </colgroup>
     <thead>
       <tr>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Dimension</th>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>PredPreyGrass</th>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>VMAS</th>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Melting Pot</th>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>NetLogo</th>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>POET</th>
+        <th>Dimension</th>
+        <th>PredPreyGrass</th>
+        <th>VMAS</th>
+        <th>Melting Pot</th>
+        <th>NetLogo</th>
+        <th>POET</th>
       </tr>
     </thead>
     <tbody>
@@ -60,7 +60,7 @@ Across this body of work, no single framework we are aware of combines all of: a
         <td>Agent-based modeling</td>
         <td>Open-ended curriculum</td>
       </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+      <tr>
         <td>Deep multi-agent RL</td>
         <td>✓ PPO (RLlib)</td>
         <td>✓ PPO/MAPPO</td>
@@ -76,7 +76,7 @@ Across this body of work, no single framework we are aware of combines all of: a
         <td>Variable</td>
         <td>Fixed per environment</td>
       </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+      <tr>
         <td>Birth &amp; death (endogenous)</td>
         <td>✓</td>
         <td>—</td>
@@ -92,7 +92,7 @@ Across this body of work, no single framework we are aware of combines all of: a
         <td>✓</td>
         <td>—</td>
       </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+      <tr>
         <td>Lineages / generations</td>
         <td>✓</td>
         <td>—</td>
@@ -108,7 +108,7 @@ Across this body of work, no single framework we are aware of combines all of: a
         <td>~ (manual)</td>
         <td>✓ (env-agent)</td>
       </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+      <tr>
         <td>External reward shaping</td>
         <td>Minimal (sparse)</td>
         <td>Heavy</td>
@@ -127,7 +127,7 @@ Across this body of work, no single framework we are aware of combines all of: a
     </tbody>
   </table>
 </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Positioning of PredPreyGrass relative to related multi-agent and ecological modeling environments.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 1:</strong> Positioning of PredPreyGrass relative to related multi-agent and ecological modeling environments.</figcaption>
 </figure>
 
 ---

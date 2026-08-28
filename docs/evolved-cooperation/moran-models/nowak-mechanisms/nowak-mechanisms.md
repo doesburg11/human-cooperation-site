@@ -17,44 +17,44 @@ All five mechanisms run on the same Moran update loop. What differs across them 
 
 ## The Five Mechanisms
 
-<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
-  <div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
-    <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+    <table className="site-table site-table--bordered site-table--striped">
       <colgroup>
         <col style={{ width: '22%' }} />
         <col style={{ width: '78%' }} />
       </colgroup>
       <thead>
         <tr>
-          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Mechanism</th>
-          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>How cooperation is sustained</th>
+          <th>Mechanism</th>
+          <th>How cooperation is sustained</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><a href="/evolved-cooperation/kin-selection">Kin Selection</a></td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Benefit is routed with a lineage bias. Same-lineage neighbors receive more weight, operationalising Hamilton's rule <em>rB &gt; C</em>.</td>
-        </tr>
-        <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><a href="/evolved-cooperation/direct-reciprocity">Direct Reciprocity</a></td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Each site carries a memory of recently received help. Expressed cooperation is scaled by that memory, creating a direct reciprocal feedback loop.</td>
+          <td><a href="/evolved-cooperation/kin-selection">Kin Selection</a></td>
+          <td>Benefit is routed with a lineage bias. Same-lineage neighbors receive more weight, operationalising Hamilton's rule <em>rB &gt; C</em>.</td>
         </tr>
         <tr>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><a href="/evolved-cooperation/indirect-reciprocity">Indirect Reciprocity</a></td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Each site carries a public reputation. The routing kernel is biased toward higher-reputation recipients, sustaining cooperation through a reputation channel.</td>
-        </tr>
-        <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><a href="/evolved-cooperation/network-reciprocity">Network Reciprocity</a></td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Benefit is routed uniformly over local grid neighbors. Spatial structure alone protects cooperator clusters from exploitation, with no memory or lineage bias.</td>
+          <td><a href="/evolved-cooperation/direct-reciprocity">Direct Reciprocity</a></td>
+          <td>Each site carries a memory of recently received help. Expressed cooperation is scaled by that memory, creating a direct reciprocal feedback loop.</td>
         </tr>
         <tr>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><a href="/evolved-cooperation/group-selection">Group Selection</a></td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Sites are partitioned into groups. Individual Moran replacement runs each step. Periodically the highest-fitness group is copied into the lowest-fitness group, adding a second level of selection.</td>
+          <td><a href="/evolved-cooperation/indirect-reciprocity">Indirect Reciprocity</a></td>
+          <td>Each site carries a public reputation. The routing kernel is biased toward higher-reputation recipients, sustaining cooperation through a reputation channel.</td>
+        </tr>
+        <tr>
+          <td><a href="/evolved-cooperation/network-reciprocity">Network Reciprocity</a></td>
+          <td>Benefit is routed uniformly over local grid neighbors. Spatial structure alone protects cooperator clusters from exploitation, with no memory or lineage bias.</td>
+        </tr>
+        <tr>
+          <td><a href="/evolved-cooperation/group-selection">Group Selection</a></td>
+          <td>Sites are partitioned into groups. Individual Moran replacement runs each step. Periodically the highest-fitness group is copied into the lowest-fitness group, adding a second level of selection.</td>
         </tr>
       </tbody>
     </table>
   </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> The five Nowak mechanisms and how each sustains cooperation in this implementation.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 1:</strong> The five Nowak mechanisms and how each sustains cooperation in this implementation.</figcaption>
 </figure>
 
 ## Spread vs. maintenance
@@ -63,9 +63,9 @@ The five mechanisms are often described as answers to the question "how does coo
 
 **The Nowak conditions are maintenance conditions.** Each of the five rules — $rb > c$, $w > (T-R)/(T-P)$, $q > c/b$, $b/c > k$, $m/n > c/b$ — describes when a population already dominated by cooperators resists invasion by defectors. This is an evolutionary stability (ESS) condition. It is not a condition for spread from rare, and it is not a condition for the first cooperative act to occur.
 
-<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
-  <div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
-    <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+    <table className="site-table site-table--bordered">
       <colgroup>
         <col style={{ width: '22%' }} />
         <col style={{ width: '22%' }} />
@@ -74,47 +74,47 @@ The five mechanisms are often described as answers to the question "how does coo
       </colgroup>
       <thead>
         <tr>
-          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Mechanism</th>
-          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Condition</th>
-          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Spread from rare</th>
-          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Maintenance (ESS)</th>
+          <th>Mechanism</th>
+          <th>Condition</th>
+          <th>Spread from rare</th>
+          <th>Maintenance (ESS)</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><a href="/evolved-cooperation/kin-selection">Kin selection</a></td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', fontStyle: 'italic' }}>rb &gt; c</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#D4EDDA' }}><strong>Yes</strong> — offspring stay near parents by definition, automatically creating kin clusters; 5/5 seeds <a href="#kin-selection-isolation-evidence" style={{ fontSize: '0.8em', whiteSpace: 'nowrap' }}>→ simulated</a></td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#D4EDDA' }}><strong>Yes</strong></td>
+          <td><a href="/evolved-cooperation/kin-selection">Kin selection</a></td>
+          <td style={{ fontStyle: 'italic' }}>rb &gt; c</td>
+          <td style={{ backgroundColor: '#D4EDDA' }}><strong>Yes</strong> — offspring stay near parents by definition, automatically creating kin clusters; 5/5 seeds <a href="#kin-selection-isolation-evidence" style={{ fontSize: '0.8em', whiteSpace: 'nowrap' }}>→ simulated</a></td>
+          <td style={{ backgroundColor: '#D4EDDA' }}><strong>Yes</strong></td>
         </tr>
         <tr>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><a href="/evolved-cooperation/direct-reciprocity">Direct reciprocity</a></td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', fontStyle: 'italic' }}>w &gt; (T−R)/(T−P)</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#F8D7DA' }}><strong>No</strong> — rare TFT meets mostly ALLD; no memory of cooperation to reciprocate <a href="/evolved-cooperation/direct-reciprocity#step-1-pure-direct-reciprocity-fails" style={{ fontSize: '0.8em', whiteSpace: 'nowrap' }}>→ simulated</a></td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#D4EDDA' }}><strong>Yes</strong> <a href="/evolved-cooperation/direct-reciprocity#the-condition" style={{ fontSize: '0.8em', whiteSpace: 'nowrap' }}>→ simulated</a></td>
+          <td><a href="/evolved-cooperation/direct-reciprocity">Direct reciprocity</a></td>
+          <td style={{ fontStyle: 'italic' }}>w &gt; (T−R)/(T−P)</td>
+          <td style={{ backgroundColor: '#F8D7DA' }}><strong>No</strong> — rare TFT meets mostly ALLD; no memory of cooperation to reciprocate <a href="/evolved-cooperation/direct-reciprocity#step-1-pure-direct-reciprocity-fails" style={{ fontSize: '0.8em', whiteSpace: 'nowrap' }}>→ simulated</a></td>
+          <td style={{ backgroundColor: '#D4EDDA' }}><strong>Yes</strong> <a href="/evolved-cooperation/direct-reciprocity#the-condition" style={{ fontSize: '0.8em', whiteSpace: 'nowrap' }}>→ simulated</a></td>
         </tr>
         <tr>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><a href="/evolved-cooperation/indirect-reciprocity">Indirect reciprocity</a></td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', fontStyle: 'italic' }}>q &gt; c/b</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#F8D7DA' }}><strong>No</strong> — reputation system requires an existing cooperative base to bootstrap</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#D4EDDA' }}><strong>Yes</strong></td>
+          <td><a href="/evolved-cooperation/indirect-reciprocity">Indirect reciprocity</a></td>
+          <td style={{ fontStyle: 'italic' }}>q &gt; c/b</td>
+          <td style={{ backgroundColor: '#F8D7DA' }}><strong>No</strong> — reputation system requires an existing cooperative base to bootstrap</td>
+          <td style={{ backgroundColor: '#D4EDDA' }}><strong>Yes</strong></td>
         </tr>
         <tr>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><a href="/evolved-cooperation/network-reciprocity">Network reciprocity</a></td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', fontStyle: 'italic' }}>b/c &gt; k</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#FFF3CD' }}><strong>Partial</strong> — cooperator clusters grow once formed, but a single isolated cooperator still loses to surrounding defectors</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#D4EDDA' }}><strong>Yes</strong></td>
+          <td><a href="/evolved-cooperation/network-reciprocity">Network reciprocity</a></td>
+          <td style={{ fontStyle: 'italic' }}>b/c &gt; k</td>
+          <td style={{ backgroundColor: '#FFF3CD' }}><strong>Partial</strong> — cooperator clusters grow once formed, but a single isolated cooperator still loses to surrounding defectors</td>
+          <td style={{ backgroundColor: '#D4EDDA' }}><strong>Yes</strong></td>
         </tr>
         <tr>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><a href="/evolved-cooperation/group-selection">Group selection</a></td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', fontStyle: 'italic' }}>m/n &gt; c/b</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#FFF3CD' }}><strong>Possible</strong> — if between-group selection is strong enough to offset within-group defector advantage</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#D4EDDA' }}><strong>Yes</strong></td>
+          <td><a href="/evolved-cooperation/group-selection">Group selection</a></td>
+          <td style={{ fontStyle: 'italic' }}>m/n &gt; c/b</td>
+          <td style={{ backgroundColor: '#FFF3CD' }}><strong>Possible</strong> — if between-group selection is strong enough to offset within-group defector advantage</td>
+          <td style={{ backgroundColor: '#D4EDDA' }}><strong>Yes</strong></td>
         </tr>
       </tbody>
     </table>
   </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 2:</strong> The five Nowak conditions mapped to spread from rare and maintenance. All five conditions are ESS (maintenance) conditions. Kin selection reliably spreads cooperation from rare because offspring proximity to parents is a trivial consequence of reproduction. The other mechanisms require additional biological conditions to achieve the same.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 2:</strong> The five Nowak conditions mapped to spread from rare and maintenance. All five conditions are ESS (maintenance) conditions. Kin selection reliably spreads cooperation from rare because offspring proximity to parents is a trivial consequence of reproduction. The other mechanisms require additional biological conditions to achieve the same.</figcaption>
 </figure>
 
 <figure id="kin-selection-isolation-evidence" style={{ margin: '0 0 1.5rem 0' }}>
@@ -233,9 +233,9 @@ The shared condition across all of them mirrors the repo-level feedback framing:
 
 The five mechanisms above are implemented here as fixed evolutionary rules — but applied to human cooperation specifically, none of them is purely a matter of nature or purely a matter of nurture. Evolution can supply the underlying capacity (a predisposition to help kin, to remember favors, to track reputation) while culture and individual development determine how that capacity actually gets used.
 
-<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
-  <div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
-    <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+    <table className="site-table site-table--bordered site-table--striped">
       <colgroup>
         <col style={{ width: '18%' }} />
         <col style={{ width: '27%' }} />
@@ -244,54 +244,54 @@ The five mechanisms above are implemented here as fixed evolutionary rules — b
       </colgroup>
       <thead>
         <tr>
-          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Mechanism</th>
-          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>"Nature" side</th>
-          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>"Nurture" side</th>
-          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Human version</th>
+          <th>Mechanism</th>
+          <th>"Nature" side</th>
+          <th>"Nurture" side</th>
+          <th>Human version</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Kin selection</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Strong. Selection favors helping genetic relatives because they share genes.</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Moderate. Humans learn who counts as "family"; culture can expand or weaken kin duties.</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>"I help my child, sibling, cousin, clan."</td>
-        </tr>
-        <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Direct reciprocity</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Strong-medium. Evolution favors memory, trust, gratitude, resentment, partner recognition.</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Strong. Individuals learn who helps, who cheats, who can be trusted.</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>"You helped me before, so I help you now."</td>
+          <td>Kin selection</td>
+          <td>Strong. Selection favors helping genetic relatives because they share genes.</td>
+          <td>Moderate. Humans learn who counts as "family"; culture can expand or weaken kin duties.</td>
+          <td>"I help my child, sibling, cousin, clan."</td>
         </tr>
         <tr>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Indirect reciprocity</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Medium. Evolution favors reputation tracking, moral emotions, concern for social evaluation.</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Very strong. Reputation depends on language, gossip, norms, morality — all culturally transmitted.</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>"You helped others, so I trust/help you."</td>
-        </tr>
-        <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Network reciprocity</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Medium. Evolution can favor clustering, bonding, local loyalty, partner choice.</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Strong. Human networks are shaped by family, school, work, religion, and institutions.</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>"People in my circle help each other."</td>
+          <td>Direct reciprocity</td>
+          <td>Strong-medium. Evolution favors memory, trust, gratitude, resentment, partner recognition.</td>
+          <td>Strong. Individuals learn who helps, who cheats, who can be trusted.</td>
+          <td>"You helped me before, so I help you now."</td>
         </tr>
         <tr>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Group selection</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Medium-strong. Groups with more internal cooperation may outcompete less cooperative groups.</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Very strong in humans. Group identity, norms, punishment, ritual, law, and ideology are culturally transmitted.</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>"We cooperate because we are part of this group."</td>
+          <td>Indirect reciprocity</td>
+          <td>Medium. Evolution favors reputation tracking, moral emotions, concern for social evaluation.</td>
+          <td>Very strong. Reputation depends on language, gossip, norms, morality — all culturally transmitted.</td>
+          <td>"You helped others, so I trust/help you."</td>
+        </tr>
+        <tr>
+          <td>Network reciprocity</td>
+          <td>Medium. Evolution can favor clustering, bonding, local loyalty, partner choice.</td>
+          <td>Strong. Human networks are shaped by family, school, work, religion, and institutions.</td>
+          <td>"People in my circle help each other."</td>
+        </tr>
+        <tr>
+          <td>Group selection</td>
+          <td>Medium-strong. Groups with more internal cooperation may outcompete less cooperative groups.</td>
+          <td>Very strong in humans. Group identity, norms, punishment, ritual, law, and ideology are culturally transmitted.</td>
+          <td>"We cooperate because we are part of this group."</td>
         </tr>
       </tbody>
     </table>
   </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 8:</strong> Kin selection is the most nature-heavy of the five; indirect reciprocity and group selection are the most nurture/culture-heavy in humans. Direct and network reciprocity sit in between. None of the five is purely nature or purely nurture.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 8:</strong> Kin selection is the most nature-heavy of the five; indirect reciprocity and group selection are the most nurture/culture-heavy in humans. Direct and network reciprocity sit in between. None of the five is purely nature or purely nurture.</figcaption>
 </figure>
 
 A more useful division cuts across the five mechanisms rather than ranking them:
 
-<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
-  <div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
-    <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+    <table className="site-table site-table--bordered site-table--striped">
       <colgroup>
         <col style={{ width: '22%' }} />
         <col style={{ width: '39%' }} />
@@ -299,36 +299,36 @@ A more useful division cuts across the five mechanisms rather than ranking them:
       </colgroup>
       <thead>
         <tr>
-          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Level</th>
-          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>What evolution supplies</th>
-          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>What learning/culture supplies</th>
+          <th>Level</th>
+          <th>What evolution supplies</th>
+          <th>What learning/culture supplies</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Basic social architecture</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Attachment, social emotions, memory, recognition, fairness sensitivity, punishment motives.</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>—</td>
-        </tr>
-        <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Development</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Readiness to learn social rules.</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Who helped me, who cheated, whom to trust.</td>
+          <td>Basic social architecture</td>
+          <td>Attachment, social emotions, memory, recognition, fairness sensitivity, punishment motives.</td>
+          <td>—</td>
         </tr>
         <tr>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Culture</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Capacity for norm learning.</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Actual rules: family duty, fairness, debt, gratitude, honor, punishment.</td>
+          <td>Development</td>
+          <td>Readiness to learn social rules.</td>
+          <td>Who helped me, who cheated, whom to trust.</td>
         </tr>
-        <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Institutions</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Capacity for group living.</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Law, religion, markets, reputation systems, contracts.</td>
+        <tr>
+          <td>Culture</td>
+          <td>Capacity for norm learning.</td>
+          <td>Actual rules: family duty, fairness, debt, gratitude, honor, punishment.</td>
+        </tr>
+        <tr>
+          <td>Institutions</td>
+          <td>Capacity for group living.</td>
+          <td>Law, religion, markets, reputation systems, contracts.</td>
         </tr>
       </tbody>
     </table>
   </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 9:</strong> Evolutionary selection does not produce a fixed rule such as "always cooperate" — too rigid, too easily exploited. Instead it favors learning systems that let humans become cooperative under the right conditions: help kin, reciprocate with reliable partners, track reputation, cluster with cooperators, follow group norms, and punish or avoid exploiters. See the [interaction between learning and selection](/learning-selection-interaction/theory) for how this site models that coupling directly.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 9:</strong> Evolutionary selection does not produce a fixed rule such as "always cooperate" — too rigid, too easily exploited. Instead it favors learning systems that let humans become cooperative under the right conditions: help kin, reciprocate with reliable partners, track reputation, cluster with cooperators, follow group norms, and punish or avoid exploiters. See the [interaction between learning and selection](/learning-selection-interaction/theory) for how this site models that coupling directly.</figcaption>
 </figure>
 
 ## References

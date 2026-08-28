@@ -72,9 +72,9 @@ A heritable speed genome is *morphological* evolution — the body changes, not 
 
 ## Interpretation
 
-<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
-<div style={{ width: '100%', overflowX: 'auto' }}>
-  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--striped">
     <colgroup>
       <col style={{ width: '22%' }} />
       <col style={{ width: '28%' }} />
@@ -83,10 +83,10 @@ A heritable speed genome is *morphological* evolution — the body changes, not 
     </colgroup>
     <thead>
       <tr>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Mechanism</th>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>What is learned during life</th>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>What is inherited</th>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>PredPreyGrass interpretation</th>
+        <th>Mechanism</th>
+        <th>What is learned during life</th>
+        <th>What is inherited</th>
+        <th>PredPreyGrass interpretation</th>
       </tr>
     </thead>
     <tbody>
@@ -96,7 +96,7 @@ A heritable speed genome is *morphological* evolution — the body changes, not 
         <td>Parameters that support learning, not the acquired behavior itself.</td>
         <td>Best fit for the base eco-evolutionary speed-genome experiments.</td>
       </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+      <tr>
         <td>Lamarckian</td>
         <td>Behavior, policy weights, or acquired parameter state changes through experience.</td>
         <td>The acquired state itself is copied into descendants or replacement populations.</td>
@@ -111,5 +111,5 @@ A heritable speed genome is *morphological* evolution — the body changes, not 
     </tbody>
   </table>
 </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 5:</strong> PredPreyGrass changes interpretation depending on whether only the genome is inherited or learned policy state is copied forward.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 5:</strong> PredPreyGrass changes interpretation depending on whether only the genome is inherited or learned policy state is copied forward.</figcaption>
 </figure>

@@ -29,9 +29,9 @@ where $\omega$ is the observation weight. Agents that help more accumulate highe
 
 ## Key Parameters
 
-<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
-<div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
-  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--bordered site-table--striped">
     <colgroup>
       <col style={{ width: '33.33%' }} />
       <col style={{ width: '33.33%' }} />
@@ -39,46 +39,46 @@ where $\omega$ is the observation weight. Agents that help more accumulate highe
     </colgroup>
     <thead>
       <tr>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Parameter</th>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Default</th>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Role</th>
+        <th>Parameter</th>
+        <th>Default</th>
+        <th>Role</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>reputation_default</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>0.5</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Initial reputation for all sites</td>
-      </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>reputation_observation_weight</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>0.35</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>How quickly reputation tracks recent helping</td>
+        <td><code>reputation_default</code></td>
+        <td><code>0.5</code></td>
+        <td>Initial reputation for all sites</td>
       </tr>
       <tr>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>reputation_kernel_bias</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>0.10</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Minimum routing weight regardless of reputation</td>
-      </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>reputation_kernel_exponent</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>1.0</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Curvature of reputation-to-weight mapping</td>
+        <td><code>reputation_observation_weight</code></td>
+        <td><code>0.35</code></td>
+        <td>How quickly reputation tracks recent helping</td>
       </tr>
       <tr>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>B_plus_scale</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>1.0</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Scales cooperative benefit produced per unit trait</td>
+        <td><code>reputation_kernel_bias</code></td>
+        <td><code>0.10</code></td>
+        <td>Minimum routing weight regardless of reputation</td>
       </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>C_scale</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>0.2</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Private cost per unit trait</td>
+      <tr>
+        <td><code>reputation_kernel_exponent</code></td>
+        <td><code>1.0</code></td>
+        <td>Curvature of reputation-to-weight mapping</td>
+      </tr>
+      <tr>
+        <td><code>B_plus_scale</code></td>
+        <td><code>1.0</code></td>
+        <td>Scales cooperative benefit produced per unit trait</td>
+      </tr>
+      <tr>
+        <td><code>C_scale</code></td>
+        <td><code>0.2</code></td>
+        <td>Private cost per unit trait</td>
       </tr>
     </tbody>
   </table>
 </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Key parameters controlling reputation dynamics and routing in the indirect reciprocity model.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 1:</strong> Key parameters controlling reputation dynamics and routing in the indirect reciprocity model.</figcaption>
 </figure>
 
 ## Python Module Layout

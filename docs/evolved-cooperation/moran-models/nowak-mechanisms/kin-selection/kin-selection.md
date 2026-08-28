@@ -186,9 +186,9 @@ Variable definitions:
 
 Consider a focal site $i$ with four von Neumann neighbors, two same-lineage (A) and two other-lineage (B):
 
-<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
-<div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
-  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--bordered site-table--striped">
     <colgroup>
       <col style={{ width: '33.33%' }} />
       <col style={{ width: '33.33%' }} />
@@ -196,41 +196,41 @@ Consider a focal site $i$ with four von Neumann neighbors, two same-lineage (A) 
     </colgroup>
     <thead>
       <tr>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Site</th>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Lineage</th>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Trait $h$</th>
+        <th>Site</th>
+        <th>Lineage</th>
+        <th>Trait $h$</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>$i$</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>A</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.8</td>
-      </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>$j_1$</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>A</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.7</td>
+        <td>$i$</td>
+        <td>A</td>
+        <td>0.8</td>
       </tr>
       <tr>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>$j_2$</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>A</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.6</td>
-      </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>$j_3$</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>B</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.9</td>
+        <td>$j_1$</td>
+        <td>A</td>
+        <td>0.7</td>
       </tr>
       <tr>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>$j_4$</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>B</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.5</td>
+        <td>$j_2$</td>
+        <td>A</td>
+        <td>0.6</td>
+      </tr>
+      <tr>
+        <td>$j_3$</td>
+        <td>B</td>
+        <td>0.9</td>
+      </tr>
+      <tr>
+        <td>$j_4$</td>
+        <td>B</td>
+        <td>0.5</td>
       </tr>
     </tbody>
   </table>
 </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 2:</strong> Worked example: trait values and lineage assignments for focal site $i$ and its four von Neumann neighbors.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 2:</strong> Worked example: trait values and lineage assignments for focal site $i$ and its four von Neumann neighbors.</figcaption>
 </figure>
 
 **Production**
@@ -265,9 +265,9 @@ The lineage cluster raises fitness from 1.11 to 1.50 — a difference that compo
 
 ## Key Parameters
 
-<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
-<div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
-  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--bordered site-table--striped">
     <colgroup>
       <col style={{ width: '33.33%' }} />
       <col style={{ width: '33.33%' }} />
@@ -275,36 +275,36 @@ The lineage cluster raises fitness from 1.11 to 1.50 — a difference that compo
     </colgroup>
     <thead>
       <tr>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Parameter</th>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Default</th>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Role</th>
+        <th>Parameter</th>
+        <th>Default</th>
+        <th>Role</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>kin_weight_same_lineage</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>0.8</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Routing weight toward same-lineage neighbors</td>
-      </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>kin_weight_other_lineage</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>0.2</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Routing weight toward other-lineage neighbors</td>
+        <td><code>kin_weight_same_lineage</code></td>
+        <td><code>0.8</code></td>
+        <td>Routing weight toward same-lineage neighbors</td>
       </tr>
       <tr>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>B_plus_scale</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>1.0</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Scales cooperative benefit produced per unit trait</td>
+        <td><code>kin_weight_other_lineage</code></td>
+        <td><code>0.2</code></td>
+        <td>Routing weight toward other-lineage neighbors</td>
       </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>C_scale</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>0.2</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Private cost per unit trait</td>
+      <tr>
+        <td><code>B_plus_scale</code></td>
+        <td><code>1.0</code></td>
+        <td>Scales cooperative benefit produced per unit trait</td>
+      </tr>
+      <tr>
+        <td><code>C_scale</code></td>
+        <td><code>0.2</code></td>
+        <td>Private cost per unit trait</td>
       </tr>
     </tbody>
   </table>
 </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 3:</strong> Key parameters controlling kin-selection routing weights and payoff scaling.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 3:</strong> Key parameters controlling kin-selection routing weights and payoff scaling.</figcaption>
 </figure>
 
 Hamilton's rule maps onto these parameters as $r \approx w_{\text{same}} / (w_{\text{same}} + w_{\text{other}})$, $B = $ `B_plus_scale`, $C = $ `C_scale`.
@@ -333,9 +333,9 @@ From a starting frequency of 5%, cooperation spreads to 87% on average across se
 
 ### Step 3 — Ablations: what breaks the mechanism
 
-<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
-  <div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
-    <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+    <table className="site-table site-table--bordered">
       <colgroup>
         <col style={{ width: '30%' }} />
         <col style={{ width: '18%' }} />
@@ -344,47 +344,47 @@ From a starting frequency of 5%, cooperation spreads to 87% on average across se
       </colgroup>
       <thead>
         <tr>
-          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Scenario</th>
-          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Success rate</th>
-          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Mean trait</th>
-          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Interpretation</th>
+          <th>Scenario</th>
+          <th>Success rate</th>
+          <th>Mean trait</th>
+          <th>Interpretation</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>maintenance_common_start</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#D6E4F5' }}>5 / 5</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#D6E4F5' }}>0.984</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Maintenance confirmed. Kin-biased routing locks cooperation near maximum.</td>
+          <td>maintenance_common_start</td>
+          <td style={{ backgroundColor: '#D6E4F5' }}>5 / 5</td>
+          <td style={{ backgroundColor: '#D6E4F5' }}>0.984</td>
+          <td>Maintenance confirmed. Kin-biased routing locks cooperation near maximum.</td>
         </tr>
         <tr>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>spread_from_rare_kin_bias</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#D6E4F5' }}>5 / 5</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#D6E4F5' }}>0.872</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Spread from rare confirmed. Cooperation invades reliably from 5% with kin bias.</td>
+          <td>spread_from_rare_kin_bias</td>
+          <td style={{ backgroundColor: '#D6E4F5' }}>5 / 5</td>
+          <td style={{ backgroundColor: '#D6E4F5' }}>0.872</td>
+          <td>Spread from rare confirmed. Cooperation invades reliably from 5% with kin bias.</td>
         </tr>
         <tr>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>no_kin_bias_ablation (spatial)</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>1 / 5</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>0.488</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Equal kin weights on the same spatial grid — network reciprocity alone. Spread is partial and stochastic. The kin bias amplifies the spatial baseline from 1/5 to 5/5; the spatial structure is the necessary foundation.</td>
+          <td>no_kin_bias_ablation (spatial)</td>
+          <td style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>1 / 5</td>
+          <td style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>0.488</td>
+          <td>Equal kin weights on the same spatial grid — network reciprocity alone. Spread is partial and stochastic. The kin bias amplifies the spatial baseline from 1/5 to 5/5; the spatial structure is the necessary foundation.</td>
         </tr>
         <tr>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>well_mixed_control (kin preference, no kin proximity)</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#F8D7DA' }}>0 / 5</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#F8D7DA' }}>0.006</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Fully connected population — kin preference active but offspring scattered globally, so no kin proximity. Indistinguishable from the no-kin-bias control (0.005). Confirms that kin proximity (provided automatically by local reproduction) is what makes kin selection work.</td>
+          <td>well_mixed_control (kin preference, no kin proximity)</td>
+          <td style={{ backgroundColor: '#F8D7DA' }}>0 / 5</td>
+          <td style={{ backgroundColor: '#F8D7DA' }}>0.006</td>
+          <td>Fully connected population — kin preference active but offspring scattered globally, so no kin proximity. Indistinguishable from the no-kin-bias control (0.005). Confirms that kin proximity (provided automatically by local reproduction) is what makes kin selection work.</td>
         </tr>
         <tr>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>below_hamiltons_rule (spatial)</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#FFFFFF' }}>0 / 5</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#FFFFFF' }}>0.008</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>$B/C = 0.25$ ($rB$ &lt; $C$). Cooperation collapses from 90% to near zero — Hamilton's rule boundary confirmed within the spatial model.</td>
+          <td>below_hamiltons_rule (spatial)</td>
+          <td style={{ backgroundColor: '#FFFFFF' }}>0 / 5</td>
+          <td style={{ backgroundColor: '#FFFFFF' }}>0.008</td>
+          <td>$B/C = 0.25$ ($rB$ &lt; $C$). Cooperation collapses from 90% to near zero — Hamilton's rule boundary confirmed within the spatial model.</td>
         </tr>
       </tbody>
     </table>
   </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 4:</strong> Proof-of-mechanism results. 5 seeds per scenario, 1000 steps. Success = mean final trait ≥ 0.60.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 4:</strong> Proof-of-mechanism results. 5 seeds per scenario, 1000 steps. Success = mean final trait ≥ 0.60.</figcaption>
 </figure>
 
 **What the ablations show.** The no-kin-bias ablation removes lineage weighting while keeping local reproduction, leaving only the spatial assortment from offspring proximity. The result — 1/5 seeds, mean 0.488 — is the baseline from local reproduction alone. Kin-biased routing amplifies that to 5/5 by preferentially recirculating benefit within same-lineage clusters. The well-mixed control confirms the other side: kin preference without kin proximity produces no effect at all (0/5, mean 0.006 — identical to the no-kin-bias well-mixed control at 0.005). Kin proximity — automatically provided by local reproduction — is the necessary condition; kin-biased routing is the amplifier on top of it.

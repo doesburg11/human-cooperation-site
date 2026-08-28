@@ -23,9 +23,9 @@ The common architecture is:
 
 ## Model progression
 
-<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
-	<div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
-		<table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+		<table className="site-table site-table--bordered site-table--striped">
 			<colgroup>
 				<col style={{ width: '8%' }} />
 				<col style={{ width: '30%' }} />
@@ -34,35 +34,35 @@ The common architecture is:
 			</colgroup>
 			<thead>
 				<tr>
-					<th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>#</th>
-					<th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Script</th>
-					<th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Learning mechanism</th>
-					<th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Extra social features</th>
+					<th>#</th>
+					<th>Script</th>
+					<th>Learning mechanism</th>
+					<th>Extra social features</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>1</td>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><a href="https://github.com/doesburg11/EvolvedAndLearnedCooperation/blob/main/two_timescale_reciprocity.py">two_timescale_reciprocity.py</a></td>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Simple trust update (Rescorla-Wagner style)</td>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>None</td>
-				</tr>
-				<tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>2</td>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><a href="https://github.com/doesburg11/EvolvedAndLearnedCooperation/blob/main/two_timescale_q_learning.py">two_timescale_q_learning.py</a></td>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Q-learning (action-value learning)</td>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>None</td>
+					<td>1</td>
+					<td><a href="https://github.com/doesburg11/EvolvedAndLearnedCooperation/blob/main/two_timescale_reciprocity.py">two_timescale_reciprocity.py</a></td>
+					<td>Simple trust update (Rescorla-Wagner style)</td>
+					<td>None</td>
 				</tr>
 				<tr>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>3</td>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><a href="https://github.com/doesburg11/EvolvedAndLearnedCooperation/blob/main/two_timescale_extended.py">two_timescale_extended.py</a></td>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Q-learning</td>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Reputation, partner choice, forgiveness</td>
+					<td>2</td>
+					<td><a href="https://github.com/doesburg11/EvolvedAndLearnedCooperation/blob/main/two_timescale_q_learning.py">two_timescale_q_learning.py</a></td>
+					<td>Q-learning (action-value learning)</td>
+					<td>None</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td><a href="https://github.com/doesburg11/EvolvedAndLearnedCooperation/blob/main/two_timescale_extended.py">two_timescale_extended.py</a></td>
+					<td>Q-learning</td>
+					<td>Reputation, partner choice, forgiveness</td>
 				</tr>
 			</tbody>
 		</table>
 	</div>
-	<figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Three-model progression in learning and social complexity.</figcaption>
+	<figcaption className="site-table-caption"><strong>Display 1:</strong> Three-model progression in learning and social complexity.</figcaption>
 </figure>
 
 ## Navigate the simulation docs
@@ -85,9 +85,9 @@ For which cooperation mechanisms are included and which are out of scope, see [A
 
 The [theory page](/learning-selection-interaction/theory) sets out a broader conceptual framework than any single simulation can cover. The table below maps each theoretical concept to its status in this simulation suite.
 
-<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
-	<div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
-		<table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+		<table className="site-table site-table--bordered site-table--striped">
 			<colgroup>
 				<col style={{ width: '32%' }} />
 				<col style={{ width: '18%' }} />
@@ -95,69 +95,69 @@ The [theory page](/learning-selection-interaction/theory) sets out a broader con
 			</colgroup>
 			<thead>
 				<tr>
-					<th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Theoretical concept</th>
-					<th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Status</th>
-					<th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Notes</th>
+					<th>Theoretical concept</th>
+					<th>Status</th>
+					<th>Notes</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Fast timescale — learning within lifetimes</td>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>✅ Implemented</td>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>All three models. Trust update (Model 1), Q-learning (Models 2–3).</td>
-				</tr>
-				<tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Slow timescale — selection across generations</td>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>✅ Implemented</td>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>All three models. Payoff-proportional reproduction with mutation.</td>
+					<td>Fast timescale — learning within lifetimes</td>
+					<td>✅ Implemented</td>
+					<td>All three models. Trust update (Model 1), Q-learning (Models 2–3).</td>
 				</tr>
 				<tr>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Selection on learning parameters</td>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>✅ Implemented</td>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Evolution acts on <code>trust_prior</code>, <code>learning_rate</code>, <code>responsiveness</code>, <code>alpha</code>, <code>epsilon</code>, <code>gamma</code>, <code>initial_q_bias</code>, and social parameters.</td>
-				</tr>
-				<tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Fitness landscape smoothing by learning</td>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>✅ Demonstrated</td>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Agents discover cooperation during life, raising their fitness and guiding selection toward cooperation-friendly parameters.</td>
+					<td>Slow timescale — selection across generations</td>
+					<td>✅ Implemented</td>
+					<td>All three models. Payoff-proportional reproduction with mutation.</td>
 				</tr>
 				<tr>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Interaction regimes (learning accelerates / masks / opposes evolution)</td>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>⚠️ Partial</td>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>The one-shot vs repeated comparison tests the accelerating and masking regimes. The opposing regime (short-term defection winning) appears transiently as invasion events but is not isolated experimentally.</td>
-				</tr>
-				<tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Baldwin effect — steps 1 &amp; 2 (plasticity enables cooperation; selection favors learnability)</td>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>✅ Demonstrated</td>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Agents that learn cooperation reproduce more; selection shifts the population toward parameter combinations that make learning succeed faster and more robustly.</td>
+					<td>Selection on learning parameters</td>
+					<td>✅ Implemented</td>
+					<td>Evolution acts on <code>trust_prior</code>, <code>learning_rate</code>, <code>responsiveness</code>, <code>alpha</code>, <code>epsilon</code>, <code>gamma</code>, <code>initial_q_bias</code>, and social parameters.</td>
 				</tr>
 				<tr>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Baldwin effect — step 3 (genetic assimilation: learned behavior becomes innate)</td>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>❌ Not implemented</td>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Offspring always start with reset memories. Cooperation is never directly encoded in genes — it must be relearned every generation. Assimilation would require heritable memory or a genetically fixed cooperative action.</td>
-				</tr>
-				<tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Testable prediction: repeated interaction → higher cooperation than one-shot</td>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>✅ Confirmed</td>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>All three models show markedly higher cooperation under repeated interaction.</td>
+					<td>Fitness landscape smoothing by learning</td>
+					<td>✅ Demonstrated</td>
+					<td>Agents discover cooperation during life, raising their fitness and guiding selection toward cooperation-friendly parameters.</td>
 				</tr>
 				<tr>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Testable prediction: selection favors partner-discrimination parameters</td>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>✅ Confirmed</td>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>responsiveness</code> and <code>rejection_threshold</code> evolve upward under repeated interaction.</td>
-				</tr>
-				<tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Testable prediction: reputation mechanisms outperform partner-memory in stranger-rich environments</td>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>✅ Confirmed</td>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Network diversity experiment shows the extended model dominates above ~50% stranger fraction.</td>
+					<td>Interaction regimes (learning accelerates / masks / opposes evolution)</td>
+					<td>⚠️ Partial</td>
+					<td>The one-shot vs repeated comparison tests the accelerating and masking regimes. The opposing regime (short-term defection winning) appears transiently as invasion events but is not isolated experimentally.</td>
 				</tr>
 				<tr>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Testable prediction: trust learning vs Q-learning produce different cooperation–payoff trade-offs</td>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>✅ Confirmed</td>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Trust learning maximises cooperation rate; Q-learning maximises payoff by retaining exploration.</td>
+					<td>Baldwin effect — steps 1 &amp; 2 (plasticity enables cooperation; selection favors learnability)</td>
+					<td>✅ Demonstrated</td>
+					<td>Agents that learn cooperation reproduce more; selection shifts the population toward parameter combinations that make learning succeed faster and more robustly.</td>
+				</tr>
+				<tr>
+					<td>Baldwin effect — step 3 (genetic assimilation: learned behavior becomes innate)</td>
+					<td>❌ Not implemented</td>
+					<td>Offspring always start with reset memories. Cooperation is never directly encoded in genes — it must be relearned every generation. Assimilation would require heritable memory or a genetically fixed cooperative action.</td>
+				</tr>
+				<tr>
+					<td>Testable prediction: repeated interaction → higher cooperation than one-shot</td>
+					<td>✅ Confirmed</td>
+					<td>All three models show markedly higher cooperation under repeated interaction.</td>
+				</tr>
+				<tr>
+					<td>Testable prediction: selection favors partner-discrimination parameters</td>
+					<td>✅ Confirmed</td>
+					<td><code>responsiveness</code> and <code>rejection_threshold</code> evolve upward under repeated interaction.</td>
+				</tr>
+				<tr>
+					<td>Testable prediction: reputation mechanisms outperform partner-memory in stranger-rich environments</td>
+					<td>✅ Confirmed</td>
+					<td>Network diversity experiment shows the extended model dominates above ~50% stranger fraction.</td>
+				</tr>
+				<tr>
+					<td>Testable prediction: trust learning vs Q-learning produce different cooperation–payoff trade-offs</td>
+					<td>✅ Confirmed</td>
+					<td>Trust learning maximises cooperation rate; Q-learning maximises payoff by retaining exploration.</td>
 				</tr>
 			</tbody>
 		</table>
 	</div>
-	<figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 2:</strong> Theory–simulation correspondence.</figcaption>
+	<figcaption className="site-table-caption"><strong>Display 2:</strong> Theory–simulation correspondence.</figcaption>
 </figure>

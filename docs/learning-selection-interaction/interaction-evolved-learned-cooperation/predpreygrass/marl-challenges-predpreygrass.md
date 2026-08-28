@@ -11,17 +11,17 @@ Multi-agent reinforcement learning is a promising tool for studying emergent beh
 
 ## What makes it hard
 
-<figure style={{ margin: '0 0 2rem' }}>
-<div style={{ width: '100%', overflowX: 'auto' }}>
-  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--striped">
     <colgroup>
       <col style={{ width: '26%' }} />
       <col style={{ width: '74%' }} />
     </colgroup>
     <thead>
       <tr>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Challenge</th>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>What it means in PredPreyGrass</th>
+        <th>Challenge</th>
+        <th>What it means in PredPreyGrass</th>
       </tr>
     </thead>
     <tbody>
@@ -29,7 +29,7 @@ Multi-agent reinforcement learning is a promising tool for studying emergent beh
         <td><strong>Non-stationarity</strong></td>
         <td>Every agent's behavior shifts the effective environment for every other agent. A predator policy that works against today's prey population may fail once prey adapt in response — there is no fixed target to converge to.</td>
       </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+      <tr>
         <td><strong>Scalability</strong></td>
         <td>The joint action space grows with population size, and with it the coordination problem — especially once multiple agent types (e.g. different speeds) are introduced.</td>
       </tr>
@@ -37,7 +37,7 @@ Multi-agent reinforcement learning is a promising tool for studying emergent beh
         <td><strong>Credit assignment</strong></td>
         <td>When prey survive, was it their evasion or a predator's mistake? When a hunt succeeds, which predator's approach was decisive? Poor credit assignment can teach agents the wrong lesson from the right outcome.</td>
       </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+      <tr>
         <td><strong>Coordination and equilibria</strong></td>
         <td>Predators may need to corner prey jointly; prey may benefit from clustering or dispersing as a group. The system can also settle into suboptimal equilibria — predators chasing grass instead of prey, or prey overgrazing until they starve themselves.</td>
       </tr>
@@ -45,7 +45,7 @@ Multi-agent reinforcement learning is a promising tool for studying emergent beh
         <td><strong>Exploration</strong></td>
         <td>Random movement rarely produces a coordinated hunt or a successful evasion often enough to learn from. Useful experience is rare by default, not just hard to exploit once found.</td>
       </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+      <tr>
         <td><strong>Partial observability</strong></td>
         <td>Each agent sees only a local window. Formally, this makes the environment a Dec-POMDP (decentralized partially observable Markov decision process) — a class of problems that is computationally hard in general, because no single agent has access to the full state that determines everyone's outcomes.</td>
       </tr>
@@ -53,7 +53,7 @@ Multi-agent reinforcement learning is a promising tool for studying emergent beh
         <td><strong>No explicit communication</strong></td>
         <td>There is no signaling channel — no "prey spotted" call, no alarm. Any coordination that emerges has to happen implicitly, through movement patterns other agents can observe and react to.</td>
       </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+      <tr>
         <td><strong>Stability</strong></td>
         <td>Predator-prey population counts naturally resemble Lotka-Volterra oscillations, and training can collapse outright if one population goes extinct — predators starving out, prey overpopulating, or grass being grazed faster than it regenerates.</td>
       </tr>
@@ -61,7 +61,7 @@ Multi-agent reinforcement learning is a promising tool for studying emergent beh
         <td><strong>Evaluation</strong></td>
         <td>Episode reward alone does not capture what actually matters here — ecosystem persistence. Population balance, survival rates, and the diversity of strategies in play are better signals of whether a run is actually working.</td>
       </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+      <tr>
         <td><strong>Open-endedness</strong></td>
         <td>Predators get faster, prey evolve better evasion, grass pressure shifts as a result, and the cycle continues — a Red Queen dynamic (Van Valen, 1973) in which standing still relative to an adapting opponent is itself a form of falling behind. The challenge is sustaining that ongoing adaptation without it collapsing into stagnation or extinction.</td>
       </tr>

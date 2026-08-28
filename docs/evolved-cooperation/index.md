@@ -33,40 +33,40 @@ Classical evolutionary models treat cooperation as a trait or strategy that can 
 
 Evolved cooperation differs fundamentally from learned cooperation:
 
-<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
-  <div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
-    <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+    <table className="site-table site-table--bordered site-table--striped">
       <colgroup>
         <col style={{ width: '50%' }} />
         <col style={{ width: '50%' }} />
       </colgroup>
       <thead>
         <tr>
-          <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Learned cooperation</th>
-          <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Evolved cooperation</th>
+          <th>Learned cooperation</th>
+          <th>Evolved cooperation</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Policy changes within lifetime</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Strategy frequencies change across generations</td>
-        </tr>
-        <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Learning acts across interactions</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Selection acts across generations</td>
+          <td>Policy changes within lifetime</td>
+          <td>Strategy frequencies change across generations</td>
         </tr>
         <tr>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Reward shapes behavior</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Fitness shapes trait prevalence</td>
+          <td>Learning acts across interactions</td>
+          <td>Selection acts across generations</td>
         </tr>
-        <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Adaptation is individual-level</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Adaptation is population-level</td>
+        <tr>
+          <td>Reward shapes behavior</td>
+          <td>Fitness shapes trait prevalence</td>
+        </tr>
+        <tr>
+          <td>Adaptation is individual-level</td>
+          <td>Adaptation is population-level</td>
         </tr>
       </tbody>
     </table>
   </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Learned cooperation and evolved cooperation compared.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 1:</strong> Learned cooperation and evolved cooperation compared.</figcaption>
 </figure>
 
 Thus, cooperation can persist even when individuals are not explicitly "trying" to cooperate, provided cooperative traits are favored by selection.

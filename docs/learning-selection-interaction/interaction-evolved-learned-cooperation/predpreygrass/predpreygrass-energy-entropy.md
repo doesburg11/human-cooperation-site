@@ -22,9 +22,9 @@ The sun is the only external energy source. In the simulation this is modeled in
 
 Energy transfer between real trophic levels is never close to 100% efficient — most of it is lost to respiration, movement, and heat before it reaches the next level up the food chain. Lindeman's (1942) classic analysis is the origin of the commonly cited "ten percent rule":
 
-<figure style={{ margin: '0 0 2rem', textAlign: 'center' }}>
-<div style={{ width: '100%', overflowX: 'auto' }}>
-  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--striped">
     <colgroup>
       <col style={{ width: '24%' }} />
       <col style={{ width: '24%' }} />
@@ -32,9 +32,9 @@ Energy transfer between real trophic levels is never close to 100% efficient —
     </colgroup>
     <thead>
       <tr>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Energy transfer</th>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Typical efficiency</th>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Why so much is lost</th>
+        <th>Energy transfer</th>
+        <th>Typical efficiency</th>
+        <th>Why so much is lost</th>
       </tr>
     </thead>
     <tbody>
@@ -43,7 +43,7 @@ Energy transfer between real trophic levels is never close to 100% efficient —
         <td>~1-2%</td>
         <td>Only a small fraction of solar energy converts into plant biomass.</td>
       </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+      <tr>
         <td>Grass → Prey</td>
         <td>~10-30%</td>
         <td>Most of the energy in grass is lost to digestion, heat, and movement.</td>
@@ -56,7 +56,7 @@ Energy transfer between real trophic levels is never close to 100% efficient —
     </tbody>
   </table>
 </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 2:</strong> Real-world trophic transfer efficiency (Lindeman, 1942).</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 2:</strong> Real-world trophic transfer efficiency (Lindeman, 1942).</figcaption>
 </figure>
 
 PredPreyGrass does not model the sun-to-grass step directly, and it does not currently apply a separate transfer-efficiency discount when prey eat grass or predators eat prey — an agent simply receives the eaten agent's or grass patch's energy. The realism instead comes from a different mechanism: constant, unrecoverable energy decay every step, described next.

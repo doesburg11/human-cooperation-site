@@ -119,23 +119,35 @@
   background-color: #0f3368 !important;
   color: #ffffff !important;
   text-align: left;
-  padding: 0.75rem 1rem !important;
-  border: 1px solid #d6e4f5 !important;
 }
 
 .site-table td {
-  padding: 0.75rem 1rem !important;
-  border: 1px solid #d6e4f5 !important;
   vertical-align: top;
-}
-
-.site-table tbody tr:nth-child(even) {
-  background-color: rgba(120, 170, 230, 0.16) !important;
 }
 
 .site-table-caption {
   margin-top: 0.6rem;
   text-align: center;
+}
+
+/* Opt-in: explicit cell borders and padding, for tables that want the fully
+   ruled look instead of Infima's default (borderless) cell spacing. */
+.site-table--bordered th,
+.site-table--bordered td {
+  padding: 0.75rem 1rem !important;
+  border: 1px solid #d6e4f5 !important;
+}
+
+/* Opt-in: blue-tinted zebra striping on even body rows. Left off tables that
+   already color individual cells by status, since the row tint would clash. */
+.site-table--striped tbody tr:nth-child(even) {
+  background-color: rgba(120, 170, 230, 0.16) !important;
+}
+
+/* Opt-in: forces horizontal scroll instead of squeezing columns, for tables
+   with a lot of columns or long cell content. */
+.site-table--wide {
+  min-width: 900px;
 }
 
 .site-table--evidence-map {

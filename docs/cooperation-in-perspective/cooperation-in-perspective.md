@@ -48,9 +48,9 @@ These modes are not clean opposites. People may cooperate internally in order to
 
 Display 2 is therefore best read as a broad orientation map rather than as a final taxonomy. The cooperative side can be subdivided into mutual accommodation, active support, shared coordination, and norm-sustaining cooperation. The adversarial side can be subdivided into competition, conflict, coercion or domination, and exploitation or sabotage. The overlap region includes cases where those modes are combined in the same social system.
 
-<figure style={{ margin: '0 0 2rem' }}>
-<div style={{ width: '100%', overflowX: 'auto' }}>
-  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--striped">
     <colgroup>
       <col style={{ width: '24%' }} />
       <col style={{ width: '38%' }} />
@@ -58,9 +58,9 @@ Display 2 is therefore best read as a broad orientation map rather than as a fin
     </colgroup>
     <thead>
       <tr>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Region in Display 2</th>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Useful subdivisions</th>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Typical examples</th>
+        <th>Region in Display 2</th>
+        <th>Useful subdivisions</th>
+        <th>Typical examples</th>
       </tr>
     </thead>
     <tbody>
@@ -69,7 +69,7 @@ Display 2 is therefore best read as a broad orientation map rather than as a fin
         <td>mutual accommodation; active support; shared coordination; norm-sustaining cooperation</td>
         <td>turn-taking, helping, caregiving, teaching, teamwork, division of labor, civility, rule-following</td>
       </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+      <tr>
         <td>Adversarial</td>
         <td>competition; conflict; coercion or domination; exploitation or sabotage</td>
         <td>status rivalry, market competition, direct obstruction, protest, threat, forced compliance, undermining opponents</td>
@@ -82,7 +82,7 @@ Display 2 is therefore best read as a broad orientation map rather than as a fin
     </tbody>
   </table>
 </div>
-<figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 3:</strong> Subdivisions of cooperative, adversarial, and mixed interaction in the broad map.</figcaption>
+<figcaption className="site-table-caption"><strong>Display 3:</strong> Subdivisions of cooperative, adversarial, and mixed interaction in the broad map.</figcaption>
 </figure>
 
 Another way to sharpen the same distinction is to classify interaction by two axes: whether the relation is based mainly on compatible or incompatible interdependence, and whether it is loosely organized or highly organized.
@@ -104,9 +104,9 @@ Cooperative and adversarial behavior can overlap rather than excluding one anoth
 
 A compact way to summarize the main overlap patterns is the following:
 
-<figure style={{ margin: '0 0 2rem' }}>
-<div style={{ width: '100%', overflowX: 'auto' }}>
-  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--striped">
     <colgroup>
       <col style={{ width: '28%' }} />
       <col style={{ width: '34%' }} />
@@ -114,9 +114,9 @@ A compact way to summarize the main overlap patterns is the following:
     </colgroup>
     <thead>
       <tr>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Pattern</th>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>How the overlap works</th>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Examples</th>
+        <th>Pattern</th>
+        <th>How the overlap works</th>
+        <th>Examples</th>
       </tr>
     </thead>
     <tbody>
@@ -125,7 +125,7 @@ A compact way to summarize the main overlap patterns is the following:
         <td>Actors cooperate within a group in order to compete or conflict with another group.</td>
         <td>team sports, firms facing rivals, political coalitions, military units</td>
       </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+      <tr>
         <td>Adversarial enforcement of cooperation</td>
         <td>Opposition, punishment, or sanctioning is used to protect a cooperative norm or arrangement.</td>
         <td>punishing free riders, confronting cheats, sanctioning rule-breakers, enforcing collaboration norms</td>
@@ -138,7 +138,7 @@ A compact way to summarize the main overlap patterns is the following:
     </tbody>
   </table>
 </div>
-<figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 5:</strong> Main ways cooperative and adversarial behavior overlap in practice.</figcaption>
+<figcaption className="site-table-caption"><strong>Display 5:</strong> Main ways cooperative and adversarial behavior overlap in practice.</figcaption>
 </figure>
 
 ### Interaction outside cooperative and adversarial behavior
@@ -149,9 +149,9 @@ Still, some interaction remains outside both. The clearest cases are forms of so
 
 ### A compact taxonomy
 
-<figure style={{ margin: '0 0 2rem' }}>
-<div style={{ width: '100%', overflowX: 'auto' }}>
-  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--striped">
     <colgroup>
       <col style={{ width: '26%' }} />
       <col style={{ width: '24.5%' }} />
@@ -160,10 +160,10 @@ Still, some interaction remains outside both. The clearest cases are forms of so
     </colgroup>
     <thead>
       <tr>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Dimension</th>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Broad cooperation</th>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Adversarial</th>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Outside both</th>
+        <th>Dimension</th>
+        <th>Broad cooperation</th>
+        <th>Adversarial</th>
+        <th>Outside both</th>
       </tr>
     </thead>
     <tbody>
@@ -173,7 +173,7 @@ Still, some interaction remains outside both. The clearest cases are forms of so
         <td>Rivalry, opposition, obstruction, or negative interdependence</td>
         <td>Social orientation without either accommodation or opposition</td>
       </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+      <tr>
         <td>Typical forms</td>
         <td>helping, teaching, turn-taking, civility, tacit coordination</td>
         <td>competition, conflict, coercion, sabotage, punishment</td>
@@ -188,7 +188,7 @@ Still, some interaction remains outside both. The clearest cases are forms of so
     </tbody>
   </table>
 </div>
-<figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 6:</strong> Compact taxonomy of broad cooperation, adversarial behavior, and interaction outside both.</figcaption>
+<figcaption className="site-table-caption"><strong>Display 6:</strong> Compact taxonomy of broad cooperation, adversarial behavior, and interaction outside both.</figcaption>
 </figure>
 
 Borderline cases such as greeting, small talk, turn-taking, and authority should therefore be classified contextually. In most ordinary settings, greeting, small talk, and turn-taking belong inside broad cooperation because they sustain civility and mutual accommodation. Authority relations vary more sharply by context: some are cooperative, some adversarial, and some remain mainly formal rather than clearly either.

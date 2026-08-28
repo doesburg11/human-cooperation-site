@@ -22,9 +22,9 @@ This implements a two-level selection process:
 
 ## Key Parameters
 
-<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
-<div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
-  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--bordered site-table--striped">
     <colgroup>
       <col style={{ width: '33.33%' }} />
       <col style={{ width: '33.33%' }} />
@@ -32,41 +32,41 @@ This implements a two-level selection process:
     </colgroup>
     <thead>
       <tr>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Parameter</th>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Default</th>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Role</th>
+        <th>Parameter</th>
+        <th>Default</th>
+        <th>Role</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>group_count</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>8</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Number of groups the population is divided into</td>
-      </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>group_selection_interval</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>25</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Steps between between-group selection events</td>
+        <td><code>group_count</code></td>
+        <td><code>8</code></td>
+        <td>Number of groups the population is divided into</td>
       </tr>
       <tr>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>group_selection_mode</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>"copy_best_group_into_worst_group"</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Between-group replacement rule</td>
-      </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>B_plus_scale</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>1.0</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Scales cooperative benefit produced per unit trait</td>
+        <td><code>group_selection_interval</code></td>
+        <td><code>25</code></td>
+        <td>Steps between between-group selection events</td>
       </tr>
       <tr>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>C_scale</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>0.2</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Private cost per unit trait</td>
+        <td><code>group_selection_mode</code></td>
+        <td><code>"copy_best_group_into_worst_group"</code></td>
+        <td>Between-group replacement rule</td>
+      </tr>
+      <tr>
+        <td><code>B_plus_scale</code></td>
+        <td><code>1.0</code></td>
+        <td>Scales cooperative benefit produced per unit trait</td>
+      </tr>
+      <tr>
+        <td><code>C_scale</code></td>
+        <td><code>0.2</code></td>
+        <td>Private cost per unit trait</td>
       </tr>
     </tbody>
   </table>
 </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Key parameters controlling group partitioning and between-group selection.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 1:</strong> Key parameters controlling group partitioning and between-group selection.</figcaption>
 </figure>
 
 ## Python Module Layout

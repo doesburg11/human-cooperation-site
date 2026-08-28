@@ -79,7 +79,7 @@ Use these labels when moving through the site:
 
 <figure className="site-table-figure">
   <div className="site-table-scroll">
-    <table className="site-table site-table--evidence-map">
+    <table className="site-table site-table--bordered site-table--striped site-table--evidence-map">
       <thead>
         <tr>
           <th>Track</th>

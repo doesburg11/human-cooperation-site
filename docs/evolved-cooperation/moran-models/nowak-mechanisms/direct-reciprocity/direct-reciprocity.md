@@ -49,9 +49,9 @@ The simulation results below track all three phases. Phase 3 is reliably demonst
 
 ## Payoff Matrix
 
-<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
-<div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
-  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--bordered site-table--striped">
     <colgroup>
       <col style={{ width: '33.33%' }} />
       <col style={{ width: '33.33%' }} />
@@ -59,35 +59,35 @@ The simulation results below track all three phases. Phase 3 is reliably demonst
     </colgroup>
     <thead>
       <tr>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Actor / Partner</th>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Partner cooperates</th>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Partner defects</th>
+        <th>Actor / Partner</th>
+        <th>Partner cooperates</th>
+        <th>Partner defects</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><strong>Actor cooperates</strong></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>$R$ = 1.0 (Reward)</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>$S$ = −0.5 (Sucker)</td>
+        <td><strong>Actor cooperates</strong></td>
+        <td>$R$ = 1.0 (Reward)</td>
+        <td>$S$ = −0.5 (Sucker)</td>
       </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><strong>Actor defects</strong></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>$T$ = 1.7 (Temptation)</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>$P$ = 0.0 (Punishment)</td>
+      <tr>
+        <td><strong>Actor defects</strong></td>
+        <td>$T$ = 1.7 (Temptation)</td>
+        <td>$P$ = 0.0 (Punishment)</td>
       </tr>
     </tbody>
   </table>
 </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Prisoner's Dilemma payoff matrix with default values ($T$ = 1.7, $R$ = 1.0, $S$ = −0.5, $P$ = 0.0).</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 1:</strong> Prisoner's Dilemma payoff matrix with default values ($T$ = 1.7, $R$ = 1.0, $S$ = −0.5, $P$ = 0.0).</figcaption>
 </figure>
 
 This satisfies $T > R > P > S$ — the standard definition of the Prisoner's Dilemma. Defection is individually tempting ($T > R$), mutual cooperation beats mutual defection ($R > P$), and defecting is the safe choice ($P > S$). The dilemma is that rational individuals defect even though both would be better off cooperating.
 
 ## Strategies
 
-<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
-<div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
-  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--bordered site-table--striped">
     <colgroup>
       <col style={{ width: '33.33%' }} />
       <col style={{ width: '33.33%' }} />
@@ -95,41 +95,41 @@ This satisfies $T > R > P > S$ — the standard definition of the Prisoner's Dil
     </colgroup>
     <thead>
       <tr>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Strategy</th>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Full name</th>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Rule</th>
+        <th>Strategy</th>
+        <th>Full name</th>
+        <th>Rule</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>ALLC</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Always Cooperate</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Cooperate unconditionally.</td>
-      </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>ALLD</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Always Defect</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Defect unconditionally.</td>
+        <td>ALLC</td>
+        <td>Always Cooperate</td>
+        <td>Cooperate unconditionally.</td>
       </tr>
       <tr>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>TFT</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Tit for Tat</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Cooperate on the first round; then copy the partner's previous action.</td>
-      </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>GTFT</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Generous Tit for Tat</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Like TFT, but forgive a defection with fixed probability.</td>
+        <td>ALLD</td>
+        <td>Always Defect</td>
+        <td>Defect unconditionally.</td>
       </tr>
       <tr>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>WSLS</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Win-Stay Lose-Shift</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Repeat the previous action if it paid at or above aspiration; otherwise switch.</td>
+        <td>TFT</td>
+        <td>Tit for Tat</td>
+        <td>Cooperate on the first round; then copy the partner's previous action.</td>
+      </tr>
+      <tr>
+        <td>GTFT</td>
+        <td>Generous Tit for Tat</td>
+        <td>Like TFT, but forgive a defection with fixed probability.</td>
+      </tr>
+      <tr>
+        <td>WSLS</td>
+        <td>Win-Stay Lose-Shift</td>
+        <td>Repeat the previous action if it paid at or above aspiration; otherwise switch.</td>
       </tr>
     </tbody>
   </table>
 </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 2:</strong> The five strategies implemented in the direct reciprocity models and their decision rules.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 2:</strong> The five strategies implemented in the direct reciprocity models and their decision rules.</figcaption>
 </figure>
 
 ## Three Implementations
@@ -188,9 +188,9 @@ Removing either one causes complete collapse — as the ablation tests confirm. 
 
 Simulation runs of 500 steps confirm this is highly robust. Cooperation reaches ≈98% from a random mixed start and ≈96% even from a rare 5% reciprocal cluster, with 100% success across all seeds in both cases. Two ablation tests reveal what is essential: removing partner memory or reducing to a single round per pair both cause complete collapse (cooperation ≈0.7%, ALLD ≈99%) — identical to the well-mixed model without spatial structure. The grid alone is not enough; memory and repeated rounds are required.
 
-<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
-<div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
-  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--bordered site-table--striped">
     <colgroup>
       <col style={{ width: '34%' }} />
       <col style={{ width: '16%' }} />
@@ -200,46 +200,46 @@ Simulation runs of 500 steps confirm this is highly robust. Cooperation reaches 
     </colgroup>
     <thead>
       <tr>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Scenario</th>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Success rate</th>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Cooperation rate</th>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Reciprocal frequency</th>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>ALLD</th>
+        <th>Scenario</th>
+        <th>Success rate</th>
+        <th>Cooperation rate</th>
+        <th>Reciprocal frequency</th>
+        <th>ALLD</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Default mixed start</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>1.00</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.978</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.893</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.019</td>
-      </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Rare cluster start (5% reciprocal)</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>1.00</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.961</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.889</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.024</td>
+        <td>Default mixed start</td>
+        <td>1.00</td>
+        <td>0.978</td>
+        <td>0.893</td>
+        <td>0.019</td>
       </tr>
       <tr>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No memory (ablation)</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.00</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.007</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.008</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.989</td>
+        <td>Rare cluster start (5% reciprocal)</td>
+        <td>1.00</td>
+        <td>0.961</td>
+        <td>0.889</td>
+        <td>0.024</td>
       </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>One round per pair (ablation)</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.00</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.007</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.008</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.989</td>
+      <tr>
+        <td>No memory (ablation)</td>
+        <td>0.00</td>
+        <td>0.007</td>
+        <td>0.008</td>
+        <td>0.989</td>
+      </tr>
+      <tr>
+        <td>One round per pair (ablation)</td>
+        <td>0.00</td>
+        <td>0.007</td>
+        <td>0.008</td>
+        <td>0.989</td>
       </tr>
     </tbody>
   </table>
 </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 3:</strong> Proof-of-mechanism results for the spatial clustering model (500 steps, 5 seeds each). Success criteria: cooperation ≥ 0.60, reciprocal frequency ≥ 0.50, ALLD ≤ 0.25.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 3:</strong> Proof-of-mechanism results for the spatial clustering model (500 steps, 5 seeds each). Success criteria: cooperation ≥ 0.60, reciprocal frequency ≥ 0.50, ALLD ≤ 0.25.</figcaption>
 </figure>
 
 **Result: Cooperation emerges reliably (≈97–98%) from any starting condition. Spatial structure, partner memory, and multiple rounds are all necessary — removing any one of them causes full collapse.**
@@ -260,9 +260,9 @@ This is why Step 2's p = 0.9 was insufficient: with a 10% dissolution probabilit
 
 The ablation tests confirm the same conclusions as in Step 3: memory is necessary (without it, cooperation collapses to ≈1.2%) and multiple rounds are necessary (one round per pair also collapses to ≈1.2%). The kin bias itself is not among the necessary conditions.
 
-<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
-<div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
-  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--bordered site-table--striped">
     <colgroup>
       <col style={{ width: '34%' }} />
       <col style={{ width: '16%' }} />
@@ -272,62 +272,62 @@ The ablation tests confirm the same conclusions as in Step 3: memory is necessar
     </colgroup>
     <thead>
       <tr>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Scenario</th>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Success rate</th>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Cooperation rate</th>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Reciprocal frequency</th>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>ALLD</th>
+        <th>Scenario</th>
+        <th>Success rate</th>
+        <th>Cooperation rate</th>
+        <th>Reciprocal frequency</th>
+        <th>ALLD</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Default mixed start</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>1.00</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.977</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.883</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.022</td>
-      </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Rare lineage start (5% reciprocal)</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>1.00</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.988</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.839</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.021</td>
+        <td>Default mixed start</td>
+        <td>1.00</td>
+        <td>0.977</td>
+        <td>0.883</td>
+        <td>0.022</td>
       </tr>
       <tr>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No memory (ablation)</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.00</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.012</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.008</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.990</td>
-      </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>One round per pair (ablation)</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.00</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.012</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.008</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.990</td>
+        <td>Rare lineage start (5% reciprocal)</td>
+        <td>1.00</td>
+        <td>0.988</td>
+        <td>0.839</td>
+        <td>0.021</td>
       </tr>
       <tr>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No kin bias — random fixed graph (ablation)</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>1.00</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.991</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.880</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.010</td>
+        <td>No memory (ablation)</td>
+        <td>0.00</td>
+        <td>0.012</td>
+        <td>0.008</td>
+        <td>0.990</td>
+      </tr>
+      <tr>
+        <td>One round per pair (ablation)</td>
+        <td>0.00</td>
+        <td>0.012</td>
+        <td>0.008</td>
+        <td>0.990</td>
+      </tr>
+      <tr>
+        <td>No kin bias — random fixed graph (ablation)</td>
+        <td>1.00</td>
+        <td>0.991</td>
+        <td>0.880</td>
+        <td>0.010</td>
       </tr>
     </tbody>
   </table>
 </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 5:</strong> Proof-of-mechanism results for the kin-clustering model (500 steps, 5 seeds each). Success criteria: cooperation ≥ 0.60, reciprocal frequency ≥ 0.50, ALLD ≤ 0.25.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 5:</strong> Proof-of-mechanism results for the kin-clustering model (500 steps, 5 seeds each). Success criteria: cooperation ≥ 0.60, reciprocal frequency ≥ 0.50, ALLD ≤ 0.25.</figcaption>
 </figure>
 
 **Result: Cooperation emerges reliably (≈97–99%) under any starting condition, with or without kin bias. The origin mechanism is partner permanence — a completely static interaction graph. Removing memory or multiple rounds causes full collapse regardless of graph structure.**
 
 ## Summary
 
-<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
-<div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
-  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--bordered site-table--striped">
     <colgroup>
       <col style={{ width: '20%' }} />
       <col style={{ width: '20%' }} />
@@ -337,53 +337,53 @@ The ablation tests confirm the same conclusions as in Step 3: memory is necessar
     </colgroup>
     <thead>
       <tr>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Property</th>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>well_mixed p = 0.0</th>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>well_mixed p = 0.9</th>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>spatial_clustering</th>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>kin_clustering</th>
+        <th>Property</th>
+        <th>well_mixed p = 0.0</th>
+        <th>well_mixed p = 0.9</th>
+        <th>spatial_clustering</th>
+        <th>kin_clustering</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Re-encounter probability w</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>≈0.005</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>≈0.9</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>1.0 (fixed grid)</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>1.0 (fixed graph)</td>
-      </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Condition w &gt; 0.41</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes</td>
+        <td>Re-encounter probability w</td>
+        <td>≈0.005</td>
+        <td>≈0.9</td>
+        <td>1.0 (fixed grid)</td>
+        <td>1.0 (fixed graph)</td>
       </tr>
       <tr>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Static interaction graph</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes (grid)</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes (kin graph)</td>
-      </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Active mechanisms</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>None</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Direct reciprocity</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Partner permanence + direct reciprocity</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Partner permanence + direct reciprocity</td>
+        <td>Condition w &gt; 0.41</td>
+        <td>No</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
       </tr>
       <tr>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Cooperation emerges</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No (collapses)</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes (≈97–98%)</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes (≈97–99%)</td>
+        <td>Static interaction graph</td>
+        <td>No</td>
+        <td>No</td>
+        <td>Yes (grid)</td>
+        <td>Yes (kin graph)</td>
+      </tr>
+      <tr>
+        <td>Active mechanisms</td>
+        <td>None</td>
+        <td>Direct reciprocity</td>
+        <td>Partner permanence + direct reciprocity</td>
+        <td>Partner permanence + direct reciprocity</td>
+      </tr>
+      <tr>
+        <td>Cooperation emerges</td>
+        <td>No</td>
+        <td>No (collapses)</td>
+        <td>Yes (≈97–98%)</td>
+        <td>Yes (≈97–99%)</td>
       </tr>
     </tbody>
   </table>
 </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 6:</strong> Outcome comparison across all four direct reciprocity implementations (discrete strategies, Prisoner's Dilemma payoffs).</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 6:</strong> Outcome comparison across all four direct reciprocity implementations (discrete strategies, Prisoner's Dilemma payoffs).</figcaption>
 </figure>
 
 The shared feature of the two successful models is a completely static interaction graph ($w = 1.0$), not spatial or genetic clustering specifically. The kin_clustering no-kin-bias ablation (random fixed graph) produces the same outcome as the full kin-biased model, confirming that partner permanence is the load-bearing mechanism.

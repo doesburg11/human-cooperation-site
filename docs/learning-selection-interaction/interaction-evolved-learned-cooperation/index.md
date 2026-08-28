@@ -115,9 +115,9 @@ For the simulation family on this page, the intended mechanism is mainly Baldwin
 
 In artificial systems, the same distinction depends on whether descendants receive only inherited settings that affect learnability, or whether they directly receive the acquired policy state produced by learning.
 
-<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
-<div style={{ width: '100%', overflowX: 'auto' }}>
-  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--striped">
     <colgroup>
       <col style={{ width: '22%' }} />
       <col style={{ width: '28%' }} />
@@ -126,10 +126,10 @@ In artificial systems, the same distinction depends on whether descendants recei
     </colgroup>
     <thead>
       <tr>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Mechanism</th>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>What is learned during life</th>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>What is inherited</th>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Project interpretation</th>
+        <th>Mechanism</th>
+        <th>What is learned during life</th>
+        <th>What is inherited</th>
+        <th>Project interpretation</th>
       </tr>
     </thead>
     <tbody>
@@ -139,7 +139,7 @@ In artificial systems, the same distinction depends on whether descendants recei
         <td>Parameters that support learning, not the acquired behavior itself.</td>
         <td>Main framing for this two-timescale cooperation page.</td>
       </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+      <tr>
         <td>Lamarckian</td>
         <td>Behavior, policy weights, or acquired parameter state changes through experience.</td>
         <td>The acquired state itself is copied into descendants or replacement populations.</td>
@@ -154,7 +154,7 @@ In artificial systems, the same distinction depends on whether descendants recei
     </tbody>
   </table>
 </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 2:</strong> The distinction depends on what is transmitted across generations.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 2:</strong> The distinction depends on what is transmitted across generations.</figcaption>
 </figure>
 
 ---
@@ -270,9 +270,9 @@ No single landmark paper fully matches this integrated setup across all dimensio
 
 Within this project, Model 1 maps most directly to direct reciprocity and network reciprocity theory, Model 2 maps most directly to learned reciprocity in multi-agent reinforcement learning, and Model 3 extends that line toward reputation, partner choice, and socially mediated cooperation with strangers.
 
-<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
-<div style={{ width: '100%', overflowX: 'auto' }}>
-  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--striped">
     <colgroup>
       <col style={{ width: '38%' }} />
       <col style={{ width: '24%' }} />
@@ -280,9 +280,9 @@ Within this project, Model 1 maps most directly to direct reciprocity and networ
     </colgroup>
     <thead>
       <tr>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Work</th>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Closest axis to this simulation family</th>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Main gap vs this simulation family</th>
+        <th>Work</th>
+        <th>Closest axis to this simulation family</th>
+        <th>Main gap vs this simulation family</th>
       </tr>
     </thead>
     <tbody>
@@ -295,7 +295,7 @@ Within this project, Model 1 maps most directly to direct reciprocity and networ
         <td>Foundational logic of repeated reciprocal cooperation</td>
         <td>Verbal evolutionary theory rather than an explicit learning-plus-selection simulation</td>
       </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+      <tr>
         <td>
           <a href="https://doi.org/10.1126/science.7466396">
             Axelrod and Hamilton (1981), <em>The Evolution of Cooperation</em>
@@ -313,7 +313,7 @@ Within this project, Model 1 maps most directly to direct reciprocity and networ
         <td>Direct reciprocity, indirect reciprocity, and network reciprocity as a unifying framework</td>
         <td>Analytic synthesis rather than a concrete parameter-evolution simulation</td>
       </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+      <tr>
         <td>
           <a href="https://doi.org/10.1038/nature04605">
             Ohtsuki et al. (2006), <em>A Simple Rule for the Evolution of Cooperation on Graphs and Social Networks</em>
@@ -331,7 +331,7 @@ Within this project, Model 1 maps most directly to direct reciprocity and networ
         <td>Foundational emergence of cooperation in multi-agent reinforcement learning</td>
         <td>Small, abstract cooperative games with no explicit generational inheritance of learning traits</td>
       </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+      <tr>
         <td>
           <a href="https://arxiv.org/abs/1903.08082">
             Eccles et al. (2019), <em>Learning Reciprocity in Complex Sequential Social Dilemmas</em>
@@ -343,7 +343,7 @@ Within this project, Model 1 maps most directly to direct reciprocity and networ
     </tbody>
   </table>
 </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 3:</strong> Related work positioned by proximity to this simulation family along key conceptual axes.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 3:</strong> Related work positioned by proximity to this simulation family along key conceptual axes.</figcaption>
 </figure>
 
 Taken together, these works capture the core logic behind the present simulation family: reciprocal altruism, repeated interaction, local network structure, and partner-contingent learning. The distinctive contribution here is that these ingredients are combined in a single two-timescale setup where learning unfolds within life and learning parameters themselves evolve across generations.

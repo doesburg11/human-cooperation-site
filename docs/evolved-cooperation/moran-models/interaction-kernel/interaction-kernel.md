@@ -706,9 +706,9 @@ The matrix below scores the papers already discussed in this section against the
 
 `Yes` means the feature is explicit. `Partial` means the feature is present in compressed, indirect, or only partly matching form. `No` means it is absent or not clearly part of the formal setup.
 
-<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
-  <div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
-    <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+    <table className="site-table site-table--bordered site-table--striped">
       <colgroup>
         <col style={{ width: '24%' }} />
         <col style={{ width: '10.85%' }} />
@@ -721,101 +721,101 @@ The matrix below scores the papers already discussed in this section against the
       </colgroup>
       <thead>
         <tr>
-          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Feature</th>
-          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>This setup</th>
-          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Lehmann 2007</th>
-          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Ohtsuki 2006</th>
-          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Pena 2016</th>
-          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Allen 2013</th>
-          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Moore 1997</th>
-          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>McGlothlin 2010</th>
+          <th>Feature</th>
+          <th>This setup</th>
+          <th>Lehmann 2007</th>
+          <th>Ohtsuki 2006</th>
+          <th>Pena 2016</th>
+          <th>Allen 2013</th>
+          <th>Moore 1997</th>
+          <th>McGlothlin 2010</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Structured redistribution of social effects</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes</td>
-        </tr>
-        <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Explicit produced -&gt; routed separation</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
+          <td>Structured redistribution of social effects</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>Yes</td>
         </tr>
         <tr>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Explicit recipient-level routed quantities</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
-        </tr>
-        <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Separate positive and negative channels</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
+          <td>Explicit produced -&gt; routed separation</td>
+          <td>Yes</td>
+          <td>No</td>
+          <td>No</td>
+          <td>No</td>
+          <td>No</td>
+          <td>No</td>
+          <td>No</td>
         </tr>
         <tr>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Distance- or state-dependent structure</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Partial</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Partial</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
-        </tr>
-        <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Separate interaction from selection or update</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Partial</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Partial</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Partial</td>
+          <td>Explicit recipient-level routed quantities</td>
+          <td>Yes</td>
+          <td>No</td>
+          <td>No</td>
+          <td>No</td>
+          <td>No</td>
+          <td>No</td>
+          <td>No</td>
         </tr>
         <tr>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Helping and harming in one framework</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
+          <td>Separate positive and negative channels</td>
+          <td>Yes</td>
+          <td>No</td>
+          <td>No</td>
+          <td>No</td>
+          <td>No</td>
+          <td>No</td>
+          <td>No</td>
         </tr>
-        <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Explicit delay in routing</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
+        <tr>
+          <td>Distance- or state-dependent structure</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>Partial</td>
+          <td>Partial</td>
+          <td>Yes</td>
+          <td>No</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>Separate interaction from selection or update</td>
+          <td>Yes</td>
+          <td>No</td>
+          <td>No</td>
+          <td>Partial</td>
+          <td>Yes</td>
+          <td>Partial</td>
+          <td>Partial</td>
+        </tr>
+        <tr>
+          <td>Helping and harming in one framework</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>No</td>
+          <td>No</td>
+          <td>No</td>
+          <td>No</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>Explicit delay in routing</td>
+          <td>Yes</td>
+          <td>No</td>
+          <td>No</td>
+          <td>No</td>
+          <td>No</td>
+          <td>No</td>
+          <td>No</td>
         </tr>
       </tbody>
     </table>
   </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Feature coverage of related research compared with the interaction-kernel setup.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 1:</strong> Feature coverage of related research compared with the interaction-kernel setup.</figcaption>
 </figure>
 
 ## References

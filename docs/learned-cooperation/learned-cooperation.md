@@ -31,17 +31,17 @@ Classical evolutionary models of cooperation (e.g., kin selection, evolutionary 
 
 Learned cooperation differs fundamentally:
 
-<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
-<div style={{ width: '100%', overflowX: 'auto' }}>
-  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--striped">
     <colgroup>
       <col style={{ width: '50%' }} />
       <col style={{ width: '50%' }} />
     </colgroup>
     <thead>
       <tr>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Evolutionary cooperation</th>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Learned cooperation</th>
+        <th>Evolutionary cooperation</th>
+        <th>Learned cooperation</th>
       </tr>
     </thead>
     <tbody>
@@ -49,7 +49,7 @@ Learned cooperation differs fundamentally:
         <td>Strategy is fixed within lifetime</td>
         <td>Policy changes within lifetime</td>
       </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+      <tr>
         <td>Selection acts across generations</td>
         <td>Learning acts across interactions</td>
       </tr>
@@ -57,14 +57,14 @@ Learned cooperation differs fundamentally:
         <td>Fitness determines reproduction</td>
         <td>Reward shapes behavior</td>
       </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+      <tr>
         <td>Adaptation is population-level</td>
         <td>Adaptation is individual-level</td>
       </tr>
     </tbody>
   </table>
 </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Contrasting features of evolutionary and learned cooperation.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 1:</strong> Contrasting features of evolutionary and learned cooperation.</figcaption>
 </figure>
 
 Thus, cooperation can emerge **without requiring genetic relatedness or population selection**, purely through experience.

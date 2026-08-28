@@ -19,9 +19,9 @@ There is no memory, reputation, or lineage bias — the only structural ingredie
 
 ## Key Parameters
 
-<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
-<div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
-  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--bordered site-table--striped">
     <colgroup>
       <col style={{ width: '33.33%' }} />
       <col style={{ width: '33.33%' }} />
@@ -29,36 +29,36 @@ There is no memory, reputation, or lineage bias — the only structural ingredie
     </colgroup>
     <thead>
       <tr>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Parameter</th>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Default</th>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Role</th>
+        <th>Parameter</th>
+        <th>Default</th>
+        <th>Role</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>positive_kernel_mode</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>"uniform"</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Uniform routing over local neighbors</td>
-      </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>initial_identity_count</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>1</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Number of distinct initial lineage identities</td>
+        <td><code>positive_kernel_mode</code></td>
+        <td><code>"uniform"</code></td>
+        <td>Uniform routing over local neighbors</td>
       </tr>
       <tr>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>B_plus_scale</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>1.0</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Scales cooperative benefit produced per unit trait</td>
+        <td><code>initial_identity_count</code></td>
+        <td><code>1</code></td>
+        <td>Number of distinct initial lineage identities</td>
       </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>C_scale</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>0.2</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Private cost per unit trait</td>
+      <tr>
+        <td><code>B_plus_scale</code></td>
+        <td><code>1.0</code></td>
+        <td>Scales cooperative benefit produced per unit trait</td>
+      </tr>
+      <tr>
+        <td><code>C_scale</code></td>
+        <td><code>0.2</code></td>
+        <td>Private cost per unit trait</td>
       </tr>
     </tbody>
   </table>
 </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Key parameters controlling spatial routing and payoff scaling in the network reciprocity model.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 1:</strong> Key parameters controlling spatial routing and payoff scaling in the network reciprocity model.</figcaption>
 </figure>
 
 ## Python Module Layout

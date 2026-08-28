@@ -119,9 +119,9 @@ The behaviorally anchored model should therefore begin from a historically infor
 
 A useful model should include at least some of the following capacities:
 
-<figure style={{ margin: '0 0 2rem' }}>
-<div style={{ width: '100%', overflowX: 'auto' }}>
-  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--striped">
     <colgroup>
       <col style={{ width: '30%' }} />
       <col style={{ width: '38%' }} />
@@ -129,9 +129,9 @@ A useful model should include at least some of the following capacities:
     </colgroup>
     <thead>
       <tr>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Capacity</th>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Why it matters historically</th>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Modeling implication</th>
+        <th>Capacity</th>
+        <th>Why it matters historically</th>
+        <th>Modeling implication</th>
       </tr>
     </thead>
     <tbody>
@@ -140,7 +140,7 @@ A useful model should include at least some of the following capacities:
         <td>Small-scale social life often involved known partners and remembered histories.</td>
         <td>Agents should update expectations from past encounters.</td>
       </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+      <tr>
         <td>Reputation</td>
         <td>Language and memory allow information about behavior to travel beyond direct interaction.</td>
         <td>Agents should respond to observed and reported reliability.</td>
@@ -150,7 +150,7 @@ A useful model should include at least some of the following capacities:
         <td>Groups stabilize cooperation by sanctioning cheats, free riders, and rule-breakers.</td>
         <td>Punishment and exclusion should be possible, even when costly.</td>
       </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+      <tr>
         <td>Group boundaries</td>
         <td>Cooperation often expands within social boundaries and weakens across them.</td>
         <td>Agents should distinguish partners, allies, strangers, and rivals.</td>
@@ -160,7 +160,7 @@ A useful model should include at least some of the following capacities:
         <td>Human behavior is transmitted culturally as well as learned individually.</td>
         <td>Agents should learn from others, not only from private reward.</td>
       </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+      <tr>
         <td>Ecological pressure</td>
         <td>Scarcity, risk, mobility, and resource distribution change the payoff of cooperation.</td>
         <td>Cooperation should vary with environmental conditions.</td>
@@ -168,7 +168,7 @@ A useful model should include at least some of the following capacities:
     </tbody>
   </table>
 </div>
-<figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Historically important capacities for a behaviorally anchored model of cooperation and competition.</figcaption>
+<figcaption className="site-table-caption"><strong>Display 1:</strong> Historically important capacities for a behaviorally anchored model of cooperation and competition.</figcaption>
 </figure>
 
 ## Python Implementation

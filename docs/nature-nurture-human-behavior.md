@@ -53,9 +53,9 @@ Display 1 frames the central problem of the site: cooperation is shaped by what 
 
 Rather than prescribing cooperative behavior through direct engineering, this project asks under which minimal constraints cooperative behavior emerges and persists in a multi-agent ecosystem. Nature and nurture are treated here as dynamically coupled processes rather than separate explanatory boxes.
 
-<figure style={{ margin: '0 0 2rem' }}>
-<div style={{ width: '100%', overflowX: 'auto' }}>
-  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--striped">
     <colgroup>
       <col style={{ width: '28%' }} />
       <col style={{ width: '36%' }} />
@@ -63,9 +63,9 @@ Rather than prescribing cooperative behavior through direct engineering, this pr
     </colgroup>
     <thead>
       <tr>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Dimension</th>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Nature</th>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Nurture</th>
+        <th>Dimension</th>
+        <th>Nature</th>
+        <th>Nurture</th>
       </tr>
     </thead>
     <tbody>
@@ -74,7 +74,7 @@ Rather than prescribing cooperative behavior through direct engineering, this pr
         <td>Generations</td>
         <td>Lifetime</td>
       </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+      <tr>
         <td>Adaptive process</td>
         <td>Selection</td>
         <td>Learning</td>
@@ -84,7 +84,7 @@ Rather than prescribing cooperative behavior through direct engineering, this pr
         <td>Inherited tendencies</td>
         <td>Policy and behavior</td>
       </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+      <tr>
         <td>Main signal</td>
         <td>Fitness</td>
         <td>Reward and experience</td>
@@ -97,7 +97,7 @@ Rather than prescribing cooperative behavior through direct engineering, this pr
     </tbody>
   </table>
 </div>
-<figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 2:</strong> Evolution sets the conditions for cooperation; learning turns those conditions into behavior.</figcaption>
+<figcaption className="site-table-caption"><strong>Display 2:</strong> Evolution sets the conditions for cooperation; learning turns those conditions into behavior.</figcaption>
 </figure>
 
 Display 2 gives the broad nature-versus-nurture split. The next section shows why that split matters for plasticity.
@@ -121,9 +121,9 @@ Display 3 is the conceptual hinge of the page. Evolution does not need to encode
 
 The next display zooms in on plasticity itself: the specific learning machinery that evolution can tune and learning can use.
 
-<figure style={{ margin: '0 0 2rem' }}>
-<div style={{ width: '100%', overflowX: 'auto' }}>
-  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--striped">
     <colgroup>
       <col style={{ width: '28%' }} />
       <col style={{ width: '36%' }} />
@@ -131,9 +131,9 @@ The next display zooms in on plasticity itself: the specific learning machinery 
     </colgroup>
     <thead>
       <tr>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Plasticity parameter</th>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>What evolution tunes</th>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>What learning uses it for</th>
+        <th>Plasticity parameter</th>
+        <th>What evolution tunes</th>
+        <th>What learning uses it for</th>
       </tr>
     </thead>
     <tbody>
@@ -142,7 +142,7 @@ The next display zooms in on plasticity itself: the specific learning machinery 
         <td>How quickly a policy can update from experience.</td>
         <td>How quickly behavior shifts when cooperation starts to pay off.</td>
       </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+      <tr>
         <td>Memory capacity</td>
         <td>How much past interaction can be retained in the learning system.</td>
         <td>How much earlier cooperation, defection, or reward history can still influence current action.</td>
@@ -152,7 +152,7 @@ The next display zooms in on plasticity itself: the specific learning machinery 
         <td>How much variation is available for trying new behavior.</td>
         <td>How readily an agent tests new cooperative strategies or role patterns.</td>
       </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+      <tr>
         <td>Social-feedback sensitivity</td>
         <td>How strongly selection can favor responsiveness to cues from others.</td>
         <td>How strongly praise, punishment, reputation, or reward alter current behavior.</td>
@@ -165,7 +165,7 @@ The next display zooms in on plasticity itself: the specific learning machinery 
     </tbody>
   </table>
 </div>
-<figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 4:</strong> Evolution tunes plasticity parameters; learning uses them to adjust cooperation in context.</figcaption>
+<figcaption className="site-table-caption"><strong>Display 4:</strong> Evolution tunes plasticity parameters; learning uses them to adjust cooperation in context.</figcaption>
 </figure>
 
 ### Why the feedback loop matters

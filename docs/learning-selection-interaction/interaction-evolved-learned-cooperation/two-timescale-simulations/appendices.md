@@ -21,36 +21,36 @@ For pure resource transfer, conservation constraints imply `b <= c`. But for ala
 
 All three models are embedded in a ring topology with repeated local encounters.
 
-<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
-	<div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
-		<table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+		<table className="site-table site-table--bordered site-table--striped">
 			<colgroup>
 				<col style={{ width: '40%' }} />
 				<col style={{ width: '60%' }} />
 			</colgroup>
 			<thead>
 				<tr>
-					<th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Model</th>
-					<th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Neighbors per agent</th>
+					<th>Model</th>
+					<th>Neighbors per agent</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Model 1</td>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>8 (4 left, 4 right)</td>
-				</tr>
-				<tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Model 2</td>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>2 (left and right)</td>
+					<td>Model 1</td>
+					<td>8 (4 left, 4 right)</td>
 				</tr>
 				<tr>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Model 3</td>
-					<td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>2 (left and right)</td>
+					<td>Model 2</td>
+					<td>2 (left and right)</td>
+				</tr>
+				<tr>
+					<td>Model 3</td>
+					<td>2 (left and right)</td>
 				</tr>
 			</tbody>
 		</table>
 	</div>
-	<figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Ring-neighborhood sizes across the three simulation models.</figcaption>
+	<figcaption className="site-table-caption"><strong>Display 1:</strong> Ring-neighborhood sizes across the three simulation models.</figcaption>
 </figure>
 
 <figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
@@ -122,44 +122,44 @@ $$\Delta V = \alpha \beta (\lambda - V)$$
 
 Where:
 
-<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
-<div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
-  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--bordered site-table--striped">
     <colgroup>
       <col style={{ width: '50%' }} />
       <col style={{ width: '50%' }} />
     </colgroup>
     <thead>
       <tr>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Symbol</th>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Meaning</th>
+        <th>Symbol</th>
+        <th>Meaning</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>$V$</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Current associative strength (the learned prediction)</td>
-      </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>$\lambda$</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Maximum possible conditioning (the actual outcome)</td>
+        <td>$V$</td>
+        <td>Current associative strength (the learned prediction)</td>
       </tr>
       <tr>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>$(\lambda - V)$</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><strong>Prediction error</strong> — how surprised the learner is</td>
-      </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>$\alpha$</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Salience of the conditioned stimulus (learning rate)</td>
+        <td>$\lambda$</td>
+        <td>Maximum possible conditioning (the actual outcome)</td>
       </tr>
       <tr>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>$\beta$</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Salience of the unconditioned stimulus (learning rate)</td>
+        <td>$(\lambda - V)$</td>
+        <td><strong>Prediction error</strong> — how surprised the learner is</td>
+      </tr>
+      <tr>
+        <td>$\alpha$</td>
+        <td>Salience of the conditioned stimulus (learning rate)</td>
+      </tr>
+      <tr>
+        <td>$\beta$</td>
+        <td>Salience of the unconditioned stimulus (learning rate)</td>
       </tr>
     </tbody>
   </table>
 </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 2:</strong> Rescorla–Wagner model notation: symbols and their meanings.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 2:</strong> Rescorla–Wagner model notation: symbols and their meanings.</figcaption>
 </figure>
 
 **Key insight:** learning only occurs when the outcome is unexpected. If $V = \lambda$, the prediction error is zero and the association does not change. Surprise drives learning; confirmation does not.
@@ -174,40 +174,40 @@ learned_trust[i, j] += alpha_i * (target_for_i - learned_trust[i, j])
 
 This is structurally identical to the Rescorla–Wagner rule:
 
-<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
-<div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
-  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--bordered site-table--striped">
     <colgroup>
       <col style={{ width: '50%' }} />
       <col style={{ width: '50%' }} />
     </colgroup>
     <thead>
       <tr>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Model 1 term</th>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Rescorla–Wagner equivalent</th>
+        <th>Model 1 term</th>
+        <th>Rescorla–Wagner equivalent</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>learned_trust[i, j]</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>$V$ — current learned prediction</td>
-      </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>target_for_i</code> (+1 or −1)</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>$\lambda$ — actual observed outcome</td>
+        <td><code>learned_trust[i, j]</code></td>
+        <td>$V$ — current learned prediction</td>
       </tr>
       <tr>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>target - learned_trust</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>$(\lambda - V)$ — prediction error</td>
+        <td><code>target_for_i</code> (+1 or −1)</td>
+        <td>$\lambda$ — actual observed outcome</td>
       </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>alpha_i</code></td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>$\alpha\beta$ — learning rate</td>
+      <tr>
+        <td><code>target - learned_trust</code></td>
+        <td>$(\lambda - V)$ — prediction error</td>
+      </tr>
+      <tr>
+        <td><code>alpha_i</code></td>
+        <td>$\alpha\beta$ — learning rate</td>
       </tr>
     </tbody>
   </table>
 </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 3:</strong> Mapping between Rescorla–Wagner terms and their Model 1 (Trust Learning) equivalents.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 3:</strong> Mapping between Rescorla–Wagner terms and their Model 1 (Trust Learning) equivalents.</figcaption>
 </figure>
 
 The agent updates its trust in partner `j` in proportion to how surprised it was by `j`'s behavior. If the agent already expected cooperation and got it, trust barely moves. If the agent was betrayed unexpectedly, trust drops sharply.
