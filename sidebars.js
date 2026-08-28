@@ -25,6 +25,7 @@ export default {
       ],
     },
     'evidence-so-far',
+    'model-library',
     {
       type: 'category',
       label: 'Evolved Cooperation Models',

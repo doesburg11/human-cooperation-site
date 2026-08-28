@@ -63,7 +63,7 @@ Read those pages as the current evidential core of the site. Some model pages ar
 
 ## If You Want the Model Library
 
-Use this path if you are mainly interested in the simulations:
+See the [Model Library](/model-library) for a complete catalog of every model, organized by family. Use this path instead if you want a guided reading order:
 
 1. [Evolved Cooperation](/evolved-cooperation) for the evolutionary model overview.
 2. [Nowak Mechanisms](/evolved-cooperation/nowak-mechanisms) for classical routes by which cooperation can spread.
@@ -77,7 +77,7 @@ The site mixes three kinds of material:
 
 - **Concept pages** define the argument and vocabulary: [How do nature and nurture combine to shape human behavior?](/nature-nurture-human-behavior), [What is Cooperation?](/what-is-cooperation), [What is Adversarial Behavior?](/what-is-adversarial-behavior), [Cooperation in Perspective](/cooperation-in-perspective), [Evolved Cooperation](/evolved-cooperation), [Learned Cooperation](/learned-cooperation), and [Interaction Evolved-Learned Cooperation](/learning-selection-interaction/theory).
 - **Evidence overview** separates confirmed results, demonstrations, null results, and open questions: [Evidence So Far](/evidence-so-far).
-- **Model pages** describe simulation systems and what each one is meant to isolate: [Nowak Mechanisms](/evolved-cooperation/nowak-mechanisms), [Spatial Altruism](/evolved-cooperation/spatial-altruism), [Cooperative Hunting](/evolved-cooperation/cooperative-hunting), [Spatial Prisoner's Dilemma](/evolved-cooperation/spatial-prisoners-dilemma), [Retained Benefit](/evolved-cooperation/retained-benefit), [PredPreyGrass](/learning-selection-interaction/predpreygrass), and [Two-Timescale Simulations](/learning-selection-interaction/simulations).
+- **Model pages** describe simulation systems and what each one is meant to isolate — see the [Model Library](/model-library) for the full catalog: [Nowak Mechanisms](/evolved-cooperation/nowak-mechanisms), [Spatial Altruism](/evolved-cooperation/spatial-altruism), [Cooperative Hunting](/evolved-cooperation/cooperative-hunting), [Spatial Prisoner's Dilemma](/evolved-cooperation/spatial-prisoners-dilemma), [Retained Benefit](/evolved-cooperation/retained-benefit), [PredPreyGrass](/learning-selection-interaction/predpreygrass), and [Two-Timescale Simulations](/learning-selection-interaction/simulations).
 - **Research-log pages** preserve trial history, null results, failures, and open questions: [Darwin/Baldwin Trial Log](/learning-selection-interaction/darwin-baldwin-trial-log), [Related Research](/learning-selection-interaction/related-research-predpreygrass), and [Mindmap](/learning-selection-interaction/interaction-evolved-learned-cooperation/mindmap).
 
 For a first pass, read concept pages before model pages, and model pages before research logs. The logs are useful, but they are closer to lab notes than to the main argument.
