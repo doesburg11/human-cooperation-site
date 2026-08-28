@@ -17,6 +17,20 @@ The RL-side half of this idea (drive-conditioned observations: `hunger_pressure`
 
 The evolutionary half (evolving which drive channels are enabled, or how strongly each is scaled, as a heritable trait feeding the shared policy) has not been started. It's recorded as a candidate next experiment — targeting the shared-policy-can't-see-its-own-genome gap directly — in the [Darwin/Baldwin Trial Log](/learning-selection-interaction/darwin-baldwin-trial-log)'s "What's next" section on the website. Update that section (and its source, `predpreygrass/evolutionary/RESULTS.md`) rather than re-deriving this design from scratch here.
 
+Design constraints to preserve:
+- Keep the action space movement-only. Make behavior richer by improving what the agent observes, not by adding explicit actions like `eat`, `attack`, or `reproduce`.
+- Use derived internal drives as a biologically plausible interpretation layer, not tactical shortcuts.
+- Avoid over-engineered affordances such as `can_kill_this_prey`, `best_escape_direction`, or `best_grass_direction`; those encode too much designer knowledge.
+
+Useful evolutionary framing:
+- Treat the evolved object as a motivational/perceptual scaffold, not a directly inherited behavior policy.
+- Candidate heritable knobs: `hunger_threshold`, `danger_radius`, `social_radius`, `grass_density_radius`, `reproduction_pressure_scaling`, `enemy_pressure_scaling`, `ally_pressure_scaling`, enabled/disabled drive channels, observation range, movement speed, energy cost, and possibly initial policy bias/architecture.
+- Clean comparison ladder: raw-observation baseline → drive-conditioned RL → evolved-drive Baldwinian version → optional Lamarckian benchmark where learned weights are inherited directly.
+
+Key experimental question:
+- Raw observation asks whether learning can discover useful behavior from scratch.
+- Derived drives ask whether evolution can produce perceptual/motivational systems that make useful lifetime learning easier.
+
 ### Direct reciprocity without coordination under necessity
 
 Goal:
