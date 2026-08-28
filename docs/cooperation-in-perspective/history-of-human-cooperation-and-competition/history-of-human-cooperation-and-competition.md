@@ -173,7 +173,7 @@ A useful model should include at least some of the following capacities:
 
 ## Python Implementation
 
-The corresponding Python implementation lives in the `EvolvedCooperation`
+The corresponding Python implementation lives in the [`EvolvedCooperation`](https://github.com/doesburg11/EvolvedCooperation)
 repository:
 
 - package: [`behaviorally_anchored_model/`](https://github.com/doesburg11/EvolvedCooperation/tree/main/behaviorally_anchored_model)
