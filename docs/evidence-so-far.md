@@ -77,11 +77,70 @@ Use these labels when moving through the site:
 
 ## Experiment Map
 
-| Track | Current status | What it shows | Main limitation | Read next |
-|---|---|---|---|---|
-| Ackley & Littman replication / Trial 12 | Confirmed | Evolution plus learning beats either alone in the reported survival task. | Strongest for two-timescale adaptation, not cooperation specifically. | [Theory](/learning-selection-interaction/theory), [Trial Log](/learning-selection-interaction/darwin-baldwin-trial-log) |
-| Abstract two-timescale simulations | Confirmed / model-specific | Cooperation changes with repeated interaction, learning rules, selection, reputation, partner choice, and forgiveness. | Abstract donation-game setting on simplified interaction networks. | [Simulations](/learning-selection-interaction/simulations) |
-| Nowak mechanisms | Proof-of-mechanism | Classical cooperation mechanisms can maintain, spread, or fail under clearly separated conditions. | Mechanism isolation is not the same as a full human explanation. | [Nowak Mechanisms](/evolved-cooperation/nowak-mechanisms) |
-| Ecological evolved-cooperation models | Demonstrations | Spatial and ecological constraints can change cooperation, altruism, hunting, and benefit-retention dynamics. | Useful model behavior, but not yet a replicated human-evidence layer. | [Evolved Cooperation](/evolved-cooperation) |
-| Repeated Prisoner's Dilemma PPO | Null / limiting | The shown PPO sweep did not produce Holm-significant cooperation results. | Narrow reported setup; not a general impossibility result. | [PPO Study](/learned-cooperation/repeated-prisoners-dilemma/ppo-study) |
-| PredPreyGrass shared-policy trials | Null / inconclusive | Trials 1-10 did not show reliable selection-driven drift under the shared-policy design. | Genome influenced behavior only indirectly, through population-level economics. | [Evolution Boundary](/learning-selection-interaction/evolution-boundary-predpreygrass), [Trial Log](/learning-selection-interaction/darwin-baldwin-trial-log) |
+<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
+  <div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
+    <table style={{ display: 'table', width: '100%', minWidth: '920px', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+      <colgroup>
+        <col style={{ width: '20%' }} />
+        <col style={{ width: '15%' }} />
+        <col style={{ width: '25%' }} />
+        <col style={{ width: '25%' }} />
+        <col style={{ width: '15%' }} />
+      </colgroup>
+      <thead>
+        <tr>
+          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Track</th>
+          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Current status</th>
+          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>What it shows</th>
+          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Main limitation</th>
+          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Read next</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Ackley &amp; Littman replication / Trial 12</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Confirmed</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Evolution plus learning beats either alone in the reported survival task.</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Strongest for two-timescale adaptation, not cooperation specifically.</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><a href="/learning-selection-interaction/theory">Theory</a>, <a href="/learning-selection-interaction/darwin-baldwin-trial-log">Trial Log</a></td>
+        </tr>
+        <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Abstract two-timescale simulations</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Confirmed / model-specific</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Cooperation changes with repeated interaction, learning rules, selection, reputation, partner choice, and forgiveness.</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Abstract donation-game setting on simplified interaction networks.</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><a href="/learning-selection-interaction/simulations">Simulations</a></td>
+        </tr>
+        <tr>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Nowak mechanisms</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Proof-of-mechanism</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Classical cooperation mechanisms can maintain, spread, or fail under clearly separated conditions.</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Mechanism isolation is not the same as a full human explanation.</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><a href="/evolved-cooperation/nowak-mechanisms">Nowak Mechanisms</a></td>
+        </tr>
+        <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Ecological evolved-cooperation models</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Demonstrations</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Spatial and ecological constraints can change cooperation, altruism, hunting, and benefit-retention dynamics.</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Useful model behavior, but not yet a replicated human-evidence layer.</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><a href="/evolved-cooperation">Evolved Cooperation</a></td>
+        </tr>
+        <tr>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Repeated Prisoner's Dilemma PPO</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Null / limiting</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>The shown PPO sweep did not produce Holm-significant cooperation results.</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Narrow reported setup; not a general impossibility result.</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><a href="/learned-cooperation/repeated-prisoners-dilemma/ppo-study">PPO Study</a></td>
+        </tr>
+        <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>PredPreyGrass shared-policy trials</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Null / inconclusive</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Trials 1-10 did not show reliable selection-driven drift under the shared-policy design.</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Genome influenced behavior only indirectly, through population-level economics.</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><a href="/learning-selection-interaction/evolution-boundary-predpreygrass">Evolution Boundary</a>, <a href="/learning-selection-interaction/darwin-baldwin-trial-log">Trial Log</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Current status of the site's main evidence tracks.</figcaption>
+</figure>
