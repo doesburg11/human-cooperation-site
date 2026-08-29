@@ -1,11 +1,5 @@
 const CASE_STUDIES = [
   {
-    key: 'spatial-altruism',
-    label: 'Spatial Altruism',
-    href: '/evolved-cooperation/spatial-altruism/',
-    description: 'A minimal patch-based model in which altruist and selfish traits compete through local benefit, private cost, and a neighborhood lottery.',
-  },
-  {
     key: 'cooperative-hunting',
     label: 'Cooperative Hunting',
     href: '/evolved-cooperation/cooperative-hunting/',

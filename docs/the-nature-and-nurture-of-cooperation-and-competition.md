@@ -67,7 +67,7 @@ See the [Model Library](/model-library) for a complete catalog of every model, o
 
 1. [Evolved Cooperation](/evolved-cooperation) for the evolutionary model overview.
 2. [Nowak Mechanisms](/evolved-cooperation/nowak-mechanisms) for classical routes by which cooperation can spread.
-3. [Spatial Altruism](/evolved-cooperation/spatial-altruism), [Cooperative Hunting](/evolved-cooperation/cooperative-hunting), [Spatial Prisoner's Dilemma](/evolved-cooperation/spatial-prisoners-dilemma), and [Retained Benefit](/evolved-cooperation/retained-benefit) for ecological model examples with browser replays.
+3. [Cooperative Hunting](/evolved-cooperation/cooperative-hunting), [Spatial Prisoner's Dilemma](/evolved-cooperation/spatial-prisoners-dilemma), and [Retained Benefit](/evolved-cooperation/retained-benefit) for ecological model examples with browser replays, plus [Spatial Altruism](/evolved-cooperation/spatial-altruism), a foundational replication of the same flavor rather than an original scenario.
 4. [PredPreyGrass](/learning-selection-interaction/predpreygrass) for the richer predator-prey-grass environment.
 5. [Two-Timescale Simulations](/learning-selection-interaction/simulations) for models that explicitly combine learning and selection.
 

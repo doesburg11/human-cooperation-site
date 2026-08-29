@@ -42,7 +42,7 @@ The [Two-Timescale Simulations](/learning-selection-interaction/simulations) sho
 
 The [Nowak Mechanisms](/evolved-cooperation/nowak-mechanisms) pages provide proof-of-mechanism simulations for classical evolutionary routes to cooperation. Their main lesson is not simply that cooperation can persist. It is that origin and maintenance are different problems. A mechanism can maintain cooperation once it is common while still failing to produce cooperation from rare.
 
-The ecological model pages, including [Spatial Altruism](/evolved-cooperation/spatial-altruism), [Cooperative Hunting](/evolved-cooperation/cooperative-hunting), [Spatial Prisoner's Dilemma](/evolved-cooperation/spatial-prisoners-dilemma), and [Retained Benefit](/evolved-cooperation/retained-benefit), are best read as mechanism demonstrations. They show how spatial structure, ecological feedback, costs, benefits, and local interaction can change cooperative dynamics, but they are not yet the final evidential core of the human argument.
+The ecological model pages — [Cooperative Hunting](/evolved-cooperation/cooperative-hunting), [Spatial Prisoner's Dilemma](/evolved-cooperation/spatial-prisoners-dilemma), and [Retained Benefit](/evolved-cooperation/retained-benefit) — plus the foundational replication [Spatial Altruism](/evolved-cooperation/spatial-altruism), are best read as mechanism demonstrations. They show how spatial structure, ecological feedback, costs, benefits, and local interaction can change cooperative dynamics, but they are not yet the final evidential core of the human argument.
 
 ## Null Results
 

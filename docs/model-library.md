@@ -77,7 +77,7 @@ Five thin wrappers over a shared Moran-process engine, one per classical mechani
 
 ## Ecological Models
 
-Four case studies that embed a cooperation problem inside a spatial, ecological setting rather than an abstract Moran process.
+Three case studies that embed a cooperation problem inside a spatial, ecological setting rather than an abstract Moran process. (Spatial Altruism, once a fourth case study here, moved to [Evolved Cooperation's Foundational Replications](/evolved-cooperation/spatial-altruism) — it is a faithful implementation of one named paper rather than an original scenario built for this site; see that page's own explanation.)
 
 <figure className="site-table-figure">
   <div className="site-table-scroll">
@@ -97,12 +97,6 @@ Four case studies that embed a cooperation problem inside a spatial, ecological 
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Spatial Altruism</td>
-          <td>Evolution</td>
-          <td>The minimal case study: whether an altruistic inherited type can survive local exploitation once reproduction is local and empty space is a competitor.</td>
-          <td><a href="/evolved-cooperation/spatial-altruism">Spatial Altruism</a></td>
-        </tr>
         <tr>
           <td>Cooperative Hunting</td>
           <td>Evolution</td>

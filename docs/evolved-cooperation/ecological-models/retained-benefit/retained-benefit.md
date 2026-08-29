@@ -1,7 +1,7 @@
 ---
 id: retained-benefit
 title: Retained Benefit
-sidebar_position: 4
+sidebar_position: 3
 slug: /evolved-cooperation/retained-benefit
 ---
 

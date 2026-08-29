@@ -1,7 +1,7 @@
 ---
 id: spatial-prisoners-dilemma
 title: Spatial Prisoner's Dilemma
-sidebar_position: 3
+sidebar_position: 2
 slug: /evolved-cooperation/spatial-prisoners-dilemma
 ---
 
