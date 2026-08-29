@@ -348,6 +348,10 @@ This case study gives a conditional answer to the question of how cooperation ca
 - this is therefore not a claim that cooperation always evolves; it is a claim that cooperation can emerge when the environment and the spatial structure protect cooperative clusters long enough for selection to favor them
 - an independent from-scratch replication of the same paper measures a different outcome (fixation probability via dose-response sweeps, rather than coexistence probability at a fixed step) and found that near the classical `b=5c` boundary, genuine fixation is slow enough that most trials never resolve within a practical generation budget; see the cross-check reference below for the full caveat
 
+## See Also
+
+- [Network Reciprocity](/evolved-cooperation/network-reciprocity) — the Moran-models comparative framework's abstract counterpart to the mechanism modeled concretely here: cooperation sustained purely by local population structure, with no lineage tracking or memory. This page implements one specific historical realization of that mechanism (Mitteldorf & Wilson, 2000); that page implements it as one of five matched, idealized routing-kernel models built for direct comparison against the other four Nowak mechanisms.
+
 ## References
 
 - Mitteldorf, J., & Wilson, D. S. (2000). *Population viscosity and the evolution of altruism*. *Journal of Theoretical Biology*, 204(4), 481-496. https://doi.org/10.1006/jtbi.2000.2007

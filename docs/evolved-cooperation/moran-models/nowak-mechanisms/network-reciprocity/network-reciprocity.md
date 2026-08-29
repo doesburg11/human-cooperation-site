@@ -84,6 +84,10 @@ Live viewer:
 ./.conda/bin/python -m moran_models.nowak_mechanisms.network_reciprocity.network_reciprocity_pygame_ui
 ```
 
+## See Also
+
+- [Spatial Altruism](/evolved-cooperation/spatial-altruism) — a concrete historical realization of this same mechanism (Mitteldorf & Wilson, 2000), implemented as a literature-sourced ecological model rather than this page's idealized routing-kernel Moran process.
+
 ## References
 
 - Ohtsuki, H., Hauert, C., Lieberman, E., & Nowak, M. A. (2006). *A simple rule for the evolution of cooperation on graphs and social networks*. *Nature*, 441, 502–505. https://doi.org/10.1038/nature04605
