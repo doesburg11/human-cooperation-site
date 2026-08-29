@@ -10,6 +10,12 @@ Working notes and research ideas for the human-cooperation-site project. Not pub
 
 ---
 
+## Leibo2017 experiments (specified, not yet run)
+
+[Leibo2017](https://github.com/doesburg11/Leibo2017) — from-scratch replication of Leibo et al. (2017), *Multi-agent RL in Sequential Social Dilemmas* (Gathering + Wolfpack, independent DQN, optional RLlib backend). Environments, agents, and all three experiment scripts (Fig. 4 sweeps, Fig. 5-6 EGTA classification, Fig. 7 ablations) are built and smoke-tested, but every `run_*.py` script has only been run at small `--total-steps` smoke-test scale so far — no one has actually run them long enough to produce a real, converged result yet (see that repo's README "Running at paper scale vs. as a smoke test" and its own `TODO.md`). Once that's done, it's a candidate for the same kind of website write-up as the PredPreyGrass trial pages.
+
+---
+
 ## PredPreyGrass experiments (specified, not yet run)
 
 ### Observation-space improvements
