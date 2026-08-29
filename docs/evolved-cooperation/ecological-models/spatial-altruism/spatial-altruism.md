@@ -346,11 +346,13 @@ This case study gives a conditional answer to the question of how cooperation ca
 - more broadly, this means the emergence of cooperation depends on context: population structure, local interaction, and environmental pressure can change whether selfishness or cooperation is selected
 - the culling results point in the same direction; disturbance can sometimes preserve coexistence, and scattered clearing was more supportive of coexistence than one large contiguous cleared region in this first sweep
 - this is therefore not a claim that cooperation always evolves; it is a claim that cooperation can emerge when the environment and the spatial structure protect cooperative clusters long enough for selection to favor them
+- an independent from-scratch replication of the same paper measures a different outcome (fixation probability via dose-response sweeps, rather than coexistence probability at a fixed step) and found that near the classical `b=5c` boundary, genuine fixation is slow enough that most trials never resolve within a practical generation budget; see the cross-check reference below for the full caveat
 
 ## References
 
 - Mitteldorf, J., & Wilson, D. S. (2000). *Population viscosity and the evolution of altruism*. *Journal of Theoretical Biology*, 204(4), 481-496. https://doi.org/10.1006/jtbi.2000.2007
 - Wilensky, U. (1998). NetLogo Altruism model. http://ccl.northwestern.edu/netlogo/models/Altruism. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL. A NetLogo implementation of the Mitteldorf & Wilson paper: *Altruism* model (`Altruism.nlogox`), *Curricular Models / BEAGLE Evolution / EACH*. https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/BEAGLE%20Evolution/EACH/Altruism.nlogox
 - `EvolvedCooperation`. *spatial_altruism* module directory. GitHub. https://github.com/doesburg11/EvolvedCooperation/tree/main/spatial_altruism
+- `MitteldorfWilson2000`. Independent from-scratch replication of the same paper, used as a cross-check against this page's implementation. GitHub. https://github.com/doesburg11/MitteldorfWilson2000
 - `EvolvedCooperation`. *spatial_altruism/altruism_model.py*. GitHub. https://github.com/doesburg11/EvolvedCooperation/blob/main/spatial_altruism/altruism_model.py
 - `EvolvedCooperation`. *spatial_altruism/README.md*. GitHub. https://github.com/doesburg11/EvolvedCooperation/blob/main/spatial_altruism/README.md
