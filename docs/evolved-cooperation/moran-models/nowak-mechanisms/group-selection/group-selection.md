@@ -92,6 +92,10 @@ Live viewer:
 ./.conda/bin/python -m moran_models.nowak_mechanisms.group_selection.group_selection_pygame_ui
 ```
 
+## See Also
+
+- [Spatial Altruism](/evolved-cooperation/spatial-altruism) — Mitteldorf & Wilson (2000) explicitly frame their spatial viscosity model as a group-selection argument, not a network-reciprocity one, and one of the two authors, David Sloan Wilson, is among the field's most prominent group-selection theorists. Their harsher, variable-density variants let patches dominated by altruists sustain a higher local population density than patches dominated by non-altruists — the same between-group-productivity logic this page formalizes through its own periodic best-group-into-worst-group event. The mechanism is realized very differently, though: this page partitions sites into a fixed number of discrete groups from the outset, while Mitteldorf & Wilson never define an explicit group boundary at all — patches emerge and dissolve continuously as a byproduct of the same spatial lottery that drives individual-level competition, so "group" membership there is implicit and constantly shifting rather than a fixed partition.
+
 ## References
 
 - Nowak, M. A., Tarnita, C. E., & Wilson, E. O. (2010). *The evolution of eusociality*. *Nature*, 466, 1057–1062. https://doi.org/10.1038/nature09205

@@ -348,9 +348,37 @@ This case study gives a conditional answer to the question of how cooperation ca
 - this is therefore not a claim that cooperation always evolves; it is a claim that cooperation can emerge when the environment and the spatial structure protect cooperative clusters long enough for selection to favor them
 - an independent from-scratch replication of the same paper measures a different outcome (fixation probability via dose-response sweeps, rather than coexistence probability at a fixed step) and found that near the classical `b=5c` boundary, genuine fixation is slow enough that most trials never resolve within a practical generation budget; see the cross-check reference below for the full caveat
 
-## See Also
+## See Also: Where This Model Sits Among Nowak's Five Mechanisms
 
-- [Network Reciprocity](/evolved-cooperation/network-reciprocity) — the Moran-models comparative framework's abstract counterpart to the mechanism modeled concretely here: cooperation sustained purely by local population structure, with no lineage tracking or memory. This page implements one specific historical realization of that mechanism (Mitteldorf & Wilson, 2000); that page implements it as one of five matched, idealized routing-kernel models built for direct comparison against the other four Nowak mechanisms.
+This model's relationship to Nowak's five mechanisms for the evolution of cooperation is not a single clean match. It depends on whether the question is about the *mechanics* of the implementation or about the *authors' own theoretical claim* for what those mechanics prove. Both are worth stating explicitly, because they point at different pages on this site.
+
+### Network Reciprocity — the mechanical match
+
+[Network Reciprocity](/evolved-cooperation/network-reciprocity) is the closest implementation-level relative. Both models share the same minimal ingredients: a lattice, purely local interaction, no memory, no reputation, no explicit lineage tracking. Cooperation, or its absence, is decided entirely by who is spatially adjacent to whom. Where they differ is scope: this page implements one specific historical model, Mitteldorf & Wilson (2000), with its own three-state lottery rule, while the Network Reciprocity page implements one of five matched, idealized routing-kernel Moran models built for direct, apples-to-apples comparison against the other four Nowak mechanisms.
+
+### Group Selection — the authors' own claim
+
+Mechanically similar to network reciprocity is not, however, the paper's own account of what it demonstrates. Mitteldorf & Wilson open their Discussion by directly invoking the mid-20th-century group-selection debate:
+
+> "The academic community of evolutionists debated the character of natural selection in the 1960's and 70's, arriving at a skepticism concerning group selection that continues to inform theoretical work through the present... Perhaps the present availability of computer models is sufficient reason to re-open the group selection debate and re-examine its essential conclusions."
+
+David Sloan Wilson, the paper's second author, is one of the most prominent group-selection (multilevel-selection) theorists in evolutionary biology. The paper's specific contribution over the earlier Wilson, Pollock & Dugatkin (1992) model is exactly the move that makes it a group-selection argument rather than a pure spatial-assortment one: letting local population density vary, so that patches dominated by altruists can sustain a higher density than patches dominated by non-altruists. In the paper's own words:
+
+> "Viscosity supports division of the lattice into patches dominated by one or the other variety. The fitness advantage which altruists confer upon their neighborhood permits those patches dominated by altruists to establish denser populations. In the competition that takes place at patch boundaries, the greater density of altruists permits them to counteract the fitness advantage of non-altruists in close proximity, and in some cases to prevail."
+
+That is a between-group selection story — altruist "groups" (patches) out-reproducing non-altruist "groups" by sustaining higher density — layered on top of a within-group story where individual selfish patches out-compete individual altruist patches locally. It is the same logic [Group Selection](/evolved-cooperation/group-selection) formalizes on this site, just realized continuously and spatially here rather than through that page's explicit mechanism: a fixed number of discrete groups, with the best-performing group's contents periodically copied over the worst-performing group's. Mitteldorf & Wilson never partition the lattice into groups explicitly; patches emerge and dissolve as an implicit, moving consequence of the spatial lottery itself. So the kinship with Group Selection here is theoretical and rhetorical, not an implementation match — both are arguments for multilevel selection, built two different ways.
+
+### Kin Selection — the mechanism underneath the baseline case
+
+There is a third thread, specific to the fixed-density baseline case shown in Display 1 above, where `harshness` and `disease` are both `0`. The paper derives its `b > 5c` viability threshold directly from Hamilton's rule, using the relatedness implied by the five-site neighborhood itself:
+
+> "For parameters b and c that are small compared to unity, the model permits altruism to emerge whenever b>5c. This happens to be the boundary between "weak" and "strong" altruism, because 1/5 of the local benefit b contributed by each altruist is enjoyed by the altruist itself."
+
+That `1/5` is a relatedness coefficient in disguise: an altruist is one of the five participants in its own neighborhood lottery, so it always recaptures exactly `1/5` of the benefit it creates, regardless of whether any of its four neighbors happen to be relatives in a pedigree sense. Limited dispersal manufactures that recapture rate automatically — which is the textbook mechanism [Kin Selection](/evolved-cooperation/kin-selection) is built to formalize, though that page does it explicitly, through inherited lineage labels and a routing kernel that biases benefit toward same-lineage neighbors, rather than through this page's implicit, geometry-driven relatedness.
+
+### Net result
+
+None of these three pages is simply "the same model as this one." Spatial Altruism sits at their intersection: implemented like Network Reciprocity, argued like Group Selection, and, in its simplest baseline form, mathematically derivable from Kin Selection's own Hamilton's-rule logic. That triangulation is itself a useful lesson about Nowak's taxonomy: the five mechanisms are a pedagogical decomposition of cooperation theory, not five mutually exclusive boxes that every real model falls cleanly into.
 
 ## References
 

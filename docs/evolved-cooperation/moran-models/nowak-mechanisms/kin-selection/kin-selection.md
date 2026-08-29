@@ -408,6 +408,10 @@ Both grids below start from the **same random initial state** — roughly 5% coo
 <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 5:</strong> Live kin-selection comparison. Both grids start from the same random initial state (~5% cooperators, 18 lineages, kin bias 0.8/0.2). Left: Hamilton's rule satisfied ($B/C = 5$, $rB$ &gt; $C$ — cooperation spreads). Right: Hamilton's rule violated ($B/C = 0.2$, $rB$ &lt; $C$ — cooperation collapses).</figcaption>
 </figure>
 
+## See Also
+
+- [Spatial Altruism](/evolved-cooperation/spatial-altruism) — Mitteldorf & Wilson's (2000) baseline, no-`harshness`/no-`disease` case is a concrete historical instance of exactly the "stochastic 1/5" scenario named above in [Why kin bias amplifies spatial structure](#why-kin-bias-amplifies-spatial-structure-the-self-routing-advantage): a lone cooperator recaptures `1/5` of its own benefit purely because it is one of five participants in its own neighbourhood lottery, with no lineage bias at all. That paper derives its own viability threshold, `b > 5c`, from precisely this relatedness coefficient — Hamilton's rule `rB > C` with `r = 1/5` gives `b/5 > c`, i.e. `b > 5c`. Where this page's kin bias converts that stochastic `1/5` into a reliable `5/5` by explicitly routing benefit toward same-lineage neighbours, Spatial Altruism's harsher, higher-density variants achieve a comparable reliability boost through a different route entirely — differential group/patch density rather than lineage-biased routing — which is also why that page's own "See Also" section treats it as closer to Group Selection than to Kin Selection once `harshness` and `disease` are turned on.
+
 ## References
 
 - Hamilton, W. D. (1964). *The genetical evolution of social behaviour. I*. *Journal of Theoretical Biology*, 7(1), 1–16. https://doi.org/10.1016/0022-5193(64)90038-4

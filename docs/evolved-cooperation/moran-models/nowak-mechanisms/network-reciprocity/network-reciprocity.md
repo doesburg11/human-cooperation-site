@@ -86,7 +86,7 @@ Live viewer:
 
 ## See Also
 
-- [Spatial Altruism](/evolved-cooperation/spatial-altruism) — a concrete historical realization of this same mechanism (Mitteldorf & Wilson, 2000), implemented as a literature-sourced ecological model rather than this page's idealized routing-kernel Moran process.
+- [Spatial Altruism](/evolved-cooperation/spatial-altruism) — a concrete historical model, Mitteldorf & Wilson (2000), that is *mechanically* the closest real-world relative of this page: a lattice, purely local interaction, no memory or reputation. That page's own "See Also" section goes further and argues the paper's authors actually frame their result as a Group Selection argument (patches of altruists sustaining higher density than patches of non-altruists), not a network-reciprocity one — worth reading if the mechanical similarity here seems too tidy.
 
 ## References
 
