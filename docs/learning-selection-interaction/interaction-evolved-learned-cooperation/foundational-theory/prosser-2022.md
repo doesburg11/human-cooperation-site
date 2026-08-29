@@ -1,7 +1,7 @@
 ---
 id: prosser-2022
 title: The Prosser (2022) Models
-sidebar_position: 12
+sidebar_position: 13
 slug: /learning-selection-interaction/prosser-2022
 ---
 

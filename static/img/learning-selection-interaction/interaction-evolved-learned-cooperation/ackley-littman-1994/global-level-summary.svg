@@ -1,0 +1,254 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1560" height="760" viewBox="0 0 1560 760" role="img" aria-labelledby="title desc">
+  <title id="title">The global level of World AL (Ackley &amp; Littman, 1994)</title>
+  <desc id="desc">Three-panel summary of Section 2.3: the 128x128 torus grid of local-level subpopulations; wind migration, where one randomly chosen individual per cell moves downwind into the exact slot its destination's own emigrant just vacated; and festival reproduction, where each non-overlapping 2x2 quad holds a 32-individual tournament, with the quad grouping itself phase-shifted across four successive festivals so every cell eventually partners with all eight of its neighbors.</desc>
+  <defs>
+    <style>
+      .panel { fill: #ffffff; stroke: #d6e4f5; stroke-width: 2; }
+      .label { font: 700 20px "IBM Plex Sans", "Avenir Next", "Segoe UI", Arial, sans-serif; fill: #0f3368; }
+      .small-label { font: 700 14px "IBM Plex Sans", "Avenir Next", "Segoe UI", Arial, sans-serif; fill: #1f2d3d; }
+      .body { font: 400 13px "IBM Plex Sans", "Avenir Next", "Segoe UI", Arial, sans-serif; fill: #1f2d3d; }
+      .muted { font: 400 12px "IBM Plex Sans", "Avenir Next", "Segoe UI", Arial, sans-serif; fill: #506176; }
+      .tiny-muted { font: 400 11px "IBM Plex Sans", "Avenir Next", "Segoe UI", Arial, sans-serif; fill: #506176; font-style: italic; }
+      .cell { fill: #f5f8fd; stroke: #c7d4e8; stroke-width: 1; }
+      .quad-highlight { fill: #0f3368; fill-opacity: 0.12; stroke: #0f3368; stroke-width: 2; }
+      .slot { fill: none; stroke: #506176; stroke-width: 1.2; }
+      .slot-emigrant { fill: #c0575c; stroke: #9a3f44; stroke-width: 1.2; }
+      .slot-parent { fill: #4f7fc4; stroke: #0f3368; stroke-width: 1; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0f3368"/>
+    </marker>
+  </defs>
+
+  <!-- ============ PANEL 1: THE GLOBAL GRID ============ -->
+  <rect class="panel" x="30" y="30" width="470" height="700"/>
+  <text class="label" x="55" y="70">THE GLOBAL GRID</text>
+  <line x1="55" y1="82" x2="470" y2="82" stroke="#d6e4f5" stroke-width="1.5"/>
+
+  <text class="body" x="55" y="110">The paper's actual experimental variable</text>
+  <text class="body" x="55" y="128">(Section 2.3): a torus of local-level</text>
+  <text class="body" x="55" y="146">subpopulations (see the local level, above)</text>
+  <text class="body" x="55" y="164">— 128x128 cells, 131,072 individuals total.</text>
+
+  <!-- 5x5 schematic grid, cell = 52px, origin (75,190) -->
+  <g>
+    <rect class="cell" x="75"  y="190" width="52" height="52"/>
+    <rect class="cell" x="127" y="190" width="52" height="52"/>
+    <rect class="cell" x="179" y="190" width="52" height="52"/>
+    <rect class="cell" x="231" y="190" width="52" height="52"/>
+    <rect class="cell" x="283" y="190" width="52" height="52"/>
+
+    <rect class="cell" x="75"  y="242" width="52" height="52"/>
+    <rect class="cell" x="127" y="242" width="52" height="52"/>
+    <rect class="cell" x="179" y="242" width="52" height="52"/>
+    <rect class="cell" x="231" y="242" width="52" height="52"/>
+    <rect class="cell" x="283" y="242" width="52" height="52"/>
+
+    <rect class="cell" x="75"  y="294" width="52" height="52"/>
+    <rect class="cell" x="127" y="294" width="52" height="52"/>
+    <rect class="cell" x="179" y="294" width="52" height="52"/>
+    <rect class="cell" x="231" y="294" width="52" height="52"/>
+    <rect class="cell" x="283" y="294" width="52" height="52"/>
+
+    <rect class="cell" x="75"  y="346" width="52" height="52"/>
+    <rect class="cell" x="127" y="346" width="52" height="52"/>
+    <rect class="cell" x="179" y="346" width="52" height="52"/>
+    <rect class="cell" x="231" y="346" width="52" height="52"/>
+    <rect class="cell" x="283" y="346" width="52" height="52"/>
+
+    <rect class="cell" x="75"  y="398" width="52" height="52"/>
+    <rect class="cell" x="127" y="398" width="52" height="52"/>
+    <rect class="cell" x="179" y="398" width="52" height="52"/>
+    <rect class="cell" x="231" y="398" width="52" height="52"/>
+    <rect class="cell" x="283" y="398" width="52" height="52"/>
+
+    <!-- one highlighted 2x2 quad: rows 1-2, cols 1-2 -->
+    <rect class="quad-highlight" x="127" y="242" width="104" height="104"/>
+  </g>
+
+  <line x1="335" y1="315" x2="365" y2="315" class="muted" stroke="#0f3368" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text class="tiny-muted" x="370" y="320">quad = 4 cells,</text>
+  <text class="tiny-muted" x="370" y="334">32 individuals</text>
+
+  <line x1="336" y1="424" x2="380" y2="424" stroke="#506176" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text class="tiny-muted" x="386" y="428">wraps to the</text>
+  <text class="tiny-muted" x="386" y="442">left edge (torus)</text>
+
+  <line x1="179" y1="450" x2="179" y2="480" stroke="#506176" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text class="tiny-muted" x="188" y="475">wraps to the top edge (torus)</text>
+
+  <text class="body" x="55" y="545">Every cell is one local-level subpopulation</text>
+  <text class="body" x="55" y="563">of 8 (its own 36-trial day, scored exactly</text>
+  <text class="body" x="55" y="581">as in the local level described above).</text>
+
+  <text class="tiny-muted" x="55" y="625">Shown at 5x5 for legibility — the paper's</text>
+  <text class="tiny-muted" x="55" y="641">own scale is 128x128, i.e. 16,384 cells.</text>
+
+  <!-- ============ PANEL 2: WIND MIGRATION ============ -->
+  <rect class="panel" x="530" y="30" width="470" height="700"/>
+  <text class="label" x="555" y="70">WIND MIGRATION</text>
+  <line x1="555" y1="82" x2="970" y2="82" stroke="#d6e4f5" stroke-width="1.5"/>
+
+  <text class="body" x="555" y="110">On a windy day (its own periodic</text>
+  <text class="body" x="555" y="128">schedule, e.g. every 5th day): one</text>
+  <text class="body" x="555" y="146">global compass direction is drawn;</text>
+  <text class="body" x="555" y="164">independently in every cell, one</text>
+  <text class="body" x="555" y="182">individual is picked to emigrate.</text>
+
+  <rect class="cell" x="575" y="230" width="170" height="170" rx="10"/>
+  <text class="small-label" x="575" y="220">cell (r, c)</text>
+  <rect class="cell" x="825" y="230" width="170" height="170" rx="10"/>
+  <text class="small-label" x="825" y="220">downwind neighbor</text>
+
+  <!-- cell A: 8 dots, slot 0 highlighted (emigrant) -->
+  <circle class="slot-emigrant" cx="615" cy="270" r="9"/>
+  <circle class="slot" cx="655" cy="270" r="9"/>
+  <circle class="slot" cx="695" cy="270" r="9"/>
+  <circle class="slot" cx="735" cy="270" r="9"/>
+  <circle class="slot" cx="615" cy="320" r="9"/>
+  <circle class="slot" cx="655" cy="320" r="9"/>
+  <circle class="slot" cx="695" cy="320" r="9"/>
+  <circle class="slot" cx="735" cy="320" r="9"/>
+  <text class="tiny-muted" x="583" y="378">slots 0-7; slot 0 selected to emigrate</text>
+
+  <!-- cell B: slot 0 now holds A's emigrant -->
+  <circle class="slot-emigrant" cx="865" cy="270" r="9"/>
+  <circle class="slot" cx="905" cy="270" r="9"/>
+  <circle class="slot" cx="945" cy="270" r="9"/>
+  <circle class="slot" cx="985" cy="270" r="9"/>
+  <circle class="slot" cx="865" cy="320" r="9"/>
+  <circle class="slot" cx="905" cy="320" r="9"/>
+  <circle class="slot" cx="945" cy="320" r="9"/>
+  <circle class="slot" cx="985" cy="320" r="9"/>
+  <text class="tiny-muted" x="833" y="378">slot 0 vacated by B's own</text>
+  <text class="tiny-muted" x="833" y="392">emigrant, now filled by A's</text>
+
+  <path d="M 624 270 C 720 240, 800 240, 856 270" fill="none" stroke="#c0575c" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <path d="M 874 270 C 950 250, 990 250, 1010 260" fill="none" stroke="#9a3f44" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+  <text class="tiny-muted" x="833" y="410">(B's own emigrant continues</text>
+  <text class="tiny-muted" x="833" y="424">downwind the same way)</text>
+
+  <line x1="555" y1="450" x2="970" y2="450" stroke="#d6e4f5" stroke-width="1.5"/>
+  <text class="body" x="555" y="480">The immigrant lands in the exact slot its</text>
+  <text class="body" x="555" y="498">destination's own emigrant just vacated —</text>
+  <text class="body" x="555" y="516">a synchronized, population-preserving swap.</text>
+  <text class="body" x="555" y="534">Every cell still has exactly 8 individuals</text>
+  <text class="body" x="555" y="552">afterward, just redistributed.</text>
+
+  <!-- ============ PANEL 3: FESTIVAL ============ -->
+  <rect class="panel" x="1030" y="30" width="500" height="700"/>
+  <text class="label" x="1055" y="70">FESTIVAL: QUAD + PHASE SHIFT</text>
+  <line x1="1055" y1="82" x2="1525" y2="82" stroke="#d6e4f5" stroke-width="1.5"/>
+
+  <text class="body" x="1055" y="106">On a festival day (its own periodic</text>
+  <text class="body" x="1055" y="124">schedule, e.g. every 2nd day): each</text>
+  <text class="body" x="1055" y="142">non-overlapping 2x2 quad holds its</text>
+  <text class="body" x="1055" y="160">own 32-individual tournament, instead</text>
+  <text class="body" x="1055" y="178">of each cell reproducing on its own.</text>
+
+  <!-- one 2x2 quad, 4 cells of 8 dots each -->
+  <rect class="cell" x="1055" y="205" width="90" height="90"/>
+  <rect class="cell" x="1150" y="205" width="90" height="90"/>
+  <rect class="cell" x="1055" y="300" width="90" height="90"/>
+  <rect class="cell" x="1150" y="300" width="90" height="90"/>
+
+  <g id="quad-dots">
+    <!-- 4 cells x 8 dots (2x4), radius 5 -->
+    <circle class="slot-parent" cx="1070" cy="222" r="5"/>
+    <circle class="slot" cx="1088" cy="222" r="5"/>
+    <circle class="slot" cx="1106" cy="222" r="5"/>
+    <circle class="slot" cx="1124" cy="222" r="5"/>
+    <circle class="slot-parent" cx="1070" cy="240" r="5"/>
+    <circle class="slot" cx="1088" cy="240" r="5"/>
+    <circle class="slot" cx="1106" cy="240" r="5"/>
+    <circle class="slot" cx="1124" cy="240" r="5"/>
+
+    <circle class="slot-parent" cx="1165" cy="222" r="5"/>
+    <circle class="slot" cx="1183" cy="222" r="5"/>
+    <circle class="slot" cx="1201" cy="222" r="5"/>
+    <circle class="slot" cx="1219" cy="222" r="5"/>
+    <circle class="slot-parent" cx="1165" cy="240" r="5"/>
+    <circle class="slot" cx="1183" cy="240" r="5"/>
+    <circle class="slot" cx="1201" cy="240" r="5"/>
+    <circle class="slot" cx="1219" cy="240" r="5"/>
+
+    <circle class="slot-parent" cx="1070" cy="317" r="5"/>
+    <circle class="slot" cx="1088" cy="317" r="5"/>
+    <circle class="slot" cx="1106" cy="317" r="5"/>
+    <circle class="slot" cx="1124" cy="317" r="5"/>
+    <circle class="slot" cx="1070" cy="335" r="5"/>
+    <circle class="slot" cx="1088" cy="335" r="5"/>
+    <circle class="slot" cx="1106" cy="335" r="5"/>
+    <circle class="slot" cx="1124" cy="335" r="5"/>
+
+    <circle class="slot" cx="1165" cy="317" r="5"/>
+    <circle class="slot" cx="1183" cy="317" r="5"/>
+    <circle class="slot" cx="1201" cy="317" r="5"/>
+    <circle class="slot" cx="1219" cy="317" r="5"/>
+    <circle class="slot" cx="1165" cy="335" r="5"/>
+    <circle class="slot" cx="1183" cy="335" r="5"/>
+    <circle class="slot" cx="1201" cy="335" r="5"/>
+    <circle class="slot" cx="1219" cy="335" r="5"/>
+  </g>
+  <path d="M 1160 328 L 1170 338 M 1170 328 L 1160 338" stroke="#c0575c" stroke-width="2" stroke-linecap="round"/>
+
+  <text class="tiny-muted" x="1250" y="222">top quarter</text>
+  <text class="tiny-muted" x="1250" y="236">(8 of 32) —</text>
+  <text class="tiny-muted" x="1250" y="250">eligible</text>
+  <text class="tiny-muted" x="1250" y="264">parents</text>
+  <text class="tiny-muted" x="1250" y="330">1 of 32 killed,</text>
+  <text class="tiny-muted" x="1250" y="344">replaced by their</text>
+  <text class="tiny-muted" x="1250" y="358">offspring</text>
+
+  <line x1="1055" y1="410" x2="1525" y2="410" stroke="#d6e4f5" stroke-width="1.5"/>
+  <text class="small-label" x="1055" y="435">Successive festivals shift the quad grouping:</text>
+
+  <!-- 4 mini-grids, 4x4 cells of 14px, showing the Margolus phase cycle -->
+  <g>
+    <!-- phase 0: highlight rows0-1,cols0-1 -->
+    <g transform="translate(1055,460)">
+      <rect class="cell" x="0" y="0" width="14" height="14"/><rect class="cell" x="14" y="0" width="14" height="14"/><rect class="cell" x="28" y="0" width="14" height="14"/><rect class="cell" x="42" y="0" width="14" height="14"/>
+      <rect class="cell" x="0" y="14" width="14" height="14"/><rect class="cell" x="14" y="14" width="14" height="14"/><rect class="cell" x="28" y="14" width="14" height="14"/><rect class="cell" x="42" y="14" width="14" height="14"/>
+      <rect class="cell" x="0" y="28" width="14" height="14"/><rect class="cell" x="14" y="28" width="14" height="14"/><rect class="cell" x="28" y="28" width="14" height="14"/><rect class="cell" x="42" y="28" width="14" height="14"/>
+      <rect class="cell" x="0" y="42" width="14" height="14"/><rect class="cell" x="14" y="42" width="14" height="14"/><rect class="cell" x="28" y="42" width="14" height="14"/><rect class="cell" x="42" y="42" width="14" height="14"/>
+      <rect class="quad-highlight" x="0" y="0" width="28" height="28"/>
+    </g>
+    <text class="tiny-muted" x="1074" y="535">phase 0</text>
+
+    <!-- phase 1: shift right one col (wraps) -->
+    <g transform="translate(1160,460)">
+      <rect class="cell" x="0" y="0" width="14" height="14"/><rect class="cell" x="14" y="0" width="14" height="14"/><rect class="cell" x="28" y="0" width="14" height="14"/><rect class="cell" x="42" y="0" width="14" height="14"/>
+      <rect class="cell" x="0" y="14" width="14" height="14"/><rect class="cell" x="14" y="14" width="14" height="14"/><rect class="cell" x="28" y="14" width="14" height="14"/><rect class="cell" x="42" y="14" width="14" height="14"/>
+      <rect class="cell" x="0" y="28" width="14" height="14"/><rect class="cell" x="14" y="28" width="14" height="14"/><rect class="cell" x="28" y="28" width="14" height="14"/><rect class="cell" x="42" y="28" width="14" height="14"/>
+      <rect class="cell" x="0" y="42" width="14" height="14"/><rect class="cell" x="14" y="42" width="14" height="14"/><rect class="cell" x="28" y="42" width="14" height="14"/><rect class="cell" x="42" y="42" width="14" height="14"/>
+      <rect class="quad-highlight" x="14" y="0" width="28" height="28"/>
+    </g>
+    <text class="tiny-muted" x="1179" y="535">phase 1</text>
+
+    <!-- phase 2: shift down one row from phase 0 -->
+    <g transform="translate(1265,460)">
+      <rect class="cell" x="0" y="0" width="14" height="14"/><rect class="cell" x="14" y="0" width="14" height="14"/><rect class="cell" x="28" y="0" width="14" height="14"/><rect class="cell" x="42" y="0" width="14" height="14"/>
+      <rect class="cell" x="0" y="14" width="14" height="14"/><rect class="cell" x="14" y="14" width="14" height="14"/><rect class="cell" x="28" y="14" width="14" height="14"/><rect class="cell" x="42" y="14" width="14" height="14"/>
+      <rect class="cell" x="0" y="28" width="14" height="14"/><rect class="cell" x="14" y="28" width="14" height="14"/><rect class="cell" x="28" y="28" width="14" height="14"/><rect class="cell" x="42" y="28" width="14" height="14"/>
+      <rect class="cell" x="0" y="42" width="14" height="14"/><rect class="cell" x="14" y="42" width="14" height="14"/><rect class="cell" x="28" y="42" width="14" height="14"/><rect class="cell" x="42" y="42" width="14" height="14"/>
+      <rect class="quad-highlight" x="0" y="14" width="28" height="28"/>
+    </g>
+    <text class="tiny-muted" x="1284" y="535">phase 2</text>
+
+    <!-- phase 3: shift right and down from phase 0 -->
+    <g transform="translate(1370,460)">
+      <rect class="cell" x="0" y="0" width="14" height="14"/><rect class="cell" x="14" y="0" width="14" height="14"/><rect class="cell" x="28" y="0" width="14" height="14"/><rect class="cell" x="42" y="0" width="14" height="14"/>
+      <rect class="cell" x="0" y="14" width="14" height="14"/><rect class="cell" x="14" y="14" width="14" height="14"/><rect class="cell" x="28" y="14" width="14" height="14"/><rect class="cell" x="42" y="14" width="14" height="14"/>
+      <rect class="cell" x="0" y="28" width="14" height="14"/><rect class="cell" x="14" y="28" width="14" height="14"/><rect class="cell" x="28" y="28" width="14" height="14"/><rect class="cell" x="42" y="28" width="14" height="14"/>
+      <rect class="cell" x="0" y="42" width="14" height="14"/><rect class="cell" x="14" y="42" width="14" height="14"/><rect class="cell" x="28" y="42" width="14" height="14"/><rect class="cell" x="42" y="42" width="14" height="14"/>
+      <rect class="quad-highlight" x="14" y="14" width="28" height="28"/>
+    </g>
+    <text class="tiny-muted" x="1389" y="535">phase 3</text>
+  </g>
+
+  <text class="body" x="1055" y="575">After 4 festivals, every cell has been</text>
+  <text class="body" x="1055" y="593">grouped, in some quad, with all 8 of</text>
+  <text class="body" x="1055" y="611">its neighbors (a Margolus-neighborhood</text>
+  <text class="body" x="1055" y="629">block-cellular-automaton technique).</text>
+</svg>
