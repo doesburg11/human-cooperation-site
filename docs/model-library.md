@@ -215,7 +215,7 @@ The [Prisoner's Dilemma](/learned-cooperation/prisoners-dilemma) and [Repeated P
 
 ## Foundational Replications
 
-From-scratch replications of the papers that established the two-timescale claim this site builds on.
+From-scratch replications of specific named papers, kept separate from this site's own original models. Three established the two-timescale claim this site builds on (Evolution + Learning); the other three are faithful implementations that a model elsewhere on this site is checked against or was inspired by, covering pure evolution and pure learning as well.
 
 <figure className="site-table-figure">
   <div className="site-table-scroll">
@@ -253,8 +253,26 @@ From-scratch replications of the papers that established the two-timescale claim
           <td>Tests what changes when learning acts on genetically correlated groups of traits, with the correlation structure itself evolving, instead of on independent single loci.</td>
           <td><a href="/learning-selection-interaction/prosser-2022">Prosser (2022)</a></td>
         </tr>
+        <tr>
+          <td>Ackley &amp; Littman (1994)</td>
+          <td>Evolution</td>
+          <td>The same authors' follow-up, with learning dropped entirely: whether costly, honest signaling can evolve and stabilize with no built-in reward, using only population viscosity and communication's naturally short reach to make signalers and listeners relatives.</td>
+          <td><a href="/evolved-cooperation/ackley-littman-1994">Ackley &amp; Littman (1994)</a></td>
+        </tr>
+        <tr>
+          <td>Spatial Altruism</td>
+          <td>Evolution</td>
+          <td>Mitteldorf &amp; Wilson's (2000) population-viscosity model: whether an altruistic inherited type can survive local exploitation once reproduction is local and empty space is a competitor. See its own page for how the same result also reads as a group-selection and a kin-selection argument.</td>
+          <td><a href="/evolved-cooperation/spatial-altruism">Spatial Altruism</a></td>
+        </tr>
+        <tr>
+          <td>Leibo et al. (2017)</td>
+          <td>Learning</td>
+          <td>Whether independent reinforcement learners dropped into spatial, temporally extended social dilemmas still produce policies that behave like a classical matrix-game dilemma once cooperation is measured at the policy level, not the action level.</td>
+          <td><a href="/learned-cooperation/leibo2017">Leibo et al. (2017)</a></td>
+        </tr>
       </tbody>
     </table>
   </div>
-  <figcaption className="site-table-caption"><strong>Display 5:</strong> Replications this site's two-timescale claim is built on. See <a href="/learning-selection-interaction/baldwin-effect">The Baldwin Effect</a> for the underlying concept.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 5:</strong> From-scratch replications this site's models are built on or checked against. The first three established this site's two-timescale claim — see <a href="/learning-selection-interaction/baldwin-effect">The Baldwin Effect</a> for that underlying concept; the other three are standalone replications of the pure-evolution and pure-learning models elsewhere in this catalog.</figcaption>
 </figure>
