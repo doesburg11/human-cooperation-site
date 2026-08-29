@@ -1,8 +1,8 @@
 ---
 id: ackley-littman-1994
 title: The Ackley & Littman (1994) Algorithm
-sidebar_position: 12
-slug: /learning-selection-interaction/ackley-littman-1994
+sidebar_position: 1
+slug: /evolved-cooperation/ackley-littman-1994
 ---
 
 # The Ackley & Littman (1994) Algorithm
@@ -43,7 +43,7 @@ Section 2.3 is where the paper's real content lives. A single subpopulation conv
       <div className="blue-banner-subtitle">Ackley &amp; Littman's (1994) Section 2.3: the 128×128 torus grid of local-level subpopulations, wind migration, and festival reproduction with its phase-shifted quad grouping.</div>
     </div>
     <img
-      src="/img/learning-selection-interaction/interaction-evolved-learned-cooperation/ackley-littman-1994/global-level-summary.svg"
+      src="/img/evolved-cooperation/ackley-littman-1994/global-level-summary.svg"
       alt="Display 1: Three-panel summary of the global level — a torus grid of subpopulations with one quad (2x2 block) highlighted; wind migration, showing one individual per cell moving downwind into the exact slot its destination's own emigrant just vacated; and festival reproduction, showing a 32-individual quad tournament plus the four-phase quad-grouping shift that lets every cell eventually partner with all eight of its neighbors."
       style={{ display: 'block', width: '100%', height: 'auto' }}
     />
@@ -81,7 +81,7 @@ It's easy to assume a same-authors sequel demonstrates the same phenomenon at gr
 - The adaptive lever here is entirely different: not an individual capacity (learning), but a **population-structure** parameter — how migration correlates communication range with breeding range. The question shifts from "what does learning contribute?" to "what can spatial structure alone make possible?"
 - Where 1991 varied a single population's internal mechanism (evolution vs. learning vs. both), this paper holds the individual level and local level fixed and varies the **global** level instead — the three case studies are a controlled comparison of *migration regimes*, not of *adaptive mechanisms*.
 
-It belongs alongside the other entries in this section not because it's another Baldwin-effect result, but because it's the direct methodological sequel from the same authors, reusing and extending World AL's population machinery — and because it's a useful structural contrast: this project's own replication work asks what changes when you strip lifetime learning out of the picture entirely and vary reproductive and migratory structure instead.
+That's why this page is filed under **Evolved Cooperation** rather than alongside its same-authors predecessor: the adaptive mechanism under study is pure selection acting on population structure, not learning. Readers arriving from [Ackley & Littman (1991)](/learning-selection-interaction/ackley-littman-1991) should treat this as a related but structurally distinct sequel — same authors, same "World AL" lineage, a genuinely different question, and a useful contrast for this site's own replication work: what changes when you strip lifetime learning out of the picture entirely and vary reproductive and migratory structure instead.
 
 ## 8. This site's from-scratch replication
 
