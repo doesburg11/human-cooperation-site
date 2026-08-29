@@ -133,6 +133,8 @@ This introduces:
 
 Such settings are closer to natural systems than matrix games.
 
+This distinction was formalized directly by Leibo, Zambaldi, Lanctot, Marecki & Graepel (2017): a **Sequential Social Dilemma** is a Markov game whose cooperative-vs-defecting *policies* — not atomic actions — reproduce the payoff inequalities of a classical matrix dilemma once you empirically extract them. See [The Leibo et al. (2017) Sequential Social Dilemmas](/learned-cooperation/leibo2017) for a from-scratch replication of their two environments (Gathering, Wolfpack) and their independent-DQN method.
+
 ---
 
 ## Learned Cooperation in PredPreyGrass
@@ -238,7 +240,8 @@ So the right starting point is:
 1. [Prisoner's Dilemma: defection as baseline](/learned-cooperation/prisoners-dilemma)
 2. [Repeated Prisoner's Dilemma Theory: when reciprocity can become rational](/learned-cooperation/repeated-prisoners-dilemma)
 3. [Repeated Prisoner's Dilemma PPO Study: independent PPO on the repeated game](/learned-cooperation/repeated-prisoners-dilemma/ppo-study)
-4. [General learned-cooperation theory in ecological systems](/learned-cooperation)
+4. [The Leibo et al. (2017) Sequential Social Dilemmas: from atomic actions to policies over trajectories](/learned-cooperation/leibo2017)
+5. [General learned-cooperation theory in ecological systems](/learned-cooperation)
 
 ## What This Gives You
 

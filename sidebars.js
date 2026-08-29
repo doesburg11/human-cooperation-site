@@ -60,6 +60,14 @@ export default {
                 'learned-cooperation/repeated-prisoners-dilemma/ppo-study',
               ],
             },
+            {
+              type: 'category',
+              label: 'Foundational Replications',
+              collapsed: true,
+              items: [
+                'learned-cooperation/foundational-replications/leibo2017',
+              ],
+            },
           ],
         },
         {
