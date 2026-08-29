@@ -352,6 +352,14 @@ This case study gives a conditional answer to the question of how cooperation ca
 
 This model's relationship to Nowak's five mechanisms for the evolution of cooperation is not a single clean match. It depends on whether the question is about the *mechanics* of the implementation or about the *authors' own theoretical claim* for what those mechanics prove. Both are worth stating explicitly, because they point at different pages on this site.
 
+Stated plainly: Spatial Altruism touches three of Nowak's five mechanisms at once, each in a different sense of "touches":
+
+- **[Network Reciprocity](/evolved-cooperation/network-reciprocity) — an implementation match.** Read the code and this is what it looks like: a lattice, purely local interaction, no memory, no reputation, no explicit lineage tracking.
+- **[Group Selection](/evolved-cooperation/group-selection) — a theoretical/rhetorical match.** The code never partitions the lattice into discrete groups, but the authors explicitly argue their result as one — altruist patches out-reproducing non-altruist patches by sustaining higher density is a between-group-productivity story, and re-opening the group-selection debate is the stated point of the paper.
+- **[Kin Selection](/evolved-cooperation/kin-selection) — a mathematical match, in the plain baseline case only.** With `harshness` and `disease` both at `0`, the model's own `b > 5c` viability threshold is a direct Hamilton's-rule derivation with relatedness `r = 1/5` — no lineage tracking required, because the geometry of the five-site neighborhood does it for free.
+
+It is not that the model "is" all three mechanisms simultaneously; it is that a single concrete model can be entered from three different angles depending on whether the question is what the code does, what the authors claim, or what the underlying math is in the simplest case. The three subsections below spell out each of those in full, with direct quotes from the paper.
+
 ### Network Reciprocity — the mechanical match
 
 [Network Reciprocity](/evolved-cooperation/network-reciprocity) is the closest implementation-level relative. Both models share the same minimal ingredients: a lattice, purely local interaction, no memory, no reputation, no explicit lineage tracking. Cooperation, or its absence, is decided entirely by who is spatially adjacent to whom. Where they differ is scope: this page implements one specific historical model, Mitteldorf & Wilson (2000), with its own three-state lottery rule, while the Network Reciprocity page implements one of five matched, idealized routing-kernel Moran models built for direct, apples-to-apples comparison against the other four Nowak mechanisms.
