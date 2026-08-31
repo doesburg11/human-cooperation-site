@@ -11,7 +11,7 @@ slug: /learning-selection-interaction/theory
 
 Cooperation, like adaptive behavior generally, can emerge through the interaction of two different adaptive processes — the same nature/nurture distinction long used in biology and psychology, applied here in a specific, simulatable form:
 
-- **Nurture** — within-lifetime learning (behavioral plasticity, reinforcement learning) is the specific mechanism this framework operationalizes and simulates. "Nurture" itself is broader than learning — it covers any non-genetic developmental influence (nutrition, epigenetics, culture, parental care) — but learning is the one instance modeled directly here.
+- **Nurture** — within-lifetime learning (behavioral plasticity, reinforcement learning) is the specific mechanism this framework operationalizes and simulates. "Nurture" itself is broader than learning: it also covers cultural inheritance (language, norms, technology transmitted across generations), developmental/epigenetic inheritance (non-genetic biological carryover such as maternal effects), and material/economic inheritance (property, wealth, and built infrastructure passed down) — see the full breakdown in the [mindmap](/learning-selection-interaction/interaction-evolved-learned-cooperation/mindmap). Learning is the one instance modeled directly here.
 - **Nature** — selection across generations (evolutionary dynamics).
 
 These processes operate on entirely different timescales:

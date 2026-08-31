@@ -61,6 +61,16 @@ export const natureNurtureOutline = `
   - 🧮 [An Evolutionary Model of Social Learning: The Effects of Spatial and Temporal Variation](https://www.researchgate.net/publication/233820578_An_evolutionary_model_of_social_learning_The_effects_of_spatial_and_temporal_variation) - Boyd & Richerson (1988)
   - 🧮 [The Evolution of Conformist Transmission and the Emergence of Between-Group Differences](https://www.sciencedirect.com/science/article/abs/pii/S109051389800018X) - Henrich & Boyd (1998)
   - 🧮 [The Evolution of Cultural Evolution](https://doi.org/10.1002/evan.10110) - Henrich & McElreath (2003)
+- Developmental & Epigenetic Inheritance
+  - Non-genetic biological carryover from parent to offspring: maternal effects, prenatal environment, environmentally-induced marks on gene expression that outlive one lifetime without changing the DNA sequence
+  - Conceptual/literature only - not currently modeled computationally in this project's simulations
+  - 📖 [Epigenetic Inheritance and Evolution: The Lamarckian Dimension](https://academic.oup.com/book/35924) - Jablonka & Lamb (1995)
+  - See also [Epigenetic Inheritance](/learning-selection-interaction/baldwin-effect#13-related-but-distinct-other-bridges-between-nature-and-nurture) as one of the Baldwin effect's neighboring bridge mechanisms
+- Material & Economic Inheritance
+  - Non-behavioral transmission of property, wealth, and built environment across generations: land, livestock, infrastructure, discretionary bequests
+  - Conceptual/literature only - not currently modeled computationally in this project's simulations
+  - 📖 [Intergenerational Wealth Transmission and the Dynamics of Inequality in Small-Scale Societies](https://doi.org/10.1126/science.1178336) - Borgerhoff Mulder et al. (2009), distinguishes embodied, material, and relational wealth
+  - Overlaps with [Niche Construction](/learning-selection-interaction/baldwin-effect#13-related-but-distinct-other-bridges-between-nature-and-nurture) - the general ecological version of the same idea, environment modification rather than property specifically
 
 ## Nature & Nurture Hybrids
 - Cut across both the Nature and Nurture branches above
@@ -86,6 +96,6 @@ export const natureNurtureOutline = `
 
 # Mindmap
 
-A visual, foldable overview of the concepts covered on the [Interaction Evolved-Learned Cooperation](/learning-selection-interaction/theory) page. **Nature vs Nurture** (plus a **Hybrids** branch) is the top-level split. Within Nurture, algorithms are grouped under **Life-time Learning** (behavior acquired within an agent's own lifetime, whether alone or amid other learning agents) and **Cultural Inheritance** (behavior transmitted across generations); Life-time Learning further splits into **Individual** and **Multi-Agent** contexts. In Nature and Hybrids, each algorithm is instead tagged 🧍 individual-level or 👥 multi-agent / social. Each reference is tagged 📖 core / foundational or 🧮 computational / formal / simulation. Click a node's circle to expand or collapse its branch, click its label to jump to that section, and drag or scroll to pan and zoom.
+A visual, foldable overview of the concepts covered on the [Interaction Evolved-Learned Cooperation](/learning-selection-interaction/theory) page. **Nature vs Nurture** (plus a **Hybrids** branch) is the top-level split. Within Nurture, algorithms are grouped under **Life-time Learning** (behavior acquired within an agent's own lifetime, whether alone or amid other learning agents) and **Cultural Inheritance** (behavior transmitted across generations); Life-time Learning further splits into **Individual** and **Multi-Agent** contexts. Two further branches, **Developmental & Epigenetic Inheritance** and **Material & Economic Inheritance**, round out Nurture beyond learning and culture — these are conceptual/literature branches rather than algorithms this project currently models. In Nature and Hybrids, each algorithm is instead tagged 🧍 individual-level or 👥 multi-agent / social. Each reference is tagged 📖 core / foundational or 🧮 computational / formal / simulation. Click a node's circle to expand or collapse its branch, click its label to jump to that section, and drag or scroll to pan and zoom.
 
 <InteractionMindmap markdown={natureNurtureOutline} height="720px" />
