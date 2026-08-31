@@ -30,6 +30,8 @@ export const natureNurtureOutline = `
 ## [Nurture](/learning-selection-interaction/theory#fast-timescale--learning)
 - Life-time Learning
   - Behavior is acquired within a lifetime from experience and feedback
+  - 📖 Operant Conditioning - [The Behavior of Organisms: An Experimental Analysis](https://www.bfskinner.org/wp-content/uploads/2016/02/BoO.pdf) - Skinner (1938)
+  - 📖 Rescorla-Wagner Model - A Theory of Pavlovian Conditioning: Variations in the Effectiveness of Reinforcement and Nonreinforcement - Rescorla & Wagner (1972)
   - Individual
     - Q-learning - [Learning from Delayed Rewards](https://www.cs.rhul.ac.uk/~chrisw/thesis.html) - Watkins (1989)
     - Temporal-Difference Learning - [Learning to Predict by the Methods of Temporal Differences](https://doi.org/10.1007/BF00115009) - Sutton (1988)
@@ -61,15 +63,22 @@ export const natureNurtureOutline = `
   - 🧮 [An Evolutionary Model of Social Learning: The Effects of Spatial and Temporal Variation](https://www.researchgate.net/publication/233820578_An_evolutionary_model_of_social_learning_The_effects_of_spatial_and_temporal_variation) - Boyd & Richerson (1988)
   - 🧮 [The Evolution of Conformist Transmission and the Emergence of Between-Group Differences](https://www.sciencedirect.com/science/article/abs/pii/S109051389800018X) - Henrich & Boyd (1998)
   - 🧮 [The Evolution of Cultural Evolution](https://doi.org/10.1002/evan.10110) - Henrich & McElreath (2003)
+  - 🧮 [Culture-gene coevolution, norm-psychology and the emergence of human prosociality](https://doi.org/10.1016/j.tics.2011.03.003) - Chudek & Henrich (2011)
+  - 📖 [Cultural group selection plays an essential role in explaining human cooperation: A sketch of the evidence](https://doi.org/10.1017/S0140525X1400106X) - Richerson et al. (2016)
+  - 📖 [Cultural Evolution: How Darwinian Theory Can Explain Human Culture and Synthesize the Social Sciences](https://press.uchicago.edu/ucp/books/book/chicago/C/bo8787504.html) - Mesoudi (2011)
 - Developmental & Epigenetic Inheritance
   - Non-genetic biological carryover from parent to offspring: maternal effects, prenatal environment, environmentally-induced marks on gene expression that outlive one lifetime without changing the DNA sequence
   - Conceptual/literature only - not currently modeled computationally in this project's simulations
   - 📖 [Epigenetic Inheritance and Evolution: The Lamarckian Dimension](https://academic.oup.com/book/35924) - Jablonka & Lamb (1995)
+  - 🧮 [Epigenetic programming by maternal behavior](https://doi.org/10.1038/nn1276) - Weaver et al. (2004), maternal care shifts DNA methylation of the glucocorticoid receptor gene in offspring
+  - 🧮 [Transgenerational response to nutrition, early life circumstances and longevity](https://doi.org/10.1038/sj.ejhg.5201832) - Kaati, Bygren, Pembrey & Sjöström (2007), the Överkalix cohort data
   - See also [Epigenetic Inheritance](/learning-selection-interaction/baldwin-effect#13-related-but-distinct-other-bridges-between-nature-and-nurture) as one of the Baldwin effect's neighboring bridge mechanisms
 - Material & Economic Inheritance
   - Non-behavioral transmission of property, wealth, and built environment across generations: land, livestock, infrastructure, discretionary bequests
   - Conceptual/literature only - not currently modeled computationally in this project's simulations
   - 📖 [Intergenerational Wealth Transmission and the Dynamics of Inequality in Small-Scale Societies](https://doi.org/10.1126/science.1178336) - Borgerhoff Mulder et al. (2009), distinguishes embodied, material, and relational wealth
+  - 🧮 [Production Systems, Inheritance, and Inequality in Premodern Societies](https://doi.org/10.1086/649029) - Smith, Borgerhoff Mulder, Bowles et al. (2010), breaks inheritance down by foraging, horticultural, pastoral, and agricultural production systems
+  - 📖 [The Inheritance of Inequality](https://doi.org/10.1257/089533002760278686) - Bowles & Gintis (2002), the economics-side mechanisms behind intergenerational wealth transmission
   - Overlaps with [Niche Construction](/learning-selection-interaction/baldwin-effect#13-related-but-distinct-other-bridges-between-nature-and-nurture) - the general ecological version of the same idea, environment modification rather than property specifically
 
 ## Nature & Nurture Hybrids
