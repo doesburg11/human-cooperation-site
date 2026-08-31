@@ -31,25 +31,19 @@ const NODE_BOX_RADIUS = 10;
 // Same blue as the homepage's hero banner, for a consistent house style.
 const NODE_FILL = '#0f3368';
 const NODE_TEXT_COLOR = '#ffffff';
-// Literature/citation nodes (🧍 👥 📖 🧮 entries citing a paper) get an
+// Literature/citation nodes (leaf nodes that cite a paper or book) get an
 // inverted, reference-list look instead of the solid navy concept-node fill.
 const LITERATURE_FILL = '#ffffff';
 const LITERATURE_TEXT_COLOR = '#000000';
 const LITERATURE_UNDERLINE_COLOR = '#0f3368';
 
-// A node counts as "literature" when it's tagged with one of the four
-// citation markers *and* actually cites a work (an external link, a year in
-// parens, or "(book)") — this excludes tagged-but-non-citation nodes like
-// "Inherited Predispositions".
+// A node counts as "literature" when it actually cites a work: an external
+// link, or a year in parens / "(book)". Concept/algorithm-name nodes (e.g.
+// "NEAT", "Kin Selection") sit one level up and never match this on their
+// own — the outline nests each named concept's citation as a child node
+// specifically so that split holds.
 function isLiteratureNode(html) {
-  // markmap's markdown-it renderer emits emoji as numeric HTML entities
-  // (e.g. "&#x1f9cd;"), not the literal character, and wraps content in a
-  // block tag — so the citation marker is neither literal nor first.
-  const text = html
-    .replace(/<[^>]+>/g, '')
-    .replace(/&#x([0-9a-fA-F]+);/g, (_, hex) => String.fromCodePoint(parseInt(hex, 16)))
-    .replace(/&#(\d+);/g, (_, dec) => String.fromCodePoint(parseInt(dec, 10)));
-  if (!/^\s*(🧍|👥|📖|🧮)/.test(text)) return false;
+  const text = html.replace(/<[^>]+>/g, '');
   if (/<a\s+[^>]*href="https?:\/\//.test(html)) return true;
   if (/\(\d{4}(s(-\d{2}s)?)?\)|\(book\)/.test(text)) return true;
   return false;
