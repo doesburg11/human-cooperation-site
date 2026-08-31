@@ -185,13 +185,12 @@ Across this body of work, no single framework we are aware of combines all of: a
   <div className="site-table-scroll">
   <table className="site-table site-table--striped site-table--wide">
     <colgroup>
-      <col style={{ width: '22%' }} />
-      <col style={{ width: '13%' }} />
-      <col style={{ width: '13%' }} />
-      <col style={{ width: '13%' }} />
-      <col style={{ width: '13%' }} />
-      <col style={{ width: '13%' }} />
-      <col style={{ width: '13%' }} />
+      <col style={{ width: '20%' }} />
+      <col style={{ width: '16%' }} />
+      <col style={{ width: '16%' }} />
+      <col style={{ width: '16%' }} />
+      <col style={{ width: '16%' }} />
+      <col style={{ width: '16%' }} />
     </colgroup>
     <thead>
       <tr>
