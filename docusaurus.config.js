@@ -40,10 +40,9 @@ const config = {
     'https://cdn.jsdelivr.net/npm/katex@0.16.33/dist/katex.min.css',
   ],
 
-  organizationName: 'doesburg11', 
-  projectName: 'human-cooperation-site', 
+  organizationName: 'doesburg11',
+  projectName: 'human-cooperation-site',
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
 
   i18n: {
     defaultLocale: 'en',
@@ -52,6 +51,9 @@ const config = {
 
   markdown: {
     mermaid: true,
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
   },
   themes: [
     '@docusaurus/theme-mermaid',
