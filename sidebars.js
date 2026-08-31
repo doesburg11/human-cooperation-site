@@ -121,7 +121,6 @@ export default {
       items: [
         'learning-selection-interaction/interaction-evolved-learned-cooperation/research-log/darwin-baldwin-trial-log',
         'learning-selection-interaction/interaction-evolved-learned-cooperation/research-log/related-research-predpreygrass',
-        'learning-selection-interaction/interaction-evolved-learned-cooperation/research-log/mindmap',
         'archive/archive-overview',
       ],
     },

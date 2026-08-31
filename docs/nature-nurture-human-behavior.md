@@ -14,7 +14,7 @@ This project studies human behavior as a two-timescale problem: some behavioral 
 
 - **Nurture** → behavior acquired within a lifetime through learning and experience
 
-Nurture here is shorthand for lifetime learning, the mechanism this project models directly. The broader concept also includes cultural inheritance, developmental/epigenetic inheritance, and material/economic inheritance (property, infrastructure, bequests) — see the [full Nurture taxonomy](/learning-selection-interaction/interaction-evolved-learned-cooperation/mindmap) for how those fit together.
+Nurture here is shorthand for lifetime learning, the mechanism this project models directly. The broader concept also includes cultural inheritance, developmental/epigenetic inheritance, and material/economic inheritance (property, infrastructure, bequests) — see the [full Nurture taxonomy](/learning-selection-interaction/related-research-predpreygrass#mindmap) for how those fit together.
 
 Cooperation is this project's flagship case study of that mechanism. It is one of the most distinctively human behavioral patterns — the load-bearing pattern behind families, institutions, and large-scale society — and one of the richest testbeds for watching nature and nurture interact in practice. The rest of this site develops that case study in depth: how cooperative tendencies can evolve, how they can be learned, and how the two timescales combine to produce it.
 
