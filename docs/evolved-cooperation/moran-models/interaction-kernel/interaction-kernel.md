@@ -8,9 +8,7 @@ slug: /evolved-cooperation/interaction-kernel
 ## Status
 
 <div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '1rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>
-  <p style={{ margin: '0' }}>
-    <strong style={{ color: '#0F3368' }}>Implemented abstraction.</strong> This page describes the <code>interaction_kernel/</code> package in the sibling <a href="https://github.com/doesburg11/EvolvedCooperation">EvolvedCooperation</a> repository. It is a reusable kernel engine, not a website replay case study.
-  </p>
+  <p style={{ margin: '0' }}><strong style={{ color: '#0F3368' }}>Implemented abstraction.</strong> This page describes the <code>interaction_kernel/</code> package in the sibling <a href="https://github.com/doesburg11/EvolvedCooperation">EvolvedCooperation</a> repository. It is a reusable kernel engine, not a website replay case study.</p>
 </div>
 
 `interaction_kernel/` replaces the earlier feedback-kernel design note with a concrete implementation that routes positive and negative effects through explicit kernels before selection.
@@ -347,9 +345,7 @@ Interpretation:
 So the generalized law is no longer just about cooperation. It becomes:
 
 <div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '1rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>
-  <p style={{ margin: '0' }}>
-    <strong style={{ color: '#0F3368' }}>Generalized law.</strong> An action is favored when its feedback-weighted marginal positive effects, minus its feedback-weighted marginal negative effects, including routed effects that return after delay, improve expected selection success enough to outweigh its marginal private cost.
-  </p>
+  <p style={{ margin: '0' }}><strong style={{ color: '#0F3368' }}>Generalized law.</strong> An action is favored when its feedback-weighted marginal positive effects, minus its feedback-weighted marginal negative effects, including routed effects that return after delay, improve expected selection success enough to outweigh its marginal private cost.</p>
 </div>
 
 ## Why This Generalization Matters

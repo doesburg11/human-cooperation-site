@@ -200,12 +200,7 @@ If tit-for-tat is active, the remembered response in the relevant directional sl
 
 For one pairwise encounter, the payoff matrix is:
 
-<p>
-CC = 3.0<br />
-CD = -1.0<br />
-DC = 5.0<br />
-DD = 0.0
-</p>
+<p>CC = 3.0<br />CD = -1.0<br />DC = 5.0<br />DD = 0.0</p>
 
 Interpretation:
 

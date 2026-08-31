@@ -10,9 +10,7 @@ slug: /learning-selection-interaction/simulations
 These pages document the simulation suite implemented in the companion repository and summarize what each model contributes.
 
 <div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '1rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>
-	<p style={{ margin: '0' }}>
-		<strong style={{ color: '#0F3368' }}>Working definition.</strong> These simulations test how within-lifetime learning and between-generation selection jointly shape cooperation under controlled social interaction structures.
-	</p>
+	<p style={{ margin: '0' }}><strong style={{ color: '#0F3368' }}>Working definition.</strong> These simulations test how within-lifetime learning and between-generation selection jointly shape cooperation under controlled social interaction structures.</p>
 </div>
 
 The common architecture is:

@@ -12,9 +12,7 @@ import EvolvedCooperationCaseStudiesTable from '@site/src/components/EvolvedCoop
 Evolved cooperation refers to cooperative behavior that becomes more common **through natural selection across generations**, rather than through adaptation during a single lifetime.
 
 <div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '1rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>
-  <p style={{ margin: '0' }}>
-    <strong style={{ color: '#0F3368' }}>Working definition.</strong> Evolved cooperation concerns the spread and maintenance of cooperative traits through differential survival and reproduction across generations, rather than through within-lifetime learning alone.
-  </p>
+  <p style={{ margin: '0' }}><strong style={{ color: '#0F3368' }}>Working definition.</strong> Evolved cooperation concerns the spread and maintenance of cooperative traits through differential survival and reproduction across generations, rather than through within-lifetime learning alone.</p>
 </div>
 
 In this framework, populations:

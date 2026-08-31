@@ -301,9 +301,7 @@ In other words:
 On this page, **feedback** does not mean only a verbal response, praise, or a conscious social reaction. It means any **causal return channel** by which the consequences of cooperation flow back toward the cooperator, its partners, or copies of the cooperative rule rather than being lost through evolutionary leakage to unrelated or weakly coupled recipients.
 
 <div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '1rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>
-  <p style={{ margin: '0' }}>
-    <strong style={{ color: '#0F3368' }}>Working definition.</strong> Here, feedback means any process that makes the benefits or downstream consequences of cooperation return non-randomly to cooperators, their partners, or their lineage, so that cooperation improves its own future persistence rather than being lost through evolutionary leakage to unrelated or weakly coupled recipients.
-  </p>
+  <p style={{ margin: '0' }}><strong style={{ color: '#0F3368' }}>Working definition.</strong> Here, feedback means any process that makes the benefits or downstream consequences of cooperation return non-randomly to cooperators, their partners, or their lineage, so that cooperation improves its own future persistence rather than being lost through evolutionary leakage to unrelated or weakly coupled recipients.</p>
 </div>
 
 Here, <strong>weakly coupled recipients</strong> means recipients whose gain does not feed back strongly enough into the actor's inclusive fitness, lineage persistence, or recurrence of the cooperative rule, even if they are nearby or benefit in the short run.
