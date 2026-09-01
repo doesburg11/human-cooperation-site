@@ -8,10 +8,10 @@ slug: /evolved-cooperation/interaction-kernel
 ## Status
 
 <div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '1rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>
-  <p style={{ margin: '0' }}><strong style={{ color: '#0F3368' }}>Implemented abstraction.</strong> This page describes the <code>interaction_kernel/</code> package in the sibling <a href="https://github.com/doesburg11/EvolvedCooperation">EvolvedCooperation</a> repository. It is a reusable kernel engine, not a website replay case study.</p>
+  <p style={{ margin: '0' }}><strong style={{ color: '#0F3368' }}>Implemented abstraction.</strong> This page describes the <a href="https://github.com/doesburg11/EvolvedCooperation/tree/main/moran_models/interaction_kernel"><code>interaction_kernel/</code></a> package in the sibling <a href="https://github.com/doesburg11/EvolvedCooperation">EvolvedCooperation</a> repository. It is a reusable kernel engine, not a website replay case study.</p>
 </div>
 
-`interaction_kernel/` replaces the earlier feedback-kernel design note with a concrete implementation that routes positive and negative effects through explicit kernels before selection.
+[`interaction_kernel/`](https://github.com/doesburg11/EvolvedCooperation/tree/main/moran_models/interaction_kernel) replaces the earlier feedback-kernel design note with a concrete implementation that routes positive and negative effects through explicit kernels before selection.
 
 ## Why This Kernel Exists
 
@@ -604,7 +604,7 @@ Different biological or social theories would mainly differ in the specific form
 
 ## Python Module Layout
 
-The canonical implementation lives as a module in the sibling <code>EvolvedCooperation</code> repository, under <code>moran_models/interaction_kernel/</code>.
+The canonical implementation lives as a module in the sibling <code>EvolvedCooperation</code> repository, under <a href="https://github.com/doesburg11/EvolvedCooperation/tree/main/moran_models/interaction_kernel"><code>moran_models/interaction_kernel/</code></a>.
 
 ```text
 moran_models/interaction_kernel/
