@@ -5,9 +5,11 @@ sidebar_position: 11
 slug: /learning-selection-interaction/ackley-littman-1991
 ---
 
+import GithubLink from '@site/src/components/GithubLink';
+
 # The Ackley & Littman (1991) Algorithm
 
-Source code: [AckleyLittman1991](https://github.com/doesburg11/AckleyLittman1991) repository.
+<GithubLink href="https://github.com/doesburg11/AckleyLittman1991" />
 
 ## 1. The question the paper asks
 

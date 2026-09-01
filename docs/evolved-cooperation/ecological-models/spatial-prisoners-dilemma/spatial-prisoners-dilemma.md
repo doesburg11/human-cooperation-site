@@ -7,10 +7,11 @@ slug: /evolved-cooperation/spatial-prisoners-dilemma
 
 import EvolvedCooperationCaseStudiesTable from '@site/src/components/EvolvedCooperationCaseStudiesTable';
 import SpatialPrisonersDilemmaReplay from '@site/src/components/SpatialPrisonersDilemmaReplay';
+import GithubLink from '@site/src/components/GithubLink';
 
 Spatial Prisoner's Dilemma is the local-game evolved-cooperation case study on this site. It asks **what kinds of inherited response rules spread when agents repeatedly face a local Prisoner's Dilemma, can move only when isolated, and reproduce into nearby empty cells using the energy they accumulated from those games?**
 
-Source code: [`spatial_prisoners_dilemma` module](https://github.com/doesburg11/EvolvedCooperation/tree/main/ecological_models/spatial_prisoners_dilemma) in the [EvolvedCooperation](https://github.com/doesburg11/EvolvedCooperation) repository.
+<GithubLink href="https://github.com/doesburg11/EvolvedCooperation/tree/main/ecological_models/spatial_prisoners_dilemma" />
 
 Related project: [zeyus-research/FLAMEGPU2-Prisoners-Dilemma-ABM](https://github.com/zeyus-research/FLAMEGPU2-Prisoners-Dilemma-ABM).
 

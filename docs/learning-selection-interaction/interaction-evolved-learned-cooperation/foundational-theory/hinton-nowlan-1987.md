@@ -6,10 +6,11 @@ slug: /learning-selection-interaction/hinton-nowlan-1987
 ---
 
 import BaldwinNeedleHaystack from '@site/src/components/BaldwinNeedleHaystack';
+import GithubLink from '@site/src/components/GithubLink';
 
 # The Hinton & Nowlan (1987) Algorithm
 
-Source code: [HintonNowlan1987](https://github.com/doesburg11/HintonNowlan1987) repository.
+<GithubLink href="https://github.com/doesburg11/HintonNowlan1987" />
 
 ## 1. The question the paper asks
 

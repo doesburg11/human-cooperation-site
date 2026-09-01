@@ -5,9 +5,11 @@ sidebar_position: 1
 slug: /learned-cooperation/leibo2017
 ---
 
+import GithubLink from '@site/src/components/GithubLink';
+
 # The Leibo et al. (2017) Sequential Social Dilemmas
 
-Source code: [Leibo2017](https://github.com/doesburg11/Leibo2017) repository.
+<GithubLink href="https://github.com/doesburg11/Leibo2017" />
 
 ## 1. The question the paper asks
 

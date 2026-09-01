@@ -5,9 +5,11 @@ sidebar_position: 1
 slug: /evolved-cooperation/ackley-littman-1994
 ---
 
+import GithubLink from '@site/src/components/GithubLink';
+
 # The Ackley & Littman (1994) Algorithm
 
-Source code: [AckleyLittman1994](https://github.com/doesburg11/AckleyLittman1994) repository.
+<GithubLink href="https://github.com/doesburg11/AckleyLittman1994" />
 
 ## 1. The question the paper asks
 

@@ -7,10 +7,11 @@ slug: /evolved-cooperation/cooperative-hunting
 
 import EvolvedCooperationCaseStudiesTable from '@site/src/components/EvolvedCooperationCaseStudiesTable';
 import CooperativeHuntingReplay from '@site/src/components/CooperativeHuntingReplay';
+import GithubLink from '@site/src/components/GithubLink';
 
 Cooperative Hunting is the more ecological evolved-cooperation case study on this site. It asks **how a costly inherited tendency to invest in group hunting can spread when each predator pays the cost privately, but the payoff arrives only through successful shared hunts.**
 
-Source code: [`cooperative_hunting` module](https://github.com/doesburg11/EvolvedCooperation/tree/main/ecological_models/cooperative_hunting) in the [EvolvedCooperation](https://github.com/doesburg11/EvolvedCooperation) repository.
+<GithubLink href="https://github.com/doesburg11/EvolvedCooperation/tree/main/ecological_models/cooperative_hunting" />
 
 ## The Puzzle
 

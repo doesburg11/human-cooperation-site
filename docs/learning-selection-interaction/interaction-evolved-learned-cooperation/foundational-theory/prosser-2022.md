@@ -5,9 +5,11 @@ sidebar_position: 13
 slug: /learning-selection-interaction/prosser-2022
 ---
 
+import GithubLink from '@site/src/components/GithubLink';
+
 # The Prosser (2022) Models
 
-Source code: [Prosser2022](https://github.com/doesburg11/Prosser2022) repository.
+<GithubLink href="https://github.com/doesburg11/Prosser2022" />
 
 ## 1. The question the thesis asks
 
