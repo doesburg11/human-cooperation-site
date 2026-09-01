@@ -8,9 +8,9 @@ slug: /evolved-cooperation/spatial-altruism
 import SpatialAltruismReplay from '@site/src/components/SpatialAltruismReplay';
 import GithubLink from '@site/src/components/GithubLink';
 
-Spatial Altruism is this site's foundational replication of Mitteldorf & Wilson's (2000) population-viscosity model. It asks a deceptively simple question: **how can an altruistic inherited trait survive when selfish competitors enjoy the same local benefit without paying the altruist cost?**
-
 <GithubLink href="https://github.com/doesburg11/EvolvedCooperation/tree/main/ecological_models/spatial_altruism" />
+
+Spatial Altruism is this site's foundational replication of Mitteldorf & Wilson's (2000) population-viscosity model. It asks a deceptively simple question: **how can an altruistic inherited trait survive when selfish competitors enjoy the same local benefit without paying the altruist cost?**
 
 The page is easiest to read as a sequence: first the baseline case in which selfishness wins, then the local update rule that produces that result, then the harsher setting in which altruist clusters can survive better.
 
