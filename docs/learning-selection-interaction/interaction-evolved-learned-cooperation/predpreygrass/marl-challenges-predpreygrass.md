@@ -94,6 +94,6 @@ That choice has a consequence for what "solving" PredPreyGrass even means. There
 
 ## References
 
-- Comer, K. W. (2014). *Who Goes First? An Examination of the Impact of Activation on Outcome Behavior in Agent-Based Models* [Doctoral dissertation, George Mason University]. https://mars.gmu.edu/items/3ffb9ab2-7f5d-48e4-81cf-01465d272fe1
+- Comer, K. W. (2014). *Who Goes First? An Examination of the Impact of Activation on Outcome Behavior in Agent-Based Models* [Doctoral dissertation, George Mason University]. http://complexityexplorer.s3.amazonaws.com/Mesa+ABM/Comer_gmu_0883E_10539.pdf
 - Shoham, Y., Powers, R., & Grenager, T. (2007). *If multi-agent learning is the answer, what is the question?* *Artificial Intelligence*, 171(1), 365-377. https://doi.org/10.1016/j.artint.2006.02.006
 - Van Valen, L. (1973). *A new evolutionary law*. *Evolutionary Theory*, 1, 1-30.

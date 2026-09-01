@@ -65,7 +65,7 @@ export const natureNurtureOutline = `
     - Deep Q-Networks
       - [Human-level control through deep reinforcement learning](https://doi.org/10.1038/nature14236) - Mnih et al. (2015)
     - Bayesian Updating
-      - [A Bayesian Framework for Reinforcement Learning](https://doi.org/10.5555/645529.658114) - Strens (2000)
+      - [A Bayesian Framework for Reinforcement Learning](https://www.semanticscholar.org/paper/A-Bayesian-Framework-for-Reinforcement-Learning-Strens/48cce5ee49facf75eeb12832c387452424b645dd) - Strens (2000)
   - Multi-Agent
     - Independent Q-learning
       - [Multi-Agent Reinforcement Learning: Independent versus Cooperative Agents](https://doi.org/10.1016/B978-1-55860-307-3.50049-6) - Tan (1993)

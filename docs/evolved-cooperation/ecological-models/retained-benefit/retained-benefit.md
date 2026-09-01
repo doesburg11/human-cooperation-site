@@ -234,10 +234,10 @@ The browser replay below is based on sampled frames from that same frozen config
 
 The canonical implementation and export logic live in the [EvolvedCooperation](https://github.com/doesburg11/EvolvedCooperation) repository:
 
-- [Module directory](https://github.com/doesburg11/EvolvedCooperation/tree/main/retained_benefit)
-- [Core model](https://github.com/doesburg11/EvolvedCooperation/blob/main/retained_benefit/retained_benefit_model.py)
-- [Frozen website-demo config](https://github.com/doesburg11/EvolvedCooperation/blob/main/retained_benefit/config/retained_benefit_website_demo_config.py)
-- [Replay exporter](https://github.com/doesburg11/EvolvedCooperation/blob/main/retained_benefit/utils/export_github_pages_demo.py)
+- [Module directory](https://github.com/doesburg11/EvolvedCooperation/tree/main/ecological_models/retained_benefit)
+- [Core model](https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/retained_benefit/retained_benefit_model.py)
+- [Frozen website-demo config](https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/retained_benefit/config/retained_benefit_website_demo_config.py)
+- [Replay exporter](https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/retained_benefit/utils/export_github_pages_demo.py)
 
 <RetainedBenefitReplay />
 
@@ -386,4 +386,4 @@ like in general.
 - Hamilton, W. D. (1964). *The genetical evolution of social behaviour. I*. *Journal of Theoretical Biology*, 7(1), 1-16. https://doi.org/10.1016/0022-5193(64)90038-4
 - Nowak, M. A. (2006). *Five rules for the evolution of cooperation*. *Science*, 314(5805), 1560-1563. https://doi.org/10.1126/science.1133755
 - West, S. A., Griffin, A. S., & Gardner, A. (2007). *Evolutionary explanations for cooperation*. *Current Biology*, 17(16), R661-R672. https://doi.org/10.1016/j.cub.2007.06.004
-- [EvolvedCooperation retained_benefit module](https://github.com/doesburg11/EvolvedCooperation/tree/main/retained_benefit)
+- [EvolvedCooperation retained_benefit module](https://github.com/doesburg11/EvolvedCooperation/tree/main/ecological_models/retained_benefit)

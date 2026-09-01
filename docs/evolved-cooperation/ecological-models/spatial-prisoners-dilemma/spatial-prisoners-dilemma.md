@@ -124,10 +124,10 @@ The browser replay below is based on sampled frames from that same frozen config
 
 The canonical implementation and supporting export logic live in the [EvolvedCooperation](https://github.com/doesburg11/EvolvedCooperation) repository:
 
-- [Module directory](https://github.com/doesburg11/EvolvedCooperation/tree/main/spatial_prisoners_dilemma)
-- [Core model](https://github.com/doesburg11/EvolvedCooperation/blob/main/spatial_prisoners_dilemma/spatial_prisoners_dilemma.py)
-- [Frozen website-demo config](https://github.com/doesburg11/EvolvedCooperation/blob/main/spatial_prisoners_dilemma/config/spatial_prisoners_dilemma_website_demo_config.py)
-- [Replay exporter](https://github.com/doesburg11/EvolvedCooperation/blob/main/spatial_prisoners_dilemma/utils/export_github_pages_demo.py)
+- [Module directory](https://github.com/doesburg11/EvolvedCooperation/tree/main/ecological_models/spatial_prisoners_dilemma)
+- [Core model](https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/spatial_prisoners_dilemma/spatial_prisoners_dilemma.py)
+- [Frozen website-demo config](https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/spatial_prisoners_dilemma/config/spatial_prisoners_dilemma_website_demo_config.py)
+- [Replay exporter](https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/spatial_prisoners_dilemma/utils/export_github_pages_demo.py)
 
 <SpatialPrisonersDilemmaReplay />
 
@@ -258,5 +258,5 @@ This case study gives a clear local-selection answer to the question of how coop
 ## References
 
 - Axelrod, R., & Hamilton, W. D. (1981). The Evolution of Cooperation. *Science*, 211(4489), 1390-1396. https://doi.org/10.1126/science.7466396
-- doesburg11. (2026). *EvolvedCooperation: spatial_prisoners_dilemma module, frozen website-demo config, and replay exporter*. GitHub. https://github.com/doesburg11/EvolvedCooperation/tree/main/spatial_prisoners_dilemma
+- doesburg11. (2026). *EvolvedCooperation: spatial_prisoners_dilemma module, frozen website-demo config, and replay exporter*. GitHub. https://github.com/doesburg11/EvolvedCooperation/tree/main/ecological_models/spatial_prisoners_dilemma
 - zeyus-research. (n.d.). *FLAMEGPU2-Prisoners-Dilemma-ABM*. GitHub. https://github.com/zeyus-research/FLAMEGPU2-Prisoners-Dilemma-ABM

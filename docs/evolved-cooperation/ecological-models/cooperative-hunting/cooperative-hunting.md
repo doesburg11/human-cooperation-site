@@ -10,6 +10,8 @@ import CooperativeHuntingReplay from '@site/src/components/CooperativeHuntingRep
 
 Cooperative Hunting is the more ecological evolved-cooperation case study on this site. It asks **how a costly inherited tendency to invest in group hunting can spread when each predator pays the cost privately, but the payoff arrives only through successful shared hunts.**
 
+Source code: [`cooperative_hunting` module](https://github.com/doesburg11/EvolvedCooperation/tree/main/ecological_models/cooperative_hunting) in the [EvolvedCooperation](https://github.com/doesburg11/EvolvedCooperation) repository.
+
 ## The Puzzle
 
 This model starts from a genuine tradeoff rather than a free cooperation bonus.
@@ -88,9 +90,9 @@ The browser replay below is based on sampled frames from that same frozen `thres
 
 The canonical implementation and supporting analysis live in the [EvolvedCooperation](https://github.com/doesburg11/EvolvedCooperation) repository:
 
-- [Module directory](https://github.com/doesburg11/EvolvedCooperation/tree/main/cooperative_hunting)
-- [Active runtime](https://github.com/doesburg11/EvolvedCooperation/blob/main/cooperative_hunting/cooperative_hunting.py)
-- [Frozen website-demo config](https://github.com/doesburg11/EvolvedCooperation/blob/main/cooperative_hunting/config/cooperative_hunting_website_demo_config.py)
+- [Module directory](https://github.com/doesburg11/EvolvedCooperation/tree/main/ecological_models/cooperative_hunting)
+- [Active runtime](https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/cooperative_hunting/cooperative_hunting.py)
+- [Frozen website-demo config](https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/cooperative_hunting/config/cooperative_hunting_website_demo_config.py)
 
 <CooperativeHuntingReplay />
 
@@ -254,8 +256,8 @@ This case study gives a clear ecological answer to the question of how cooperati
 
 ## References
 
-- `EvolvedCooperation`. *cooperative_hunting* module directory. GitHub. https://github.com/doesburg11/EvolvedCooperation/tree/main/cooperative_hunting
-- `EvolvedCooperation`. *cooperative_hunting/cooperative_hunting.py*. GitHub. https://github.com/doesburg11/EvolvedCooperation/blob/main/cooperative_hunting/cooperative_hunting.py
-- `EvolvedCooperation`. *cooperative_hunting/config/cooperative_hunting_config.py*. GitHub. https://github.com/doesburg11/EvolvedCooperation/blob/main/cooperative_hunting/config/cooperative_hunting_config.py
-- `EvolvedCooperation`. *cooperative_hunting/config/cooperative_hunting_website_demo_config.py*. GitHub. https://github.com/doesburg11/EvolvedCooperation/blob/main/cooperative_hunting/config/cooperative_hunting_website_demo_config.py
-- `EvolvedCooperation`. *cooperative_hunting/README.md*. GitHub. https://github.com/doesburg11/EvolvedCooperation/blob/main/cooperative_hunting/README.md
+- `EvolvedCooperation`. *cooperative_hunting* module directory. GitHub. https://github.com/doesburg11/EvolvedCooperation/tree/main/ecological_models/cooperative_hunting
+- `EvolvedCooperation`. *cooperative_hunting/cooperative_hunting.py*. GitHub. https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/cooperative_hunting/cooperative_hunting.py
+- `EvolvedCooperation`. *cooperative_hunting/config/cooperative_hunting_config.py*. GitHub. https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/cooperative_hunting/config/cooperative_hunting_config.py
+- `EvolvedCooperation`. *cooperative_hunting/config/cooperative_hunting_website_demo_config.py*. GitHub. https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/cooperative_hunting/config/cooperative_hunting_website_demo_config.py
+- `EvolvedCooperation`. *cooperative_hunting/README.md*. GitHub. https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/cooperative_hunting/README.md
