@@ -261,4 +261,4 @@ This case study gives a clear local-selection answer to the question of how coop
 
 - Axelrod, R., & Hamilton, W. D. (1981). The Evolution of Cooperation. *Science*, 211(4489), 1390-1396. https://doi.org/10.1126/science.7466396
 - doesburg11. (2026). *EvolvedCooperation: spatial_prisoners_dilemma module, frozen website-demo config, and replay exporter*. GitHub. https://github.com/doesburg11/EvolvedCooperation/tree/main/ecological_models/spatial_prisoners_dilemma
-- zeyus-research. (n.d.). *FLAMEGPU2-Prisoners-Dilemma-ABM*. GitHub. https://github.com/zeyus-research/FLAMEGPU2-Prisoners-Dilemma-ABM
+- zeyus-research. (n.d.). *[FLAMEGPU2-Prisoners-Dilemma-ABM](https://github.com/zeyus-research/FLAMEGPU2-Prisoners-Dilemma-ABM)*. GitHub.
