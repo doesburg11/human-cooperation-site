@@ -14,8 +14,6 @@ export default function GithubLink({ href, label = 'View source on GitHub' }) {
         alignItems: 'center',
         gap: '0.4rem',
         margin: '0 0 1.5rem 0',
-        color: 'var(--ifm-color-emphasis-700)',
-        textDecoration: 'none',
       }}
     >
       <span>GitHub code</span>
