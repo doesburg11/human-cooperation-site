@@ -7,6 +7,8 @@ slug: /learned-cooperation/leibo2017
 
 # The Leibo et al. (2017) Sequential Social Dilemmas
 
+Source code: [Leibo2017](https://github.com/doesburg11/Leibo2017) repository.
+
 ## 1. The question the paper asks
 
 Matrix games like Prisoner's Dilemma have guided social-dilemma research for decades, but they force cooperate/defect into a single, atomic, one-shot choice. Real social dilemmas — over-fishing a commons, sharing space with a rival forager — unfold over many time steps in a shared environment, and whether an individual is "cooperating" at all has to be inferred from a whole trajectory of spatial behavior, not read off a payoff table. Leibo, Zambaldi, Lanctot, Marecki & Graepel (2017), *Multi-agent Reinforcement Learning in Sequential Social Dilemmas* (AAMAS 2017), ask what happens when independent reinforcement learners are dropped into environments with this structure, and whether the resulting policies still behave like a classical matrix-game dilemma once you look at them the right way.

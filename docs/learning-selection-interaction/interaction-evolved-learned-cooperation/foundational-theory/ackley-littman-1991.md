@@ -7,6 +7,8 @@ slug: /learning-selection-interaction/ackley-littman-1991
 
 # The Ackley & Littman (1991) Algorithm
 
+Source code: [AckleyLittman1991](https://github.com/doesburg11/AckleyLittman1991) repository.
+
 ## 1. The question the paper asks
 
 David Ackley and Michael Littman's *"Interactions Between Learning and Evolution"* (1991) asks a concrete version of the question the [Baldwin effect](/learning-selection-interaction/baldwin-effect) raises abstractly: if you give artificial agents **both** a genome that evolves across generations **and** a reinforcement-learning mechanism that adapts within a single lifetime, does the combination outperform either mechanism alone — or pure chance?

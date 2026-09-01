@@ -7,6 +7,8 @@ slug: /evolved-cooperation/ackley-littman-1994
 
 # The Ackley & Littman (1994) Algorithm
 
+Source code: [AckleyLittman1994](https://github.com/doesburg11/AckleyLittman1994) repository.
+
 ## 1. The question the paper asks
 
 David Ackley and Michael Littman's follow-up to their own 1991 paper, *"Altruism in the Evolution of Communication"* (1994), asks a different question than [Ackley & Littman (1991)](/learning-selection-interaction/ackley-littman-1991) did. That paper was about the interaction of learning and evolution. This one drops learning entirely and asks something else: **can costly, initially arbitrary signaling evolve and stabilize even when it provides no direct benefit to the signaler?**

@@ -7,6 +7,8 @@ slug: /learning-selection-interaction/prosser-2022
 
 # The Prosser (2022) Models
 
+Source code: [Prosser2022](https://github.com/doesburg11/Prosser2022) repository.
+
 ## 1. The question the thesis asks
 
 Nearly every prior model of the Baldwin effect — [Hinton & Nowlan (1987)](/learning-selection-interaction/hinton-nowlan-1987) included, and [Ackley & Littman (1991)](/learning-selection-interaction/ackley-littman-1991) too — treats behavioural or genetic traits as independent: each locus, each weight, is mutated and potentially assimilated on its own. David Prosser's 2022 PhD thesis, *The Interaction Between Lifetime Learning and Evolution* (University of Southampton), asks what changes when learning instead acts on *correlated groups* of traits, with the correlation structure itself evolving alongside the traits it links.

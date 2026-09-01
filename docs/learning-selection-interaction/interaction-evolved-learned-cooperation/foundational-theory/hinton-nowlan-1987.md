@@ -9,6 +9,8 @@ import BaldwinNeedleHaystack from '@site/src/components/BaldwinNeedleHaystack';
 
 # The Hinton & Nowlan (1987) Algorithm
 
+Source code: [HintonNowlan1987](https://github.com/doesburg11/HintonNowlan1987) repository.
+
 ## 1. The question the paper asks
 
 Geoffrey Hinton and Steven Nowlan's *"How Learning Can Guide Evolution"* (1987) asks the question that gives the [Baldwin effect](/learning-selection-interaction/baldwin-effect) its modern computational footing: if a fitness landscape is so unforgiving that a genetic search has no gradient to climb at all — a single needle in an astronomically large haystack — can within-lifetime learning manufacture a gradient where none exists, purely by changing which genotypes survive to reproduce?
