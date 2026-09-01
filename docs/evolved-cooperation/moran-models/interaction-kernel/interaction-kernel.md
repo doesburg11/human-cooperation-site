@@ -5,11 +5,15 @@ sidebar_position: 1
 slug: /evolved-cooperation/interaction-kernel
 ---
 
+import GithubLink from '@site/src/components/GithubLink';
+
 ## Status
 
 <div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '1rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>
   <p style={{ margin: '0' }}><strong style={{ color: '#0F3368' }}>Implemented abstraction.</strong> This page describes the <a href="https://github.com/doesburg11/EvolvedCooperation/tree/main/moran_models/interaction_kernel"><code>interaction_kernel/</code></a> package in the sibling <a href="https://github.com/doesburg11/EvolvedCooperation">EvolvedCooperation</a> repository. It is a reusable kernel engine, not a website replay case study.</p>
 </div>
+
+<GithubLink href="https://github.com/doesburg11/EvolvedCooperation/tree/main/moran_models/interaction_kernel" />
 
 [`interaction_kernel/`](https://github.com/doesburg11/EvolvedCooperation/tree/main/moran_models/interaction_kernel) replaces the earlier feedback-kernel design note with a concrete implementation that routes positive and negative effects through explicit kernels before selection.
 

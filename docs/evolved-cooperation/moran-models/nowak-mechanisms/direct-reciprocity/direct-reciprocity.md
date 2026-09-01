@@ -5,9 +5,13 @@ sidebar_position: 2
 slug: /evolved-cooperation/direct-reciprocity
 ---
 
+import GithubLink from '@site/src/components/GithubLink';
+
 ## Status
 
 <div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '0.4rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>This page describes three implementations in the <a href="https://github.com/doesburg11/EvolvedCooperation/tree/main/moran_models/nowak_mechanisms/direct_reciprocity"><code>moran_models/nowak_mechanisms/direct_reciprocity/</code></a> package in the sibling <a href="https://github.com/doesburg11/EvolvedCooperation">EvolvedCooperation</a> repository.</div>
+
+<GithubLink href="https://github.com/doesburg11/EvolvedCooperation/tree/main/moran_models/nowak_mechanisms/direct_reciprocity" />
 
 Direct reciprocity is cooperation sustained by repeated encounters between the same individuals. A cooperator can punish a defector in the next round and reward a cooperator — but only if they meet again.
 
