@@ -91,6 +91,10 @@ This is also why food chains stay short in both the simulation and in nature: ea
 
 Selection in this environment operates on exactly the same logic developed elsewhere on this site: [behavior as a cost-benefit investment](/nature-nurture-human-behavior#behavior-as-a-cost-benefit-investment). Passive decay is a fixed, unavoidable cost that every agent pays every step regardless of what it does. Movement and foraging choices are the investment side of the ledger — an agent that finds grass or prey efficiently outpaces its own decay and can reach the reproduction threshold; one that doesn't, starves. Because decay is constant and energy income is capped by grass regeneration, PredPreyGrass gives natural selection a genuinely scarce resource to select over, without needing to build in any explicit cost for movement or reproduction at all.
 
+## Open TODO
+
+- **Make a PredPreyGrass config congruent with thermodynamics.** Neither the base environment nor `eco_evolutionary` currently discounts energy at the moment of a bite — an agent simply receives whatever the eaten grass patch or prey agent was holding (`max_energy_gain_per_grass` and `max_energy_gain_per_prey` are literally set to infinity in `eco_evolutionary`). Displays 2 and 3 above show what a real trophic transfer looks like instead: ~10-30% grass→prey, ~10-20% prey→predator, with the rest lost to heat and decomposers rather than silently vanishing. A config where grazing and predation each retain a capped, literature-consistent fraction — and the discounted remainder is actually removed from the tracked energy pool rather than just not being awarded — would make the simulation's own energy accounting match the second law this page describes, and would double as a real ecological-realism experiment: shorter viable food chains, different population dynamics, and less energy available per trophic level for reinforcement learning to work with.
+
 ---
 
 ## References
