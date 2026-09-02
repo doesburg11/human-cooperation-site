@@ -14,7 +14,7 @@ import GithubLink from '@site/src/components/GithubLink';
 
 ## 1. The question the paper asks
 
-Geoffrey Hinton and Steven Nowlan's *"How Learning Can Guide Evolution"* (1987) asks the question that gives the [Baldwin effect](/learning-selection-interaction/baldwin-effect) its modern computational footing: if a fitness landscape is so unforgiving that a genetic search has no gradient to climb at all — a single needle in an astronomically large haystack — can within-lifetime learning manufacture a gradient where none exists, purely by changing which genotypes survive to reproduce?
+<div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '0.4rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>Geoffrey Hinton and Steven Nowlan's *"How Learning Can Guide Evolution"* (1987) asks the question that gives the [Baldwin effect](/learning-selection-interaction/baldwin-effect) its modern computational footing: if a fitness landscape is so unforgiving that a genetic search has no gradient to climb at all — a single needle in an astronomically large haystack — can within-lifetime learning manufacture a gradient where none exists, purely by changing which genotypes survive to reproduce?</div>
 
 The paper answers with the smallest model that can make the point unambiguously: a flat bit-string genome, an all-or-nothing fitness function, and learning reduced to its most minimal possible form — blind, undirected guessing. There's no neural network, no environment, no agent behavior for the result to hide behind; everything interesting follows purely from how spare the setup is.
 

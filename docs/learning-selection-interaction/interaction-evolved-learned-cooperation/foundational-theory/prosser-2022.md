@@ -13,7 +13,7 @@ import GithubLink from '@site/src/components/GithubLink';
 
 ## 1. The question the thesis asks
 
-Nearly every prior model of the Baldwin effect — [Hinton & Nowlan (1987)](/learning-selection-interaction/hinton-nowlan-1987) included, and [Ackley & Littman (1991)](/learning-selection-interaction/ackley-littman-1991) too — treats behavioural or genetic traits as independent: each locus, each weight, is mutated and potentially assimilated on its own. David Prosser's 2022 PhD thesis, *The Interaction Between Lifetime Learning and Evolution* (University of Southampton), asks what changes when learning instead acts on *correlated groups* of traits, with the correlation structure itself evolving alongside the traits it links.
+<div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '0.4rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>Nearly every prior model of the Baldwin effect — [Hinton & Nowlan (1987)](/learning-selection-interaction/hinton-nowlan-1987) included, and [Ackley & Littman (1991)](/learning-selection-interaction/ackley-littman-1991) too — treats behavioural or genetic traits as independent: each locus, each weight, is mutated and potentially assimilated on its own. David Prosser's 2022 PhD thesis, *The Interaction Between Lifetime Learning and Evolution* (University of Southampton), asks what changes when learning instead acts on *correlated groups* of traits, with the correlation structure itself evolving alongside the traits it links.</div>
 
 The thesis tests this question through two different causal mechanisms rather than one, because "learning acts on correlated traits" can mean genuinely different things depending on *what* learning is allowed to touch:
 
