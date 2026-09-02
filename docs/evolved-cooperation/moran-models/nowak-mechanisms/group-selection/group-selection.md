@@ -9,8 +9,6 @@ import GithubLink from '@site/src/components/GithubLink';
 
 <GithubLink href="https://github.com/doesburg11/EvolvedCooperation/tree/main/moran_models/nowak_mechanisms/group_selection" />
 
-## Status
-
 <div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '0.4rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>This page describes the <a href="https://github.com/doesburg11/EvolvedCooperation/tree/main/moran_models/nowak_mechanisms/group_selection"><code>moran_models/nowak_mechanisms/group_selection/</code></a> package in the sibling <a href="https://github.com/doesburg11/EvolvedCooperation">EvolvedCooperation</a> repository.</div>
 
 Group selection adds a second level of selection on top of individual competition. Groups whose members cooperate more produce higher average fitness, and periodically the most successful group is copied into the least successful group — selection acts on groups as well as on individuals.

@@ -11,6 +11,8 @@ import GithubLink from '@site/src/components/GithubLink';
 
 <GithubLink href="https://github.com/doesburg11/EvolvedCooperation/tree/main/ecological_models/retained_benefit" />
 
+<div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '0.4rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>This page describes the <code>retained_benefit</code> module in the sibling <a href="https://github.com/doesburg11/EvolvedCooperation">EvolvedCooperation</a> repository.</div>
+
 Retained Benefit is the most abstract evolved-cooperation case study on this site. Rather than centering one specific mechanism such as patch altruism, local Prisoner's Dilemma response rules, or cooperative hunting, it evaluates a more general question: **when does cooperation spread when the decisive variable is how much of the value created by cooperation is routed back toward cooperators or their copies rather than being lost through evolutionary leakage to unrelated or weakly coupled recipients?**
 
 ## Conceptual Focus
