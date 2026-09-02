@@ -59,6 +59,13 @@ Energy transfer between real trophic levels is never close to 100% efficient —
   <figcaption className="site-table-caption"><strong>Display 2:</strong> Real-world trophic transfer efficiency (Lindeman, 1942).</figcaption>
 </figure>
 
+Drawn as a single tapering flow rather than a table, the same numbers look like this — grass set to a 100% baseline, with the width lost at each step split between heat and decomposers rather than folded into one generic "loss" arrow:
+
+<figure style={{ textAlign: 'center' }}>
+  <img src="/img/learning-selection-interaction/interaction-evolved-learned-cooperation/predpreygrass-energy-entropy/trophic-energy-funnel.svg" alt="A tapering horizontal funnel from grass to prey to predator. Grass, set to 100%, narrows to prey at 20%, with 65% of the width peeling off as heat and 15% peeling off to decomposers. Prey narrows to predator at roughly 4%, with 13% lost as heat and 3% to decomposers. A dotted loop shows decomposers returning nutrients, as matter rather than energy, back to grass." width="760" />
+  <figcaption><strong>Display 3:</strong> Real-world trophic efficiency, drawn to scale. Of every 100 units grass captures, roughly 4 end up as predator biomass, 78 are respired as heat, and 18 pass through decomposers as biomass nothing ate — and the nutrients decomposers release cycle back to the soil as matter, not as a second helping of the same energy.</figcaption>
+</figure>
+
 PredPreyGrass does not model the sun-to-grass step directly, and it does not currently apply a separate transfer-efficiency discount when prey eat grass or predators eat prey — an agent simply receives the eaten agent's or grass patch's energy. The realism instead comes from a different mechanism: constant, unrecoverable energy decay every step, described next.
 
 ## How the simulation actually models entropy increase

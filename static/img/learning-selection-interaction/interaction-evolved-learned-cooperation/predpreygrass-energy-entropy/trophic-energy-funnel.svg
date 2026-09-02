@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1220" height="720" viewBox="0 0 1220 720" role="img" aria-labelledby="title desc">
+  <title id="title">Real-world trophic energy flow, sun to grass to prey to predator</title>
+  <desc id="desc">A tapering horizontal funnel: the sun feeds grass, drawn as the 100% baseline. Grass narrows toward prey at 20%, with thin arrows peeling off the taper showing 65% lost as respired heat and 15% passing to decomposers as unclaimed biomass. Prey narrows toward predator at roughly 4%, with 13% lost as heat and 3% passing to decomposers along the way. A dotted loop shows decomposers returning nutrients, as matter rather than energy, back to grass.</desc>
+  <defs>
+    <marker id="arrow-main" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path fill="#1C231C" d="M0,0 L10,5 L0,10 Z"/>
+    </marker>
+    <marker id="arrow-cycle" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path fill="#4C7A50" d="M0,0 L10,5 L0,10 Z"/>
+    </marker>
+    <marker id="arrow-sink" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path fill="#5B6555" d="M0,0 L10,5 L0,10 Z"/>
+    </marker>
+    <marker id="arrow-heat" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path fill="#8B8375" d="M0,0 L10,5 L0,10 Z"/>
+    </marker>
+    <marker id="arrow-decomp" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path fill="#7C5B3A" d="M0,0 L10,5 L0,10 Z"/>
+    </marker>
+    <style>
+      .funnel-grass{ fill:#4C7A50; stroke:#4C7A50; stroke-width:1; }
+      .funnel-prey{ fill:#B9862E; stroke:#B9862E; stroke-width:1; }
+      .node-predator{ fill:#A8452E; stroke:#A8452E; stroke-width:1.5; }
+      .sun-arrow{ stroke:#E3AE3F; stroke-width:26; stroke-linecap:round; }
+      .sun-arrowhead{ fill:#E3AE3F; }
+      .sun-circle{ fill:#E3AE3F; fill-opacity:0.85; stroke:#E3AE3F; stroke-width:1.5; }
+      .sun-ray{ stroke:#E3AE3F; stroke-width:3; stroke-linecap:round; }
+      .sun-label{ font:700 13px "IBM Plex Mono","SFMono-Regular",monospace; fill:#3a2c08; text-anchor:middle; }
+      .loss-arrow{ fill:none; stroke-width:2.25; }
+      .loss-arrow.heat{ stroke:#8B8375; }
+      .loss-arrow.decomp{ stroke:#7C5B3A; }
+      .cycle-flow{ stroke:#4C7A50; stroke-width:2; stroke-dasharray:1 5; stroke-linecap:round; fill:none; opacity:0.9; }
+      .cycle-label{ font:italic 400 12px "IBM Plex Sans","Avenir Next","Segoe UI",Arial,sans-serif; fill:#4C7A50; }
+      .sink-stub{ stroke:#5B6555; stroke-width:1.75; stroke-dasharray:7 4; fill:none; }
+      .sink-label{ font:italic 400 12px "IBM Plex Sans","Avenir Next","Segoe UI",Arial,sans-serif; fill:#5B6555; }
+      .node-title{ font:700 13px "IBM Plex Mono","SFMono-Regular",monospace; letter-spacing:0.03em; fill:#1C231C; text-anchor:middle; }
+      .pct{ font:700 16px "IBM Plex Mono","SFMono-Regular",monospace; text-anchor:middle; }
+      .pct.heat{ fill:#8B8375; }
+      .pct.decomp{ fill:#7C5B3A; }
+      .pct.grass{ fill:#4C7A50; }
+      .pct.prey{ fill:#B9862E; }
+      .pct.predator{ fill:#A8452E; }
+      .badge{ fill:#FFFFFF; stroke-width:1.5; }
+      .badge.heat{ stroke:#8B8375; }
+      .badge.decomp{ stroke:#7C5B3A; }
+      .badge-title{ font:700 13px "IBM Plex Mono","SFMono-Regular",monospace; letter-spacing:0.02em; text-anchor:middle; }
+      .badge-title.heat{ fill:#8B8375; }
+      .badge-title.decomp{ fill:#7C5B3A; }
+      .badge-sub{ font:400 11px "IBM Plex Sans","Avenir Next","Segoe UI",Arial,sans-serif; fill:#5B6555; text-anchor:middle; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1220" height="720" fill="#FFFFFF"/>
+
+  <!-- Sun -->
+  <g>
+    <line class="sun-ray" x1="110" y1="240" x2="110" y2="222"/>
+    <line class="sun-ray" x1="110" y1="360" x2="110" y2="378"/>
+    <line class="sun-ray" x1="72" y1="262" x2="58" y2="248"/>
+    <line class="sun-ray" x1="72" y1="338" x2="58" y2="352"/>
+    <line class="sun-ray" x1="45" y1="300" x2="27" y2="300"/>
+    <circle class="sun-circle" cx="110" cy="300" r="42"/>
+    <text class="sun-label" x="110" y="305">SUN</text>
+  </g>
+
+  <!-- Sun -> Grass, a plain bold arrow (not to scale) -->
+  <line class="sun-arrow" x1="155" y1="300" x2="298" y2="300"/>
+  <polygon class="sun-arrowhead" points="292,278 292,322 318,300"/>
+  <text class="sink-label" x="180" y="255" text-anchor="start">~1-2% of sunlight becomes grass (not shown to scale)</text>
+
+  <!-- The funnel: Grass (100%) tapering to Prey (20%) tapering to Predator (~4%) -->
+  <path class="funnel-grass" d="M310,190 L620,278 L620,322 L310,410 Z"/>
+  <path class="funnel-prey" d="M620,278 L930,296 L930,305 L620,322 Z"/>
+  <rect class="node-predator" x="930" y="296" width="14" height="9" rx="1.5"/>
+
+  <text class="pct grass" x="360" y="160">100%</text>
+  <text class="node-title" x="360" y="180">GRASS</text>
+
+  <text class="pct prey" x="700" y="245">20%</text>
+  <text class="node-title" x="700" y="262">PREY</text>
+
+  <text class="pct predator" x="944" y="270" text-anchor="start">≈4%</text>
+  <text class="node-title" x="944" y="286" text-anchor="start">PREDATOR</text>
+
+  <!-- Loss arrows off the grass->prey taper -->
+  <path class="loss-arrow heat" d="M465,234 C 650,150 820,150 995,155" marker-end="url(#arrow-heat)"/>
+  <text class="pct heat" x="620" y="185">65%</text>
+
+  <path class="loss-arrow decomp" d="M465,366 C 500,470 520,510 560,530" marker-end="url(#arrow-decomp)"/>
+  <text class="pct decomp" x="440" y="450">15%</text>
+
+  <!-- Loss arrows off the prey->predator taper -->
+  <path class="loss-arrow heat" d="M775,287 C 850,225 920,205 995,200" marker-end="url(#arrow-heat)"/>
+  <text class="pct heat" x="850" y="245">13%</text>
+
+  <path class="loss-arrow decomp" d="M775,313 C 760,420 745,480 738,540" marker-end="url(#arrow-decomp)"/>
+  <text class="pct decomp" x="710" y="470">3%</text>
+
+  <!-- Heat Loss badge -->
+  <rect class="badge heat" x="1000" y="130" width="170" height="100" rx="4"/>
+  <text class="badge-title heat" x="1085" y="168">ENERGY LOST</text>
+  <text class="badge-title heat" x="1085" y="185">AS HEAT</text>
+  <text class="badge-sub" x="1085" y="204">respiration, movement,</text>
+  <text class="badge-sub" x="1085" y="217">decay — gone for good</text>
+  <path class="sink-stub" d="M1170,150 C1195,130 1205,115 1210,98" marker-end="url(#arrow-sink)"/>
+  <text class="sink-label" x="1090" y="105" text-anchor="middle">→ space (infrared)</text>
+
+  <!-- Decomposers badge -->
+  <rect class="badge decomp" x="565" y="517" width="170" height="70" rx="4"/>
+  <text class="badge-title decomp" x="650" y="548">DECOMPOSERS</text>
+  <text class="badge-sub" x="650" y="566">unclaimed biomass</text>
+
+  <!-- Recycled nutrients loop, back to Grass -->
+  <path class="cycle-flow" d="M600,587 C 460,660 300,600 300,480 C 300,430 305,415 312,406" marker-end="url(#arrow-cycle)"/>
+  <text class="cycle-label" x="330" y="616">nutrients (N, P, minerals) —</text>
+  <text class="cycle-label" x="330" y="632">matter cycles, energy doesn't</text>
+
+</svg>
