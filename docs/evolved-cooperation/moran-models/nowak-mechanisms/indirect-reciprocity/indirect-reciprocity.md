@@ -9,6 +9,8 @@ import GithubLink from '@site/src/components/GithubLink';
 
 <GithubLink href="https://github.com/doesburg11/EvolvedCooperation/tree/main/moran_models/nowak_mechanisms/indirect_reciprocity" />
 
+## Status
+
 <div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '0.4rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>This page describes the <a href="https://github.com/doesburg11/EvolvedCooperation/tree/main/moran_models/nowak_mechanisms/indirect_reciprocity"><code>moran_models/nowak_mechanisms/indirect_reciprocity/</code></a> package in the sibling <a href="https://github.com/doesburg11/EvolvedCooperation">EvolvedCooperation</a> repository.</div>
 
 Indirect reciprocity is cooperation sustained by reputation. Rather than requiring repeated encounters with the same individual, an agent helps others whose public reputation signals that they are good cooperators — "I help you because others are watching."

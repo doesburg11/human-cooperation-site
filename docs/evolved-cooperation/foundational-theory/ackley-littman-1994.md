@@ -11,8 +11,6 @@ import GithubLink from '@site/src/components/GithubLink';
 
 <GithubLink href="https://github.com/doesburg11/AckleyLittman1994" />
 
-<div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '0.4rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>This page describes a from-scratch replication of Ackley &amp; Littman (1994), in the sibling <a href="https://github.com/doesburg11/AckleyLittman1994">AckleyLittman1994</a> repository.</div>
-
 ## 1. The question the paper asks
 
 David Ackley and Michael Littman's follow-up to their own 1991 paper, *"Altruism in the Evolution of Communication"* (1994), asks a different question than [Ackley & Littman (1991)](/learning-selection-interaction/ackley-littman-1991) did. That paper was about the interaction of learning and evolution. This one drops learning entirely and asks something else: **can costly, initially arbitrary signaling evolve and stabilize even when it provides no direct benefit to the signaler?**

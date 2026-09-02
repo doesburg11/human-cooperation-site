@@ -12,8 +12,6 @@ import GithubLink from '@site/src/components/GithubLink';
 
 <GithubLink href="https://github.com/doesburg11/HintonNowlan1987" />
 
-<div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '0.4rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>This page describes a from-scratch replication of Hinton &amp; Nowlan (1987), in the sibling <a href="https://github.com/doesburg11/HintonNowlan1987">HintonNowlan1987</a> repository.</div>
-
 ## 1. The question the paper asks
 
 Geoffrey Hinton and Steven Nowlan's *"How Learning Can Guide Evolution"* (1987) asks the question that gives the [Baldwin effect](/learning-selection-interaction/baldwin-effect) its modern computational footing: if a fitness landscape is so unforgiving that a genetic search has no gradient to climb at all — a single needle in an astronomically large haystack — can within-lifetime learning manufacture a gradient where none exists, purely by changing which genotypes survive to reproduce?
