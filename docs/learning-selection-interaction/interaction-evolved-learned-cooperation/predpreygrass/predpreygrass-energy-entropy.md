@@ -89,3 +89,7 @@ Selection in this environment operates on exactly the same logic developed elsew
 ## References
 
 - Lindeman, R. L. (1942). *The trophic-dynamic aspect of ecology*. *Ecology*, 23(4), 399-417. https://doi.org/10.2307/1930126
+- National Geographic Education. *Energy Flow and the 10% Rule*. https://education.nationalgeographic.org/resource/energy-flow-and-10-percent-rule/
+- Wikipedia contributors. *Ecological pyramid*. Wikipedia. https://en.wikipedia.org/wiki/Ecological_pyramid
+- Wikipedia contributors. *Nutrient cycle*. Wikipedia. https://en.wikipedia.org/wiki/Nutrient_cycle
+- Sankey Diagrams. *Exergy (tag archive)*. https://www.sankey-diagrams.com/tag/exergy/
