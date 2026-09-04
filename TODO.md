@@ -9,7 +9,7 @@ Working notes and research ideas for the human-cooperation-site project. Not pub
 - Apply "system dynamics" to micro data, and use graphics from AnyLogic to explain the second law of thermodynamics.
 - Self organisation v regulation (road to serfdom)
 - More political issues=> migration, cultural assimilation
-- ABM seggration
+- ABM seggration - https://en.wikipedia.org/wiki/Schelling%27s_model_of_segregation
 
 ---
 
