@@ -6,8 +6,10 @@ Working notes and research ideas for the human-cooperation-site project. Not pub
 
 ## Quick / misc
 
-- RustDesk for Android.
 - Apply "system dynamics" to micro data, and use graphics from AnyLogic to explain the second law of thermodynamics.
+- Self organisation v regulation (road to serfdom)
+- More political issues=> migration, cultural assimilation
+- ABM seggration
 
 ---
 
