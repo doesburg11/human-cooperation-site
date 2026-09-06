@@ -20,6 +20,14 @@ Working notes and research ideas for the human-cooperation-site project. Not pub
 - maybe experiment with more realistic stag hunt like rewards
 ---
 
+## SequentialSocialDilemmas experiments (specified, not yet run)
+
+[SequentialSocialDilemmas](https://github.com/doesburg11/SequentialSocialDilemmas) — `cleanup_reputation` (McKee et al. 2023 reputation-intrinsic-reward layered on Cleanup; identifiable vs. anonymous conditions, territoriality/turn-taking metrics — see the repo README's "The reputation experiment: cleanup_reputation" section for the full mechanism)
+- Run the identifiable vs. anonymous pilot (`run_scripts/run_reputation_cleanup_identifiable.sh` / `_anonymous.sh`, 10M-step scale, one at a time — single GPU) and compare collective return, territoriality, and turn-taking between the two conditions.
+- Verify the `--checkpoint` rollout path (RLModule-based greedy action inference in `rollout_reputation_cleanup.py`) against a real trained checkpoint — only smoke-tested with a random policy so far.
+- If the qualitative pattern replicates (identifiable → higher return, lower territoriality, higher turn-taking), implement results on website.
+---
+
 ## PredPreyGrass experiments (specified, not yet run)
 
 ### Observation-space improvements
