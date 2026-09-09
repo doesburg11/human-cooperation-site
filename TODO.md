@@ -16,7 +16,6 @@ Working notes and research ideas for the human-cooperation-site project. Not pub
 ## Leibo2017 experiments (specified, succesfull run)
 
 [Leibo2017](https://github.com/doesburg11/Leibo2017) — 
-- implement results on website
 - maybe experiment with more realistic stag hunt like rewards
 ---
 
@@ -24,7 +23,6 @@ Working notes and research ideas for the human-cooperation-site project. Not pub
 
 [SequentialSocialDilemmas](https://github.com/doesburg11/SequentialSocialDilemmas) — `cleanup_reputation` (McKee et al. 2023 reputation-intrinsic-reward layered on Cleanup; identifiable vs. anonymous conditions, territoriality/turn-taking metrics — see the repo README's "The reputation experiment: cleanup_reputation" section for the full mechanism)
 - Run the identifiable vs. anonymous pilot (`run_scripts/run_reputation_cleanup_identifiable.sh` / `_anonymous.sh`, 10M-step scale, one at a time — single GPU) and compare collective return, territoriality, and turn-taking between the two conditions.
-- Fix the `--checkpoint` rollout path in `rollout_reputation_cleanup.py`: root-caused 2026-09-09 against a real trained checkpoint — `Algorithm.from_checkpoint()` fails immediately because the fresh eval process never calls `register_env("cleanup_reputation_env", ...)` the way `train_reputation.py` does, so RLlib can't resolve the env string (`gymnasium.error.NameNotFound`). Not yet fixed. Random-policy path is fine (smoke-tested, exit 0).
 - If the qualitative pattern replicates (identifiable → higher return, lower territoriality, higher turn-taking), implement results on website.
 ---
 
@@ -33,13 +31,12 @@ Working notes and research ideas for the human-cooperation-site project. Not pub
 [Hughes2018](https://github.com/doesburg11/Hughes2018) — from-scratch reproduction of inequity aversion in Cleanup/Harvest (Hughes et al. 2018).
 - Cleanup: `advantageous_only` (guilt) loses to `baseline` in 6/6 seed comparisons, at and beyond the paper's own training scale — the opposite of the paper's Fig. 3A headline claim. Real engineering confounds (a trace-observability bug, then beam-cooldown/waste-grace-period mechanics) were found and ruled out along the way; the non-replication persisted after both fixes. Investigation stopped 2026-09-09 — documented in the repo README as the current honest state, not pursued further for now.
 - Harvest: first real training (3 seeds × baseline/advantageous_only/disadvantageous_only) run 2026-09-09, reaching only ~3.6-3.8M agent-steps — 20-30x short of the paper's own Harvest scale (Fig. 4: ~70-100M agent-steps). Near-tie means across conditions, but `disadvantageous_only` had both the highest mean and a much tighter seed-to-seed spread than the other two — loosely consistent with Fig. 4's claim, but not statistically separable at 3 seeds. **A full-scale Harvest run (paper's own agent-step budget, more seeds) is still needed before this can be called conclusive either way.**
-- No dedicated page on the site yet (unlike Leibo2017) — implement results on website once Harvest is resolved one way or the other.
 ---
 
 ## PredPreyGrass experiments (specified, not yet run)
 
 ### Observation-space improvements
-The RL-side half of this idea (drive-conditioned observations: `hunger_pressure`, `reproductive_readiness`, `prey_opportunity`, `predator_danger_pressure`, `grass_opportunity` as extra observation channels, reward untouched) is implemented and numerically verified as `predpreygrass/non_evolutionary/drive_conditioned_environment/` — the baseline-vs-drive-conditioned comparison hasn't been run yet.
+The RL-side half of this idea (drive-conditioned observations: `hunger_pressure`, `reproductive_readiness`, `prey_opportunity`, `predator_danger_pressure`, `grass_opportunity` as extra observation channels, reward untouched) is implemented and numerically verified as `predpreygrass/non_evolutionary/drive_conditioned_environment/` — a single-seed baseline-vs-drive-conditioned comparison ran 2026-09-06 (+6.0% gap, predator-driven); additional seeds and the energy-only arm are still open, tracked in that module's own README rather than here.
 
 The evolutionary half (evolving which drive channels are enabled, or how strongly each is scaled, as a heritable trait feeding the shared policy) has not been started. It's recorded as a candidate next experiment — targeting the shared-policy-can't-see-its-own-genome gap directly — in the [Darwin/Baldwin Trial Log](/learning-selection-interaction/darwin-baldwin-trial-log)'s "What's next" section on the website. Update that section (and its source, `predpreygrass/evolutionary/RESULTS.md`) rather than re-deriving this design from scratch here.
 
