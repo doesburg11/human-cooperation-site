@@ -24,8 +24,16 @@ Working notes and research ideas for the human-cooperation-site project. Not pub
 
 [SequentialSocialDilemmas](https://github.com/doesburg11/SequentialSocialDilemmas) — `cleanup_reputation` (McKee et al. 2023 reputation-intrinsic-reward layered on Cleanup; identifiable vs. anonymous conditions, territoriality/turn-taking metrics — see the repo README's "The reputation experiment: cleanup_reputation" section for the full mechanism)
 - Run the identifiable vs. anonymous pilot (`run_scripts/run_reputation_cleanup_identifiable.sh` / `_anonymous.sh`, 10M-step scale, one at a time — single GPU) and compare collective return, territoriality, and turn-taking between the two conditions.
-- Verify the `--checkpoint` rollout path (RLModule-based greedy action inference in `rollout_reputation_cleanup.py`) against a real trained checkpoint — only smoke-tested with a random policy so far.
+- Fix the `--checkpoint` rollout path in `rollout_reputation_cleanup.py`: root-caused 2026-09-09 against a real trained checkpoint — `Algorithm.from_checkpoint()` fails immediately because the fresh eval process never calls `register_env("cleanup_reputation_env", ...)` the way `train_reputation.py` does, so RLlib can't resolve the env string (`gymnasium.error.NameNotFound`). Not yet fixed. Random-policy path is fine (smoke-tested, exit 0).
 - If the qualitative pattern replicates (identifiable → higher return, lower territoriality, higher turn-taking), implement results on website.
+---
+
+## Hughes2018 experiments (run; Cleanup non-replication, Harvest inconclusive)
+
+[Hughes2018](https://github.com/doesburg11/Hughes2018) — from-scratch reproduction of inequity aversion in Cleanup/Harvest (Hughes et al. 2018).
+- Cleanup: `advantageous_only` (guilt) loses to `baseline` in 6/6 seed comparisons, at and beyond the paper's own training scale — the opposite of the paper's Fig. 3A headline claim. Real engineering confounds (a trace-observability bug, then beam-cooldown/waste-grace-period mechanics) were found and ruled out along the way; the non-replication persisted after both fixes. Investigation stopped 2026-09-09 — documented in the repo README as the current honest state, not pursued further for now.
+- Harvest: first real training (3 seeds × baseline/advantageous_only/disadvantageous_only) run 2026-09-09, reaching only ~3.6-3.8M agent-steps — 20-30x short of the paper's own Harvest scale (Fig. 4: ~70-100M agent-steps). Near-tie means across conditions, but `disadvantageous_only` had both the highest mean and a much tighter seed-to-seed spread than the other two — loosely consistent with Fig. 4's claim, but not statistically separable at 3 seeds. **A full-scale Harvest run (paper's own agent-step budget, more seeds) is still needed before this can be called conclusive either way.**
+- No dedicated page on the site yet (unlike Leibo2017) — implement results on website once Harvest is resolved one way or the other.
 ---
 
 ## PredPreyGrass experiments (specified, not yet run)
