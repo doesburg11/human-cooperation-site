@@ -215,7 +215,7 @@ The [Prisoner's Dilemma](/learned-cooperation/prisoners-dilemma) and [Repeated P
 
 ## Foundational Replications
 
-From-scratch replications of specific named papers, kept separate from this site's own original models. Three established the two-timescale claim this site builds on (Evolution + Learning); the other three are faithful implementations that a model elsewhere on this site is checked against or was inspired by, covering pure evolution and pure learning as well.
+From-scratch replications of specific named papers, kept separate from this site's own original models. Three established the two-timescale claim this site builds on (Evolution + Learning); the rest are faithful implementations covering pure evolution and pure learning — not every one of them reproduces its paper's headline claim, and that's recorded here too rather than only in each page's own status section. See [Evidence So Far](/evidence-so-far) for the cross-cutting status summary.
 
 <figure className="site-table-figure">
   <div className="site-table-scroll">
@@ -271,8 +271,32 @@ From-scratch replications of specific named papers, kept separate from this site
           <td>Whether independent reinforcement learners dropped into spatial, temporally extended social dilemmas still produce policies that behave like a classical matrix-game dilemma once cooperation is measured at the policy level, not the action level.</td>
           <td><a href="/learned-cooperation/leibo2017">Leibo et al. (2017)</a></td>
         </tr>
+        <tr>
+          <td>Boyd &amp; Richerson (2009) — Culture</td>
+          <td>Evolution</td>
+          <td>Whether culture can sustain a far lower migration/selection ratio than genetics, preserving the between-group variation that group selection needs. Reproduces, plus an independently confirmed refinement to the paper's own homogenization threshold.</td>
+          <td><a href="/evolved-cooperation/boyd-richerson-2009-culture">Boyd &amp; Richerson (2009) — Culture</a></td>
+        </tr>
+        <tr>
+          <td>Boyd &amp; Richerson (2009) — Voting With Your Feet</td>
+          <td>Evolution</td>
+          <td>Whether payoff-biased migration reliably spreads group-beneficial behavior. Reproduces the paper's own claim, plus a further finding — checking welfare directly, not just behavior frequency — that the paper's own conclusion glosses over.</td>
+          <td><a href="/evolved-cooperation/boyd-richerson-2009-voting-with-feet">Voting With Your Feet</a></td>
+        </tr>
+        <tr>
+          <td>Hughes et al. (2018)</td>
+          <td>Learning</td>
+          <td>Whether an intrinsic aversion to unequal outcomes (inequity aversion) raises cooperation in Cleanup and Harvest. Does not currently reproduce the paper's headline Cleanup claim; Harvest is inconclusive.</td>
+          <td><a href="/learned-cooperation/hughes2018">Hughes et al. (2018)</a></td>
+        </tr>
+        <tr>
+          <td>McKee et al. (2023)</td>
+          <td>Learning</td>
+          <td>Whether an intrinsic reputation motivation — the learned analog of <a href="/evolved-cooperation/indirect-reciprocity">indirect reciprocity</a> — produces less territorial, more turn-taking behavior when agents are identifiable versus anonymous. Training currently collapses before cleaning behavior emerges in either condition, so the claim can't yet be tested.</td>
+          <td><a href="/learned-cooperation/mckee2023">McKee et al. (2023)</a></td>
+        </tr>
       </tbody>
     </table>
   </div>
-  <figcaption className="site-table-caption"><strong>Display 5:</strong> From-scratch replications this site's models are built on or checked against. The first three established this site's two-timescale claim — see <a href="/learning-selection-interaction/baldwin-effect">The Baldwin Effect</a> for that underlying concept; the other three are standalone replications of the pure-evolution and pure-learning models elsewhere in this catalog.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 5:</strong> From-scratch replications this site's models are built on or checked against. The first three established this site's two-timescale claim — see <a href="/learning-selection-interaction/baldwin-effect">The Baldwin Effect</a> for that underlying concept; the rest are standalone replications of pure-evolution and pure-learning models elsewhere in this catalog, not all of which reproduce their paper's own headline result — see each row's own description and <a href="/evidence-so-far">Evidence So Far</a> for the honest status of each.</figcaption>
 </figure>

@@ -104,6 +104,10 @@ Live viewer:
 ./.conda/bin/python -m moran_models.nowak_mechanisms.indirect_reciprocity.indirect_reciprocity_pygame_ui
 ```
 
+## See Also
+
+- [The McKee et al. (2023) Reputation Replication](/learned-cooperation/mckee2023) — the learned, deep-reinforcement-learning analog of this same mechanism: instead of a Moran process rewarding cooperators with a better public reputation, agents get an intrinsic reward penalty for falling behind the group's contribution average. Training currently collapses before that mechanism can be tested, in a public-goods environment ([Hughes et al. 2018](/learned-cooperation/hughes2018)'s Cleanup) that has separately failed to reproduce a different reward-shaping mechanism's headline claim — see [Evidence So Far](/evidence-so-far#non-replications).
+
 ## References
 
 - Nowak, M. A., & Sigmund, K. (1998). *Evolution of indirect reciprocity by image scoring*. *Nature*, 393, 573–577. https://doi.org/10.1038/31225

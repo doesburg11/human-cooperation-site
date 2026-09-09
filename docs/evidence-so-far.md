@@ -1,7 +1,7 @@
 ---
 id: evidence-so-far
 title: Evidence So Far
-description: A status overview of the current evidence for the site's claims about human cooperation and competition, including confirmed results, null results, demonstrations, and open questions.
+description: A status overview of the current evidence for the site's claims about human cooperation and competition, including confirmed results, non-replications, null results, demonstrations, and open questions.
 sidebar_position: 3
 slug: /evidence-so-far
 ---
@@ -53,6 +53,16 @@ The clearest null history is in [PredPreyGrass](/learning-selection-interaction/
 The [PPO Study](/learned-cooperation/repeated-prisoners-dilemma/ppo-study) is also a limiting result. Under the reported two-sided tests with Holm correction across 40 comparisons, no `(horizon, player)` result was significant at `alpha = 0.05` in the shown run.
 
 Several cooperation mechanisms also have built-in limits. Direct reciprocity can maintain cooperation once reciprocal behavior is common, but it does not reliably originate cooperation from a defector-dominated population without a foothold or scaffold. Indirect reciprocity depends on a reputation system that itself has to bootstrap. Network reciprocity and group selection can be stochastic rather than automatic.
+
+## Non-Replications
+
+Two of this site's foundational replications don't hold up — not "no significant effect," but outright opposite-direction or blocked results. Both sit on the same underlying environment, which is itself informative.
+
+[Hughes et al. (2018)](/learned-cooperation/hughes2018)'s headline Cleanup claim — that advantageous inequity aversion (guilt) raises collective cooperation over an unmodified baseline — does not reproduce here. Baseline beat the guilt-shaped condition in 6 of 6 individual seed comparisons across two materially different environment configurations, the opposite of the paper's own Fig. 3A. Under-training, miscalibration, and seed noise were each checked directly and ruled out as the explanation; a genuine scale effect or an unidentified environment gap remain open, undecided possibilities. The same paper's Harvest condition is separately inconclusive rather than a clean failure.
+
+[McKee et al. (2023)](/learned-cooperation/mckee2023)'s reputation claim can't be tested at all here: training collapses to near-zero cleaning in both the identifiable and anonymous conditions before reputation dynamics could ever matter. A control run with the reputation mechanism entirely disabled collapses the same way, so reputation shaping isn't the cause — the environment's punishment beam is a plausible, unconfirmed hypothesis instead.
+
+Both experiments reuse the Cleanup environment (in different implementations) that [Hughes et al. (2018)](/learned-cooperation/hughes2018) also uses. That two independent reward-shaping mechanisms, built by different implementations of the same underlying public-goods environment, have now each failed to produce a clean test of their respective paper's claim is a pattern worth taking seriously on its own, separate from either individual result: an environment a plain policy struggles to solve is unlikely to give any mechanism layered on top of it a fair test.
 
 ## Open Questions
 
@@ -131,6 +141,34 @@ Use these labels when moving through the site:
           <td>Trials 1-10 did not show reliable selection-driven drift under the shared-policy design.</td>
           <td>Genome influenced behavior only indirectly, through population-level economics.</td>
           <td><a href="/learning-selection-interaction/evolution-boundary-predpreygrass">Evolution Boundary</a>, <a href="/learning-selection-interaction/darwin-baldwin-trial-log">Trial Log</a></td>
+        </tr>
+        <tr>
+          <td>Leibo et al. (2017) replication</td>
+          <td>Reproduced (reduced scale)</td>
+          <td>Independent DQN learners in Gathering and Wolfpack produce policies whose induced payoffs satisfy classical dilemma inequalities.</td>
+          <td>No run yet at the paper's own 40M-step training scale.</td>
+          <td><a href="/learned-cooperation/leibo2017">Leibo et al. (2017)</a></td>
+        </tr>
+        <tr>
+          <td>Hughes et al. (2018) replication</td>
+          <td>Non-replication</td>
+          <td>Cleanup's headline guilt-raises-cooperation claim does not reproduce; baseline beat the guilt-shaped condition in 6 of 6 seed comparisons.</td>
+          <td>Under-training, miscalibration, and seed noise ruled out; a scale effect or fidelity gap remain undecided.</td>
+          <td><a href="/learned-cooperation/hughes2018">Hughes et al. (2018)</a></td>
+        </tr>
+        <tr>
+          <td>McKee et al. (2023) / reputation</td>
+          <td>Blocked — training collapse</td>
+          <td>Training collapses to near-zero cleaning in both conditions before reputation dynamics can matter; the claim can't yet be tested.</td>
+          <td>Punishment-beam hypothesis for the collapse is plausible but unconfirmed — no ablation run.</td>
+          <td><a href="/learned-cooperation/mckee2023">McKee et al. (2023)</a></td>
+        </tr>
+        <tr>
+          <td>Boyd &amp; Richerson (2009) replications</td>
+          <td>Confirmed</td>
+          <td>Cultural group selection sustained by a low migration/selection ratio; payoff-biased migration spreads group-beneficial behavior.</td>
+          <td>Voting-with-feet's own welfare check shows spreading the behavior label doesn't reliably raise welfare.</td>
+          <td><a href="/evolved-cooperation/boyd-richerson-2009-culture">Culture</a>, <a href="/evolved-cooperation/boyd-richerson-2009-voting-with-feet">Voting With Your Feet</a></td>
         </tr>
       </tbody>
     </table>
