@@ -65,6 +65,7 @@ export default {
               label: 'Foundational Replications',
               collapsed: true,
               items: [
+                'learned-cooperation/foundational-replications/foerster2018',
                 'learned-cooperation/foundational-replications/leibo2017',
                 'learned-cooperation/foundational-replications/hughes2018',
                 'learned-cooperation/foundational-replications/mckee2023',

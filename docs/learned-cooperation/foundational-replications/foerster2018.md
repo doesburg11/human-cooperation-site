@@ -1,7 +1,7 @@
 ---
 id: foerster2018
 title: The Foerster et al. (2018) LOLA Replication
-sidebar_position: 4
+sidebar_position: 1
 slug: /learned-cooperation/foerster2018
 ---
 
