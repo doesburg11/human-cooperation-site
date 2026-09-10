@@ -238,8 +238,9 @@ So the right starting point is:
 1. [Prisoner's Dilemma: defection as baseline](/learned-cooperation/prisoners-dilemma)
 2. [Repeated Prisoner's Dilemma Theory: when reciprocity can become rational](/learned-cooperation/repeated-prisoners-dilemma)
 3. [Repeated Prisoner's Dilemma PPO Study: independent PPO on the repeated game](/learned-cooperation/repeated-prisoners-dilemma/ppo-study)
-4. [The Leibo et al. (2017) Sequential Social Dilemmas: from atomic actions to policies over trajectories](/learned-cooperation/leibo2017)
-5. [General learned-cooperation theory in ecological systems](/learned-cooperation)
+4. [The Foerster et al. (2018) LOLA Replication: opponent-aware gradients turn the same repeated game into reciprocity](/learned-cooperation/foerster2018)
+5. [The Leibo et al. (2017) Sequential Social Dilemmas: from atomic actions to policies over trajectories](/learned-cooperation/leibo2017)
+6. [General learned-cooperation theory in ecological systems](/learned-cooperation)
 
 ## What This Gives You
 
