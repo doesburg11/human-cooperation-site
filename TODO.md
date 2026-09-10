@@ -124,6 +124,17 @@ Interpretation:
 - If helping rises only when partner-specific memory is available, then cooperation is no longer explained by immediate ecological necessity.
 - It is explained by expected future return from repeated interaction: direct reciprocity.
 
+### Train pack_hunt_opponent_shaping
+
+[PredPreyGrass](https://github.com/doesburg11/PredPreyGrass) — `predpreygrass/non_evolutionary/project_cooperation/pack_hunt_opponent_shaping/` (fixed-population, scripted-prey environment testing whether an N-player pairwise generalization of Foerster et al. (2018)'s LOLA opponent-shaping changes the intra-predator join-the-hunt/free-ride equilibrium, versus a naive-PPO baseline. Env, viewer, both training loops, and the opponent-shaping math are implemented and verified correct — including reducing exactly to Foerster2018's own `lola_pg_update` at N=2 — but nothing has been trained to convergence yet. See the module's own README for the full design rationale, rejected alternatives, and the Codex review of the opponent-shaping implementation.)
+
+- Run `tune_ppo.py` (naive baseline, condition 1) to completion; record steady-state engagement rate, catch rate, and per-agent reward variance.
+- Run `tune_opponent_shaping.py` (pairwise N-player opponent shaping, condition 2) to completion under the same env config; compare against the naive baseline on the same metrics.
+- Tune `delta`/`eta`/`horizon`/`batch_size` — the current defaults (`delta=0.01`) are an untuned starting guess per the module README's own config comments, not a validated value; watch for exploding or oscillating rewards.
+- If opponent shaping measurably raises engagement/catch rate over naive PPO, look for the TFT-like punishment signature: a predator that scrounged last round getting spatially excluded from the pack next round (nothing in the reward function hand-codes this — it would have to be learned).
+- If pairwise shaping proves unstable at `N=3`, the documented fallback is condition 3 (an M-FOS-style model-free meta-policy) — not built yet.
+- If a real, reproducible effect is found, write it up as a page under this site's Learned Cooperation section, alongside the Foerster2018 replication page it extends.
+
 ### Mixed Stag Hunt
 - Two types of prey: mammoths and deer.
   - Experiment for coevolution.
