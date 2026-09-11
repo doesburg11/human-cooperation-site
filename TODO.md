@@ -33,6 +33,13 @@ Working notes and research ideas for the human-cooperation-site project. Not pub
 - Harvest: first real training (3 seeds × baseline/advantageous_only/disadvantageous_only) run 2026-09-09, reaching only ~3.6-3.8M agent-steps — 20-30x short of the paper's own Harvest scale (Fig. 4: ~70-100M agent-steps). Near-tie means across conditions, but `disadvantageous_only` had both the highest mean and a much tighter seed-to-seed spread than the other two — loosely consistent with Fig. 4's claim, but not statistically separable at 3 seeds. **A full-scale Harvest run (paper's own agent-step budget, more seeds) is still needed before this can be called conclusive either way.**
 ---
 
+## Wang2019 experiments (rebuilt correctly, toy-scale run only)
+
+[Wang2019](https://github.com/doesburg11/Wang2019) — from-scratch replication of Wang et al. 2019 (Evolving Intrinsic Motivations for Altruistic Behavior, AAMAS 2019). Population-Based Training over none/individual/shared reward-network conditions on Cleanup; toy-scale run (single seed, 150 rounds, population 8) matches the paper's own Fig. 4 ranking direction (`shared > none > individual`) after two real bugs (stale Adam optimizer state surviving policy exploit; throwaway network construction perturbing PyTorch's global RNG) were caught in Codex review and fixed — see the repo's RESULTS.md for the before/after.
+- Find out where this belongs on the site — it couples evolution (PBT over reward networks) with lifetime learning (RL policy training), so it may fit better under Learning ↔ Selection Interaction than under Evolved Cooperation; needs a decision before writing a page.
+- Full run needed — toy-scale result is directional only (single seed, population 8, 150 rounds vs. the paper's N=50 agents across 500 parallel arenas). Run larger populations/more rounds, and ideally multiple seeds, before treating the ranking as anything more than suggestive.
+---
+
 ## PredPreyGrass experiments (specified, not yet run)
 
 ### Observation-space improvements
