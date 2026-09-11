@@ -87,6 +87,23 @@ This paper is a close cousin of [Ackley & Littman (1991)](/learning-selection-in
 
 Put more sharply: 1991 is an early **existence proof** that an evolved reward distinct from fitness, paired with lifetime learning, works — Ackley & Littman never frame "what should a reward look like relative to fitness" as a question in its own right, never search reward-function space systematically, and never characterize *when or why* divergence from fitness helps. Their evolved evaluation network almost certainly does diverge from raw fitness in interesting ways — that's implicit in it outperforming the alternatives — but the paper never studies that divergence directly the way Hungry-Thirsty's four-number reward table makes it visible. 2010 is the **theory** that explains why 1991's architecture should be expected to work, made small enough to see the mechanism directly. Tellingly, the two lines of work aren't even connected by their own authors: Singh, Lewis & Barto's reference list doesn't cite Ackley & Littman at all — this is a connection this site's own reading draws, not one the original papers draw themselves.
 
+**What the two papers share:**
+
+- Reward and fitness are kept as two genuinely separate functions — neither paper ever conflates "what the agent optimizes" with "what evolution actually selects for."
+- Within-lifetime behavior is driven by ordinary RL, using that individual's own fixed, evolved reward as its signal.
+- Evolution acts on the *reward function itself*, not directly on behavior — the behavior is left for lifetime learning to work out.
+
+**Where they differ:**
+
+| | Ackley & Littman (1991) | Singh, Lewis & Barto (2010) |
+|---|---|---|
+| Headline claim | Combined evolution + learning beats either alone — a *performance* result | The evolved reward diverges from fitness in an interpretable way — a *content* result |
+| Domain | Full spatial ecology (100×100 grid, predators, plants, shelter) | Small abstract gridworld (6×6, two toy tasks) |
+| How the reward is found | Implicit — an ordinary population-based genetic algorithm (mutation, crossover, selection), never itself framed as "searching reward-function space" | Explicit — a small, hand-parameterized reward-function family, searched (mostly) exhaustively over named candidates |
+| Lifetime learning rule | CRBP (Complementary Reinforcement Back-Propagation) | ε-greedy Q-learning |
+| Formal framework | None — no defined space of reward functions, no stated optimality criterion | The Optimal Reward Problem, formally defined ($A$, $I_A$, $\mathcal{E}$, $G$, $i_A^*$ — see §3) |
+| Scale | This site's own replication: 500 runs, full statistical comparative study | Original paper: ~320-agent batches per candidate reward, no formal cross-seed significance testing |
+
 The paper itself identifies its closest prior relative as Uchibe & Doya (2008), which proposes *embodied evolution* as a concrete mechanism for evolving reward — but stays tied to combining internal reward with an externally-supplied one. This paper's framework dispenses with external reward entirely and aims for maximum generality instead. A companion, fuller treatment of the same framework — with a gradient-based (rather than exhaustive-search) method for finding good reward functions — appeared the following year as Singh, Lewis, Barto & Sorg (2010), *"Intrinsically Motivated Reinforcement Learning: An Evolutionary Perspective"* (IEEE TAMD).
 
 This project's own [PredPreyGrass](/learning-selection-interaction/predpreygrass) work connects to this paper directly, not just by analogy: [Trial 12 of the Darwin/Baldwin Trial Log](/learning-selection-interaction/darwin-baldwin-trial-log) (the `eco_evolutionary_erl_baldwin` module) already gives each agent an evolved, lifetime-fixed "evaluation network" — a reward function under genetic control, exactly as this paper formalizes — separate from a live action network adjusted by within-lifetime RL. Per-agent lineage logging now exists there specifically to ask this paper's question of that architecture directly: does the evolved reward converge on a dense, always-available proximate substitute (e.g. weighting immediate energy/health state heavily) rather than one that tracks reproduction events themselves — the same "food reward instead of maximize descendants" divergence this paper demonstrates in miniature. See the trial log's "What's next" section for status; no real-scale result yet.
