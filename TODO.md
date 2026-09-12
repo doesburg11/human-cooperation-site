@@ -63,6 +63,12 @@ Key experimental question:
 - Raw observation asks whether learning can discover useful behavior from scratch.
 - Derived drives ask whether evolution can produce perceptual/motivational systems that make useful lifetime learning easier.
 
+### Kin-identification observation channel (kickback credit-assignment fix)
+
+[`base_environment_sparse_rewards_plus_kickback`](https://github.com/doesburg11/PredPreyGrass/tree/main/predpreygrass/non_evolutionary/project_reward_shaping/base_environment_sparse_rewards_plus_kickback) — a `+10` bonus to a grandparent every time its child reproduces — recovered 86%/96% of sparse, the best of four shaping variants tried but still short of sparse. The parent README's §5 explained the shortfall as a credit-assignment gap (reward paid to the grandparent for a *different* agent's action). Refined in conversation 2026-09-12, TODO added to [`project_reward_shaping/README.md` §7](https://github.com/doesburg11/PredPreyGrass/blob/main/predpreygrass/non_evolutionary/project_reward_shaping/README.md): the actual root cause is that a parent has no way to identify its own offspring at all — the observation is a 4-channel local grid (border, predator/prey/grass presence weighted by energy only) with no agent identity, and the internal `agent_parent` link used to compute the kickback payout is never surfaced to the policy. No protective-parent behavior can exist for kickback to reinforce if the parent can't tell its own offspring apart from any other nearby conspecific.
+
+Concrete, untested prediction: add an observation channel letting an agent distinguish its own offspring from unrelated nearby conspecifics (cheap — `agent_parent` already exists, just needs surfacing into the existing local window). If kin-blindness is the binding constraint, this should let kickback close more of the gap to sparse. Not yet built or run.
+
 ### Direct reciprocity without coordination under necessity
 
 Goal:
