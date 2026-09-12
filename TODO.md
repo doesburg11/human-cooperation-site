@@ -26,11 +26,11 @@ Working notes and research ideas for the human-cooperation-site project. Not pub
 - If the qualitative pattern replicates (identifiable → higher return, lower territoriality, higher turn-taking), implement results on website.
 ---
 
-## Hughes2018 experiments (run; Cleanup non-replication, Harvest inconclusive)
+## Hughes2018 experiments (run; Cleanup and Harvest both fail to replicate at full scale)
 
 [Hughes2018](https://github.com/doesburg11/Hughes2018) — from-scratch reproduction of inequity aversion in Cleanup/Harvest (Hughes et al. 2018).
 - Cleanup: `advantageous_only` (guilt) loses to `baseline` in 6/6 seed comparisons, at and beyond the paper's own training scale — the opposite of the paper's Fig. 3A headline claim. Real engineering confounds (a trace-observability bug, then beam-cooldown/waste-grace-period mechanics) were found and ruled out along the way; the non-replication persisted after both fixes. Investigation stopped 2026-09-09 — documented in the repo README as the current honest state, not pursued further for now.
-- Harvest: first real training (3 seeds × baseline/advantageous_only/disadvantageous_only) run 2026-09-09, reaching only ~3.6-3.8M agent-steps — 20-30x short of the paper's own Harvest scale (Fig. 4: ~70-100M agent-steps). Near-tie means across conditions, but `disadvantageous_only` had both the highest mean and a much tighter seed-to-seed spread than the other two — loosely consistent with Fig. 4's claim, but not statistically separable at 3 seeds. **A full-scale Harvest run (paper's own agent-step budget, more seeds) is still needed before this can be called conclusive either way.**
+- Harvest: full-scale run (3 seeds × baseline/advantageous_only/disadvantageous_only, ~86-94M agent-steps for baseline/advantageous_only and ~65M for disadvantageous_only — matching the paper's own Fig. 4 budget) completed 2026-09-12. Converged means: `baseline` 846.9, `advantageous_only` 840.1 (essentially tied — no clear win the paper predicts), `disadvantageous_only` 789.5 (clearly *worse* than both, by ~10x each condition's own seed-to-seed spread — the opposite of Fig. 4's claim that disadvantageous inequity aversion helps). The earlier 3.6-3.8M-step pilot's suggestive "`disadvantageous_only` more consistent seed-to-seed" pattern turned out to be noise from comparing still-unconverged training curves, not a real effect. Documented in the repo README; not pursued further for now.
 ---
 
 ## Wang2019 experiments (rebuilt correctly, toy-scale run only)
