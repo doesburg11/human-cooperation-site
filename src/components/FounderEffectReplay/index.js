@@ -228,17 +228,6 @@ export default function FounderEffectReplay() {
 
   return (
     <div className={styles.pageShell}>
-      <header className={styles.hero}>
-        <div className={styles.heroCopy}>
-          <p className={styles.eyebrow}>eco_evolutionary_erl_baldwin — Trial 12</p>
-          <h2 className={styles.heroTitle}>Founder Effect</h2>
-          <p className={styles.heroText}>
-            One real agent&rsquo;s evolved <code>eval_weights</code> (seed 12000, 33 offspring), cloned into every
-            founder of a fresh population with evolution switched off. 126 frames, step 0 to 5,000.
-          </p>
-        </div>
-      </header>
-
       {errorText ? <p className={styles.errorText}>{errorText}</p> : null}
 
       <div className={styles.layout}>

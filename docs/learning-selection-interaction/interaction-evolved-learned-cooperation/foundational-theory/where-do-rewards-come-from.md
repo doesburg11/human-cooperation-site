@@ -97,14 +97,57 @@ Put more sharply: 1991 is an early **existence proof** that an evolved reward di
 
 **Where they differ:**
 
-| | Ackley & Littman (1991) | Singh, Lewis & Barto (2010) |
-|---|---|---|
-| Headline claim | Combined evolution + learning beats either alone — a *performance* result | The evolved reward diverges from fitness in an interpretable way — a *content* result |
-| Domain | Full spatial ecology (100×100 grid, predators, plants, shelter) | Small abstract gridworld (6×6, two toy tasks) |
-| How the reward is found | Implicit — an ordinary population-based genetic algorithm (mutation, crossover, selection), never itself framed as "searching reward-function space" | Explicit — a small, hand-parameterized reward-function family, searched (mostly) exhaustively over named candidates |
-| Lifetime learning rule | CRBP (Complementary Reinforcement Back-Propagation) | ε-greedy Q-learning |
-| Formal framework | None — no defined space of reward functions, no stated optimality criterion | The Optimal Reward Problem, formally defined ($A$, $I_A$, $\mathcal{E}$, $G$, $i_A^*$ — see §3) |
-| Scale | This site's own replication: 500 runs, full statistical comparative study | Original paper: ~320-agent batches per candidate reward, no formal cross-seed significance testing |
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--bordered site-table--striped">
+    <colgroup>
+      <col style={{ width: '18%' }} />
+      <col style={{ width: '41%' }} />
+      <col style={{ width: '41%' }} />
+    </colgroup>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Ackley &amp; Littman (1991)</th>
+        <th>Singh, Lewis &amp; Barto (2010)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Headline claim</strong></td>
+        <td>Combined evolution + learning beats either alone — a <em>performance</em> result</td>
+        <td>The evolved reward diverges from fitness in an interpretable way — a <em>content</em> result</td>
+      </tr>
+      <tr>
+        <td><strong>Domain</strong></td>
+        <td>Full spatial ecology (100×100 grid, predators, plants, shelter)</td>
+        <td>Small abstract gridworld (6×6, two toy tasks)</td>
+      </tr>
+      <tr>
+        <td><strong>How the reward is found</strong></td>
+        <td>Implicit — an ordinary population-based genetic algorithm (mutation, crossover, selection), never itself framed as &ldquo;searching reward-function space&rdquo;</td>
+        <td>Explicit — a small, hand-parameterized reward-function family, searched (mostly) exhaustively over named candidates</td>
+      </tr>
+      <tr>
+        <td><strong>Lifetime learning rule</strong></td>
+        <td>CRBP (Complementary Reinforcement Back-Propagation)</td>
+        <td>ε-greedy Q-learning</td>
+      </tr>
+      <tr>
+        <td><strong>Formal framework</strong></td>
+        <td>None — no defined space of reward functions, no stated optimality criterion</td>
+        <td>The Optimal Reward Problem, formally defined ($A$, $I_A$, $\mathcal{E}$, $G$, $i_A^*$ — see §3)</td>
+      </tr>
+      <tr>
+        <td><strong>Scale</strong></td>
+        <td>This site's own replication: 500 runs, full statistical comparative study</td>
+        <td>Original paper: ~320-agent batches per candidate reward, no formal cross-seed significance testing</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <figcaption className="site-table-caption"><strong>Display 2:</strong> Where Ackley &amp; Littman (1991) and Singh, Lewis &amp; Barto (2010) share the same underlying claim and where their methods diverge.</figcaption>
+</figure>
 
 The paper itself identifies its closest prior relative as Uchibe & Doya (2008), which proposes *embodied evolution* as a concrete mechanism for evolving reward — but stays tied to combining internal reward with an externally-supplied one. This paper's framework dispenses with external reward entirely and aims for maximum generality instead. A companion, fuller treatment of the same framework — with a gradient-based (rather than exhaustive-search) method for finding good reward functions — appeared the following year as Singh, Lewis, Barto & Sorg (2010), *"Intrinsically Motivated Reinforcement Learning: An Evolutionary Perspective"* (IEEE TAMD).
 
@@ -134,19 +177,47 @@ The genome tested here came from the `eco_evolutionary_erl_baldwin` seed-12000 r
 
 Seeded as every founder's fixed reward and run for the full 5,000-step budget, this genome's population not only survives but cycles the way a healthy ecology does — expansion, correction, recovery — rather than settling into either extinction or unchecked growth:
 
-| step | agents | carnivores |
-|---|---|---|
-| 0 | 60 | 5 |
-| 500 | 266 | 38 |
-| 1,000 | 98 | 13 |
-| 1,750 | 784 | 38 |
-| 2,000 | 573 | 105 |
-| 2,750 | 148 | 10 |
-| 3,500 | 439 | 74 |
-| 4,250 | 210 | 12 |
-| 5,000 | 499 | 30 |
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--bordered site-table--striped">
+    <colgroup>
+      <col style={{ width: '33.33%' }} />
+      <col style={{ width: '33.33%' }} />
+      <col style={{ width: '33.33%' }} />
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Step</th>
+        <th>Agents</th>
+        <th>Carnivores</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>0</td><td>60</td><td>5</td></tr>
+      <tr><td>500</td><td>266</td><td>38</td></tr>
+      <tr><td>1,000</td><td>98</td><td>13</td></tr>
+      <tr><td>1,750</td><td>784</td><td>38</td></tr>
+      <tr><td>2,000</td><td>573</td><td>105</td></tr>
+      <tr><td>2,750</td><td>148</td><td>10</td></tr>
+      <tr><td>3,500</td><td>439</td><td>74</td></tr>
+      <tr><td>4,250</td><td>210</td><td>12</td></tr>
+      <tr><td>5,000</td><td>499</td><td>30</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <figcaption className="site-table-caption"><strong>Display 3:</strong> Population and carnivore counts at sampled steps, seed-12000 genome cloned into every founder, evolution switched off.</figcaption>
+</figure>
 
-<FounderEffectReplay />
+<figure style={{ margin: '0 0 1.25rem 0', textAlign: 'center' }}>
+  <div style={{ width: '100%', margin: '0 auto', overflow: 'hidden' }}>
+    <div className="blue-banner">
+      <div className="blue-banner-title">Founder Effect — a fixed, evolution-discovered reward run live</div>
+      <div className="blue-banner-subtitle">126 frames, step 0 to 5,000: the seed-12000 champion genome's <code>eval_weights</code> cloned into every founder, with evolution switched off. Play, scrub, and watch the population cycle.</div>
+    </div>
+    <FounderEffectReplay />
+  </div>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 4:</strong> Running grid replay of the seed-12000 founder-effect run, rendered directly from the simulation's own snapshot frames.</figcaption>
+</figure>
 
 This is a single case, not a systematic result — one real genome, tested once. What it shows is narrower than §8's population-level claim but complements it: a reward function evolution found useful for one individual's own reproductive success can, transplanted wholesale and stripped of any further evolutionary correction, still support a functioning population on its own. Whether that holds more generally — across more sampled genomes, more seeds, more founder counts — is open; see the [Darwin/Baldwin Trial Log](/learning-selection-interaction/darwin-baldwin-trial-log) for status.
 
