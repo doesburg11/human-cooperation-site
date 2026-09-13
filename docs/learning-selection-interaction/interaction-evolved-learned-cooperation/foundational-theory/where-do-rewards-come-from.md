@@ -124,6 +124,46 @@ The module that does test this paper's real mechanism is `eco_evolutionary_erl_b
 
 One caveat survives replication unchanged: single-channel correlation isn't the same as causal irrelevance — fitness depends on the whole policy learned against all channels jointly, not any one channel in isolation. The mismatch between evolved weight and marginal correlation is now strong, replicated evidence of divergence; it's not a causal decomposition of the policy. (The 30-seed combined analysis also surfaced a real memory bug — an early version loaded all 161M rows as Python objects and got OOM-killed at 89GB RAM — fixed by parsing straight into numpy arrays instead.) Full numbers live in the module's [`RESULTS.md` §17](https://github.com/doesburg11/PredPreyGrass/blob/main/predpreygrass/evolutionary/eco_evolutionary_erl_baldwin/RESULTS.md).
 
+## 9. A running experiment: does a discovered reward survive as a fixed founder reward?
+
+Section 8 established that `eval_weights` diverges from `offspring_count` at the population level. That raises a sharper, more literal question: take one specific, real evolved genome — not a statistical summary of many — and clone its `eval_weights` into every founder of a brand-new population, with evolution switched off (`L` strategy: the genome is copied exactly, no mutation; only within-lifetime RL learning still runs). Does a population survive on a reward function whose only claim to validity is that one individual, once, was selected while carrying it?
+
+The genome tested here came from the `eco_evolutionary_erl_baldwin` seed-12000 run: a real agent with 33 confirmed offspring, among the highest realized fitness in that population. Its `eval_weights` — the same 7-channel layout as §8 (`visual_N`, `visual_S`, `visual_E`, `visual_W`, `in_tree`, `health_norm`, `energy_norm`) — are `[0.037, 0.022, 0.892, 0.324, 0.183, 0.707, 0.480]`. Unlike a population-level summary, this is one individual's actual weighting: it leans hardest on `visual_E` (0.892), with `health_norm` (0.707) and `energy_norm` (0.480) close behind — a specific, idiosyncratic drive, not a clean "reward health and energy" rule.
+
+Seeded as every founder's fixed reward and run for the full 5,000-step budget, this genome's population not only survives but cycles the way a healthy ecology does — expansion, correction, recovery — rather than settling into either extinction or unchecked growth:
+
+| step | agents | carnivores |
+|---|---|---|
+| 0 | 60 | 5 |
+| 500 | 266 | 38 |
+| 1,000 | 98 | 13 |
+| 1,750 | 784 | 38 |
+| 2,000 | 573 | 105 |
+| 2,750 | 148 | 10 |
+| 3,500 | 439 | 74 |
+| 4,250 | 210 | 12 |
+| 5,000 | 499 | 30 |
+
+<figure style={{ margin: '0 0 1.25rem 0', textAlign: 'center' }}>
+  <div style={{ width: '100%', maxWidth: '1180px', margin: '0 auto', overflow: 'hidden' }}>
+    <div className="blue-banner">
+      <div className="blue-banner-title">Founder Effect — a fixed, evolution-discovered reward run live</div>
+      <div className="blue-banner-subtitle">126 frames, step 0 to 5,000: the seed-12000 champion genome's <code>eval_weights</code> cloned into every founder, with evolution switched off. Scrub, play, and watch the population cycle in real time.</div>
+    </div>
+    <a
+      href="https://claude.ai/code/artifact/d35dcbe0-1889-4d6b-a3a7-d25c108aca41"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{ display: 'block', padding: '1.1rem 1.25rem', backgroundColor: '#0f3368', color: '#ffffff', textDecoration: 'none', fontFamily: "'IBM Plex Sans', 'Avenir Next', 'Segoe UI', sans-serif", fontSize: '15px', fontWeight: 600, borderTop: '1px solid rgba(255,255,255,0.18)' }}
+    >
+      Open the running visualization →
+    </a>
+  </div>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 2:</strong> An animated grid replay of the seed-12000 founder-effect run, hosted as an interactive Claude artifact (opens in a new tab).</figcaption>
+</figure>
+
+This is a single case, not a systematic result — one real genome, tested once. What it shows is narrower than §8's population-level claim but complements it: a reward function evolution found useful for one individual's own reproductive success can, transplanted wholesale and stripped of any further evolutionary correction, still support a functioning population on its own. Whether that holds more generally — across more sampled genomes, more seeds, more founder counts — is open; see the [Darwin/Baldwin Trial Log](/learning-selection-interaction/darwin-baldwin-trial-log) for status.
+
 ## References
 
 - Singh, S., Lewis, R. L., & Barto, A. G. (2009/2010). "Where Do Rewards Come From?" Originally *Proceedings of the 31st Annual Conference of the Cognitive Science Society*, 2601–2606 (2009); reprinted in *Proceedings of the International Symposium on AI-Inspired Biology* (AISB 2010 convention), 111–116.
