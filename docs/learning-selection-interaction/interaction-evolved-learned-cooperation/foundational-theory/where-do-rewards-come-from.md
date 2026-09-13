@@ -5,6 +5,8 @@ sidebar_position: 12
 slug: /learning-selection-interaction/where-do-rewards-come-from
 ---
 
+import FounderEffectReplay from '@site/src/components/FounderEffectReplay';
+
 # Where Do Rewards Come From?
 
 <div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '0.4rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>Standard reinforcement learning takes the reward function as given — an agent maximizes whatever scalar signal it's handed, and RL theory has nothing to say about where that signal comes from. Singh, Lewis &amp; Barto's *"Where Do Rewards Come From?"* (2009/2010) answers that question by placing reward itself inside an evolutionary loop: evolution searches for the internal reward function that best serves reproductive fitness, and the resulting reward — an agent's proximate, moment-to-moment motivation — need not resemble the ultimate fitness criterion it was selected for at all.</div>
@@ -144,23 +146,7 @@ Seeded as every founder's fixed reward and run for the full 5,000-step budget, t
 | 4,250 | 210 | 12 |
 | 5,000 | 499 | 30 |
 
-<figure style={{ margin: '0 0 1.25rem 0', textAlign: 'center' }}>
-  <div style={{ width: '100%', maxWidth: '1180px', margin: '0 auto', overflow: 'hidden' }}>
-    <div className="blue-banner">
-      <div className="blue-banner-title">Founder Effect — a fixed, evolution-discovered reward run live</div>
-      <div className="blue-banner-subtitle">126 frames, step 0 to 5,000: the seed-12000 champion genome's <code>eval_weights</code> cloned into every founder, with evolution switched off. Scrub, play, and watch the population cycle in real time.</div>
-    </div>
-    <a
-      href="https://claude.ai/code/artifact/d35dcbe0-1889-4d6b-a3a7-d25c108aca41"
-      target="_blank"
-      rel="noopener noreferrer"
-      style={{ display: 'block', padding: '1.1rem 1.25rem', backgroundColor: '#0f3368', color: '#ffffff', textDecoration: 'none', fontFamily: "'IBM Plex Sans', 'Avenir Next', 'Segoe UI', sans-serif", fontSize: '15px', fontWeight: 600, borderTop: '1px solid rgba(255,255,255,0.18)' }}
-    >
-      Open the running visualization →
-    </a>
-  </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 2:</strong> An animated grid replay of the seed-12000 founder-effect run, hosted as an interactive Claude artifact (opens in a new tab).</figcaption>
-</figure>
+<FounderEffectReplay />
 
 This is a single case, not a systematic result — one real genome, tested once. What it shows is narrower than §8's population-level claim but complements it: a reward function evolution found useful for one individual's own reproductive success can, transplanted wholesale and stripped of any further evolutionary correction, still support a functioning population on its own. Whether that holds more generally — across more sampled genomes, more seeds, more founder counts — is open; see the [Darwin/Baldwin Trial Log](/learning-selection-interaction/darwin-baldwin-trial-log) for status.
 

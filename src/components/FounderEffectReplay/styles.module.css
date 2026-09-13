@@ -1,0 +1,325 @@
+.pageShell {
+  width: 100%;
+  margin: 1.25rem 0 1.5rem;
+  color: #1f2d3d;
+}
+
+.hero {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.heroCopy {
+  padding: 0.875rem 1.125rem 1rem;
+  background: #0f3368;
+  color: #ffffff;
+  border: 1px solid #0f3368;
+  box-shadow: 0 12px 28px rgba(15, 51, 104, 0.08);
+}
+
+.eyebrow,
+.sectionEyebrow,
+.monoText,
+.frameIndexLabel,
+.field span,
+.sliderRow label {
+  font-family: "IBM Plex Mono", "SFMono-Regular", "Menlo", monospace;
+}
+
+.eyebrow,
+.sectionEyebrow {
+  margin: 0 0 0.375rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.heroTitle,
+.cardTitle {
+  margin: 0;
+  line-height: 1.08;
+  font-weight: 700;
+}
+
+.heroTitle {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+}
+
+.heroText {
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2.15fr) minmax(290px, 0.95fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.card {
+  padding: 1.25rem;
+  background: #f7fbff;
+  border: 1px solid #d6e4f5;
+  box-shadow: 0 12px 28px rgba(15, 51, 104, 0.08);
+}
+
+.viewerCard {
+  grid-column: 1;
+}
+
+.sidebarColumn {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.125rem;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.cardHeaderCompact {
+  margin-bottom: 0.75rem;
+}
+
+.sectionEyebrow {
+  color: #0f3368;
+}
+
+.controlRow,
+.sliderRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.controlRow {
+  flex-wrap: wrap;
+  margin-bottom: 0.875rem;
+}
+
+.sliderRow {
+  margin-bottom: 1rem;
+}
+
+.monoText,
+.frameIndexLabel,
+.field span,
+.sliderRow label {
+  font-size: 0.84rem;
+  color: #4e6279;
+}
+
+.field {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin-left: auto;
+}
+
+.button,
+.select,
+.rangeInput {
+  appearance: none;
+  border: 1px solid #d6e4f5;
+  border-radius: 0;
+  outline: 0;
+  font-family: "IBM Plex Mono", "SFMono-Regular", "Menlo", monospace;
+}
+
+.button {
+  padding: 0.625rem 1rem;
+  cursor: pointer;
+  font-size: 0.88rem;
+  transition: filter 120ms ease;
+}
+
+.button:hover:enabled {
+  filter: brightness(0.96);
+}
+
+.button:disabled,
+.select:disabled,
+.rangeInput:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.buttonPrimary {
+  background: #1c4b8f;
+  color: #ffffff;
+  border-color: #1c4b8f;
+}
+
+.buttonSecondary {
+  background: #dfeafb;
+  color: #0f3368;
+}
+
+.select {
+  padding: 0.625rem 0.75rem;
+  background: #dfeafb;
+  color: #1f2d3d;
+}
+
+.rangeInput {
+  flex: 1;
+  height: 6px;
+  background: #dfeafb;
+  border-color: transparent;
+}
+
+.rangeInput::-webkit-slider-thumb {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #1c4b8f;
+  cursor: pointer;
+  border: 1px solid #0f3368;
+  border-radius: 0;
+}
+
+.rangeInput::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: #1c4b8f;
+  border: 1px solid #0f3368;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+.worldCanvas,
+.worldImage,
+.chartCanvas {
+  width: 100%;
+  display: block;
+  border: 1px solid #d6e4f5;
+  background: #ffffff;
+}
+
+.worldCanvas,
+.worldImage {
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+.viewerFooter {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.875rem;
+}
+
+.viewerFooter p,
+.chartSubtitle {
+  margin: 0;
+}
+
+.viewerCaption {
+  color: #4e6279;
+  text-align: right;
+}
+
+.chartSubtitle {
+  font-size: 0.82rem;
+  color: #4e6279;
+}
+
+.legendBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.legendRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.96rem;
+}
+
+.swatch {
+  width: 18px;
+  height: 18px;
+  border: 1px solid rgba(15, 51, 104, 0.18);
+  flex: 0 0 auto;
+}
+
+.swatchAgents {
+  background: #2d5fba;
+}
+
+.swatchCarnivores {
+  background: #7d1e24;
+}
+
+.weightsBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.weightRow {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr 3rem;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 0.82rem;
+  color: #4e6279;
+}
+
+.weightBarTrack {
+  height: 8px;
+  background: #dfeafb;
+  position: relative;
+}
+
+.weightBarFill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: #1c4b8f;
+}
+
+.weightValue {
+  text-align: right;
+  font-family: "IBM Plex Mono", "SFMono-Regular", "Menlo", monospace;
+  color: #1f2d3d;
+}
+
+.errorText {
+  margin: 0 0 1rem;
+  color: #8a1f2f;
+  font-weight: 600;
+}
+
+@media (max-width: 996px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .viewerCard,
+  .sidebarColumn {
+    grid-column: auto;
+  }
+
+  .field {
+    margin-left: 0;
+  }
+
+  .viewerFooter {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .viewerCaption {
+    text-align: left;
+  }
+}
