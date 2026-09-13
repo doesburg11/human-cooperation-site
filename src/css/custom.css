@@ -90,11 +90,17 @@
   line-height: 1.4;
 }
 
+/* !important is required here for the same reason documented above on
+   .site-table th: Infima's base `code` rule sits in a CSS cascade layer,
+   and the legacy-browser CSS build flattens that layer using an artificial
+   specificity boost (`code:not(#\#):not(#\#)`) that beats plain classes
+   like `.blue-banner-subtitle code` regardless of how specific they are
+   written. */
 .blue-banner-title code,
 .blue-banner-subtitle code {
-  background-color: rgba(255, 255, 255, 0.16);
-  color: #ffffff;
-  border: none;
+  background-color: rgba(255, 255, 255, 0.16) !important;
+  color: #ffffff !important;
+  border: none !important;
 }
 
 /* Site-wide table pattern for doc pages that need the blue research-table layout.
