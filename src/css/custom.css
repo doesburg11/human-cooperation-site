@@ -90,6 +90,13 @@
   line-height: 1.4;
 }
 
+.blue-banner-title code,
+.blue-banner-subtitle code {
+  background-color: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+  border: none;
+}
+
 /* Site-wide table pattern for doc pages that need the blue research-table layout.
    !important is required on the properties that Infima's base `table` styles also
    set: Docusaurus (future.v4) puts Infima in a CSS cascade layer, and the legacy-
