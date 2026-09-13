@@ -1,6 +1,6 @@
 ---
 id: hinton-nowlan-1987
-title: The Hinton & Nowlan (1987) Algorithm
+title: Hinton & Nowlan (1987)
 sidebar_position: 9
 slug: /learning-selection-interaction/hinton-nowlan-1987
 ---
@@ -8,7 +8,7 @@ slug: /learning-selection-interaction/hinton-nowlan-1987
 import BaldwinNeedleHaystack from '@site/src/components/BaldwinNeedleHaystack';
 import GithubLink from '@site/src/components/GithubLink';
 
-# The Hinton & Nowlan (1987) Algorithm
+# Hinton & Nowlan (1987)
 
 <GithubLink href="https://github.com/doesburg11/HintonNowlan1987" />
 

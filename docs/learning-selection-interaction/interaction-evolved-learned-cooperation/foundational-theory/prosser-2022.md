@@ -1,13 +1,13 @@
 ---
 id: prosser-2022
-title: The Prosser (2022) Models
+title: Prosser (2022)
 sidebar_position: 13
 slug: /learning-selection-interaction/prosser-2022
 ---
 
 import GithubLink from '@site/src/components/GithubLink';
 
-# The Prosser (2022) Models
+# Prosser (2022)
 
 <GithubLink href="https://github.com/doesburg11/Prosser2022" />
 

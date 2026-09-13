@@ -27,8 +27,8 @@ export default {
           collapsed: false,
           items: [
             'learning-selection-interaction/interaction-evolved-learned-cooperation/foundational-theory/baldwin-effect',
-            'learning-selection-interaction/interaction-evolved-learned-cooperation/foundational-theory/ackley-littman-1991',
             'learning-selection-interaction/interaction-evolved-learned-cooperation/foundational-theory/hinton-nowlan-1987',
+            'learning-selection-interaction/interaction-evolved-learned-cooperation/foundational-theory/ackley-littman-1991',
             'learning-selection-interaction/interaction-evolved-learned-cooperation/foundational-theory/where-do-rewards-come-from',
             'learning-selection-interaction/interaction-evolved-learned-cooperation/foundational-theory/prosser-2022',
           ],

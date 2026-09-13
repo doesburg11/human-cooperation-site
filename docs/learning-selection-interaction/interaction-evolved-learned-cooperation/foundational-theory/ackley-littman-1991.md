@@ -1,13 +1,13 @@
 ---
 id: ackley-littman-1991
-title: The Ackley & Littman (1991) Algorithm
+title: Ackley & Littman (1991)
 sidebar_position: 11
 slug: /learning-selection-interaction/ackley-littman-1991
 ---
 
 import GithubLink from '@site/src/components/GithubLink';
 
-# The Ackley & Littman (1991) Algorithm
+# Ackley & Littman (1991)
 
 <GithubLink href="https://github.com/doesburg11/AckleyLittman1991" />
 
@@ -15,7 +15,7 @@ import GithubLink from '@site/src/components/GithubLink';
 
 <div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '0.4rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>David Ackley and Michael Littman's *"Interactions Between Learning and Evolution"* (1991) asks a concrete version of the question the [Baldwin effect](/learning-selection-interaction/baldwin-effect) raises abstractly: if you give artificial agents **both** a genome that evolves across generations **and** a reinforcement-learning mechanism that adapts within a single lifetime, does the combination outperform either mechanism alone — or pure chance?</div>
 
-Hinton & Nowlan's 1987 model (see [The Hinton & Nowlan (1987) Algorithm](/learning-selection-interaction/hinton-nowlan-1987)) had already answered a narrower version of this with a bit-string "needle in a haystack" landscape and blind-guess learning. Ackley & Littman replace that abstraction with something much closer to a real agent: a neural-network-controlled creature that senses a 2D world, moves, eats, fights, and reproduces, with reinforcement learning driven by its own internally generated signal rather than an externally supplied reward.
+Hinton & Nowlan's 1987 model (see [Hinton & Nowlan (1987)](/learning-selection-interaction/hinton-nowlan-1987)) had already answered a narrower version of this with a bit-string "needle in a haystack" landscape and blind-guess learning. Ackley & Littman replace that abstraction with something much closer to a real agent: a neural-network-controlled creature that senses a 2D world, moves, eats, fights, and reproduces, with reinforcement learning driven by its own internally generated signal rather than an externally supplied reward.
 
 ## 2. World AL: the environment
 

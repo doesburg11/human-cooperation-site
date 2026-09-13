@@ -61,7 +61,7 @@ The clearest illustration of the effect isn't biological at all — it's a small
 
 *(This model has also drawn methodological criticism — some analyses argue its specific population size and trial-budget parameters were chosen in ways that flatter the effect, and that the advantage shrinks or vanishes under more realistic, resource-bounded assumptions. It remains the field's standard illustration, but not an uncontested one.)*
 
-See **[The Hinton & Nowlan (1987) Algorithm](/learning-selection-interaction/hinton-nowlan-1987)** for the full mechanism, the algorithm step by step, and an interactive figure — three landscape shapes, the manufactured gradient in closed form, and a live genetic-algorithm race you can run yourself. A from-scratch reimplementation is available in the [HintonNowlan1987](https://github.com/doesburg11/HintonNowlan1987) repository.
+See **[Hinton & Nowlan (1987)](/learning-selection-interaction/hinton-nowlan-1987)** for the full mechanism, the algorithm step by step, and an interactive figure — three landscape shapes, the manufactured gradient in closed form, and a live genetic-algorithm race you can run yourself. A from-scratch reimplementation is available in the [HintonNowlan1987](https://github.com/doesburg11/HintonNowlan1987) repository.
 
 ### Computational demonstrations beyond Hinton-Nowlan
 
