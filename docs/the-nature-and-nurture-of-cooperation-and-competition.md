@@ -44,12 +44,13 @@ The project studies that human problem with agent-based models, evolutionary sim
 If you are new to the project, use this path:
 
 1. [How do nature and nurture combine to shape human behavior?](/nature-nurture-human-behavior) for the full conceptual argument.
-2. [Evidence So Far](/evidence-so-far) for what is confirmed, null, demonstrated, or still open.
-3. [What is Cooperation?](/what-is-cooperation) for the definition used across the site.
-4. [Cooperation in Perspective](/cooperation-in-perspective) for where cooperation fits within human behavior more broadly.
-5. [Evolved Cooperation](/evolved-cooperation) for cooperation shaped by selection across generations.
-6. [Learned Cooperation](/learned-cooperation) for cooperation acquired through experience within a lifetime.
-7. [Interaction Evolved-Learned Cooperation](/learning-selection-interaction/theory) for the two-timescale argument connecting both processes.
+2. [Highlights](/highlights) for the strongest results in one short page, before the full audit.
+3. [Evidence So Far](/evidence-so-far) for what is confirmed, null, demonstrated, or still open.
+4. [What is Cooperation?](/what-is-cooperation) for the definition used across the site.
+5. [Cooperation in Perspective](/cooperation-in-perspective) for where cooperation fits within human behavior more broadly.
+6. [Evolved Cooperation](/evolved-cooperation) for cooperation shaped by selection across generations.
+7. [Learned Cooperation](/learned-cooperation) for cooperation acquired through experience within a lifetime.
+8. [Interaction Evolved-Learned Cooperation](/learning-selection-interaction/theory) for the two-timescale argument connecting both processes.
 
 ## If You Want the Evidence First
 

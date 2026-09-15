@@ -35,6 +35,7 @@ export default {
         },
       ],
     },
+    'highlights',
     'evidence-so-far',
     {
       type: 'category',
