@@ -85,22 +85,22 @@
   <text class="reward-label" x="880" y="442">Rewards</text>
 
   <!-- Decisions: Agent -> Internal Environment (inner left loop) -->
-  <path class="conn" d="M 740 518 L 710 518 L 710 368 L 738 368" marker-end="url(#arrow)"/>
-  <rect class="lbl-bg" x="672" y="433" width="80" height="20"/>
-  <text class="arrow-label" x="712" y="448">Decisions</text>
+  <path class="conn" d="M 740 538 L 710 538 L 710 390 L 738 390" marker-end="url(#arrow)"/>
+  <rect class="lbl-bg" x="672" y="454" width="80" height="20"/>
+  <text class="arrow-label" x="712" y="469">Decisions</text>
 
   <!-- States: Internal Environment -> Agent (inner right loop) -->
-  <path class="conn" d="M 1022 388 L 1050 388 L 1050 538 L 1022 538" marker-end="url(#arrow)"/>
-  <rect class="lbl-bg" x="1018" y="453" width="60" height="20"/>
-  <text class="arrow-label" x="1048" y="468">States</text>
+  <path class="conn" d="M 1022 390 L 1050 390 L 1050 538 L 1022 538" marker-end="url(#arrow)"/>
+  <rect class="lbl-bg" x="1018" y="454" width="60" height="20"/>
+  <text class="arrow-label" x="1048" y="469">States</text>
 
-  <!-- Actions: Agent -> External Environment, crosses organism boundary (outer left loop) -->
-  <path class="conn" d="M 740 558 L 640 558 L 640 208 L 778 208" marker-end="url(#arrow)"/>
-  <rect class="lbl-bg" x="605" y="373" width="68" height="20"/>
-  <text class="arrow-label" x="639" y="388">Actions</text>
+  <!-- Actions: Internal Environment -> External Environment, crosses organism boundary (outer left loop) -->
+  <path class="conn" d="M 738 345 L 640 345 L 640 208 L 778 208" marker-end="url(#arrow)"/>
+  <rect class="lbl-bg" x="605" y="267" width="68" height="20"/>
+  <text class="arrow-label" x="639" y="282">Actions</text>
 
   <!-- Sensations: External Environment -> Internal Environment, crosses organism boundary (outer right loop) -->
-  <path class="conn" d="M 982 208 L 1120 208 L 1120 348 L 1022 348" marker-end="url(#arrow)"/>
-  <rect class="lbl-bg" x="1090" y="268" width="78" height="20"/>
-  <text class="arrow-label" x="1129" y="283">Sensations</text>
+  <path class="conn" d="M 982 208 L 1120 208 L 1120 345 L 1022 345" marker-end="url(#arrow)"/>
+  <rect class="lbl-bg" x="1090" y="267" width="78" height="20"/>
+  <text class="arrow-label" x="1129" y="282">Sensations</text>
 </svg>
