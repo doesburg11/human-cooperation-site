@@ -35,7 +35,7 @@ Before formalizing anything, the paper makes an argument about *where* reward si
       style={{ display: 'block', width: '100%', height: 'auto' }}
     />
   </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Recreated from Singh, Lewis &amp; Barto's (2009/2010) Figure 1, redrawn for legibility rather than copied pixel-for-pixel.</figcaption>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Recreated from Singh, Lewis &amp; Barto's (2009/2010) Figure 1.</figcaption>
 </figure>
 
 This reframing also dissolves a definitional headache. Psychologists distinguish *extrinsic* motivation (doing something for a specific rewarding outcome) from *intrinsic* motivation ("doing something because it is inherently interesting"), but the line between them is notoriously hard to draw precisely. The paper's move: both kinds of reward are primary, hard-wired signals — the only real difference is what regularity in the organism's evolutionary history each one tracks. Intrinsically motivated behaviors (exploration, play, manipulation) got wired in because *those behaviors themselves* paid off in fitness across generations, not because they were ever paired with satisfying a biological need in any individual's own lifetime.
