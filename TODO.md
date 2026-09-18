@@ -277,6 +277,7 @@ A separate, non-PredPreyGrass simulation idea: modeling early human settlement p
 - Inequity Aversion Improves Cooperation in Intertemporal Social Dilemmas (Hughes, Leibo, Phillips, Tuyls, Dueñez-Guzman, Castañeda, Dunning, Zhu, McKee, Koster, Zhu, Roff & Graepel, NeurIPS 2018): agents with an inequity-aversion reward term (disutility from both advantageous and disadvantageous inequity) sustain cooperation in sequential social dilemmas better than purely selfish agents.
 
 ### Examples to try out
+- Clone and run [Aquarium](https://github.com/michaelkoelle/marl-aquarium) (Kölle et al. 2024) — PettingZoo-native, physics-based (continuous toroidal plane, steering forces, elastic collisions) predator-prey MARL environment; PPO demo included. No sexual/mate reproduction (prey reproduce solo after a survival-duration threshold, capped population; predators don't reproduce) — found while researching prior art for `predator_sexual_reproduction`, worth running to compare its swarming/FOV mechanics and PettingZoo portability against PredPreyGrass's grid-based approach.
 - Meta-learning example, RLlib ("learning-to-learn"): https://github.com/ray-project/ray/blob/master/rllib/examples/algorithms/maml_lr_supervised_learning.py
 - Curriculum: https://github.com/ray-project/ray/blob/master/rllib/examples/curriculum/curriculum_learning.py
 - Curiosity: https://github.com/ray-project/ray/tree/master/rllib/examples/curiosity
