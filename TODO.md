@@ -4,6 +4,17 @@ Working notes and research ideas for the human-cooperation-site project. Not pub
 
 ---
 
+## Examples to try out
+- Clone and run [Aquarium](https://github.com/michaelkoelle/marl-aquarium) (Kölle et al. 2024) — PettingZoo-native, physics-based (continuous toroidal plane, steering forces, elastic collisions) predator-prey MARL environment; PPO demo included. No sexual/mate reproduction (prey reproduce solo after a survival-duration threshold, capped population; predators don't reproduce) — found while researching prior art for `predator_sexual_reproduction`, worth running to compare its swarming/FOV mechanics and PettingZoo portability against PredPreyGrass's grid-based approach.
+- Meta-learning example, RLlib ("learning-to-learn"): https://github.com/ray-project/ray/blob/master/rllib/examples/algorithms/maml_lr_supervised_learning.py
+- Curriculum: https://github.com/ray-project/ray/blob/master/rllib/examples/curriculum/curriculum_learning.py
+- Curiosity: https://github.com/ray-project/ray/tree/master/rllib/examples/curiosity
+- Explore JaxMARL examples: https://github.com/flairox/jaxmarl?tab=readme-ov-file
+  - https://raw.githubusercontent.com/FLAIROx/JaxMARL/refs/heads/main/docs/imgs/smax.gif
+  - SMAX: https://github.com/FLAIROx/JaxMARL/tree/main/jaxmarl/environments/smax
+
+---
+
 ## Quick / misc
 
 - Apply "system dynamics" to micro data, and use graphics from AnyLogic to explain the second law of thermodynamics.
@@ -275,15 +286,6 @@ A separate, non-PredPreyGrass simulation idea: modeling early human settlement p
 - Iterated + Evolutionary Games with MARL (Nature Communications, 2025): MARL-discovered strategies tested in evolving populations. https://www.nature.com/articles/s41467-025-67178-6
 - Neural Population Learning beyond Symmetric Zero-Sum Games (AAMAS 2024): population-level selection/equilibrium in general-sum MARL. https://deepmind.google/research/publications/24820/
 - Inequity Aversion Improves Cooperation in Intertemporal Social Dilemmas (Hughes, Leibo, Phillips, Tuyls, Dueñez-Guzman, Castañeda, Dunning, Zhu, McKee, Koster, Zhu, Roff & Graepel, NeurIPS 2018): agents with an inequity-aversion reward term (disutility from both advantageous and disadvantageous inequity) sustain cooperation in sequential social dilemmas better than purely selfish agents.
-
-### Examples to try out
-- Clone and run [Aquarium](https://github.com/michaelkoelle/marl-aquarium) (Kölle et al. 2024) — PettingZoo-native, physics-based (continuous toroidal plane, steering forces, elastic collisions) predator-prey MARL environment; PPO demo included. No sexual/mate reproduction (prey reproduce solo after a survival-duration threshold, capped population; predators don't reproduce) — found while researching prior art for `predator_sexual_reproduction`, worth running to compare its swarming/FOV mechanics and PettingZoo portability against PredPreyGrass's grid-based approach.
-- Meta-learning example, RLlib ("learning-to-learn"): https://github.com/ray-project/ray/blob/master/rllib/examples/algorithms/maml_lr_supervised_learning.py
-- Curriculum: https://github.com/ray-project/ray/blob/master/rllib/examples/curriculum/curriculum_learning.py
-- Curiosity: https://github.com/ray-project/ray/tree/master/rllib/examples/curiosity
-- Explore JaxMARL examples: https://github.com/flairox/jaxmarl?tab=readme-ov-file
-  - https://raw.githubusercontent.com/FLAIROx/JaxMARL/refs/heads/main/docs/imgs/smax.gif
-  - SMAX: https://github.com/FLAIROx/JaxMARL/tree/main/jaxmarl/environments/smax
 
 ### Comenius and curriculum learning
 Comenius argued that teaching should proceed from the easy to the difficult, so that new knowledge builds on what has already been learned. This principle closely resembles curriculum learning in reinforcement learning, where an agent first trains on simpler tasks before progressing to more complex ones.
