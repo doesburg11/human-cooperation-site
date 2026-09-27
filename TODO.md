@@ -4,6 +4,23 @@ Working notes and research ideas for the human-cooperation-site project. Not pub
 
 ---
 
+## Unfinished business: PredPreyGrass modules built, never run to a conclusion (2026-09-27)
+
+Distinct from a null result: each of these is implemented and (mostly) unit-tested, but nobody has ever run a real
+training experiment on it and reported what happened. Not archive candidates (PredPreyGrass's archive repo is
+specifically for concluded null results, not abandoned half-builds) — each one either needs an actual run, or a
+decision to discard it. See each link for the module's own status note.
+
+- [`lineage_rewards`](https://github.com/doesburg11/PredPreyGrass/tree/main/predpreygrass/non_evolutionary/project_cooperation/lineage_rewards) — the lifecycle/fertility scaffold `eco_evolutionary` was one-time cloned from (no live code import, so removing it breaks nothing). Redesign rationale + tests written; its own README ends "feel free to extend this document with empirical findings... as new experiments roll in" — none ever recorded.
+- [`red_queen`](https://github.com/doesburg11/PredPreyGrass/tree/main/predpreygrass/non_evolutionary/red_queen) — training script smoke-tested (1-iteration CPU run, correct policy setup confirmed) but never actually run; was blocked by concurrent GPU usage from `eco_evolutionary_nuptial_gift`, which is now archived, so nothing is blocking it anymore.
+- [`walls_occlusion`](https://github.com/doesburg11/PredPreyGrass/tree/main/predpreygrass/non_evolutionary/walls_occlusion) — has a demo GIF (something was trained once) but no RESULTS.md and no reported findings; its own README references a path (`predpreygrass/ppg_visibility/`) that no longer exists in the repo — possibly broken, needs a working check before anything else.
+- `direct_reciprocity` — fully specified below under "Direct reciprocity without coordination under necessity"; mechanism and metrics implemented, zero run numbers ever reported.
+- [`network_reciprocity`](https://github.com/doesburg11/PredPreyGrass/tree/main/predpreygrass/non_evolutionary/project_cooperation/network_reciprocity) — barely started: an env file and a random-policy script only, no tests, no training script at all.
+- `pack_hunt_opponent_shaping` — fully specified below under "Train pack_hunt_opponent_shaping"; env, viewer, both training loops, and the opponent-shaping math implemented and verified correct, but nothing trained to convergence.
+- [`stag_hunt_reputation`](https://github.com/doesburg11/PredPreyGrass/tree/main/predpreygrass/non_evolutionary/project_cooperation/stag_hunt_reputation) — reputation mechanism designed and implemented; its own `reputation.md` describes "Expected outcomes" (aspirational), never actual results.
+
+---
+
 ## Examples to try out
 - ~~Clone and run Aquarium~~ — done 2026-09-18: ported [Aquarium](https://github.com/michaelkoelle/marl-aquarium) (Kölle et al. 2024) to RLlib's new API stack, pushed as [doesburg11/aquarium-rllib](https://github.com/doesburg11/aquarium-rllib) (private). No custom `MultiAgentEnv` needed (Aquarium is already a compliant PettingZoo `ParallelEnv`); wrote IL and PS training modes extended to both species (the paper only ever RL-trains prey against a fixed heuristic predator). Confirmed no sexual/mate reproduction by reading the source directly (only `prey.py` has `replicate()`; `procreate` flag is prey-only, off by default). Codex review caught a real bug (Aquarium's `close()` calls `sys.exit()` unconditionally, which could kill `algo.stop()`'s cleanup, not just cosmetic shutdown noise) plus hardening gaps, all fixed. Both training modes smoke-tested end to end with real PPO iterations.
 - Meta-learning example, RLlib ("learning-to-learn"): https://github.com/ray-project/ray/blob/master/rllib/examples/algorithms/maml_lr_supervised_learning.py
