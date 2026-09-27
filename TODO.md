@@ -21,6 +21,19 @@ decision to discard it. See each link for the module's own status note.
 
 ---
 
+## Fix stale status docs: `eco_evolutionary_erl_flagship` (2026-09-27)
+
+Different problem from the list above — this module *is* finished, its own docs just don't say so.
+[`eco_evolutionary_erl_flagship`](https://github.com/doesburg11/PredPreyGrass/tree/main/predpreygrass/evolutionary/eco_evolutionary_erl_flagship)'s
+README.md and RESULTS.md still say "Stage 0 (smoke test) passed" (dated 2026-09-13) and don't reflect what actually
+happened afterward (2026-09-14/15): drift → avoider (hand-designed) beats everything including sparse reward → a
+pooled learner helps only ~10% of seeds → population scaling (the last cheap lever) didn't help either (0/10) →
+reads as founder-effect luck, not a fixable bottleneck. Update both files with the real final conclusion; also check
+whether `predpreygrass/evolutionary/RESULTS.md`'s own trial-log entry for this module (labeled Trial 12 there,
+though it's been referred to elsewhere as Trial 13 — numbering has drifted) needs the same fix.
+
+---
+
 ## Examples to try out
 - ~~Clone and run Aquarium~~ — done 2026-09-18: ported [Aquarium](https://github.com/michaelkoelle/marl-aquarium) (Kölle et al. 2024) to RLlib's new API stack, pushed as [doesburg11/aquarium-rllib](https://github.com/doesburg11/aquarium-rllib) (private). No custom `MultiAgentEnv` needed (Aquarium is already a compliant PettingZoo `ParallelEnv`); wrote IL and PS training modes extended to both species (the paper only ever RL-trains prey against a fixed heuristic predator). Confirmed no sexual/mate reproduction by reading the source directly (only `prey.py` has `replicate()`; `procreate` flag is prey-only, off by default). Codex review caught a real bug (Aquarium's `close()` calls `sys.exit()` unconditionally, which could kill `algo.stop()`'s cleanup, not just cosmetic shutdown noise) plus hardening gaps, all fixed. Both training modes smoke-tested end to end with real PPO iterations.
 - Meta-learning example, RLlib ("learning-to-learn"): https://github.com/ray-project/ray/blob/master/rllib/examples/algorithms/maml_lr_supervised_learning.py
