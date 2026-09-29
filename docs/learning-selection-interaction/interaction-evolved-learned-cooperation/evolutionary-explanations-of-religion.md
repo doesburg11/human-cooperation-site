@@ -13,7 +13,7 @@ Religion can be examined at several levels without assuming that every belief or
 
   <img
     src="/img/learning-selection-interaction/interaction-evolved-learned-cooperation/religion-evolutionary-explanations.webp"
-    alt="Colored mind map of evolutionary explanations of religion, with ultimate, proximate, functional, and by-product branches"
+    alt="Colored mind map of religion with origin, proximate mechanisms, consequences, and evolutionary persistence branches"
     style={{ display: 'block', width: '100%', height: 'auto' }}
   />
 
