@@ -11,22 +11,11 @@ Religion can be examined at several levels without assuming that every belief or
 
 <figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
 
-```mermaid
-flowchart TB
-  O["Origin / emergence"] --> O1["Cognitive by-product"]
-  O --> O2["Psychological adaptation hypothesis"]
-  O --> O3["Social or cultural innovation"]
-  M["Proximate mechanisms"] --> M1["Agency detection · theory of mind"]
-  M --> M2["Pattern detection · emotional regulation"]
-  M --> M3["Social learning"]
-  C["Consequences / functions"] --> C1["Cooperation · coordination"]
-  C --> C2["Group identity · norm enforcement"]
-  C --> C3["Psychological comfort"]
-  P["Evolutionary persistence"] --> P1["Individual or kin-level selection hypotheses"]
-  P --> P2["Cultural selection · group competition"]
-  P --> P3["Gene–culture coevolution"]
-  O --> M --> C --> P
-```
+  <img
+    src="/img/learning-selection-interaction/interaction-evolved-learned-cooperation/religion-evolutionary-explanations.webp"
+    alt="Colored mind map of evolutionary explanations of religion, with ultimate, proximate, functional, and by-product branches"
+    style={{ display: 'block', width: '100%', height: 'auto' }}
+  />
 
 <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Four questions about the emergence and persistence of religious beliefs and practices.</figcaption>
 </figure>
