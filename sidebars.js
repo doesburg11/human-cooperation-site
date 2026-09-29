@@ -26,6 +26,7 @@ export default {
           link: { type: 'doc', id: 'learning-selection-interaction/interaction-evolved-learned-cooperation/interaction-evolved-learned-cooperation' },
           collapsed: false,
           items: [
+            'learning-selection-interaction/interaction-evolved-learned-cooperation/evolutionary-explanations-of-religion',
             'learning-selection-interaction/interaction-evolved-learned-cooperation/foundational-theory/baldwin-effect',
             'learning-selection-interaction/interaction-evolved-learned-cooperation/foundational-theory/hinton-nowlan-1987',
             'learning-selection-interaction/interaction-evolved-learned-cooperation/foundational-theory/ackley-littman-1991',
