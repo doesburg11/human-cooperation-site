@@ -28,26 +28,85 @@ The environment is built on [Aquarium](https://github.com/michaelkoelle/marl-aqu
 
 The PredPreyGrass rules are carried over as directly as the change of space allows:
 
-| PredPreyGrass (grid) | PredPreyGrassContinuous |
-|---|---|
-| 25 × 25 grid, one cell per step | 800 × 800 arena; one grid cell ≈ 32 units ≈ 8 physics steps |
-| 1,000-step episodes | 8,000 physics steps; one decision lasts 8 physics steps |
-| Energy decay, gain from grass and prey | The same energy units, per-step rates divided by 8 |
-| Reproduction at an energy threshold | The same thresholds; the offspring is paid from the parent's energy |
-| Reward only for reproducing (+10) | The same sparse reward |
-| Grass regrows in place | Grass grows in clusters that drift by seed dispersal and die back when overgrazed |
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--striped">
+    <thead>
+      <tr>
+        <th>PredPreyGrass (grid)</th>
+        <th>PredPreyGrassContinuous</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>25 × 25 grid, one cell per step</td>
+        <td>800 × 800 arena; one grid cell ≈ 32 units ≈ 8 physics steps</td>
+      </tr>
+      <tr>
+        <td>1,000-step episodes</td>
+        <td>8,000 physics steps; one decision lasts 8 physics steps</td>
+      </tr>
+      <tr>
+        <td>Energy decay, gain from grass and prey</td>
+        <td>The same energy units, per-step rates divided by 8</td>
+      </tr>
+      <tr>
+        <td>Reproduction at an energy threshold</td>
+        <td>The same thresholds; the offspring is paid from the parent's energy</td>
+      </tr>
+      <tr>
+        <td>Reward only for reproducing (+10)</td>
+        <td>The same sparse reward</td>
+      </tr>
+      <tr>
+        <td>Grass regrows in place</td>
+        <td>Grass grows in clusters that drift by seed dispersal and die back when overgrazed</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<figcaption className="site-table-caption"><strong>Display 2:</strong> How the PredPreyGrass grid rules carry over to the continuous arena.</figcaption>
+</figure>
 
 ## Extensions, step by step
 
 The repository adds one mechanism at a time, each in its own module, so every change can be compared with the world before it:
 
-| Module | Adds |
-|---|---|
-| `add_grass` | Grass patches that prey eat and that regrow |
-| `add_energy` | Metabolic energy, food, starvation |
-| `add_reproduction` | Births at an energy threshold, the +10 birth reward, moving grass clusters, predators that see grass |
-| `add_walls` | Walls that block movement and sight; actions at full speed, half speed or stopped |
-| `add_group_hunting` | Every animal's energy visible to others; catches as a contest between hunters and prey |
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--striped">
+    <thead>
+      <tr>
+        <th>Module</th>
+        <th>Adds</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>add_grass</code></td>
+        <td>Grass patches that prey eat and that regrow</td>
+      </tr>
+      <tr>
+        <td><code>add_energy</code></td>
+        <td>Metabolic energy, food, starvation</td>
+      </tr>
+      <tr>
+        <td><code>add_reproduction</code></td>
+        <td>Births at an energy threshold, the +10 birth reward, moving grass clusters, predators that see grass</td>
+      </tr>
+      <tr>
+        <td><code>add_walls</code></td>
+        <td>Walls that block movement and sight; actions at full speed, half speed or stopped</td>
+      </tr>
+      <tr>
+        <td><code>add_group_hunting</code></td>
+        <td>Every animal's energy visible to others; catches as a contest between hunters and prey</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<figcaption className="site-table-caption"><strong>Display 3:</strong> The repository's modules, each adding one mechanism to the one before.</figcaption>
+</figure>
 
 ### Movement energy
 
@@ -65,24 +124,88 @@ where $S$ is the summed energy of all predators near the prey, $E$ the prey's en
 
 ## Results summary
 
-| Experiment | Outcome after training |
-|---|---|
-| Moving grass, predators blind to grass (3,000 iterations) | Both species alive at the end in 8 of 20 episodes |
-| Predators see grass (4,000 iterations) | 10 of 20; catch risk 2.93 prey per prey per 1,000 steps |
-| Walls, speed-dependent movement cost (3,000) | 0 of 20; prey extinct, catch risk 8.13 |
-| Walls, fixed cost (3,000) | 1 of 20; catch risk 5.62 |
-| No walls, speed actions, fixed cost (3,000) | **11 of 20**; catch risk 3.02 |
-| Every animal's energy visible (1,000) | 0 of 20; catch risk 7.51, against 4.84 without |
-| Group hunting, catch shared, half energy per catch (first 1,000 of 3,000) | Predators extinct in 20 of 20; catch risk 0.82; both species still improving |
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--striped">
+    <thead>
+      <tr>
+        <th>Experiment</th>
+        <th>Outcome after training</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Moving grass, predators blind to grass (3,000 iterations)</td>
+        <td>Both species alive at the end in 8 of 20 episodes</td>
+      </tr>
+      <tr>
+        <td>Predators see grass (4,000 iterations)</td>
+        <td>10 of 20; catch risk 2.93 prey per prey per 1,000 steps</td>
+      </tr>
+      <tr>
+        <td>Walls, speed-dependent movement cost (3,000)</td>
+        <td>0 of 20; prey extinct, catch risk 8.13</td>
+      </tr>
+      <tr>
+        <td>Walls, fixed cost (3,000)</td>
+        <td>1 of 20; catch risk 5.62</td>
+      </tr>
+      <tr>
+        <td>No walls, speed actions, fixed cost (3,000)</td>
+        <td><strong>11 of 20</strong>; catch risk 3.02</td>
+      </tr>
+      <tr>
+        <td>Every animal's energy visible (1,000)</td>
+        <td>0 of 20; catch risk 7.51, against 4.84 without</td>
+      </tr>
+      <tr>
+        <td>Group hunting, catch shared, half energy per catch (first 1,000 of 3,000)</td>
+        <td>Predators extinct in 20 of 20; catch risk 0.82; both species still improving</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<figcaption className="site-table-caption"><strong>Display 4:</strong> Outcome of each experiment's final check: 20 evaluation episodes of the final model; catch risk is prey caught per prey per 1,000 physics steps.</figcaption>
+</figure>
 
 Tournaments, in which every predator checkpoint plays every prey checkpoint, separate adaptation from chance: if newer prey are harder to catch for a fixed predator, the prey are adapting, and vice versa. Co-adaptation needs both shares clearly above 50%.
 
-| Experiment | Newer prey harder to catch | Newer predators catch more |
-|---|---:|---:|
-| Predators see grass (4,000 iterations) | 96% | 43% |
-| Walls, fixed cost (3,000) | 83% | 60% |
-| No walls, speed actions, fixed cost (3,000) | 89% | 55% |
-| Group hunting, second half of the first 1,000 iterations | 72% | **82%** |
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--striped">
+    <thead>
+      <tr>
+        <th>Experiment</th>
+        <th>Newer prey harder to catch</th>
+        <th>Newer predators catch more</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Predators see grass (4,000 iterations)</td>
+        <td>96%</td>
+        <td>43%</td>
+      </tr>
+      <tr>
+        <td>Walls, fixed cost (3,000)</td>
+        <td>83%</td>
+        <td>60%</td>
+      </tr>
+      <tr>
+        <td>No walls, speed actions, fixed cost (3,000)</td>
+        <td>89%</td>
+        <td>55%</td>
+      </tr>
+      <tr>
+        <td>Group hunting, second half of the first 1,000 iterations</td>
+        <td>72%</td>
+        <td><strong>82%</strong></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<figcaption className="site-table-caption"><strong>Display 5:</strong> Share of tournament pairs in which the newer checkpoint does better against a fixed opponent; co-adaptation needs both clearly above 50%.</figcaption>
+</figure>
 
 ## Summary
 
