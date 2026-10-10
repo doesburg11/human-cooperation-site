@@ -30,10 +30,37 @@ Both models are built on the same underlying object and evaluated against the sa
 
 **Two fitness landscapes**, both borrowed from prior evolvability literature:
 
-| Landscape | Structure | Optima |
-|---|---|---|
-| **Modular Constraints (MC)** | `m` blocks of `k` traits; strong (1.0) connections within a block, weak signed connections (`p`) between blocks depending on whether the blocks' targets agree | Local optima wherever a block is internally resolved but disagrees with other blocks; exactly **two** global optima (the target phenotype and its sign-flipped complement) |
-| **Concentric Squares (CS)** | Target is an image of alternating-sign concentric square rings; connections are purely local (each cell's 4 grid neighbours) | No explicit block hierarchy — a counterpoint to MC's clean modular structure |
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--striped">
+    <colgroup>
+      <col style={{ width: '24%' }} />
+      <col style={{ width: '40%' }} />
+      <col style={{ width: '36%' }} />
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Landscape</th>
+        <th>Structure</th>
+        <th>Optima</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Modular Constraints (MC)</strong></td>
+        <td><code>m</code> blocks of <code>k</code> traits; strong (1.0) connections within a block, weak signed connections (<code>p</code>) between blocks depending on whether the blocks' targets agree</td>
+        <td>Local optima wherever a block is internally resolved but disagrees with other blocks; exactly <strong>two</strong> global optima (the target phenotype and its sign-flipped complement)</td>
+      </tr>
+      <tr>
+        <td><strong>Concentric Squares (CS)</strong></td>
+        <td>Target is an image of alternating-sign concentric square rings; connections are purely local (each cell's 4 grid neighbours)</td>
+        <td>No explicit block hierarchy — a counterpoint to MC's clean modular structure</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<figcaption className="site-table-caption"><strong>Display 1:</strong> The two fitness landscapes used in the replication.</figcaption>
+</figure>
 
 **Fitness function:** `w(p) = p·C·pᵀ` — quadratic in the phenotype `p`, so it rewards correctly-signed *combinations* of traits acting together, not any single trait in isolation. `C` is the landscape's constraints matrix (MC's block structure or CS's local grid). This is what makes both landscapes genuinely multi-peaked rather than Hinton & Nowlan's single spike: a block (or ring) can lock onto either sign of its own local optimum independently of its neighbours, creating real local optima a single-trait search can get stuck in.
 
@@ -87,10 +114,41 @@ A from-scratch Python replication of both models — Correlated Behaviours and E
 
 **Results at reduced scale** (the thesis itself runs up to 250,000 generations, 30 seeds, at `n=100`/`n=60`; this replication validates the qualitative finding at a scale that runs in seconds to minutes rather than hours):
 
-| Model | With learning | Without learning | Global optimum |
-|---|---|---|---|
-| Correlated Behaviours (`n=25`, 4000 generations) | **130.00 (exact)** | 4.96 | 130.0 |
-| Environment Selection (`n=12`, 1500 generations) | 47.68 | 23.92 | 48.96 |
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--striped">
+    <colgroup>
+      <col style={{ width: '40%' }} />
+      <col style={{ width: '20%' }} />
+      <col style={{ width: '20%' }} />
+      <col style={{ width: '20%' }} />
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Model</th>
+        <th>With learning</th>
+        <th>Without learning</th>
+        <th>Global optimum</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Correlated Behaviours (<code>n=25</code>, 4000 generations)</td>
+        <td><strong>130.00 (exact)</strong></td>
+        <td>4.96</td>
+        <td>130.0</td>
+      </tr>
+      <tr>
+        <td>Environment Selection (<code>n=12</code>, 1500 generations)</td>
+        <td>47.68</td>
+        <td>23.92</td>
+        <td>48.96</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<figcaption className="site-table-caption"><strong>Display 2:</strong> Final fitness with and without learning at reduced scale, against the global optimum.</figcaption>
+</figure>
 
 Correlated Behaviours converges to and holds the exact global optimum; its no-learning control never stabilizes and ends well below it — a clean reproduction of the thesis's Optimizing Effect. Environment Selection's learning condition reaches a high-fitness plateau markedly faster and more consistently than its control, without a hard optimality guarantee either way — the Expediting Effect. Both figures were independently confirmed by re-running the same configurations through the packaged CLI entry points (`run_cb.py`, `run_es.py`) rather than only the underlying library functions, with a passing 27/27 test suite at the time.
 

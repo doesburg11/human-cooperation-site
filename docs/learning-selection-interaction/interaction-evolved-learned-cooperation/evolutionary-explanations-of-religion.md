@@ -22,12 +22,47 @@ Religion can be examined at several levels without assuming that every belief or
 
 ## Reading the four layers
 
-| Layer | Question | Example |
-| --- | --- | --- |
-| Origin / emergence | How might a religious idea or practice first arise? | An existing capacity to infer unseen agents could make supernatural agents imaginable; a ritual might also be invented and transmitted culturally. |
-| Proximate mechanisms | What produces and transmits it within a lifetime? | Agency detection, theory of mind, emotions, imitation, and teaching. |
-| Consequences / functions | What effects does it have in a particular setting? | Ritual can coordinate a group; norms can alter cooperation and conflict; beliefs may provide comfort. Effects can also be neutral or harmful. |
-| Evolutionary persistence | Why might it become more common across generations? | If its effects change reproduction or cultural transmission, selection might favor it at individual, kin, or group scales. These routes must be tested. |
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--striped">
+    <colgroup>
+      <col style={{ width: '22%' }} />
+      <col style={{ width: '30%' }} />
+      <col style={{ width: '48%' }} />
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Layer</th>
+        <th>Question</th>
+        <th>Example</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Origin / emergence</td>
+        <td>How might a religious idea or practice first arise?</td>
+        <td>An existing capacity to infer unseen agents could make supernatural agents imaginable; a ritual might also be invented and transmitted culturally.</td>
+      </tr>
+      <tr>
+        <td>Proximate mechanisms</td>
+        <td>What produces and transmits it within a lifetime?</td>
+        <td>Agency detection, theory of mind, emotions, imitation, and teaching.</td>
+      </tr>
+      <tr>
+        <td>Consequences / functions</td>
+        <td>What effects does it have in a particular setting?</td>
+        <td>Ritual can coordinate a group; norms can alter cooperation and conflict; beliefs may provide comfort. Effects can also be neutral or harmful.</td>
+      </tr>
+      <tr>
+        <td>Evolutionary persistence</td>
+        <td>Why might it become more common across generations?</td>
+        <td>If its effects change reproduction or cultural transmission, selection might favor it at individual, kin, or group scales. These routes must be tested.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<figcaption className="site-table-caption"><strong>Display 2:</strong> The four layers of explanation, each with its question and an example.</figcaption>
+</figure>
 
 The layers form a possible causal sequence, **mechanism → behavior → consequence → selection**. A present-day benefit does not by itself establish the original cause of a practice. A by-product can later be shaped by cultural selection, and a practice that strengthens cooperation within a group may also sharpen boundaries between groups.
 

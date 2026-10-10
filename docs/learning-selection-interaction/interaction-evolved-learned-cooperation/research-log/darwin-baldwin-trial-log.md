@@ -31,22 +31,129 @@ Modules that closed without a usable result — a null, a rejection, or a run st
 
 ## Trial-by-trial ledger
 
-| # | Module | Trait tested | Verdict | Note |
-|---|---|---|---|---|
-| 1 | [`eco_evolutionary_cadence`](https://github.com/doesburg11/PredPreyGrass-archive/tree/main/eco_evolutionary_cadence) | Movement-frequency ("speed") genome | **Rejected** | Predators extinct in 30/30 sampled seeds — the mechanic itself, not tuning, structurally prevented predator sustainability. |
-| 2 | `eco_evolutionary_investment` (R1–R3) | Offspring-investment fraction | **Paused** | R1's early drift signal (both species) was never checked against a neutral-drift control before an unrelated checkpoint-resume bug stalled the run. |
-| 3 | [`eco_evolutionary_metabolic_rate`](https://github.com/doesburg11/PredPreyGrass-archive/tree/main/eco_evolutionary_metabolic_rate) | Sub-linear food→energy efficiency | **Null** | Full 3-seed real-vs-control replication (Mann-Whitney U), both species, at two gradient steepnesses; individual-level correlation also flat. This is where the trial series' rigorous replication methodology was built. |
-| 4 | [`eco_evolutionary_investment`](https://github.com/doesburg11/PredPreyGrass/tree/main/predpreygrass/evolutionary/eco_evolutionary_investment) (R4–R7), resumed | Offspring-investment fraction | **Null** | R6 (fixed-genome sweep) confirmed a real fitness gradient exists; R7, the actual selection test, found real-vs-control drift statistically indistinguishable (Mann-Whitney p = 0.5–0.65). |
-| 5 | [`eco_evolutionary_cooperation`](https://github.com/doesburg11/PredPreyGrass-archive/tree/main/eco_evolutionary_cooperation) | Cooperation rate | **Null (pilot only)** | Paused after a pilot-level null rather than fully replicated. |
-| 6 | `eco_evolutionary_investment`, ~2x population | Offspring-investment fraction at larger population | **Inconclusive** | Predator: no signal. Prey: the strongest possible n=3 directional separation, not decisive on its own — the first hint that population size matters. |
-| 7 | [`eco_evolutionary_metabolic_code`](https://github.com/doesburg11/PredPreyGrass-archive/tree/main/eco_evolutionary_metabolic_code) | CORRECT/WRONG/PLASTIC combinatorial genome, modeled on Hinton & Nowlan (1987) | **Null** | Reversed on the headline metric in both species after full 3-seed replication — the cleanest null of the series; purpose-built to fix two structural gaps identified after Trial 3. |
-| — | Reward-density comparison (5 [`project_reward_shaping`](https://github.com/doesburg11/PredPreyGrass/tree/main/predpreygrass/non_evolutionary/project_reward_shaping) modules) | Sparse vs. dense/shaped reward | **Sparse wins** | Sparse reward beat all four denser variants on reproduction rate, population balance, and extinction avoidance. Also surfaced and fixed two silent RLlib data-integrity bugs present in Trials 1–7 — see [Two structural findings](#two-structural-findings-that-outlast-any-single-trial) below. |
-| 8 | [`eco_evolutionary_nuptial_gift`](https://github.com/doesburg11/PredPreyGrass-archive/tree/main/eco_evolutionary_nuptial_gift) | Obligate male nuptial-gift donation rate | **Dramatic effect, replication stopped early** | 0 vs. 34.5 reproduction events/60 iterations at donation rate 0.0 vs. 1.0 — the sharpest fitness landscape of any trait tried. But an intermediate founder value (0.5) produced only 18.6 reproduction events over a full 1000-iteration run, too few to test drift; stopped by explicit decision rather than completed. |
-| 9 | [`eco_evolutionary_cultural_plasticity`](https://github.com/doesburg11/PredPreyGrass-archive/tree/main/eco_evolutionary_cultural_plasticity) | Dual-inheritance social-learning propensity | **Null** | Flat across all 3 real seeds (plasticity stayed within ~1 founder-std of its starting value); stopped before the neutral-control replication. |
-| 10 | [`eco_evolutionary_cultural_plasticity_seasonal`](https://github.com/doesburg11/PredPreyGrass-archive/tree/main/eco_evolutionary_cultural_plasticity_seasonal) | Same trait, cyclical target dialect (Rogers'-Paradox follow-up) | **Null** | Tested whether a *changing* environment — rather than Trial 9's static local-majority game — gives social learning a real fitness advantage, per Rogers (1988). The completed seed (1000/1000 iterations) showed the same flat result as Trial 9, consistent with Rogers' Paradox explaining both nulls; closed without further seeds. |
-| 11 | [`eco_evolutionary_metabolic_rate_positive_control`](https://github.com/doesburg11/PredPreyGrass/tree/main/predpreygrass/evolutionary/eco_evolutionary_metabolic_rate_positive_control) | Deliberately extreme (16x) efficiency gradient | **Weak signal, predator only** | Rules out "the pipeline can't detect selection at all." Rules out "effect size is the only bottleneck" — a 16x gradient should dominate fast if it were. Points at population size / mutation rate as the binding constraint instead. |
-| 12 | [`eco_evolutionary_erl_baldwin`](https://github.com/doesburg11/PredPreyGrass/tree/main/predpreygrass/evolutionary/eco_evolutionary_erl_baldwin) | Per-agent genome-network architecture, replicating Ackley & Littman (1991) | **Positive — ERL beats E, L, F, and B (p < 0.00001 each)** | Full 500-run comparative study (5 conditions × 100 seeds × 1,000,000-step ceiling, matching the original paper's own scale) on a from-scratch rebuild of the paper's actual world mechanics. Combined evolution+learning's median survival time is the step ceiling itself (83% of runs reached it). Internal structure substantially reproduces the paper too — learning-alone significantly beats evolution-alone (p = 0.004); no-adaptation is statistically indistinguishable from luck (p = 0.97). One open discrepancy: evolution-alone significantly *beats* luck here (p = 0.0007), the reverse of the paper's own finding — candidate explanations recorded, not yet confirmed. A separate follow-on analysis on this same architecture confirms Singh, Lewis, Barto & Sorg (2010)'s Optimal Reward Problem at n=30 — see [What's next](#whats-next). |
-| 13 | [`eco_evolutionary_erl_flagship`](https://github.com/doesburg11/PredPreyGrass/tree/main/predpreygrass/evolutionary/eco_evolutionary_erl_flagship) | Trial 12's proximate-vs-ultimate reward question, ported to the richer flagship ecology | **Resolved — divergence confirmed, and sharper than Trial 12's version** | **Key message: caution beats recklessness, decisively, once they actually have to compete — and beats the project's own literal fitness signal too** — a reward that makes prey reckless around predators looks fine in isolation (more total offspring, deeper lineages, from benefiting off its own predation losses' freed-up food) but is excluded outright, within ~27 generations, once it competes against a cautious strategy for the same resources, and the cautious strategy even beats flagship's own literal "+10 on reproduction" reward 27/30 times. One precision worth stating plainly: the cautious strategy was hand-designed by a human, not evolved — this trial's own evolutionary process does not reliably discover it on its own, so this shows a good reward has real power once supplied, not that evolution here is what supplies it; there's no single abstract "optimal reward" for evolution to converge on here, because a strategy's value isn't fixed in isolation (it resolves only once the actual competition is run), and because this trial's own search doesn't reliably find a good answer even when one demonstrably exists. Only prey get an evolved reward genome; predators went through three diagnosed-in-sequence designs (frozen PPO checkpoint — didn't transfer, root-caused via action-distribution entropy; rule-based hunter — worked but unstable; centralized online-learning policy, the current default, with two reward-design bugs found and fixed along the way). Two systematic calibration sweeps and a real shared-code RNG bug fix (flagship's own spawn-fallback was silently non-reproducible by seed) preceded three independent n=15/n=30 batches at increasing generational depth (up to mean 222 generations), each showing real divergence from random init but a *different* "winning" reward channel each time. Resolved with the project's Hunt (2006)/Lande (1976) drift-vs-selection model-fitting tool applied to per-generation `eval_weights`: across 30 seeds at mean 439 generations, Stasis is rejected 0/30 (genomes always move) but directional selection (GRW) is not reliably favored over drift (URW) for any channel, and — decisively — even where GRW wins, the sign of its trend is a near-coin-flip across independent seeds (43-57% positive, every channel). No channel shows the sign-consistency real selection would produce. Conclusion: for this feature set, there is no optimal reward function evolution converges on — the process generating the weights is statistically indistinguishable from neutral drift, not selection honing an imperfect-but-real proxy. A follow-up positive control found no fitness difference between extreme, deliberately opposed fixed reward vectors, and an initial small-sample (n=5) behavioral check found no significant behavioral difference either — but this second finding turned out to be a false negative: a properly powered, paired recheck (n=30) found the reward genome DOES measurably reach behavior, even at the architecture's default learning rate (p=0.0155), growing to a large, highly significant effect as learning rate increases (p < 0.0001 at 5-20x). See [What's next](#whats-next) for the corrected picture and what's still open. |
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--striped">
+    <colgroup>
+      <col style={{ width: '5%' }} />
+      <col style={{ width: '18%' }} />
+      <col style={{ width: '17%' }} />
+      <col style={{ width: '16%' }} />
+      <col style={{ width: '44%' }} />
+    </colgroup>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Module</th>
+        <th>Trait tested</th>
+        <th>Verdict</th>
+        <th>Note</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td><a href="https://github.com/doesburg11/PredPreyGrass-archive/tree/main/eco_evolutionary_cadence"><code>eco_evolutionary_cadence</code></a></td>
+        <td>Movement-frequency ("speed") genome</td>
+        <td><strong>Rejected</strong></td>
+        <td>Predators extinct in 30/30 sampled seeds — the mechanic itself, not tuning, structurally prevented predator sustainability.</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><code>eco_evolutionary_investment</code> (R1–R3)</td>
+        <td>Offspring-investment fraction</td>
+        <td><strong>Paused</strong></td>
+        <td>R1's early drift signal (both species) was never checked against a neutral-drift control before an unrelated checkpoint-resume bug stalled the run.</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><a href="https://github.com/doesburg11/PredPreyGrass-archive/tree/main/eco_evolutionary_metabolic_rate"><code>eco_evolutionary_metabolic_rate</code></a></td>
+        <td>Sub-linear food→energy efficiency</td>
+        <td><strong>Null</strong></td>
+        <td>Full 3-seed real-vs-control replication (Mann-Whitney U), both species, at two gradient steepnesses; individual-level correlation also flat. This is where the trial series' rigorous replication methodology was built.</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><a href="https://github.com/doesburg11/PredPreyGrass/tree/main/predpreygrass/evolutionary/eco_evolutionary_investment"><code>eco_evolutionary_investment</code></a> (R4–R7), resumed</td>
+        <td>Offspring-investment fraction</td>
+        <td><strong>Null</strong></td>
+        <td>R6 (fixed-genome sweep) confirmed a real fitness gradient exists; R7, the actual selection test, found real-vs-control drift statistically indistinguishable (Mann-Whitney p = 0.5–0.65).</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><a href="https://github.com/doesburg11/PredPreyGrass-archive/tree/main/eco_evolutionary_cooperation"><code>eco_evolutionary_cooperation</code></a></td>
+        <td>Cooperation rate</td>
+        <td><strong>Null (pilot only)</strong></td>
+        <td>Paused after a pilot-level null rather than fully replicated.</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td><code>eco_evolutionary_investment</code>, ~2x population</td>
+        <td>Offspring-investment fraction at larger population</td>
+        <td><strong>Inconclusive</strong></td>
+        <td>Predator: no signal. Prey: the strongest possible n=3 directional separation, not decisive on its own — the first hint that population size matters.</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td><a href="https://github.com/doesburg11/PredPreyGrass-archive/tree/main/eco_evolutionary_metabolic_code"><code>eco_evolutionary_metabolic_code</code></a></td>
+        <td>CORRECT/WRONG/PLASTIC combinatorial genome, modeled on Hinton &amp; Nowlan (1987)</td>
+        <td><strong>Null</strong></td>
+        <td>Reversed on the headline metric in both species after full 3-seed replication — the cleanest null of the series; purpose-built to fix two structural gaps identified after Trial 3.</td>
+      </tr>
+      <tr>
+        <td>—</td>
+        <td>Reward-density comparison (5 <a href="https://github.com/doesburg11/PredPreyGrass/tree/main/predpreygrass/non_evolutionary/project_reward_shaping"><code>project_reward_shaping</code></a> modules)</td>
+        <td>Sparse vs. dense/shaped reward</td>
+        <td><strong>Sparse wins</strong></td>
+        <td>Sparse reward beat all four denser variants on reproduction rate, population balance, and extinction avoidance. Also surfaced and fixed two silent RLlib data-integrity bugs present in Trials 1–7 — see <a href="#two-structural-findings-that-outlast-any-single-trial">Two structural findings</a> below.</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td><a href="https://github.com/doesburg11/PredPreyGrass-archive/tree/main/eco_evolutionary_nuptial_gift"><code>eco_evolutionary_nuptial_gift</code></a></td>
+        <td>Obligate male nuptial-gift donation rate</td>
+        <td><strong>Dramatic effect, replication stopped early</strong></td>
+        <td>0 vs. 34.5 reproduction events/60 iterations at donation rate 0.0 vs. 1.0 — the sharpest fitness landscape of any trait tried. But an intermediate founder value (0.5) produced only 18.6 reproduction events over a full 1000-iteration run, too few to test drift; stopped by explicit decision rather than completed.</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td><a href="https://github.com/doesburg11/PredPreyGrass-archive/tree/main/eco_evolutionary_cultural_plasticity"><code>eco_evolutionary_cultural_plasticity</code></a></td>
+        <td>Dual-inheritance social-learning propensity</td>
+        <td><strong>Null</strong></td>
+        <td>Flat across all 3 real seeds (plasticity stayed within ~1 founder-std of its starting value); stopped before the neutral-control replication.</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td><a href="https://github.com/doesburg11/PredPreyGrass-archive/tree/main/eco_evolutionary_cultural_plasticity_seasonal"><code>eco_evolutionary_cultural_plasticity_seasonal</code></a></td>
+        <td>Same trait, cyclical target dialect (Rogers'-Paradox follow-up)</td>
+        <td><strong>Null</strong></td>
+        <td>Tested whether a <em>changing</em> environment — rather than Trial 9's static local-majority game — gives social learning a real fitness advantage, per Rogers (1988). The completed seed (1000/1000 iterations) showed the same flat result as Trial 9, consistent with Rogers' Paradox explaining both nulls; closed without further seeds.</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td><a href="https://github.com/doesburg11/PredPreyGrass/tree/main/predpreygrass/evolutionary/eco_evolutionary_metabolic_rate_positive_control"><code>eco_evolutionary_metabolic_rate_positive_control</code></a></td>
+        <td>Deliberately extreme (16x) efficiency gradient</td>
+        <td><strong>Weak signal, predator only</strong></td>
+        <td>Rules out "the pipeline can't detect selection at all." Rules out "effect size is the only bottleneck" — a 16x gradient should dominate fast if it were. Points at population size / mutation rate as the binding constraint instead.</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td><a href="https://github.com/doesburg11/PredPreyGrass/tree/main/predpreygrass/evolutionary/eco_evolutionary_erl_baldwin"><code>eco_evolutionary_erl_baldwin</code></a></td>
+        <td>Per-agent genome-network architecture, replicating Ackley &amp; Littman (1991)</td>
+        <td><strong>Positive — ERL beats E, L, F, and B (p &lt; 0.00001 each)</strong></td>
+        <td>Full 500-run comparative study (5 conditions × 100 seeds × 1,000,000-step ceiling, matching the original paper's own scale) on a from-scratch rebuild of the paper's actual world mechanics. Combined evolution+learning's median survival time is the step ceiling itself (83% of runs reached it). Internal structure substantially reproduces the paper too — learning-alone significantly beats evolution-alone (p = 0.004); no-adaptation is statistically indistinguishable from luck (p = 0.97). One open discrepancy: evolution-alone significantly <em>beats</em> luck here (p = 0.0007), the reverse of the paper's own finding — candidate explanations recorded, not yet confirmed. A separate follow-on analysis on this same architecture confirms Singh, Lewis, Barto &amp; Sorg (2010)'s Optimal Reward Problem at n=30 — see <a href="#whats-next">What's next</a>.</td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td><a href="https://github.com/doesburg11/PredPreyGrass/tree/main/predpreygrass/evolutionary/eco_evolutionary_erl_flagship"><code>eco_evolutionary_erl_flagship</code></a></td>
+        <td>Trial 12's proximate-vs-ultimate reward question, ported to the richer flagship ecology</td>
+        <td><strong>Resolved — divergence confirmed, and sharper than Trial 12's version</strong></td>
+        <td><strong>Key message: caution beats recklessness, decisively, once they actually have to compete — and beats the project's own literal fitness signal too</strong> — a reward that makes prey reckless around predators looks fine in isolation (more total offspring, deeper lineages, from benefiting off its own predation losses' freed-up food) but is excluded outright, within ~27 generations, once it competes against a cautious strategy for the same resources, and the cautious strategy even beats flagship's own literal "+10 on reproduction" reward 27/30 times. One precision worth stating plainly: the cautious strategy was hand-designed by a human, not evolved — this trial's own evolutionary process does not reliably discover it on its own, so this shows a good reward has real power once supplied, not that evolution here is what supplies it; there's no single abstract "optimal reward" for evolution to converge on here, because a strategy's value isn't fixed in isolation (it resolves only once the actual competition is run), and because this trial's own search doesn't reliably find a good answer even when one demonstrably exists. Only prey get an evolved reward genome; predators went through three diagnosed-in-sequence designs (frozen PPO checkpoint — didn't transfer, root-caused via action-distribution entropy; rule-based hunter — worked but unstable; centralized online-learning policy, the current default, with two reward-design bugs found and fixed along the way). Two systematic calibration sweeps and a real shared-code RNG bug fix (flagship's own spawn-fallback was silently non-reproducible by seed) preceded three independent n=15/n=30 batches at increasing generational depth (up to mean 222 generations), each showing real divergence from random init but a <em>different</em> "winning" reward channel each time. Resolved with the project's Hunt (2006)/Lande (1976) drift-vs-selection model-fitting tool applied to per-generation <code>eval_weights</code>: across 30 seeds at mean 439 generations, Stasis is rejected 0/30 (genomes always move) but directional selection (GRW) is not reliably favored over drift (URW) for any channel, and — decisively — even where GRW wins, the sign of its trend is a near-coin-flip across independent seeds (43-57% positive, every channel). No channel shows the sign-consistency real selection would produce. Conclusion: for this feature set, there is no optimal reward function evolution converges on — the process generating the weights is statistically indistinguishable from neutral drift, not selection honing an imperfect-but-real proxy. A follow-up positive control found no fitness difference between extreme, deliberately opposed fixed reward vectors, and an initial small-sample (n=5) behavioral check found no significant behavioral difference either — but this second finding turned out to be a false negative: a properly powered, paired recheck (n=30) found the reward genome DOES measurably reach behavior, even at the architecture's default learning rate (p=0.0155), growing to a large, highly significant effect as learning rate increases (p &lt; 0.0001 at 5-20x). See <a href="#whats-next">What's next</a> for the corrected picture and what's still open.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<figcaption className="site-table-caption"><strong>Display 1:</strong> Every trial so far, with the trait it tested and its verdict.</figcaption>
+</figure>
 
 <figure style={{ margin: '0 0 1.25rem 0', textAlign: 'center' }}>
   <div style={{ width: '100%', maxWidth: '1180px', margin: '0 auto', overflow: 'hidden' }}>
@@ -56,11 +163,11 @@ Modules that closed without a usable result — a null, a rejection, or a run st
     </div>
     <img
       src="/img/learning-selection-interaction/interaction-evolved-learned-cooperation/darwin-baldwin-trial-log/erl-survival-by-strategy.png"
-      alt="Display 1: Per-seed survival time (log scale) for all 500 Trial 12 runs, grouped by condition ERL, L, E, F, B — ERL clusters at the 1,000,000-step ceiling, while the other four conditions spread across a long tail of much earlier extinctions"
+      alt="Display 2: Per-seed survival time (log scale) for all 500 Trial 12 runs, grouped by condition ERL, L, E, F, B — ERL clusters at the 1,000,000-step ceiling, while the other four conditions spread across a long tail of much earlier extinctions"
       style={{ display: 'block', width: '100%', height: 'auto' }}
     />
   </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Every one of the 500 runs behind Trial 12's ledger row, not just its medians — nature and nurture combined (ERL) piling up at the step ceiling, versus either alone (L, E), neither (F), or pure luck (B) spread across a much shorter, longer-tailed distribution.</figcaption>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 2:</strong> Every one of the 500 runs behind Trial 12's ledger row, not just its medians — nature and nurture combined (ERL) piling up at the step ceiling, versus either alone (L, E), neither (F), or pure luck (B) spread across a much shorter, longer-tailed distribution.</figcaption>
 </figure>
 
 ## Two structural findings that outlast any single trial

@@ -22,11 +22,37 @@ The paper answers with the smallest model that can make the point unambiguously:
 
 Each individual's genome is a string of 20 genes, each taking one of three values:
 
-| Symbol | Meaning |
-|---|---|
-| `1` | correct allele, fixed by genetics — "innate knowledge" |
-| `0` | incorrect allele, fixed by genetics |
-| `?` | plastic allele — left undetermined, resolved by learning during the individual's life |
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--striped">
+    <colgroup>
+      <col style={{ width: '15%' }} />
+      <col style={{ width: '85%' }} />
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Symbol</th>
+        <th>Meaning</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>1</code></td>
+        <td>correct allele, fixed by genetics — "innate knowledge"</td>
+      </tr>
+      <tr>
+        <td><code>0</code></td>
+        <td>incorrect allele, fixed by genetics</td>
+      </tr>
+      <tr>
+        <td><code>?</code></td>
+        <td>plastic allele — left undetermined, resolved by learning during the individual's life</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<figcaption className="site-table-caption"><strong>Display 1:</strong> The three gene values of the Hinton and Nowlan genome.</figcaption>
+</figure>
 
 Of the 2²⁰ possible phenotypes (each gene read out as correct or incorrect), exactly **one** — all 20 genes correct — receives high fitness. Every other phenotype, including one that is wrong on a single gene, receives the same low baseline fitness. There is no partial credit for being close: a genome with 19 of 20 genes correct scores identically to one with none correct, so a pure genetic search — no learning at all — has no slope to follow. It has to land on the exact answer by chance, in a space of over a million possibilities.
 

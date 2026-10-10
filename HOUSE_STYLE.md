@@ -240,6 +240,39 @@ Recommended table behavior:
 - fixed layout when columns should align predictably
 - modest padding such as `0.75rem 1rem`
 
+### Docs-page table rule (enforced)
+
+On docs pages, every table is a display: a `site-table` with light-blue
+alternating rows (`site-table--striped`) inside a figure with a
+`Display N:` caption, numbered in sequence with the page's other displays.
+Plain Markdown pipe tables are not used on docs pages, because they bypass
+this styling. A table that colours its own cells (by status or result) may
+leave out `site-table--striped`, since row stripes would clash.
+`scripts/check_tables.js` enforces this rule as the first step of
+`npm run build` (and so of the deploy workflow); `npm run check-tables`
+runs it on its own.
+
+```mdx
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--striped">
+    <thead>
+      <tr><th>Column</th><th>Column</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Value</td><td>Value</td></tr>
+    </tbody>
+  </table>
+</div>
+<figcaption className="site-table-caption"><strong>Display N:</strong> Caption text.</figcaption>
+</figure>
+```
+
+Optional classes: `site-table--bordered` (ruled cells), `site-table--wide`
+(horizontal scroll for many or long columns), and a `<colgroup>` with column
+widths. Inside the table, write HTML rather than Markdown (`<a href>`,
+`<strong>`, `<code>`, `<em>`), and escape `<`, `>` and `&` in text.
+
 For GitHub README pages:
 
 - standard Markdown tables are preferred for compatibility
@@ -484,7 +517,7 @@ Every simulation page and experiment page must follow this section order:
 
 ### Tables
 
-- Results tables use plain Markdown pipe syntax.
+- Tables follow the docs-page table rule below: never plain Markdown pipe syntax.
 - Metric names match the script output exactly (e.g. `Final cooperation rate`).
 - Bold the winning value per row where a comparison is meaningful.
 

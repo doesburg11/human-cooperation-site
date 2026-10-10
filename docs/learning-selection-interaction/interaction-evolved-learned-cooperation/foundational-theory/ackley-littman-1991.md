@@ -53,10 +53,41 @@ Agents sense **4 cells in each of the four compass directions**; carnivores sens
 
 The central architectural idea is that **each agent carries two separate single-layer networks**, and the two are treated completely differently by the algorithm:
 
-| Network | What it does | Where it comes from | What happens to it |
-|---|---|---|---|
-| **Evaluation network** | Maps the agent's observation to a scalar "goodness" value — its own internal sense of how good its current situation is | Fully genetically specified | Fixed for the agent's entire life; never touched by learning |
-| **Action network** | Maps the observation to action probabilities — what the agent actually does | Genetically specified *initial* weights | A live copy is made at birth and adjusted every step by reinforcement learning |
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--striped">
+    <colgroup>
+      <col style={{ width: '18%' }} />
+      <col style={{ width: '32%' }} />
+      <col style={{ width: '20%' }} />
+      <col style={{ width: '30%' }} />
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Network</th>
+        <th>What it does</th>
+        <th>Where it comes from</th>
+        <th>What happens to it</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Evaluation network</strong></td>
+        <td>Maps the agent's observation to a scalar "goodness" value — its own internal sense of how good its current situation is</td>
+        <td>Fully genetically specified</td>
+        <td>Fixed for the agent's entire life; never touched by learning</td>
+      </tr>
+      <tr>
+        <td><strong>Action network</strong></td>
+        <td>Maps the observation to action probabilities — what the agent actually does</td>
+        <td>Genetically specified <em>initial</em> weights</td>
+        <td>A live copy is made at birth and adjusted every step by reinforcement learning</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<figcaption className="site-table-caption"><strong>Display 2:</strong> The two networks each agent carries, and how evolution and learning treat each of them.</figcaption>
+</figure>
 
 This split is the whole point. The evaluation network is the genetically inherited **goal** — an innate, unlearnable sense of what "good" looks like. The action network is the **behavior** — how to act on that goal — and it is exactly the part evolution leaves unfinished, handing it to lifetime learning to fill in.
 

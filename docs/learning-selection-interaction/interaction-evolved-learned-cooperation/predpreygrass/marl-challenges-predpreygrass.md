@@ -68,6 +68,7 @@ Multi-agent reinforcement learning is a promising tool for studying emergent beh
     </tbody>
   </table>
 </div>
+<figcaption className="site-table-caption"><strong>Display 1:</strong> The core difficulties of multi-agent reinforcement learning, as they appear in PredPreyGrass.</figcaption>
 </figure>
 
 ## Reward design: sparse, and why magnitude matters
