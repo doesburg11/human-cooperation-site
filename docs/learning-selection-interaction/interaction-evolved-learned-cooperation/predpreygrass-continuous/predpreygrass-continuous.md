@@ -10,8 +10,8 @@ slug: /learning-selection-interaction/predpreygrass-continuous
 A continuous-space counterpart of [PredPreyGrass](/learning-selection-interaction/predpreygrass): the same predator–prey–grass ecosystem, with energy, reproduction and a sparse reward for births, rebuilt in an arena where animals move with physics instead of hopping between grid cells. The code is in the [PredPreyGrassContinuous repository](https://github.com/doesburg11/PredPreyGrassContinuous), and every training run is recorded in its experiment logs.
 
 <figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
-  <img src="/img/learning-selection-interaction/interaction-evolved-learned-cooperation/predpreygrass-continuous/snapshot-add-walls.png" alt="Display 1: An 800 by 800 arena with square wall blocks, grass patches, predators drawn as hunters and prey drawn as antelopes; a blue view cone of one predator and a grey view cone of one prey are cut off where walls block the view" width="560" />
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Trained predators (hunters) and prey (antelopes) among walls and grass; the shaded cones show what one predator (blue) and one prey (grey) can see, cut off where walls block the view.</figcaption>
+  <img src="/img/learning-selection-interaction/interaction-evolved-learned-cooperation/predpreygrass-continuous/snapshot-no-walls.png" alt="Display 1: An 800 by 800 arena with two clusters of grass, predators drawn as hunters and prey drawn as antelopes; a blue view cone of one predator and a grey view cone of one prey wrap across the arena's edges" width="560" />
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Trained predators (hunters) and prey (antelopes) in the healthiest ecosystem so far, with speed actions and a fixed energy cost; prey graze two clusters of grass, and the shaded cones show what one predator (blue) and one prey (grey) can see.</figcaption>
 </figure>
 
 ## Key findings
