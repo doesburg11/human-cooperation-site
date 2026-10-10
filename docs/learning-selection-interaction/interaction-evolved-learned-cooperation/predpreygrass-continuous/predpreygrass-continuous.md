@@ -20,7 +20,7 @@ A continuous-space counterpart of [PredPreyGrass](/learning-selection-interactio
 - The predators' plateau sat at energy break-even, about 8 catches per predator per 1,000 physics steps, in every run and with scripted pursuit strategies alike.
 - Letting predators see grass, as they can in PredPreyGrass, raised their catch rate by 34% against the same prey, but only once: they reached the new ceiling within 400 iterations, and the prey caught up.
 - An energy cost that grows with speed, natural on paper, let predators wait almost for free and wiped out the prey; with a fixed cost per step, the same world gave the healthiest ecosystem so far, with both species alive at the end of 11 of 20 episodes.
-- Making a catch a contest between the summed energy of nearby predators and the prey's energy produced, for the first time, both species improving through the second half of training (82% and 72% of tournament pairs), with predators as the struggling species.
+- Making a catch a contest between the summed energy of nearby predators and the prey's energy produced the first arms race: over 1,500 iterations newer predators beat older ones in 88% of tournament pairs and newer prey in 78%. It did not last: the predators, now the struggling species, then degraded (30%), although they attacked together more and more often (20% of attacks, against 7% by chance).
 
 ## From grid to continuous space
 
@@ -159,8 +159,8 @@ where $S$ is the summed energy of all predators near the prey, $E$ the prey's en
         <td>0 of 20; catch risk 7.51, against 4.84 without</td>
       </tr>
       <tr>
-        <td>Group hunting, catch shared, half energy per catch (first 1,000 of 3,000)</td>
-        <td>Predators extinct in 20 of 20; catch risk 0.82; both species still improving</td>
+        <td>Group hunting, catch shared, half energy per catch (3,000)</td>
+        <td>Predators extinct in 20 of 20; catch risk 0.68; predators best at iteration 1,500</td>
       </tr>
     </tbody>
   </table>
@@ -197,9 +197,14 @@ Tournaments, in which every predator checkpoint plays every prey checkpoint, sep
         <td>55%</td>
       </tr>
       <tr>
-        <td>Group hunting, second half of the first 1,000 iterations</td>
-        <td>72%</td>
-        <td><strong>82%</strong></td>
+        <td>Group hunting, iterations 300–1,800</td>
+        <td>78%</td>
+        <td><strong>88%</strong></td>
+      </tr>
+      <tr>
+        <td>Group hunting, iterations 1,800–2,990</td>
+        <td>48%</td>
+        <td>30%</td>
       </tr>
     </tbody>
   </table>
@@ -213,7 +218,7 @@ Tournaments, in which every predator checkpoint plays every prey checkpoint, sep
 
 **Small rule changes move the balance more than learning does.** A movement cost that grows with speed, physically reasonable on its own, made waiting nearly free and tipped every run towards prey extinction; the same world with a fixed cost gave the healthiest ecosystem. Which species wins is set first by the energy economics, and only then by what the policies learn.
 
-**Group hunting gives predators a skill that can grow.** When a catch depends on how much strength predators bring together, a single lunge is no longer enough, and the predators' catch rate kept rising through training while the prey also improved: the first sign of an arms race in these experiments. In the most recent run the predators are still too weak to survive, and they mostly hunt alone; whether they come to hunt together as they grow stronger is the open question.
+**Group hunting gives predators a skill that can grow, for a while.** When a catch depends on how much strength predators bring together, a single lunge is no longer enough. For 1,500 iterations the predators' catch rate rose while the prey also improved: the first arms race in these experiments. Then the predators, too weak to survive, degraded: their policy became more random again as their births, the only reward, grew rarer, even as they attacked together more and more often. Keeping predators viable while catches stay hard is the open question.
 
 ## References
 
