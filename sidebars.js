@@ -103,6 +103,7 @@ export default {
                 'learning-selection-interaction/interaction-evolved-learned-cooperation/predpreygrass/marl-challenges-predpreygrass',
               ],
             },
+            'learning-selection-interaction/interaction-evolved-learned-cooperation/predpreygrass-continuous/predpreygrass-continuous',
             {
               type: 'category',
               label: 'Two-Timescale Simulations',
