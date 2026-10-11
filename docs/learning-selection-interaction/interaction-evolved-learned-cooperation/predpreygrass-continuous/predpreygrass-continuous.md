@@ -20,7 +20,7 @@ A continuous-space counterpart of [PredPreyGrass](/learning-selection-interactio
 - The predators' plateau sat at energy break-even, about 8 catches per predator per 1,000 physics steps, in every run and with scripted pursuit strategies alike.
 - Letting predators see grass, as they can in PredPreyGrass, raised their catch rate by 34% against the same prey, but only once: they reached the new ceiling within 400 iterations, and the prey caught up.
 - An energy cost that grows with speed, natural on paper, let predators wait almost for free and wiped out the prey; with a fixed cost per step, the same world gave the healthiest ecosystem so far, with both species alive at the end of 11 of 20 episodes after 3,000 iterations and 14–17 of 20 after 4,000. A gentle movement cost, making standing still 10% cheaper instead of 50%, changed nothing.
-- Making a catch a contest between the summed energy of nearby predators and the prey's energy produced the first arms race: over 1,500 iterations newer predators beat older ones in 88% of tournament pairs and newer prey in 78%. It did not last: the predators, now the struggling species, then degraded (30%), although they attacked together more and more often (20% of attacks, against 7% by chance). With a little more energy per catch, the predators stayed viable and made 64% of their catches in groups, but both species stopped improving after about 1,800 iterations.
+- Making a catch a contest between the summed energy of nearby predators and the prey's energy produced the first arms race: over 1,500 iterations newer predators beat older ones in 88% of tournament pairs and newer prey in 78%. It did not last: the predators, now the struggling species, then degraded (30%), although they attacked together more and more often (20% of attacks, against 7% by chance). With a little more energy per catch, the predators stayed viable and made 64% of their catches in groups, but both species stopped improving after about 1,800 iterations, and the predators teamed up more often in general rather than specifically against the strong prey for which it pays.
 
 ## From grid to continuous space
 
@@ -234,13 +234,61 @@ Tournaments, in which every predator checkpoint plays every prey checkpoint, sep
 <figcaption className="site-table-caption"><strong>Display 5:</strong> Share of tournament pairs in which the newer checkpoint does better against a fixed opponent; co-adaptation needs both clearly above 50%.</figcaption>
 </figure>
 
+### Did the predators learn to team up against strong prey?
+
+Teaming up pays only against well-fed prey, so purposeful cooperation would show as more company at attacks on strong prey. Predators also gather near grass, where prey are well fed, so the same link can arise without cooperation. The trained group hunters (three quarters energy per catch) were therefore compared with a control: predators never trained with group hunting, played in the same world, 20 episodes each.
+
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--striped">
+    <colgroup>
+      <col style={{ width: '52%' }} />
+      <col style={{ width: '24%' }} />
+      <col style={{ width: '24%' }} />
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Attacks with a second predator within 64 units</th>
+        <th>Trained group hunters</th>
+        <th>Control</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>All attacks</td>
+        <td><strong>49%</strong></td>
+        <td>34%</td>
+      </tr>
+      <tr>
+        <td>Against the weakest quarter of prey</td>
+        <td>42%</td>
+        <td>27%</td>
+      </tr>
+      <tr>
+        <td>Against the best-fed quarter of prey</td>
+        <td>56%</td>
+        <td>42%</td>
+      </tr>
+      <tr>
+        <td>Increase per unit of prey energy (log-odds)</td>
+        <td>+0.14</td>
+        <td>+0.15</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<figcaption className="site-table-caption"><strong>Display 6:</strong> Company at attacks by trained group hunters and by predators never trained with group hunting, in the same world, corrected for the number of living predators.</figcaption>
+</figure>
+
+Both groups attack well-fed prey with company more often, and by the same amount, so that link comes from where predators and well-fed prey meet. The trained predators have learned to hunt in company more often overall, by about 15 percentage points, but not selectively against the prey for which it pays.
+
 ## Summary
 
 **The prey were always the faster learners.** In every world without group hunting, prey kept refining their escape for thousands of iterations, while predators settled at the catch rate that just pays for their metabolism. More predator information (grass, the energy of others) or more prey difficulty (faster prey, walls) shifted where that plateau lay, but did not give predators anything to keep improving.
 
 **Small rule changes move the balance more than learning does.** A movement cost that grows with speed, physically reasonable on its own, made waiting nearly free and tipped every run towards prey extinction; the same world with a fixed cost gave the healthiest ecosystem, and a much gentler movement cost kept it healthy. Which species wins is set first by the energy economics, and only then by what the policies learn.
 
-**Group hunting gives predators a skill that can grow, for a while.** When a catch depends on how much strength predators bring together, a single lunge is no longer enough. For 1,500 iterations the predators' catch rate rose while the prey also improved: the first arms race in these experiments. Then the predators, too weak to survive, degraded: their policy became more random again as their births, the only reward, grew rarer, even as they attacked together more and more often. With a little more energy per catch the predators stayed viable and most of their catches became group catches, but the race settled into a stable standoff after about 1,800 iterations. Turning group hunting into a lasting arms race is the open question.
+**Group hunting gives predators a skill that can grow, for a while.** When a catch depends on how much strength predators bring together, a single lunge is no longer enough. For 1,500 iterations the predators' catch rate rose while the prey also improved: the first arms race in these experiments. Then the predators, too weak to survive, degraded: their policy became more random again as their births, the only reward, grew rarer, even as they attacked together more and more often. With a little more energy per catch the predators stayed viable and most of their catches became group catches, but the race settled into a stable standoff after about 1,800 iterations. The predators learned to keep company, not when company pays. Turning group hunting into targeted cooperation and a lasting arms race is the open question.
 
 ## References
 
