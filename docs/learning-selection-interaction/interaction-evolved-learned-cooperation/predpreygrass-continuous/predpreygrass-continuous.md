@@ -19,8 +19,8 @@ A continuous-space counterpart of [PredPreyGrass](/learning-selection-interactio
 - In every tournament of the first ecosystems (static grass, moving grass, predators seeing grass), prey kept adapting for thousands of iterations while predators stopped improving after a few hundred: newer prey were harder to catch in 96–98% of pairs, newer predators caught more in only 32–55%.
 - The predators' plateau sat at energy break-even, about 8 catches per predator per 1,000 physics steps, in every run and with scripted pursuit strategies alike.
 - Letting predators see grass, as they can in PredPreyGrass, raised their catch rate by 34% against the same prey, but only once: they reached the new ceiling within 400 iterations, and the prey caught up.
-- An energy cost that grows with speed, natural on paper, let predators wait almost for free and wiped out the prey; with a fixed cost per step, the same world gave the healthiest ecosystem so far, with both species alive at the end of 11 of 20 episodes.
-- Making a catch a contest between the summed energy of nearby predators and the prey's energy produced the first arms race: over 1,500 iterations newer predators beat older ones in 88% of tournament pairs and newer prey in 78%. It did not last: the predators, now the struggling species, then degraded (30%), although they attacked together more and more often (20% of attacks, against 7% by chance).
+- An energy cost that grows with speed, natural on paper, let predators wait almost for free and wiped out the prey; with a fixed cost per step, the same world gave the healthiest ecosystem so far, with both species alive at the end of 11 of 20 episodes after 3,000 iterations and 14–17 of 20 after 4,000. A gentle movement cost, making standing still 10% cheaper instead of 50%, changed nothing.
+- Making a catch a contest between the summed energy of nearby predators and the prey's energy produced the first arms race: over 1,500 iterations newer predators beat older ones in 88% of tournament pairs and newer prey in 78%. It did not last: the predators, now the struggling species, then degraded (30%), although they attacked together more and more often (20% of attacks, against 7% by chance). With a little more energy per catch, the predators stayed viable and made 64% of their catches in groups, but both species stopped improving after about 1,800 iterations.
 
 ## From grid to continuous space
 
@@ -110,7 +110,7 @@ The repository adds one mechanism at a time, each in its own module, so every ch
 
 ### Movement energy
 
-With speed actions, an animal can stop and wait, which made it natural to charge energy for movement. For animals on land, metabolic power rises roughly linearly with running speed (Taylor, Heglund and Maloiy, 1982), so the movement cost was made linear in speed, on top of a resting cost. This turned out to favour the predators decisively: a waiting predator paid only half the old cost, starved far less, and the prey died out every time. With a fixed cost per step, as in PredPreyGrass, predators starve unless they hunt, which keeps their numbers in check.
+With speed actions, an animal can stop and wait, which made it natural to charge energy for movement. For animals on land, metabolic power rises roughly linearly with running speed (Taylor, Heglund and Maloiy, 1982), so the movement cost was made linear in speed, on top of a resting cost. This turned out to favour the predators decisively: a waiting predator paid only half the old cost, starved far less, and the prey died out every time. With a fixed cost per step, as in PredPreyGrass, predators starve unless they hunt, which keeps their numbers in check. A gentle version, in which standing still saves only 10%, left the ecosystem unchanged against a control run started from the same trained policies, and is now the default.
 
 ### Group hunting
 
@@ -152,7 +152,15 @@ where $S$ is the summed energy of all predators near the prey, $E$ the prey's en
       </tr>
       <tr>
         <td>No walls, speed actions, fixed cost (3,000)</td>
-        <td><strong>11 of 20</strong>; catch risk 3.02</td>
+        <td>11 of 20; catch risk 3.02</td>
+      </tr>
+      <tr>
+        <td>The same, continued to 4,000</td>
+        <td><strong>17 of 20</strong>; catch risk 2.57</td>
+      </tr>
+      <tr>
+        <td>The same, continued to 4,000 with a gentle movement cost</td>
+        <td>14 of 20; catch risk 2.76</td>
       </tr>
       <tr>
         <td>Every animal's energy visible (1,000)</td>
@@ -161,6 +169,10 @@ where $S$ is the summed energy of all predators near the prey, $E$ the prey's en
       <tr>
         <td>Group hunting, catch shared, half energy per catch (3,000)</td>
         <td>Predators extinct in 20 of 20; catch risk 0.68; predators best at iteration 1,500</td>
+      </tr>
+      <tr>
+        <td>Group hunting, three quarters of the energy per catch (3,000)</td>
+        <td>Prey extinct in 20 of 20; catch risk 5.29; 64% of catches made in groups</td>
       </tr>
     </tbody>
   </table>
@@ -206,6 +218,16 @@ Tournaments, in which every predator checkpoint plays every prey checkpoint, sep
         <td>48%</td>
         <td>30%</td>
       </tr>
+      <tr>
+        <td>Group hunting, three quarters energy, iterations 300–1,800</td>
+        <td>73%</td>
+        <td>74%</td>
+      </tr>
+      <tr>
+        <td>Group hunting, three quarters energy, iterations 1,800–2,990</td>
+        <td>54%</td>
+        <td>48%</td>
+      </tr>
     </tbody>
   </table>
 </div>
@@ -216,9 +238,9 @@ Tournaments, in which every predator checkpoint plays every prey checkpoint, sep
 
 **The prey were always the faster learners.** In every world without group hunting, prey kept refining their escape for thousands of iterations, while predators settled at the catch rate that just pays for their metabolism. More predator information (grass, the energy of others) or more prey difficulty (faster prey, walls) shifted where that plateau lay, but did not give predators anything to keep improving.
 
-**Small rule changes move the balance more than learning does.** A movement cost that grows with speed, physically reasonable on its own, made waiting nearly free and tipped every run towards prey extinction; the same world with a fixed cost gave the healthiest ecosystem. Which species wins is set first by the energy economics, and only then by what the policies learn.
+**Small rule changes move the balance more than learning does.** A movement cost that grows with speed, physically reasonable on its own, made waiting nearly free and tipped every run towards prey extinction; the same world with a fixed cost gave the healthiest ecosystem, and a much gentler movement cost kept it healthy. Which species wins is set first by the energy economics, and only then by what the policies learn.
 
-**Group hunting gives predators a skill that can grow, for a while.** When a catch depends on how much strength predators bring together, a single lunge is no longer enough. For 1,500 iterations the predators' catch rate rose while the prey also improved: the first arms race in these experiments. Then the predators, too weak to survive, degraded: their policy became more random again as their births, the only reward, grew rarer, even as they attacked together more and more often. Keeping predators viable while catches stay hard is the open question.
+**Group hunting gives predators a skill that can grow, for a while.** When a catch depends on how much strength predators bring together, a single lunge is no longer enough. For 1,500 iterations the predators' catch rate rose while the prey also improved: the first arms race in these experiments. Then the predators, too weak to survive, degraded: their policy became more random again as their births, the only reward, grew rarer, even as they attacked together more and more often. With a little more energy per catch the predators stayed viable and most of their catches became group catches, but the race settled into a stable standoff after about 1,800 iterations. Turning group hunting into a lasting arms race is the open question.
 
 ## References
 
