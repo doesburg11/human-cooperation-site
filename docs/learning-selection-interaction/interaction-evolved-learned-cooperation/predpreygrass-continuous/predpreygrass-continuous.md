@@ -21,7 +21,7 @@ A continuous-space counterpart of [PredPreyGrass](/learning-selection-interactio
 - Letting predators see grass, as they can in PredPreyGrass, raised their catch rate by 34% against the same prey, but only once: they reached the new ceiling within 400 iterations, and the prey caught up.
 - A movement cost favours whichever species moves least. Predators, which wait more, starved less as the share of the cost paid for movement rose, and coexistence fell from 40 of 50 episodes (no movement cost) to 33, 11 and 1 of 50 at 10%, 25% and 50%. Running animals spend 80–90% of their energy on movement (Taylor, Heglund and Maloiy, 1982).
 - With such a realistic movement cost, predators became ambushers: stopped about half the time, mostly at the grass, lunging at prey that came to eat. Faster prey hardly helped, since against an ambush, speed matters less than seeing the danger in time.
-- Spreading the same grass over 20 small clusters instead of 5 large ones broke the ambush (coexistence 43 against 31 of 50) and produced the longest arms race: both species improved against each other for about 2,000 iterations while staying evenly matched, then levelled off with both alive in 40 of 50 episodes.
+- Spreading the same grass over 20 small clusters instead of 5 large ones broke the ambush (coexistence 43 against 31 of 50, reproduced in two repeat runs with 44 and 42 of 50) and produced the longest arms race: both species improved against each other for about 2,000 iterations while staying evenly matched, then levelled off with both alive in 40 of 50 episodes.
 - Making a catch a contest between the summed energy of nearby predators and the prey's energy produced the first arms race: over 1,500 iterations newer predators beat older ones in 88% of tournament pairs and newer prey in 78%. It did not last: the predators, now the struggling species, then degraded (30%), although they attacked together more and more often (20% of attacks, against 7% by chance). With a little more energy per catch, the predators stayed viable and made 64% of their catches in groups, but both species stopped improving after about 1,800 iterations, and the predators teamed up more often in general rather than specifically against the strong prey for which it pays.
 
 ## From grid to continuous space
@@ -324,6 +324,8 @@ With 75% of the cost from movement, predators stopped about half the time, mostl
 <figcaption className="site-table-caption"><strong>Display 7:</strong> Final checks with 50 episodes as the movement cost, the prey's top speed (predators: 5) and the spread of the grass change; the last two rows differ only in the grass.</figcaption>
 </figure>
 
+Two repeats of the 20-cluster run, from the same start but with new training randomness, reproduced it closely: both species alive in 44 and 42 of 50 episodes, against 43 in the first run and 31 in the control; pooled 129 of 150 against 31 of 50, very unlikely by chance (p < 0.001). In all three, predators waited less and away from the grass, and both species improved against each other in the tournaments.
+
 Continued for another 2,000 iterations, the world with spread-out grass gave the longest arms race in these experiments. A tournament over all 3,000 iterations shows both species improving against each other for about 2,000 iterations, the predators by about 70% in catch effectiveness and the prey by about 40% in escape, while each checkpoint against its training partner stayed level. After about 2,200 iterations neither side improved further.
 
 <figure className="site-table-figure">
@@ -356,7 +358,7 @@ Continued for another 2,000 iterations, the world with spread-out grass gave the
 
 **Group hunting gives predators a skill that can grow, for a while.** When a catch depends on how much strength predators bring together, a single lunge is no longer enough, and predators did learn to attack together, but in general rather than specifically against the strong prey for which it pays; how much energy a catch yields decided whether predators boomed, collapsed or reached a standoff.
 
-**Open questions.** Every result so far comes from a single training run, so the arms race needs to be repeated from other random starts. Even the best race eventually levels off: memory, cooperation among prey, or persistence hunting, in which predators wear prey down over long chases, are candidates for keeping it going.
+**Open questions.** Most results come from a single training run; only the effect of spreading the food has been repeated so far, three times from the same starting point, with consistent results. Whether the same world also produces the arms race when trained from scratch is being tested. Even the best race eventually levels off: memory, cooperation among prey, or persistence hunting, in which predators wear prey down over long chases, are candidates for keeping it going.
 
 ## References
 
