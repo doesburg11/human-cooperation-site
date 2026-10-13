@@ -355,9 +355,9 @@ Continued for another 2,000 iterations, the world with spread-out grass gave the
 
 ## Population dynamics within an episode
 
-<figure style={{ margin: '1.5rem auto', width: '70%' }}>
-  <img src="/img/learning-selection-interaction/interaction-evolved-learned-cooperation/predpreygrass-continuous/predator-prey-single-step.png" alt="Display 10: Exact predator and prey counts over 8,002 simulation steps, with predators ranging from 2 to 12 on the orange left axis and prey from 1 to 46 on the green right axis" style={{ display: 'block', width: '100%', height: 'auto' }} />
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 10:</strong> A new evaluation rollout of the add_reproduction run of 7 October 2026 at 09:38, checkpoint 990, seed 0. Counts include the initial state and every subsequent physics step, without averaging. Predators use the orange left axis; prey use the green right axis. The scales differ, so line heights and crossings do not indicate equal populations.</figcaption>
+<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
+  <img src="/img/learning-selection-interaction/interaction-evolved-learned-cooperation/predpreygrass-continuous/predator-prey-single-step.png" alt="Display 10: Exact predator and prey counts over 8,002 simulation steps, with predators ranging from 2 to 12 on the orange left axis and prey from 1 to 46 on the blue right axis" style={{ display: 'block', width: '100%', height: 'auto' }} />
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 10:</strong> A new evaluation rollout of the add_reproduction run of 7 October 2026 at 09:38, checkpoint 990, seed 0. Counts include the initial state and every subsequent physics step, without averaging. Predators use the orange left axis; prey use the blue right axis. The scales differ, so line heights and crossings do not indicate equal populations.</figcaption>
 </figure>
 
 The populations show irregular predator–prey oscillations resembling a
