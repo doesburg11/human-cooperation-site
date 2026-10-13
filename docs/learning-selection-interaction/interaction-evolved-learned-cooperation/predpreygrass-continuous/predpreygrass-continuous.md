@@ -348,6 +348,11 @@ Continued for another 2,000 iterations, the world with spread-out grass gave the
 <figcaption className="site-table-caption"><strong>Display 8:</strong> Share of tournament pairs in which the newer checkpoint does better, in the world with a realistic movement cost, faster prey and spread-out grass, over 3,000 iterations of training; both species alive in 40 of 50 final-check episodes at the end.</figcaption>
 </figure>
 
+<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
+  <img src="/img/learning-selection-interaction/interaction-evolved-learned-cooperation/predpreygrass-continuous/arms-race.png" alt="Display 9: Line chart over 3,000 training iterations: predators' catch risk against all prey rises from 2.1 to about 3.5, prey's catch risk against all predators falls from 4.4 to about 2.7, and each checkpoint against its own training partner stays around 3 to 4; after about 2,200 iterations all three level off" style={{ display: 'block', width: '100%', height: 'auto' }} />
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 9:</strong> The arms race over 3,000 iterations: each checkpoint's predators against all prey (orange, rising as they get better at hunting), its prey against all predators (blue, falling as they get better at escaping), and the checkpoint against its own training partner (green, roughly flat: still evenly matched); shaded, the plateau after about 2,200 iterations.</figcaption>
+</figure>
+
 ## Summary
 
 **The prey were always the faster learners, until the ecology changed.** In the first worlds, prey kept refining their escape for thousands of iterations, while predators settled at the catch rate that just pays for their metabolism. More predator information (grass, the energy of others) or harder prey (faster prey, walls) shifted where that plateau lay, but did not give predators anything to keep improving.
