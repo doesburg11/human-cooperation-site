@@ -353,6 +353,33 @@ Continued for another 2,000 iterations, the world with spread-out grass gave the
   <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 9:</strong> The arms race over 3,000 iterations: each checkpoint's predators against all prey (orange, rising as they get better at hunting), its prey against all predators (blue, falling as they get better at escaping), and the checkpoint against its own training partner (green, roughly flat: still evenly matched); shaded, the plateau after about 2,200 iterations.</figcaption>
 </figure>
 
+## Population dynamics within an episode
+
+<figure style={{ margin: '1.5rem auto', width: '70%' }}>
+  <img src="/img/learning-selection-interaction/interaction-evolved-learned-cooperation/predpreygrass-continuous/predator-prey-single-step.png" alt="Display 10: Exact predator and prey counts over 8,002 simulation steps, with predators ranging from 2 to 12 on the orange left axis and prey from 1 to 46 on the green right axis" style={{ display: 'block', width: '100%', height: 'auto' }} />
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 10:</strong> A new evaluation rollout of the add_reproduction run of 7 October 2026 at 09:38, checkpoint 990, seed 0. Counts include the initial state and every subsequent physics step, without averaging. Predators use the orange left axis; prey use the green right axis. The scales differ, so line heights and crossings do not indicate equal populations.</figcaption>
+</figure>
+
+The populations show irregular predator–prey oscillations resembling a
+Lotka–Volterra pattern: prey can grow when food is available and predator
+numbers are low, while predator growth follows successful feeding. Near the
+end of this episode, prey peak around step 7,000 and predators around step
+7,500. Grass availability, energy reserves, starvation and threshold-based
+reproduction modify the feedback; this single rollout does not establish a
+classical Lotka–Volterra cycle.
+
+Prey turn over much faster than predators. The saved first evaluation episode
+for this checkpoint recorded 458 prey births and 449 catches, compared with
+36 predator births and 35 predator starvation deaths. Prey feed directly on
+grass; predators receive 50% of a caught prey's energy and reproduce at an
+energy threshold of 12, versus 8 for prey. Energy reserves delay predator
+starvation after prey decline. Predator counts therefore change less often,
+even while individual predators are replaced. They still range from 2 to 12
+in the plotted rollout, compared with 1 to 46 prey: a sixfold predator change,
+so their smaller absolute swings should not be mistaken for constant numbers.
+
+[Download the counts for every physics step](/img/learning-selection-interaction/interaction-evolved-learned-cooperation/predpreygrass-continuous/predator-prey-single-step.csv).
+
 ## Summary
 
 **The prey were always the faster learners, until the ecology changed.** In the first worlds, prey kept refining their escape for thousands of iterations, while predators settled at the catch rate that just pays for their metabolism. More predator information (grass, the energy of others) or harder prey (faster prey, walls) shifted where that plateau lay, but did not give predators anything to keep improving.
