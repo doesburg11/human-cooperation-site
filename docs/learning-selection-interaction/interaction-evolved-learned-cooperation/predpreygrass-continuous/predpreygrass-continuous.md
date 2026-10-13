@@ -378,8 +378,6 @@ even while individual predators are replaced. They still range from 2 to 12
 in the plotted rollout, compared with 1 to 46 prey: a sixfold predator change,
 so their smaller absolute swings should not be mistaken for constant numbers.
 
-[Download the counts for every physics step](/img/learning-selection-interaction/interaction-evolved-learned-cooperation/predpreygrass-continuous/predator-prey-single-step.csv).
-
 ## Summary
 
 **The prey were always the faster learners, until the ecology changed.** In the first worlds, prey kept refining their escape for thousands of iterations, while predators settled at the catch rate that just pays for their metabolism. More predator information (grass, the energy of others) or harder prey (faster prey, walls) shifted where that plateau lay, but did not give predators anything to keep improving.
