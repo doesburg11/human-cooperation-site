@@ -85,6 +85,19 @@ though it's been referred to elsewhere as Trial 13 — numbering has drifted) ne
 
 ## PredPreyGrass experiments (specified, not yet run)
 
+### Which quirk favoured the predators? (continuous world, 2026-10-15)
+
+[`base_environment_continuous`](https://github.com/doesburg11/PredPreyGrass/tree/main/predpreygrass/non_evolutionary/base_environment_continuous) reproduces the Aquarium-based simulation exactly, including eight implementation quirks (SPEC.md §9), each now switchable with a `fix_*` setting. Two runs with every quirk fixed (BE-04, BE-05) kept the arms race but were associated with a balance shifted towards the prey: catch risk about half (1.7–1.9 against 3.2–3.7), prey almost twice as numerous, coexistence in 93 of 100 final-check episodes against 115 of 150 for the exact runs BE-01 to BE-03 ([RESULTS.md §3](https://github.com/doesburg11/PredPreyGrass/blob/main/predpreygrass/non_evolutionary/base_environment_continuous/RESULTS.md); website Display 11).
+
+Open: whether the quirks cause the shift, and if so which. The comparison is confounded: BE-04/05 were trained in a different repository and Ray version (2.59) than BE-01/02 (2.58), and BE-03, the only exact run under the same conditions, differs in workers (28) and length (4,000 iterations). Candidates: sequential movement order (`fix_simultaneous_movement`) and the prey collision rule that stopped prey steering while touching another prey (`fix_same_collisions_for_both`).
+
+Plan when picked up:
+1. Exact-environment control under identical conditions: two runs, this repository, Ray 2.59, 14 workers, 3,000 iterations, side by side. Confirms (or rules out) that the shift comes from the fixes at all.
+2. If it does: one fix at a time (or all fixes but one), starting with the two candidates; two runs each.
+3. Same evaluation as before: 50-episode final check, every-300 tournament, `analysis/arms_race_quirks_fixed.py`-style comparison.
+
+Cost: about 13 hours per pair of runs (fixed-environment runs train slower, 12.7–14.2 h).
+
 ### Observation-space improvements
 The RL-side half of this idea (drive-conditioned observations: `hunger_pressure`, `reproductive_readiness`, `prey_opportunity`, `predator_danger_pressure`, `grass_opportunity` as extra observation channels, reward untouched) is implemented and numerically verified as `predpreygrass/non_evolutionary/drive_conditioned_environment/` — a single-seed baseline-vs-drive-conditioned comparison ran 2026-09-06 (+6.0% gap, predator-driven); additional seeds and the energy-only arm are still open, tracked in that module's own README rather than here.
 
