@@ -7,7 +7,7 @@ slug: /learning-selection-interaction/predpreygrass-continuous/emergent-cooperat
 
 # Searching for Emergent Cooperation
 
-Can predators and prey in the continuous [PredPreyGrass](/learning-selection-interaction/predpreygrass-continuous) world develop cooperation out of individual self-interest, with no reward for cooperating? Starting from Hahn et al.'s foraging swarms (2020), five candidates were tested in turn: prey swarming, predators holding back when prey are scarce, group hunting, a shared carcass, and large prey that a lone predator cannot catch. The only reward was always the same: +10 for each birth. The code and every number below are in the [`foraging_swarms`](https://github.com/doesburg11/PredPreyGrass/tree/main/predpreygrass/non_evolutionary/continuous_space/foraging_swarms) module of the PredPreyGrass repository.
+Can predators and prey in the continuous [PredPreyGrass](/learning-selection-interaction/predpreygrass-continuous) world develop cooperation out of individual self-interest, with no reward for cooperating? Starting from Hahn et al.'s foraging swarms (2020), five candidates were tested in turn: prey swarming, predators holding back when prey are scarce, group hunting, a shared carcass, and large prey that a lone predator cannot catch. The only reward was always the same: +10 for each birth. The code and every number below are in the [`foraging_swarms`](https://github.com/doesburg11/PredPreyGrass-archive/tree/main/foraging_swarms) module of the PredPreyGrass repository.
 
 ## Key findings
 
@@ -138,4 +138,4 @@ The predators adapted: coexistence recovered from 17–18 to 34–45 of 50 episo
 - Clark, P. J., & Evans, F. C. (1954). *Distance to nearest neighbor as a measure of spatial relationships in populations*. *Ecology*, 35(4), 445–453. https://doi.org/10.2307/1931034
 - Reynolds, C. W. (1987). *Flocks, herds and schools: A distributed behavioral model*. *ACM SIGGRAPH Computer Graphics*, 21(4), 25–34. https://doi.org/10.1145/37402.37406
 - Schulman, J., Wolski, F., Dhariwal, P., Radford, A., & Klimov, O. (2017). *Proximal policy optimization algorithms*. arXiv:1707.06347. https://arxiv.org/abs/1707.06347
-- doesburg11. *PredPreyGrass*, `foraging_swarms` module (code, measurements and results). GitHub. https://github.com/doesburg11/PredPreyGrass/tree/main/predpreygrass/non_evolutionary/continuous_space/foraging_swarms
+- doesburg11. *PredPreyGrass-archive*, `foraging_swarms` module (code, measurements and results; archived from PredPreyGrass on 2026-10-23). GitHub. https://github.com/doesburg11/PredPreyGrass-archive/tree/main/foraging_swarms
