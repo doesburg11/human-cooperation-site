@@ -22,7 +22,9 @@ In Trial 12, the full comparative study used five conditions, 100 seeds per cond
 
 This matters because the site's human claim is not "nature alone" or "nurture alone." The claim is that inherited tendencies and lifetime learning can form a coupled adaptive system. Trial 12 is the cleanest current evidence for that coupled system.
 
-There is an important limit: this result concerns survival behavior in a predator-prey ecology, not cooperation specifically. It supports the two-timescale mechanism that the human cooperation argument depends on; it does not, by itself, demonstrate human cooperation.
+A second positive result, of a different kind, now also replicates. In [Trial 15](/learning-selection-interaction/predpreygrass-continuous/evolving-bodies), animals in the continuous PredPreyGrass world carry heritable body genes (top speed, view distance, field of view) and share one learning policy per species. Branched from one run, predator speed rose in all six runs where the predator policy kept learning and fell in all six where it was frozen (+0.18 on the gene's log scale, 95% CI +0.14 to +0.22, exact `p = 0.005`, a contrast fixed in advance). Trial 12 shows that evolution and learning together outperform either; Trial 15 shows learning changing the direction in which a gene evolves, the Baldwin-style link itself. It comes from one starting point, its mechanism is untested, and the learning is shared across a species rather than individual.
+
+There is an important limit: these results concern survival behavior and bodies in a predator-prey ecology, not cooperation specifically. It supports the two-timescale mechanism that the human cooperation argument depends on; it does not, by itself, demonstrate human cooperation.
 
 Read next:
 
@@ -48,7 +50,7 @@ The ecological model pages — [Cooperative Hunting](/evolved-cooperation/cooper
 
 The site deliberately preserves null results because they narrow the problem.
 
-The clearest null history is in [PredPreyGrass](/learning-selection-interaction/predpreygrass). Trials 1-10 under the shared-policy architecture were null or inconclusive for selection-driven drift, despite testing multiple heritable traits and running statistical replications. The later Trial 12 result suggests that the earlier nulls were pointing at a structural limitation: the genome needs a direct channel into individual behavior for selection-driven behavioral evolution to become visible.
+The clearest null history is in [PredPreyGrass](/learning-selection-interaction/predpreygrass). Trials 1-10 under the shared-policy architecture were null or inconclusive for selection-driven drift, despite testing multiple heritable traits and running statistical replications. The later Trial 12 result suggests that the earlier nulls were pointing at a structural limitation: the genome needs a direct channel into individual behavior for selection-driven behavioral evolution to become visible. Trial 15 is consistent with that reading: under a shared policy again, but with genes that shape each animal's body and that the policy observes, selection on the genes was persistent and its direction depended on whether the policy learned.
 
 The [PPO Study](/learned-cooperation/repeated-prisoners-dilemma/ppo-study) is also a limiting result. Under the reported two-sided tests with Holm correction across 40 comparisons, no `(horizon, player)` result was significant at `alpha = 0.05` in the shown run.
 
@@ -70,7 +72,7 @@ The main open question is how to move from mechanism tests to models that are ex
 
 Concrete next questions include:
 
-- Can the shared-policy PredPreyGrass architecture be given a direct heritable behavioral channel without losing the advantages of the richer ecological environment?
+- Can the shared-policy PredPreyGrass architecture be given a direct heritable behavioral channel without losing the advantages of the richer ecological environment? Trial 15 does this for bodies; open is why its predator-speed effect arises (does speed pay only once behavior adapts to it?) and whether it holds from other starting points.
 - What explains Trial 12's remaining discrepancy with the original Ackley & Littman result, where evolution-alone beats luck here but not in the original paper?
 - Does the deeper longitudinal genetic-assimilation result from Ackley & Littman also reproduce in the current implementation?
 - Does the partially built drive-conditioned observation system improve learning, and can it support an evolutionary extension?
@@ -134,6 +136,13 @@ Use these labels when moving through the site:
           <td>The shown PPO sweep did not produce Holm-significant cooperation results.</td>
           <td>Narrow reported setup; not a general impossibility result.</td>
           <td><a href="/learned-cooperation/repeated-prisoners-dilemma/ppo-study">PPO Study</a></td>
+        </tr>
+        <tr>
+          <td>PredPreyGrass continuous traits / Trial 15</td>
+          <td>Confirmed (one branch point)</td>
+          <td>Whether behavior keeps learning reverses the direction in which predator speed evolves, in all 12 replicate runs.</td>
+          <td>One starting point; mechanism untested; learning shared across a species, not individual.</td>
+          <td><a href="/learning-selection-interaction/predpreygrass-continuous/evolving-bodies">Learning Steers Body Evolution</a>, <a href="/learning-selection-interaction/darwin-baldwin-trial-log">Trial Log</a></td>
         </tr>
         <tr>
           <td>PredPreyGrass shared-policy trials</td>
