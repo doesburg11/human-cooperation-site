@@ -7,7 +7,7 @@ slug: /learning-selection-interaction/predpreygrass-continuous/evolving-bodies
 
 # Learning Steers Body Evolution
 
-What happens in the continuous [PredPreyGrass](/learning-selection-interaction/predpreygrass-continuous) world when animals' bodies evolve while their behaviour is learned? Every animal carries three heritable genes, top speed, view distance and field of view, passed to its offspring with small mutations; one shared PPO policy per species learns how to use whatever body an animal has. The question behind it is the project's long-term one: can learning and evolution drive each other, as in a [Baldwin effect](/learning-selection-interaction/baldwin-effect)? The code and every number below are in the [`eco_evolutionary_continuous_traits`](https://github.com/doesburg11/PredPreyGrass/tree/main/predpreygrass/evolutionary/eco_evolutionary_continuous_traits) module of the PredPreyGrass repository.
+What happens in the continuous [PredPreyGrass](/learning-selection-interaction/predpreygrass-continuous) world when animals' bodies evolve while their behaviour is learned? Every animal carries three heritable genes, top speed, view distance and field of view, passed to its offspring with small mutations; one shared PPO policy per species learns how to use whatever body an animal has. The question behind it is the project's long-term one: can learning and evolution drive each other, as in a [Baldwin effect](/learning-selection-interaction/baldwin-effect)? The code and every number below are in the [`eco_evolutionary_continuous_traits`](https://github.com/doesburg11/PredPreyGrass/tree/main/predpreygrass/evolutionary/continuous_space/eco_evolutionary_continuous_traits) module of the PredPreyGrass repository.
 
 ## Key findings
 
@@ -88,4 +88,4 @@ It does not show *why*. One reading is that a faster body only pays once the pol
 - Hinton, G. E., and Nowlan, S. J. (1987). How learning can guide evolution. *Complex Systems*, 1, 495–502.
 - Moran, D., Softley, R., and Warrant, E. J. (2015). The energetic cost of vision and the evolution of eyeless Mexican cavefish. *Science Advances*, 1(8), e1500363.
 - Niven, J. E., Anderson, J. C., and Laughlin, S. B. (2007). Fly photoreceptors demonstrate energy-information trade-offs in neural coding. *PLoS Biology*, 5(4), e116.
-- doesburg11. *PredPreyGrass*, `eco_evolutionary_continuous_traits` module (code, runs and results, RESULTS.md sections 1–5). GitHub. https://github.com/doesburg11/PredPreyGrass/tree/main/predpreygrass/evolutionary/eco_evolutionary_continuous_traits
+- doesburg11. *PredPreyGrass*, `eco_evolutionary_continuous_traits` module (code, runs and results, RESULTS.md sections 1–5). GitHub. https://github.com/doesburg11/PredPreyGrass/tree/main/predpreygrass/evolutionary/continuous_space/eco_evolutionary_continuous_traits
