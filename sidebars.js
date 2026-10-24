@@ -105,6 +105,7 @@ export default {
             },
             'learning-selection-interaction/interaction-evolved-learned-cooperation/predpreygrass-continuous/predpreygrass-continuous',
             'learning-selection-interaction/interaction-evolved-learned-cooperation/predpreygrass-continuous/emergent-cooperation-continuous',
+            'learning-selection-interaction/interaction-evolved-learned-cooperation/predpreygrass-continuous/evolving-bodies-continuous',
             {
               type: 'category',
               label: 'Two-Timescale Simulations',
