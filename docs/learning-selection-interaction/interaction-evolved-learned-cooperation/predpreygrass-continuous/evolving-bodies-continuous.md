@@ -11,7 +11,8 @@ What happens in the continuous [PredPreyGrass](/learning-selection-interaction/p
 
 ## Key findings
 
-- **Learning changed the direction of body evolution.** From one shared starting point, predator speed rose in all six runs in which the predator policy kept learning and fell in all six in which it was frozen. The difference, +0.18 on the gene's log scale, has a 95% interval of +0.14 to +0.22 (exact randomization p = 0.005). This was the test fixed in advance after a single exploratory run.
+- **Learning changed the direction of body evolution, from two starting points.** From one branch point, predator speed rose in all six runs in which the predator policy kept learning and fell in all six in which it was frozen. The difference, +0.18 on the gene's log scale, has a 95% interval of +0.14 to +0.22 (exact randomization p = 0.005). This was the test fixed in advance after a single exploratory run. From a second branch point, with much slower predators, the same test gave +0.19 (95% interval +0.09 to +0.28, p = 0.005).
+- **Speed pays more under the learned predator policies.** With predator speeds set by hand and the same starting prey, extra speed paid about twice as much under the policies predators had learned as under the frozen one. Under the frozen policy faster lineages had more offspring but a smaller share of them survived; the learned predators turned more of their extra offspring into survivors.
 - **Several traits showed persistent directional selection.** In runs where genes affected the body, selection differentials kept one sign in 84–100% of iterations, much larger and more consistent than in control runs where the genes had no effect.
 - **Expensive bodies went with a collapsing ecosystem.** In a single pilot run where extra capacity cost a lot, evolution produced slow, short-sighted predators, prey went extinct in most test episodes, and the learning arms race of the base world disappeared. In two runs with cheaper capacity both species coexisted in every test episode. Those runs also differed in other settings, so cost alone is not isolated as the cause.
 - **Both species traded view distance for a wide field of view** in both cheaper-cost runs; speed rose and then fell again. Neither run showed a sustained escalation in body traits.
@@ -76,16 +77,66 @@ Averaging the two learning arms against the two frozen arms gives +0.18 (95% int
 
 Other genes, not tested in advance: prey speed changed by 0.15 less when prey learned than when they were frozen, and predators' view distance changed by 0.04 more when predators learned. A fifth arm with genes switched off, meant as a drift reference, turned out not to fit: with every animal on the base body, populations were much smaller and the genes drifted far more than in the other arms.
 
+## A second starting point
+
+The test was repeated from a later point of the same training run (iteration 2,500), where predators had become much slower (speed gene +0.06 against +0.19) and both species had wider fields of view. The design was the same, four arms with three seeds each and no gene-off arm.
+
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--striped">
+    <thead>
+      <tr><th>Arm</th><th>Predators learn</th><th>Prey learn</th><th>Seed 1</th><th>Seed 2</th><th>Seed 3</th><th>Mean</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>both learning</td><td>yes</td><td>yes</td><td>+0.340</td><td>+0.119</td><td>+0.266</td><td>+0.242</td></tr>
+      <tr><td>prey frozen</td><td>yes</td><td>no</td><td>+0.248</td><td>+0.257</td><td>+0.292</td><td>+0.266</td></tr>
+      <tr><td>both frozen</td><td>no</td><td>no</td><td>+0.106</td><td>+0.110</td><td>+0.091</td><td>+0.102</td></tr>
+      <tr><td>predators frozen</td><td>no</td><td>yes</td><td>+0.091</td><td>+0.060</td><td>−0.049</td><td>+0.034</td></tr>
+    </tbody>
+  </table>
+</div>
+<figcaption className="site-table-caption"><strong>Display 3:</strong> Change in the mean predator-speed gene from the second branch point (iteration 2,500). From this slower start speed rose in most frozen runs too, but every run with learning predators gained more than every run with frozen ones, if narrowly (lowest +0.119 against highest +0.110).</figcaption>
+</figure>
+
+The pre-specified contrast is +0.19 (95% interval +0.09 to +0.28, p = 0.005), against +0.18 from the first branch point, and it holds within each prey setting (+0.21 and +0.16). Both branch points come from the same training run, so how the effect depends on, for example, the cost of capacity is still untested.
+
+## Why does speed pay more when predators learn?
+
+The branch runs show which way genes move, not why. Two readings were open: behaviour adapting to faster bodies, or learning and frozen predators living in different ecologies (where predators learned, there were about a quarter fewer prey). To separate them, predators were given fixed speed genes (−0.2, 0, +0.2 or +0.4, mixed within each episode) and scored under the frozen branch-point policy and under the six policies predators had learned by the end of their branches, all against the same starting prey. Fitness was counted as each founder's descendants alive at the end of an episode, the animals the next episode's founders are drawn from; 600 paired episodes per condition.
+
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--striped">
+    <thead>
+      <tr><th>Predator policy</th><th>−0.2</th><th>0</th><th>+0.2</th><th>+0.4</th><th>Share of offspring surviving at +0.4</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>frozen (branch point)</td><td>0.86</td><td>0.98</td><td>1.06</td><td>1.10</td><td>34%</td></tr>
+      <tr><td>learned (mean of 6 runs)</td><td>0.76</td><td>0.91</td><td>1.04</td><td>1.28</td><td>38%</td></tr>
+    </tbody>
+  </table>
+</div>
+<figcaption className="site-table-caption"><strong>Display 4:</strong> Relative fitness of predator lineages by speed gene, same starting prey. Under the frozen policy the gain levels off above +0.2, about where the population was; under the learned policies it keeps rising. The last column is the share of a lineage's members still alive at the end of the episode (42% and 41% at −0.2).</figcaption>
+</figure>
+
+The slope of fitness on speed was +0.40 under the frozen policy and about twice that under the learned ones (difference +0.46, 95% interval +0.24 to +0.68 across the six learned runs, all six above zero). So the effect appears with the same starting prey, which makes the different prey numbers of the branch arms an unlikely main route, though prey numbers still differ within episodes. Faster lineages had more offspring under both policies, but under the frozen one fewer of those offspring survived, and from +0.2 to +0.4 the extra offspring added no survivors.
+
+Splitting the change in an evolving population with both policies frozen, episode by episode, showed the same balance: faster lineages' extra births and their lower survival largely cancelled in every one of four simulated islands, so net selection on speed was small and inconsistent and speed mostly drifted. The selection measure logged in training counts offspring only, which is why it had suggested selection for speed in the frozen arms too. Why speed fell further when only predators were frozen while prey kept learning is still unexplained.
+
 ## What this does and does not show
 
 The result is a replicated case of learning changing the course of evolution: branches drawn from the same branch-point gene pool showed opposite predator-speed trajectories depending on whether the predator policy kept adapting. That is a broad Baldwin-style result, learning steering evolution (Baldwin, 1896; [Hinton and Nowlan, 1987](/learning-selection-interaction/hinton-nowlan-1987)). It is not the classic Baldwin effect, in which individual lifetime learning smooths the path for genes: here learning is one policy shared by a whole species and trained across generations.
 
-It does not show *why*. One reading is that a faster body only pays once the policy has learned to use the extra speed, so a frozen policy, tuned to the bodies of the branch point, gets no benefit from faster offspring. Another is that learning and frozen predators live in different ecologies, with different numbers of predators and prey, which would change selection on speed without any adaptation to bodies. The runs measure gene trajectories, not which bodies pay, and they start from one branch point only, so how general the effect is remains open. Separating these readings, for example by scoring frozen and learned policies on bodies of different speeds, is the next step.
+The likely route is that learned behaviour makes speed pay: under the learned policies faster predators turn more of their extra offspring into survivors. That is shown with the same starting prey, but not that the policies adapted to speed specifically, since the learned policies differ from the frozen one in everything they learned. The effect is found from two starting points of one training run, not across settings.
+
+What has not appeared is coevolution in bodies. Both species evolved the same way, shorter view distance and a wider field of view, and the prey's gains came from behaviour, so the two species' bodies are not yet changing in response to each other. In the model a wide field of view only costs energy, while in animals a narrow, forward field brings depth perception for hunting (Heesy, 2004; Banks et al., 2015). Giving a narrow field its own advantage, so that predators can evolve "hunting eyes" and prey "panoramic eyes", is the planned next step toward a two-way loop; per-agent learning, as in [Ackley and Littman (1991)](/learning-selection-interaction/ackley-littman-1991), would be the step toward a classic Baldwin effect.
 
 ## References
 
 - Baldwin, J. M. (1896). A new factor in evolution. *The American Naturalist*, 30(354), 441–451.
+- Banks, M. S., Sprague, W. W., Schmoll, J., Parnell, J. A. Q., and Love, G. D. (2015). Why do animal eyes have pupils of different shapes? *Science Advances*, 1(7), e1500391.
+- Heesy, C. P. (2004). On the relationship between orbit orientation and binocular visual field overlap in mammals. *The Anatomical Record Part A*, 281A(1), 1104–1110.
 - Hinton, G. E., and Nowlan, S. J. (1987). How learning can guide evolution. *Complex Systems*, 1, 495–502.
 - Moran, D., Softley, R., and Warrant, E. J. (2015). The energetic cost of vision and the evolution of eyeless Mexican cavefish. *Science Advances*, 1(8), e1500363.
 - Niven, J. E., Anderson, J. C., and Laughlin, S. B. (2007). Fly photoreceptors demonstrate energy-information trade-offs in neural coding. *PLoS Biology*, 5(4), e116.
-- doesburg11. *PredPreyGrass*, `eco_evolutionary_continuous_traits` module (code, runs and results, RESULTS.md sections 1–5). GitHub. https://github.com/doesburg11/PredPreyGrass/tree/main/predpreygrass/evolutionary/continuous_space/eco_evolutionary_continuous_traits
+- doesburg11. *PredPreyGrass*, `eco_evolutionary_continuous_traits` module (code, runs and results, RESULTS.md sections 1–8). GitHub. https://github.com/doesburg11/PredPreyGrass/tree/main/predpreygrass/evolutionary/continuous_space/eco_evolutionary_continuous_traits

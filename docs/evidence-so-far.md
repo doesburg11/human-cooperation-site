@@ -22,7 +22,7 @@ In Trial 12, the full comparative study used five conditions, 100 seeds per cond
 
 This matters because the site's human claim is not "nature alone" or "nurture alone." The claim is that inherited tendencies and lifetime learning can form a coupled adaptive system. Trial 12 is the cleanest current evidence for that coupled system.
 
-A second positive result, of a different kind, now also replicates. In [Trial 15](/learning-selection-interaction/predpreygrass-continuous/evolving-bodies), animals in the continuous PredPreyGrass world carry heritable body genes (top speed, view distance, field of view) and share one learning policy per species. Branched from one run, predator speed rose in all six runs where the predator policy kept learning and fell in all six where it was frozen (+0.18 on the gene's log scale, 95% CI +0.14 to +0.22, exact `p = 0.005`, a contrast fixed in advance). Trial 12 shows that evolution and learning together outperform either; Trial 15 shows learning changing the direction in which a gene evolves, the Baldwin-style link itself. It comes from one starting point, its mechanism is untested, and the learning is shared across a species rather than individual.
+A second positive result, of a different kind, now also replicates. In [Trial 15](/learning-selection-interaction/predpreygrass-continuous/evolving-bodies), animals in the continuous PredPreyGrass world carry heritable body genes (top speed, view distance, field of view) and share one learning policy per species. Branched from one run, predator speed rose in all six runs where the predator policy kept learning and fell in all six where it was frozen (+0.18 on the gene's log scale, 95% CI +0.14 to +0.22, exact `p = 0.005`, a contrast fixed in advance); from a second branch point of the same run the contrast was +0.19 (`p = 0.005`). With speeds set by hand and the same starting prey, extra speed paid about twice as much under the learned predator policies as under the frozen one. Trial 12 shows that evolution and learning together outperform either; Trial 15 shows learning changing the direction in which a gene evolves, the Baldwin-style link itself. Both branch points come from one training run, the learned policies differ from the frozen one in more than their use of speed, and the learning is shared across a species rather than individual.
 
 There is an important limit: these results concern survival behavior and bodies in a predator-prey ecology, not cooperation specifically. It supports the two-timescale mechanism that the human cooperation argument depends on; it does not, by itself, demonstrate human cooperation.
 
@@ -72,7 +72,7 @@ The main open question is how to move from mechanism tests to models that are ex
 
 Concrete next questions include:
 
-- Can the shared-policy PredPreyGrass architecture be given a direct heritable behavioral channel without losing the advantages of the richer ecological environment? Trial 15 does this for bodies; open is why its predator-speed effect arises (does speed pay only once behavior adapts to it?) and whether it holds from other starting points.
+- Can the shared-policy PredPreyGrass architecture be given a direct heritable behavioral channel without losing the advantages of the richer ecological environment? Trial 15 does this for bodies, and its predator-speed effect holds from two starting points, with speed paying more under learned behavior; open is whether the two species' bodies can be made to respond to each other (both currently evolve the same way).
 - What explains Trial 12's remaining discrepancy with the original Ackley & Littman result, where evolution-alone beats luck here but not in the original paper?
 - Does the deeper longitudinal genetic-assimilation result from Ackley & Littman also reproduce in the current implementation?
 - Does the partially built drive-conditioned observation system improve learning, and can it support an evolutionary extension?
@@ -139,9 +139,9 @@ Use these labels when moving through the site:
         </tr>
         <tr>
           <td>PredPreyGrass continuous traits / Trial 15</td>
-          <td>Confirmed (one branch point)</td>
+          <td>Confirmed (two branch points of one training run)</td>
           <td>Whether behavior keeps learning reverses the direction in which predator speed evolves, in all 12 replicate runs.</td>
-          <td>One starting point; mechanism untested; learning shared across a species, not individual.</td>
+          <td>One training run; speed pays more under learned policies, but not shown to be adaptation to speed specifically; learning shared across a species, not individual; no arms race in bodies.</td>
           <td><a href="/learning-selection-interaction/predpreygrass-continuous/evolving-bodies">Learning Steers Body Evolution</a>, <a href="/learning-selection-interaction/darwin-baldwin-trial-log">Trial Log</a></td>
         </tr>
         <tr>
