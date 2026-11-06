@@ -29,6 +29,7 @@ Prey that learn as fast as human hunters are hard to defend, since prey adapt ov
       <tr><th>World</th><th>Coexisting (of 50)</th><th>Cooperation</th></tr>
     </thead>
     <tbody>
+      <tr><td>Rabbits only, learning prey (round 1a)</td><td>49</td><td>no stag option in this world</td></tr>
       <tr><td>Mammoths, learning prey (best rounds)</td><td>39 to 50</td><td>joint arrivals at most 1.3x chance</td></tr>
       <tr><td>Mammoths, rule-following prey (3 arms rewarded for births)</td><td>0</td><td>joint arrivals 2.7 to 3.6x chance</td></tr>
       <tr><td>Rabbits only, lean and fat</td><td><strong>46</strong></td><td>approaches to fat rabbits with a partner below chance</td></tr>
@@ -42,7 +43,7 @@ Prey that learn as fast as human hunters are hard to defend, since prey adapt ov
 
 ## Lean and fat rabbits
 
-To make the stag hunt as simple as possible, the mammoths were removed and the rabbits split by condition: a lone hunter always catches a lean rabbit, but its chance falls to zero for a fat one, while two hunters close together always catch it and share it. In this world hunters and rabbits coexisted in 46 of 50 episodes, the only trained world in the line to meet the coexistence target. But hunters approached fat rabbits with a partner nearby no more often than their time near other hunters would give by chance (31% against 33%), so the stag hunt was not being played. Trained twice as long, they ate the rabbits out more often (29 of 50) with cooperation unchanged.
+To make the stag hunt as simple as possible, the mammoths were removed and the rabbits split by condition: a lone hunter always catches a lean rabbit, but its chance falls to zero for a fat one, while two hunters close together always catch it and share it. In this world hunters and rabbits coexisted in 46 of 50 episodes, the first world with rule-following prey to meet the coexistence target (with learning prey, hunters and rabbits alone had coexisted in 49 of 50, and two mammoth rounds in 47 and 50, all without a cooperation signal). But hunters approached fat rabbits with a partner nearby no more often than their time near other hunters would give by chance (31% against 33%), so the stag hunt was not being played. Trained twice as long, they ate the rabbits out more often (29 of 50) with cooperation unchanged.
 
 ## Rabbits that evolve
 
