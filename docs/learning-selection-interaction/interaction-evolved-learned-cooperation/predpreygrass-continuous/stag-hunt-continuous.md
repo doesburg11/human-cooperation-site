@@ -35,6 +35,7 @@ Prey that learn as fast as human hunters are hard to defend, since prey adapt ov
       <tr><td>Rabbits only, lean and fat</td><td><strong>46</strong></td><td>approaches to fat rabbits with a partner below chance</td></tr>
       <tr><td>Same, trained twice as long</td><td>29</td><td>unchanged</td></tr>
       <tr><td>Same, rabbits evolving</td><td>18 (hunters starving in 22)</td><td>below chance</td></tr>
+      <tr><td>Lean and fat, rabbits learning, hunters see rabbit energy</td><td><strong>46</strong></td><td>fat approaches with a partner at chance (24% against 25%)</td></tr>
     </tbody>
   </table>
 </div>
@@ -44,6 +45,8 @@ Prey that learn as fast as human hunters are hard to defend, since prey adapt ov
 ## Lean and fat rabbits
 
 To make the stag hunt as simple as possible, the mammoths were removed and the rabbits split by condition: a lone hunter always catches a lean rabbit, but its chance falls to zero for a fat one, while two hunters close together always catch it and share it. In this world hunters and rabbits coexisted in 46 of 50 episodes, the first world with rule-following prey to meet the coexistence target (with learning prey, hunters and rabbits alone had coexisted in 49 of 50, and two mammoth rounds in 47 and 50, all without a cooperation signal). But hunters approached fat rabbits with a partner nearby no more often than their time near other hunters would give by chance (31% against 33%), so the stag hunt was not being played. Trained twice as long, they ate the rabbits out more often (29 of 50) with cooperation unchanged.
+
+In these rule-prey runs the hunters could see where rabbits were but not their energy, so they could not tell fat from lean. A last run fixed this and let rabbits learn as well, in the world of round 1a. Hunters and rabbits coexisted in 46 of 50 episodes. Hunters approached lean rabbits with a partner near less often than chance (17%), but fat ones only at chance (24% against 25%): they seem to have learned which rabbits a lone hunter can take, not to bring a partner for the ones it cannot. The test set in advance for cooperation failed, and the line stopped there as agreed.
 
 ## Rabbits that evolve
 
