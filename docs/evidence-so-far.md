@@ -145,6 +145,13 @@ Use these labels when moving through the site:
           <td><a href="/learning-selection-interaction/predpreygrass-continuous/evolving-bodies">Learning Steers Body Evolution</a>, <a href="/learning-selection-interaction/darwin-baldwin-trial-log">Trial Log</a></td>
         </tr>
         <tr>
+          <td>PredPreyGrass stag hunt (continuous)</td>
+          <td>Null (one run per world)</td>
+          <td>Hunters learn group hunting readily where it pays, but never restraint: no world gave both coexistence and cooperation above chance.</td>
+          <td>One seed per world; the commons-dilemma reading is untested.</td>
+          <td><a href="/learning-selection-interaction/predpreygrass-continuous/stag-hunt">The Stag Hunt and Restraint</a></td>
+        </tr>
+        <tr>
           <td>PredPreyGrass shared-policy trials</td>
           <td>Null / inconclusive</td>
           <td>Trials 1-10 did not show reliable selection-driven drift under the shared-policy design.</td>
