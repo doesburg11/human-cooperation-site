@@ -146,9 +146,9 @@ Use these labels when moving through the site:
         </tr>
         <tr>
           <td>PredPreyGrass stag hunt (continuous)</td>
-          <td>Null (one run per world)</td>
-          <td>Hunters learn group hunting readily where it pays, but never restraint: no world gave both coexistence and cooperation above chance.</td>
-          <td>One seed per world; the commons-dilemma reading is untested.</td>
+          <td>Mostly null (one run per world)</td>
+          <td>Hunters learn group hunting readily where it pays, but never restraint; only one world gave both coexistence and cooperation above chance, one where a fat rabbit needs two hunters together, and calls there gained no detectable use.</td>
+          <td>One seed per world; in the one passing world a partner was required by rule, and calls and the rule were changed together; the commons-dilemma reading is untested.</td>
           <td><a href="/learning-selection-interaction/predpreygrass-continuous/stag-hunt">The Stag Hunt and Restraint</a></td>
         </tr>
         <tr>
