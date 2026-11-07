@@ -72,4 +72,5 @@ Human societies face that second dilemma too, and Ostrom's work on common-pool r
 - Skyrms, B. (2004). *The stag hunt and the evolution of social structure*. Cambridge University Press. https://doi.org/10.1017/CBO9781139165228
 - Ostrom, E. (1990). *Governing the commons: The evolution of institutions for collective action*. Cambridge University Press. https://doi.org/10.1017/CBO9780511807763
 - Schulman, J., Wolski, F., Dhariwal, P., Radford, A., & Klimov, O. (2017). *Proximal policy optimization algorithms*. arXiv:1707.06347. https://arxiv.org/abs/1707.06347
-- doesburg11. *PredPreyGrass*, `stag_hunt_continuous` and `stag_hunt_rule_prey` modules (code, measurements and results). GitHub. https://github.com/doesburg11/PredPreyGrass
+- doesburg11. *PredPreyGrass-archive*, `stag_hunt_continuous` module (code, measurements and results; archived from PredPreyGrass on 2026-11-07). GitHub. https://github.com/doesburg11/PredPreyGrass-archive/tree/main/stag_hunt_continuous
+- doesburg11. *PredPreyGrass*, `stag_hunt_rule_prey` module (code, measurements and results). GitHub. https://github.com/doesburg11/PredPreyGrass/tree/main/predpreygrass/non_evolutionary/continuous_space/stag_hunt_rule_prey
