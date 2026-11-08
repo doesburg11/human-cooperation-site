@@ -25,19 +25,19 @@ Hunters, standing for humans, and deer share an 800 by 800 continuous torus with
   <div className="site-table-scroll">
   <table className="site-table site-table--striped">
     <thead>
-      <tr><th>Deer</th><th>Energy</th><th>Who can catch it</th><th>Stag hunt role</th></tr>
+      <tr><th>Deer</th><th>Energy</th><th>Hunter alone (no other hunter within 64 units)</th><th>Another hunter within 64 units of the deer</th><th>Stag hunt role</th></tr>
     </thead>
     <tbody>
-      <tr><td>Fawn</td><td>2 or less</td><td>one hunter touching it, always</td><td>the hare</td></tr>
-      <tr><td>Middle</td><td>between 2 and 5</td><td>one hunter, with a chance falling from 1 to 0 as the deer grows; always if another hunter is within 64 units</td><td>in between</td></tr>
-      <tr><td>Adult</td><td>5 or more</td><td>only two or more hunters touching it within one decision (8 physics steps), shared by those who touched it alone</td><td>the stag</td></tr>
+      <tr><td>Fawn</td><td>2 or less</td><td>always caught</td><td>always caught, but shared by every hunter within 64 (the others need not touch it)</td><td>the hare</td></tr>
+      <tr><td>Middle</td><td>between 2 and 5</td><td>caught with a chance falling from 1 to 0 as the deer grows</td><td>always caught, shared as for a fawn</td><td>in between</td></tr>
+      <tr><td>Adult</td><td>5 or more</td><td>never caught</td><td>caught only if two or more hunters touch it within one decision (8 physics steps), shared by those who touched it alone</td><td>the stag</td></tr>
     </tbody>
   </table>
 </div>
 <figcaption className="site-table-caption"><strong>Display 1:</strong> Catching rules. A failed attempt costs each hunter that touched the deer a wait of one decision. A hunter gains half its share of the deer's energy, so two hunters sharing an adult each get more than a fawn gives one.</figcaption>
 </figure>
 
-A lone hunter can live on fawns. Bringing a partner pays only for adults, and only if the partner arrives in time. The rule makes a partner necessary for an adult, so what is tested is coordination where the task requires two, not the full stag hunt, in which a lone hunter could also take the large prey.
+The rule for young deer is a sharing rule, kept from the earlier world: a hunter nearby makes the catch certain but takes a share without touching the deer. So the value of a partner grows with the deer's size. Near a fawn a partner costs half the meal; for a middle deer above energy 3.5 a partner gives more in expectation than hunting alone (at energy 4.5, 1.1 each against 0.4 alone); for an adult a partner is required, and the partner has to arrive in time. A lone hunter can live on fawns. The rule makes a partner necessary for an adult, so what is tested is coordination where the task requires two, not the full stag hunt, in which a lone hunter could also take the large prey.
 
 Hunters see up to four other hunters and two deer, with the deer's energy, in a 150° cone of 200 units. Deer see three hunters and three deer in a 240° cone of 267 units, and are faster (top speed 6 against 5). Hunters breed at energy 12 and deer at 7. An episode lasts 8000 physics steps.
 
@@ -95,6 +95,7 @@ It has clear limits:
 
 - **A partner is required by rule.** This is coordination where the task demands two, not the stag hunt in its strict sense, where hunters choose a partner for a bigger share although alone they could also succeed. That version never showed cooperation in the earlier worlds.
 - **The measure is an approach with a partner near, not proof that hunters seek a partner.** Hunters may meet near adults for other reasons, such as shared grass areas or deer herds; the chance baseline removes only part of that.
+- **The fawn comparison is partly built in.** A partner near a fawn takes half of it, so hunters have a reason to keep away from others near fawns, which lowers the fawn share. The comparison with chance does not have this bias, and adults were above chance in all three runs, but part of the gap between adults and fawns may come from avoiding sharing rather than seeking partners.
 - **The effect is small and fragile.** Adults stayed a small part of the hunters' diet, and in two runs catching them declined late in training.
 - **Three runs show variation, not a population estimate.** Learning is one PPO policy shared by all hunters, not individual learning within a lifetime.
 
