@@ -30,7 +30,7 @@ Hunters, standing for humans, and deer share an 800 by 800 continuous torus with
     <tbody>
       <tr><td>Fawn</td><td>2 or less</td><td>one hunter touching it, always</td><td>the hare</td></tr>
       <tr><td>Middle</td><td>between 2 and 5</td><td>one hunter, with a chance falling from 1 to 0 as the deer grows; always if another hunter is within 64 units</td><td>in between</td></tr>
-      <tr><td>Adult</td><td>5 or more</td><td>only two hunters touching it within one decision (8 physics steps), shared by those two alone</td><td>the stag</td></tr>
+      <tr><td>Adult</td><td>5 or more</td><td>only two or more hunters touching it within one decision (8 physics steps), shared by those who touched it alone</td><td>the stag</td></tr>
     </tbody>
   </table>
 </div>
