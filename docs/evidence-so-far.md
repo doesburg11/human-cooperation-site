@@ -152,6 +152,13 @@ Use these labels when moving through the site:
           <td><a href="/learning-selection-interaction/predpreygrass-continuous/stag-hunt">The Stag Hunt and Restraint</a></td>
         </tr>
         <tr>
+          <td>PredPreyGrass deer stag hunt (continuous)</td>
+          <td>Replicated (3 runs, pre-registered)</td>
+          <td>Where an adult deer needs two hunters touching it together, hunters approach adults with a partner near 15-23% more often than chance in all three runs; calls are not needed; two of three runs met every test.</td>
+          <td>A partner is required by rule (coordination, not the strict stag hunt); small effect; adult catches fell late in training in two runs; approach with a partner near is not proof of seeking one.</td>
+          <td><a href="/learning-selection-interaction/predpreygrass-continuous/deer-stag-hunt">A Replicated Stag Hunt</a></td>
+        </tr>
+        <tr>
           <td>PredPreyGrass shared-policy trials</td>
           <td>Null / inconclusive</td>
           <td>Trials 1-10 did not show reliable selection-driven drift under the shared-policy design.</td>

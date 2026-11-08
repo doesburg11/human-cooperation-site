@@ -15,6 +15,7 @@ Can hunters in the continuous [PredPreyGrass](/learning-selection-interaction/pr
 - **Restraint was never learned.** In every world where hunters could overrun their prey, they did: none of the 50 evaluated episodes kept all species in any of the trained mammoth arms with rule-following prey.
 - **Changing the prey moved the failure, not removed it.** Scarcer food, a larger world, faster prey, burrows, seasons, spaced births, lean and fat rabbits, and rabbits that evolve each either let hunters overrun the prey or left them starving. Where coexistence held, cooperation was at or near chance.
 - **Coordination appeared once a partner was required.** When fat rabbits could be caught only by two hunters touching them together, hunters and rabbits coexisted in 49 of 50 episodes and hunters approached fat rabbits with a partner near more often than chance (16% against 13%; lean rabbits 10%). Calls the hunters could make never acquired a detectable use.
+- **That world replicated without calls.** Trained three times more from scratch with calls removed, it met the tests set in advance in two of three runs and showed cooperation above chance in all three; see [A Replicated Stag Hunt](/learning-selection-interaction/predpreygrass-continuous/deer-stag-hunt).
 - **One reading, not tested:** leaving prey for later is a commons dilemma of its own, a second cooperation problem on top of the stag hunt, and a births reward gives an individual hunter no reason to hold back.
 
 ## Two modules
@@ -56,6 +57,8 @@ Three follow-ups came after. Bigger fat rabbits (breeding only at higher energy)
 The last world added two things human group hunters have: a way to recruit, and a share only for those who take part. Hunters could call, an action with no built-in meaning that other hunters within range hear; and a fat rabbit was caught only once two hunters had each touched it within one decision, shared between them alone. Four tests were set in advance. Hunters and rabbits coexisted in 49 of 50 episodes; hunters approached fat rabbits with a partner near more often than chance (16% against 13%, lean rabbits 10%, fat above lean in all 20 measured episodes) and more than in the previous world; but a partner did not arrive more often after a call than after silence. Replaying the trained hunters with calls silenced left the pattern unchanged, so there is no evidence the calls mattered.
 
 This is the only world in the line that met both coexistence and cooperation above chance. It has two limits. The rule makes a partner necessary for a fat rabbit, so what appeared is coordination where the task requires two, not the stag hunt in its own sense, where a lone hunter could also succeed and partners are sought for a larger share; that version, tested in the worlds above, never showed it. And calls and the catching rule were changed together in one run, so their effects cannot be separated, although the silenced replay points to what hunters already see of each other rather than to calls.
+
+A replication set in advance later took this world without calls, renamed the rabbits to deer, and trained it three times from scratch. Coordination above chance held in all three runs, and two of them met every test; the details are on [A Replicated Stag Hunt](/learning-selection-interaction/predpreygrass-continuous/deer-stag-hunt).
 
 ## Rabbits that evolve
 

@@ -107,6 +107,7 @@ export default {
             'learning-selection-interaction/interaction-evolved-learned-cooperation/predpreygrass-continuous/emergent-cooperation-continuous',
             'learning-selection-interaction/interaction-evolved-learned-cooperation/predpreygrass-continuous/evolving-bodies-continuous',
             'learning-selection-interaction/interaction-evolved-learned-cooperation/predpreygrass-continuous/stag-hunt-continuous',
+            'learning-selection-interaction/interaction-evolved-learned-cooperation/predpreygrass-continuous/deer-stag-hunt-continuous',
             {
               type: 'category',
               label: 'Two-Timescale Simulations',
