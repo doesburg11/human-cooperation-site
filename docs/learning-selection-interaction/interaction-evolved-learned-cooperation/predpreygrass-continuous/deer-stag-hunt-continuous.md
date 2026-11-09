@@ -36,7 +36,7 @@ Hunters, standing for humans, and deer share an 800 by 800 continuous torus with
     </tbody>
   </table>
 </div>
-<figcaption className="site-table-caption"><strong>Display 1:</strong> Catching rules. A failed attempt costs each hunter that touched the deer a wait of one decision. A hunter gains half its share of the deer's energy, so two hunters sharing an adult each get more than a fawn gives one.</figcaption>
+<figcaption className="site-table-caption"><strong>Display 1:</strong> Catching rules of the original world (run_1 to run_3). A second experiment replaced them with a rule in which only touching counts (Display 6). A failed attempt costs each hunter that touched the deer a wait of one decision. A hunter gains half its share of the deer's energy, so two hunters sharing an adult each get more than a fawn gives one.</figcaption>
 </figure>
 
 The rule for young deer is a sharing rule, kept from the earlier world: a hunter nearby makes the catch certain but takes a share without touching the deer. So the value of a partner grows with the deer's size. Near a fawn a partner costs half the meal; for a middle deer above energy 3.5 a partner gives more in expectation than hunting alone (at energy 4.5, 1.1 each against 0.4 alone); for an adult a partner is required, and the partner has to arrive in time. A lone hunter can live on fawns. The rule makes a partner necessary for an adult, so what is tested is coordination where the task requires two, not the full stag hunt, in which a lone hunter could also take the large prey.
@@ -97,7 +97,23 @@ In the world above, a hunter near a young deer shares it without touching it. Th
 - two or more hunters touching a deer within one decision catch it whatever its size, and share it between them only;
 - a hunter merely near gets nothing.
 
-Adults are caught exactly as before. Three new runs (`touch_1`, `touch_2`, `touch_3`) were trained from scratch and tested as before, with the same verdict rule and the same hard stop.
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--striped">
+    <thead>
+      <tr><th>Deer</th><th>Energy</th><th>One hunter touches it</th><th>Two or more hunters touch it within one decision</th><th>A hunter near but not touching</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Fawn</td><td>2 or less</td><td>always caught, all for the toucher</td><td>caught, shared by the touchers</td><td>gets nothing</td></tr>
+      <tr><td>Middle</td><td>between 2 and 5</td><td>caught with a chance falling from 1 to 0 as the deer grows, all for the toucher</td><td>caught, shared by the touchers</td><td>gets nothing</td></tr>
+      <tr><td>Adult</td><td>5 or more</td><td>never caught</td><td>caught, shared by the touchers</td><td>gets nothing</td></tr>
+    </tbody>
+  </table>
+</div>
+<figcaption className="site-table-caption"><strong>Display 6:</strong> Catching rules of the touch rule (touch_1 to touch_3). Distance to other hunters plays no part: a deer is caught together only when two or more hunters touch it within one decision (8 physics steps). A failed attempt costs the toucher a wait of one decision, as before.</figcaption>
+</figure>
+
+Adults are caught exactly as before. Three new runs (`touch_1`, `touch_2`, `touch_3`) were trained from scratch and tested as before, with the same verdict rule and the same hard stop. The cooperation tests kept the same measure too: an approach with another hunter within 64 units of the deer. Under the touch rule that distance plays no part in catching; it measures only where the hunters are, and was kept so that the two experiments compare directly. The measure that fits the touch rule, two hunters touching the deer together, comes in the next part.
 
 <figure className="site-table-figure">
   <div className="site-table-scroll">
@@ -112,7 +128,7 @@ Adults are caught exactly as before. Three new runs (`touch_1`, `touch_2`, `touc
     </tbody>
   </table>
 </div>
-<figcaption className="site-table-caption"><strong>Display 6:</strong> Touch rule, final checkpoints (iteration 1000), same tests as Display 4. Verdict: replicated, in all three runs. All three runs coexisted in 50 of 50 episodes at iterations 250 and 500 too.</figcaption>
+<figcaption className="site-table-caption"><strong>Display 7:</strong> Touch rule, final checkpoints (iteration 1000), same tests as Display 4. Verdict: replicated, in all three runs. All three runs coexisted in 50 of 50 episodes at iterations 250 and 500 too.</figcaption>
 </figure>
 
 So the sharing rule for young deer was not needed for this result. The limits carry over: adults were 1.5 to 3.2% of the deer caught, and adult catches again fell between iterations 500 and 1000, by 25 to 44%, though no run lost its hunters.
@@ -124,8 +140,8 @@ Under the touch rule, a middle deer is a small stag hunt of its own. A hunter ca
 After a first look at earlier checkpoints of touch_1 and touch_2, three tests were written down before the final checkpoints existed. In each run: (A) the share of approaches with a partner near rises from middle deer of energy 2 to 3.5 to those of energy 4 to 5; (B) for the largest middle deer (energy 4.5 to 5) it is above chance; (C) two hunters touch middle deer of energy 4 to 5 together at least half as often as they do adults. The pattern counts as shown if all three hold in at least 2 of the 3 runs.
 
 <figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
-  <img src="/img/learning-selection-interaction/interaction-evolved-learned-cooperation/predpreygrass-continuous/deer-stag-hunt-energy.png" alt="Display 7: Two line charts over deer energy, from fawn through six middle-deer bands to adult, three blue lines for the touch-rule runs and three orange lines for the original-rule runs. Left: share of approaches with a partner near divided by chance; all lines dip to about 0.4 to 0.7 for small middle deer and rise with energy; the blue lines cross chance at energy 4.5 to 5, at 1.09 to 1.15, while the orange lines stay at 0.81 to 0.91 there; at adults all lines are at 1.09 to 1.23. Right: joint touches divided by joint touches on adults; the blue lines rise steadily from about 0.1 to about 1.0 at energy 4.5 to 5; the orange lines stay below 0.4 until adults" style={{ display: 'block', width: '100%', height: 'auto' }} />
-  <figcaption className="site-table-caption"><strong>Display 7:</strong> Partnering by the deer's energy at the approach, final checkpoints, 40 evaluated episodes per run. Blue: touch rule (touch_1 to touch_3); orange: the original world (run_1 to run_3). Shaded: middle deer for which a partner pays more than hunting alone.</figcaption>
+  <img src="/img/learning-selection-interaction/interaction-evolved-learned-cooperation/predpreygrass-continuous/deer-stag-hunt-energy.png" alt="Display 8: Two line charts over deer energy, from fawn through six middle-deer bands to adult, three blue lines for the touch-rule runs and three orange lines for the original-rule runs. Left: share of approaches with a partner near divided by chance; all lines dip to about 0.4 to 0.7 for small middle deer and rise with energy; the blue lines cross chance at energy 4.5 to 5, at 1.09 to 1.15, while the orange lines stay at 0.81 to 0.91 there; at adults all lines are at 1.09 to 1.23. Right: joint touches divided by joint touches on adults; the blue lines rise steadily from about 0.1 to about 1.0 at energy 4.5 to 5; the orange lines stay below 0.4 until adults" style={{ display: 'block', width: '100%', height: 'auto' }} />
+  <figcaption className="site-table-caption"><strong>Display 8:</strong> Partnering by the deer's energy at the approach, final checkpoints, 40 evaluated episodes per run. Blue: touch rule (touch_1 to touch_3); orange: the original world (run_1 to run_3). Shaded: middle deer for which a partner pays more than hunting alone.</figcaption>
 </figure>
 
 **Verdict: pattern shown.** touch_2 and touch_3 met all three tests; touch_1 met A and C and missed B narrowly (its 95% interval for near share minus chance was −0.001 to +0.025). touch_3, the one run nobody had looked at before the tests were set, met all three. Under the original rule all three runs failed B and C: there the largest middle deer stayed below chance, and joint touches on them were about a quarter of the adult level.
