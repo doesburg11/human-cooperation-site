@@ -7,7 +7,7 @@ slug: /learning-selection-interaction/predpreygrass-continuous/deer-stag-hunt
 
 # A Replicated Stag Hunt
 
-The [stag hunt line](/learning-selection-interaction/predpreygrass-continuous/stag-hunt) of the continuous [PredPreyGrass](/learning-selection-interaction/predpreygrass-continuous) world gave both coexistence and cooperation above chance only once: in a single training run, in a world where a fat rabbit could be caught only by two hunters touching it together and where hunters could also call. Did that result depend on the calls, or on one lucky run? This page reports a replication set in advance: the same world without calls, renamed to deer, trained three times from scratch. The result held in all three runs. The code, the pre-registration and every number below are in the [`deer_stag_hunt`](https://github.com/doesburg11/PredPreyGrass/tree/main/predpreygrass/non_evolutionary/continuous_space/deer_stag_hunt) module of the PredPreyGrass repository ([RESULTS.md](https://github.com/doesburg11/PredPreyGrass/blob/main/predpreygrass/non_evolutionary/continuous_space/deer_stag_hunt/RESULTS.md), section 1).
+The [stag hunt line](/learning-selection-interaction/predpreygrass-continuous/stag-hunt) of the continuous [PredPreyGrass](/learning-selection-interaction/predpreygrass-continuous) world gave both coexistence and cooperation above chance only once: in a single training run, in a world where a fat rabbit could be caught only by two hunters touching it together and where hunters could also call. Did that result depend on the calls, or on one lucky run? This page reports a replication set in advance: the same world without calls, renamed to deer, trained three times from scratch. The result held in all three runs. A second set of three runs then changed one rule, so that only touching a deer counts, and the result held again; in that world hunters also began to pair up on large young deer, where a partner pays but is not required, the stag hunt in its strict sense. The code, the pre-registrations and every number below are in the [`deer_stag_hunt`](https://github.com/doesburg11/PredPreyGrass/tree/main/predpreygrass/non_evolutionary/continuous_space/deer_stag_hunt) module of the PredPreyGrass repository ([RESULTS.md](https://github.com/doesburg11/PredPreyGrass/blob/main/predpreygrass/non_evolutionary/continuous_space/deer_stag_hunt/RESULTS.md), sections 1 and 2).
 
 ## Key findings
 
@@ -16,6 +16,8 @@ The [stag hunt line](/learning-selection-interaction/predpreygrass-continuous/st
 - **Calls were not needed.** The world that first showed this pattern also let hunters call. Without calls, and with the inputs and output that came with them removed, the pattern held.
 - **The effect is small.** At iteration 1000, adults were 1 to 4% of the deer hunters caught and gave 3 to 8% of their energy from deer; most food was still young deer caught alone.
 - **It weakened late in two runs.** From iteration 500 to 1000, adult catches fell by 84% in one run and 53% in another. At iteration 500 all three runs would have met all tests. Why is not known.
+- **It held when only touching counts.** In three further runs where a hunter merely near a young deer gets nothing, all three met every test: hunters and deer coexisted in 50 of 50 episodes in each run, and adults were approached with a partner near 12 to 21% more often than chance.
+- **A first sign of the strict stag hunt.** In that world a large young deer can be caught alone, by chance, or by two hunters for certain, and a partner pays more. Hunters approached the largest young deer with a partner near slightly above chance and teamed up on them nearly as often as on adults, in 2 of 3 runs by tests set in advance; in the original world they did neither. The tests were set after a look at earlier checkpoints, and the margins are small.
 
 ## The world
 
@@ -42,8 +44,8 @@ The rule for young deer is a sharing rule, kept from the earlier world: a hunter
 Hunters see up to four other hunters and two deer, with the deer's energy, in a 150° cone of 200 units. Deer see three hunters and three deer in a 240° cone of 267 units, and are faster (top speed 6 against 5). Hunters breed at energy 12 and deer at 7. An episode lasts 8000 physics steps.
 
 <figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
-  <img src="/img/learning-selection-interaction/interaction-evolved-learned-cooperation/predpreygrass-continuous/deer-stag-hunt-arena.gif" alt="Display 2: Animation of 25 seconds of an episode with trained policies: hunters with spears move among deer of three sizes on a light blue torus; adult deer are ringed in orange; grey and blue view cones show what one deer and one hunter see" width="400" />
-  <figcaption className="site-table-caption"><strong>Display 2:</strong> A stretch of an evaluated episode of run_2's final policies (seed 0). Adult deer, catchable only by two hunters together, are ringed.</figcaption>
+  <img src="/img/learning-selection-interaction/interaction-evolved-learned-cooperation/predpreygrass-continuous/deer-stag-hunt-arena.gif" alt="Display 2: Animation of 25 seconds of an episode with trained policies: hunters with spears move among deer of three sizes on a light blue torus; adult deer have antlers, fawns are small with white spots; grey and blue view cones show what one deer and one hunter see" width="400" />
+  <figcaption className="site-table-caption"><strong>Display 2:</strong> A stretch of an evaluated episode of run_2's final policies (seed 0). Adult deer, catchable only by two hunters together, have antlers; fawns are small with white spots; middle deer are plain.</figcaption>
 </figure>
 
 <figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
@@ -87,15 +89,58 @@ The tests, the verdict rule and the hard stop (no change to the world after the 
 
 Cooperation above chance was there early and stayed: at iterations 250 and 500 all three runs coexisted in every episode, with adult ÷ chance between 1.17 and 1.25. What changed late was how much hunting of adults there was. In run_1, adult catches fell from 1481 to 243 between iterations 500 and 1000, hunter births fell from 1042 to 439, and 7 episodes lost all hunters; in run_3 adult catches halved. Approaches to adults still had a partner near more often than chance, but there were fewer of them. This experiment did not test why.
 
+## Only touching counts
+
+In the world above, a hunter near a young deer shares it without touching it. That rule is not needed for a stag hunt, gives hunters a share for nothing, and builds in part of the fawn comparison. A second experiment, written down before training like the first, changed only that rule:
+
+- every touch is a solo attempt: a fawn is always caught, a middle deer with a chance falling from 1 at energy 2 to 0 at energy 5, an adult never; the catch goes to the toucher alone;
+- two or more hunters touching a deer within one decision catch it whatever its size, and share it between them only;
+- a hunter merely near gets nothing.
+
+Adults are caught exactly as before. Three new runs (`touch_1`, `touch_2`, `touch_3`) were trained from scratch and tested as before, with the same verdict rule and the same hard stop.
+
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--striped">
+    <thead>
+      <tr><th>Run</th><th>Coexisting (of 50)</th><th>Chance</th><th>Fawn share</th><th>Adult share</th><th>Adult ÷ chance</th><th>Adult − chance, 95% interval</th><th>Tests met</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>touch_1</td><td>50</td><td>0.132</td><td>0.093</td><td>0.148</td><td>1.12</td><td>[0.006, 0.026]</td><td>1, 2, 3</td></tr>
+      <tr><td>touch_2</td><td>50</td><td>0.142</td><td>0.099</td><td>0.171</td><td>1.21</td><td>[0.023, 0.036]</td><td>1, 2, 3</td></tr>
+      <tr><td>touch_3</td><td>50</td><td>0.082</td><td>0.054</td><td>0.095</td><td>1.15</td><td>[0.004, 0.021]</td><td>1, 2, 3</td></tr>
+    </tbody>
+  </table>
+</div>
+<figcaption className="site-table-caption"><strong>Display 6:</strong> Touch rule, final checkpoints (iteration 1000), same tests as Display 4. Verdict: replicated, in all three runs. All three runs coexisted in 50 of 50 episodes at iterations 250 and 500 too.</figcaption>
+</figure>
+
+So the sharing rule for young deer was not needed for this result. The limits carry over: adults were 1.5 to 3.2% of the deer caught, and adult catches again fell between iterations 500 and 1000, by 25 to 44%, though no run lost its hunters.
+
+### Pairing where a partner pays but is not required
+
+Under the touch rule, a middle deer is a small stag hunt of its own. A hunter can try it alone and catch it with a chance that falls as the deer grows, or two hunters can take it for certain and split it. Per hunter, alone pays more below energy 3.5 and a partner pays more above it. Nothing forces a partner, so this is the stag hunt in its strict sense, which no earlier world of this line had shown.
+
+After a first look at earlier checkpoints of touch_1 and touch_2, three tests were written down before the final checkpoints existed. In each run: (A) the share of approaches with a partner near rises from middle deer of energy 2 to 3.5 to those of energy 4 to 5; (B) for the largest middle deer (energy 4.5 to 5) it is above chance; (C) two hunters touch middle deer of energy 4 to 5 together at least half as often as they do adults. The pattern counts as shown if all three hold in at least 2 of the 3 runs.
+
+<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
+  <img src="/img/learning-selection-interaction/interaction-evolved-learned-cooperation/predpreygrass-continuous/deer-stag-hunt-energy.png" alt="Display 7: Two line charts over deer energy, from fawn through six middle-deer bands to adult, three blue lines for the touch-rule runs and three orange lines for the original-rule runs. Left: share of approaches with a partner near divided by chance; all lines dip to about 0.4 to 0.7 for small middle deer and rise with energy; the blue lines cross chance at energy 4.5 to 5, at 1.09 to 1.15, while the orange lines stay at 0.81 to 0.91 there; at adults all lines are at 1.09 to 1.23. Right: joint touches divided by joint touches on adults; the blue lines rise steadily from about 0.1 to about 1.0 at energy 4.5 to 5; the orange lines stay below 0.4 until adults" style={{ display: 'block', width: '100%', height: 'auto' }} />
+  <figcaption className="site-table-caption"><strong>Display 7:</strong> Partnering by the deer's energy at the approach, final checkpoints, 40 evaluated episodes per run. Blue: touch rule (touch_1 to touch_3); orange: the original world (run_1 to run_3). Shaded: middle deer for which a partner pays more than hunting alone.</figcaption>
+</figure>
+
+**Verdict: pattern shown.** touch_2 and touch_3 met all three tests; touch_1 met A and C and missed B narrowly (its 95% interval for near share minus chance was −0.001 to +0.025). touch_3, the one run nobody had looked at before the tests were set, met all three. Under the original rule all three runs failed B and C: there the largest middle deer stayed below chance, and joint touches on them were about a quarter of the adult level.
+
+This is consistent with hunters pairing up where a partner pays without being required. It is not proof of choosing by payoff. The crossing of chance comes near energy 4.5, not at the break-even of 3.5. Large middle deer differ from adults only by a little energy, so they may share places with adults, or hunters may simply treat them like adults; a joint-touch level close to the adult one would look the same either way. A control world in which adults too can be caught alone would separate these explanations; it has not been run.
+
 ## What this does and does not show
 
-Within this world, hunters learned to approach the prey that needs two with another hunter nearby more often than chance, in three runs out of three, and calls were not needed for it. That makes this the one replicated cooperation result in the stag hunt line.
+Within this world, hunters learned to approach the prey that needs two with another hunter nearby more often than chance, in three runs out of three, and calls were not needed for it. The result held again, in three runs out of three, when only touching counts. That makes this the one replicated cooperation result in the stag hunt line.
 
 It has clear limits:
 
-- **A partner is required by rule.** This is coordination where the task demands two, not the stag hunt in its strict sense, where hunters choose a partner for a bigger share although alone they could also succeed. That version never showed cooperation in the earlier worlds.
+- **For adults, a partner is required by rule.** The main result is coordination where the task demands two, not the stag hunt in its strict sense, where hunters choose a partner for a bigger share although alone they could also succeed. The pairing on large middle deer under the touch rule is the first sign of that version in this line, but it is small, its tests were informed by a look at earlier checkpoints, and place or generalisation from adults may explain it.
 - **The measure is an approach with a partner near, not proof that hunters seek a partner.** Hunters may meet near adults for other reasons, such as shared grass areas or deer herds; the chance baseline removes only part of that.
-- **The fawn comparison is partly built in.** A partner near a fawn takes half of it, so hunters have a reason to keep away from others near fawns, which lowers the fawn share. The comparison with chance does not have this bias, and adults were above chance in all three runs, but part of the gap between adults and fawns may come from avoiding sharing rather than seeking partners.
+- **The fawn comparison is partly built in.** A partner near a fawn takes half of it, so hunters have a reason to keep away from others near fawns, which lowers the fawn share. The comparison with chance does not have this bias, and adults were above chance in all three runs, but part of the gap between adults and fawns may come from avoiding sharing rather than seeking partners. Under the touch rule a partner near a fawn takes nothing, and adults were still above fawns in all three runs.
 - **The effect is small and fragile.** Adults stayed a small part of the hunters' diet, and in two runs catching them declined late in training.
 - **Three runs show variation, not a population estimate.** Learning is one PPO policy shared by all hunters, not individual learning within a lifetime.
 

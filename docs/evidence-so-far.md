@@ -153,9 +153,9 @@ Use these labels when moving through the site:
         </tr>
         <tr>
           <td>PredPreyGrass deer stag hunt (continuous)</td>
-          <td>Replicated (3 runs, pre-registered)</td>
-          <td>Where an adult deer needs two hunters touching it together, hunters approach adults with a partner near 15-23% more often than chance in all three runs; calls are not needed; two of three runs met every test.</td>
-          <td>A partner is required by rule (coordination, not the strict stag hunt); small effect; adult catches fell late in training in two runs; approach with a partner near is not proof of seeking one.</td>
+          <td>Replicated twice (2 × 3 runs, pre-registered)</td>
+          <td>Where an adult deer needs two hunters touching it together, hunters approach adults with a partner near 15-23% more often than chance in all three runs; calls are not needed; two of three runs met every test. With only touching counting, all three new runs met every test (12-21% above chance), and hunters also paired up on large young deer, where a partner pays but is not required (2 of 3 runs).</td>
+          <td>For adults a partner is required by rule (coordination, not the strict stag hunt); the strict-stag-hunt sign is small, its tests were informed by interim checkpoints, and place or generalisation from adults is not ruled out; small effect; adult catches fell late in training; approach with a partner near is not proof of seeking one.</td>
           <td><a href="/learning-selection-interaction/predpreygrass-continuous/deer-stag-hunt">A Replicated Stag Hunt</a></td>
         </tr>
         <tr>
