@@ -7,7 +7,7 @@ slug: /learning-selection-interaction/predpreygrass-continuous/deer-stag-hunt
 
 # A Replicated Stag Hunt
 
-The [stag hunt line](/learning-selection-interaction/predpreygrass-continuous/stag-hunt) of the continuous [PredPreyGrass](/learning-selection-interaction/predpreygrass-continuous) world gave both coexistence and cooperation above chance only once: in a single training run, in a world where a fat rabbit could be caught only by two hunters touching it together and where hunters could also call. Did that result depend on the calls, or on one lucky run? This page reports a replication set in advance: the same world without calls, renamed to deer, trained three times from scratch. The result held in all three runs. A second set of three runs then changed one rule, so that only touching a deer counts, and the result held again; in that world hunters also began to pair up on large young deer, where a partner pays but is not required, the stag hunt in its strict sense. The code, the pre-registrations and every number below are in the [`deer_stag_hunt`](https://github.com/doesburg11/PredPreyGrass/tree/main/predpreygrass/non_evolutionary/continuous_space/deer_stag_hunt) module of the PredPreyGrass repository ([RESULTS.md](https://github.com/doesburg11/PredPreyGrass/blob/main/predpreygrass/non_evolutionary/continuous_space/deer_stag_hunt/RESULTS.md), sections 1 and 2).
+The [stag hunt line](/learning-selection-interaction/predpreygrass-continuous/stag-hunt) of the continuous [PredPreyGrass](/learning-selection-interaction/predpreygrass-continuous) world gave both coexistence and cooperation above chance only once: in a single training run, in a world where a fat rabbit could be caught only by two hunters touching it together and where hunters could also call. Did that result depend on the calls, or on one lucky run? This page reports a replication set in advance: the same world without calls, renamed to deer, trained three times from scratch. The result held in all three runs. A second set of three runs then changed one rule, so that only touching a deer counts, and the result held again; in that world hunters also began to pair up on large young deer, where a partner pays but is not required, the stag hunt in its strict sense, and a control world in which a partner never pays for a young deer suggests that this pairing follows the payoff. The code, the pre-registrations and every number below are in the [`deer_stag_hunt`](https://github.com/doesburg11/PredPreyGrass/tree/main/predpreygrass/non_evolutionary/continuous_space/deer_stag_hunt) module of the PredPreyGrass repository ([RESULTS.md](https://github.com/doesburg11/PredPreyGrass/blob/main/predpreygrass/non_evolutionary/continuous_space/deer_stag_hunt/RESULTS.md), sections 1, 2 and 5).
 
 ## Key findings
 
@@ -18,6 +18,7 @@ The [stag hunt line](/learning-selection-interaction/predpreygrass-continuous/st
 - **It weakened late in two runs.** From iteration 500 to 1000, adult catches fell by 84% in one run and 53% in another. At iteration 500 all three runs would have met all tests. Why is not known.
 - **It held when only touching counts.** In three further runs where a hunter merely near a young deer gets nothing, all three met every test: hunters and deer coexisted in 50 of 50 episodes in each run, and adults were approached with a partner near 12 to 21% more often than chance.
 - **A first sign of the strict stag hunt.** In that world a large young deer can be caught alone, by chance, or by two hunters for certain, and a partner pays more. Hunters approached the largest young deer with a partner near slightly above chance and teamed up on them nearly as often as on adults, in 2 of 3 runs by tests set in advance; in the original world they did neither. The tests were set after a look at earlier checkpoints, and the margins are small.
+- **A control world points to the payoff.** In a control world where one hunter catches any young deer for certain, so a partner never pays for one, hunters no longer approached the largest young deer with a partner near above chance, and teamed up on them at under a third of the adult level, in all 3 runs by a rule set in advance. Partnering still rose with the deer's size there, so looks or place may explain part of the rise; the margins are a few percentage points.
 
 ## The world
 
@@ -146,7 +147,34 @@ After a first look at earlier checkpoints of touch_1 and touch_2, three tests we
 
 **Verdict: pattern shown.** touch_2 and touch_3 met all three tests; touch_1 met A and C and missed B narrowly (its 95% interval for near share minus chance was −0.001 to +0.025). touch_3, the one run nobody had looked at before the tests were set, met all three. Under the original rule all three runs failed B and C: there the largest middle deer stayed below chance, and joint touches on them were about a quarter of the adult level.
 
-This is consistent with hunters pairing up where a partner pays without being required. It is not proof of choosing by payoff. The crossing of chance comes near energy 4.5, not at the break-even of 3.5. Large middle deer differ from adults only by a little energy, so they may share places with adults, or hunters may simply treat them like adults; a joint-touch level close to the adult one would look the same either way. A control world in which adults too can be caught alone would separate these explanations; it has not been run.
+This is consistent with hunters pairing up where a partner pays without being required. It is not proof of choosing by payoff. The crossing of chance comes near energy 4.5, not at the break-even of 3.5. Large middle deer differ from adults only by a little energy, so they may share places with adults, or hunters may simply treat them like adults; a joint-touch level close to the adult one would look the same either way. A control world separates these explanations (next part).
+
+### A control world: when a partner never pays
+
+To tell payoff apart from place and looks, three more runs (`control_1` to `control_3`, 500 iterations) were trained in the touch world with one change, set in advance: one hunter catches any fawn or middle deer for certain. Adults still need two. A partner now never pays for a young deer, since sharing only halves a meal that is certain anyway, but the deer stand where they stood and look as they looked. If payoff drove the pairing on large middle deer, it should vanish here; if place or likeness to adults drove it, it should stay. The rule: payoff is supported if, in at least 2 of 3 runs that keep hunters and deer together (45 of 50 episodes or more), test B fails and joint touches on deer of energy 4 to 5 stay clearly below half the adult level.
+
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--striped">
+    <thead>
+      <tr><th>Run</th><th>Coexisting (of 50)</th><th>Partner near, energy 4.5 to 5, ÷ chance</th><th>B: near − chance, 95% interval</th><th>C: joint (4 to 5) ÷ joint adult, 95% interval</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>control_1</td><td>48</td><td>0.94</td><td>[−0.026, +0.001]</td><td>0.31 [0.27, 0.35]</td></tr>
+      <tr><td>control_2</td><td>49</td><td>0.90</td><td>[−0.036, −0.007]</td><td>0.28 [0.24, 0.32]</td></tr>
+      <tr><td>control_3</td><td>49</td><td>0.86</td><td>[−0.043, −0.013]</td><td>0.28 [0.23, 0.32]</td></tr>
+      <tr><td><em>touch_1, iteration 500</em></td><td>50</td><td>1.18</td><td>[+0.017, +0.039]</td><td>1.00 [0.91, 1.11]</td></tr>
+      <tr><td><em>touch_2, iteration 500</em></td><td>50</td><td>1.13</td><td>[+0.011, +0.032]</td><td>0.89 [0.82, 0.97]</td></tr>
+      <tr><td><em>touch_3, iteration 500</em></td><td>50</td><td>1.04</td><td>[−0.005, +0.013]</td><td>0.84 [0.76, 0.93]</td></tr>
+    </tbody>
+  </table>
+</div>
+<figcaption className="site-table-caption"><strong>Display 9:</strong> Control world (one hunter catches any young deer for certain), final checkpoints (iteration 500), 40 evaluated episodes per run; the touch-rule runs at the same training length for comparison, in italics. Verdict: payoff supported, in all three runs. Adults, which still need two, were approached with a partner near 1.10 to 1.17 times as often as chance.</figcaption>
+</figure>
+
+**Verdict: payoff supported.** Without a payoff for a partner, hunters stayed just below chance with the largest middle deer, and teamed up on them less than a third as often as on adults, much as in the original world. So place and likeness to adults did not by themselves produce the pairing seen under the touch rule; the result is consistent with hunters pairing up more where a partner pays.
+
+It has limits. Partnering still rose with the deer's size in the control world, even more steeply, so place or likeness may explain part of that rise; what the control lacks is the step from just below chance to above it. Hunters teamed up on adults more often in the control world, which lowers the ratio in test C from the adult side too, so test B is the cleaner comparison. The two worlds also differ in food: easy catches feed the hunters more, and they stood closer together. The verdict rests on the pattern being absent in one world, not on a direct test of the difference, and the margins are a few percentage points.
 
 ## What this does and does not show
 
@@ -154,7 +182,7 @@ Within this world, hunters learned to approach the prey that needs two with anot
 
 It has clear limits:
 
-- **For adults, a partner is required by rule.** The main result is coordination where the task demands two, not the stag hunt in its strict sense, where hunters choose a partner for a bigger share although alone they could also succeed. The pairing on large middle deer under the touch rule is the first sign of that version in this line, but it is small, its tests were informed by a look at earlier checkpoints, and place or generalisation from adults may explain it.
+- **For adults, a partner is required by rule.** The main result is coordination where the task demands two, not the stag hunt in its strict sense, where hunters choose a partner for a bigger share although alone they could also succeed. The pairing on large middle deer under the touch rule is the first sign of that version in this line, but it is small and its tests were informed by a look at earlier checkpoints. A control world without a payoff for a partner did not show it, which points to the payoff rather than to place or likeness to adults, though the worlds also differ in ecology.
 - **The measure is an approach with a partner near, not proof that hunters seek a partner.** Hunters may meet near adults for other reasons, such as shared grass areas or deer herds; the chance baseline removes only part of that.
 - **The fawn comparison is partly built in.** A partner near a fawn takes half of it, so hunters have a reason to keep away from others near fawns, which lowers the fawn share. The comparison with chance does not have this bias, and adults were above chance in all three runs, but part of the gap between adults and fawns may come from avoiding sharing rather than seeking partners. Under the touch rule a partner near a fawn takes nothing, and adults were still above fawns in all three runs.
 - **The effect is small and fragile.** Adults stayed a small part of the hunters' diet, and in two runs catching them declined late in training.
