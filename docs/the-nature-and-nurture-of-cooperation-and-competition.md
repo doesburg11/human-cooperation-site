@@ -31,13 +31,15 @@ The two adaptive processes are:
 - **evolution across generations**, which changes inherited tendencies through selection
 - **learning within lifetimes**, which changes behavior through experience
 
-The central idea is that neither process is enough on its own. Evolution shapes the machinery that makes learning possible, learning changes the social and ecological environment, and those changed environments alter what selection favors next.
+The central research question is how these processes interact: evolution shapes inherited tendencies and learning capacities, learning changes the social and ecological environment, and those changed environments alter what selection favors next. The simulations test particular parts of this proposed feedback loop; their results do not establish that either process alone is insufficient to explain human cooperation.
 
 ## The Argument in Brief
 
 Cooperation is treated here as a behavioral pattern that can emerge when helping, coordinating, or sharing creates enough future benefit to outweigh its immediate cost. The difficult case is not cooperation between already-aligned agents, but cooperation among agents whose interests partly conflict.
 
 The project studies that human problem with agent-based models, evolutionary simulations, and reinforcement-learning agents. The current models are mechanism tests rather than complete descriptions of human social life. They isolate ingredients likely to matter for humans, including learning, selection, reciprocity, resource scarcity, reputation, partner choice, and ecological feedback.
+
+A central question concerns motivation: **when does selection favor inherited rewards or predispositions that enable agents to learn cooperation?** Evolution can shape what agents find rewarding, while learning shapes how they pursue it. The project tests when this interaction supports cooperation, competition or exploitation, and how learned behavior changes subsequent selection. This is a research objective; which parts have been demonstrated is set out in [Evidence So Far](/evidence-so-far).
 
 ## What to Read Next
 
@@ -82,3 +84,7 @@ The site mixes three kinds of material:
 - **Research-log pages** preserve trial history, null results, failures, and open questions: [Darwin/Baldwin Trial Log](/learning-selection-interaction/darwin-baldwin-trial-log) and [Related Research](/learning-selection-interaction/related-research-predpreygrass) (including a foldable Nature/Nurture mindmap).
 
 For a first pass, read concept pages before model pages, and model pages before research logs. The logs are useful, but they are closer to lab notes than to the main argument.
+
+## References
+
+- No external references cited.

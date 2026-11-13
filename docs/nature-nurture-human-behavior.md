@@ -8,7 +8,9 @@ slug: /nature-nurture-human-behavior
 
 # How do nature and nurture combine to shape human behavior?
 
-This project studies human behavior as a two-timescale problem: some behavioral tendencies are shaped across generations by natural selection, and some are acquired within a lifetime through learning. Neither timescale tells the full story on its own — [a replication of a landmark 1991 evolutionary-computation experiment](/learning-selection-interaction/theory), run on this project's own simulations, found that combining generational selection with lifetime learning significantly outperforms either mechanism alone, or pure chance (p < 0.00001, n = 100 seeds per condition).
+This project studies how natural selection across generations and learning within lifetimes interact to shape human behavior. Its central hypothesis is that inherited predispositions, learning and ecological feedback jointly help explain when cooperation and competition emerge.
+
+A [replication of a landmark 1991 evolutionary-computation experiment](/learning-selection-interaction/theory) provides one model-specific result: combined evolution and lifetime learning improved population survival over evolution alone, learning alone, no adaptation and random behavior in the tested World AL task (p < 0.00001 against each control, n = 100 seeds per condition, a 1,000,000-step ceiling). This supports combining the mechanisms in that model. It does not establish that either process alone is insufficient to explain human cooperation, or directly demonstrate cooperation in humans.
 
 - **Nature** → traits and tendencies shaped across generations by natural selection
 
@@ -17,6 +19,8 @@ This project studies human behavior as a two-timescale problem: some behavioral 
 Nurture here is shorthand for lifetime learning, the mechanism this project models directly. The broader concept also includes cultural inheritance, developmental/epigenetic inheritance, and material/economic inheritance (property, infrastructure, bequests) — see the [full Nurture taxonomy](/learning-selection-interaction/related-research-predpreygrass#mindmap) for how those fit together.
 
 Cooperation is this project's flagship case study of that mechanism. It is one of the most distinctively human behavioral patterns — the load-bearing pattern behind families, institutions, and large-scale society — and one of the richest testbeds for watching nature and nurture interact in practice. The rest of this site develops that case study in depth: how cooperative tendencies can evolve, how they can be learned, and how the two timescales combine to produce it.
+
+A central question is **when selection favors inherited rewards or predispositions that enable agents to learn cooperation**. In models with evolvable motivations, the inherited reward system shapes which outcomes an agent learns to pursue; learning determines how it pursues them in its environment. Reproductive success determines which inherited variants spread, and need not be identical to the reward used for learning. The project asks when these levels align, when they conflict, and whether learned behavior changes the selection pressures acting on motivations.
 
 ### What cooperation means here
 
@@ -51,7 +55,7 @@ Human cooperative behavior can be understood as present-day action running on an
   <figcaption><strong>Display 1:</strong> Cooperation explained across evolutionary and learning timescales</figcaption>
 </figure>
 
-Display 1 frames the central problem of the site: cooperation is shaped by what evolution builds into agents and by what those agents later learn from local interaction. If either side is removed, the explanation becomes incomplete.
+Display 1 frames the central hypothesis of the site: inherited tendencies and learning can interact to shape cooperation. Removing either process in a controlled model tests what it contributes under that model's assumptions; extending the explanation to humans requires independent behavioral evidence.
 
 Rather than prescribing cooperative behavior through direct engineering, this project asks under which minimal constraints cooperative behavior emerges and persists in a multi-agent ecosystem. Nature and nurture are treated here as dynamically coupled processes rather than separate explanatory boxes.
 
@@ -205,6 +209,8 @@ This project studies both with Artificial Intelligence (AI) and Agent-Based Mode
 - Under which ecological conditions does human cooperation emerge at all?
 
 - When should selection favor fixed cooperative tendencies, and when should it favor plasticity?
+
+- When do inherited rewards or predispositions enable agents to learn cooperation, and how does learning change which motivations selection favors?
 
 - When does learning stabilize cooperation, and when does it undermine it?
 
