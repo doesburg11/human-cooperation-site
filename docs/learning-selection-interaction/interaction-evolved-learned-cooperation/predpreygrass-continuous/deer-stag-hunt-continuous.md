@@ -20,6 +20,8 @@ The [stag hunt line](/learning-selection-interaction/predpreygrass-continuous/st
 - **A first sign of the strict stag hunt.** In that world a large young deer can be caught alone, by chance, or by two hunters for certain, and a partner pays more. Hunters approached the largest young deer with a partner near slightly above chance and teamed up on them nearly as often as on adults, in 2 of 3 runs by tests set in advance; in the original world they did neither. The tests were set after a look at earlier checkpoints, and the margins are small.
 - **A control world points to the payoff.** In a control world where one hunter catches any young deer for certain, so a partner never pays for one, hunters no longer approached the largest young deer with a partner near above chance, and teamed up on them at under a third of the adult level, in all 3 runs by a rule set in advance. Partnering still rose with the deer's size there, so looks or place may explain part of the rise; the margins are a few percentage points.
 
+- **Two follow-ups did not strengthen it.** Adding inherited instincts that evolve did not make hunters better at adults than learning alone, and the instincts evolved towards easy young deer and away from adults. Sharing a caught adult with nearby hunters did not raise partnering on adults either (see [Two follow-ups](#two-follow-ups-instincts-and-sharing)).
+
 ## The world
 
 Hunters, standing for humans, and deer share an 800 by 800 continuous torus with clustered grass. Each species learns one shared PPO policy (Schulman et al., 2017), rewarded only for births. Deer eat grass and grow; what a deer is worth, and who can catch it, depends on its energy:
@@ -176,6 +178,31 @@ To tell payoff apart from place and looks, three more runs (`control_1` to `cont
 
 It has limits. Partnering still rose with the deer's size in the control world, even more steeply, so place or likeness may explain part of that rise; what the control lacks is the step from just below chance to above it. Hunters teamed up on adults more often in the control world, which lowers the ratio in test C from the adult side too, so test B is the cleaner comparison. The two worlds also differ in food: easy catches feed the hunters more, and they stood closer together. The verdict rests on the pattern being absent in one world, not on a direct test of the difference, and the margins are a few percentage points.
 
+## Two follow-ups: instincts and sharing
+
+Two experiments built on the touch world, each pre-registered with a hard stop. Neither met its main test.
+
+**Inherited instincts plus learning.** In the [`eco_evolutionary_deer_stag_hunt`](https://github.com/doesburg11/PredPreyGrass/tree/main/predpreygrass/evolutionary/continuous_space/eco_evolutionary_deer_stag_hunt) module every hunter carries inherited pulls towards or away from other hunters, young deer and adult deer, passed to its offspring with small mutations. In six runs (arm B) these pulls steer behaviour on top of the shared learned policy; in six others (arm L) hunters carry them but they do nothing. The deer learn alongside the hunters in every run. Each run's hunters were tested against the deer of the eleven other runs, so that no run wins by having easy deer.
+
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--striped">
+    <thead>
+      <tr><th>Arm</th><th>Adults caught per episode</th><th>Success per adult attempt</th><th>Partner near adults ÷ chance</th><th>Evolved pull: young deer / adults</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>L: learning only (6 runs)</td><td>18.6</td><td>0.020</td><td>1.08 to 1.16</td><td>drift, both directions</td></tr>
+      <tr><td>B: learning plus instincts (6 runs)</td><td>14.2</td><td>0.023</td><td>0.83 to 0.93</td><td>+0.9 / −0.8 in every run</td></tr>
+    </tbody>
+  </table>
+</div>
+<figcaption className="site-table-caption"><strong>Display 10:</strong> Against a common panel of coevolved deer, iterations 500 to 1000. The main test (B above L on both adults caught and success per attempt) was not met: p 0.92 and 0.10. Hunters and deer coexisted in both arms. The last two columns were reported, not tested; pulls range from −1 to +1.</figcaption>
+</figure>
+
+Where the instincts acted, evolution moved them the same way in all six runs: strongly towards young deer, which a hunter catches alone, and away from adults, which need two. Those hunters approached adults with a partner near *less* often than chance, while learning alone stayed above it. This looks like the stag hunt's familiar outcome, selection favouring the safe option over the risky joint one, but it is a reading, not a tested claim: the two arms differ in their whole history, including their deer. A planned follow-up switches the instincts off in the trained B hunters to see what their learned policy does alone.
+
+**Sharing big game.** In the [`deer_food_sharing`](https://github.com/doesburg11/PredPreyGrass/tree/main/predpreygrass/non_evolutionary/continuous_space/deer_food_sharing) module the catchers of an adult keep half, and the other half goes to every hunter within 128 units, as human foragers share large game widely. Three runs coexisted in 50 of 50 episodes, but approached adults with a partner near 1.04 to 1.12 times chance, not above the three touch runs (1.12 to 1.21), and caught no more adults. A theory model predicted this before training: sharing with everyone nearby is a transfer to free-riders, and sharing only among hunters of big game helps only when big game pays clearly more than the alternative, 1.2 to 1.75 times at the deer world's success rates. Field data on hunter-gatherers do not clearly show big game paying that much more. By the rule set in advance, the sharing line ends here.
+
 ## What this does and does not show
 
 Within this world, hunters learned to approach the prey that needs two with another hunter nearby more often than chance, in three runs out of three, and calls were not needed for it. The result held again, in three runs out of three, when only touching counts. That makes this the one replicated cooperation result in the stag hunt line.
@@ -192,4 +219,7 @@ It has clear limits:
 
 - Skyrms, B. (2004). *The stag hunt and the evolution of social structure*. Cambridge University Press. https://doi.org/10.1017/CBO9781139165228
 - Schulman, J., Wolski, F., Dhariwal, P., Radford, A., & Klimov, O. (2017). *Proximal policy optimization algorithms*. arXiv:1707.06347. https://arxiv.org/abs/1707.06347
+- Hawkes, K., O'Connell, J. F., & Blurton Jones, N. G. (2014). More lessons from the Hadza about men's work. https://content.csbs.utah.edu/~hawkes/HawkesOConnellBLurtonJones14moreLessonsHadzaHunters.pdf
+- doesburg11. *PredPreyGrass*, `eco_evolutionary_deer_stag_hunt` and `deer_food_sharing` modules (RESULTS.md, sections 3.8 and 1.6). GitHub.
+- doesburg11. *EvolvedCooperation*, `ecological_models/stag_hunt_sharing` (theory model of shared big game). GitHub. https://github.com/doesburg11/EvolvedCooperation/tree/main/ecological_models/stag_hunt_sharing
 - doesburg11. *PredPreyGrass*, `deer_stag_hunt` module (code, pre-registration and results). GitHub. https://github.com/doesburg11/PredPreyGrass/tree/main/predpreygrass/non_evolutionary/continuous_space/deer_stag_hunt
