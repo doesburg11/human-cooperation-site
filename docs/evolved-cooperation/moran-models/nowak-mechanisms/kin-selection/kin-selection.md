@@ -14,7 +14,7 @@ import GithubLink from '@site/src/components/GithubLink';
 <div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '0.4rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>Kin selection is the first of Nowak's five mechanisms for the evolution of cooperation. Cooperation spreads when the benefit delivered to a recipient, weighted by genetic relatedness, exceeds the private cost paid by the actor — Hamilton's rule: $rB > C$.</div>
 
 <div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '0.6rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>
-<strong>Unique robustness.</strong> Of the five Nowak mechanisms, kin selection is the most biologically robust initiator of cooperation from rare. It works because offspring inherit the parent's cooperative trait and stay nearby — automatically clustering cooperators together. This spatial proximity is a trivial consequence of reproduction itself, requiring no additional biological conditions. Other mechanisms that also spread cooperation from rare (direct reciprocity with a spatial scaffold) depend on partner stability and memory that are not automatically given. The <a href="/evolved-cooperation/nowak-mechanisms#spread-vs-maintenance">Nowak Mechanisms overview</a> maps this distinction across all five mechanisms.
+<strong>Unique robustness.</strong> Of the five Nowak mechanisms, kin selection is the most biologically robust initiator of cooperation from rare. It works because offspring inherit the parent's cooperative trait and stay nearby — automatically clustering cooperators together. This spatial proximity is a trivial consequence of reproduction itself, requiring no additional biological conditions. Other mechanisms that also spread cooperation from rare (direct reciprocity with a spatial scaffold) depend on partner stability and memory that are not automatically given. The <a href="/evolved-cooperation/nowak-mechanisms#spread-vs-maintenance">Nowak Mechanisms overview</a> maps this distinction across all five mechanisms. In models with energy, limited food and births into free space, this robustness is narrower; see <a href="#from-the-moran-model-to-an-ecological-model">From the Moran model to an ecological model</a>.
 </div>
 
 ## How It Is Implemented Here
@@ -407,6 +407,48 @@ Both grids below start from the **same random initial state** — roughly 5% coo
 <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 5:</strong> Live kin-selection comparison. Both grids start from the same random initial state (~5% cooperators, 18 lineages, kin bias 0.8/0.2). Left: Hamilton's rule satisfied ($B/C = 5$, $rB$ &gt; $C$ — cooperation spreads). Right: Hamilton's rule violated ($B/C = 0.2$, $rB$ &lt; $C$ — cooperation collapses).</figcaption>
 </figure>
 
+## From the Moran model to an ecological model
+
+The results above come from the Moran model: a full grid where every site is refilled each step by a neighbour's offspring. A separate line of work, the [kin selection ladder](https://github.com/doesburg11/EvolvedCooperation/tree/main/ecological_models/nowak_mechanisms/kin_selection_ladder), asked whether kin selection survives as the model becomes more like a real ecology. Starting from the Moran model, it added one ingredient at a time (each pre-registered, with at most two attempts and its own control), and required helping to spread from rare at every step.
+
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+    <table className="site-table site-table--bordered">
+      <colgroup>
+        <col style={{ width: '28%' }} />
+        <col style={{ width: '72%' }} />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Stage</th>
+          <th>What happened</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Moran level, costly help</td>
+          <td>Helping spread only when the helper got part of its own benefit back. Help with a real net cost to the helper failed in every arm (0/20 runs).</td>
+        </tr>
+        <tr>
+          <td>Overlapping generations, costly help to neighbours</td>
+          <td style={{ backgroundColor: '#D6E4F5' }}>At a benefit-to-cost ratio of 12, costly help spread in 20/20 runs when offspring settled locally, and in 0/20 when they competed with offspring from anywhere on the grid. This is kin selection through viscosity: relatives stay close, so help reaches relatives.</td>
+        </tr>
+        <tr>
+          <td>Care for own offspring, then survival, ages, energy, birth costs, starvation and limited food</td>
+          <td style={{ backgroundColor: '#D6E4F5' }}>Care for one's own young spread at every step (19-20/20 runs against 0/20 for help to young neighbours). It also spread when offspring settled anywhere on the grid, so this is the evolution of parental care, a direct benefit to the helper's own offspring, rather than kin selection among more distant relatives.</td>
+        </tr>
+        <tr>
+          <td>Empty space</td>
+          <td style={{ backgroundColor: '#F8D7DA' }}>Not reached. Several attempts left the grid almost full, and one breeding-age setting could not sustain a population. When parents gave birth into nearby free sites, substantial empty space appeared in one of two versions, but care for own young then settled near a third of its maximum and the main test missed the endpoint (one higher-benefit arm reached it in 4/20 runs).</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <figcaption className="site-table-caption"><strong>Display 6:</strong> The kin selection ladder, from the Moran model toward an ecological model (20 seeds per arm; success = final mean helping ≥ 0.60). Details and all numbers are in the module's <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/kin_selection_ladder/RESULTS.md">RESULTS.md</a>.</figcaption>
+</figure>
+
+**What this adds to the picture above.** Kin selection with a real cost to the helper did appear outside the simplest model, but only once, at a high benefit-to-cost ratio, and only while offspring stayed near their parents. Care for one's own young was more robust across the tested variants, but in these tests it did not require offspring to stay near their parents. One late result points in an unexpected direction: once births went into free sites, care for own young spread much further when offspring dispersed across the whole grid (to near-maximum in 20/20 runs) than when they stayed local. That pattern is consistent with kin competition (relatives competing with each other for the same nearby space, which in theory can cancel the benefit of helping them; Taylor 1992), but it was not tested directly.
+
 ## See Also
 
 - [Spatial Altruism](/evolved-cooperation/spatial-altruism) — Mitteldorf & Wilson's (2000) baseline, no-`harshness`/no-`disease` case is a concrete historical instance of exactly the "stochastic 1/5" scenario named above in [Why kin bias amplifies spatial structure](#why-kin-bias-amplifies-spatial-structure-the-self-routing-advantage): a lone cooperator recaptures `1/5` of its own benefit purely because it is one of five participants in its own neighbourhood lottery, with no lineage bias at all. That paper derives its own viability threshold, `b > 5c`, from precisely this relatedness coefficient — Hamilton's rule `rB > C` with `r = 1/5` gives `b/5 > c`, i.e. `b > 5c`. Where this page's kin bias converts that stochastic `1/5` into a reliable `5/5` by explicitly routing benefit toward same-lineage neighbours, Spatial Altruism's harsher, higher-density variants achieve a comparable reliability boost through a different route entirely — differential group/patch density rather than lineage-biased routing — which is also why that page's own "See Also" section treats it as closer to Group Selection than to Kin Selection once `harshness` and `disease` are turned on.
@@ -415,3 +457,4 @@ Both grids below start from the **same random initial state** — roughly 5% coo
 
 - Hamilton, W. D. (1964). *The genetical evolution of social behaviour. I*. *Journal of Theoretical Biology*, 7(1), 1–16. https://doi.org/10.1016/0022-5193(64)90038-4
 - Nowak, M. A. (2006). *Five rules for the evolution of cooperation*. *Science*, 314(5805), 1560–1563. https://doi.org/10.1126/science.1133755
+- Taylor, P. D. (1992). *Altruism in viscous populations — an inclusive fitness model*. *Evolutionary Ecology*, 6(4), 352–356. https://doi.org/10.1007/BF02270971
