@@ -5,102 +5,116 @@ sidebar_position: 3
 slug: /learning-selection-interaction/predpreygrass-energy-entropy
 ---
 
-# Energy and Entropy in PredPreyGrass
+An ecosystem can sustain organized living populations only while usable energy enters it. In PredPreyGrass, grass regeneration supplies energy, feeding transfers it between trophic levels, and metabolism removes it from the usable pool. These rules create the ecological scarcity on which survival, reproduction and ultimately evolutionary selection depend.
 
-Energy flows through the simulated ecosystem from grass to prey to predator, and — as in any real physical system — that flow is one-directional. Energy is never recycled, only degraded, in line with the second law of thermodynamics. This page explains how that plays out in the current implementation of the [base environment](https://github.com/doesburg11/PredPreyGrass/tree/main/predpreygrass/non_evolutionary/base_environment).
+## Energy Flow in the Simulation
 
-<figure style={{ textAlign: 'center' }}>
-  <img src="/img/learning-selection-interaction/interaction-evolved-learned-cooperation/predpreygrass-energy-entropy/entropy-reservoir.jpg" alt="Display 1: Energy flowing from the sun into grass, then prey, then a local entropy reservoir, with a separate global entropy reservoir accumulating heat and waste losses from the whole grid" width="700" />
-  <figcaption><strong>Display 1:</strong> Energy flows from the sun through grass and prey, with losses accumulating in an entropy reservoir at each step.</figcaption>
+<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
+  <div style={{ overflowX: 'auto', border: '1px solid #D6E4F5' }}>
+    <svg viewBox="0 0 960 490" role="img" aria-label="Energy enters through grass regeneration, is transferred to prey and predator through feeding, and exits the tracked usable energy pool through passive metabolism. Reproduction redistributes energy from parent to offspring." style={{ display: 'block', width: '100%', minWidth: '650px', fontFamily: 'Arial, sans-serif', background: '#FFFFFF' }}>
+      <rect width="960" height="88" fill="#0F3368" />
+      <text x="30" y="35" fontSize="24" fontWeight="700" fill="#FFFFFF">Energy flow in PredPreyGrass</text>
+      <text x="30" y="62" fontSize="15" fill="#FFFFFF">Discrete base environment · model energy units</text>
+      <rect x="28" y="111" width="904" height="219" fill="#F4F8FD" stroke="#D6E4F5" />
+      <text x="48" y="136" fill="#1C4B8F" fontSize="13" fontWeight="700" letterSpacing="1">ENERGY INPUT AND TRANSFER</text>
+      <g fill="#FFFFFF" stroke="#D6E4F5" strokeWidth="1.5"><rect x="48" y="158" width="180" height="106"/><rect x="280" y="158" width="180" height="106"/><rect x="512" y="158" width="180" height="106"/><rect x="744" y="158" width="168" height="106"/></g>
+      <g fill="#0F3368" fontSize="18" fontWeight="700" textAnchor="middle"><text x="138" y="188">External input</text><text x="370" y="188">Grass</text><text x="602" y="188">Prey</text><text x="828" y="188">Predator</text></g>
+      <g fill="#1F2D3D" fontSize="14" textAnchor="middle"><text x="138" y="214">Regeneration</text><text x="138" y="237">≤ 4 units / step</text><text x="370" y="214">100 patches</text><text x="370" y="237">Up to 2 units each</text><text x="602" y="214">Grazes grass</text><text x="602" y="237">−0.05 / step</text><text x="828" y="214">Consumes prey</text><text x="828" y="237">−0.15 / step</text></g>
+      <g stroke="#1C4B8F" strokeWidth="3" fill="none"><path d="M232 211 H263"/><path d="M464 211 H495"/><path d="M696 211 H727"/></g>
+      <path d="M263 205 L275 211 L263 217 Z M495 205 L507 211 L495 217 Z M727 205 L739 211 L727 217 Z" fill="#1C4B8F" />
+      <text x="254" y="201" fill="#1C4B8F" fontSize="12" textAnchor="middle">input</text><text x="486" y="201" fill="#1C4B8F" fontSize="12" textAnchor="middle">graze</text><text x="718" y="201" fill="#1C4B8F" fontSize="12" textAnchor="middle">hunt</text>
+      <text x="48" y="294" fontSize="14" fontWeight="700" fill="#0F3368">Feeding transfers energy; reproduction splits it.</text>
+      <text x="48" y="314" fontSize="13" fill="#1F2D3D">No additional bite or movement cost.</text>
+      <g stroke="#64778D" strokeWidth="2.5" fill="none" strokeDasharray="5 4"><path d="M602 267 V348"/><path d="M828 267 V348"/></g>
+      <path d="M597 348 L602 360 L607 348 Z M823 348 L828 360 L833 348 Z" fill="#64778D" />
+      <rect x="48" y="365" width="864" height="72" fill="#EAF2FB" stroke="#D6E4F5" />
+      <text x="70" y="394" fontSize="18" fill="#0F3368" fontWeight="700">Metabolic dissipation</text>
+      <text x="70" y="417" fontSize="14" fill="#1F2D3D">Energy removed from the usable pool — no heat or entropy variable is tracked.</text>
+      <text x="48" y="467" fontSize="13" fill="#64778D">Solid: energy input and transfer     ·     Dashed: removal from the model's energy ledger</text>
+    </svg>
+  </div>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Energy enters through grass regeneration, flows through feeding, and leaves the usable pool through depletion. Arrows show accounting flows, not measured quantities.</figcaption>
 </figure>
 
-## Energy input: the sun, via grass
+The [discrete base environment](https://github.com/doesburg11/PredPreyGrass/tree/main/predpreygrass/non_evolutionary/discrete_space/base_environment_discrete) is an open energy system. It does not simulate sunlight, temperature or thermodynamic entropy directly. Instead, it tracks scalar energy for each grass patch and animal. The term entropy describes the physical analogy, not a measured state variable or a separate reservoir in the implementation.
 
-The sun is the only external energy source. In the simulation this is modeled indirectly: grass regenerates a small, fixed amount of energy every step, currently `energy_gain_per_step_grass = 0.04` in [`config_env.py`](https://github.com/doesburg11/PredPreyGrass/blob/main/predpreygrass/non_evolutionary/base_environment/config_env.py) (values here reflect the codebase at the time of writing — check the source for the current numbers). This regeneration is the sole point where new usable energy enters the system; everything downstream can only redistribute or lose it.
+## The Energy Budget
 
-## Real-world trophic efficiency, for context
+Let $G_t$, $H_t$ and $P_t$ denote total energy stored in grass, prey and predators at step $t$. Total usable energy is $E_t=G_t+H_t+P_t$. Its conceptual accounting balance is
 
-Energy transfer between real trophic levels is never close to 100% efficient — most of it is lost to respiration, movement, and heat before it reaches the next level up the food chain. Lindeman's (1942) classic analysis is the origin of the commonly cited "ten percent rule":
+$$
+E_{t+1}-E_t=I_t-D_t,
+$$
+
+where $I_t$ is actual input from grass regeneration and $D_t$ is net depletion, accounting for final-step clipping or removal at starvation. Feeding and reproduction redistribute tracked energy rather than creating it.
+
+The following settings are from the [discrete base configuration](https://github.com/doesburg11/PredPreyGrass/blob/main/predpreygrass/non_evolutionary/discrete_space/base_environment_discrete/config_env.py). Other PPG variants may use different energy rules.
 
 <figure className="site-table-figure">
   <div className="site-table-scroll">
-  <table className="site-table site-table--striped">
-    <colgroup>
-      <col style={{ width: '24%' }} />
-      <col style={{ width: '24%' }} />
-      <col style={{ width: '52%' }} />
-    </colgroup>
-    <thead>
-      <tr>
-        <th>Energy transfer</th>
-        <th>Typical efficiency</th>
-        <th>Why so much is lost</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Sun → Grass</td>
-        <td>~1-2%</td>
-        <td>Only a small fraction of solar energy converts into plant biomass.</td>
-      </tr>
-      <tr>
-        <td>Grass → Prey</td>
-        <td>~10-30%</td>
-        <td>Most of the energy in grass is lost to digestion, heat, and movement.</td>
-      </tr>
-      <tr>
-        <td>Prey → Predator</td>
-        <td>~10-20%</td>
-        <td>Predators also spend energy hunting and processing prey.</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-  <figcaption className="site-table-caption"><strong>Display 2:</strong> Real-world trophic transfer efficiency (Lindeman, 1942).</figcaption>
+    <table className="site-table site-table--striped">
+      <thead><tr><th>Mechanism</th><th>Configured value</th><th>Effect on usable energy</th></tr></thead>
+      <tbody>
+        <tr><td>Grass regeneration</td><td>0.04 per patch per step; cap 2.0</td><td>External input, limited by storage capacity.</td></tr>
+        <tr><td>Prey metabolism</td><td>0.05 per step</td><td>Removes energy.</td></tr>
+        <tr><td>Predator metabolism</td><td>0.15 per step</td><td>Removes energy.</td></tr>
+        <tr><td>Movement</td><td>0</td><td>No additional energy charge in this base implementation.</td></tr>
+        <tr><td>Grazing and predation</td><td>Full stored energy transferred</td><td>Redistribution; no conversion discount.</td></tr>
+        <tr><td>Reproduction</td><td>3.0 prey; 5.0 predator</td><td>Parent transfers this energy to offspring.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <figcaption className="site-table-caption"><strong>Display 2:</strong> Energy sources, sinks and transfers in the discrete base environment.</figcaption>
 </figure>
 
-Drawn as a single tapering flow rather than a table, the same numbers look like this — grass set to a 100% baseline, with the width lost at each step split between heat and decomposers rather than folded into one generic "loss" arrow:
+### Limits to Population Growth
 
-<figure style={{ textAlign: 'center' }}>
-  <img src="/img/learning-selection-interaction/interaction-evolved-learned-cooperation/predpreygrass-energy-entropy/trophic-energy-funnel.svg" alt="A tapering horizontal funnel from grass to prey to predator. Grass, set to 100%, narrows to prey at 20%, with 65% of the width peeling off as heat and 15% peeling off to decomposers. Prey narrows to predator at roughly 4%, with 13% lost as heat and 3% to decomposers. A dotted loop shows decomposers returning nutrients, as matter rather than energy, back to grass." width="760" />
-  <figcaption><strong>Display 3:</strong> Real-world trophic efficiency, drawn to scale. Of every 100 units grass captures, roughly 4 end up as predator biomass, 78 are respired as heat, and 18 pass through decomposers as biomass nothing ate — and the nutrients decomposers release cycle back to the soil as matter, not as a second helping of the same energy.</figcaption>
+There are 100 grass patches, so the maximum new energy supplied in a step is $100\times0.04=4$ units. Actual input is lower whenever patches are near their storage cap. The nominal metabolic demand for $n_h$ prey and $n_p$ predators per step is
+
+$$
+D_{\mathrm{nominal}}=0.05n_h+0.15n_p.
+$$
+
+For example, 40 prey and 20 predators require 5 units per step, exceeding the maximum regeneration rate. Such a population could temporarily draw down stored energy but cannot sustain that demand indefinitely without a reduction in population or change in energy supply. This is a budget comparison, not a prediction of equilibrium population size.
+
+## Real Ecosystems: Trophic Efficiency
+
+In nature, energy is conserved physically, but its capacity to perform useful biological work diminishes as it is dissipated as heat. At successive trophic levels, only a fraction of production becomes new biomass at the next level. Other energy supports metabolism or passes through uneaten material and waste. Nutrients can return through decomposition; usable energy does not cycle back in the same way.
+
+Lindeman's trophic-dynamic framework expresses this transfer as a ratio of production across trophic levels. The familiar ten-percent rule is an approximation, not a universal efficiency constant. To illustrate the cumulative effect, assume 20% efficiency at each of two transfers, starting with 100 units of grass production.
+
+<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
+  <div style={{ overflowX: 'auto', border: '1px solid #D6E4F5' }}>
+    <svg viewBox="0 0 800 330" role="img" aria-label="Illustrative trophic production declines from 100 units of grass to 20 units of prey and 4 units of predator." style={{ display: 'block', width: '100%', minWidth: '530px', fontFamily: 'Arial, sans-serif', background: '#FFFFFF' }}>
+      <rect width="800" height="72" fill="#0F3368" />
+      <text x="26" y="30" fontSize="21" fontWeight="700" fill="#FFFFFF">Trophic production in a real ecosystem</text>
+      <text x="26" y="53" fontSize="14" fill="#FFFFFF">Illustrative example: 20% efficiency at each transfer</text>
+      {[0,25,50,75,100].map(v => <g key={v}><line x1={155+v*5.8} x2={155+v*5.8} y1="97" y2="270" stroke="#D6E4F5"/><text x={155+v*5.8} y="289" fill="#64778D" fontSize="13" textAnchor="middle">{v}</text></g>)}
+      {[['Grass',100],['Prey',20],['Predator',4]].map(([name,v],i) => <g key={name}><text x="135" y={131+i*58} fill="#0F3368" fontSize="16" textAnchor="end" fontWeight="700">{name}</text><rect x="155" y={111+i*58} width={v*5.8} height="30" fill={['#1C4B8F','#4C78B5','#78AAE6'][i]}/><text x={v===100?725:165+v*5.8} y={131+i*58} fill={v===100?'#FFFFFF':'#0F3368'} textAnchor={v===100?'end':'start'} fontSize="15" fontWeight="700">{v} units</text></g>)}
+      <text x="445" y="318" fontSize="14" textAnchor="middle" fill="#1F2D3D">Production relative to the grass baseline (units)</text>
+    </svg>
+  </div>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 3:</strong> Illustrative production at successive trophic levels: 100 units of grass, 20 of prey and 4 of predator production. These are not measured PPG values.</figcaption>
 </figure>
 
-PredPreyGrass does not model the sun-to-grass step directly, and it does not currently apply a separate transfer-efficiency discount when prey eat grass or predators eat prey — an agent simply receives the eaten agent's or grass patch's energy. The realism instead comes from a different mechanism: constant, unrecoverable energy decay every step, described next.
+Trophic efficiency is an ecosystem-level production ratio over time, not necessarily the fraction of an individual meal assimilated by an animal. PPG simplifies the latter to full transfer of stored model energy, while passive metabolism reduces available energy between feeding events.
 
-## How the simulation actually models entropy increase
+## Implications for Selection and Learning
 
-Two mechanisms currently drive entropy increase in the base environment:
+In the base environment, reproduction requires 8 energy units for prey and 12 for predators. Offspring receive part of their parent's stored energy; the parent also receives a separate learning reward of 10. This reward is a training signal, not new ecological energy.
 
-**Passive per-step decay.** Every agent loses a fixed amount of energy each step just for existing: `energy_loss_per_step_predator = 0.15`, `energy_loss_per_step_prey = 0.05`. This energy is not transferred anywhere — it is simply gone, the simulation's direct analogue of heat loss and basal metabolism.
+Efficient foraging allows an agent to accumulate energy faster than it loses it. For predators, improved hunting can raise energy income; for prey, grazing and avoiding predation can improve survival. When inherited strategies produce more surviving descendants, energy acquisition becomes a mechanism through which natural selection can favor those strategies. This is distinct from learning a policy that increases reward during an agent's lifetime, and illustrates [behavior as a cost–benefit investment](/nature-nurture-human-behavior#behavior-as-a-cost-benefit-investment).
 
-**Starvation.** An agent whose energy reaches zero dies, and any energy it was holding leaves the system unless another agent had already consumed it first.
+Cooperation must likewise be assessed in terms of energy, survival and reproduction, including how costs and benefits are shared and whether coexistence persists. A higher number of cooperative kills alone does not establish an evolutionary advantage.
 
-Two mechanisms that a full thermodynamic story might lead you to expect turn out *not* to apply in the current codebase, and it's worth being explicit about that rather than assuming symmetry with the real world:
+## A More Realistic Energy-Transfer Experiment
 
-- **Movement is currently energy-free.** The base environment defines a movement-cost hook, but it is stubbed to always return zero — agents do not pay energy to move in the base configuration.
-- **Reproduction is a lossless split, not a cost.** A parent transfers a fixed initial-energy amount to its offspring (`initial_energy_predator = 5.0`, `initial_energy_prey = 3.0`) with no extra loss in transit. The parent separately earns a reproduction reward (`10.0` for both species) that shapes the learning signal, but that reward is not drawn from the energy pool.
+A useful extension would vary the fraction of consumed energy retained by the consumer while keeping grass regeneration, metabolism and movement rules fixed. For a feeding event of size $e$, an assimilation parameter $\eta$ between zero and one would transfer $\eta e$ to the consumer and remove $(1-\eta)e$ from the tracked pool.
 
-## Why the population still can't grow without limit
-
-Even without movement or reproduction costs, passive per-step decay means every living agent is a standing energy liability: it must eat again before its accumulated decay kills it. The only source that offsets this drain is grass regeneration, which is itself capped at a small fixed amount per step. That cap is the real bottleneck: it sets a ceiling on how much new energy can enter the system at all, two trophic levels below predators, and everything downstream — prey population, predator population, how large either can grow — is bounded by it.
-
-This is also why food chains stay short in both the simulation and in nature: each additional trophic level inherits a shrinking energy budget, and at some point the budget can no longer support another link.
-
-## Implications
-
-Selection in this environment operates on exactly the same logic developed elsewhere on this site: [behavior as a cost-benefit investment](/nature-nurture-human-behavior#behavior-as-a-cost-benefit-investment). Passive decay is a fixed, unavoidable cost that every agent pays every step regardless of what it does. Movement and foraging choices are the investment side of the ledger — an agent that finds grass or prey efficiently outpaces its own decay and can reach the reproduction threshold; one that doesn't, starves. Because decay is constant and energy income is capped by grass regeneration, PredPreyGrass gives natural selection a genuinely scarce resource to select over, without needing to build in any explicit cost for movement or reproduction at all.
-
-## Open TODO
-
-- **Make a PredPreyGrass config congruent with thermodynamics.** Neither the base environment nor `eco_evolutionary` currently discounts energy at the moment of a bite — an agent simply receives whatever the eaten grass patch or prey agent was holding (`max_energy_gain_per_grass` and `max_energy_gain_per_prey` are literally set to infinity in `eco_evolutionary`). Displays 2 and 3 above show what a real trophic transfer looks like instead: ~10-30% grass→prey, ~10-20% prey→predator, with the rest lost to heat and decomposers rather than silently vanishing. A config where grazing and predation each retain a capped, literature-consistent fraction — and the discounted remainder is actually removed from the tracked energy pool rather than just not being awarded — would make the simulation's own energy accounting match the second law this page describes, and would double as a real ecological-realism experiment: shorter viable food chains, different population dynamics, and less energy available per trophic level for reinforcement learning to work with.
-
----
+This is a proposed experiment, not an implemented feature of the base environment. The fraction should be motivated by assimilation biology and calibrated against trophic production rather than assumed equal to the ten-percent rule. Compare otherwise identical runs across transfer fractions and measure actual input, depletion, production, population persistence and reproduction. This would test how greater energetic constraints affect food-chain viability and opportunities for cooperative behavior.
 
 ## References
 
-- Lindeman, R. L. (1942). *The trophic-dynamic aspect of ecology*. *Ecology*, 23(4), 399-417. https://doi.org/10.2307/1930126
-- National Geographic Education. *Energy Flow and the 10% Rule*. https://education.nationalgeographic.org/resource/energy-flow-and-10-percent-rule/
-- Wikipedia contributors. *Ecological pyramid*. Wikipedia. https://en.wikipedia.org/wiki/Ecological_pyramid
-- Wikipedia contributors. *Nutrient cycle*. Wikipedia. https://en.wikipedia.org/wiki/Nutrient_cycle
-- Sankey Diagrams. *Exergy (tag archive)*. https://www.sankey-diagrams.com/tag/exergy/
+- Lindeman, R. L. (1942). The trophic-dynamic aspect of ecology. *Ecology*, 23(4), 399–417. [DOI](https://doi.org/10.2307/1930126).
+- National Geographic Education. Energy Flow and the 10% Rule. [Resource](https://education.nationalgeographic.org/resource/energy-flow-and-10-percent-rule/).
+- PredPreyGrass. Discrete base environment: [configuration](https://github.com/doesburg11/PredPreyGrass/blob/main/predpreygrass/non_evolutionary/discrete_space/base_environment_discrete/config_env.py) and [implementation](https://github.com/doesburg11/PredPreyGrass/blob/main/predpreygrass/non_evolutionary/discrete_space/base_environment_discrete/predpreygrass_rllib_env.py).
