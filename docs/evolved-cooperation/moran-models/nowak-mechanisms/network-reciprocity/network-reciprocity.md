@@ -61,6 +61,24 @@ There is no memory, reputation, or lineage bias — the only structural ingredie
   <figcaption className="site-table-caption"><strong>Display 1:</strong> Key parameters controlling spatial routing and payoff scaling in the network reciprocity model.</figcaption>
 </figure>
 
+## Simulation Results
+
+Proof-of-mechanism runs on a 24×24 grid, 5 seeds and 1000 steps each ([`utils/proof_of_mechanism.py`](https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/network_reciprocity/utils/proof_of_mechanism.py)); these hold only at the settings tested:
+
+- **Maintenance:** started common, cooperation stayed high in 5/5 seeds (mean trait 0.928) with a von Neumann neighbourhood (k = 4) and b/c = 5, above Nowak's condition b/c > k.
+- **Spread from rare:** 2/5 seeds (mean trait 0.536). Outcomes varied across seeds, consistent with stochastic cluster formation.
+- **Below the condition:** with b/c = 2.5 < k = 4, cooperation started at 90% and collapsed, surviving in 0/5 seeds (mean trait 0.012). With the same b/c = 5 but a Moore neighbourhood (k = 8), it collapsed too (0/5, mean trait 0.009): raising the number of neighbours, without changing payoffs, was enough to break it.
+
+## Network Reciprocity And Kin Selection
+
+On a lattice where offspring are placed next to their parents, neighbours are often relatives, so network reciprocity and kin selection by viscosity work through the same clustering of helpers. The site's later tests could not separate them. In a separate kin-selection test series with a different wrapper ([later tests](/evolved-cooperation/kin-selection#later-tests-self-benefit-and-speed)), uniform local routing plus local replacement, network reciprocity in that limited sense, spread in 3/20 runs at 1000 steps but 20/20 at 3000. That shows short runs can undercount eventual spread in that implementation; it does not establish that this wrapper would reach 20/20. Costly help to neighbours spread with local replacement (at b/c 12 and 24) and failed at b/c 12 under global-competitor replacement, a result consistent with kin selection by viscosity that was not separated from network reciprocity. In the lattice [ethnocentrism model](/evolved-cooperation/kin-selection#kin-cues-the-ethnocentrism-model), the two are effectively descriptions of the same spatial-assortment process.
+
+## Ecological Counterpart
+
+The EvolvedCooperation repository also has an [ecological version](https://github.com/doesburg11/EvolvedCooperation/tree/main/ecological_models/nowak_mechanisms/network_reciprocity) in continuous space, with births, deaths, energy budgets and sexual reproduction, benefits delivered to neighbours within a radius, and offspring placed near their mother. Starting from 10% rare helpers, it passed its 10 scenario checks (5 seeds, 500 steps each; three are controls that pass when cooperation does not spread). The effect was modest: in the baseline the mean helping trait rose by 0.013 and the frequency of high helpers by 0.19. The repository notes that in this model the high-helper frequency is inflated by blending inheritance in short runs, and treats mean-trait change as the reliable signal.
+
+Its ablations pointed to offspring placement. With offspring placed at random, the mean trait fell (−0.021). With benefits spread uniformly over the whole population instead of to spatial neighbours, the high-helper frequency still rose by 0.13, but the mean trait barely moved (+0.001), so in this implementation spatial benefit routing was not shown to be independently necessary; the result mainly reflects reproductive assortment through offspring placement, and the evidence on routing rests mainly on the inflated measure.
+
 ## Python Module Layout
 
 ```text
@@ -70,6 +88,9 @@ moran_models/nowak_mechanisms/network_reciprocity/
   network_reciprocity_pygame_ui.py
   config/
     network_reciprocity_config.py
+  utils/
+    proof_of_mechanism.py
+  data/                       # proof-of-mechanism CSVs
 ```
 
 ## Usage
@@ -82,6 +103,12 @@ Live viewer:
 
 ```bash
 ./.conda/bin/python -m moran_models.nowak_mechanisms.network_reciprocity.network_reciprocity_pygame_ui
+```
+
+Proof scenarios:
+
+```bash
+./.conda/bin/python -m moran_models.nowak_mechanisms.network_reciprocity.utils.proof_of_mechanism
 ```
 
 ## See Also
