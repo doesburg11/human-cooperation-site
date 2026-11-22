@@ -84,7 +84,7 @@ The five mechanisms are often described as answers to the question "how does coo
         <tr>
           <td><a href="/evolved-cooperation/kin-selection">Kin selection</a></td>
           <td style={{ fontStyle: 'italic' }}>rb &gt; c</td>
-          <td style={{ backgroundColor: '#D4EDDA' }}><strong>Yes</strong> — offspring stay near parents by definition, automatically creating kin clusters; 5/5 seeds <a href="#kin-selection-isolation-evidence" style={{ fontSize: '0.8em', whiteSpace: 'nowrap' }}>→ simulated</a></td>
+          <td style={{ backgroundColor: '#D4EDDA' }}><strong>Yes</strong> — offspring stay near parents by definition, automatically creating kin clusters; 5/5 seeds in the original proof run (weak altruism: helpers keep part of their own benefit) <a href="#kin-selection-isolation-evidence" style={{ fontSize: '0.8em', whiteSpace: 'nowrap' }}>→ simulated</a></td>
           <td style={{ backgroundColor: '#D4EDDA' }}><strong>Yes</strong></td>
         </tr>
         <tr>
@@ -114,7 +114,7 @@ The five mechanisms are often described as answers to the question "how does coo
       </tbody>
     </table>
   </div>
-  <figcaption className="site-table-caption"><strong>Display 2:</strong> The five Nowak conditions mapped to spread from rare and maintenance. All five conditions are ESS (maintenance) conditions. Kin selection reliably spreads cooperation from rare because offspring proximity to parents is a trivial consequence of reproduction. The other mechanisms require additional biological conditions to achieve the same.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 2:</strong> The five Nowak conditions mapped to spread from rare and maintenance. All five conditions are ESS (maintenance) conditions. Kin selection reliably spreads cooperation from rare because offspring proximity to parents is a trivial consequence of reproduction. The other mechanisms require additional biological conditions to achieve the same. In the kin-selection runs the helper keeps part of its own benefit, so this spread is weak altruism, and in later, longer tests uniform routing also spread; see Display 3.</figcaption>
 </figure>
 
 <figure id="kin-selection-isolation-evidence" style={{ margin: '0 0 1.5rem 0' }}>
@@ -122,15 +122,16 @@ The five mechanisms are often described as answers to the question "how does coo
     <div style={{ backgroundColor: '#0F3368', color: '#FFFFFF', padding: '0.5rem 1.25rem', fontWeight: 'bold' }}>Kin selection — simulation evidence</div>
     <div style={{ backgroundColor: '#EAF2FB', color: '#1F2D3D', padding: '0.6rem 1.25rem' }}>
       <ul style={{ margin: '0' }}>
-        <li><strong>Spread from rare:</strong> 5/5 seeds, mean trait 0.872 — offspring inherit lineage and stay local, automatically creating kin clusters; this is kin selection as it operates in biology — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/kin_selection/utils/proof_of_mechanism.py">utils/proof_of_mechanism.py</a></li>
-        <li><strong>Maintenance:</strong> 5/5 seeds, mean trait 0.984 — kin-biased routing locks cooperation near maximum once common</li>
-        <li><strong>No kin bias ablation:</strong> 1/5 seeds, mean trait 0.488 — removing kin bias while keeping local reproduction gives only partial spread; confirms kin-biased routing is the decisive amplifier on top of local reproduction</li>
-        <li><strong>Well-mixed control — kin preference without kin proximity:</strong> 0/5 seeds, mean trait 0.006 — biologically incoherent scenario (kin selection requires offspring proximity, which local reproduction provides automatically); confirms that kin preference without kin proximity is meaningless — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/kin_selection/well_mixed/utils/proof_of_mechanism.py">well_mixed/proof_of_mechanism.py</a></li>
-        <li><strong>Below Hamilton's rule:</strong> 0/5 seeds from 90% — rb &gt; c boundary confirmed</li>
+        <li><strong>Spread from rare:</strong> 5/5 seeds, mean trait 0.872 — offspring inherit lineage and stay local, automatically creating kin clusters; consistent with kin selection through viscosity, with the helper keeping part of its own benefit (weak altruism) — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/kin_selection/utils/proof_of_mechanism.py">utils/proof_of_mechanism.py</a></li>
+        <li><strong>Maintenance:</strong> 5/5 seeds, mean trait 0.984 — in the original common-start run, cooperation stayed near maximum</li>
+        <li><strong>No kin bias ablation:</strong> 1/5 seeds, mean trait 0.488 — removing kin bias while keeping local reproduction gives only partial spread at this run length; in the later, longer tests below, uniform routing caught up</li>
+        <li><strong>Well-mixed control — kin preference without kin proximity:</strong> 0/5 seeds, mean trait 0.006 — biologically incoherent scenario (kin selection requires offspring proximity, which local reproduction provides automatically); in this control, kin preference without local kin proximity produced no detectable spread — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/kin_selection/well_mixed/utils/proof_of_mechanism.py">well_mixed/proof_of_mechanism.py</a></li>
+        <li><strong>Below Hamilton's rule:</strong> 0/5 seeds from 90% — collapse below the threshold, consistent with rb &gt; c</li>
+        <li><strong>Later matched tests (20 runs per arm, 2026-11-19):</strong> kin-biased routing spread in 14/20 runs at 1000 steps, uniform routing in 3/20, but uniform routing reached 20/20 by 3000 steps; so the kin bias made spread faster, but the tests do not separate it from the extra self-return it brings (without self-return, kin-biased routing also failed); help with a real net cost to the helper failed in every arm (0/20) — <a href="/evolved-cooperation/kin-selection#later-tests-self-benefit-and-speed">Later tests</a></li>
       </ul>
     </div>
   </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 3:</strong> Kin selection simulation evidence. The 5/5 spread result is kin selection operating as it does in biology — local reproduction automatically provides the kin proximity the mechanism requires. The well-mixed control tests kin preference without kin proximity, which has no biological counterpart.</figcaption>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 3:</strong> Kin selection simulation evidence. In the 5/5 spread result, local reproduction automatically provides the kin proximity the mechanism requires; the later tests show that this spread is weak altruism, and that kin-biased routing spread faster than uniform routing without being separated from its extra self-return. The well-mixed control tests kin preference without kin proximity, which has no biological counterpart.</figcaption>
 </figure>
 
 <figure style={{ margin: '0 0 1.5rem 0' }}>
@@ -197,11 +198,11 @@ The direct implication: demonstrating that a mechanism *maintains* cooperation i
 
 ## The origin of cooperation
 
-The five Nowak conditions are maintenance conditions. Of the five, only kin selection reliably spreads cooperation from rare — but understanding *why* requires distinguishing what each mechanism needs from the biological environment in order to operate.
+The five Nowak conditions are maintenance conditions. Of the five, only kin selection reliably spread cooperation from rare in the original proof runs (later, longer runs qualify this; see below) — but understanding *why* requires distinguishing what each mechanism needs from the biological environment in order to operate.
 
-**Kin selection and local reproduction are inseparable.** Kin selection works because offspring inherit the parent's cooperative trait and stay nearby, automatically clustering same-lineage cooperators together. This spatial clustering is not an extra assumption — it is a trivial consequence of reproduction itself. You cannot have kin selection without offspring proximity, and offspring proximity comes for free from biology. The local grid structure in the spatial model is not a confound; it is what kin reproduction looks like.
+**Kin selection and local reproduction are inseparable.** Kin selection works because offspring inherit the parent's cooperative trait and stay nearby, automatically clustering same-lineage cooperators together. This spatial clustering is not an extra assumption of the model — local reproduction supplies it. In this model you cannot have the effect without offspring proximity, and offspring proximity follows from local reproduction. The local grid structure in the spatial model is not a confound; it is what kin reproduction looks like.
 
-This is confirmed by the well-mixed control (Display 3): kin preference without kin proximity — offspring scattered globally — produces no benefit at all (0/5, indistinguishable from a no-kin-bias control). Not because kin selection is weak, but because the scenario is biologically incoherent. Kin selection *is* local reproduction with relatedness-biased routing. Separating the two removes the mechanism entirely.
+This is confirmed by the well-mixed control (Display 3): kin preference without kin proximity — offspring scattered globally — produces no benefit at all (0/5, indistinguishable from a no-kin-bias control). Not because kin selection is weak, but because the scenario is biologically incoherent. In this model the load-bearing part is local reproduction: removing it removes the effect, whereas without the relatedness bias, uniform routing still spread in later, longer runs (see the qualification below).
 
 **The other mechanisms are not as automatic.** Direct reciprocity also spreads cooperation reliably from rare when given spatial structure (100% success with a spatial scaffold). But spatial structure is not trivially given for direct reciprocity — it additionally requires partner stability, memory of past interactions, and repeated encounters with the same individuals. These are real biological requirements that are not automatically satisfied by reproduction alone. Direct reciprocity needs a stable community structure to have something to reciprocate.
 
@@ -209,9 +210,11 @@ Network reciprocity alone — without kin bias or reciprocity memory — gives o
 
 Group selection adds nothing for spread from rare (2/5 — identical to the network reciprocity baseline). Its role is confined to maintenance.
 
-**What makes kin selection the most robust initiator** is therefore not that it is the only mechanism capable of spreading cooperation from rare, but that the structural condition it requires — offspring near parents — is automatically provided by reproduction in any biological system. Direct reciprocity and network reciprocity depend on additional conditions that must be independently met.
+**What makes kin selection the most robust initiator in these tests** is therefore not that it is the only mechanism capable of spreading cooperation from rare, but that the structural condition it requires — offspring near parents — is automatically provided by reproduction in any biological system. Direct reciprocity and network reciprocity depend on additional conditions that must be independently met.
 
-**The Nowak 2010 controversy.** In arguing that multilevel selection subsumes kin selection, Nowak, Tarnita, and Wilson (2010) pointed at the mathematical equivalence between kin selection and spatial/group structure. The simulation results here are consistent with that entanglement — kin selection operates through the same local structure that defines network reciprocity. The 137-researcher rebuttal (Abbot et al., 2011) defends the kin selection framework. The debate is not settled, but the practical implication is clear: kin selection and local population structure are two descriptions of the same biological reality, not two competing mechanisms.
+**Qualification from later tests (2026-11-19).** In the kin-selection runs above, a helper keeps part of its own benefit, so helping has no net direct cost: the spread from rare is weak altruism. Where helping had a real net cost to the helper, it failed in every arm. In a later variant with overlapping generations, costly help to neighbours did spread at benefit-to-cost ratios of 12 and 24 when offspring settled locally, and at 12 failed under global-competitor replacement; this is consistent with kin selection through viscosity, but was not separated from network reciprocity. Adding ecology (sexual reproduction, households, energy, limited food) has not yet given a clean kin-selection result. Details: [Kin Selection](/evolved-cooperation/kin-selection#later-tests-self-benefit-and-speed) and [From the Moran model to an ecological model](/evolved-cooperation/kin-selection#from-the-moran-model-to-an-ecological-model).
+
+**The Nowak 2010 controversy.** In arguing that multilevel selection subsumes kin selection, Nowak, Tarnita, and Wilson (2010) pointed at the mathematical equivalence between kin selection and spatial/group structure. The simulation results here are consistent with that entanglement — kin selection operates through the same local structure that defines network reciprocity. The 137-researcher rebuttal (Abbot et al., 2011) defends the kin selection framework. The debate is not settled, but in these spatial tests kin selection and network reciprocity remain empirically entangled: two descriptions of the same local-assortment process, not two mechanisms the tests could separate.
 
 ## Beyond These Five
 
