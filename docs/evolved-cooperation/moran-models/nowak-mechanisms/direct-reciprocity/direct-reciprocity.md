@@ -323,6 +323,12 @@ The ablation tests confirm the same conclusions as in Step 3: memory is necessar
 
 **Result: Cooperation emerges reliably (≈97–99%) under any starting condition, with or without kin bias. The origin mechanism is partner permanence — a completely static interaction graph. Removing memory or multiple rounds causes full collapse regardless of graph structure.**
 
+## Ecological Counterpart
+
+The sibling repository also has an [ecological version](https://github.com/doesburg11/EvolvedCooperation/tree/main/ecological_models/nowak_mechanisms/direct_reciprocity) of direct reciprocity: a well-mixed population with births, deaths, energy budgets and sexual reproduction, a continuous inherited helping trait instead of discrete strategies, and dyadic partnerships with partner memory and conditional dissolution. Starting from 10% rare helpers, it passed its 10 proof-of-mechanism scenarios (5 seeds, 500 steps each), but the effect was the weakest of the five ecological Nowak models: the frequency of high helpers (the invasion measure) rose by 0.041, while the mean helping trait barely moved (+0.001).
+
+Its ablations point the same way as the Moran results above. Reshuffling partners every step reduced the high-helper frequency by 0.038, and freezing memory left it nearly flat (−0.002), so partner fidelity and memory with conditional dissolution were jointly needed. Partnership length had an optimum in these runs: moderately longer partnerships (persistence 0.97) slightly raised the high-helper frequency (+0.049 against +0.041), although the mean trait still fell slightly (−0.002), while very long ones (0.99) and a higher benefit per step reduced cooperation in exploratory runs not included in the proof table, because a cooperator stayed locked with a defector for longer before memory let it leave. Like the Moran model, this shows a modest rise in high-helper frequency from a 10% foothold under the right partnership structure, not a substantial spread of the helping trait or a reliable origin of cooperation.
+
 ## Summary
 
 <figure className="site-table-figure">
