@@ -346,6 +346,10 @@ So the generalized law is no longer just about cooperation. It becomes:
   <p style={{ margin: '0' }}><strong style={{ color: '#0F3368' }}>Generalized law.</strong> An action is favored when its feedback-weighted marginal positive effects, minus its feedback-weighted marginal negative effects, including routed effects that return after delay, improve expected selection success enough to outweigh its marginal private cost.</p>
 </div>
 
+### A Lesson From Use: Whether Routing Includes The Actor
+
+Whether $K^{+}$ routes part of an actor's own output back to itself changes the helper's direct payoff, and so what kind of cooperation a run tests; removing the actor from routing also changes how the benefit is distributed across recipients. In the [kin-selection](/evolved-cooperation/kin-selection#later-tests-self-benefit-and-speed) wrapper, positive effects are routed over the actor plus its four neighbours. With uniform routing a lone helper then keeps $1/5$ of its own benefit, $0.2 \cdot h_i$ at the default benefit scale $B_\text{plus} = 1$, which exactly offsets its cost $0.2 \cdot h_i$; with kin-weighted routing it keeps about half, a net gain of $0.3 \cdot h_i$. Helping spread in these self-inclusive arms, with kin-weighted routing spreading faster (14/20 against 3/20 runs at 1000 steps; both 20/20 by 3000 steps). That makes it weak altruism: no net direct cost to the helper. When the actor was removed from routing, or kept at a reduced weight, so that helping had a net direct cost at some number of related neighbours, it failed in every arm tested (0/20 runs). The self-routing term $K^{+}_{i \to i}$ is therefore worth reporting with any cooperation result from this engine: in these tests it marked the difference between arms with no net direct cost and arms with a real one, although the design did not isolate self-return as the cause.
+
 ## Why This Generalization Matters
 
 The positive-only feedback-kernel subset is already useful for asking:
@@ -608,23 +612,30 @@ The canonical implementation lives as a module in the sibling <code>EvolvedCoope
 moran_models/interaction_kernel/
   __init__.py
   README.md
-  interaction_kernel_model.py
-  kernels.py
-  selection.py
-  metrics.py
+  interaction_kernel_model.py      # runtime entry point
+  interaction_kernel_pygame_ui.py  # live viewer
+  live_grid_view.py
+  kernels.py, selection.py, metrics.py   # re-exports of core/
+  core/
+    engine.py
+    kernels.py
+    selection.py
+    metrics.py
+    mechanisms.py
+    space.py
   config/
     interaction_kernel_config.py
+  utils/                           # mechanism comparison and plotting scripts
   data/
     latest_run.json
 ```
 
 Core responsibilities:
 
-- <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/interaction_kernel/interaction_kernel_model.py"><code>interaction_kernel_model.py</code></a>: simulation loop and state update logic
-- <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/interaction_kernel/kernels.py"><code>kernels.py</code></a>: routing rules for positive and negative effects
-- <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/interaction_kernel/selection.py"><code>selection.py</code></a>: relative-success rule based on the vector of agent scores
-- <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/interaction_kernel/metrics.py"><code>metrics.py</code></a>: trait, routed-effect, and fitness summary diagnostics
+- <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/interaction_kernel/interaction_kernel_model.py"><code>interaction_kernel_model.py</code></a>: runtime entry point and JSON summary output
+- <a href="https://github.com/doesburg11/EvolvedCooperation/tree/main/moran_models/interaction_kernel/core"><code>core/</code></a>: the shared engine (<code>engine.py</code>), routing rules for positive and negative effects (<code>kernels.py</code>), local replacement and inheritance (<code>selection.py</code>), mechanism hooks (<code>mechanisms.py</code>), lattice neighbourhoods (<code>space.py</code>) and summary diagnostics (<code>metrics.py</code>); the top-level <code>kernels.py</code>, <code>selection.py</code> and <code>metrics.py</code> re-export these
 - <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/interaction_kernel/config/interaction_kernel_config.py"><code>config/interaction_kernel_config.py</code></a>: active runtime parameters
+- <a href="https://github.com/doesburg11/EvolvedCooperation/tree/main/moran_models/interaction_kernel/utils"><code>utils/</code></a>: matched comparisons of the Nowak mechanism wrappers and their plots
 
 ## Current Implementation Scope
 
@@ -634,16 +645,16 @@ The current implementation is deliberately small:
 - <code>B_plus</code> and <code>B_minus</code> are produced from <code>h</code>
 - <code>K_plus</code> can be uniform or kin-weighted
 - <code>K_minus</code> can be absent or uniform
-- selection is local and synchronous
-- output is written to <code>interaction_kernel/data/latest_run.json</code>
+- selection is local and synchronous: each site's parent is sampled from its neighbourhood by a softmax over fitness
+- output is written to <code>moran_models/interaction_kernel/data/latest_run.json</code>
 
 Run from the <code>EvolvedCooperation</code> repo root:
 
 ```bash
-./.conda/bin/python -m interaction_kernel.interaction_kernel_model
+./.conda/bin/python -m moran_models.interaction_kernel.interaction_kernel_model
 ```
 
-The next implementation steps are retained-benefit-equivalent presets, competition-only presets, and mixed positive/negative interaction sweeps.
+The five [Nowak mechanism](/evolved-cooperation/nowak-mechanisms) wrappers are built on this engine. Retained-benefit-equivalent presets, competition-only presets and mixed positive/negative interaction sweeps are not implemented yet.
 
 ## Related Research
 
