@@ -98,9 +98,13 @@ $\delta = \text{received\_open} + \text{received\_retained} - C = [0.30,\, 0.10,
 - With $w_0 = 1.0$, the weights become $[1.30,\, 1.10,\, 1.05,\, 1.05,\, 1.00]$, so the probabilities are about $[0.236,\, 0.200,\, 0.191,\, 0.191,\, 0.182]$.
 - The ranking stays the same, but selection becomes much less extreme.
 
-So the model turns one high-level claim into a direct experiment:
+So the model turns one high-level claim into a direct test:
 
 > cooperation rises when enough of its return is protected from leakage
+
+### Self-Return: Weak Or Strong Altruism
+
+The local neighborhood includes the producer's own site, and the producer always counts among its own same-lineage recipients. So part of what a cooperator produces comes straight back to it: a `1/5` share of the open benefit in the von Neumann neighborhood, plus a share of the retained benefit that grows as fewer neighbours belong to its lineage. At the frozen replay's settings ($b = 0.30$, $c = 0.10$, $r = 0.35$) that self-return ranges from about $0.06 \cdot h_i$, when all five sites share its lineage, to about $0.144 \cdot h_i$, when it is the only one. Against a cost of $0.10 \cdot h_i$, and counting only its own contribution, a cooperator surrounded by its own lineage pays a net direct cost (strong altruism), while a lone cooperator among other lineages gains directly (weak altruism). Which side of that line a cooperator is on therefore changes with local lineage structure. The site's [Interaction Kernel](/evolved-cooperation/interaction-kernel) and [kin-selection](/evolved-cooperation/kin-selection#later-tests-self-benefit-and-speed) pages show why this matters: in those models, helping spread in arms with no net direct cost and failed in arms where it had a real one.
 
 ## Simulation Step
 
@@ -268,6 +272,16 @@ Together these variables let you separate:
 
 instead of collapsing all three into one unexplained population curve.
 
+## What The Replay Shows
+
+In this one seeded run the change is modest. Over 250 steps, mean cooperation rose from `0.120` to `0.147`, while its variance rose from about `0.002` to `0.008`. Local assortment fell from `0.87`, the initial `6 × 6` lineage blocks, to a low of about `0.54` at step `35`, then recovered to `0.62` by the end, and the largest lineage grew from about `7%` to about `18%` of the lattice, with 23 of the 24 starting lineages still present.
+
+Three cautions apply:
+
+- **It is one seed.** No replicate runs are reported.
+- **There is no neutral control.** Mutation adds symmetric noise and the trait is then clamped to `[0, 1]`, so clipping at the lower bound can raise the mean, especially while traits are concentrated near zero; the replay does not separate that effect from selection.
+- **The threshold has not been mapped.** The question the model poses, how large the retained fraction $r$ must be before cooperation rises, needs a sweep over $r$, $b$ and $c$. The repository's README names that sweep as the most informative next step, but it has not been run, so the page's central claim is the model's question rather than a demonstrated result.
+
 ## Why This Belongs Under Evolved Cooperation
 
 This model belongs under evolved cooperation because:
@@ -298,6 +312,8 @@ In other words:
 
 - if cooperation creates value that is lost through evolutionary leakage to unrelated or weakly coupled recipients, cooperation is hard to sustain
 - if enough of that value is routed back toward cooperators or their copies, cooperation can spread
+
+This model is built to test that claim in its most abstract form; as [What The Replay Shows](#what-the-replay-shows) explains, the test has so far been run only as a single demonstration.
 
 ## What "Feedback" Means Here
 
