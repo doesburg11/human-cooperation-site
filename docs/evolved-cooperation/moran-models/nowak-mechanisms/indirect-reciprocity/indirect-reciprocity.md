@@ -81,6 +81,19 @@ where $\omega$ is the observation weight. Agents that help more accumulate highe
   <figcaption className="site-table-caption"><strong>Display 1:</strong> Key parameters controlling reputation dynamics and routing in the indirect reciprocity model.</figcaption>
 </figure>
 
+## Simulation Results
+
+The results depend strongly on how the mechanism is implemented. All of the following hold only at the settings tested; the cross-mechanism summary is on [Nowak Mechanisms](/evolved-cooperation/nowak-mechanisms#spread-vs-maintenance).
+
+- **Continuous reputation routing on the grid (the model above).** From a low start it met the emergence criterion (final mean trait at least 0.50 and a gain of at least 0.05) in all 9 tested benefit-cost cells (8 seeds each, 250 steps). But the grid itself supplies network-reciprocity clustering: with reputation routing switched off, cooperation still succeeded in 5/5 seeds, so this model does not isolate indirect reciprocity.
+- **Binary reputation in a well-mixed population** ([`well_mixed_binary/`](https://github.com/doesburg11/EvolvedCooperation/tree/main/moran_models/nowak_mechanisms/indirect_reciprocity/well_mixed_binary)). A donor helps only when it observes the recipient (with probability q) and the recipient's reputation passes a threshold, with no spatial structure. Started common, cooperation was maintained in 5/5 seeds (mean trait 0.873, with observation probability q = 0.80 above c/b = 0.20). Without reputation-gated help, maintenance dropped to 2/5. From rare it spread in 0/5 seeds, at q = 0.80 and at q = 0.05: rare cooperators help defectors, who start with a neutral reputation and return little or no help, so the cooperators pay the cost and are eliminated before reputations can separate the two. In this model indirect reciprocity is a maintenance mechanism, not an origin mechanism.
+
+## Ecological Counterpart
+
+The EvolvedCooperation repository also has an [ecological version](https://github.com/doesburg11/EvolvedCooperation/tree/main/ecological_models/nowak_mechanisms/indirect_reciprocity): a well-mixed population with births, deaths, energy budgets and sexual reproduction, public reputation scores, help routed to observed agents above a reputation threshold, and mate choice weighted by reputation. Starting from 10% rare helpers, it passed all 10 of its scenario checks (5 seeds, 500 steps each; four of them are controls that pass when cooperation does not spread); in the baseline the frequency of high helpers rose by 0.63 and the mean helping trait by 0.04.
+
+Its ablations located the effect in mate choice, not in routed help. With help routed at random but reputation-weighted mate choice kept, the high-helper frequency rose by 0.85; with mate choice random but reputation-gated help kept, it fell by 0.05. Under random mate choice, blending inheritance pulls the offspring of rare helpers toward the resident mean, below the reputation threshold within one generation, so the help advantage does not carry over; reputation-weighted mate choice keeps helpers pairing with helpers and preserves high-trait lineages. In this model the spread therefore runs through reputation-based assortative mating, a reproductive channel, rather than through the help-for-reputation route that defines indirect reciprocity in Nowak's sense.
+
 ## Python Module Layout
 
 ```text
@@ -90,6 +103,14 @@ moran_models/nowak_mechanisms/indirect_reciprocity/
   indirect_reciprocity_pygame_ui.py
   config/
     indirect_reciprocity_config.py
+  well_mixed_binary/          # binary reputation, no spatial structure
+    __init__.py
+    indirect_reciprocity_binary_model.py
+    config/
+      indirect_reciprocity_binary_config.py
+    utils/
+      proof_of_mechanism.py
+    data/                     # proof-of-mechanism CSVs
 ```
 
 ## Usage
@@ -102,6 +123,12 @@ Live viewer:
 
 ```bash
 ./.conda/bin/python -m moran_models.nowak_mechanisms.indirect_reciprocity.indirect_reciprocity_pygame_ui
+```
+
+Proof scenarios for the well-mixed binary model:
+
+```bash
+./.conda/bin/python -m moran_models.nowak_mechanisms.indirect_reciprocity.well_mixed_binary.utils.proof_of_mechanism
 ```
 
 ## See Also
