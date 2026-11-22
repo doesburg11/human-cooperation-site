@@ -453,7 +453,7 @@ The results above come from the Moran model: a full grid where every site is ref
 
 The models above track lineage directly. Real organisms usually cannot see relatedness; at most they see a cue that tends to go with it. Hammond and Axelrod's (2006) ethnocentrism model is a simple test case. Agents on a 51×51 torus have an inherited colour (one of four) and two inherited flags: help neighbours of the same colour or not, and help neighbours of another colour or not. Helping costs the helper 0.01 and gives the neighbour 0.03 in chance to reproduce; offspring are placed next to the parent, and agents die at random (10% per tick), which keeps empty space available. In the original model, ethnocentrics (who help only their own colour) become the most common strategy, at about three quarters of the population.
 
-We ported the NetLogo version of the model (Wilensky 2003) to Python, checked it against the NetLogo runs (nine experiments, no clear difference), and added a pedigree so the relatedness of neighbours can be measured. Four pre-registered experiments followed, with 30 runs per condition. The model's inner loops were later compiled with Numba, which made a run 4 to 8 times faster (about 0.5–0.8 s instead of 3.4 s for a 2,000-tick run on the 51×51 grid). The random draws happen in the same order as before, so every committed run reproduces exactly, and all results below are unchanged.
+We ported the NetLogo version of the model (Wilensky 2003) to Python, checked it against the NetLogo runs (nine experiments, no clear difference), and added a pedigree so the relatedness of neighbours can be measured. Five pre-registered experiments followed, with 30 runs per condition. The model's inner loops were later compiled with Numba, which made a run 4 to 8 times faster (about 0.5–0.8 s instead of 3.4 s for a 2,000-tick run on the 51×51 grid). The random draws happen in the same order as before, so every committed run reproduces exactly, and all results below are unchanged.
 
 <figure className="site-table-figure">
   <div className="site-table-scroll">
@@ -485,6 +485,10 @@ We ported the NetLogo version of the model (Wilensky 2003) to Python, checked it
           <td>Lower viscosity: offspring placed anywhere in the world with probability d</td>
           <td style={{ backgroundColor: '#F8D7DA' }}>Cooperation fell as d rose: with random colour from 76% to 4% of meetings at d = 1. Inherited colour did not prevent this: at d = 1 both colour rules gave about 4%, with egoists at about 90%. At intermediate dispersal inherited colour went with more cooperation (45% vs 29% at d = 0.25; descriptive only).</td>
         </tr>
+        <tr>
+          <td>Shuffle: with random colour, at the end of every tick the agents swap places at random among the occupied cells, so neighbours who meet share a founder only as often as under random mixing; offspring are still born next to their parent</td>
+          <td style={{ backgroundColor: '#D6E4F5' }}>Founder sharing among neighbours who meet fell to the level of random mixing (from 0.64 above it to 0.00). Cooperation fell from 76% to 11% of meetings, and egoists rose from 8% to 76% of the population. The drop was in which strategies existed, not in whom they met: each strategy still met its own colour 25% of the time. Shuffling a tenth of the cells per tick already brought cooperation down to 22% (descriptive only).</td>
+        </tr>
       </tbody>
     </table>
   </div>
@@ -492,6 +496,8 @@ We ported the NetLogo version of the model (Wilensky 2003) to Python, checked it
 </figure>
 
 **What this adds to the picture above.** In this model, cooperation was highest when offspring stayed near their parents, so that neighbours were often related, as in the viscosity results above. With inherited colour acting as a cue of descent, help went to same-colour neighbours, who were closer kin while offspring stayed local. At full dispersal, inherited colour did not produce more cooperation than random colour: egoists of the same colour could collect help from ethnocentrics they settled next to, and cooperation fell to about 4% of meetings under both colour rules. Random colour also made same-colour meetings rarer (25% instead of 80%); bringing the average own-colour meeting share back to about 80% with still-random colour restored only part of the ethnocentric share (32% instead of 76%). Two limits apply. That third experiment matches the average meeting share, not the colour structure (one dominant colour rather than four local colour clusters), so it narrows this confound rather than removing it. The dispersal experiment changes relatedness together with how often births are blocked, how large the population grows and whom agents meet.
+
+The shuffle experiment addresses that last limit. It keeps local birth and leaves the occupied cells occupied at each shuffle, but brings founder sharing among neighbours who meet down to the random-mixing level. Cooperation then collapsed as it did under full dispersal. Of these experiments, it is the clearest test of whether removing spatial assortment lowers cooperation. The result is consistent with cooperation being supported by assortment through local birth (the kin-selection reading). It still does not show that relatedness alone is the cause. Because strategies are inherited, neighbours also stop sharing strategies, and that cannot be separated from shared descent here. Competition among relatives for nearby empty cells changes too, and the population shrank (from about 1,620 to 870) as cooperation fell.
 
 ## See Also
 
