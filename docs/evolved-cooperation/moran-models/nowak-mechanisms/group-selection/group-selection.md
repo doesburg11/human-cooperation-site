@@ -69,6 +69,21 @@ This implements a two-level selection process:
   <figcaption className="site-table-caption"><strong>Display 1:</strong> Key parameters controlling group partitioning and between-group selection.</figcaption>
 </figure>
 
+## Simulation Results
+
+Proof-of-mechanism runs on a 24×24 grid, 5 seeds and 1000 steps each ([`utils/proof_of_mechanism.py`](https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/group_selection/utils/proof_of_mechanism.py)); these hold only at the settings tested:
+
+- **Maintenance:** started common, cooperation stayed high in 5/5 seeds (mean trait 0.950), with a von Neumann neighbourhood and a between-group event every 25 steps.
+- **Spread from rare:** 2/5 seeds (mean trait 0.548); outcomes varied across seeds.
+- **Without spatial clustering:** with a Moore neighbourhood (k = 8, above b/c = 5), cooperation failed and ended near zero in 5/5 seeds, both without group events (mean trait 0.010) and with them (0.012). On this grid and at these settings, group events did not make up for the loss of spatial assortment.
+- **Without group events:** in an earlier run of the proof, on the von Neumann grid with group events switched off, cooperation started common was maintained in 5/5 seeds (mean trait 0.916). So group events were not needed for maintenance here, and on this grid group selection is entangled with network structure.
+
+## Ecological Counterpart
+
+The EvolvedCooperation repository also has an [ecological version](https://github.com/doesburg11/EvolvedCooperation/tree/main/ecological_models/nowak_mechanisms/group_selection), with births, deaths, energy budgets and sexual reproduction. Groups split when they grow too large and are absorbed when they shrink, and cooperation acts through probabilistic conflicts between groups: the group with the higher mean helping trait tends to win, its adults gain energy, and part of the losing group emigrates or dies. Starting from rare helpers, 10 of its 11 scenario checks passed (5 seeds, 500 steps each). The proof reports a threshold-based invasion frequency (the share of agents above a helping threshold), population size and Qst, the share of trait variance that lies between groups; in the baseline the invasion frequency rose by 0.24, with Qst 0.13.
+
+The failed check is the informative one. With conflicts switched off, the invasion frequency rose further (+0.32), but the population fell from about 249 to 41: the winners' energy bonus was the main source of population growth, so conflict also kept the population alive. Helpers still spread because same-group mating (probability 0.65) preferentially pairs them within their group, a channel that works without any competition between groups and could not be removed without restructuring the demography. The ecological model therefore does not isolate group selection: its documented confound is assortative mating together with conflict-dependent demography. Because it also uses blending inheritance and a threshold measure, the invasion frequency may partly count intermediate offspring, as the repository showed for the ecological network-reciprocity model, though that inflation was not tested here.
+
 ## Python Module Layout
 
 ```text
@@ -78,6 +93,9 @@ moran_models/nowak_mechanisms/group_selection/
   group_selection_pygame_ui.py
   config/
     group_selection_config.py
+  utils/
+    proof_of_mechanism.py
+  data/                       # proof-of-mechanism CSVs
 ```
 
 ## Usage
@@ -90,6 +108,12 @@ Live viewer:
 
 ```bash
 ./.conda/bin/python -m moran_models.nowak_mechanisms.group_selection.group_selection_pygame_ui
+```
+
+Proof scenarios:
+
+```bash
+./.conda/bin/python -m moran_models.nowak_mechanisms.group_selection.utils.proof_of_mechanism
 ```
 
 ## See Also
