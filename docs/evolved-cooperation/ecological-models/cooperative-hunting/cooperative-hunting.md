@@ -40,7 +40,7 @@ One useful intuition is to imagine each predator carrying a built-in tendency to
 
 ## The Frozen Replay Setup
 
-The browser replay on this page is a specific seeded run from the frozen website-demo configuration, not a schematic animation. It uses:
+The browser replay on this page is a specific seeded run from the frozen website-demo configuration, not a schematic animation. That configuration is the repository's *supported-start* threshold-synergy regime (see [How typical is the replay?](#how-typical-is-the-replay)). It uses:
 
 - a `60 × 60` toroidal grid
 - `65` initial predators and `575` initial prey
@@ -244,16 +244,28 @@ Within the site's evolved-cooperation set, Cooperative Hunting is the most ecolo
 	caption="How Cooperative Hunting fits among the site's evolved-cooperation case studies."
 />
 
+## How Typical Is The Replay?
+
+The replay is one seed. The repository's [fixed 2×2 comparison](https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/cooperative_hunting/utils/compare_de_novo_vs_supported_baselines.py) ran four regimes for 5 seeds and 10,000 steps each, counting a run as reaching the target when both species survived and the mean trait over the last 2,000 steps was at least 0.50:
+
+- **Supported start, threshold-synergy hunting (the replay's regime):** target reached in 3/5 seeds; mean tail trait across all five seeds 0.58 (lowest seed 0.13); prey went extinct in the other 2.
+- **Near-zero start, threshold-synergy hunting:** predators went extinct in all 5 seeds, on average by step 37, before cooperation could build up.
+- **Near-zero start, the smoother probabilistic hunt rule:** both species survived in 3/5 seeds, but the mean tail trait stayed near 0.39 and no seed reached the 0.50 tail-mean target; prey went extinct in the other 2.
+- **Supported start, probabilistic hunting:** prey went extinct in all 5 seeds.
+
+"Supported start" bundles several differences from the near-zero start, not only the starting trait range (up to 0.15 rather than 0.05): a lower cooperation cost per unit of trait (0.02 rather than 0.08), more starting predator energy (3.0 rather than 2.2), fewer initial predators and different reproduction rates. So the replay shows a cooperative hunting trait being amplified once threshold-synergy hunts are feasible, in a regime where that happened in 3 of 5 seeds; it is not a test of cooperation emerging from near zero, which failed under the same hunt rule. Five seeds per regime are too few to treat these rates as precise. These are archived results generated on 2026-04-02; the model and its configs were reorganized a few days later and the comparison has not been rerun against the current code, so they are a reproducibility caveat rather than a verified current result.
+
 ## Conclusions
 
-This case study gives a clear ecological answer to the question of how cooperation can emerge.
+This case study gives an ecological picture of how an inherited cooperative trait can be amplified once coordinated hunting is feasible.
 
-- cooperation does not emerge here because predators become nicer or more intelligent; it emerges because an inherited hunting-investment trait changes survival and reproduction inside a spatial food web
-- the trait is costly at the individual level, so the result is not trivial; higher investment survives only when it helps predators participate in sufficiently successful group hunts to recover that cost
-- the frozen replay shows exactly that kind of selection pressure; mean hunting investment rises from about `0.087` at the start to about `0.848` by step `10000`
+- cooperation does not rise here because predators become nicer or more intelligent; it rises because an inherited hunting-investment trait changes survival and reproduction inside a spatial food web
+- the trait is costly at the individual level, so the result is not trivial; higher investment can be favored when it helps predators participate in sufficiently successful group hunts to offset that cost
+- the frozen replay shows that kind of selection pressure in one seed; mean hunting investment rises from about `0.087` at the start to about `0.848` by step `10000`, in a regime that reached a mean of at least 0.50 in 3 of 5 seeds
 - the end state is not pure collapse or simple prey extinction; predators and prey both remain present, but the predator population has shifted toward a much more cooperative inherited strategy
 - prey also tend to form local clusters in the replay, but in this model that should be read as an emergent spatial consequence of local reproduction, movement, and predation pressure rather than as an explicitly modeled cooperative strategy by prey
-- the broader lesson matches the rest of this section of the site: cooperation can emerge when the structure of interaction makes helping behavior reproductively advantageous despite its private cost
+- from a near-zero start with the same hunt rule, predators died out before cooperation could build up, so this model does not show cooperation originating from a near-zero starting level
+- the broader lesson matches the rest of this section of the site: cooperation can spread when the structure of interaction makes helping behavior reproductively advantageous despite its private cost, and starting conditions can decide whether it gets the chance
 
 ## References
 
