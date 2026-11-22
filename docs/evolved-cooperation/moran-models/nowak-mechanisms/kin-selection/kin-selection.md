@@ -453,7 +453,7 @@ The results above come from the Moran model: a full grid where every site is ref
 
 The models above track lineage directly. Real organisms usually cannot see relatedness; at most they see a cue that tends to go with it. Hammond and Axelrod's (2006) ethnocentrism model is a simple test case. Agents on a 51×51 torus have an inherited colour (one of four) and two inherited flags: help neighbours of the same colour or not, and help neighbours of another colour or not. Helping costs the helper 0.01 and gives the neighbour 0.03 in chance to reproduce; offspring are placed next to the parent, and agents die at random (10% per tick), which keeps empty space available. In the original model, ethnocentrics (who help only their own colour) become the most common strategy, at about three quarters of the population.
 
-We ported the NetLogo version of the model (Wilensky 2003) to Python, checked it against the NetLogo runs (nine experiments, no clear difference), and added a pedigree so the relatedness of neighbours can be measured. Five pre-registered experiments followed, with 30 runs per condition. The model's inner loops were later compiled with Numba, which made a run 4 to 8 times faster (about 0.5–0.8 s instead of 3.4 s for a 2,000-tick run on the 51×51 grid). The random draws happen in the same order as before, so every committed run reproduces exactly, and all results below are unchanged.
+We ported the NetLogo version of the model (Wilensky 2003) to Python, checked it against the NetLogo runs (nine experiments, no clear difference), and added a pedigree so the relatedness of neighbours can be measured. Six pre-registered experiments followed, with 30 runs per condition (60 in the last). The model's inner loops were later compiled with Numba, which made a run 4 to 8 times faster (about 0.5–0.8 s instead of 3.4 s for a 2,000-tick run on the 51×51 grid). The random draws happen in the same order as before, so every committed run reproduces exactly, and all results below are unchanged.
 
 <figure className="site-table-figure">
   <div className="site-table-scroll">
@@ -489,15 +489,46 @@ We ported the NetLogo version of the model (Wilensky 2003) to Python, checked it
           <td>Shuffle: with random colour, at the end of every tick the agents swap places at random among the occupied cells, so neighbours who meet share a founder only as often as under random mixing; offspring are still born next to their parent</td>
           <td style={{ backgroundColor: '#D6E4F5' }}>Founder sharing among neighbours who meet fell to the level of random mixing (from 0.64 above it to 0.00). Cooperation fell from 76% to 11% of meetings, and egoists rose from 8% to 76% of the population. The drop was in which strategies existed, not in whom they met: each strategy still met its own colour 25% of the time. Shuffling a tenth of the cells per tick already brought cooperation down to 22% (descriptive only).</td>
         </tr>
+        <tr>
+          <td>Hamilton's-rule prediction: one colour, so helping is a single inherited trait; relatedness r first measured without selection at four shuffle levels, then the benefit set so that r × benefit / cost = k</td>
+          <td style={{ backgroundColor: '#D6E4F5' }}>Relatedness measured in advance predicted whether helpers became more or less common than without selection in all 8 cells far from the threshold (k = 0.5 and 2), across relatedness from 0.79 to 0.23. Near the threshold (k = 0.8 and 1.25), 6 of 8 cells went the predicted way and 2 were unclear; none went the opposite way (Display 8).</td>
+        </tr>
       </tbody>
     </table>
   </div>
-  <figcaption className="site-table-caption"><strong>Display 7:</strong> Kin cues in the ethnocentrism model (Experiment 104 settings, 30 runs per condition). Blue: the pre-registered expectation was met; red: the test that the colour cue can stand in for local birth was not met. Details and all numbers are in the module's <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/ethnocentrism/RESULTS.md">RESULTS.md</a>.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 7:</strong> Kin cues in the ethnocentrism model (Experiment 104 settings, 30 runs per condition; 60 in the Hamilton's-rule test). Blue: the pre-registered expectation was met (for the Hamilton's-rule test, the main hypothesis; the near-threshold one was inconclusive); red: the test that the colour cue can stand in for local birth was not met. Details and all numbers are in the module's <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/ethnocentrism/RESULTS.md">RESULTS.md</a>.</figcaption>
 </figure>
 
 **What this adds to the picture above.** In this model, cooperation was highest when offspring stayed near their parents, so that neighbours were often related, as in the viscosity results above. With inherited colour acting as a cue of descent, help went to same-colour neighbours, who were closer kin while offspring stayed local. At full dispersal, inherited colour did not produce more cooperation than random colour: egoists of the same colour could collect help from ethnocentrics they settled next to, and cooperation fell to about 4% of meetings under both colour rules. Random colour also made same-colour meetings rarer (25% instead of 80%); bringing the average own-colour meeting share back to about 80% with still-random colour restored only part of the ethnocentric share (32% instead of 76%). Two limits apply. That third experiment matches the average meeting share, not the colour structure (one dominant colour rather than four local colour clusters), so it narrows this confound rather than removing it. The dispersal experiment changes relatedness together with how often births are blocked, how large the population grows and whom agents meet.
 
 The shuffle experiment addresses that last limit. It keeps local birth and leaves the occupied cells occupied at each shuffle, but brings founder sharing among neighbours who meet down to the random-mixing level. Cooperation then collapsed as it did under full dispersal. Of these experiments, it is the clearest test of whether removing spatial assortment lowers cooperation. The result is consistent with cooperation being supported by assortment through local birth (the kin-selection reading). It still does not show that relatedness alone is the cause. Because strategies are inherited, neighbours also stop sharing strategies, and that cannot be separated from shared descent here. Competition among relatives for nearby empty cells changes too, and the population shrank (from about 1,620 to 870) as cooperation fell.
+
+The last experiment asks a sharper question: not only whether helping depends on relatedness, but whether Hamilton's rule, r × benefit > cost, predicts the direction of change in the share of helpers on either side of the threshold. With one colour, helping is a single inherited trait. Relatedness r among neighbours who meet was measured first in runs without selection, at four shuffle levels, and the benefit was then set so that r × benefit / cost = k. The rule predicts that helpers become more common than in the neutral runs when k > 1, and less common when k < 1.
+
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+    <table className="site-table site-table--bordered">
+      <thead>
+        <tr>
+          <th>k = r × benefit / cost</th>
+          <th>r = 0.79 (no shuffle)</th>
+          <th>r = 0.51</th>
+          <th>r = 0.35</th>
+          <th>r = 0.23</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>0.5</td><td style={{ backgroundColor: '#D6E4F5' }}>−0.11</td><td style={{ backgroundColor: '#D6E4F5' }}>−0.11</td><td style={{ backgroundColor: '#D6E4F5' }}>−0.14</td><td style={{ backgroundColor: '#D6E4F5' }}>−0.16</td></tr>
+        <tr><td>0.8</td><td style={{ backgroundColor: '#D6E4F5' }}>−0.05</td><td style={{ backgroundColor: '#D6E4F5' }}>−0.07</td><td style={{ backgroundColor: '#D6E4F5' }}>−0.07</td><td style={{ backgroundColor: '#D6E4F5' }}>−0.10</td></tr>
+        <tr><td>1.25</td><td style={{ backgroundColor: '#D6E4F5' }}>+0.04</td><td style={{ backgroundColor: '#D6E4F5' }}>+0.05</td><td>+0.03</td><td>+0.01</td></tr>
+        <tr><td>2</td><td style={{ backgroundColor: '#D6E4F5' }}>+0.17</td><td style={{ backgroundColor: '#D6E4F5' }}>+0.21</td><td style={{ backgroundColor: '#D6E4F5' }}>+0.19</td><td style={{ backgroundColor: '#D6E4F5' }}>+0.16</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <figcaption className="site-table-caption"><strong>Display 8:</strong> Hamilton's-rule prediction test in the one-colour ethnocentrism model: share of helpers in the last 100 ticks minus the share without selection at the same relatedness (60 runs per cell). Blue: the predicted direction, with p &lt; 0.01; white: unclear. No cell went the opposite way. Details in section 7 of the module's <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/ethnocentrism/RESULTS.md">RESULTS.md</a>.</figcaption>
+</figure>
+
+Far from the threshold the prediction held at every relatedness level. Near it, it held at the two higher relatedness levels and was unclear, but not reversed, at the two lower ones. The descriptive crossing of the helper-share difference (interpolated from the four k values) lay slightly above k = 1 and rose as relatedness fell, from about 1.02 to 1.21. This supports the pre-registered quantitative benchmark: relatedness measured in advance, with the raw payoffs, predicted the direction of the late-run change in the share of helpers far from the threshold. Two limits remain. In a lattice model like this, kin selection and spatial (network) reciprocity are two descriptions of the same process, so no result here can favour one over the other. And why the crossing lies above 1 and rises with shuffling was not tested. Relatedness under selection was somewhat lower than without it, which could explain the rise; competition among relatives for empty cells is another possible, untested contributor.
 
 ## See Also
 
