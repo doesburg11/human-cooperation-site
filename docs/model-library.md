@@ -42,7 +42,7 @@ Five thin wrappers over a shared Moran-process engine, one per classical mechani
         <tr>
           <td>Kin Selection</td>
           <td>Evolution</td>
-          <td>Cooperation spreads when benefit routed to relatives, weighted by relatedness, exceeds its private cost — Hamilton's rule <code>rB &gt; C</code>.</td>
+          <td>Cooperation spreads when benefit routed to relatives, weighted by relatedness, exceeds its private cost — Hamilton's rule <code>rB &gt; C</code>. In the tested spread-from-rare runs a helper keeps part of its own benefit, so the result is weak altruism; the tested variants with a real net cost to the helper did not spread.</td>
           <td><a href="/evolved-cooperation/kin-selection">Kin Selection</a></td>
         </tr>
         <tr>
@@ -77,7 +77,7 @@ Five thin wrappers over a shared Moran-process engine, one per classical mechani
 
 ## Ecological Models
 
-Three case studies that embed a cooperation problem inside a spatial, ecological setting rather than an abstract Moran process. (Spatial Altruism, once a fourth case study here, moved to [Evolved Cooperation's Foundational Replications](/evolved-cooperation/spatial-altruism) — it is a faithful implementation of one named paper rather than an original scenario built for this site; see that page's own explanation.)
+Three case studies that embed a cooperation problem inside a spatial, ecological setting rather than an abstract Moran process, plus the kin-selection ladder, which rebuilds the Moran kin-selection model step by step towards such a setting. (Spatial Altruism, once a fourth case study here, moved to [Evolved Cooperation's Foundational Replications](/evolved-cooperation/spatial-altruism) — it is a faithful implementation of one named paper rather than an original scenario built for this site; see that page's own explanation.)
 
 <figure className="site-table-figure">
   <div className="site-table-scroll">
@@ -115,10 +115,16 @@ Three case studies that embed a cooperation problem inside a spatial, ecological
           <td>The most abstract case study: strips away mechanism-specific structure to ask how much of the value cooperation creates has to be routed back to cooperators for it to spread.</td>
           <td><a href="/evolved-cooperation/retained-benefit">Retained Benefit</a></td>
         </tr>
+        <tr>
+          <td>Kin Selection Ladder</td>
+          <td>Evolution</td>
+          <td>A stepwise programme that rebuilds the kin-selection Moran model towards an ecological one, adding one pre-registered ingredient at a time (overlapping generations, costly help, parental care, survival, ages, energy, limited food, empty space) and testing at each step whether helping spreads from rare under the tested settings.</td>
+          <td><a href="/evolved-cooperation/kin-selection#from-the-moran-model-to-an-ecological-model">Kin Selection Ladder</a></td>
+        </tr>
       </tbody>
     </table>
   </div>
-  <figcaption className="site-table-caption"><strong>Display 2:</strong> Ecological evolved-cooperation case studies, each with a browser replay.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 2:</strong> Ecological evolved-cooperation models; the three case studies each have a browser replay, and the ladder is documented on the Kin Selection page.</figcaption>
 </figure>
 
 ## Learning × Selection Interaction Models
@@ -264,6 +270,12 @@ From-scratch replications of specific named papers, kept separate from this site
           <td>Evolution</td>
           <td>Mitteldorf &amp; Wilson's (2000) population-viscosity model: whether an altruistic inherited type can survive local exploitation once reproduction is local and empty space is a competitor. See its own page for how the same result also reads as a group-selection and a kin-selection argument.</td>
           <td><a href="/evolved-cooperation/spatial-altruism">Spatial Altruism</a></td>
+        </tr>
+        <tr>
+          <td>Hammond &amp; Axelrod (2006) — Ethnocentrism</td>
+          <td>Evolution</td>
+          <td>A Python port of the NetLogo Ethnocentrism model, in which agents inherit a colour and rules for helping their own and other colours. The port passed its registered comparison with no large, clear difference from NetLogo across nine experiments; added lineage tracking and pre-registered experiments probe whether inherited colour acts as a cue of shared descent.</td>
+          <td><a href="/evolved-cooperation/kin-selection#kin-cues-the-ethnocentrism-model">Ethnocentrism</a></td>
         </tr>
         <tr>
           <td>Leibo et al. (2017)</td>
