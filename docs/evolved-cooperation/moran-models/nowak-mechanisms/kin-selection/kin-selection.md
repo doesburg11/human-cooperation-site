@@ -453,7 +453,7 @@ The results above come from the Moran model: a full grid where every site is ref
 
 The models above track lineage directly. Real organisms usually cannot see relatedness; at most they see a cue that tends to go with it. Hammond and Axelrod's (2006) ethnocentrism model is a simple test case. Agents on a 51×51 torus have an inherited colour (one of four) and two inherited flags: help neighbours of the same colour or not, and help neighbours of another colour or not. Helping costs the helper 0.01 and gives the neighbour 0.03 in chance to reproduce; offspring are placed next to the parent, and agents die at random (10% per tick), which keeps empty space available. In the original model, ethnocentrics (who help only their own colour) become the most common strategy, at about three quarters of the population.
 
-We ported the NetLogo version of the model (Wilensky 2003) to Python, checked it against the NetLogo runs (nine experiments, no clear difference), and added a pedigree so the relatedness of neighbours can be measured. Three pre-registered experiments followed, with 30 runs per condition.
+We ported the NetLogo version of the model (Wilensky 2003) to Python, checked it against the NetLogo runs (nine experiments, no clear difference), and added a pedigree so the relatedness of neighbours can be measured. Four pre-registered experiments followed, with 30 runs per condition.
 
 <figure className="site-table-figure">
   <div className="site-table-scroll">
@@ -471,11 +471,15 @@ We ported the NetLogo version of the model (Wilensky 2003) to Python, checked it
       <tbody>
         <tr>
           <td>Who is helped (standard model)</td>
-          <td style={{ backgroundColor: '#D6E4F5' }}>Same-colour neighbours were usually kin: 90% shared a founder (the immigrant their line descends from), against 18% of different-colour neighbours, and 43% of same-colour neighbour pairs were a parent with its offspring or two siblings. Colour worked as a strong but imperfect cue of descent.</td>
+          <td style={{ backgroundColor: '#D6E4F5' }}>Same-colour neighbours were usually kin: 90% shared a founder (the immigrant their line descends from), against 18% of different-colour neighbours, and 43% of same-colour neighbour pairs were at most two births apart (parent and offspring, siblings, or grandparent and grandchild). Colour worked as a strong but imperfect cue of descent.</td>
         </tr>
         <tr>
           <td>Random colour: children get a random colour, so colour no longer tracks descent</td>
           <td style={{ backgroundColor: '#D6E4F5' }}>Ethnocentrics fell from 75.5% to 12.9% of the population; strategies that help regardless of colour became more common. How often help was given hardly changed (77% vs 76% of meetings), while neighbours remained related through local birth (70% shared a founder).</td>
+        </tr>
+        <tr>
+          <td>Random colour with own-colour meetings approximately matched: children get a random colour, but one colour is drawn far more often, so about 80% of meetings are with the own colour, as with inherited colour</td>
+          <td style={{ backgroundColor: '#D6E4F5' }}>Ethnocentrics made up 32.4% of the population, against 75.5% with inherited colour and 12.9% with uniform random colour. So most of the fall under random colour remained when the mean own-colour meeting share was approximately matched (80% vs 81% of ethnocentrics’ neighbours). Altruists were again the most common strategy.</td>
         </tr>
         <tr>
           <td>Lower viscosity: offspring placed anywhere in the world with probability d</td>
@@ -487,7 +491,7 @@ We ported the NetLogo version of the model (Wilensky 2003) to Python, checked it
   <figcaption className="site-table-caption"><strong>Display 7:</strong> Kin cues in the ethnocentrism model (Experiment 104 settings, 30 runs per condition). Blue: the pre-registered expectation was met; red: the test that the colour cue can stand in for local birth was not met. Details and all numbers are in the module's <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/ethnocentrism/RESULTS.md">RESULTS.md</a>.</figcaption>
 </figure>
 
-**What this adds to the picture above.** In this model, cooperation was highest when offspring stayed near their parents, so that neighbours were relatives, as in the viscosity results above. With inherited colour, a cue of descent, help went to same-colour neighbours, who were the closer kin while offspring stayed local. At full dispersal, inherited colour did not produce more cooperation than random colour: egoists of the same colour could collect help from ethnocentrics they settled next to, and cooperation fell to about 4% of meetings under both colour rules. Two limits apply. The random-colour experiment cannot separate the loss of the colour cue from the drop in same-colour meetings (25% instead of 80%). The dispersal experiment changes relatedness together with how often births are blocked, how large the population grows and whom agents meet.
+**What this adds to the picture above.** In this model, cooperation was highest when offspring stayed near their parents, so that neighbours were often related, as in the viscosity results above. With inherited colour acting as a cue of descent, help went to same-colour neighbours, who were closer kin while offspring stayed local. At full dispersal, inherited colour did not produce more cooperation than random colour: egoists of the same colour could collect help from ethnocentrics they settled next to, and cooperation fell to about 4% of meetings under both colour rules. Random colour also made same-colour meetings rarer (25% instead of 80%); bringing the average own-colour meeting share back to about 80% with still-random colour restored only part of the ethnocentric share (32% instead of 76%). Two limits apply. That third experiment matches the average meeting share, not the colour structure (one dominant colour rather than four local colour clusters), so it narrows this confound rather than removing it. The dispersal experiment changes relatedness together with how often births are blocked, how large the population grows and whom agents meet.
 
 ## See Also
 
