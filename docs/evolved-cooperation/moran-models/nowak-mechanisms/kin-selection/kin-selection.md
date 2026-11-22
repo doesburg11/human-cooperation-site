@@ -453,7 +453,7 @@ The results above come from the Moran model: a full grid where every site is ref
 
 The models above track lineage directly. Real organisms usually cannot see relatedness; at most they see a cue that tends to go with it. Hammond and Axelrod's (2006) ethnocentrism model is a simple test case. Agents on a 51×51 torus have an inherited colour (one of four) and two inherited flags: help neighbours of the same colour or not, and help neighbours of another colour or not. Helping costs the helper 0.01 and gives the neighbour 0.03 in chance to reproduce; offspring are placed next to the parent, and agents die at random (10% per tick), which keeps empty space available. In the original model, ethnocentrics (who help only their own colour) become the most common strategy, at about three quarters of the population.
 
-We ported the NetLogo version of the model (Wilensky 2003) to Python, checked it against the NetLogo runs (nine experiments, no clear difference), and added a pedigree so the relatedness of neighbours can be measured. Four pre-registered experiments followed, with 30 runs per condition.
+We ported the NetLogo version of the model (Wilensky 2003) to Python, checked it against the NetLogo runs (nine experiments, no clear difference), and added a pedigree so the relatedness of neighbours can be measured. Four pre-registered experiments followed, with 30 runs per condition. The model's inner loops were later compiled with Numba, which made a run 4 to 8 times faster (about 0.5–0.8 s instead of 3.4 s for a 2,000-tick run on the 51×51 grid). The random draws happen in the same order as before, so every committed run reproduces exactly, and all results below are unchanged.
 
 <figure className="site-table-figure">
   <div className="site-table-scroll">
