@@ -44,6 +44,10 @@ The [Two-Timescale Simulations](/learning-selection-interaction/simulations) sho
 
 The [Nowak Mechanisms](/evolved-cooperation/nowak-mechanisms) pages provide proof-of-mechanism simulations for classical evolutionary routes to cooperation. Their main lesson is not simply that cooperation can persist. It is that origin and maintenance are different problems. A mechanism can maintain cooperation once it is common while still failing to produce cooperation from rare.
 
+Kin selection was the most robust initiator among them, but with a qualification found later: in that model a helper keeps part of its own benefit, so the spread from rare was weak altruism (no net direct cost to the helper), and help with a real net cost failed. With overlapping generations, costly help to neighbours did spread at benefit-to-cost ratios of 12 and 24 when offspring settled locally, and at 12 failed under global-competitor replacement. This is consistent with kin selection through viscosity but was not separated from network reciprocity ([Kin Selection](/evolved-cooperation/kin-selection#later-tests-self-benefit-and-speed)).
+
+One of the most thoroughly tested evolved-cooperation results so far comes from a Python port of the Ethnocentrism model, tested in six pre-registered experiments including a lineage measurement ([Kin cues](/evolved-cooperation/kin-selection#kin-cues-the-ethnocentrism-model)). When colour no longer passed from parent to offspring, the share of ethnocentric agents fell from 75.5% to 12.9%, and it stayed 43 points lower when the own-colour meeting share was matched. Shuffling positions, which removed the excess relatedness among interacting neighbours but also changed other conditions, went with cooperation falling from 75.6% to 11.0% of meetings. A Hamilton's-rule prediction made in advance from measured relatedness got the direction of change in helper share right in all 8 conditions far from the threshold and in 6 of 8 close to it, with none reversed. In a lattice model like this, kin selection and network reciprocity describe the same process, and the experiments narrow other differences between conditions rather than removing them.
+
 The ecological model pages — [Cooperative Hunting](/evolved-cooperation/cooperative-hunting), [Spatial Prisoner's Dilemma](/evolved-cooperation/spatial-prisoners-dilemma), and [Retained Benefit](/evolved-cooperation/retained-benefit) — plus the foundational replication [Spatial Altruism](/evolved-cooperation/spatial-altruism), are best read as mechanism demonstrations. They show how spatial structure, ecological feedback, costs, benefits, and local interaction can change cooperative dynamics, but they are not yet the final evidential core of the human argument.
 
 ## Null Results
@@ -55,6 +59,8 @@ The clearest null history is in [PredPreyGrass](/learning-selection-interaction/
 The [PPO Study](/learned-cooperation/repeated-prisoners-dilemma/ppo-study) is also a limiting result. Under the reported two-sided tests with Holm correction across 40 comparisons, no `(horizon, player)` result was significant at `alpha = 0.05` in the shown run.
 
 Several cooperation mechanisms also have built-in limits. Direct reciprocity can maintain cooperation once reciprocal behavior is common, but it does not reliably originate cooperation from a defector-dominated population without a foothold or scaffold. Indirect reciprocity depends on a reputation system that itself has to bootstrap. Network reciprocity and group selection can be stochastic rather than automatic.
+
+Kin selection has not yet been shown cleanly in a model with more ecology. In a model with sexual reproduction, households and juvenile care, helping rose from rare in some runs, but the controls could not separate that from population survival: no tested survival floor up to 0.4 kept populations without helpers alive. A stepwise rebuild from the Moran model towards ecology found that care for one's own young spread at every step tested, also without local settlement (parental investment, not kin selection among more distant relatives), and did not reach its agreed endpoint in a model with substantial empty space before its hard stop (one version produced substantial empty space, but its main test missed the endpoint) ([From the Moran model to an ecological model](/evolved-cooperation/kin-selection#from-the-moran-model-to-an-ecological-model)).
 
 ## Non-Replications
 
@@ -76,6 +82,7 @@ Concrete next questions include:
 - What explains Trial 12's remaining discrepancy with the original Ackley & Littman result, where evolution-alone beats luck here but not in the original paper?
 - Does the deeper longitudinal genetic-assimilation result from Ackley & Littman also reproduce in the current implementation?
 - Does the partially built drive-conditioned observation system improve learning, and can it support an evolutionary extension?
+- Can costly help to relatives other than one's own offspring be shown in a model with empty space, where population size follows resources instead of a replacement rule?
 - Which mechanism-level results still hold when explicitly human layers are added, such as social learning, norms, institutions, language, punishment, group identity, and moral cognition?
 
 ## How to Read the Evidence
@@ -119,9 +126,23 @@ Use these labels when moving through the site:
         <tr>
           <td>Nowak mechanisms</td>
           <td>Proof-of-mechanism</td>
-          <td>Classical cooperation mechanisms can maintain, spread, or fail under clearly separated conditions.</td>
-          <td>Mechanism isolation is not the same as a full human explanation.</td>
+          <td>Classical cooperation mechanisms can maintain, spread, or fail under clearly separated conditions; origin from rare is harder than maintenance, and kin selection was the most robust initiator.</td>
+          <td>Mechanism isolation is not the same as a full human explanation; the kin-selection spread was weak altruism (no net cost to the helper).</td>
           <td><a href="/evolved-cooperation/nowak-mechanisms">Nowak Mechanisms</a></td>
+        </tr>
+        <tr>
+          <td>Ethnocentrism kin cues</td>
+          <td>Confirmed (pre-registered, one model)</td>
+          <td>In-group helping fell sharply when colour no longer tracked descent: random colour cut ethnocentrism from 75.5% to 12.9%; shuffling positions, which removed excess relatedness among neighbours, went with cooperation falling from 75.6% to 11.0%; a Hamilton's-rule prediction got the direction right far from the threshold (8/8).</td>
+          <td>One lattice model, where kin selection and network reciprocity coincide; near the threshold 6/8 correct and 2 unclear; other differences between conditions narrowed, not removed.</td>
+          <td><a href="/evolved-cooperation/kin-selection#kin-cues-the-ethnocentrism-model">Kin cues</a></td>
+        </tr>
+        <tr>
+          <td>Kin selection: Moran to ecology</td>
+          <td>Mixed (pre-registered steps)</td>
+          <td>Costly help to neighbours spread with local settlement (b/c 12 and 24) and failed at b/c 12 under global-competitor replacement; care for own young spread at every tested ecological step (R1-R4).</td>
+          <td>The care result is parental investment, not kin selection among more distant relatives; an earlier ecological model could not separate helping from population survival; the step with substantial empty space did not reach its endpoint.</td>
+          <td><a href="/evolved-cooperation/kin-selection#from-the-moran-model-to-an-ecological-model">Kin Selection</a></td>
         </tr>
         <tr>
           <td>Ecological evolved-cooperation models</td>
