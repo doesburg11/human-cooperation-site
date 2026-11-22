@@ -135,13 +135,13 @@ Such settings are better captured by ecological and evolutionary simulations tha
 
 Different model systems expose different mechanisms by which cooperative tendencies may be favored by selection across generations.
 
-Examples include:
+Examples on this site include:
 
-- local altruism in a spatial patch lattice,
-- inherited predispositions for coordinated hunting,
-- traits that reduce costly interference,
-- selection for timing and spacing that improves capture success,
-- plasticity traits that make cooperation easier to learn.
+- local altruism in a spatial patch lattice ([Spatial Altruism](/evolved-cooperation/spatial-altruism)),
+- an inherited investment in coordinated hunting ([Cooperative Hunting](/evolved-cooperation/cooperative-hunting)),
+- inherited same-versus-other response rules in local games ([Spatial Prisoner's Dilemma](/evolved-cooperation/spatial-prisoners-dilemma)),
+- a cooperation trait whose benefit is routed partly back to cooperators ([Retained Benefit](/evolved-cooperation/retained-benefit)),
+- helping guided by an inherited cue of shared descent (the ethnocentrism model on the [Kin Selection](/evolved-cooperation/kin-selection#kin-cues-the-ethnocentrism-model) page).
 
 In this view, cooperation is not only a behavioral pattern but also a target of **selection on underlying traits**.
 
@@ -209,17 +209,53 @@ Across these model systems, evolved cooperation forms the **nature component** o
 
 ---
 
+## What the Models Show So Far
+
+As of November 2026. Each result holds only for the model and settings it was run with; the linked pages give the
+controls and caveats.
+
+- **Origin is harder than maintenance.** In the [Nowak Mechanisms](/evolved-cooperation/nowak-mechanisms) models,
+  several mechanisms maintain cooperation once it is common, but fewer spread it from rare. Kin selection was the
+  most biologically robust initiator tested, because its precondition, offspring staying near their parents, comes
+  with local reproduction itself.
+- **That spread was mostly weak altruism.** In the kin-selection model a helper keeps part of its own benefit, so
+  helping has no net direct cost; help with a real net cost to the helper failed there. In a later variant with
+  overlapping generations, costly help to neighbours did spread when offspring settled locally, at benefit-to-cost
+  ratios of 12 and 24; at 12 it failed under global-competitor replacement. This is consistent with kin selection through viscosity, but was not separated
+  from network reciprocity ([Kin Selection](/evolved-cooperation/kin-selection#later-tests-self-benefit-and-speed)).
+- **In-group helping tracked descent.** In a Python port of the Ethnocentrism model, the share of ethnocentric agents
+  (who help only their own colour) fell from 75.5% to 12.9% when colour no longer passed from parent to offspring, and a
+  Hamilton's-rule prediction made in advance got the direction of change in helper share right in all 8
+  conditions far from the threshold and in 6 of 8 close to it, with none reversed
+  ([Kin cues](/evolved-cooperation/kin-selection#kin-cues-the-ethnocentrism-model)).
+- **Adding ecology did not yet give a clean kin-selection result.** In a model with sexual reproduction,
+  households and juvenile care, helping rose from rare in some runs, but the controls could not separate that from
+  population survival. A stepwise rebuild from the Moran model towards ecology found that care for one's own
+  young (parental investment) spread at every step tested, also without local settlement, and did not reach a model with substantial empty space
+  ([From the Moran model to an ecological model](/evolved-cooperation/kin-selection#from-the-moran-model-to-an-ecological-model)).
+- **No cooperation without feedback.** Across the ecological case studies below, cooperation persists only where
+  enough of the benefit it creates returns to cooperators or to copies of the cooperative rule; without that,
+  selfish behaviour usually wins.
+
+Read together, and qualitatively: cooperation spread most often where local reproduction or interaction structure
+created assortment (relatives as neighbours, partners or mates), and usually declined where the tests broke that link.
+
 ## Current Case Studies
 
-The current site includes four complementary evolved-cooperation examples:
+The table below lists three ecological evolved-cooperation case studies; the spatial altruism lattice, the fourth
+website-facing model, is described under [Foundational Theory](/evolved-cooperation/spatial-altruism):
 
 <EvolvedCooperationCaseStudiesTable displayNumber="2" />
 
-## General Kernel Abstraction
+## Moran Models
 
-The current four case studies are implemented evolved-cooperation modules. The sibling [`EvolvedCooperation`](https://github.com/doesburg11/EvolvedCooperation) repository also now contains [Interaction Kernel](/evolved-cooperation/interaction-kernel), a general kernel engine that separates trait-dependent production, positive and negative effect routing, fitness score formation, local selection, and inheritance.
+Alongside the ecological models, the sibling [`EvolvedCooperation`](https://github.com/doesburg11/EvolvedCooperation)
+repository has a family of fixed-population models built on [the Moran process](/evolved-cooperation/moran-process):
 
-Interaction Kernel is not a replay case study yet. It is the reusable abstraction layer that can instantiate retained-benefit-like, kin-weighted, network-local, and mixed help-harm settings without duplicating the simulation core.
+- [Interaction Kernel](/evolved-cooperation/interaction-kernel), a general engine that separates trait-dependent
+  production, positive and negative effect routing, fitness, local selection and inheritance;
+- the [Nowak Mechanisms](/evolved-cooperation/nowak-mechanisms) pages, which run kin selection, direct and indirect
+  reciprocity, network reciprocity and group selection on that engine under matched assumptions.
 
 ## References
 
