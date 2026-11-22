@@ -136,11 +136,11 @@ The five mechanisms are often described as answers to the question "how does coo
 
 <figure style={{ margin: '0 0 1.5rem 0' }}>
   <div style={{ border: '1px solid #D6E4F5', overflow: 'hidden' }}>
-    <div style={{ backgroundColor: '#0F3368', color: '#FFFFFF', padding: '0.5rem 1.25rem', fontWeight: 'bold' }}>Direct reciprocity — fully proven by simulation</div>
+    <div style={{ backgroundColor: '#0F3368', color: '#FFFFFF', padding: '0.5rem 1.25rem', fontWeight: 'bold' }}>Direct reciprocity — simulation evidence</div>
     <div style={{ backgroundColor: '#EAF2FB', color: '#1F2D3D', padding: '0.6rem 1.25rem' }}>
       <ul style={{ margin: '0' }}>
-        <li><strong>Maintenance:</strong> proven — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/direct_reciprocity/well_mixed/utils/proof_of_mechanism.py">well_mixed/proof_of_mechanism.py</a> · <a href="/evolved-cooperation/direct-reciprocity#step-1-pure-direct-reciprocity-fails">Step 1 on direct reciprocity page</a></li>
-        <li><strong>Spread from rare = No:</strong> proven — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/direct_reciprocity/well_mixed/utils/proof_stability_vs_invasion.py">well_mixed/proof_stability_vs_invasion.py</a> · <a href="/evolved-cooperation/direct-reciprocity#step-2-partner-persistence-is-necessary-but-not-sufficient-from-a-random-start">Step 2 on direct reciprocity page</a></li>
+        <li><strong>Maintenance:</strong> shown — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/direct_reciprocity/well_mixed/utils/proof_of_mechanism.py">well_mixed/proof_of_mechanism.py</a> · <a href="/evolved-cooperation/direct-reciprocity#step-1-pure-direct-reciprocity-fails">Step 1 on direct reciprocity page</a></li>
+        <li><strong>Spread from rare = No:</strong> shown — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/direct_reciprocity/well_mixed/utils/proof_stability_vs_invasion.py">well_mixed/proof_stability_vs_invasion.py</a> · <a href="/evolved-cooperation/direct-reciprocity#step-2-partner-persistence-is-necessary-but-not-sufficient-from-a-random-start">Step 2 on direct reciprocity page</a></li>
         <li><strong>Spatial clustering scaffold:</strong> network reciprocity provides origin, direct reciprocity provides maintenance — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/direct_reciprocity/scaffolds/spatial_clustering/utils/proof_of_mechanism.py">spatial_clustering/proof_of_mechanism.py</a> · <a href="/evolved-cooperation/direct-reciprocity#step-3-spatial-structure-adds-network-reciprocity">Step 3 on direct reciprocity page</a></li>
         <li><strong>Kin clustering scaffold:</strong> partner permanence is the origin mechanism — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/direct_reciprocity/scaffolds/kin_clustering/utils/proof_of_mechanism.py">kin_clustering/proof_of_mechanism.py</a> · <a href="/evolved-cooperation/direct-reciprocity#step-4-partner-permanence-not-spatial-clustering-is-the-origin-mechanism">Step 4 on direct reciprocity page</a></li>
       </ul>
@@ -151,13 +151,13 @@ The five mechanisms are often described as answers to the question "how does coo
 
 <figure style={{ margin: '0 0 1.5rem 0' }}>
   <div style={{ border: '1px solid #D6E4F5', overflow: 'hidden' }}>
-    <div style={{ backgroundColor: '#0F3368', color: '#FFFFFF', padding: '0.5rem 1.25rem', fontWeight: 'bold' }}>Indirect reciprocity — fully proven by simulation</div>
+    <div style={{ backgroundColor: '#0F3368', color: '#FFFFFF', padding: '0.5rem 1.25rem', fontWeight: 'bold' }}>Indirect reciprocity — simulation evidence</div>
     <div style={{ backgroundColor: '#EAF2FB', color: '#1F2D3D', padding: '0.6rem 1.25rem' }}>
       <ul style={{ margin: '0' }}>
-        <li><strong>Maintenance = Yes:</strong> proven — 5/5 seeds, mean trait 0.873 — binary Nowak model (donor helps only if recipient reputation ≥ threshold, q=0.80 &gt; c/b=0.20) — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/indirect_reciprocity/well_mixed_binary/utils/proof_of_mechanism.py">well_mixed_binary/proof_of_mechanism.py</a></li>
-        <li><strong>Spread from rare = No:</strong> proven — 0/5 seeds, mean trait 0.276 (q=0.80) and 0/5, mean trait 0.201 (q=0.05) — rare cooperators help defectors who have neutral initial reputation, but defectors never reciprocate; cooperators pay cost with no return and are eliminated before the reputation feedback loop can bootstrap — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/indirect_reciprocity/well_mixed_binary/utils/proof_of_mechanism.py">well_mixed_binary/proof_of_mechanism.py</a></li>
-        <li><strong>Reputation gating ablation:</strong> without reputation-gated access to help, maintenance fails (2/5 seeds vs. 5/5 with gating) — defectors receive the same benefit as cooperators without paying the cost; confirms reputation-gated discrimination is the mechanism</li>
-        <li><strong>Why the spatial model confounds this:</strong> the spatial grid provides network-reciprocity clustering on top of the reputation channel; the ablation (no reputation routing) still gives 5/5 success on the grid, proving the grid alone sustains cooperation. The well-mixed binary model isolates the reputation channel cleanly — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/indirect_reciprocity/well_mixed_binary/utils/proof_of_mechanism.py">well_mixed_binary/proof_of_mechanism.py</a></li>
+        <li><strong>Maintenance = Yes:</strong> shown — 5/5 seeds, mean trait 0.873 — binary Nowak model (donor helps only if recipient reputation ≥ threshold, q=0.80 &gt; c/b=0.20) — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/indirect_reciprocity/well_mixed_binary/utils/proof_of_mechanism.py">well_mixed_binary/proof_of_mechanism.py</a></li>
+        <li><strong>Spread from rare = No:</strong> shown — 0/5 seeds, mean trait 0.276 (q=0.80) and 0/5, mean trait 0.201 (q=0.05) — rare cooperators help defectors who have neutral initial reputation, but defectors return little or no help; cooperators pay cost with no return and are eliminated before the reputation feedback loop can bootstrap — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/indirect_reciprocity/well_mixed_binary/utils/proof_of_mechanism.py">well_mixed_binary/proof_of_mechanism.py</a></li>
+        <li><strong>Reputation gating ablation:</strong> without reputation-gated access to help, maintenance fails (2/5 seeds vs. 5/5 with gating) — defectors receive the same benefit as cooperators without paying the cost; consistent with reputation-gated discrimination is the mechanism</li>
+        <li><strong>Why the spatial model confounds this:</strong> the spatial grid provides network-reciprocity clustering on top of the reputation channel; the ablation (no reputation routing) still gives 5/5 success on the grid, showing that, in this setup, the grid can sustain cooperation without reputation routing. The well-mixed binary model isolates the reputation channel cleanly — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/indirect_reciprocity/well_mixed_binary/utils/proof_of_mechanism.py">well_mixed_binary/proof_of_mechanism.py</a></li>
       </ul>
     </div>
   </div>
@@ -166,13 +166,13 @@ The five mechanisms are often described as answers to the question "how does coo
 
 <figure style={{ margin: '0 0 1.5rem 0' }}>
   <div style={{ border: '1px solid #D6E4F5', overflow: 'hidden' }}>
-    <div style={{ backgroundColor: '#0F3368', color: '#FFFFFF', padding: '0.5rem 1.25rem', fontWeight: 'bold' }}>Network reciprocity — fully proven by simulation</div>
+    <div style={{ backgroundColor: '#0F3368', color: '#FFFFFF', padding: '0.5rem 1.25rem', fontWeight: 'bold' }}>Network reciprocity — simulation evidence</div>
     <div style={{ backgroundColor: '#EAF2FB', color: '#1F2D3D', padding: '0.6rem 1.25rem' }}>
       <ul style={{ margin: '0' }}>
-        <li><strong>Maintenance = Yes:</strong> proven — 5/5 seeds, mean trait 0.928 — 24×24 von Neumann grid (k=4), b/c=5 &gt; k — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/network_reciprocity/utils/proof_of_mechanism.py">utils/proof_of_mechanism.py</a></li>
-        <li><strong>Spread from rare = Partial:</strong> proven — 2/5 seeds, mean trait 0.536 — cooperation spreads in replicates where a viable cluster forms by chance; fails in the others; directly demonstrates the stochastic cluster-formation threshold</li>
-        <li><strong>b/c &gt; k boundary:</strong> proven — B_plus_scale=0.5 → b/c=2.5 &lt; k=4 — 0/5 seeds, mean trait 0.012 — cooperation collapses completely from 90% when condition is violated</li>
-        <li><strong>k is the decisive parameter:</strong> proven — Moore neighbourhood (k=8) with same b/c=5 — 0/5 seeds, mean trait 0.009 — condition violated by increasing neighbourhood size, not by changing payoffs; confirms k as the network degree in Nowak's condition</li>
+        <li><strong>Maintenance = Yes:</strong> shown — 5/5 seeds, mean trait 0.928 — 24×24 von Neumann grid (k=4), b/c=5 &gt; k — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/network_reciprocity/utils/proof_of_mechanism.py">utils/proof_of_mechanism.py</a></li>
+        <li><strong>Spread from rare = Partial:</strong> shown — 2/5 seeds, mean trait 0.536 — cooperation spreads in replicates where a viable cluster forms by chance; fails in the others; consistent with a stochastic cluster-formation threshold</li>
+        <li><strong>b/c &gt; k boundary:</strong> shown — B_plus_scale=0.5 → b/c=2.5 &lt; k=4 — 0/5 seeds, mean trait 0.012 — cooperation collapses completely from 90% when condition is violated</li>
+        <li><strong>Larger neighbourhood (k):</strong> shown — Moore neighbourhood (k=8) with same b/c=5 — 0/5 seeds, mean trait 0.009 — condition violated by increasing neighbourhood size, not by changing payoffs; consistent with k as the network degree in Nowak's condition</li>
       </ul>
     </div>
   </div>
@@ -181,13 +181,13 @@ The five mechanisms are often described as answers to the question "how does coo
 
 <figure style={{ margin: '0 0 1.5rem 0' }}>
   <div style={{ border: '1px solid #D6E4F5', overflow: 'hidden' }}>
-    <div style={{ backgroundColor: '#0F3368', color: '#FFFFFF', padding: '0.5rem 1.25rem', fontWeight: 'bold' }}>Group selection — fully proven by simulation</div>
+    <div style={{ backgroundColor: '#0F3368', color: '#FFFFFF', padding: '0.5rem 1.25rem', fontWeight: 'bold' }}>Group selection — simulation evidence</div>
     <div style={{ backgroundColor: '#EAF2FB', color: '#1F2D3D', padding: '0.6rem 1.25rem' }}>
       <ul style={{ margin: '0' }}>
-        <li><strong>Maintenance = Yes:</strong> proven — 5/5 seeds, mean trait 0.950 — 24×24 von Neumann grid, group replacement every 25 steps, m/n &gt; c/b condition met — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/group_selection/utils/proof_of_mechanism.py">utils/proof_of_mechanism.py</a></li>
-        <li><strong>Spread from rare = Possible:</strong> proven — 2/5 seeds, mean trait 0.548 — cooperation spreads in replicates where a cooperator-rich group is occasionally copied over a defector-rich group; stochastic, directly demonstrating the "Possible" claim</li>
-        <li><strong>Double ablation (Moore + no groups):</strong> proven — Moore neighbourhood (k=8 &gt; b/c=5) disables spatial clustering; group_selection_interval=99999 disables between-group copying — 0/5 seeds, mean trait 0.010 — cooperation collapses completely; confirms both mechanisms are needed</li>
-        <li><strong>Group events alone cannot rescue cooperation:</strong> proven — Moore neighbourhood (spatial advantage removed) + group selection active (interval=25) — 0/5 seeds, mean trait 0.012 — between-group copying amplifies spatial within-group clusters but cannot replace them; any spread in the standard scenario is due to within-group spatial assortment, not between-group events alone</li>
+        <li><strong>Maintenance = Yes:</strong> shown — 5/5 seeds, mean trait 0.950 — 24×24 von Neumann grid, group replacement every 25 steps, m/n &gt; c/b condition met — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/group_selection/utils/proof_of_mechanism.py">utils/proof_of_mechanism.py</a></li>
+        <li><strong>Spread from rare = Possible:</strong> shown — 2/5 seeds, mean trait 0.548 — cooperation spreads in replicates where a cooperator-rich group is occasionally copied over a defector-rich group; stochastic, illustrating the "Possible" claim</li>
+        <li><strong>Double ablation (Moore + no groups):</strong> shown — Moore neighbourhood (k=8 &gt; b/c=5) disables spatial clustering; group_selection_interval=99999 disables between-group copying — 0/5 seeds, mean trait 0.010 — cooperation collapses completely; removing both breaks it, though this ablation alone does not show which component is needed (the next row tests group events alone)</li>
+        <li><strong>Group events alone cannot rescue cooperation:</strong> shown — Moore neighbourhood (spatial advantage removed) + group selection active (interval=25) — 0/5 seeds, mean trait 0.012 — between-group copying amplifies spatial within-group clusters but did not replace them in these runs; the results are consistent with spread in the standard scenario requiring within-group spatial assortment, and group events alone did not produce spread</li>
       </ul>
     </div>
   </div>
