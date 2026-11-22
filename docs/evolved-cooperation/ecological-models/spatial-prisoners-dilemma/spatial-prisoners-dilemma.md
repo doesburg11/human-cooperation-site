@@ -119,9 +119,11 @@ That matters because:
 - repeated local contact makes reciprocal strategies meaningful rather than purely abstract
 - local reproduction lets successful neighborhoods clonally spread into adjacent empty space
 - fallback movement helps isolated agents search for interaction opportunities early in the run
-- once the world approaches the hard cap, movement fades and local encounter success does more of the selection work
+- once the world approaches the hard cap, movement fades; game payoffs can then matter only through the remaining births and deaths, which in the frozen replay are few (see [Reading The Replay](#reading-the-replay))
 
 In the frozen replay, this does **not** produce universal cooperation. It produces a mixed regime in which tit-for-tat becomes the largest same-trait strategy family, but co-op, random, and defect all remain present.
+
+The same-versus-other-trait encoding follows Hammond and Axelrod's ethnocentrism model, where inherited labels are a cue of shared descent because offspring keep their parent's label and settle nearby. In a Python port of that model, the site's pre-registered tests found that in-group helping fell sharply when labels stopped tracking descent ([Kin cues](/evolved-cooperation/kin-selection#kin-cues-the-ethnocentrism-model)). Labels are inherited and offspring are placed in a neighbouring cell here too, so local reproduction can make same-trait neighbours more likely to share recent descent, although initial labels are assigned independently, the label is only a categorical marker, and this model has not been tested that way.
 
 ## Interactive Replay
 
@@ -146,13 +148,13 @@ At step `0`, the run starts with `576` occupied cells and mean energy `50.564`. 
 
 ### Phase 2: local interaction replaces exploration
 
-By step `50`, the world reaches the hard cap of `1800` agents and mean energy has risen further to `141.273`. At that point, movement is almost gone because most agents no longer spend whole steps isolated from play. In the canonical history, step `50` records `5345` interaction pairs but only `1` successful move. From that point onward, most of the selection pressure comes from local game payoffs and reproduction rather than from spatial exploration.
+The world first reaches the hard cap of `1800` agents at step `26`, and by step `50` mean energy has risen further to `141.273`. Movement is then almost gone because most agents no longer spend whole steps isolated from play: step `50` records `5345` interaction pairs but only `1` successful move. Turnover becomes low as well: there are `1244` births in steps `0`–`25`, but only `97` births and `96` deaths in all of steps `26`–`200`, roughly half of each per step, and mutation is switched off in this configuration. Agents keep playing, but individual energy is capped at `150` and mean energy approaches that cap (`146.6` at step `200`), while culling at the population cap removes agents in fixed order rather than by energy. So once the lattice is full, payoff differences have little demographic effect.
 
 ### Phase 3: a mixed conditional regime persists
 
-The late replay is not a march to one universal rule. By step `200`, same-trait tit-for-tat is the largest same-trait family at `626`, defect is the smallest at `299`, co-op remains at `457`, and random remains at `418`. The encoding mix also stays mostly contingent rather than collapsing to pure same-and-other symmetry: `1359` agents are contingent at step `200`, versus `441` pure encodings.
+The late replay is not a march to one universal rule, and it barely changes at all. By step `200`, same-trait tit-for-tat is the largest same-trait family at `626` (`613` at step `25`), defect is the smallest at `299` (`312` at step `25`), co-op remains at `457`, and random remains at `418`. The encoding mix also stays mostly contingent rather than collapsing to pure same-and-other symmetry: `1359` agents are contingent at step `200`, versus `441` pure encodings.
 
-So the replay does not show cooperation simply taking over. It shows a stable local ecology in which conditional reciprocity expands strongly in same-trait encounters, but multiple inherited response rules continue to coexist.
+So the replay does not show cooperation simply taking over. Almost all of the change happened while the world was filling: from step `0` to step `25`, same-trait tit-for-tat multiplied about 3.6-fold, co-op 3.2-fold, random 3.1-fold and defect 2.4-fold. After that the mix is essentially stable, with only small changes. The final mixture is dominated by expansion during the filling phase, with modest later turnover, and should not be read as a long-run equilibrium reached through continued selection. This is one seed and 200 steps.
 
 ## Formal Ingredients
 
@@ -252,13 +254,14 @@ Within the site's evolved-cooperation set, Spatial Prisoner's Dilemma is the cle
 
 ## Conclusions
 
-This case study gives a clear local-selection answer to the question of how cooperation can emerge in a spatial Prisoner's Dilemma ecology.
+This case study shows which inherited response rules spread fastest when a sparse spatial Prisoner's Dilemma ecology fills up. It is one seed of 200 steps, so the conclusions below describe this run.
 
 - cooperation does not emerge here as one universal rule; the frozen run ends in a mixed ecology rather than in pure cooperation or pure defection
-- the strongest directional shift in this run is toward same-trait tit-for-tat, which rises from `171` agents at step `0` to `626` by step `200`
+- the strongest directional shift in this run is toward same-trait tit-for-tat, which rises from `171` agents at step `0` to `613` by step `25` and `626` by step `200`; nearly all of it happens while the world fills, before the population reaches its cap
 - unconditional defection does not dominate the frozen run even though the single-shot payoff temptation is real; same-trait defect rises early but ends as the smallest same-trait family at `299`
 - contingent encodings remain the majority at the end of the run, so the model favors conditional inherited responses more than it favors collapsing same-trait and other-trait behavior into one pure rule
-- the broader lesson fits the rest of this section of the site: cooperation can emerge through selection when local interaction, local reproduction, and ecological turnover make certain inherited response patterns reproductively advantageous
+- once the lattice is full, births and deaths become rare, energy saturates near its cap and mutation is off, so the final mixture is largely stable rather than an equilibrium of continued selection; the repository's own reading is that the result is strongly shaped by a fast-crowding, energy-rich ecology
+- the broader lesson fits the rest of this section of the site: cooperation can spread through selection when local interaction and local reproduction make certain inherited response patterns reproductively advantageous, here mainly during expansion into empty space
 
 ## References
 
