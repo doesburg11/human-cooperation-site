@@ -449,6 +449,46 @@ The results above come from the Moran model: a full grid where every site is ref
 
 **What this adds to the picture above.** Kin selection with a real cost to the helper did appear outside the simplest model, but only once, at a high benefit-to-cost ratio, and only while offspring stayed near their parents. Care for one's own young was more robust across the tested variants, but in these tests it did not require offspring to stay near their parents. One late result points in an unexpected direction: once births went into free sites, care for own young spread much further when offspring dispersed across the whole grid (to near-maximum in 20/20 runs) than when they stayed local. That pattern is consistent with kin competition (relatives competing with each other for the same nearby space, which in theory can cancel the benefit of helping them; Taylor 1992), but it was not tested directly. A follow-up measurement on the same runs (diagnostic DR8, exploratory) looked at the neighbourhoods of would-be parents. With local births, about two thirds of breeding opportunities found no free neighbouring site, for strong and weak helpers alike (strong helpers were blocked only 0.6 percentage points more often), and a parent's own offspring made up about 12% of its neighbours in both groups. With grid-wide dispersal, none of the measured opportunities was blocked. So, locally, space was often short for strong and weak helpers alike, not specifically around helpers; the idea that helpers' own young fill the space around them is not supported in size. Why care spread further under grid-wide dispersal remains open.
 
+## Kin cues: the ethnocentrism model
+
+The models above track lineage directly. Real organisms usually cannot see relatedness; at most they see a cue that tends to go with it. Hammond and Axelrod's (2006) ethnocentrism model is a simple test case. Agents on a 51×51 torus have an inherited colour (one of four) and two inherited flags: help neighbours of the same colour or not, and help neighbours of another colour or not. Helping costs the helper 0.01 and gives the neighbour 0.03 in chance to reproduce; offspring are placed next to the parent, and agents die at random (10% per tick), which keeps empty space available. In the original model, ethnocentrics (who help only their own colour) become the most common strategy, at about three quarters of the population.
+
+We ported the NetLogo version of the model (Wilensky 2003) to Python, checked it against the NetLogo runs (nine experiments, no clear difference), and added a pedigree so the relatedness of neighbours can be measured. Three pre-registered experiments followed, with 30 runs per condition.
+
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+    <table className="site-table site-table--bordered">
+      <colgroup>
+        <col style={{ width: '28%' }} />
+        <col style={{ width: '72%' }} />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Experiment</th>
+          <th>What happened</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Who is helped (standard model)</td>
+          <td style={{ backgroundColor: '#D6E4F5' }}>Same-colour neighbours were usually kin: 90% shared a founder (the immigrant their line descends from), against 18% of different-colour neighbours, and 43% of same-colour neighbour pairs were a parent with its offspring or two siblings. Colour worked as a strong but imperfect cue of descent.</td>
+        </tr>
+        <tr>
+          <td>Random colour: children get a random colour, so colour no longer tracks descent</td>
+          <td style={{ backgroundColor: '#D6E4F5' }}>Ethnocentrics fell from 75.5% to 12.9% of the population; strategies that help regardless of colour became more common. How often help was given hardly changed (77% vs 76% of meetings), while neighbours remained related through local birth (70% shared a founder).</td>
+        </tr>
+        <tr>
+          <td>Lower viscosity: offspring placed anywhere in the world with probability d</td>
+          <td style={{ backgroundColor: '#F8D7DA' }}>Cooperation fell as d rose: with random colour from 76% to 4% of meetings at d = 1. Inherited colour did not prevent this: at d = 1 both colour rules gave about 4%, with egoists at about 90%. At intermediate dispersal inherited colour went with more cooperation (45% vs 29% at d = 0.25; descriptive only).</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <figcaption className="site-table-caption"><strong>Display 7:</strong> Kin cues in the ethnocentrism model (Experiment 104 settings, 30 runs per condition). Blue: the pre-registered expectation was met; red: the test that the colour cue can stand in for local birth was not met. Details and all numbers are in the module's <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/ethnocentrism/RESULTS.md">RESULTS.md</a>.</figcaption>
+</figure>
+
+**What this adds to the picture above.** In this model, cooperation was highest when offspring stayed near their parents, so that neighbours were relatives, as in the viscosity results above. With inherited colour, a cue of descent, help went to same-colour neighbours, who were the closer kin while offspring stayed local. At full dispersal, inherited colour did not produce more cooperation than random colour: egoists of the same colour could collect help from ethnocentrics they settled next to, and cooperation fell to about 4% of meetings under both colour rules. Two limits apply. The random-colour experiment cannot separate the loss of the colour cue from the drop in same-colour meetings (25% instead of 80%). The dispersal experiment changes relatedness together with how often births are blocked, how large the population grows and whom agents meet.
+
 ## See Also
 
 - [Spatial Altruism](/evolved-cooperation/spatial-altruism) — Mitteldorf & Wilson's (2000) baseline, no-`harshness`/no-`disease` case is a concrete historical instance of exactly the "stochastic 1/5" scenario named above in [Why kin bias amplifies spatial structure](#why-kin-bias-amplifies-spatial-structure-the-self-routing-advantage): a lone cooperator recaptures `1/5` of its own benefit purely because it is one of five participants in its own neighbourhood lottery, with no lineage bias at all. That paper derives its own viability threshold, `b > 5c`, from precisely this relatedness coefficient — Hamilton's rule `rB > C` with `r = 1/5` gives `b/5 > c`, i.e. `b > 5c`. Where this page's kin bias converts that stochastic `1/5` into a reliable `5/5` by explicitly routing benefit toward same-lineage neighbours, Spatial Altruism's harsher, higher-density variants achieve a comparable reliability boost through a different route entirely — differential group/patch density rather than lineage-biased routing — which is also why that page's own "See Also" section treats it as closer to Group Selection than to Kin Selection once `harshness` and `disease` are turned on.
@@ -456,5 +496,7 @@ The results above come from the Moran model: a full grid where every site is ref
 ## References
 
 - Hamilton, W. D. (1964). *The genetical evolution of social behaviour. I*. *Journal of Theoretical Biology*, 7(1), 1–16. https://doi.org/10.1016/0022-5193(64)90038-4
+- Hammond, R. A., and Axelrod, R. (2006). *The evolution of ethnocentrism*. *Journal of Conflict Resolution*, 50(6), 926–936. https://doi.org/10.1177/0022002706293470
 - Nowak, M. A. (2006). *Five rules for the evolution of cooperation*. *Science*, 314(5805), 1560–1563. https://doi.org/10.1126/science.1133755
 - Taylor, P. D. (1992). *Altruism in viscous populations — an inclusive fitness model*. *Evolutionary Ecology*, 6(4), 352–356. https://doi.org/10.1007/BF02270971
+- Wilensky, U. (2003). *NetLogo Ethnocentrism model*. Center for Connected Learning and Computer-Based Modeling, Northwestern University. http://ccl.northwestern.edu/netlogo/models/Ethnocentrism
