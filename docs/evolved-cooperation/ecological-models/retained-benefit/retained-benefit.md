@@ -276,11 +276,24 @@ instead of collapsing all three into one unexplained population curve.
 
 In this one seeded run the change is modest. Over 250 steps, mean cooperation rose from `0.120` to `0.147`, while its variance rose from about `0.002` to `0.008`. Local assortment fell from `0.87`, the initial `6 × 6` lineage blocks, to a low of about `0.54` at step `35`, then recovered to `0.62` by the end, and the largest lineage grew from about `7%` to about `18%` of the lattice, with 23 of the 24 starting lineages still present.
 
-Three cautions apply:
+Two cautions apply:
 
-- **It is one seed.** No replicate runs are reported.
-- **There is no neutral control.** Mutation adds symmetric noise and the trait is then clamped to `[0, 1]`, so clipping at the lower bound can raise the mean, especially while traits are concentrated near zero; the replay does not separate that effect from selection.
-- **The threshold has not been mapped.** The question the model poses, how large the retained fraction $r$ must be before cooperation rises, needs a sweep over $r$, $b$ and $c$. The repository's README names that sweep as the most informative next step, but it has not been run, so the page's central claim is the model's question rather than a demonstrated result.
+- **It is one seed.**
+- **On its own it has no neutral control.** Mutation adds symmetric noise and the trait is then clamped to `[0, 1]`, so clipping at the lower bound can raise the mean, especially while traits are concentrated near zero; the replay does not separate that effect from selection.
+
+The pre-registered sweep below supplies the control: in neutral runs with no benefit and no cost, mean cooperation also drifted up, to 0.130 by step 250 (0.117–0.151 across seeds), so the replay's rise to 0.147 at step 250 is within neutral drift.
+
+## A Pre-Registered Sweep Of The Retained Fraction
+
+To test the model's question directly, a sweep was pre-registered and then run (November 2026; details in the module's [RESULTS.md](https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/retained_benefit/RESULTS.md)). It varied the retained fraction $r$ from 0 to 1 in steps of 0.1 at three benefit-to-cost ratios (3, the replay's ratio, 5 and 8), with 10 seeds each and 1000 steps, against a neutral control with no benefit and no cost, which ended at 0.190. Each cell was compared with its seed-matched neutral runs by a one-sided paired test; rises and declines below are reported at p < 0.01. All four registered predictions were met:
+
+- at $b/c = 8$, where helping pays the helper directly in every lineage mix, cooperation rose above neutral at every $r$ (0.64 at $r = 0$, 0.96 at $r = 1$);
+- at $b/c = 3$ and $r = 0$, where helping costs the helper in every lineage mix, it did not rise; it fell below neutral (0.090);
+- at $b/c = 3$, full retention ended far above no retention (0.792, a difference of 0.70) and above neutral.
+
+So at the replay's ratio, cooperation fell without retention and rose to about 0.8 with full retention. That is consistent with cooperation needing enough retained benefit here, though the design does not show that retention is necessary.
+
+Where the rise starts was not a registered test, but it is informative. Every $r$ from 0.3 upward rose at $b/c = 3$, from 0.1 at $b/c = 5$, and from 0 at $b/c = 8$. These onsets line up with the sign of a lone helper's own return from the table in [Self-Return](#self-return-weak-or-strong-altruism): cells declined where that return was clearly below the cost, stayed flat where it roughly equalled it, and rose where it exceeded it. Because the retained share always includes the producer's own site, the sweep does not separate benefit kept by relatives from the helper's own share, and this alignment is descriptive, not a demonstrated cause.
 
 ## Why This Belongs Under Evolved Cooperation
 
@@ -313,7 +326,7 @@ In other words:
 - if cooperation creates value that is lost through evolutionary leakage to unrelated or weakly coupled recipients, cooperation is hard to sustain
 - if enough of that value is routed back toward cooperators or their copies, cooperation can spread
 
-This model is built to test that claim in its most abstract form; as [What The Replay Shows](#what-the-replay-shows) explains, the test has so far been run only as a single demonstration.
+This model is built to test that claim in its most abstract form; the [pre-registered sweep](#a-pre-registered-sweep-of-the-retained-fraction) found cooperation falling without retention and rising with enough of it, and, in an exploratory and descriptive look, where the rise started lined up with whether a helper's own share covers its cost.
 
 ## What "Feedback" Means Here
 

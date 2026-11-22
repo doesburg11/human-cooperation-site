@@ -235,7 +235,10 @@ controls and caveats.
   ([From the Moran model to an ecological model](/evolved-cooperation/kin-selection#from-the-moran-model-to-an-ecological-model)).
 - **No cooperation without feedback.** Across the ecological case studies below, cooperation persists only where
   enough of the benefit it creates returns to cooperators or to copies of the cooperative rule; without that,
-  selfish behaviour usually wins.
+  selfish behaviour usually wins. The most direct test is a pre-registered sweep of the
+  [Retained Benefit](/evolved-cooperation/retained-benefit#a-pre-registered-sweep-of-the-retained-fraction) model:
+  at its demo ratio, cooperation fell without retention and rose to about 0.8 with full retention, and, in an
+  exploratory look, where the rise started lined up descriptively with whether a helper's own share covers its cost.
 
 Read together, and qualitatively: cooperation spread most often where local reproduction or interaction structure
 created assortment (relatives as neighbours, partners or mates), and usually declined where the tests broke that link.
