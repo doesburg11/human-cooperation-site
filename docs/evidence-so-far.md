@@ -64,7 +64,7 @@ The [PPO Study](/learned-cooperation/repeated-prisoners-dilemma/ppo-study) is al
 
 Several cooperation mechanisms also have built-in limits. Direct reciprocity can maintain cooperation once reciprocal behavior is common, but it does not reliably originate cooperation from a defector-dominated population without a foothold or scaffold. Indirect reciprocity depends on a reputation system that itself has to bootstrap. Network reciprocity and group selection can be stochastic rather than automatic.
 
-Kin selection, in the site's [broad definition](/evolved-cooperation/kin-selection#what-counts-as-kin-selection-here) (costly help to relatives by descent, the helper's offspring included), has been shown only partly in a model with more ecology; establishing it in a full ecological setting is the goal. In a model with sexual reproduction, households and juvenile care, helping rose from rare in some runs, but the controls could not separate that from population survival: no tested survival floor up to 0.4 kept populations without helpers alive. A stepwise rebuild from the Moran model towards ecology found that costly care for one's own young spread at every step tested through energy, starvation and limited food, also without local settlement (kin selection through parental care, not among non-offspring relatives), and did not reach its agreed endpoint in a model with substantial empty space before its hard stop (one version produced substantial empty space, but its main test missed the endpoint) ([From the Moran model to an ecological model](/evolved-cooperation/kin-selection#from-the-moran-model-to-an-ecological-model)).
+Kin selection, in the site's [broad definition](/evolved-cooperation/kin-selection#what-counts-as-kin-selection-here) (costly help to relatives by descent, the helper's offspring included), has been shown only partly in a model with more ecology. The goal is to establish it in a full ecological setting: energy reserves, limited renewable food, starvation, births that need free space, and agents that move in search of food. Of the eight steps towards that goal in the [stepwise table](/evolved-cooperation/kin-selection#what-counts-as-kin-selection-here), four are achieved; both goal rows, care for own offspring (goal A) and help to other relatives (goal B), are not, and no experiment so far has agents that move. In a model with sexual reproduction, households and juvenile care, helping rose from rare in some runs, but the controls could not separate that from population survival: no tested survival floor up to 0.4 kept populations without helpers alive. A stepwise rebuild from the Moran model towards ecology found that costly care for one's own young spread at every step tested through energy, starvation and limited food, also without local settlement (kin selection through parental care, not among non-offspring relatives), and did not reach its agreed endpoint in a model with substantial empty space before its hard stop (one version produced substantial empty space, but its main test missed the endpoint); a planned step with movement was skipped because the grid was almost full ([From the Moran model to an ecological model](/evolved-cooperation/kin-selection#from-the-moran-model-to-an-ecological-model)).
 
 ## Non-Replications
 
@@ -86,7 +86,7 @@ Concrete next questions include:
 - What explains Trial 12's remaining discrepancy with the original Ackley & Littman result, where evolution-alone beats luck here but not in the original paper?
 - Does the deeper longitudinal genetic-assimilation result from Ackley & Littman also reproduce in the current implementation?
 - Does the partially built drive-conditioned observation system improve learning, and can it support an evolutionary extension?
-- Can costly help to relatives other than one's own offspring be shown in a model with empty space, where population size follows resources instead of a replacement rule?
+- Can kin selection be shown in a full ecological setting, with births that need free space and agents that move: first for care of own offspring (goal A), then for costly help to relatives other than offspring (goal B)?
 - Which mechanism-level results still hold when explicitly human layers are added, such as social learning, norms, institutions, language, punishment, group identity, and moral cognition?
 
 ## How to Read the Evidence
@@ -145,8 +145,8 @@ Use these labels when moving through the site:
           <td>Kin selection: Moran to ecology</td>
           <td>Mixed (pre-registered steps)</td>
           <td>Costly help to neighbours spread with local settlement (b/c 12 and 24) and failed at b/c 12 under global-competitor replacement; care for own young spread at every tested ecological step (R1-R4).</td>
-          <td>The care result is kin selection through parental care (broad definition), on an almost-full grid, not among non-offspring relatives; an earlier ecological model could not separate helping from population survival; the step with substantial empty space did not reach its endpoint.</td>
-          <td><a href="/evolved-cooperation/kin-selection#from-the-moran-model-to-an-ecological-model">Kin Selection</a></td>
+          <td>The care result is kin selection through parental care (broad definition), on an almost-full grid, not among non-offspring relatives; an earlier ecological model could not separate helping from population survival; the step with substantial empty space did not reach its endpoint; no experiment has agents that move, so both goals (A and B) are still open.</td>
+          <td><a href="/evolved-cooperation/kin-selection#what-counts-as-kin-selection-here">Kin Selection</a></td>
         </tr>
         <tr>
           <td>Retained Benefit sweep</td>
