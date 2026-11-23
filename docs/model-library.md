@@ -42,7 +42,7 @@ Five thin wrappers over a shared Moran-process engine, one per classical mechani
         <tr>
           <td>Kin Selection</td>
           <td>Evolution</td>
-          <td>Cooperation spreads when benefit routed to relatives, weighted by relatedness, exceeds its private cost — Hamilton's rule <code>rB &gt; C</code>. In the tested spread-from-rare runs a helper keeps part of its own benefit, so the result is weak altruism; the tested variants with a real net cost to the helper did not spread. The page states the site's broad definition of kin selection (offspring included) and a stepwise table of what has and has not been achieved towards kin selection in a full ecological setting.</td>
+          <td>Cooperation spreads when benefit routed to relatives, weighted by relatedness, exceeds its private cost — Hamilton's rule <code>rB &gt; C</code>. In the original model's spread-from-rare runs a helper keeps part of its own benefit, so the result is weak altruism, which the site's definition does not count as kin selection; variants with a real net cost to the helper did not spread there, but did in later steps of the Kin Selection Ladder below. The page states the site's broad definition of kin selection (offspring included) and a stepwise table of what has and has not been achieved towards kin selection in a full ecological setting.</td>
           <td><a href="/evolved-cooperation/kin-selection">Kin Selection</a></td>
         </tr>
         <tr>
