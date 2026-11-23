@@ -28,31 +28,40 @@ These are the ingredients of a test of Hamilton's rule, $rB > C$: the relatednes
 
 **The goal.** To establish kin selection, in this broad sense, in an **ecological setting**: individuals with energy reserves, a limited renewable food supply, death by starvation, and births that need resources and go into free space, so that population size and empty space follow resources rather than a fixed replacement rule.
 
-**Where it stands.** The steps towards the goal, in order. ✓ = achieved, ✗ = not achieved yet.
+**Where it stands.** Each row is one step; the Yes/No columns show which elements its model contains, and the last two columns say whether helping spread from rare and where the experiment is. Yes/No = the element is in the model or not; ✓ = achieved, ✗ = not achieved yet.
 
 <figure className="site-table-figure">
   <div className="site-table-scroll">
     <table className="site-table site-table--bordered site-table--striped">
       <thead>
         <tr>
-          <th>Step</th>
-          <th>What has to be shown</th>
-          <th>Achieved</th>
-          <th>Experiment</th>
+          <th rowSpan={2}>Step</th>
+          <th colSpan={3}>The help</th>
+          <th colSpan={3}>Ecology</th>
+          <th rowSpan={2}>Achieved</th>
+          <th rowSpan={2}>Experiment</th>
+        </tr>
+        <tr>
+          <th>Costly to the helper</th>
+          <th>To own offspring</th>
+          <th>To other relatives</th>
+          <th>Energy budget</th>
+          <th>Limited food</th>
+          <th>Births need free space</th>
         </tr>
       </thead>
       <tbody>
-        <tr><td style={{ textAlign: 'center' }}>1</td><td>Helping with no net cost spreads where offspring stay near their parents (weak altruism; a warm-up, does not count as kin selection)</td><td style={{ textAlign: 'center' }}>✓</td><td><a href="https://github.com/doesburg11/EvolvedCooperation/tree/main/moran_models/nowak_mechanisms/kin_selection">Moran kin selection</a></td></tr>
-        <tr><td style={{ textAlign: 'center' }}>2</td><td>Costly help to neighbouring relatives spreads, on a full grid</td><td style={{ textAlign: 'center' }}>✓</td><td><a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/kin_selection/ladder/RESULTS.md">Ladder K0</a></td></tr>
-        <tr><td style={{ textAlign: 'center' }}>3</td><td>Costly care for own offspring spreads, on a full grid</td><td style={{ textAlign: 'center' }}>✓</td><td><a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/kin_selection/ladder/RESULTS.md">Ladder K1</a></td></tr>
-        <tr><td style={{ textAlign: 'center' }}>4</td><td>Costly care for own offspring spreads with an energy budget, starvation and limited food</td><td style={{ textAlign: 'center' }}>✓</td><td><a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/kin_selection/ladder/RESULTS.md">Ladder R1-R4</a></td></tr>
-        <tr><td style={{ textAlign: 'center' }}>5</td><td><strong>Goal A:</strong> costly care for own offspring spreads when births also need free space</td><td style={{ textAlign: 'center' }}>✗</td><td><a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/kin_selection/ladder/RESULTS.md">Ladder R5a-R8</a></td></tr>
-        <tr><td style={{ textAlign: 'center' }}>6</td><td>Costly help to other relatives spreads with an energy budget and limited food</td><td style={{ textAlign: 'center' }}>✗</td><td><a href="https://github.com/doesburg11/EvolvedCooperation/tree/main/ecological_models/nowak_mechanisms/kin_selection">Ecological kin model</a> (inconclusive)</td></tr>
-        <tr><td style={{ textAlign: 'center' }}>7</td><td><strong>Goal B:</strong> costly help to other relatives spreads when births also need free space</td><td style={{ textAlign: 'center' }}>✗</td><td>Not yet built</td></tr>
+        <tr><td style={{ textAlign: 'center' }}>1</td><td style={{ textAlign: 'center' }}>No</td><td style={{ textAlign: 'center' }}>No</td><td style={{ textAlign: 'center' }}>Yes</td><td style={{ textAlign: 'center' }}>No</td><td style={{ textAlign: 'center' }}>No</td><td style={{ textAlign: 'center' }}>No</td><td style={{ textAlign: 'center', backgroundColor: '#D6E4F5' }}>✓</td><td><a href="https://github.com/doesburg11/EvolvedCooperation/tree/main/moran_models/nowak_mechanisms/kin_selection">Moran kin selection</a> (warm-up)</td></tr>
+        <tr><td style={{ textAlign: 'center' }}>2</td><td style={{ textAlign: 'center' }}>Yes</td><td style={{ textAlign: 'center' }}>No</td><td style={{ textAlign: 'center' }}>Yes</td><td style={{ textAlign: 'center' }}>No</td><td style={{ textAlign: 'center' }}>No</td><td style={{ textAlign: 'center' }}>No</td><td style={{ textAlign: 'center', backgroundColor: '#D6E4F5' }}>✓</td><td><a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/kin_selection/ladder/RESULTS.md">Ladder K0</a></td></tr>
+        <tr><td style={{ textAlign: 'center' }}>3</td><td style={{ textAlign: 'center' }}>Yes</td><td style={{ textAlign: 'center' }}>Yes</td><td style={{ textAlign: 'center' }}>No</td><td style={{ textAlign: 'center' }}>No</td><td style={{ textAlign: 'center' }}>No</td><td style={{ textAlign: 'center' }}>No</td><td style={{ textAlign: 'center', backgroundColor: '#D6E4F5' }}>✓</td><td><a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/kin_selection/ladder/RESULTS.md">Ladder K1</a></td></tr>
+        <tr><td style={{ textAlign: 'center' }}>4</td><td style={{ textAlign: 'center' }}>Yes</td><td style={{ textAlign: 'center' }}>Yes</td><td style={{ textAlign: 'center' }}>No</td><td style={{ textAlign: 'center' }}>Yes</td><td style={{ textAlign: 'center' }}>Yes</td><td style={{ textAlign: 'center' }}>No</td><td style={{ textAlign: 'center', backgroundColor: '#D6E4F5' }}>✓</td><td><a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/kin_selection/ladder/RESULTS.md">Ladder R1-R4</a></td></tr>
+        <tr><td style={{ textAlign: 'center' }}>5 <strong>Goal A</strong></td><td style={{ textAlign: 'center' }}>Yes</td><td style={{ textAlign: 'center' }}>Yes</td><td style={{ textAlign: 'center' }}>No</td><td style={{ textAlign: 'center' }}>Yes</td><td style={{ textAlign: 'center' }}>Yes</td><td style={{ textAlign: 'center' }}>Yes</td><td style={{ textAlign: 'center', backgroundColor: '#F8D7DA' }}>✗</td><td><a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/kin_selection/ladder/RESULTS.md">Ladder R5a-R8</a></td></tr>
+        <tr><td style={{ textAlign: 'center' }}>6</td><td style={{ textAlign: 'center' }}>Yes</td><td style={{ textAlign: 'center' }}>Yes</td><td style={{ textAlign: 'center' }}>Yes</td><td style={{ textAlign: 'center' }}>Yes</td><td style={{ textAlign: 'center' }}>No</td><td style={{ textAlign: 'center' }}>No</td><td style={{ textAlign: 'center', backgroundColor: '#F8D7DA' }}>✗</td><td><a href="https://github.com/doesburg11/EvolvedCooperation/tree/main/ecological_models/nowak_mechanisms/kin_selection">Ecological kin model</a> (inconclusive)</td></tr>
+        <tr><td style={{ textAlign: 'center' }}>7 <strong>Goal B</strong></td><td style={{ textAlign: 'center' }}>Yes</td><td style={{ textAlign: 'center' }}>No</td><td style={{ textAlign: 'center' }}>Yes</td><td style={{ textAlign: 'center' }}>Yes</td><td style={{ textAlign: 'center' }}>Yes</td><td style={{ textAlign: 'center' }}>Yes</td><td style={{ textAlign: 'center', backgroundColor: '#F8D7DA' }}>✗</td><td>Not yet built</td></tr>
       </tbody>
     </table>
   </div>
-  <figcaption className="site-table-caption"><strong>Display 1:</strong> Steps towards kin selection, as defined above, in an ecological setting. All results hold only at the settings tested.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 1:</strong> Steps towards kin selection, as defined above, in an ecological setting. Goal A: care for own offspring with full ecology; goal B: help to other relatives with full ecology. Step 6 also included care for own young (household juveniles). All results hold only at the settings tested.</figcaption>
 </figure>
 
 **Note.** Still to achieve: steps 5, 6 and 7. Step 5 is the next step for care of own offspring: it failed once births needed free space, possibly because relatives born close together compete for that space (kin competition, untested). Steps 6 and 7 are the harder track, help to relatives other than offspring: step 2 worked only at benefit-to-cost ratios of 12 and 24, and its control changes local settling and relatedness together; the ladder never added ecology to it; and the one ecological test (step 6) rose in some runs, but that could not be separated from the population's survival.
