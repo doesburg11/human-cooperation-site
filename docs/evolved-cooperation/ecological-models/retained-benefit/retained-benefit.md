@@ -295,6 +295,8 @@ So at the replay's ratio, cooperation fell without retention and rose to about 0
 
 Where the rise starts was not a registered test, but it is informative. Every $r$ from 0.3 upward rose at $b/c = 3$, from 0.1 at $b/c = 5$, and from 0 at $b/c = 8$. These onsets line up with the sign of a lone helper's own return from the table in [Self-Return](#self-return-weak-or-strong-altruism): cells declined where that return was clearly below the cost, stayed flat where it roughly equalled it, and rose where it exceeded it. Because the retained share always includes the producer's own site, the sweep does not separate benefit kept by relatives from the helper's own share, and this alignment is descriptive, not a demonstrated cause.
 
+Against the site's [definition of kin selection](/evolved-cooperation/kin-selection#what-counts-as-kin-selection-here), which requires a real net cost to the helper, these results do not count as kin selection. Where cooperation rose, the onsets line up with the helper's own return covering its cost (weak altruism), and the design cannot show how much of the retained benefit reaches relatives rather than the helper itself. The model is also a full lattice with a replacement lottery, with no energy, food, free space or movement. In the stepwise table on that page it belongs with step 1, the weak-altruism warm-up.
+
 ## Why This Belongs Under Evolved Cooperation
 
 This model belongs under evolved cooperation because:
