@@ -234,9 +234,11 @@ controls and caveats.
   rebuild from the Moran model found what the site counts as kin selection through parental care: costly care for one's own young spread from
   rare at every step through energy, starvation and limited food, also without local settlement, on an almost-full
   grid. It did not reach its endpoint once births went into free space, and costly help to non-offspring relatives was
-  not carried into the ecological steps. Establishing it in a full ecological setting is the goal. An earlier model with
-  sexual reproduction and households could not separate helping from population survival
-  ([From the Moran model to an ecological model](/evolved-cooperation/kin-selection#from-the-moran-model-to-an-ecological-model)).
+  not carried into the ecological steps. The goal is to establish it in a full ecological setting, with births that
+  need free space and agents that move in search of food; four of the eight steps towards it are achieved, both goal
+  rows (care for own offspring and help to other relatives) are open, and no experiment so far has agents that move.
+  An earlier model with sexual reproduction and households could not separate helping from population survival
+  ([stepwise table](/evolved-cooperation/kin-selection#what-counts-as-kin-selection-here)).
 - **No cooperation without feedback.** Across the ecological case studies below, cooperation persists only where
   enough of the benefit it creates returns to cooperators or to copies of the cooperative rule; without that,
   selfish behaviour usually wins. The most direct test is a pre-registered sweep of the
