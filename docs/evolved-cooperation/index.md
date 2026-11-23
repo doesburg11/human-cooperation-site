@@ -243,6 +243,21 @@ controls and caveats.
 Read together, and qualitatively: cooperation spread most often where local reproduction or interaction structure
 created assortment (relatives as neighbours, partners or mates), and usually declined where the tests broke that link.
 
+### In Plain Terms
+
+In these models, **cooperation spread most reliably when helping paid the helper back.** Where the helper's own share of the good it does covered what helping cost it, cooperation usually spread; where the helper got back less than it paid, cooperation often faded, even when relatives nearby benefited. That is a pattern across the models, not proof that the helper's own return was the deciding cause: in several of them the design cannot fully separate it from the benefit to relatives or from local structure.
+
+That distinction matters, because "cooperation" covers two quite different things:
+
+- **Helping that pays for itself.** The helper ends up better off for helping, as with a shared hunt or feeding one's own children. Biologists call this *weak altruism*. This is what spread in the [Retained Benefit sweep](/evolved-cooperation/retained-benefit#a-pre-registered-sweep-of-the-retained-fraction) and in the [Moran kin-selection model](/evolved-cooperation/kin-selection#later-tests-self-benefit-and-speed).
+- **Genuine sacrifice.** The helper ends up worse off and only others gain. This is the hard puzzle. Explicitly costly help to neighbours spread only under a narrow set of tested conditions: relatives living right next to each other and a benefit 12 to 24 times the cost. Care for one's own young spread at every step of a stepwise move towards a more realistic ecology, but that is a different case, because the recipient is the helper's own offspring. And in the [ethnocentrism model](/evolved-cooperation/kin-selection#kin-cues-the-ethnocentrism-model), in-group helping was much more common when group membership tracked shared descent; breaking that link sharply reduced it, though the comparison does not rule out every other difference.
+
+So, on this evidence, cooperation is easiest to establish where it reinforces itself: the helper, its offspring or close kin get the benefit back, and interaction stays local, among neighbours who are often relatives. Self-sacrificing help to others spread only under narrow conditions.
+
+For humans, these results are compatible with a hypothesis, not evidence for it: that some cooperation began in arrangements where helping benefited the helper, close kin or offspring. They do not establish how human cooperation began. Large-scale, costly cooperation in humans may also depend on mechanisms these models do not include, such as reputation, norms, institutions and culture; which of them could move cooperation from "it pays me" to "I give even when it costs me" is a natural next question.
+
+These are abstract models. Read this as a tentative pointer, not a settled law.
+
 ## Current Case Studies
 
 The table below lists three ecological evolved-cooperation case studies; the spatial altruism lattice, the fourth
