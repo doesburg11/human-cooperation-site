@@ -13,10 +13,6 @@ import GithubLink from '@site/src/components/GithubLink';
 
 <div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '0.4rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>Kin selection is the first of Nowak's five mechanisms for the evolution of cooperation. Cooperation spreads when the benefit delivered to a recipient, weighted by genetic relatedness, exceeds the private cost paid by the actor — Hamilton's rule: $rB > C$.</div>
 
-<div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '0.6rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>
-<strong>Robust initiator.</strong> Of the five Nowak mechanisms, kin selection is the most biologically robust initiator of cooperation from rare. It works because offspring inherit the parent's cooperative trait and stay nearby — automatically clustering cooperators together. This spatial proximity is a trivial consequence of reproduction itself, requiring no additional biological conditions. Other mechanisms that also spread cooperation from rare (direct reciprocity with a spatial scaffold) depend on partner stability and memory that are not automatically given. The <a href="/evolved-cooperation/nowak-mechanisms#spread-vs-maintenance">Nowak Mechanisms overview</a> maps this distinction across all five mechanisms. One qualification: in the spread-from-rare runs here, a helper keeps part of its own benefit, so helping has no net direct cost (weak altruism); help with a real net cost to the helper did not spread in this model (see <a href="#later-tests-self-benefit-and-speed">Later tests</a>). In models with energy, limited food and births into free space, this robustness is narrower; see <a href="#from-the-moran-model-to-an-ecological-model">From the Moran model to an ecological model</a>.
-</div>
-
 ## What Counts as Kin Selection Here
 
 **The definition used on this site.** In the broad sense used here, kin selection means: *a helping trait spreads because its benefits go to individuals related to the helper by common descent, the helper's own offspring included, even though helping costs the helper some of its own survival or reproduction.* This is deliberately broad. In standard inclusive-fitness terms, benefits to one's own offspring count as *direct* fitness and benefits to other relatives as *indirect* fitness; this site groups both under one label and always says which one a result belongs to. A result counts as kin selection here only if all three of these hold:
@@ -32,59 +28,68 @@ These are the ingredients of a test of Hamilton's rule, $rB > C$: the relatednes
 
 **The goal.** To establish kin selection, in this broad sense, in an **ecological setting**: individuals with energy reserves, a limited renewable food supply, death by starvation, and births that need resources and go into free space, so that population size and empty space follow resources rather than a fixed replacement rule.
 
-**Where it stands.** From the weakest notion to the full goal:
+**Where it stands.** Rows: who receives the help. Columns: how much ecology the model has, from the plain Moran grid to the goal on the right. Each cell names the experiment, links to its folder or results in the [EvolvedCooperation](https://github.com/doesburg11/EvolvedCooperation) repository, and gives its outcome.
 
 <figure className="site-table-figure">
   <div className="site-table-scroll">
     <table className="site-table site-table--bordered">
       <colgroup>
-        <col style={{ width: '30%' }} />
-        <col style={{ width: '18%' }} />
-        <col style={{ width: '52%' }} />
+        <col style={{ width: '16%' }} />
+        <col style={{ width: '21%' }} />
+        <col style={{ width: '21%' }} />
+        <col style={{ width: '21%' }} />
+        <col style={{ width: '21%' }} />
       </colgroup>
       <thead>
         <tr>
-          <th>Notion</th>
-          <th>Status</th>
-          <th>Evidence and limits</th>
+          <th>Recipients of the help</th>
+          <th>Full grid, no energy or food (every site refilled at once)</th>
+          <th>Simple lattice with empty space (random deaths; no energy or food)</th>
+          <th>Partly ecological (energy, starvation, limited food; grid stays almost full)</th>
+          <th><strong>Goal:</strong> fully ecological (births need resources and go into free space)</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Weaker: helping with no net cost spreads where offspring stay near their parents (weak altruism)</td>
-          <td style={{ backgroundColor: '#D6E4F5' }}>Achieved; does not meet condition 1</td>
-          <td>Moran model: uniform routing spread in 20/20 runs by 3000 steps, label-biased routing faster (see <a href="#later-tests-self-benefit-and-speed">Later tests</a>); also the <a href="/evolved-cooperation/retained-benefit">Retained Benefit</a> sweep. The helper's own share covers its cost, so this is not kin selection by the definition above.</td>
+          <td>Helper itself and nearby sites of its inherited lineage, with <em>no net cost</em> to the helper (weak altruism; does not count, condition 1)</td>
+          <td style={{ backgroundColor: '#D6E4F5' }}>Spread. <a href="https://github.com/doesburg11/EvolvedCooperation/tree/main/moran_models/nowak_mechanisms/kin_selection">Moran kin selection</a>: label-biased routing 14/20 by 1000 steps, uniform routing 20/20 by 3000 (<a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/kin_selection/ladder/RESULTS.md">ladder</a> steps 0-0c). <a href="https://github.com/doesburg11/EvolvedCooperation/tree/main/ecological_models/retained_benefit">Retained Benefit</a>: cooperation rose where the helper's own share clearly exceeded its cost, was flat where the two were about equal, and declined below that.</td>
+          <td style={{ backgroundColor: '#F2F2F2' }}>Not tested</td>
+          <td style={{ backgroundColor: '#F2F2F2' }}>Not tested</td>
+          <td style={{ backgroundColor: '#F2F2F2' }}>Not tested</td>
         </tr>
         <tr>
-          <td>Weaker: measured relatedness predicts the direction of change in costly helping</td>
-          <td style={{ backgroundColor: '#D6E4F5' }}>Prediction supported in a simple lattice</td>
-          <td>One-colour ethnocentrism model (see <a href="#kin-cues-the-ethnocentrism-model">Kin cues</a>): relatedness measured in advance predicted the direction of change in the share of helpers in all 8 conditions far from the threshold and in 6 of 8 near it, with none reversed. Helping starts at about half the population, not rare; no energy or food; kin selection and network reciprocity cannot be told apart there.</td>
+          <td><strong>Own offspring only</strong> (kin selection through parental care)</td>
+          <td style={{ backgroundColor: '#D6E4F5' }}>Spread. <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/kin_selection/ladder/RESULTS.md">ladder</a> K1: 18/20 at benefit-to-cost 6 (0/20 at 1.5 and 3), against 0/20 for the same help to young neighbours.</td>
+          <td style={{ backgroundColor: '#F2F2F2' }}>Not tested</td>
+          <td style={{ backgroundColor: '#D6E4F5' }}><strong>Spread.</strong> <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/kin_selection/ladder/RESULTS.md">ladder</a> R1-R4: 19-20/20 at each step (survival, ages, energy, birth costs, starvation, limited food); also with offspring settling anywhere on the grid.</td>
+          <td style={{ backgroundColor: '#F8D7DA' }}><strong>Failed.</strong> <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/kin_selection/ladder/RESULTS.md">ladder</a> R5a-R8: the main test (benefit-to-cost 6) reached about 0.35 against a 0.60 endpoint (0/20 in both attempts); 4/20 at 24. Line closed at its hard stop.</td>
         </tr>
         <tr>
-          <td>Kin selection among non-offspring relatives, full grid</td>
-          <td style={{ backgroundColor: '#D6E4F5' }}>Consistent with it, narrowly; not ecological</td>
-          <td>Ladder, overlapping generations: costly help to neighbours spread from rare at benefit-to-cost ratios of 12 and 24 with local settling (20/20), not at 3 or 6, and failed at 12 in the global-competitor control (0/20). The control changes local settling and the pool of competitors together, so the result is consistent with kin selection through viscosity but does not separate relatedness from network reciprocity. Every site is refilled at once, with no energy or food.</td>
+          <td><strong>Non-offspring relatives</strong>: neighbours related through local birth (siblings, cousins and more distant kin)</td>
+          <td style={{ backgroundColor: '#D6E4F5' }}>Spread, narrowly; consistent with kin selection, not separated from network reciprocity. <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/kin_selection/ladder/RESULTS.md">ladder</a> K0: 20/20 at benefit-to-cost 12 and 24 with local settling, 0/20 at 3 and 6, 0/20 at 12 with global competitors. The original Moran engine's costly arms: 0/20.</td>
+          <td style={{ backgroundColor: '#D6E4F5' }}>Direction predicted, not spread from rare. <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/ethnocentrism/RESULTS.md">Ethnocentrism</a> §7: relatedness measured in advance predicted the direction of change in helping in 8/8 conditions far from the threshold, 6/8 near it, none reversed.</td>
+          <td style={{ backgroundColor: '#F2F2F2' }}>Not tested</td>
+          <td style={{ backgroundColor: '#F2F2F2' }}><strong>Not tested</strong></td>
         </tr>
         <tr>
-          <td>Kin selection through parental care, partly ecological</td>
-          <td style={{ backgroundColor: '#D6E4F5' }}>Achieved under the broad definition; partly ecological</td>
-          <td>Ladder: costly care for one's own young spread from rare at a benefit-to-cost ratio of 6 (18/20; not at 1.5 or 3), against 0/20 for the same help to young neighbours, and kept spreading as survival, ages, energy, birth costs, starvation and a limited renewable food supply were added (19-20/20 at each step). The grid stayed almost full (occupancy at least 0.996) and it also spread when offspring settled anywhere on the grid, so it did not depend on relatives living close together. The control changed who receives the help as a whole (own young against young neighbours), not parentage alone.</td>
-        </tr>
-        <tr>
-          <td><strong>The goal:</strong> kin selection through parental care, fully ecological (substantial empty space)</td>
-          <td style={{ backgroundColor: '#F8D7DA' }}>Not achieved</td>
-          <td>With parents giving birth into nearby free sites, the main test (benefit-to-cost ratio 6) rose from rare to about 0.35, above the 0.09 of help to young neighbours, but stayed below the 0.60 endpoint (0/20 in both attempts); at ratio 24 one version reached it in 4/20. It reached near-maximum (20/20) under grid-wide dispersal only in the version where vacancies became rare again. The rung was closed at its agreed hard stop.</td>
-        </tr>
-        <tr>
-          <td><strong>The goal:</strong> kin selection among non-offspring relatives, ecological</td>
-          <td style={{ backgroundColor: '#F8D7DA' }}>Not achieved</td>
-          <td>Not tested on the ladder, which moved to parental care after the full-grid step. An earlier ecological model with sexual reproduction and households let helping rise in 2 of 5 runs, but could not separate that from population survival.</td>
+          <td>Juveniles in the helper's household: own young, younger siblings, grandchildren (sexual reproduction, pedigree relatedness)</td>
+          <td style={{ backgroundColor: '#F2F2F2' }}>Not tested</td>
+          <td style={{ backgroundColor: '#F2F2F2' }}>Not tested</td>
+          <td style={{ backgroundColor: '#F2F2F2' }}>Not tested</td>
+          <td style={{ backgroundColor: '#FFF3CD' }}><strong>Inconclusive</strong>, and only a partial test of this column: a separate life-history model with energy-limited births and a population size that is not fixed, but no limited renewable food supply on a grid. <a href="https://github.com/doesburg11/EvolvedCooperation/tree/main/ecological_models/nowak_mechanisms/kin_selection">Ecological kin model</a>: helping rose in 2/5 runs, but no survival floor up to 0.4 kept helper-free populations alive (<a href="https://github.com/doesburg11/EvolvedCooperation/tree/main/ecological_models/nowak_mechanisms/kin_selection/floor_control">floor_control</a>, 0/20), so spread was not separated from survival; learned care added nothing (<a href="https://github.com/doesburg11/EvolvedCooperation/tree/main/ecological_models/nowak_mechanisms/kin_selection/learning">learning</a>).</td>
         </tr>
       </tbody>
     </table>
   </div>
-  <figcaption className="site-table-caption"><strong>Display 1:</strong> Kin selection, as defined above, from the weakest notion to the goal. Blue: achieved at the stated level; red: not achieved. Separately, routing help towards relatives by an inherited label (kin discrimination) made the spread faster but gave no lasting gain, and nothing here showed that recognising relatives makes costly help pay.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 1:</strong> Kin selection, as defined above, by who receives the help and how much ecology the model has. Blue: spread (or, for ethnocentrism, the direction predicted); red: failed; yellow: inconclusive; grey: not tested. Counts are runs (seeds) reaching the endpoint set in advance, except for ethnocentrism, where they are conditions in which the predicted direction held; all results hold only at the settings tested.</figcaption>
 </figure>
+
+**Note.** The goal is the right-hand column, and it is still open. In plain terms: care for one's own young works with energy, starvation and limited food, but not yet once births have to find free space; costly help to other relatives has worked only on a full grid at very high benefit-to-cost ratios, and was never carried into the ecological steps, because the ladder moved to parental care after that step. One candidate obstacle, not tested directly, is kin competition: relatives born close together also compete for the same free space, which in theory can cancel the benefit of helping them (Taylor 1992; see the ladder section below). Separately, routing help towards relatives by an inherited label (kin discrimination) made the spread faster but gave no lasting gain.
+
+
+<div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '0.6rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>
+<strong>Robust initiator.</strong> Of the five Nowak mechanisms, kin selection is the most biologically robust initiator of cooperation from rare. It works because offspring inherit the parent's cooperative trait and stay nearby — automatically clustering cooperators together. This spatial proximity is a trivial consequence of reproduction itself, requiring no additional biological conditions. Other mechanisms that also spread cooperation from rare (direct reciprocity with a spatial scaffold) depend on partner stability and memory that are not automatically given. The <a href="/evolved-cooperation/nowak-mechanisms#spread-vs-maintenance">Nowak Mechanisms overview</a> maps this distinction across all five mechanisms. One qualification: in the spread-from-rare runs here, a helper keeps part of its own benefit, so helping has no net direct cost (weak altruism); help with a real net cost to the helper did not spread in this model (see <a href="#later-tests-self-benefit-and-speed">Later tests</a>). In models with energy, limited food and births into free space, this robustness is narrower; see <a href="#from-the-moran-model-to-an-ecological-model">From the Moran model to an ecological model</a>.
+</div>
 
 ## How It Is Implemented Here
 
