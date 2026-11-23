@@ -28,37 +28,34 @@ These are the ingredients of a test of Hamilton's rule, $rB > C$: the relatednes
 
 **The goal.** To establish kin selection, in this broad sense, in an **ecological setting**: individuals with energy reserves, a limited renewable food supply, death by starvation, and births that need resources and go into free space, so that population size and empty space follow resources rather than a fixed replacement rule.
 
-**Where it stands.** ✓ = yes, ✗ = no. By the definition above, kin selection is shown where both *Real cost* and *Helping spread from rare* have a ✓.
+**Where it stands.** The steps towards the goal, in order. ✓ = achieved, ✗ = not achieved yet.
 
 <figure className="site-table-figure">
   <div className="site-table-scroll">
     <table className="site-table site-table--bordered site-table--striped">
       <thead>
         <tr>
-          <th>Real cost to the helper</th>
-          <th>Help to own offspring</th>
-          <th>Help to other relatives</th>
-          <th>Energy budget</th>
-          <th>Births into free space</th>
-          <th>Helping spread from rare</th>
+          <th>Step</th>
+          <th>What has to be shown</th>
+          <th>Achieved</th>
           <th>Experiment</th>
         </tr>
       </thead>
       <tbody>
-        <tr><td style={{ textAlign: 'center' }}>✗</td><td style={{ textAlign: 'center' }}>✗</td><td style={{ textAlign: 'center' }}>✓</td><td style={{ textAlign: 'center' }}>✗</td><td style={{ textAlign: 'center' }}>✗</td><td style={{ textAlign: 'center' }}>✓</td><td><a href="https://github.com/doesburg11/EvolvedCooperation/tree/main/moran_models/nowak_mechanisms/kin_selection">Moran kin selection</a></td></tr>
-        <tr><td style={{ textAlign: 'center' }}>✓</td><td style={{ textAlign: 'center' }}>✗</td><td style={{ textAlign: 'center' }}>✓</td><td style={{ textAlign: 'center' }}>✗</td><td style={{ textAlign: 'center' }}>✗</td><td style={{ textAlign: 'center' }}>✓</td><td><a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/kin_selection/ladder/RESULTS.md">Ladder K0: costly help to neighbours</a></td></tr>
-        <tr><td style={{ textAlign: 'center' }}>✓</td><td style={{ textAlign: 'center' }}>✓</td><td style={{ textAlign: 'center' }}>✗</td><td style={{ textAlign: 'center' }}>✗</td><td style={{ textAlign: 'center' }}>✗</td><td style={{ textAlign: 'center' }}>✓</td><td><a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/kin_selection/ladder/RESULTS.md">Ladder K1: parental care</a></td></tr>
-        <tr><td style={{ textAlign: 'center' }}>✓</td><td style={{ textAlign: 'center' }}>✓</td><td style={{ textAlign: 'center' }}>✗</td><td style={{ textAlign: 'center' }}>✓</td><td style={{ textAlign: 'center' }}>✗</td><td style={{ textAlign: 'center' }}>✓</td><td><a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/kin_selection/ladder/RESULTS.md">Ladder R1-R4: care with energy and food</a></td></tr>
-        <tr><td style={{ textAlign: 'center' }}>✓</td><td style={{ textAlign: 'center' }}>✓</td><td style={{ textAlign: 'center' }}>✗</td><td style={{ textAlign: 'center' }}>✓</td><td style={{ textAlign: 'center' }}>✓</td><td style={{ textAlign: 'center' }}>✗</td><td><a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/kin_selection/ladder/RESULTS.md">Ladder R5a-R8: care with free space</a></td></tr>
-        <tr><td style={{ textAlign: 'center' }}>✓</td><td style={{ textAlign: 'center' }}>✗</td><td style={{ textAlign: 'center' }}>✓</td><td style={{ textAlign: 'center' }}>✗</td><td style={{ textAlign: 'center' }}>✓</td><td style={{ textAlign: 'center' }}>✗</td><td><a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/ethnocentrism/RESULTS.md">Ethnocentrism: Hamilton's-rule test</a></td></tr>
-        <tr><td style={{ textAlign: 'center' }}>✓</td><td style={{ textAlign: 'center' }}>✓</td><td style={{ textAlign: 'center' }}>✓</td><td style={{ textAlign: 'center' }}>✓</td><td style={{ textAlign: 'center' }}>✗</td><td style={{ textAlign: 'center' }}>✗</td><td><a href="https://github.com/doesburg11/EvolvedCooperation/tree/main/ecological_models/nowak_mechanisms/kin_selection">Ecological kin model</a></td></tr>
+        <tr><td style={{ textAlign: 'center' }}>1</td><td>Helping with no net cost spreads where offspring stay near their parents (weak altruism; a warm-up, does not count as kin selection)</td><td style={{ textAlign: 'center' }}>✓</td><td><a href="https://github.com/doesburg11/EvolvedCooperation/tree/main/moran_models/nowak_mechanisms/kin_selection">Moran kin selection</a></td></tr>
+        <tr><td style={{ textAlign: 'center' }}>2</td><td>Costly help to neighbouring relatives spreads, on a full grid</td><td style={{ textAlign: 'center' }}>✓</td><td><a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/kin_selection/ladder/RESULTS.md">Ladder K0</a></td></tr>
+        <tr><td style={{ textAlign: 'center' }}>3</td><td>Costly care for own offspring spreads, on a full grid</td><td style={{ textAlign: 'center' }}>✓</td><td><a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/kin_selection/ladder/RESULTS.md">Ladder K1</a></td></tr>
+        <tr><td style={{ textAlign: 'center' }}>4</td><td>Costly care for own offspring spreads with an energy budget, starvation and limited food</td><td style={{ textAlign: 'center' }}>✓</td><td><a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/kin_selection/ladder/RESULTS.md">Ladder R1-R4</a></td></tr>
+        <tr><td style={{ textAlign: 'center' }}>5</td><td><strong>Goal A:</strong> costly care for own offspring spreads when births also need free space</td><td style={{ textAlign: 'center' }}>✗</td><td><a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/kin_selection/ladder/RESULTS.md">Ladder R5a-R8</a></td></tr>
+        <tr><td style={{ textAlign: 'center' }}>6</td><td>Costly help to other relatives spreads with an energy budget and limited food</td><td style={{ textAlign: 'center' }}>✗</td><td><a href="https://github.com/doesburg11/EvolvedCooperation/tree/main/ecological_models/nowak_mechanisms/kin_selection">Ecological kin model</a> (inconclusive)</td></tr>
+        <tr><td style={{ textAlign: 'center' }}>7</td><td><strong>Goal B:</strong> costly help to other relatives spreads when births also need free space</td><td style={{ textAlign: 'center' }}>✗</td><td>Not yet built</td></tr>
       </tbody>
     </table>
   </div>
-  <figcaption className="site-table-caption"><strong>Display 1:</strong> Kin selection experiments, by what each model contains and whether helping spread. All results hold only at the settings tested.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 1:</strong> Steps towards kin selection, as defined above, in an ecological setting. All results hold only at the settings tested.</figcaption>
 </figure>
 
-**Note.** Kin selection is shown in three rows (ladder K0, K1 and R1-R4; for K0 the control changes local settling and relatedness together, so it is consistent with kin selection rather than proof of it), and none of them has births into free space. The goal is a row with a ✓ in every column except one of the two recipient columns; no experiment has reached it. Two ✗ rows need a word: the ethnocentrism test did not start helping rare, but relatedness measured in advance correctly predicted in which direction helping would change; in the ecological kin model, the one test of costly help to other relatives with an energy budget, helping rose in some runs, but that could not be separated from the population's survival.
+**Note.** Still to achieve: steps 5, 6 and 7. Step 5 is the next step for care of own offspring: it failed once births needed free space, possibly because relatives born close together compete for that space (kin competition, untested). Steps 6 and 7 are the harder track, help to relatives other than offspring: step 2 worked only at benefit-to-cost ratios of 12 and 24, and its control changes local settling and relatedness together; the ladder never added ecology to it; and the one ecological test (step 6) rose in some runs, but that could not be separated from the population's survival.
 
 
 
