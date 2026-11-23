@@ -25,30 +25,36 @@ In a Python port of the [Ethnocentrism model](/evolved-cooperation/kin-selection
 
 The hard-won part sits beside it. In the site's [Moran kin-selection model](/evolved-cooperation/kin-selection#later-tests-self-benefit-and-speed), the spread from rare turned out to be weak altruism: helpers kept part of their own benefit, and help with a real net cost failed. Costly help spread in a later variant with overlapping generations, at benefit-to-cost ratios of 12 and 24 with local settlement, and failed at 12 under global-competitor replacement. Adding more ecology has not yet given a clean kin-selection result: an earlier ecological model could not separate helping from population survival, and a stepwise rebuild found parental investment rather than kin selection among more distant relatives ([From the Moran model to an ecological model](/evolved-cooperation/kin-selection#from-the-moran-model-to-an-ecological-model)).
 
-## 4. A hand-designed strategy beats the project's own literal fitness reward
+## 4. Cooperation spread most reliably when helping paid the helper back
+
+A pre-registered sweep of the [Retained Benefit](/evolved-cooperation/retained-benefit#a-pre-registered-sweep-of-the-retained-fraction) model varied how much of a cooperator's benefit is kept for itself and its own lineage, at three benefit-to-cost ratios, against a neutral control with no benefit and no cost (330 swept runs plus 10 neutral runs). All four registered predictions were met: at the model's demo ratio (b/c = 3), cooperation fell below neutral without retention (0.090 against 0.190) and rose to 0.792 with full retention, and at b/c = 8 it rose at every retained fraction, including none, because there the helper's own share already exceeded its cost. In an exploratory look, where the rise started broadly tracked whether a lone helper's own share of its benefit covers its cost.
+
+In plain terms, and together with the kin-selection results above: cooperation spread most reliably when helping paid the helper back (weak altruism), while genuinely costly help to others, where the helper ends up worse off, spread only under narrow conditions such as close relatives as neighbours and a benefit far larger than the cost. For humans that is compatible with, but not evidence for, the idea that some cooperation began where helping benefited the helper, its offspring or close kin; large-scale sacrificial cooperation may depend on reputation, norms, institutions and culture, none of which these models include. The caveats: one abstract model for the sweep, a design that cannot separate the helper's own share from benefit to relatives, and results consistent with retention being needed rather than proof that it is. The fuller plain-language reading is on the [Evolved Cooperation](/evolved-cooperation#in-plain-terms) page.
+
+## 5. A hand-designed strategy beats the project's own literal fitness reward
 
 [Trial 13](/learning-selection-interaction/darwin-baldwin-trial-log#trial-by-trial-ledger), run in the project's richer flagship predator-prey-grass ecology, is the most thoroughly diagnosed single result in the trial history. A cautious, predator-avoiding strategy beats a reckless one decisively once the two compete for the same resources (complete exclusion within ~27 generations, reversed in 0 of 10 seeds) — and beats flagship's own "+10 on reproduction" reward signal too, 27 of 30 seeds, p = 0.000008. The honest caveat that makes this a finding rather than a trophy: the winning strategy was hand-designed, not evolved. A follow-up with a stronger pooled learner let evolution discover something like it on its own, but only in 3 of 30 seeds (10%) — real and reproducible, but rare, pointing at founder-effect luck rather than a fixable bottleneck.
 
-## 5. Two foundational-replication successes, hard-won
+## 6. Two foundational-replication successes, hard-won
 
 - [Leibo et al. (2017)](/learned-cooperation/leibo2017): independent DQN learners in Gathering and Wolfpack produce policies whose induced payoffs satisfy the classical dilemma inequalities — reproduced at reduced scale (not yet the paper's own 40M-step training budget).
 - [Foerster et al. (2018)](/learned-cooperation/foerster2018): tracking down the authors' own reference implementation surfaced the paper's real Table 4 delta (0.5), closing half of an asymmetric-pairing gap that a from-scratch build alone had left open — alongside a genuine bug caught in the REINFORCE baseline along the way.
 
-## 6. Boyd & Richerson (2009) — confirmed, with an independent refinement
+## 7. Boyd & Richerson (2009) — confirmed, with an independent refinement
 
 Both replications — [Culture](/evolved-cooperation/boyd-richerson-2009-culture) and [Voting With Your Feet](/evolved-cooperation/boyd-richerson-2009-voting-with-feet) — reproduce their source paper's claims: cultural group selection survives a far lower migration/selection ratio than genetics, and payoff-biased migration spreads group-beneficial behavior. Culture also adds an independently confirmed refinement to the paper's own homogenization threshold; Voting With Your Feet adds a welfare check the original paper doesn't run, showing that spreading the behavior label doesn't reliably raise welfare.
 
-## 7. Two honest non-replications
+## 8. Two honest non-replications
 
 [Hughes et al. (2018)](/learned-cooperation/hughes2018)'s headline Cleanup claim — that inequity aversion raises cooperation — does not reproduce: baseline beat the guilt-shaped condition in 6 of 6 seed comparisons, the opposite of the paper's own figure. Under-training, miscalibration, and seed noise were each checked directly and ruled out. [McKee et al. (2023)](/learned-cooperation/mckee2023)'s reputation claim can't even be tested here — training collapses to near-zero cleaning before reputation dynamics could matter, in both conditions, including with the mechanism disabled entirely. Both papers share the Cleanup environment, which is itself a pattern worth taking seriously.
 
-## 8. Sparse rewards lead the tested shaping variants
+## 9. Sparse rewards lead the tested shaping variants
 
 The [reward-density comparison](/learning-selection-interaction/darwin-baldwin-trial-log#trial-by-trial-ledger) tested sparse reproduction-only rewards against four shaping variants across five sibling PredPreyGrass modules. Sparse gave the highest reproduction rates; pure dense reward was the only variant with an observed extinction at a fully trained checkpoint.
 
 Each condition had **one training run**, followed by three evaluation seeds. These evaluation seeds do not constitute independent training replication. The finding supports retaining sparse rewards as the working baseline in this setting; it does not establish that dense rewards generally harm learning or that shaping cannot outperform sparse rewards. Reward frequency, objective alignment and credit assignment remain proposed explanations requiring controlled tests. The investigation also identified and fixed two RLlib data-integrity bugs.
 
-## 9. Reusable infrastructure: the drift-vs-selection tool
+## 10. Reusable infrastructure: the drift-vs-selection tool
 
 Built to resolve one ambiguous Trial 13 result, the project's Hunt (2006)/Lande (1976) drift-vs-selection model-fitting tool turned into standing infrastructure — now wired into six modules. It confirms prior null verdicts with a formal statistical test rather than an eyeballed trend, and along the way caught a real directory-matching bug and flagged an unresolved anomaly in the nuptial-gift module.
 
