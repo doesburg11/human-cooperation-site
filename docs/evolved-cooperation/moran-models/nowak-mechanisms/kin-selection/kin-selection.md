@@ -28,63 +28,38 @@ These are the ingredients of a test of Hamilton's rule, $rB > C$: the relatednes
 
 **The goal.** To establish kin selection, in this broad sense, in an **ecological setting**: individuals with energy reserves, a limited renewable food supply, death by starvation, and births that need resources and go into free space, so that population size and empty space follow resources rather than a fixed replacement rule.
 
-**Where it stands.** Rows: who receives the help. Columns: how much ecology the model has, from the plain Moran grid to the goal on the right. Each cell names the experiment, links to its folder or results in the [EvolvedCooperation](https://github.com/doesburg11/EvolvedCooperation) repository, and gives its outcome.
+**Where it stands.** ✓ = yes, ✗ = no. By the definition above, kin selection is shown where both *Real cost* and *Helping spread from rare* have a ✓.
 
 <figure className="site-table-figure">
   <div className="site-table-scroll">
-    <table className="site-table site-table--bordered">
-      <colgroup>
-        <col style={{ width: '16%' }} />
-        <col style={{ width: '21%' }} />
-        <col style={{ width: '21%' }} />
-        <col style={{ width: '21%' }} />
-        <col style={{ width: '21%' }} />
-      </colgroup>
+    <table className="site-table site-table--bordered site-table--striped">
       <thead>
         <tr>
-          <th>Recipients of the help</th>
-          <th>Full grid, no energy or food (every site refilled at once)</th>
-          <th>Simple lattice with empty space (random deaths; no energy or food)</th>
-          <th>Partly ecological (energy, starvation, limited food; grid stays almost full)</th>
-          <th><strong>Goal:</strong> fully ecological (births need resources and go into free space)</th>
+          <th>Real cost to the helper</th>
+          <th>Help to own offspring</th>
+          <th>Help to other relatives</th>
+          <th>Energy budget</th>
+          <th>Births into free space</th>
+          <th>Helping spread from rare</th>
+          <th>Experiment</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Helper itself and nearby sites of its inherited lineage, with <em>no net cost</em> to the helper (weak altruism; does not count, condition 1)</td>
-          <td style={{ backgroundColor: '#D6E4F5' }}>Spread. <a href="https://github.com/doesburg11/EvolvedCooperation/tree/main/moran_models/nowak_mechanisms/kin_selection">Moran kin selection</a>: label-biased routing 14/20 by 1000 steps, uniform routing 20/20 by 3000 (<a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/kin_selection/ladder/RESULTS.md">ladder</a> steps 0-0c). <a href="https://github.com/doesburg11/EvolvedCooperation/tree/main/ecological_models/retained_benefit">Retained Benefit</a>: cooperation rose where the helper's own share clearly exceeded its cost, was flat where the two were about equal, and declined below that.</td>
-          <td style={{ backgroundColor: '#F2F2F2' }}>Not tested</td>
-          <td style={{ backgroundColor: '#F2F2F2' }}>Not tested</td>
-          <td style={{ backgroundColor: '#F2F2F2' }}>Not tested</td>
-        </tr>
-        <tr>
-          <td><strong>Own offspring only</strong> (kin selection through parental care)</td>
-          <td style={{ backgroundColor: '#D6E4F5' }}>Spread. <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/kin_selection/ladder/RESULTS.md">ladder</a> K1: 18/20 at benefit-to-cost 6 (0/20 at 1.5 and 3), against 0/20 for the same help to young neighbours.</td>
-          <td style={{ backgroundColor: '#F2F2F2' }}>Not tested</td>
-          <td style={{ backgroundColor: '#D6E4F5' }}><strong>Spread.</strong> <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/kin_selection/ladder/RESULTS.md">ladder</a> R1-R4: 19-20/20 at each step (survival, ages, energy, birth costs, starvation, limited food); also with offspring settling anywhere on the grid.</td>
-          <td style={{ backgroundColor: '#F8D7DA' }}><strong>Failed.</strong> <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/kin_selection/ladder/RESULTS.md">ladder</a> R5a-R8: the main test (benefit-to-cost 6) reached about 0.35 against a 0.60 endpoint (0/20 in both attempts); 4/20 at 24. Line closed at its hard stop.</td>
-        </tr>
-        <tr>
-          <td><strong>Non-offspring relatives</strong>: neighbours related through local birth (siblings, cousins and more distant kin)</td>
-          <td style={{ backgroundColor: '#D6E4F5' }}>Spread, narrowly; consistent with kin selection, not separated from network reciprocity. <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/kin_selection/ladder/RESULTS.md">ladder</a> K0: 20/20 at benefit-to-cost 12 and 24 with local settling, 0/20 at 3 and 6, 0/20 at 12 with global competitors. The original Moran engine's costly arms: 0/20.</td>
-          <td style={{ backgroundColor: '#D6E4F5' }}>Direction predicted, not spread from rare. <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/ethnocentrism/RESULTS.md">Ethnocentrism</a> §7: relatedness measured in advance predicted the direction of change in helping in 8/8 conditions far from the threshold, 6/8 near it, none reversed.</td>
-          <td style={{ backgroundColor: '#F2F2F2' }}>Not tested</td>
-          <td style={{ backgroundColor: '#F2F2F2' }}><strong>Not tested</strong></td>
-        </tr>
-        <tr>
-          <td>Juveniles in the helper's household: own young, younger siblings, grandchildren (sexual reproduction, pedigree relatedness)</td>
-          <td style={{ backgroundColor: '#F2F2F2' }}>Not tested</td>
-          <td style={{ backgroundColor: '#F2F2F2' }}>Not tested</td>
-          <td style={{ backgroundColor: '#F2F2F2' }}>Not tested</td>
-          <td style={{ backgroundColor: '#FFF3CD' }}><strong>Inconclusive</strong>, and only a partial test of this column: a separate life-history model with energy-limited births and a population size that is not fixed, but no limited renewable food supply on a grid. <a href="https://github.com/doesburg11/EvolvedCooperation/tree/main/ecological_models/nowak_mechanisms/kin_selection">Ecological kin model</a>: helping rose in 2/5 runs, but no survival floor up to 0.4 kept helper-free populations alive (<a href="https://github.com/doesburg11/EvolvedCooperation/tree/main/ecological_models/nowak_mechanisms/kin_selection/floor_control">floor_control</a>, 0/20), so spread was not separated from survival; learned care added nothing (<a href="https://github.com/doesburg11/EvolvedCooperation/tree/main/ecological_models/nowak_mechanisms/kin_selection/learning">learning</a>).</td>
-        </tr>
+        <tr><td style={{ textAlign: 'center' }}>✗</td><td style={{ textAlign: 'center' }}>✗</td><td style={{ textAlign: 'center' }}>✓</td><td style={{ textAlign: 'center' }}>✗</td><td style={{ textAlign: 'center' }}>✗</td><td style={{ textAlign: 'center' }}>✓</td><td><a href="https://github.com/doesburg11/EvolvedCooperation/tree/main/moran_models/nowak_mechanisms/kin_selection">Moran kin selection</a></td></tr>
+        <tr><td style={{ textAlign: 'center' }}>✓</td><td style={{ textAlign: 'center' }}>✗</td><td style={{ textAlign: 'center' }}>✓</td><td style={{ textAlign: 'center' }}>✗</td><td style={{ textAlign: 'center' }}>✗</td><td style={{ textAlign: 'center' }}>✓</td><td><a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/kin_selection/ladder/RESULTS.md">Ladder K0: costly help to neighbours</a></td></tr>
+        <tr><td style={{ textAlign: 'center' }}>✓</td><td style={{ textAlign: 'center' }}>✓</td><td style={{ textAlign: 'center' }}>✗</td><td style={{ textAlign: 'center' }}>✗</td><td style={{ textAlign: 'center' }}>✗</td><td style={{ textAlign: 'center' }}>✓</td><td><a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/kin_selection/ladder/RESULTS.md">Ladder K1: parental care</a></td></tr>
+        <tr><td style={{ textAlign: 'center' }}>✓</td><td style={{ textAlign: 'center' }}>✓</td><td style={{ textAlign: 'center' }}>✗</td><td style={{ textAlign: 'center' }}>✓</td><td style={{ textAlign: 'center' }}>✗</td><td style={{ textAlign: 'center' }}>✓</td><td><a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/kin_selection/ladder/RESULTS.md">Ladder R1-R4: care with energy and food</a></td></tr>
+        <tr><td style={{ textAlign: 'center' }}>✓</td><td style={{ textAlign: 'center' }}>✓</td><td style={{ textAlign: 'center' }}>✗</td><td style={{ textAlign: 'center' }}>✓</td><td style={{ textAlign: 'center' }}>✓</td><td style={{ textAlign: 'center' }}>✗</td><td><a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/kin_selection/ladder/RESULTS.md">Ladder R5a-R8: care with free space</a></td></tr>
+        <tr><td style={{ textAlign: 'center' }}>✓</td><td style={{ textAlign: 'center' }}>✗</td><td style={{ textAlign: 'center' }}>✓</td><td style={{ textAlign: 'center' }}>✗</td><td style={{ textAlign: 'center' }}>✓</td><td style={{ textAlign: 'center' }}>✗</td><td><a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/ethnocentrism/RESULTS.md">Ethnocentrism: Hamilton's-rule test</a></td></tr>
+        <tr><td style={{ textAlign: 'center' }}>✓</td><td style={{ textAlign: 'center' }}>✓</td><td style={{ textAlign: 'center' }}>✓</td><td style={{ textAlign: 'center' }}>✓</td><td style={{ textAlign: 'center' }}>✗</td><td style={{ textAlign: 'center' }}>✗</td><td><a href="https://github.com/doesburg11/EvolvedCooperation/tree/main/ecological_models/nowak_mechanisms/kin_selection">Ecological kin model</a></td></tr>
       </tbody>
     </table>
   </div>
-  <figcaption className="site-table-caption"><strong>Display 1:</strong> Kin selection, as defined above, by who receives the help and how much ecology the model has. Blue: spread (or, for ethnocentrism, the direction predicted); red: failed; yellow: inconclusive; grey: not tested. Counts are runs (seeds) reaching the endpoint set in advance, except for ethnocentrism, where they are conditions in which the predicted direction held; all results hold only at the settings tested.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 1:</strong> Kin selection experiments, by what each model contains and whether helping spread. All results hold only at the settings tested.</figcaption>
 </figure>
 
-**Note.** The goal is the right-hand column, and it is still open. In plain terms: care for one's own young works with energy, starvation and limited food, but not yet once births have to find free space; costly help to other relatives has worked only on a full grid at very high benefit-to-cost ratios, and was never carried into the ecological steps, because the ladder moved to parental care after that step. One candidate obstacle, not tested directly, is kin competition: relatives born close together also compete for the same free space, which in theory can cancel the benefit of helping them (Taylor 1992; see the ladder section below). Separately, routing help towards relatives by an inherited label (kin discrimination) made the spread faster but gave no lasting gain.
+**Note.** Kin selection is shown in three rows (ladder K0, K1 and R1-R4; for K0 the control changes local settling and relatedness together, so it is consistent with kin selection rather than proof of it), and none of them has births into free space. The goal is a row with a ✓ in every column except one of the two recipient columns; no experiment has reached it. Two ✗ rows need a word: the ethnocentrism test did not start helping rare, but relatedness measured in advance correctly predicted in which direction helping would change; in the ecological kin model, the one test of costly help to other relatives with an energy budget, helping rose in some runs, but that could not be separated from the population's survival.
+
 
 
 <div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '0.6rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>
