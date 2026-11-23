@@ -17,6 +17,75 @@ import GithubLink from '@site/src/components/GithubLink';
 <strong>Robust initiator.</strong> Of the five Nowak mechanisms, kin selection is the most biologically robust initiator of cooperation from rare. It works because offspring inherit the parent's cooperative trait and stay nearby — automatically clustering cooperators together. This spatial proximity is a trivial consequence of reproduction itself, requiring no additional biological conditions. Other mechanisms that also spread cooperation from rare (direct reciprocity with a spatial scaffold) depend on partner stability and memory that are not automatically given. The <a href="/evolved-cooperation/nowak-mechanisms#spread-vs-maintenance">Nowak Mechanisms overview</a> maps this distinction across all five mechanisms. One qualification: in the spread-from-rare runs here, a helper keeps part of its own benefit, so helping has no net direct cost (weak altruism); help with a real net cost to the helper did not spread in this model (see <a href="#later-tests-self-benefit-and-speed">Later tests</a>). In models with energy, limited food and births into free space, this robustness is narrower; see <a href="#from-the-moran-model-to-an-ecological-model">From the Moran model to an ecological model</a>.
 </div>
 
+## What Counts as Kin Selection Here
+
+**The definition used on this site.** In the broad sense used here, kin selection means: *a helping trait spreads because its benefits go to individuals related to the helper by common descent, the helper's own offspring included, even though helping costs the helper some of its own survival or reproduction.* This is deliberately broad. In standard inclusive-fitness terms, benefits to one's own offspring count as *direct* fitness and benefits to other relatives as *indirect* fitness; this site groups both under one label and always says which one a result belongs to. A result counts as kin selection here only if all three of these hold:
+
+1. **A real cost.** Counting any share of the benefit that comes back to the helper itself, helping leaves the helper with less survival or reproduction of its own than not helping. Helping that pays for itself (weak altruism, the case in the Moran runs below) does not count.
+2. **The benefit goes to relatives by descent.** The recipients are the helper's offspring or other relatives by common descent, not the helper itself and not unrelated individuals who happen to be nearby. In these models inheritance is clonal, so offspring carry the parent's helping trait apart from mutation.
+3. **Spread from rare, against a control.** Helping rises from a rare start to an endpoint set in advance, and a comparison registered in advance shows that it does not when the benefit no longer goes to relatives (or their relatedness is removed). Where that comparison changes several things at once, the result is reported as *consistent with* kin selection, not as proof that relatedness alone caused it.
+
+These are the ingredients of a test of Hamilton's rule, $rB > C$: the relatedness-weighted benefit $rB$ exceeds the helper's net cost $C$. The broad definition has two sub-cases, and every result on this site says which one it belongs to:
+
+- **Kin selection through parental care:** the recipients are the helper's own offspring.
+- **Kin selection among non-offspring relatives:** the recipients are siblings, cousins or neighbours who share descent. This is the classic indirect-fitness case at the centre of Hamilton's theory. Much of the literature (for example West, Griffin and Gardner 2007) keeps the name "kin selection" for this sub-case alone and treats care for one's own offspring as direct fitness. This site uses the broad definition.
+
+**The goal.** To establish kin selection, in this broad sense, in an **ecological setting**: individuals with energy reserves, a limited renewable food supply, death by starvation, and births that need resources and go into free space, so that population size and empty space follow resources rather than a fixed replacement rule.
+
+**Where it stands.** From the weakest notion to the full goal:
+
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+    <table className="site-table site-table--bordered">
+      <colgroup>
+        <col style={{ width: '30%' }} />
+        <col style={{ width: '18%' }} />
+        <col style={{ width: '52%' }} />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Notion</th>
+          <th>Status</th>
+          <th>Evidence and limits</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Weaker: helping with no net cost spreads where offspring stay near their parents (weak altruism)</td>
+          <td style={{ backgroundColor: '#D6E4F5' }}>Achieved; does not meet condition 1</td>
+          <td>Moran model: uniform routing spread in 20/20 runs by 3000 steps, label-biased routing faster (see <a href="#later-tests-self-benefit-and-speed">Later tests</a>); also the <a href="/evolved-cooperation/retained-benefit">Retained Benefit</a> sweep. The helper's own share covers its cost, so this is not kin selection by the definition above.</td>
+        </tr>
+        <tr>
+          <td>Weaker: measured relatedness predicts the direction of change in costly helping</td>
+          <td style={{ backgroundColor: '#D6E4F5' }}>Prediction supported in a simple lattice</td>
+          <td>One-colour ethnocentrism model (see <a href="#kin-cues-the-ethnocentrism-model">Kin cues</a>): relatedness measured in advance predicted the direction of change in the share of helpers in all 8 conditions far from the threshold and in 6 of 8 near it, with none reversed. Helping starts at about half the population, not rare; no energy or food; kin selection and network reciprocity cannot be told apart there.</td>
+        </tr>
+        <tr>
+          <td>Kin selection among non-offspring relatives, full grid</td>
+          <td style={{ backgroundColor: '#D6E4F5' }}>Consistent with it, narrowly; not ecological</td>
+          <td>Ladder, overlapping generations: costly help to neighbours spread from rare at benefit-to-cost ratios of 12 and 24 with local settling (20/20), not at 3 or 6, and failed at 12 in the global-competitor control (0/20). The control changes local settling and the pool of competitors together, so the result is consistent with kin selection through viscosity but does not separate relatedness from network reciprocity. Every site is refilled at once, with no energy or food.</td>
+        </tr>
+        <tr>
+          <td>Kin selection through parental care, partly ecological</td>
+          <td style={{ backgroundColor: '#D6E4F5' }}>Achieved under the broad definition; partly ecological</td>
+          <td>Ladder: costly care for one's own young spread from rare at a benefit-to-cost ratio of 6 (18/20; not at 1.5 or 3), against 0/20 for the same help to young neighbours, and kept spreading as survival, ages, energy, birth costs, starvation and a limited renewable food supply were added (19-20/20 at each step). The grid stayed almost full (occupancy at least 0.996) and it also spread when offspring settled anywhere on the grid, so it did not depend on relatives living close together. The control changed who receives the help as a whole (own young against young neighbours), not parentage alone.</td>
+        </tr>
+        <tr>
+          <td><strong>The goal:</strong> kin selection through parental care, fully ecological (substantial empty space)</td>
+          <td style={{ backgroundColor: '#F8D7DA' }}>Not achieved</td>
+          <td>With parents giving birth into nearby free sites, the main test (benefit-to-cost ratio 6) rose from rare to about 0.35, above the 0.09 of help to young neighbours, but stayed below the 0.60 endpoint (0/20 in both attempts); at ratio 24 one version reached it in 4/20. It reached near-maximum (20/20) under grid-wide dispersal only in the version where vacancies became rare again. The rung was closed at its agreed hard stop.</td>
+        </tr>
+        <tr>
+          <td><strong>The goal:</strong> kin selection among non-offspring relatives, ecological</td>
+          <td style={{ backgroundColor: '#F8D7DA' }}>Not achieved</td>
+          <td>Not tested on the ladder, which moved to parental care after the full-grid step. An earlier ecological model with sexual reproduction and households let helping rise in 2 of 5 runs, but could not separate that from population survival.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <figcaption className="site-table-caption"><strong>Display 1:</strong> Kin selection, as defined above, from the weakest notion to the goal. Blue: achieved at the stated level; red: not achieved. Separately, routing help towards relatives by an inherited label (kin discrimination) made the spread faster but gave no lasting gain, and nothing here showed that recognising relatives makes costly help pay.</figcaption>
+</figure>
+
 ## How It Is Implemented Here
 
 Relatedness is operationalised through **lineage labels**. Every site carries an inherited lineage identifier. The positive routing kernel assigns higher weight to same-lineage neighbors than to other-lineage neighbors:
@@ -138,7 +207,7 @@ Parent selection is restricted to the site's local neighborhood. The offspring i
 </div>
 
 </div>
-<figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> One synchronous kin-selection update from step <code>t</code> to step <code>t + 1</code>.</figcaption>
+<figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 2:</strong> One synchronous kin-selection update from step <code>t</code> to step <code>t + 1</code>.</figcaption>
 </figure>
 
 **Production**
@@ -229,7 +298,7 @@ Consider a focal site $i$ with four von Neumann neighbors, two same-lineage (A) 
     </tbody>
   </table>
 </div>
-  <figcaption className="site-table-caption"><strong>Display 2:</strong> Worked example: trait values and lineage assignments for focal site $i$ and its four von Neumann neighbors.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 3:</strong> Worked example: trait values and lineage assignments for focal site $i$ and its four von Neumann neighbors.</figcaption>
 </figure>
 
 **Production**
@@ -303,7 +372,7 @@ The lineage cluster raises fitness from 1.11 to 1.50 — a difference that compo
     </tbody>
   </table>
 </div>
-  <figcaption className="site-table-caption"><strong>Display 3:</strong> Key parameters controlling kin-selection routing weights and payoff scaling.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 4:</strong> Key parameters controlling kin-selection routing weights and payoff scaling.</figcaption>
 </figure>
 
 Hamilton's rule maps onto these parameters as $r \approx w_{\text{same}} / (w_{\text{same}} + w_{\text{other}})$, $B = $ `B_plus_scale`, $C = $ `C_scale`.
@@ -383,7 +452,7 @@ From a starting frequency of 5%, cooperation spreads to 87% on average across se
       </tbody>
     </table>
   </div>
-  <figcaption className="site-table-caption"><strong>Display 4:</strong> Proof-of-mechanism results. 5 seeds per scenario, 1000 steps. Success = mean final trait ≥ 0.60.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 5:</strong> Proof-of-mechanism results. 5 seeds per scenario, 1000 steps. Success = mean final trait ≥ 0.60.</figcaption>
 </figure>
 
 **What the ablations show.** The no-kin-bias ablation removes lineage weighting while keeping local reproduction, leaving only the spatial assortment from offspring proximity. The result — 1/5 seeds, mean 0.488 — is the baseline from local reproduction alone. Kin-biased routing raised that to 5/5 at this run length by preferentially recirculating benefit within same-lineage clusters, including back to the helper itself; later, longer tests found uniform routing also spreading (see Later tests below). The well-mixed control shows the other side: kin preference without kin proximity produced no detectable effect (0/5, mean 0.006 — identical to the no-kin-bias well-mixed control at 0.005). Kin proximity — automatically provided by local reproduction — was required in the tested controls (well-mixed 0/5 here; global-competitor replacement 1/20 in the later tests); kin-biased routing made spread faster on top of it, without being separated from the extra self-return it brings.
@@ -410,7 +479,7 @@ Both grids below start from the **same random initial state** — roughly 5% coo
 
 <figure style={{ margin: '0 0 1.25rem 0' }}>
 <KinSelectionComparison />
-<figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 5:</strong> Live kin-selection comparison. Both grids start from the same random initial state (~5% cooperators, 18 lineages, kin bias 0.8/0.2). Left: Hamilton's rule satisfied ($B/C = 5$, $rB$ &gt; $C$ — cooperation spreads). Right: Hamilton's rule violated ($B/C = 0.2$, $rB$ &lt; $C$ — cooperation collapses).</figcaption>
+<figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 6:</strong> Live kin-selection comparison. Both grids start from the same random initial state (~5% cooperators, 18 lineages, kin bias 0.8/0.2). Left: Hamilton's rule satisfied ($B/C = 5$, $rB$ &gt; $C$ — cooperation spreads). Right: Hamilton's rule violated ($B/C = 0.2$, $rB$ &lt; $C$ — cooperation collapses).</figcaption>
 </figure>
 
 ## From the Moran model to an ecological model
@@ -441,7 +510,7 @@ The results above come from the Moran model: a full grid where every site is ref
         </tr>
         <tr>
           <td>Care for own offspring, then survival, ages, energy, birth costs, starvation and limited food</td>
-          <td style={{ backgroundColor: '#D6E4F5' }}>Care for one's own young spread at every step (19-20/20 runs against 0/20 for help to young neighbours). It also spread when offspring settled anywhere on the grid, so this is the evolution of parental care, a direct benefit to the helper's own offspring, rather than kin selection among more distant relatives.</td>
+          <td style={{ backgroundColor: '#D6E4F5' }}>Care for one's own young spread at every step (19-20/20 runs against 0/20 for help to young neighbours). It also spread when offspring settled anywhere on the grid, so this site counts it as kin selection through parental care (see <a href="#what-counts-as-kin-selection-here">What counts as kin selection here</a>), not kin selection among non-offspring relatives; it did not depend on relatives living close together, and the comparison does not isolate parentage alone.</td>
         </tr>
         <tr>
           <td>Empty space</td>
@@ -450,10 +519,10 @@ The results above come from the Moran model: a full grid where every site is ref
       </tbody>
     </table>
   </div>
-  <figcaption className="site-table-caption"><strong>Display 6:</strong> The kin selection ladder, from the Moran model toward an ecological model (20 seeds per arm; success = final mean helping ≥ 0.60). Details and all numbers are in the module's <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/kin_selection/ladder/RESULTS.md">RESULTS.md</a>.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 7:</strong> The kin selection ladder, from the Moran model toward an ecological model (20 seeds per arm; success = final mean helping ≥ 0.60). Details and all numbers are in the module's <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/kin_selection/ladder/RESULTS.md">RESULTS.md</a>.</figcaption>
 </figure>
 
-**What this adds to the picture above.** Kin selection with a real cost to the helper did appear outside the simplest model, but in one step only, at the higher benefit-to-cost ratios tested (12 and 24), and only while offspring stayed near their parents. Care for one's own young was more robust across the tested variants, but in these tests it did not require offspring to stay near their parents. One late result points in an unexpected direction: once births went into free sites, care for own young spread much further when offspring dispersed across the whole grid (to near-maximum in 20/20 runs) than when they stayed local. That pattern is consistent with kin competition (relatives competing with each other for the same nearby space, which in theory can cancel the benefit of helping them; Taylor 1992), but it was not tested directly. A follow-up measurement on the same runs (diagnostic DR8, exploratory) looked at the neighbourhoods of would-be parents. With local births, about two thirds of breeding opportunities found no free neighbouring site, for strong and weak helpers alike (strong helpers were blocked only 0.6 percentage points more often), and a parent's own offspring made up about 12% of its neighbours in both groups. With grid-wide dispersal, none of the measured opportunities was blocked. So, locally, space was often short for strong and weak helpers alike, not specifically around helpers; the idea that helpers' own young fill the space around them is not supported in size. Why care spread further under grid-wide dispersal remains open.
+**What this adds to the picture above.** Kin selection among non-offspring relatives, with a real cost to the helper, did appear outside the simplest model, but in one step only, at the higher benefit-to-cost ratios tested (12 and 24), and only while offspring stayed near their parents. Kin selection through parental care was more robust across the tested variants, but in these tests it did not require offspring to stay near their parents. One late result points in an unexpected direction: once births went into free sites, care for own young spread much further when offspring dispersed across the whole grid (to near-maximum in 20/20 runs) than when they stayed local. That pattern is consistent with kin competition (relatives competing with each other for the same nearby space, which in theory can cancel the benefit of helping them; Taylor 1992), but it was not tested directly. A follow-up measurement on the same runs (diagnostic DR8, exploratory) looked at the neighbourhoods of would-be parents. With local births, about two thirds of breeding opportunities found no free neighbouring site, for strong and weak helpers alike (strong helpers were blocked only 0.6 percentage points more often), and a parent's own offspring made up about 12% of its neighbours in both groups. With grid-wide dispersal, none of the measured opportunities was blocked. So, locally, space was often short for strong and weak helpers alike, not specifically around helpers; the idea that helpers' own young fill the space around them is not supported in size. Why care spread further under grid-wide dispersal remains open.
 
 ## Kin cues: the ethnocentrism model
 
@@ -497,12 +566,12 @@ We ported the NetLogo version of the model (Wilensky 2003) to Python, checked it
         </tr>
         <tr>
           <td>Hamilton's-rule prediction: one colour, so helping is a single inherited trait; relatedness r first measured without selection at four shuffle levels, then the benefit set so that r × benefit / cost = k</td>
-          <td style={{ backgroundColor: '#D6E4F5' }}>Relatedness measured in advance predicted whether helpers became more or less common than without selection in all 8 cells far from the threshold (k = 0.5 and 2), across relatedness from 0.79 to 0.23. Near the threshold (k = 0.8 and 1.25), 6 of 8 cells went the predicted way and 2 were unclear; none went the opposite way (Display 8).</td>
+          <td style={{ backgroundColor: '#D6E4F5' }}>Relatedness measured in advance predicted whether helpers became more or less common than without selection in all 8 cells far from the threshold (k = 0.5 and 2), across relatedness from 0.79 to 0.23. Near the threshold (k = 0.8 and 1.25), 6 of 8 cells went the predicted way and 2 were unclear; none went the opposite way (Display 9).</td>
         </tr>
       </tbody>
     </table>
   </div>
-  <figcaption className="site-table-caption"><strong>Display 7:</strong> Kin cues in the ethnocentrism model (Experiment 104 settings, 30 runs per condition; 60 in the Hamilton's-rule test). Blue: the pre-registered expectation was met (for the Hamilton's-rule test, the main hypothesis; the near-threshold one was inconclusive); red: the test that the colour cue can stand in for local birth was not met. Details and all numbers are in the module's <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/ethnocentrism/RESULTS.md">RESULTS.md</a>.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 8:</strong> Kin cues in the ethnocentrism model (Experiment 104 settings, 30 runs per condition; 60 in the Hamilton's-rule test). Blue: the pre-registered expectation was met (for the Hamilton's-rule test, the main hypothesis; the near-threshold one was inconclusive); red: the test that the colour cue can stand in for local birth was not met. Details and all numbers are in the module's <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/ethnocentrism/RESULTS.md">RESULTS.md</a>.</figcaption>
 </figure>
 
 **What this adds to the picture above.** In this model, cooperation was highest when offspring stayed near their parents, so that neighbours were often related, as in the viscosity results above. With inherited colour acting as a cue of descent, help went to same-colour neighbours, who were closer kin while offspring stayed local. At full dispersal, inherited colour did not produce more cooperation than random colour: egoists of the same colour could collect help from ethnocentrics they settled next to, and cooperation fell to about 4% of meetings under both colour rules. Random colour also made same-colour meetings rarer (25% instead of 80%); bringing the average own-colour meeting share back to about 80% with still-random colour restored only part of the ethnocentric share (32% instead of 76%). Two limits apply. That third experiment matches the average meeting share, not the colour structure (one dominant colour rather than four local colour clusters), so it narrows this confound rather than removing it. The dispersal experiment changes relatedness together with how often births are blocked, how large the population grows and whom agents meet.
@@ -531,7 +600,7 @@ The last experiment asks a sharper question: not only whether helping depends on
       </tbody>
     </table>
   </div>
-  <figcaption className="site-table-caption"><strong>Display 8:</strong> Hamilton's-rule prediction test in the one-colour ethnocentrism model: share of helpers in the last 100 ticks minus the share without selection at the same relatedness (60 runs per cell). Blue: the predicted direction, with p &lt; 0.01; white: unclear. No cell went the opposite way. Details in section 7 of the module's <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/ethnocentrism/RESULTS.md">RESULTS.md</a>.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 9:</strong> Hamilton's-rule prediction test in the one-colour ethnocentrism model: share of helpers in the last 100 ticks minus the share without selection at the same relatedness (60 runs per cell). Blue: the predicted direction, with p &lt; 0.01; white: unclear. No cell went the opposite way. Details in section 7 of the module's <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/ethnocentrism/RESULTS.md">RESULTS.md</a>.</figcaption>
 </figure>
 
 Far from the threshold the prediction held at every relatedness level. Near it, it held at the two higher relatedness levels and was unclear, but not reversed, at the two lower ones. The descriptive crossing of the helper-share difference (interpolated from the four k values) lay slightly above k = 1 and rose as relatedness fell, from about 1.02 to 1.21. This supports the pre-registered quantitative benchmark: relatedness measured in advance, with the raw payoffs, predicted the direction of the late-run change in the share of helpers far from the threshold. Two limits remain. In a lattice model like this, kin selection and spatial (network) reciprocity are two descriptions of the same process, so no result here can favour one over the other. And why the crossing lies above 1 and rises with shuffling was not tested. Relatedness under selection was somewhat lower than without it, which could explain the rise; competition among relatives for empty cells is another possible, untested contributor.
@@ -542,7 +611,7 @@ Read together, the results on this page suggest that **cooperation spread most r
 
 - **Moran model.** In the tested runs, helping spread from rare when the helper kept enough of its own benefit to cover its cost (weak altruism). Help with a real net cost to the helper failed in every tested arm (0/20 runs).
 - **Costly help to neighbours.** It spread at one ladder stage only: when offspring settled locally and the benefit-to-cost ratio was 12 or 24. It did not spread at ratios of 3 or 6, or under the global-competitor control tested at 12.
-- **Care for one's own young.** It spread at every completed ladder stage, including when offspring settled anywhere on the grid; the empty-space stage was not reached. This is a benefit to the helper's own offspring, not kin selection among more distant relatives.
+- **Care for one's own young.** It spread at every completed ladder stage, including when offspring settled anywhere on the grid; the empty-space stage was not reached. By the definition used here this is kin selection through parental care, not kin selection among non-offspring relatives.
 - **Kin cues.** In the ethnocentrism model, ethnocentrics (who help only their own colour) were much more common when colour tracked shared descent: 75.5% of the population, against 12.9% with random colour. How often help was given hardly changed (77% vs 76% of meetings). These comparisons do not rule out every other difference.
 
 So, on this evidence, living among relatives went with cooperation spreading mainly where the benefit came back to the helper or its own young. These designs do not fully separate the helper's own return from the benefit to relatives or from local structure, and these are abstract models: read this as a tentative pointer, not a settled law.

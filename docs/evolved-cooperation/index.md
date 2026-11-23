@@ -229,10 +229,13 @@ controls and caveats.
   Hamilton's-rule prediction made in advance got the direction of change in helper share right in all 8
   conditions far from the threshold and in 6 of 8 close to it, with none reversed
   ([Kin cues](/evolved-cooperation/kin-selection#kin-cues-the-ethnocentrism-model)).
-- **Adding ecology did not yet give a clean kin-selection result.** In a model with sexual reproduction,
-  households and juvenile care, helping rose from rare in some runs, but the controls could not separate that from
-  population survival. A stepwise rebuild from the Moran model towards ecology found that care for one's own
-  young (parental investment) spread at every step tested, also without local settlement, and did not reach a model with substantial empty space
+- **Kin selection through parental care held with part of the ecology, not yet all of it.** By the site's
+  [broad definition](/evolved-cooperation/kin-selection#what-counts-as-kin-selection-here) (costly help to relatives by descent, offspring included), a stepwise
+  rebuild from the Moran model found what the site counts as kin selection through parental care: costly care for one's own young spread from
+  rare at every step through energy, starvation and limited food, also without local settlement, on an almost-full
+  grid. It did not reach its endpoint once births went into free space, and costly help to non-offspring relatives was
+  not carried into the ecological steps. Establishing it in a full ecological setting is the goal. An earlier model with
+  sexual reproduction and households could not separate helping from population survival
   ([From the Moran model to an ecological model](/evolved-cooperation/kin-selection#from-the-moran-model-to-an-ecological-model)).
 - **No cooperation without feedback.** Across the ecological case studies below, cooperation persists only where
   enough of the benefit it creates returns to cooperators or to copies of the cooperative rule; without that,
@@ -251,7 +254,7 @@ In these models, **cooperation spread most reliably when helping paid the helper
 That distinction matters, because "cooperation" covers two quite different things:
 
 - **Helping that pays for itself.** The helper ends up better off for helping, as with a shared hunt or feeding one's own children. Biologists call this *weak altruism*. This is what spread in the [Retained Benefit sweep](/evolved-cooperation/retained-benefit#a-pre-registered-sweep-of-the-retained-fraction) and in the [Moran kin-selection model](/evolved-cooperation/kin-selection#later-tests-self-benefit-and-speed).
-- **Genuine sacrifice.** The helper ends up worse off and only others gain. This is the hard puzzle. Explicitly costly help to neighbours spread only under a narrow set of tested conditions: relatives living right next to each other and a benefit 12 to 24 times the cost. Care for one's own young spread at every step of a stepwise move towards a more realistic ecology, but that is a different case, because the recipient is the helper's own offspring. And in the [ethnocentrism model](/evolved-cooperation/kin-selection#kin-cues-the-ethnocentrism-model), ethnocentrics (who help only their own colour) were much more common when colour tracked shared descent (75.5% of the population, against 12.9% with random colour), although how often help was given hardly changed; shuffling positions, which removed the excess relatedness among neighbours, went with helping falling from 76% to 11% of meetings. These comparisons do not rule out every other difference.
+- **Genuine sacrifice.** The helper ends up worse off and only others gain. This is the hard puzzle. Explicitly costly help to neighbours spread only under a narrow set of tested conditions: relatives living right next to each other and a benefit 12 to 24 times the cost. Costly care for one's own young spread at every completed step of a stepwise move towards a more realistic ecology; that counts as kin selection through parental care under the site's [broad definition](/evolved-cooperation/kin-selection#what-counts-as-kin-selection-here), but it is the easier case, because the recipient is the helper's own offspring. And in the [ethnocentrism model](/evolved-cooperation/kin-selection#kin-cues-the-ethnocentrism-model), ethnocentrics (who help only their own colour) were much more common when colour tracked shared descent (75.5% of the population, against 12.9% with random colour), although how often help was given hardly changed; shuffling positions, which removed the excess relatedness among neighbours, went with helping falling from 76% to 11% of meetings. These comparisons do not rule out every other difference.
 
 So, on this evidence, cooperation is easiest to establish where it reinforces itself: the helper, its offspring or close kin get the benefit back, and interaction stays local, among neighbours who are often relatives. Self-sacrificing help to others spread only under narrow conditions.
 
