@@ -50,6 +50,8 @@ One of the most thoroughly tested evolved-cooperation results so far comes from 
 
 The ecological model pages — [Cooperative Hunting](/evolved-cooperation/cooperative-hunting), [Spatial Prisoner's Dilemma](/evolved-cooperation/spatial-prisoners-dilemma), and [Retained Benefit](/evolved-cooperation/retained-benefit) — plus the foundational replication [Spatial Altruism](/evolved-cooperation/spatial-altruism), are best read as mechanism demonstrations. They show how spatial structure, ecological feedback, costs, benefits, and local interaction can change cooperative dynamics, but they are not yet the final evidential core of the human argument.
 
+One of them has since been tested directly. A pre-registered sweep of the [Retained Benefit](/evolved-cooperation/retained-benefit#a-pre-registered-sweep-of-the-retained-fraction) model varied how much of a cooperator's benefit is retained for its own lineage, at three benefit-to-cost ratios, against a neutral control with no benefit and no cost (330 swept runs plus 10 neutral runs, one-sided paired tests at p < 0.01). All four registered predictions were met. At the model's demo ratio (b/c = 3), cooperation fell below neutral without retention (0.090 against 0.190) and rose to 0.792 with full retention; at b/c = 8 it rose at every retained fraction. As registered, this is consistent with cooperation needing enough retained benefit in this model, but does not show that retention is necessary. In an exploratory look, not a registered test, where the rise started lined up descriptively with the sign of a lone helper's direct payoff (its own return minus its cost); the design does not separate that self-return from benefit to relatives. The sweep also showed that the page's earlier single demo run, whose rise stayed within neutral drift, was not evidence on its own.
+
 ## Null Results
 
 The site deliberately preserves null results because they narrow the problem.
@@ -143,6 +145,13 @@ Use these labels when moving through the site:
           <td>Costly help to neighbours spread with local settlement (b/c 12 and 24) and failed at b/c 12 under global-competitor replacement; care for own young spread at every tested ecological step (R1-R4).</td>
           <td>The care result is parental investment, not kin selection among more distant relatives; an earlier ecological model could not separate helping from population survival; the step with substantial empty space did not reach its endpoint.</td>
           <td><a href="/evolved-cooperation/kin-selection#from-the-moran-model-to-an-ecological-model">Kin Selection</a></td>
+        </tr>
+        <tr>
+          <td>Retained Benefit sweep</td>
+          <td>Confirmed (pre-registered, one model)</td>
+          <td>In this model, cooperation was associated with how much of its benefit returned to the cooperator and its lineage: at b/c = 3 it fell below neutral without retention (0.090 vs 0.190) and rose to 0.792 with full retention; at b/c = 8 it rose at every retained fraction.</td>
+          <td>One abstract lattice model; consistent with, not proof of, retention being necessary; the retained share includes the helper's own, so self-return and benefit to relatives are not separated.</td>
+          <td><a href="/evolved-cooperation/retained-benefit#a-pre-registered-sweep-of-the-retained-fraction">Retained Benefit</a></td>
         </tr>
         <tr>
           <td>Ecological evolved-cooperation models</td>
