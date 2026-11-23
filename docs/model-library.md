@@ -7,7 +7,7 @@ slug: /model-library
 
 # Model Library
 
-[Evidence So Far](/evidence-so-far) tracks how confident the site is in each result. This page is the complementary map: every simulation model on the site, organized by family, with what each one tests and a link to go read it. Use it to find a specific model rather than to judge how conclusive it is.
+[Evidence So Far](/evidence-so-far) tracks how confident the site is in each result. This page is the complementary map: every simulation model on the site, organized by family, with what each one tests and a link to go read it. Use it to find a specific model rather than to judge how conclusive it is. For what the evolved-cooperation models suggest when read together, in plain terms, see [Evolved Cooperation](/evolved-cooperation#in-plain-terms).
 
 ## How to Read This Page
 
@@ -112,7 +112,7 @@ Three case studies that embed a cooperation problem inside a spatial, ecological
         <tr>
           <td>Retained Benefit</td>
           <td>Evolution</td>
-          <td>The most abstract case study: strips away mechanism-specific structure to ask how much of the value cooperation creates has to be routed back to cooperators for it to spread.</td>
+          <td>The most abstract case study: strips away mechanism-specific structure to ask how much of the value cooperation creates has to be routed back to cooperators for it to spread. Includes a pre-registered sweep of that retained fraction against a neutral control.</td>
           <td><a href="/evolved-cooperation/retained-benefit">Retained Benefit</a></td>
         </tr>
         <tr>
