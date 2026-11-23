@@ -235,8 +235,8 @@ controls and caveats.
   rare at every step through energy, starvation and limited food, also without local settlement, on an almost-full
   grid. It did not reach its endpoint once births went into free space, and costly help to non-offspring relatives was
   not carried into the ecological steps. The goal is to establish it in a full ecological setting, with births that
-  need free space and agents that move in search of food; four of the eight steps towards it are achieved, both goal
-  rows (care for own offspring and help to other relatives) are open, and no experiment so far has agents that move.
+  need free space and agents that move in search of food; four of the nine steps towards it are achieved, both goal
+  rows (care for own offspring and help to other relatives) are open, and no experiment so far has agents that move in search of food.
   An earlier model with sexual reproduction and households could not separate helping from population survival
   ([stepwise table](/evolved-cooperation/kin-selection#what-counts-as-kin-selection-here)).
 - **No cooperation without feedback.** Across the ecological case studies below, cooperation persists only where
