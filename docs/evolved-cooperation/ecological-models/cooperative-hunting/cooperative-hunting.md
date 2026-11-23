@@ -239,6 +239,8 @@ This model belongs under evolved cooperation because it studies cooperation thro
 
 Within the site's evolved-cooperation set, Cooperative Hunting is the most ecological agent-based case study.
 
+It is not a kin-selection model by the site's [definition](/evolved-cooperation/kin-selection#what-counts-as-kin-selection-here). The kill is shared in proportion to contribution, so a high-investment predator gets a larger share back: the benefit returns to the helper itself (mutual benefit through joint hunting), and relatedness among hunters is not tracked, although offspring are placed near their parent. It does contain almost every ecological element of the kin-selection goal: an energy budget, regrowing grass as limited food, starvation, and agents that move. Births are limited by a crowding cap rather than by free space. That makes it a possible host for the open kin-selection goals, not evidence for them.
+
 <EvolvedCooperationCaseStudiesTable
 	currentCaseStudy="cooperative-hunting"
 	caption="How Cooperative Hunting fits among the site's evolved-cooperation case studies."
