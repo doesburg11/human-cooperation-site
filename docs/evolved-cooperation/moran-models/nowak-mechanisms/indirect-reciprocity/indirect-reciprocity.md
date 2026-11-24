@@ -94,6 +94,8 @@ The EvolvedCooperation repository also has an [ecological version](https://githu
 
 Its ablations located the effect in mate choice, not in routed help. With help routed at random but reputation-weighted mate choice kept, the high-helper frequency rose by 0.85; with mate choice random but reputation-gated help kept, it fell by 0.05. Under random mate choice, blending inheritance pulls the offspring of rare helpers toward the resident mean, below the reputation threshold within one generation, so the help advantage does not carry over; reputation-weighted mate choice keeps helpers pairing with helpers and preserves high-trait lineages. In this model the spread therefore runs through reputation-based assortative mating, a reproductive channel, rather than through the help-for-reputation route that defines indirect reciprocity in Nowak's sense.
 
+Measured against the site's [definition of kin selection](/evolved-cooperation/kin-selection#what-counts-as-kin-selection-here), none of these models is a kin-selection test: help is directed by reputation, not by descent, and relatedness is not measured. The ecological model's reputation-weighted mating preserves high-trait lineages, but that works through mate choice, not through help to relatives. None of them has a place in that page's stepwise table.
+
 ## Python Module Layout
 
 ```text
