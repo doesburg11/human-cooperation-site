@@ -260,7 +260,7 @@ This is why Step 2's p = 0.9 was insufficient: with a 10% dissolution probabilit
 
 The ablation tests confirm the same conclusions as in Step 3: memory is necessary (without it, cooperation collapses to ≈1.2%) and multiple rounds are necessary (one round per pair also collapses to ≈1.2%). The kin bias itself is not among the necessary conditions.
 
-Measured against the site's [definition of kin selection](/evolved-cooperation/kin-selection#what-counts-as-kin-selection-here), this scaffold is not a kin-selection test: the kin bias was not needed, and cooperation pays through reciprocation, which returns the benefit to the helper itself, rather than through benefit to relatives. It therefore has no place in that page's stepwise table.
+Measured against the site's [definition of kin selection](/evolved-cooperation/kin-selection#what-counts-as-kin-selection-here), this scaffold is not a kin-selection test: the kin bias was not needed, and the benefit is routed through reciprocal exchange rather than to relatives. It therefore has no place in that page's stepwise table.
 
 <figure className="site-table-figure">
   <div className="site-table-scroll">
