@@ -42,7 +42,7 @@ Five thin wrappers over a shared Moran-process engine, one per classical mechani
         <tr>
           <td>Kin Selection</td>
           <td>Evolution</td>
-          <td>Cooperation spreads when benefit routed to relatives, weighted by relatedness, exceeds its private cost — Hamilton's rule <code>rB &gt; C</code>. In the original model's spread-from-rare runs a helper keeps part of its own benefit, so the result is weak altruism, which the site's definition does not count as kin selection; variants with a real net cost to the helper did not spread there, but did in later steps of the Kin Selection Ladder below. The page states the site's broad definition of kin selection (offspring included) and a stepwise table of what has and has not been achieved towards kin selection in a full ecological setting.</td>
+          <td>Cooperation spreads when benefit routed to relatives, weighted by relatedness, exceeds its private cost — Hamilton's rule <code>rB &gt; C</code>. In the original model's spread-from-rare runs a helper keeps part of its own benefit, so the result is weak altruism, which the site's definition does not count as kin selection (step 1 of the stepwise table); variants with a real net cost to the helper did not spread there, but did in later steps of the Kin Selection Ladder below (step 2, costly help to neighbours; steps 3 and 4, care for own offspring). The page states the site's broad definition of kin selection (offspring included) and a stepwise table of what has and has not been achieved towards kin selection in a full ecological setting.</td>
           <td><a href="/evolved-cooperation/kin-selection">Kin Selection</a></td>
         </tr>
         <tr>
@@ -112,13 +112,13 @@ Three case studies that embed a cooperation problem inside a spatial, ecological
         <tr>
           <td>Retained Benefit</td>
           <td>Evolution</td>
-          <td>The most abstract case study: strips away mechanism-specific structure to ask how much of the value cooperation creates has to be routed back to cooperators for it to spread. Includes a pre-registered sweep of that retained fraction against a neutral control.</td>
+          <td>The most abstract case study: strips away mechanism-specific structure to ask how much of the value cooperation creates has to be routed back to cooperators for it to spread. Includes a pre-registered sweep of that retained fraction against a neutral control. By the site's kin-selection definition the sweep does not count as kin selection: it cannot separate the helper's own share from benefit to relatives (it sits with step 1 of the stepwise table).</td>
           <td><a href="/evolved-cooperation/retained-benefit">Retained Benefit</a></td>
         </tr>
         <tr>
           <td>Kin Selection Ladder</td>
           <td>Evolution</td>
-          <td>A stepwise programme that rebuilds the kin-selection Moran model towards an ecological one, adding one pre-registered ingredient at a time (overlapping generations, costly help, parental care, survival, ages, energy, limited food, empty space) and testing at each step whether helping spreads from rare under the tested settings. Movement, part of the stated goal, has not been added yet. Its steps appear in the <a href="/evolved-cooperation/kin-selection#what-counts-as-kin-selection-here">stepwise table</a> on the Kin Selection page.</td>
+          <td>A stepwise programme that rebuilds the kin-selection Moran model towards an ecological one, adding one pre-registered ingredient at a time (overlapping generations, costly help, parental care, survival, ages, energy, limited food, empty space; the empty-space step, step 5, was not achieved) and testing at each step whether helping spreads from rare under the tested settings. Movement, part of the stated goal, has not been added yet. Its steps appear in the <a href="/evolved-cooperation/kin-selection#what-counts-as-kin-selection-here">stepwise table</a> on the Kin Selection page.</td>
           <td><a href="/evolved-cooperation/kin-selection#from-the-moran-model-to-an-ecological-model">Kin Selection Ladder</a></td>
         </tr>
       </tbody>
