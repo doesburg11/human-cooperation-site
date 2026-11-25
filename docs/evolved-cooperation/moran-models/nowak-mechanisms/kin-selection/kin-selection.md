@@ -16,7 +16,7 @@ import GithubLink from '@site/src/components/GithubLink';
 
 ## What Counts as Kin Selection Here
 
-The site's definition of kin selection, its goal (kin selection in a full ecological setting) and the stepwise table of what has and has not been achieved are on their own page: **[Kin Selection: Definition and Progress](/evolved-cooperation/kin-selection-progress)**. In short: a result counts only if helping has a real net cost to the helper, the benefit goes to relatives by descent (own offspring included), and helping spreads from rare against a registered control. The Moran model on this page has a fixed population size and its spread from rare is weak altruism, so it is step 1 there, a warm-up; the kin selection ladder below supplies steps 2 to 5. That table also lists Kanwal and Gardner (2022) as an external reference row (not a step).
+The site's definition of kin selection, its goal (kin selection in a full ecological setting) and the stepwise table of what has and has not been achieved are on their own page: **[Kin Selection: Definition and Progress](/evolved-cooperation/kin-selection-progress)**. In short: a result counts only if helping has a real net cost to the helper, the benefit goes to relatives by descent (own offspring included), and helping spreads from rare against a registered control. The Moran model on this page has a fixed population size and its spread from rare is weak altruism, so it is step 1 there, a warm-up; the kin selection ladder below supplies steps 2 to 5. That table also lists two published models as reference rows (not steps): Kanwal and Gardner (2022) and Mitteldorf and Wilson (2000).
 
 
 <div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '0.6rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>
@@ -421,7 +421,7 @@ Both grids below start from the **same random initial state** — roughly 5% coo
 
 ## From the Moran model to an ecological model
 
-How far kin selection has been taken from this Moran model towards an ecological model is tracked in one place, on [Kin Selection: Definition and Progress](/evolved-cooperation/kin-selection-progress): the stepwise table, the kin selection ladder in detail ([The Ladder in Detail](/evolved-cooperation/kin-selection-progress#the-ladder-in-detail)), the earlier ecological kin-selection model, the step-5 restart and an external check against Kanwal and Gardner (2022).
+How far kin selection has been taken from this Moran model towards an ecological model is tracked in one place, on [Kin Selection: Definition and Progress](/evolved-cooperation/kin-selection-progress): the stepwise table, the kin selection ladder in detail ([The Ladder in Detail](/evolved-cooperation/kin-selection-progress#the-ladder-in-detail)), the earlier ecological kin-selection model, the step-5 restart, an external check against Kanwal and Gardner (2022), and Mitteldorf and Wilson's (2000) empty-site model in its harsh setting, where costly help survives with empty sites (a reference row, not a step).
 
 ## Kin cues: the ethnocentrism model
 
