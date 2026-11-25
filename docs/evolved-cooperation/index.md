@@ -137,7 +137,7 @@ Different model systems expose different mechanisms by which cooperative tendenc
 
 Examples on this site include:
 
-- local altruism in a spatial patch lattice ([Spatial Altruism](/evolved-cooperation/spatial-altruism)),
+- local altruism in a spatial patch lattice ([Spatial Altruism](/evolved-cooperation/spatial-altruism); in a pre-registered test against the site's kin-selection definition, costly help did not spread from rare),
 - an inherited investment in coordinated hunting ([Cooperative Hunting](/evolved-cooperation/cooperative-hunting)),
 - inherited same-versus-other response rules in local games ([Spatial Prisoner's Dilemma](/evolved-cooperation/spatial-prisoners-dilemma)),
 - a cooperation trait whose benefit is routed partly back to cooperators ([Retained Benefit](/evolved-cooperation/retained-benefit)),
@@ -235,7 +235,16 @@ controls and caveats.
   rebuild from the Moran model found what the site counts as kin selection through parental care: costly care for one's own young spread from
   rare at every step through energy, starvation and limited food (steps 3 and 4), also without local settlement, on an almost-full
   grid. It did not reach its endpoint once births went into free space (step 5), and the rebuild did not carry costly help
-  to non-offspring relatives into its ecological steps. The goal is to establish it in a full ecological setting, with births that
+  to non-offspring relatives into its ecological steps. Later attempts at the free-space step did not get there either: a
+  smaller restart of step 5 (births into free space, no energy) reached its endpoint in 4 of 20 runs; in a pre-registered
+  test of the [Mitteldorf and Wilson (2000)](/evolved-cooperation/spatial-altruism) model, costly help starting rare spread
+  in 0 of 50 runs, against 50 of 50 for help that pays for itself (at the paper's own harsher setting all-selfish
+  populations died out on their own, so it was tested at the closest setting where they persist); and a replication of
+  Taylor-Davies et al. (2024), where parents evolve to feed their young in a gridworld with movement, stopped before any
+  test because too few of the tested populations survived (4 of 24 and 3 of 24 in the two viability pilots). A
+  replication of [Kanwal and Gardner (2022)](/evolved-cooperation/kin-selection-progress#external-check-kanwal-and-gardner-2022)
+  matched the paper's published result, but with a fixed number of breeders and no control that removes relatedness it
+  is consistent with kin selection without establishing it, and it does not test the free-space step. The goal is to establish it in a full ecological setting, with births that
   need free space and agents that move in search of food; four of the nine steps towards it are achieved, both goal
   rows (care for own offspring and help to other relatives) are open, and no kin-selection experiment so far has agents that move in search of food.
   An earlier model with sexual reproduction and households could not separate helping from population survival
