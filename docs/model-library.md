@@ -118,7 +118,7 @@ Three case studies that embed a cooperation problem inside a spatial, ecological
         <tr>
           <td>Kin Selection Ladder</td>
           <td>Evolution</td>
-          <td>A stepwise programme that rebuilds the kin-selection Moran model towards an ecological one, adding one pre-registered ingredient at a time (overlapping generations, costly help, parental care, survival, ages, energy, limited food, empty space; the empty-space step, step 5, was not achieved) and testing at each step whether helping spreads from rare under the tested settings. Movement, part of the stated goal, has not been added yet. Its steps appear in the <a href="/evolved-cooperation/kin-selection-progress">stepwise table</a> on Kin Selection: Definition and Progress.</td>
+          <td>A stepwise programme that rebuilds the kin-selection Moran model towards an ecological one, adding one pre-registered ingredient at a time (overlapping generations, costly help, parental care, survival, ages, energy, limited food, empty space; the empty-space step, step 5, was not achieved on the lattice, and was later met for help to patch-mates in a ported empty-site island model) and testing at each step whether helping spreads from rare under the tested settings. Movement, part of the stated goal, has not been added yet. Its steps appear in the <a href="/evolved-cooperation/kin-selection-progress">stepwise table</a> on Kin Selection: Definition and Progress.</td>
           <td><a href="/evolved-cooperation/kin-selection-progress#the-ladder-in-detail">Kin Selection Ladder</a></td>
         </tr>
       </tbody>
