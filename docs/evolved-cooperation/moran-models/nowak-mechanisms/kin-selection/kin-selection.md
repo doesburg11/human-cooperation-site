@@ -15,7 +15,7 @@ import GithubLink from '@site/src/components/GithubLink';
 
 ## What Counts as Kin Selection Here
 
-The site's definition of kin selection, its goal (kin selection in a full ecological setting) and the stepwise table of what has and has not been achieved are on their own page: **[Kin Selection: Definition and Progress](/evolved-cooperation/kin-selection-progress)**. In short: a result counts only if helping has a real net cost to the helper, the benefit goes to relatives by descent (own offspring included), and helping spreads from rare against a registered control. The Moran model on this page has a fixed population size and its spread from rare is weak altruism, so it is step 1 there, a warm-up; the kin selection ladder below supplies steps 2 to 5.
+The site's definition of kin selection, its goal (kin selection in a full ecological setting) and the stepwise table of what has and has not been achieved are on their own page: **[Kin Selection: Definition and Progress](/evolved-cooperation/kin-selection-progress)**. In short: a result counts only if helping has a real net cost to the helper, the benefit goes to relatives by descent (own offspring included), and helping spreads from rare against a registered control. The Moran model on this page has a fixed population size and its spread from rare is weak altruism, so it is step 1 there, a warm-up; the kin selection ladder below supplies steps 2 to 5. That table also lists Kanwal and Gardner (2022) as an external reference row (not a step).
 
 
 <div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '0.6rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>
@@ -443,6 +443,10 @@ The results above come from the Moran model: a full grid where every site is ref
         <tr>
           <td>Overlapping generations, costly help to neighbours</td>
           <td style={{ backgroundColor: '#D6E4F5' }}>At benefit-to-cost ratios of 12 and 24, costly help spread in 20/20 runs when offspring settled locally (not at 3 or 6); at 12 it spread in 0/20 under the global-competitor control, where the parent for each vacancy was drawn from five random sites anywhere on the grid. This is consistent with kin selection through viscosity (relatives stay close, so help reaches relatives), but the test does not separate it from network reciprocity, which also works through helpers clustering with helpers, and the control changes several things at once.</td>
+        </tr>
+        <tr>
+          <td>External check, not a ladder stage: <a href="/evolved-cooperation/kin-selection-progress#external-check-kanwal-and-gardner-2022">Kanwal and Gardner (2022)</a>, costly help to patch-mates with density-dependent dispersal</td>
+          <td style={{ backgroundColor: '#EEEEEE' }}>The authors' own code, run unchanged on their full grid (fixed number of breeders per patch). In all 20 runs with more than one breeder per patch, the helping level settled above Taylor's (1992) cancellation value 1/<em>n</em>, and it fell with the realised dispersal rate as the paper reports (slope −0.177, paper −0.178). There is no spread from rare and no control run, so this is consistent with kin selection among non-offspring relatives rather than a test of it.</td>
         </tr>
         <tr>
           <td>Care for own offspring, then survival, ages, energy, birth costs, starvation and limited food</td>
