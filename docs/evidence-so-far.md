@@ -151,7 +151,7 @@ Use these labels when moving through the site:
         <tr>
           <td>Kanwal &amp; Gardner (2022) replication</td>
           <td>Replicated (pre-registered)</td>
-          <td>With density-dependent dispersal, costly help to patch-mates stayed above Taylor's cancellation value 1/<em>n</em> in 20/20 runs; slope on the dispersal rate −0.177 (paper −0.178).</td>
+          <td>With density-dependent dispersal, costly help to patch-mates stayed above Taylor's cancellation value 1/<em>n</em> in 20/20 runs; slope on the dispersal rate −0.177 (authors' notebook −0.178).</td>
           <td>The authors' code with a fixed number of breeders; no rare start and no control run, so only consistent with kin selection among non-offspring relatives; one run per cell.</td>
           <td><a href="/evolved-cooperation/kin-selection-progress#external-check-kanwal-and-gardner-2022">External check</a></td>
         </tr>
