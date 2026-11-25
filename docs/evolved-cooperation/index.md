@@ -141,7 +141,7 @@ Examples on this site include:
 - an inherited investment in coordinated hunting ([Cooperative Hunting](/evolved-cooperation/cooperative-hunting)),
 - inherited same-versus-other response rules in local games ([Spatial Prisoner's Dilemma](/evolved-cooperation/spatial-prisoners-dilemma)),
 - a cooperation trait whose benefit is routed partly back to cooperators ([Retained Benefit](/evolved-cooperation/retained-benefit)),
-- helping guided by an inherited cue of shared descent (the ethnocentrism model on the [Kin Selection](/evolved-cooperation/kin-selection#kin-cues-the-ethnocentrism-model) page).
+- helping guided by an inherited cue of shared descent (the ethnocentrism model on the [Kin Selection: the Moran Model](/evolved-cooperation/kin-selection#kin-cues-the-ethnocentrism-model) page).
 
 In this view, cooperation is not only a behavioral pattern but also a target of **selection on underlying traits**.
 
