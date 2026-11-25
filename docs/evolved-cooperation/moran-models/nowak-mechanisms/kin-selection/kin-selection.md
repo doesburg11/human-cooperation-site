@@ -560,6 +560,7 @@ So, on this evidence, living among relatives went with cooperation spreading mai
 
 - Hamilton, W. D. (1964). *The genetical evolution of social behaviour. I*. *Journal of Theoretical Biology*, 7(1), 1–16. https://doi.org/10.1016/0022-5193(64)90038-4
 - Hammond, R. A., and Axelrod, R. (2006). *The evolution of ethnocentrism*. *Journal of Conflict Resolution*, 50(6), 926–936. https://doi.org/10.1177/0022002706293470
+- Mitteldorf, J., and Wilson, D. S. (2000). *Population viscosity and the evolution of altruism*. *Journal of Theoretical Biology*, 204(4), 481–496. https://doi.org/10.1006/jtbi.2000.2007
 - Nowak, M. A. (2006). *Five rules for the evolution of cooperation*. *Science*, 314(5805), 1560–1563. https://doi.org/10.1126/science.1133755
 - Taylor, P. D. (1992). *Altruism in viscous populations — an inclusive fitness model*. *Evolutionary Ecology*, 6(4), 352–356. https://doi.org/10.1007/BF02270971
 - Wilensky, U. (2003). *NetLogo Ethnocentrism model*. Center for Connected Learning and Computer-Based Modeling, Northwestern University. http://ccl.northwestern.edu/netlogo/models/Ethnocentrism
