@@ -42,8 +42,8 @@ Five thin wrappers over a shared Moran-process engine, one per classical mechani
         <tr>
           <td>Kin Selection</td>
           <td>Evolution</td>
-          <td>Cooperation spreads when benefit routed to relatives, weighted by relatedness, exceeds its private cost — Hamilton's rule <code>rB &gt; C</code>. In the original model's spread-from-rare runs a helper keeps part of its own benefit, so the result is weak altruism, which the site's definition does not count as kin selection (step 1 of the stepwise table); variants with a real net cost to the helper did not spread there, but did in later steps of the Kin Selection Ladder below (step 2, costly help to neighbours; steps 3 and 4, care for own offspring). The page states the site's broad definition of kin selection (offspring included) and a stepwise table of what has and has not been achieved towards kin selection in a full ecological setting.</td>
-          <td><a href="/evolved-cooperation/kin-selection">Kin Selection</a></td>
+          <td>Cooperation spreads when benefit routed to relatives, weighted by relatedness, exceeds its private cost — Hamilton's rule <code>rB &gt; C</code>. In the original model's spread-from-rare runs a helper keeps part of its own benefit, so the result is weak altruism, which the site's definition does not count as kin selection (step 1 of the stepwise table); variants with a real net cost to the helper did not spread there, but did in later steps of the Kin Selection Ladder below (step 2, costly help to neighbours; steps 3 and 4, care for own offspring). The site's broad definition of kin selection (offspring included), the stepwise table of what has and has not been achieved towards kin selection in a full ecological setting, and the ladder in detail are on <a href="/evolved-cooperation/kin-selection-progress">Kin Selection: Definition and Progress</a>.</td>
+          <td><a href="/evolved-cooperation/kin-selection">Kin Selection: the Moran Model</a></td>
         </tr>
         <tr>
           <td>Direct Reciprocity</td>
@@ -119,7 +119,7 @@ Three case studies that embed a cooperation problem inside a spatial, ecological
           <td>Kin Selection Ladder</td>
           <td>Evolution</td>
           <td>A stepwise programme that rebuilds the kin-selection Moran model towards an ecological one, adding one pre-registered ingredient at a time (overlapping generations, costly help, parental care, survival, ages, energy, limited food, empty space; the empty-space step, step 5, was not achieved) and testing at each step whether helping spreads from rare under the tested settings. Movement, part of the stated goal, has not been added yet. Its steps appear in the <a href="/evolved-cooperation/kin-selection-progress">stepwise table</a> on the Kin Selection page.</td>
-          <td><a href="/evolved-cooperation/kin-selection#from-the-moran-model-to-an-ecological-model">Kin Selection Ladder</a></td>
+          <td><a href="/evolved-cooperation/kin-selection-progress#the-ladder-in-detail">Kin Selection Ladder</a></td>
         </tr>
       </tbody>
     </table>

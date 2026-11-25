@@ -1,6 +1,7 @@
 ---
 id: kin-selection
-title: Kin Selection
+title: "Kin Selection: the Moran Model"
+sidebar_label: "Kin Selection: the Moran Model"
 sidebar_position: 1
 slug: /evolved-cooperation/kin-selection
 ---
@@ -19,7 +20,7 @@ The site's definition of kin selection, its goal (kin selection in a full ecolog
 
 
 <div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '0.6rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>
-<strong>Robust initiator.</strong> Of the five Nowak mechanisms, kin selection is the most biologically robust initiator of cooperation from rare. It works because offspring inherit the parent's cooperative trait and stay nearby — automatically clustering cooperators together. This spatial proximity is a trivial consequence of reproduction itself, requiring no additional biological conditions. Other mechanisms that also spread cooperation from rare (direct reciprocity with a spatial scaffold) depend on partner stability and memory that are not automatically given. The <a href="/evolved-cooperation/nowak-mechanisms#spread-vs-maintenance">Nowak Mechanisms overview</a> maps this distinction across all five mechanisms. One qualification: in the spread-from-rare runs here, a helper keeps part of its own benefit, so helping has no net direct cost (weak altruism); help with a real net cost to the helper did not spread in this model (see <a href="#later-tests-self-benefit-and-speed">Later tests</a>). By this site's own <a href="/evolved-cooperation/kin-selection-progress">definition</a>, which requires a real net cost, that spread is therefore step 1 of the stepwise table, a warm-up, not kin selection itself. In models with energy, limited food and births into free space, this robustness is narrower; see <a href="#from-the-moran-model-to-an-ecological-model">From the Moran model to an ecological model</a>.
+<strong>Robust initiator.</strong> Of the five Nowak mechanisms, kin selection is the most biologically robust initiator of cooperation from rare. It works because offspring inherit the parent's cooperative trait and stay nearby — automatically clustering cooperators together. This spatial proximity is a trivial consequence of reproduction itself, requiring no additional biological conditions. Other mechanisms that also spread cooperation from rare (direct reciprocity with a spatial scaffold) depend on partner stability and memory that are not automatically given. The <a href="/evolved-cooperation/nowak-mechanisms#spread-vs-maintenance">Nowak Mechanisms overview</a> maps this distinction across all five mechanisms. One qualification: in the spread-from-rare runs here, a helper keeps part of its own benefit, so helping has no net direct cost (weak altruism); help with a real net cost to the helper did not spread in this model (see <a href="#later-tests-self-benefit-and-speed">Later tests</a>). By this site's own <a href="/evolved-cooperation/kin-selection-progress">definition</a>, which requires a real net cost, that spread is therefore step 1 of the stepwise table, a warm-up, not kin selection itself. In models with energy, limited food and births into free space, this robustness is narrower; see <a href="/evolved-cooperation/kin-selection-progress#the-ladder-in-detail">The Ladder in Detail</a> on the progress page.
 </div>
 
 ## How It Is Implemented Here
@@ -420,49 +421,7 @@ Both grids below start from the **same random initial state** — roughly 5% coo
 
 ## From the Moran model to an ecological model
 
-The results above come from the Moran model: a full grid where every site is refilled each step by a neighbour's offspring. An earlier [ecological kin-selection model](https://github.com/doesburg11/EvolvedCooperation/tree/main/ecological_models/nowak_mechanisms/kin_selection) (sexual reproduction, households, care for juveniles) let helping rise from rare in some runs (2 of 5 in its proof suite), also when relatedness cues were shuffled. But its controls did not separate that spread from population survival: populations persisted with helper care, while no tested survival floor (up to 0.4) kept populations without helpers alive. So it is not an established kin-selection result. In a follow-up, learned instead of inherited helping gave no detectable persistence benefit over a small constant care effort. A separate line of work, the [kin selection ladder](https://github.com/doesburg11/EvolvedCooperation/tree/main/ecological_models/nowak_mechanisms/kin_selection/ladder), asked whether kin selection survives as the model becomes more like a real ecology. Starting from the Moran model, it added one ingredient at a time (each pre-registered, with at most two attempts and its own control), and required helping to spread from rare at every step.
-
-<figure className="site-table-figure">
-  <div className="site-table-scroll">
-    <table className="site-table site-table--bordered">
-      <colgroup>
-        <col style={{ width: '28%' }} />
-        <col style={{ width: '72%' }} />
-      </colgroup>
-      <thead>
-        <tr>
-          <th>Stage</th>
-          <th>What happened</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Moran level, costly help</td>
-          <td>Helping spread only when the helper got part of its own benefit back. Help with a real net cost to the helper failed in every arm (0/20 runs).</td>
-        </tr>
-        <tr>
-          <td>Overlapping generations, costly help to neighbours</td>
-          <td style={{ backgroundColor: '#D6E4F5' }}>At benefit-to-cost ratios of 12 and 24, costly help spread in 20/20 runs when offspring settled locally (not at 3 or 6); at 12 it spread in 0/20 under the global-competitor control, where the parent for each vacancy was drawn from five random sites anywhere on the grid. This is consistent with kin selection through viscosity (relatives stay close, so help reaches relatives), but the test does not separate it from network reciprocity, which also works through helpers clustering with helpers, and the control changes several things at once.</td>
-        </tr>
-        <tr>
-          <td>External check, not a ladder stage: <a href="/evolved-cooperation/kin-selection-progress#external-check-kanwal-and-gardner-2022">Kanwal and Gardner (2022)</a>, costly help to patch-mates with density-dependent dispersal</td>
-          <td style={{ backgroundColor: '#EEEEEE' }}>The authors' own code, run unchanged on their full grid (fixed number of breeders per patch). In all 20 runs with more than one breeder per patch, the helping level settled above Taylor's (1992) cancellation value 1/<em>n</em>, and it fell with the realised dispersal rate as the paper reports (slope −0.177, paper −0.178). There is no spread from rare and no control run, so this is consistent with kin selection among non-offspring relatives rather than a test of it.</td>
-        </tr>
-        <tr>
-          <td>Care for own offspring, then survival, ages, energy, birth costs, starvation and limited food</td>
-          <td style={{ backgroundColor: '#D6E4F5' }}>Care for one's own young spread at every step (19-20/20 runs against 0/20 for help to young neighbours). It also spread when offspring settled anywhere on the grid, so this site counts it as kin selection through parental care (see <a href="/evolved-cooperation/kin-selection-progress">Kin Selection: Definition and Progress</a>), not kin selection among non-offspring relatives; it did not depend on relatives living close together, and the comparison does not isolate parentage alone.</td>
-        </tr>
-        <tr>
-          <td>Empty space</td>
-          <td style={{ backgroundColor: '#F8D7DA' }}>Not reached. Several attempts left the grid almost full, and one breeding-age setting could not sustain a population. When parents gave birth into nearby free sites, substantial empty space appeared in one of two versions, but care for own young then settled near a third of its maximum and the main test missed the endpoint (one higher-benefit arm reached it in 4/20 runs).</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <figcaption className="site-table-caption"><strong>Display 6:</strong> The kin selection ladder, from the Moran model toward an ecological model (20 seeds per arm; success = final mean helping ≥ 0.60). Details and all numbers are in the module's <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/kin_selection/ladder/RESULTS.md">RESULTS.md</a>.</figcaption>
-</figure>
-
-**What this adds to the picture above.** Kin selection among non-offspring relatives, with a real cost to the helper, did appear outside the simplest model, but in one step only, at the higher benefit-to-cost ratios tested (12 and 24), and only while offspring stayed near their parents. Kin selection through parental care was more robust across the tested variants, but in these tests it did not require offspring to stay near their parents. One late result points in an unexpected direction: once births went into free sites, care for own young spread much further when offspring dispersed across the whole grid (to near-maximum in 20/20 runs) than when they stayed local. That pattern is consistent with kin competition (relatives competing with each other for the same nearby space, which in theory can cancel the benefit of helping them; Taylor 1992), but it was not tested directly. A follow-up measurement on the same runs (diagnostic DR8, exploratory) looked at the neighbourhoods of would-be parents. With local births, about two thirds of breeding opportunities found no free neighbouring site, for strong and weak helpers alike (strong helpers were blocked only 0.6 percentage points more often), and a parent's own offspring made up about 12% of its neighbours in both groups. With grid-wide dispersal, none of the measured opportunities was blocked. So, locally, space was often short for strong and weak helpers alike, not specifically around helpers; the idea that helpers' own young fill the space around them is not supported in size. Why care spread further under grid-wide dispersal remains open.
+How far kin selection has been taken from this Moran model towards an ecological model is tracked in one place, on [Kin Selection: Definition and Progress](/evolved-cooperation/kin-selection-progress): the stepwise table, the kin selection ladder in detail ([The Ladder in Detail](/evolved-cooperation/kin-selection-progress#the-ladder-in-detail)), the earlier ecological kin-selection model, the step-5 restart and an external check against Kanwal and Gardner (2022).
 
 ## Kin cues: the ethnocentrism model
 
@@ -506,12 +465,12 @@ We ported the NetLogo version of the model (Wilensky 2003) to Python, checked it
         </tr>
         <tr>
           <td>Hamilton's-rule prediction: one colour, so helping is a single inherited trait; relatedness r first measured without selection at four shuffle levels, then the benefit set so that r × benefit / cost = k</td>
-          <td style={{ backgroundColor: '#D6E4F5' }}>Relatedness measured in advance predicted whether helpers became more or less common than without selection in all 8 cells far from the threshold (k = 0.5 and 2), across relatedness from 0.79 to 0.23. Near the threshold (k = 0.8 and 1.25), 6 of 8 cells went the predicted way and 2 were unclear; none went the opposite way (Display 8).</td>
+          <td style={{ backgroundColor: '#D6E4F5' }}>Relatedness measured in advance predicted whether helpers became more or less common than without selection in all 8 cells far from the threshold (k = 0.5 and 2), across relatedness from 0.79 to 0.23. Near the threshold (k = 0.8 and 1.25), 6 of 8 cells went the predicted way and 2 were unclear; none went the opposite way (Display 7).</td>
         </tr>
       </tbody>
     </table>
   </div>
-  <figcaption className="site-table-caption"><strong>Display 7:</strong> Kin cues in the ethnocentrism model (Experiment 104 settings, 30 runs per condition; 60 in the Hamilton's-rule test). Blue: the pre-registered expectation was met (for the Hamilton's-rule test, the main hypothesis; the near-threshold one was inconclusive); red: the test that the colour cue can stand in for local birth was not met. Details and all numbers are in the module's <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/ethnocentrism/RESULTS.md">RESULTS.md</a>.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 6:</strong> Kin cues in the ethnocentrism model (Experiment 104 settings, 30 runs per condition; 60 in the Hamilton's-rule test). Blue: the pre-registered expectation was met (for the Hamilton's-rule test, the main hypothesis; the near-threshold one was inconclusive); red: the test that the colour cue can stand in for local birth was not met. Details and all numbers are in the module's <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/ethnocentrism/RESULTS.md">RESULTS.md</a>.</figcaption>
 </figure>
 
 **What this adds to the picture above.** In this model, cooperation was highest when offspring stayed near their parents, so that neighbours were often related, as in the viscosity results above. With inherited colour acting as a cue of descent, help went to same-colour neighbours, who were closer kin while offspring stayed local. At full dispersal, inherited colour did not produce more cooperation than random colour: egoists of the same colour could collect help from ethnocentrics they settled next to, and cooperation fell to about 4% of meetings under both colour rules. Random colour also made same-colour meetings rarer (25% instead of 80%); bringing the average own-colour meeting share back to about 80% with still-random colour restored only part of the ethnocentric share (32% instead of 76%). Two limits apply. That third experiment matches the average meeting share, not the colour structure (one dominant colour rather than four local colour clusters), so it narrows this confound rather than removing it. The dispersal experiment changes relatedness together with how often births are blocked, how large the population grows and whom agents meet.
@@ -540,18 +499,17 @@ The last experiment asks a sharper question: not only whether helping depends on
       </tbody>
     </table>
   </div>
-  <figcaption className="site-table-caption"><strong>Display 8:</strong> Hamilton's-rule prediction test in the one-colour ethnocentrism model: share of helpers in the last 100 ticks minus the share without selection at the same relatedness (60 runs per cell). Blue: the predicted direction, with p &lt; 0.01; white: unclear. No cell went the opposite way. Details in section 7 of the module's <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/ethnocentrism/RESULTS.md">RESULTS.md</a>.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 7:</strong> Hamilton's-rule prediction test in the one-colour ethnocentrism model: share of helpers in the last 100 ticks minus the share without selection at the same relatedness (60 runs per cell). Blue: the predicted direction, with p &lt; 0.01; white: unclear. No cell went the opposite way. Details in section 7 of the module's <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/ethnocentrism/RESULTS.md">RESULTS.md</a>.</figcaption>
 </figure>
 
 Far from the threshold the prediction held at every relatedness level. Near it, it held at the two higher relatedness levels and was unclear, but not reversed, at the two lower ones. The descriptive crossing of the helper-share difference (interpolated from the four k values) lay slightly above k = 1 and rose as relatedness fell, from about 1.02 to 1.21. This supports the pre-registered quantitative benchmark: relatedness measured in advance, with the raw payoffs, predicted the direction of the late-run change in the share of helpers far from the threshold. Two limits remain. In a lattice model like this, kin selection and spatial (network) reciprocity are two descriptions of the same process, so no result here can favour one over the other. And why the crossing lies above 1 and rises with shuffling was not tested. Relatedness under selection was somewhat lower than without it, which could explain the rise; competition among relatives for empty cells is another possible, untested contributor.
 
 ## In Plain Terms
 
-Read together, the results on this page suggest that **cooperation spread most reliably when the benefit came back to the helper or to its own offspring**; costly help to other relatives spread only under narrower conditions. This fits the wider pattern described on the [Evolved Cooperation](/evolved-cooperation#in-plain-terms) page.
+Read together with the ladder results on the [progress page](/evolved-cooperation/kin-selection-progress#the-ladder-in-detail), the results suggest that **cooperation spread most reliably when the benefit came back to the helper or to its own offspring**; costly help to other relatives spread only under narrower conditions. This fits the wider pattern described on the [Evolved Cooperation](/evolved-cooperation#in-plain-terms) page.
 
 - **Moran model.** In the tested runs, helping spread from rare when the helper kept enough of its own benefit to cover its cost (weak altruism). Help with a real net cost to the helper failed in every tested arm (0/20 runs). In the [stepwise table](/evolved-cooperation/kin-selection-progress) this is step 1, a warm-up, not kin selection.
-- **Costly help to neighbours.** It spread at one ladder stage only: when offspring settled locally and the benefit-to-cost ratio was 12 or 24. It did not spread at ratios of 3 or 6, or under the global-competitor control tested at 12. This is step 2; no ecology was added to it.
-- **Care for one's own young.** It spread at every completed ladder stage, including when offspring settled anywhere on the grid; the empty-space stage was not reached. By the definition used here this is kin selection through parental care, not kin selection among non-offspring relatives: steps 3 and 4 achieved, step 5 (births into free space) not.
+- **Beyond the Moran model.** Costly help to neighbours, care for one's own young and the attempts to add free space are summarised on [Kin Selection: Definition and Progress](/evolved-cooperation/kin-selection-progress), with the ladder in detail there.
 - **Kin cues.** In the ethnocentrism model, ethnocentrics (who help only their own colour) were much more common when colour tracked shared descent: 75.5% of the population, against 12.9% with random colour. How often help was given hardly changed (77% vs 76% of meetings). These comparisons do not rule out every other difference.
 
 So, on this evidence, living among relatives went with cooperation spreading mainly where the benefit came back to the helper or its own young. These designs do not fully separate the helper's own return from the benefit to relatives or from local structure, and these are abstract models: read this as a tentative pointer, not a settled law.
