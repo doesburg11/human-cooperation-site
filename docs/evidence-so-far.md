@@ -230,3 +230,18 @@ Use these labels when moving through the site:
   </div>
   <figcaption className="site-table-caption"><strong>Display 1:</strong> Current status of the site's main evidence tracks.</figcaption>
 </figure>
+
+## References
+
+- Ackley, D. H., and Littman, M. L. (1991). *Interactions between learning and evolution*. In C. G. Langton, C. Taylor, J. D. Farmer, and S. Rasmussen (Eds.), *Artificial Life II*, 487–509. Addison-Wesley.
+- Baldwin, J. M. (1896). *A new factor in evolution*. *The American Naturalist*, 30(354), 441–451. https://doi.org/10.1086/276408
+- Boyd, R., and Richerson, P. J. (2009). *Culture and the evolution of human cooperation*. *Philosophical Transactions of the Royal Society B*, 364(1533), 3281–3288. https://doi.org/10.1098/rstb.2009.0134
+- Boyd, R., and Richerson, P. J. (2009). *Voting with your feet: payoff biased migration and the evolution of group beneficial behavior*. *Journal of Theoretical Biology*, 257(2), 331–339. https://doi.org/10.1016/j.jtbi.2008.12.007
+- Hamilton, W. D. (1964). *The genetical evolution of social behaviour. I*. *Journal of Theoretical Biology*, 7(1), 1–16. https://doi.org/10.1016/0022-5193(64)90038-4
+- Hammond, R. A., and Axelrod, R. (2006). *The evolution of ethnocentrism*. *Journal of Conflict Resolution*, 50(6), 926–936. https://doi.org/10.1177/0022002706293470
+- Hughes, E., Leibo, J. Z., Phillips, M., Tuyls, K., Dueñez-Guzmán, E., Castañeda, A. G., Dunning, I., Zhu, T., McKee, K. R., Koster, R., Roff, H., and Graepel, T. (2018). *Inequity aversion improves cooperation in intertemporal social dilemmas*. *Advances in Neural Information Processing Systems 31* (NeurIPS 2018).
+- Leibo, J. Z., Zambaldi, V., Lanctot, M., Marecki, J., and Graepel, T. (2017). *Multi-agent reinforcement learning in sequential social dilemmas*. *Proceedings of AAMAS 2017*, 464–473. arXiv:1702.03037
+- McKee, K. R., Hughes, E., Zhu, T. O., Chadwick, M. J., Koster, R., Castañeda, A. G., Beattie, C., Graepel, T., Botvinick, M., and Leibo, J. Z. (2023). *A multi-agent reinforcement learning model of reputation and cooperation in human groups*. arXiv:2103.04982
+- Mitteldorf, J., and Wilson, D. S. (2000). *Population viscosity and the evolution of altruism*. *Journal of Theoretical Biology*, 204(4), 481–496. https://doi.org/10.1006/jtbi.2000.2007
+- Nowak, M. A. (2006). *Five rules for the evolution of cooperation*. *Science*, 314(5805), 1560–1563. https://doi.org/10.1126/science.1133755
+- Wilensky, U. (2003). *NetLogo Ethnocentrism model*. Center for Connected Learning and Computer-Based Modeling, Northwestern University. http://ccl.northwestern.edu/netlogo/models/Ethnocentrism
