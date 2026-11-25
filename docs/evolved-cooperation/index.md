@@ -238,8 +238,10 @@ controls and caveats.
   to non-offspring relatives into its ecological steps. Later attempts at the free-space step did not get there either: a
   smaller restart of step 5 (births into free space, no energy) reached its endpoint in 4 of 20 runs; in a pre-registered
   test of the [Mitteldorf and Wilson (2000)](/evolved-cooperation/spatial-altruism) model, costly help starting rare spread
-  in 0 of 50 runs, against 50 of 50 for help that pays for itself (at the paper's own harsher setting all-selfish
-  populations died out on their own, so it was tested at the closest setting where they persist); and a replication of
+  in 0 of 50 runs, against 50 of 50 for help that pays for itself (at the site's harsher demo setting, outside the range the paper
+  tested, all-selfish populations died out on their own, so it was tested at the closest setting where they persist;
+  the tested benefit was below the stalemate value the paper's own table implies for that cost,
+  so the result does not contradict the paper); and a replication of
   Taylor-Davies et al. (2024), where parents evolve to feed their young in a gridworld with movement, stopped before any
   test because too few of the tested populations survived (4 of 24 and 3 of 24 in the two viability pilots). A
   replication of [Kanwal and Gardner (2022)](/evolved-cooperation/kin-selection-progress#external-check-kanwal-and-gardner-2022)
