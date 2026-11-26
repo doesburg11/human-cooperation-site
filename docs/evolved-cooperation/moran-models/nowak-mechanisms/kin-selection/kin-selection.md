@@ -504,6 +504,39 @@ The last experiment asks a sharper question: not only whether helping depends on
 
 Far from the threshold the prediction held at every relatedness level. Near it, it held at the two higher relatedness levels and was unclear, but not reversed, at the two lower ones. The descriptive crossing of the helper-share difference (interpolated from the four k values) lay slightly above k = 1 and rose as relatedness fell, from about 1.02 to 1.21. This supports the pre-registered quantitative benchmark: relatedness measured in advance, with the raw payoffs, predicted the direction of the late-run change in the share of helpers far from the threshold. Two limits remain. In a lattice model like this, kin selection and spatial (network) reciprocity are two descriptions of the same process, so no result here can favour one over the other. And why the crossing lies above 1 and rises with shuffling was not tested. Relatedness under selection was somewhat lower than without it, which could explain the rise; competition among relatives for empty cells is another possible, untested contributor.
 
+## Hamilton's rule in a minimal sibling model
+
+The models above test kin selection in lattices and ecologies, where it is hard to tell the helper's own return, the benefit to relatives and local structure apart. As a clean reference, a minimal model checks the rule itself where it is exact: costly help to siblings, with kin association built in and global competition. It follows Primer's sibling alarm-call simulation (2021), rebuilt from the video's transcript.
+
+Each generation, every puddle of `n` siblings visits a random tree; on one in four trees a predator waits. One random sibling notices it. A coward runs and survives while the other `n − 1` are eaten; an altruist sounds the alarm, saving the other `n − 1`, and is eaten itself with probability `c`. Survivors win homes by lottery and found the next generation (asexual: clones; sexual: two parents, each child copying one of them). So the benefit is `b = n − 1` saved siblings, the cost is `c`, and the relatedness by descent is `r = 1` (asexual) or `r = ½` (sexual). The expected one-generation change in the altruist allele's frequency `f` is then exactly `a·f(1 − f)·(b·r − c)/D` (`a` = attack probability, `D` = expected survivors per puddle), so its sign is the sign of `b·r − c`.
+
+A tempting shortcut uses `p`, the probability that a sibling carries the altruist allele, in place of `r`. At a 50/50 start `p = 0.75`, so the shortcut predicts spread in cells where Hamilton's rule predicts loss. The registered test (pre-registered before any code) separates the two.
+
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--striped">
+    <thead>
+      <tr><th>Reproduction, <em>n</em>, <em>c</em></th><th><em>b·r − c</em></th><th>Shortcut <em>b·p − c</em></th><th>Runs up / down (200 generations)</th><th>One-generation change: predicted / realised</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>sexual, 3, 0.80</td><td>+0.20</td><td>+0.70</td><td>40 / 0</td><td>+0.0047 / +0.0045</td></tr>
+      <tr><td>sexual, 3, 0.90</td><td>+0.10</td><td>+0.60</td><td>39 / 1</td><td>+0.0024 / +0.0022</td></tr>
+      <tr><td>sexual, 3, 1.00</td><td>0</td><td>+0.50</td><td>22 / 18</td><td>0 / +0.0000</td></tr>
+      <tr><td>sexual, 2, 0.30</td><td>+0.20</td><td>+0.45</td><td>40 / 0</td><td>+0.0068 / +0.0068</td></tr>
+      <tr><td>sexual, 2, 0.40</td><td>+0.10</td><td>+0.35</td><td>40 / 0</td><td>+0.0034 / +0.0031</td></tr>
+      <tr><td>sexual, 2, 0.50</td><td>0</td><td>+0.25</td><td>22 / 18</td><td>0 / +0.0003</td></tr>
+      <tr><td><strong>sexual, 2, 0.60</strong></td><td><strong>−0.10</strong></td><td><strong>+0.15</strong></td><td><strong>1 / 39</strong></td><td>−0.0035 / −0.0036</td></tr>
+      <tr><td><strong>sexual, 2, 0.70</strong></td><td><strong>−0.20</strong></td><td><strong>+0.05</strong></td><td><strong>0 / 40</strong></td><td>−0.0070 / −0.0066</td></tr>
+      <tr><td>asexual, 2, 0.80</td><td>+0.20</td><td>+0.20</td><td>40 / 0</td><td>+0.0070 / +0.0067</td></tr>
+      <tr><td>asexual, 2, 1.00</td><td>0</td><td>0</td><td>24 / 16</td><td>0 / +0.0003</td></tr>
+    </tbody>
+  </table>
+</div>
+<figcaption className="site-table-caption"><strong>Display 8:</strong> Hamilton's rule in the sibling alarm-call model (500 puddles, start 50/50; 40 runs of 200 generations and 4,000 one-generation runs per cell). Bold: the cells where the shortcut with <em>p</em> predicts spread and Hamilton's rule predicts loss. Every registered test held; details in the module's <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/threshold_models/kin_selection_siblings/RESULTS.md">RESULTS.md</a>.</figcaption>
+</figure>
+
+Altruism spread wherever `b·r − c` was positive, drifted without direction where it was 0, and was lost where it was negative, including the two cells where the shortcut predicts spread. The measured relatedness between an alarm-sounder and the siblings it saved was 0.500 in every sexual cell, while the share of those siblings carrying the allele was 0.75: saving copies that are not identical by descent does not change the allele's share of a capped population. The realised one-generation change matched the exact expression in every cell. This is a demonstration under the conditions where the rule is exact, with kin association built in and competition global; it says nothing about when relatives meet or compete in an ecology, which is what the ladder tests.
+
 ## In Plain Terms
 
 Read together with the ladder results on the [progress page](/evolved-cooperation/kin-selection-progress#the-ladder-in-detail), the results suggest that **cooperation spread most reliably when the benefit came back to the helper or to its own offspring**; costly help to other relatives spread only under narrower conditions. This fits the wider pattern described on the [Evolved Cooperation](/evolved-cooperation#in-plain-terms) page.
@@ -524,5 +557,6 @@ So, on this evidence, living among relatives went with cooperation spreading mai
 - Hammond, R. A., and Axelrod, R. (2006). *The evolution of ethnocentrism*. *Journal of Conflict Resolution*, 50(6), 926–936. https://doi.org/10.1177/0022002706293470
 - Mitteldorf, J., and Wilson, D. S. (2000). *Population viscosity and the evolution of altruism*. *Journal of Theoretical Biology*, 204(4), 481–496. https://doi.org/10.1006/jtbi.2000.2007
 - Nowak, M. A. (2006). *Five rules for the evolution of cooperation*. *Science*, 314(5805), 1560–1563. https://doi.org/10.1126/science.1133755
+- Primer (2021). *Simulating the evolution of sacrificing for family* [Video]. YouTube. https://www.youtube.com/watch?v=iLX_r_WPrIw
 - Taylor, P. D. (1992). *Altruism in viscous populations — an inclusive fitness model*. *Evolutionary Ecology*, 6(4), 352–356. https://doi.org/10.1007/BF02270971
 - Wilensky, U. (2003). *NetLogo Ethnocentrism model*. Center for Connected Learning and Computer-Based Modeling, Northwestern University. http://ccl.northwestern.edu/netlogo/models/Ethnocentrism
