@@ -6,7 +6,7 @@ sidebar_position: 1.6
 slug: /evolved-cooperation/indirect-reciprocity-progress
 ---
 
-<div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '0.4rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>This page states what this site counts as indirect reciprocity and tracks, rung by rung, how far a stepwise ladder has come from Nowak's threshold model towards indirect reciprocity in an ecological setting. It is built like the <a href="/evolved-cooperation/kin-selection-progress">kin-selection ladder</a>. The basic model is on the <a href="/evolved-cooperation/indirect-reciprocity">Indirect Reciprocity</a> page.</div>
+<div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '0.4rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>This page states what this site counts as indirect reciprocity and tracks, rung by rung, how far a stepwise ladder came (it ended at rung 5a on 2026-11-26) from Nowak's threshold model towards indirect reciprocity in an ecological setting. It is built like the <a href="/evolved-cooperation/kin-selection-progress">kin-selection ladder</a>. The basic model is on the <a href="/evolved-cooperation/indirect-reciprocity">Indirect Reciprocity</a> page.</div>
 
 ## Definition
 
@@ -39,9 +39,9 @@ In Nowak's simplest form indirect reciprocity is bistable: discriminators (who h
         <tr><td style={{ textAlign: 'center' }}>3b</td><td>Assessment errors (a record is set wrongly with probability 0.02)</td><td>17/20 against 0/20 (narrowly)</td><td style={{ textAlign: 'center', backgroundColor: '#D6E4F5' }}>✓</td></tr>
         <tr><td style={{ textAlign: 'center' }}>4a</td><td>Unconditional cooperators (who help everyone) alongside discriminators and defectors (who never help)</td><td>On the original setting both permitted attempts failed: 14/20 and 11/20 (16 required). After a separately agreed rebase to <em>q</em> = 0.8 (below): 100/100 against 0/100</td><td style={{ textAlign: 'center', backgroundColor: '#D6E4F5' }}>✓ (rebased)</td></tr>
         <tr><td style={{ textAlign: 'center' }}>4b</td><td>Mutation among the three strategies (rate 0.001 per offspring)</td><td>96/100 against 0/100 shuffled, both endpoints (rebased setting)</td><td style={{ textAlign: 'center', backgroundColor: '#D6E4F5' }}>✓</td></tr>
-        <tr><td style={{ textAlign: 'center' }}>5a</td><td>Private assessment (individuals keep their own views and can disagree)</td><td>Planned</td><td style={{ textAlign: 'center', backgroundColor: '#EEEEEE' }}>–</td></tr>
-        <tr><td style={{ textAlign: 'center' }}>5b</td><td>Gossip (views spread between individuals)</td><td>Planned; the last rung under the agreed hard stop</td><td style={{ textAlign: 'center', backgroundColor: '#EEEEEE' }}>–</td></tr>
-        <tr><td style={{ textAlign: 'center' }}>6-10</td><td>Overlapping generations, energy, births needing energy, limited food, starvation, births into free space, movement</td><td>Planned, beyond the agreed hard stop</td><td style={{ textAlign: 'center', backgroundColor: '#EEEEEE' }}>–</td></tr>
+        <tr><td style={{ textAlign: 'center' }}>5a</td><td>Private assessment (individuals keep their own views and can disagree)</td><td>45/100 against 0/100 shuffled; 80 needed (rebased setting)</td><td style={{ textAlign: 'center', backgroundColor: '#F8D7DA' }}>✗</td></tr>
+        <tr><td style={{ textAlign: 'center' }}>5b</td><td>Gossip (views spread between individuals)</td><td>Not built: the line ended at rung 5a, as agreed in advance</td><td style={{ textAlign: 'center', backgroundColor: '#EEEEEE' }}>–</td></tr>
+        <tr><td style={{ textAlign: 'center' }}>6-10</td><td>Overlapping generations, energy, births needing energy, limited food, starvation, births into free space, movement</td><td>Not built</td><td style={{ textAlign: 'center', backgroundColor: '#EEEEEE' }}>–</td></tr>
       </tbody>
     </table>
   </div>
@@ -101,7 +101,31 @@ With mutation, each strategy can reappear in any generation. A theory screen ([n
 
 As registered, rung 4b is **met** ([results](https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/indirect_reciprocity/ladder/RESULTS.md)): with mutation active throughout, cooperative strategies (mostly discriminators, with about 8% unconditional cooperators present in the late window) met both registered endpoints in 96 of 100 runs from a cooperative start, while the shuffled-reputation control lost every run. In each of the 4 failed runs the population fell below half cooperators once, ended with 98-99% defectors and did not recover within the run. Starting from a population of defectors only, no run reached the cooperation endpoints: this is maintenance, not recovery or spread from rare. The stochastic runs were less favourable than the noise-free screen: runs escaped to the defector-dominated state at mutation rates well below the screen's cliff (10 of 100 runs held at a rate of 0.004, where the screen predicted 90% cooperators). Image scoring, which held without mutation, mostly did not hold with it. These comparisons are descriptive, at one setting.
 
-**Next, under the agreed hard stop for the line** (2026-11-26): on the new setting the ladder may continue to rung 5a (private assessment) and then 5b (gossip) at most, each rung with a theory screen, its own agreement and at most two attempts; two failures at any rung end the line, with no further rebase.
+## Private Assessment (Rung 5a) and the End of the Line
+
+In rung 5a there is no public record: every individual keeps its own view of every other, and judges each act it observes by standing using its *own* view of the recipient. Views can then disagree: a discriminator that rightly refuses someone it sees as bad is judged bad by an observer who sees that person as good. A theory screen ([note](https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/indirect_reciprocity/ladder/rung5a/THEORY_SCREEN_RUNG5A.md)) predicted a narrow margin: cooperation lost near a mutation rate of 0.0012 instead of 0.0046 with public records, close to the ladder's fixed rate of 0.001. Under the line's agreed rule (no change of any setting), the test was run at that fixed rate.
+
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+    <table className="site-table site-table--bordered site-table--striped">
+      <thead>
+        <tr><th>Condition (100 runs, 2,000 generations, mutation 0.001)</th><th>Runs meeting both endpoints</th><th>Mean share of cooperators, generations 1,501-2,000</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Private views (the test)</strong></td><td style={{ textAlign: 'center' }}><strong>45/100</strong></td><td style={{ textAlign: 'center' }}>0.48</td></tr>
+        <tr><td><strong>Private views, reputations shuffled (the control)</strong></td><td style={{ textAlign: 'center' }}><strong>0/100</strong></td><td style={{ textAlign: 'center' }}>0.01</td></tr>
+        <tr><td>For comparison: public records (rung 4b)</td><td style={{ textAlign: 'center' }}>96/100</td><td style={{ textAlign: 'center' }}>0.95</td></tr>
+        <tr><td>Private views, start with discriminators only</td><td style={{ textAlign: 'center' }}>53/100</td><td style={{ textAlign: 'center' }}>0.61</td></tr>
+        <tr><td>Private views, mutation 0.002</td><td style={{ textAlign: 'center' }}>4/100</td><td style={{ textAlign: 'center' }}>0.08</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <figcaption className="site-table-caption"><strong>Display 4:</strong> Rung 5a on the rebased setting (<em>q</em> = 0.8), start 10% unconditional cooperators, 80% discriminators, 10% defectors unless stated. The registered bar was 80 of 100 test runs meeting both endpoints. Rung 4b's runs used other seeds, so the comparison is descriptive. In 58% of the observations of a discriminator's deliberate refusal, the observer saw the recipient as good and so judged the discriminator bad.</figcaption>
+</figure>
+
+As registered, rung 5a is **not met** ([results](https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/indirect_reciprocity/ladder/RESULTS.md)): 45 of 100 runs met both endpoints, well short of 80, while the shuffled control lost every run. In 57 runs cooperation fell below half at some point, and those runs ended with defectors in the majority. This is consistent with theory that private, disagreeing assessments undermine standing-based reputations (Hilbe et al. 2018). It does not show that indirect reciprocity cannot work with private information: other norms, gossip and other settings were not tested. The noise-free screen was again too optimistic (it predicted 93% cooperators in the late window; the runs averaged 48%).
+
+**The line ends here.** As agreed before the rebase (2026-11-26), a valid failure with no permitted change of settings ends the indirect-reciprocity line; a failed rung 5a cannot be bypassed by moving on to gossip. The ladder stands at rung 4b: reputation-guided helping maintained under partial observation, both kinds of error, unconditional cooperators and mutation, on a rebased setting, against a shuffled-reputation control, in a fixed population with no ecology. Rung 5b (gossip) and the ecological rungs were not built.
 
 ## Details and References
 
@@ -111,3 +135,4 @@ The plan, every pre-registration and all results are in the ladder's [README](ht
 - Leimar, O., and Hammerstein, P. (2001). *Evolution of cooperation through indirect reciprocity*. *Proceedings of the Royal Society B*, 268, 745–753. https://doi.org/10.1098/rspb.2000.1573
 - Panchanathan, K., and Boyd, R. (2003). *A tale of two defectors: the importance of standing for evolution of indirect reciprocity*. *Journal of Theoretical Biology*, 224, 115–126. https://doi.org/10.1016/S0022-5193(03)00154-1
 - Nowak, M. A., and Sigmund, K. (2005). *Evolution of indirect reciprocity*. *Nature*, 437, 1291–1298. https://doi.org/10.1038/nature04131
+- Hilbe, C., Schmid, L., Tkadlec, J., Chatterjee, K., and Nowak, M. A. (2018). *Indirect reciprocity with private, noisy, and incomplete information*. *PNAS*, 115(48), 12241–12246. https://doi.org/10.1073/pnas.1810565115
