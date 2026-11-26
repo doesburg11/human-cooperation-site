@@ -108,7 +108,7 @@ Key mechanisms include:
 Cooperation evolves when helping relatives increases inclusive fitness. This site uses the broad definition, with the helper's own offspring counted as relatives, and tracks progress towards it in a full ecological setting in a [stepwise table](/evolved-cooperation/kin-selection-progress).
 
 ### Direct and Indirect Reciprocity
-Cooperation can be favored when repeated interactions or reputation make future benefits likely.
+Cooperation can be favored when repeated interactions or reputation make future benefits likely. A stepwise ladder for indirect reciprocity, from Nowak's threshold model towards an ecological model, is tracked on [Indirect Reciprocity: Definition and Progress](/evolved-cooperation/indirect-reciprocity-progress).
 
 ### Spatial and Network Structure
 Limited mixing can protect cooperative clusters from exploitation.

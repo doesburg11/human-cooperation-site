@@ -149,6 +149,13 @@ Use these labels when moving through the site:
           <td><a href="/evolved-cooperation/kin-selection-progress">Kin Selection</a></td>
         </tr>
         <tr>
+          <td>Indirect-reciprocity ladder (rungs 2-4a; rung 1 is a baseline)</td>
+          <td>Met so far, at the tested settings</td>
+          <td>Rungs 2-3b met on the original setting (reputation earned by actions; partial observation; execution and assessment errors; 17-20/20 against 0/20 shuffled). Rung 4a (unconditional cooperators) failed both permitted attempts there (14/20 and 11/20), then met after a separately agreed rebase to <em>q</em> = 0.8 (100/100 against 0/100 shuffled).</td>
+          <td>Fixed population, no ecology yet; maintenance over 500 generations from a cooperative start, not spread from rare; the rebase was chosen after the two failures and applies only to the new setting.</td>
+          <td><a href="/evolved-cooperation/indirect-reciprocity-progress">Indirect Reciprocity</a></td>
+        </tr>
+        <tr>
           <td>Kanwal &amp; Gardner (2022) replication and kin test</td>
           <td>Replicated; test met (pre-registered)</td>
           <td>With density-dependent dispersal, costly help to patch-mates stayed above Taylor's cancellation value 1/<em>n</em> in 20/20 runs; slope on the dispersal rate −0.177 (authors' notebook −0.178). From no helping, it rose above 1/<em>n</em> in 10/10 runs at <em>n</em> = 2 and 5, against 0/10 with juveniles shuffled across patches.</td>
