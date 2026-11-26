@@ -421,7 +421,7 @@ Both grids below start from the **same random initial state** — roughly 5% coo
 
 ## From the Moran model to an ecological model
 
-How far kin selection has been taken from this Moran model towards an ecological model is tracked in one place, on [Kin Selection: Definition and Progress](/evolved-cooperation/kin-selection-progress): the stepwise table, the kin selection ladder in detail ([The Ladder in Detail](/evolved-cooperation/kin-selection-progress#the-ladder-in-detail)), the earlier ecological kin-selection model, the step-5 restart, an external check against Kanwal and Gardner (2022), and Mitteldorf and Wilson's (2000) empty-site model, tested against the definition on 2026-11-25 (not met: costly help did not spread from rare).
+How far kin selection has been taken from this Moran model towards an ecological model is tracked in one place, on [Kin Selection: Definition and Progress](/evolved-cooperation/kin-selection-progress): the stepwise table, the kin selection ladder in detail ([The Ladder in Detail](/evolved-cooperation/kin-selection-progress#the-ladder-in-detail)), the earlier ecological kin-selection model, the step-5 restart, an external check and test of Kanwal and Gardner (2022) (met, consistent with kin selection among non-offspring relatives, fixed population size), Mitteldorf and Wilson's (2000) empty-site model, tested against the definition on 2026-11-25 (not met: costly help did not spread from rare), and step 5 in a ported empty-site island model after Alizon and Taylor (2008), met three times (2026-11-25/26), after which the kin line paused.
 
 ## Kin cues: the ethnocentrism model
 

@@ -166,7 +166,7 @@ Use these labels when moving through the site:
           <td>Step 5 in empty-site islands (Alizon &amp; Taylor 2008 port)</td>
           <td>Met (pre-registered; consistent with)</td>
           <td>Costly help to patch-mates (benefit-to-cost 14) spread from a low-helping start to the endpoint in 20/20 runs, above the neutral reference in 19/20 seed pairs; with the gift shared among everyone, 0/20; at benefit-to-cost 3.5 (below the predicted break-even of about 7-10), helping ended below neutral in 20/20 pairs.</td>
-          <td>Own offspring not excluded (the exclusion arm reached the endpoint in 14/20, short of its bar); the control changes several things at once; islands rather than a grid; no energy, limited food or movement.</td>
+          <td>Own offspring not excluded (the exclusion arm reached the endpoint in 14/20, short of its bar; the sub-cases were separated in the two follow-ups below); the control changes several things at once; islands rather than a grid; no energy, limited food or movement.</td>
           <td><a href="/evolved-cooperation/kin-selection-progress#step-5-in-empty-site-islands-2026-11-25">Definition and Progress</a></td>
         </tr>
         <tr>
