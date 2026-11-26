@@ -164,6 +164,8 @@ The five mechanisms are often described as answers to the question "how does coo
   <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 5:</strong> Indirect reciprocity simulation evidence for the spread and maintenance claims in Display 2.</figcaption>
 </figure>
 
+**Boundary from the indirect-reciprocity ladder (2026-11-26).** The public-reputation evidence above is a maintenance result under a shared record. In a separately registered fixed-population test from a cooperative start, over 2,000 generations and on the rebased q = 0.8 setting, the ladder met both endpoints through partial observation, execution and assessment error, unconditional cooperators and mutation (rung 4b: 96/100 versus 0/100 shuffled controls). Its next, private-views rung did not meet the registered bar (45/100 against 80 required; control 0/100). Thus the ladder did not meet its private-assessment endpoint under the tested conditions. [Full ladder and protocol](/evolved-cooperation/indirect-reciprocity-progress).
+
 <figure style={{ margin: '0 0 1.5rem 0' }}>
   <div style={{ border: '1px solid #D6E4F5', overflow: 'hidden' }}>
     <div style={{ backgroundColor: '#0F3368', color: '#FFFFFF', padding: '0.5rem 1.25rem', fontWeight: 'bold' }}>Network reciprocity — simulation evidence</div>

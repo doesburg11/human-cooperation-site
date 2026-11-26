@@ -108,10 +108,16 @@ Key mechanisms include:
 Cooperation evolves when helping relatives increases inclusive fitness. This site uses the broad definition, with the helper's own offspring counted as relatives, and tracks progress towards it in a full ecological setting in a [stepwise table](/evolved-cooperation/kin-selection-progress).
 
 ### Direct and Indirect Reciprocity
-Cooperation can be favored when repeated interactions or reputation make future benefits likely. A stepwise ladder for indirect reciprocity, from Nowak's threshold model towards an ecological model, is tracked on [Indirect Reciprocity: Definition and Progress](/evolved-cooperation/indirect-reciprocity-progress).
+Cooperation can be favored when repeated interactions or reputation make future benefits likely. In a fixed population, from a cooperative start and over 2,000 generations on the rebased q = 0.8 setting, the indirect-reciprocity ladder met its public-record maintenance endpoints with partial observation, execution and assessment error, unconditional cooperators and mutation (rung 4b). Its private-view test did not meet the registered bar (45/100 against 80 required; shuffled control 0/100), so the line stops at rung 4b. A stepwise account is on [Indirect Reciprocity: Definition and Progress](/evolved-cooperation/indirect-reciprocity-progress).
 
 ### Spatial and Network Structure
 Limited mixing can protect cooperative clusters from exploitation.
+
+## What the Closed Ladders Establish
+
+Two stepwise lines now give a clearer boundary than either result alone. Costly kin-directed help can spread in fixed-population and empty-site island models, but the project has not yet shown it in a full ecology with energy, limited food, starvation and food-seeking movement. Reputation-guided helping met its maintenance endpoints in the tested public-record setting, but did not reliably meet them in the tested private-view setting. Neither line establishes a general explanation of human cooperation.
+
+The next model should therefore be a new ecological test, rather than another rung: it should include movement and resource-limited births, state in advance which feedback route is being tested, and retain a control that removes that route without changing the rest of the ecology.
 
 These mechanisms explain how cooperation can evolve without requiring centralized control.
 

@@ -54,8 +54,8 @@ Five thin wrappers over a shared Moran-process engine, one per classical mechani
         <tr>
           <td>Indirect Reciprocity</td>
           <td>Evolution</td>
-          <td>Cooperation sustained by reputation: agents help others whose public reputation signals they are good cooperators, without needing repeated encounters.</td>
-          <td><a href="/evolved-cooperation/indirect-reciprocity">Indirect Reciprocity</a></td>
+          <td>Cooperation sustained by reputation: agents help others whose public reputation signals they are good cooperators, without needing repeated encounters. In the ladder's fixed-population, cooperative-start test, public-record maintenance with mutation met its endpoint, while the tested private-view condition did not.</td>
+          <td><a href="/evolved-cooperation/indirect-reciprocity-progress">Indirect Reciprocity</a></td>
         </tr>
         <tr>
           <td>Network Reciprocity</td>
