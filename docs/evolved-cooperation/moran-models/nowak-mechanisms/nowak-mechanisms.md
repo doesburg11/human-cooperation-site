@@ -196,6 +196,34 @@ The five mechanisms are often described as answers to the question "how does coo
 
 The direct implication: demonstrating that a mechanism *maintains* cooperation is not the same as demonstrating that it *produces* cooperation. The simulation results in this section test both, and the distinction shows up clearly in every mechanism.
 
+### Threshold tests of the five conditions
+
+The models above show each mechanism at work in the shared engine, where a helper keeps part of its own benefit. A second set of models tests each condition on its own terms: one small model per mechanism, with no self-benefit, a threshold written down before the run, and a pass rule fixed in advance. Each model asks whether selection changes sign where the theory says it should. Display 8 lists the five tests and which question, spread or maintenance, each one answers.
+
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--striped site-table--bordered">
+    <colgroup>
+      <col style={{ width: '17%' }} />
+      <col style={{ width: '23%' }} />
+      <col style={{ width: '38%' }} />
+      <col style={{ width: '22%' }} />
+    </colgroup>
+    <thead>
+      <tr><th>Mechanism</th><th>Threshold tested</th><th>Simulated result</th><th>Spread or maintenance</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><a href="/evolved-cooperation/kin-selection#hamiltons-rule-in-a-minimal-sibling-model">Kin selection</a></td><td><em>br &gt; c</em>, with <em>r</em> = 0.5 for siblings</td><td><strong>Reproduced.</strong> The trait rose or fell as <em>br − c</em> predicts in 7 of 7 cells, including 2 cells where a rule using the chance that a sibling carries the allele (0.75) would predict the wrong sign.</td><td>Direction of change from 50%: neither spread from rare nor maintenance</td></tr>
+      <tr><td><a href="/evolved-cooperation/direct-reciprocity#threshold-test-of-w--cb">Direct reciprocity</a></td><td><em>w &gt; c/b</em> (finite population: <em>w</em>* = 0.336 and 0.503)</td><td><strong>Reproduced.</strong> A rare defector lost above <em>w</em>* and gained below it in all 9 cells far from the threshold, and the size of the change matched the prediction in 11 of 12 cells; a rare tit-for-tat lost in all 12 cells.</td><td>Maintenance yes; spread from rare no</td></tr>
+      <tr><td><a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/threshold_models/indirect_reciprocity_discriminators/RESULTS.md">Indirect reciprocity</a></td><td><em>q &gt; c/b</em> (finite population: <em>q</em>* = 0.336 and 0.503)</td><td><strong>Reproduced.</strong> A rare defector lost above <em>q</em>* and gained below it in all 9 cells far from the threshold, and the size of the change matched the prediction in 12 of 12 cells; a rare discriminator lost in all 12 cells.</td><td>Maintenance yes; spread from rare no</td></tr>
+      <tr><td><a href="/evolved-cooperation/network-reciprocity#threshold-model-without-self-benefit">Network reciprocity</a></td><td><em>b/c &gt; k</em> (finite population: 4.26 on a 4-neighbour graph, 9.33 on an 8-neighbour graph)</td><td><strong>Reproduced.</strong> Selection had the predicted sign in 9 of 9 far cells; the estimated thresholds, 4.23 [4.18, 4.27] and 9.35 [9.30, 9.40], match the finite-population values and exclude <em>k</em>.</td><td>Spread from rare: a single cooperator's chance to take over</td></tr>
+      <tr><td><a href="https://github.com/doesburg11/EvolvedCooperation/pull/8">Group selection</a></td><td><em>b/c &gt; 1 + n/(m − 2)</em> (Traulsen and Nowak; 1.625 for groups of 5, 2.25 for groups of 10, with 10 groups)</td><td><strong>Not reproduced, as registered.</strong> With groups of 5 the estimated threshold, 1.64 [1.61, 1.66], matches the predicted 1.625. With groups of 10 cooperators did worse than neutral in every cell, and the estimated threshold, about 7, is far above 2.25. A possible reason, not yet tested, is that selection in the larger groups was too strong for a rule derived for weak selection.</td><td>Spread from rare: a single cooperator's chance to take over</td></tr>
+    </tbody>
+  </table>
+</div>
+<figcaption className="site-table-caption"><strong>Display 8:</strong> Threshold tests of the five Nowak conditions, one minimal model per mechanism, each pre-registered and run without self-benefit. The thresholds are the finite-population versions of the conditions in Display 2. The reciprocity tests answer the maintenance question and confirm the "No" for spread in Display 2; the network and group tests measure spread from a single cooperator. Code, pre-registrations and full results: <a href="https://github.com/doesburg11/EvolvedCooperation/tree/main/threshold_models">threshold_models</a>.</figcaption>
+</figure>
+
 ## The origin of cooperation
 
 The five Nowak conditions are maintenance conditions. Of the five, only kin selection reliably spread cooperation from rare in the original proof runs (later, longer runs qualify this; see below) — but understanding *why* requires distinguishing what each mechanism needs from the biological environment in order to operate.
@@ -289,7 +317,7 @@ The five mechanisms above are implemented here as fixed evolutionary rules — b
       </tbody>
     </table>
   </div>
-  <figcaption className="site-table-caption"><strong>Display 8:</strong> Kin selection is the most nature-heavy of the five; indirect reciprocity and group selection are the most nurture/culture-heavy in humans. Direct and network reciprocity sit in between. None of the five is purely nature or purely nurture.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 9:</strong> Kin selection is the most nature-heavy of the five; indirect reciprocity and group selection are the most nurture/culture-heavy in humans. Direct and network reciprocity sit in between. None of the five is purely nature or purely nurture.</figcaption>
 </figure>
 
 A more useful division cuts across the five mechanisms rather than ranking them:
@@ -333,7 +361,7 @@ A more useful division cuts across the five mechanisms rather than ranking them:
       </tbody>
     </table>
   </div>
-  <figcaption className="site-table-caption"><strong>Display 9:</strong> Evolutionary selection does not produce a fixed rule such as "always cooperate" — too rigid, too easily exploited. Instead it favors learning systems that let humans become cooperative under the right conditions: help kin, reciprocate with reliable partners, track reputation, cluster with cooperators, follow group norms, and punish or avoid exploiters. See the [interaction between learning and selection](/learning-selection-interaction/theory) for how this site models that coupling directly.</figcaption>
+  <figcaption className="site-table-caption"><strong>Display 10:</strong> Evolutionary selection does not produce a fixed rule such as "always cooperate" — too rigid, too easily exploited. Instead it favors learning systems that let humans become cooperative under the right conditions: help kin, reciprocate with reliable partners, track reputation, cluster with cooperators, follow group norms, and punish or avoid exploiters. See the [interaction between learning and selection](/learning-selection-interaction/theory) for how this site models that coupling directly.</figcaption>
 </figure>
 
 ## References
