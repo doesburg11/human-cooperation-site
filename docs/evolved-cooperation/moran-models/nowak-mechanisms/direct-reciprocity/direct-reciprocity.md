@@ -413,6 +413,37 @@ This is worth distinguishing carefully from Nowak's Rule 4 (network reciprocity)
 This has a direct biological implication. In early human populations, small stable bands — where the same individuals interacted repeatedly over long periods — provided the partner permanence that made direct reciprocity viable as a maintenance mechanism. The bands themselves (created by geography, kinship, or social structure) were the origin mechanism. The evolution of cooperation is not the story of a single mechanism doing everything. It is the story of partner permanence enabling direct reciprocity, which then protects cooperation from invasion and maintains it indefinitely.
 
 
+## Threshold Test of w > c/b
+
+A separate minimal model checks the rule itself. Tit-for-Tat (TFT) and Always-Defect (ALLD) play the repeated donation game in a well-mixed population of 1,000: every pair meets once per generation, a cooperating player pays `c` = 1 and the partner gains `b`, and after each round another follows with probability `w`. Fitness is `1 + 0.1·(average payoff)`, and the next generation is drawn in proportion to fitness (Wright-Fisher). From the expected payoffs, a rare ALLD (1% of the population) gains ground exactly when `w` is below `w* = 1 − (b − c)(N − n − 1)/(b(N − n) + c·n)`, which is 0.336 for `b` = 3 and 0.503 for `b` = 2, within 0.003 of Nowak's `c/b`. The same payoffs say a rare TFT (1%) can spread only if `w` exceeds about 0.98. Each cell has 20,000 one-generation runs from each start.
+
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+  <table className="site-table site-table--striped">
+    <thead>
+      <tr><th><em>b</em> (<em>c/b</em>)</th><th><em>w</em></th><th>Rare ALLD: change per generation</th><th>Predicted</th><th>Rare TFT: change per generation</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>3 (0.333)</td><td>0.15</td><td>+0.00049</td><td>+0.00053</td><td>−0.00093</td></tr>
+      <tr><td>3 (0.333)</td><td>0.25</td><td>+0.00030</td><td>+0.00027</td><td>−0.00099</td></tr>
+      <tr><td>3 (0.333)</td><td>0.30</td><td>+0.00010</td><td>+0.00012</td><td>−0.00101</td></tr>
+      <tr><td>3 (0.333)</td><td>0.375</td><td>−0.00015</td><td>−0.00014</td><td>−0.00095</td></tr>
+      <tr><td>3 (0.333)</td><td>0.45</td><td>−0.00045</td><td>−0.00045</td><td>−0.00100</td></tr>
+      <tr><td>3 (0.333)</td><td>0.55</td><td>−0.00098</td><td>−0.00098</td><td>−0.00097</td></tr>
+      <tr><td>2 (0.5)</td><td>0.30</td><td>+0.00051</td><td>+0.00050</td><td>−0.00101</td></tr>
+      <tr><td>2 (0.5)</td><td>0.40</td><td>+0.00029</td><td>+0.00029</td><td>−0.00102</td></tr>
+      <tr><td>2 (0.5)</td><td>0.45</td><td>+0.00020</td><td>+0.00016</td><td>−0.00098</td></tr>
+      <tr><td>2 (0.5)</td><td>0.55</td><td>−0.00023</td><td>−0.00017</td><td>−0.00099</td></tr>
+      <tr><td>2 (0.5)</td><td>0.60</td><td>−0.00038</td><td>−0.00038</td><td>−0.00098</td></tr>
+      <tr><td>2 (0.5)</td><td>0.70</td><td>−0.00100</td><td>−0.00098</td><td>−0.00096</td></tr>
+    </tbody>
+  </table>
+</div>
+<figcaption className="site-table-caption"><strong>Display 7:</strong> TFT against ALLD in a well-mixed population of 1,000: mean one-generation change in frequency of a rare ALLD and of a rare TFT (each starting at 1%), with the expected-payoff prediction for ALLD. Details and intervals in the module's <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/threshold_models/direct_reciprocity_tft/RESULTS.md">RESULTS.md</a>.</figcaption>
+</figure>
+
+The rule held as registered. A rare ALLD rose in every cell below `w*` and fell in every cell above it, including the two cells on either side of 0.336, and the size of the change matched the prediction in 11 of 12 cells. A rare TFT lost about a tenth of its share per generation at every tested `w`: alone among defectors, it pays `c` in the first round against almost every partner and is repaid by almost none. The condition `w > c/b` is therefore a maintenance condition, as the steps above found in the richer models: once common, TFT holds; it does not get started on its own.
+
 ## References
 
 - Axelrod, R., & Hamilton, W. D. (1981). *The evolution of cooperation*. *Science*, 211(4489), 1390–1396. https://doi.org/10.1126/science.7466396
