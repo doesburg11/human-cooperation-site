@@ -136,7 +136,7 @@ Proof scenarios for the well-mixed binary model:
 
 ## See Also
 
-- [Indirect Reciprocity: Definition and Progress](/evolved-cooperation/indirect-reciprocity-progress): a stepwise ladder from Nowak's threshold model towards an ecological model, one pre-registered ingredient per rung, each against a shuffled-reputation control (the baseline rung 1 and the indirect-reciprocity rungs 2 to 3b met so far; rung 4a met only after a separately agreed rebase to a higher consultation probability, both attempts on the original setting having failed).
+- [Indirect Reciprocity: Definition and Progress](/evolved-cooperation/indirect-reciprocity-progress): a stepwise ladder from Nowak's threshold model towards an ecological model, one pre-registered ingredient per rung, each against a shuffled-reputation control (the baseline rung 1 and the indirect-reciprocity rungs 2 to 3b met so far; rung 4a met only after a separately agreed rebase to a higher consultation probability, both attempts on the original setting having failed; rung 4b, mutation, met on the rebased setting).
 - [The McKee et al. (2023) Reputation Replication](/learned-cooperation/mckee2023) — the learned, deep-reinforcement-learning analog of this same mechanism: instead of a Moran process rewarding cooperators with a better public reputation, agents get an intrinsic reward penalty for falling behind the group's contribution average. Training currently collapses before that mechanism can be tested, in a public-goods environment ([Hughes et al. 2018](/learned-cooperation/hughes2018)'s Cleanup) that has separately failed to reproduce a different reward-shaping mechanism's headline claim — see [Evidence So Far](/evidence-so-far#non-replications).
 
 ## References

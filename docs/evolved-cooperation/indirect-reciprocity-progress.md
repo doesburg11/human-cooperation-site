@@ -38,7 +38,7 @@ In Nowak's simplest form indirect reciprocity is bistable: discriminators (who h
         <tr><td style={{ textAlign: 'center' }}>3a</td><td>Execution errors (an intended help fails with probability 0.1)</td><td>19/20 against 0/20</td><td style={{ textAlign: 'center', backgroundColor: '#D6E4F5' }}>✓</td></tr>
         <tr><td style={{ textAlign: 'center' }}>3b</td><td>Assessment errors (a record is set wrongly with probability 0.02)</td><td>17/20 against 0/20 (narrowly)</td><td style={{ textAlign: 'center', backgroundColor: '#D6E4F5' }}>✓</td></tr>
         <tr><td style={{ textAlign: 'center' }}>4a</td><td>Unconditional cooperators (who help everyone) alongside discriminators and defectors (who never help)</td><td>On the original setting both permitted attempts failed: 14/20 and 11/20 (16 required). After a separately agreed rebase to <em>q</em> = 0.8 (below): 100/100 against 0/100</td><td style={{ textAlign: 'center', backgroundColor: '#D6E4F5' }}>✓ (rebased)</td></tr>
-        <tr><td style={{ textAlign: 'center' }}>4b</td><td>Mutation among the three strategies</td><td>Theory screen passed (2026-11-26); test not yet registered</td><td style={{ textAlign: 'center', backgroundColor: '#EEEEEE' }}>–</td></tr>
+        <tr><td style={{ textAlign: 'center' }}>4b</td><td>Mutation among the three strategies (rate 0.001 per offspring)</td><td>96/100 against 0/100 shuffled, both endpoints (rebased setting)</td><td style={{ textAlign: 'center', backgroundColor: '#D6E4F5' }}>✓</td></tr>
         <tr><td style={{ textAlign: 'center' }}>5a</td><td>Private assessment (individuals keep their own views and can disagree)</td><td>Planned</td><td style={{ textAlign: 'center', backgroundColor: '#EEEEEE' }}>–</td></tr>
         <tr><td style={{ textAlign: 'center' }}>5b</td><td>Gossip (views spread between individuals)</td><td>Planned; the last rung under the agreed hard stop</td><td style={{ textAlign: 'center', backgroundColor: '#EEEEEE' }}>–</td></tr>
         <tr><td style={{ textAlign: 'center' }}>6-10</td><td>Overlapping generations, energy, births needing energy, limited food, starvation, births into free space, movement</td><td>Planned, beyond the agreed hard stop</td><td style={{ textAlign: 'center', backgroundColor: '#EEEEEE' }}>–</td></tr>
@@ -75,11 +75,33 @@ The user then chose (2026-11-26) to rebase: after the two failures were known, a
 
 As registered, rung 4a is **met** on the new setting: maintenance of cooperation with unconditional cooperators present from the start, over 500 generations, against a shuffled-reputation control that missed the endpoint in every run. It is not invasion from rare, and not resistance to defectors continuously reintroduced by mutation; that is the next rung.
 
-## Next: Mutation (Rung 4b)
+## Mutation (Rung 4b)
 
-With mutation, every strategy keeps reappearing. A theory screen ([note](https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/indirect_reciprocity/ladder/rung4b/THEORY_SCREEN_RUNG4B.md)) found a sharp cliff. At a mutation rate of 0.001 per offspring, cooperators settle at about 99% of the population (unconditional cooperators about 7.5%). Near a rate of 0.0046 the cooperative state disappears and the defector-dominated state is the only stable one left. The screen reads this as the combined effect of mutation supplying unconditional cooperators, who can feed defectors, and reintroducing defectors directly; it does not separate the two. The screen also shows that a defector-dominated state is stable at low mutation, so a test can only show maintenance from a cooperative start, not recovery. The rung-4b test has not been registered yet.
+With mutation, each strategy can reappear in any generation. A theory screen ([note](https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/indirect_reciprocity/ladder/rung4b/THEORY_SCREEN_RUNG4B.md)) found a sharp cliff in the noise-free model: at a mutation rate of 0.001 per offspring, cooperators settle at about 99% of the population, and near a rate of 0.0046 the cooperative state disappears and the defector-dominated state is the only stable one left (the screen does not separate the two routes: mutation supplying unconditional cooperators, who can feed defectors, and reintroducing defectors directly). A defector-dominated state is stable even at low mutation, so the test asks about maintenance from a cooperative start, not recovery.
 
-**Agreed hard stop for the line** (2026-11-26): on the new setting the ladder may continue up to rung 5b (gossip) at most, each rung with a theory screen, its own agreement and at most two attempts; two failures at any rung end the line, with no further rebase.
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+    <table className="site-table site-table--bordered site-table--striped">
+      <thead>
+        <tr><th>Condition (100 runs, 2,000 generations)</th><th>Runs meeting both endpoints</th><th>Mean share of cooperators, generations 1,501-2,000</th><th>Noise-free screen, same window</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Mutation rate 0.001 (the test)</strong></td><td style={{ textAlign: 'center' }}><strong>96/100</strong></td><td style={{ textAlign: 'center' }}>0.95</td><td style={{ textAlign: 'center' }}>0.99</td></tr>
+        <tr><td><strong>Same, reputations shuffled (the control)</strong></td><td style={{ textAlign: 'center' }}><strong>0/100</strong></td><td style={{ textAlign: 'center' }}>0.01</td><td style={{ textAlign: 'center' }}>0.01</td></tr>
+        <tr><td>Mutation rate 0.002</td><td style={{ textAlign: 'center' }}>76/100</td><td style={{ textAlign: 'center' }}>0.76</td><td style={{ textAlign: 'center' }}>0.97</td></tr>
+        <tr><td>Mutation rate 0.004</td><td style={{ textAlign: 'center' }}>10/100</td><td style={{ textAlign: 'center' }}>0.16</td><td style={{ textAlign: 'center' }}>0.90</td></tr>
+        <tr><td>Mutation rate 0.005</td><td style={{ textAlign: 'center' }}>1/100</td><td style={{ textAlign: 'center' }}>0.08</td><td style={{ textAlign: 'center' }}>0.07</td></tr>
+        <tr><td>Start with defectors only (rate 0.001)</td><td style={{ textAlign: 'center' }}>0/100</td><td style={{ textAlign: 'center' }}>0.015</td><td style={{ textAlign: 'center' }}>0.014</td></tr>
+        <tr><td>Image scoring instead of standing, main start (rate 0.001)</td><td style={{ textAlign: 'center' }}>13/100</td><td style={{ textAlign: 'center' }}>0.19</td><td style={{ textAlign: 'center' }}>–</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <figcaption className="site-table-caption"><strong>Display 3:</strong> Rung 4b on the rebased setting (<em>q</em> = 0.8), start 10% unconditional cooperators, 80% discriminators, 10% defectors unless stated. Endpoints: cooperators at 80% or more at generation 500, and a mean share of 80% or more over generations 1,501-2,000, in the same run. Only the first two rows are the registered test; the others are reported for comparison.</figcaption>
+</figure>
+
+As registered, rung 4b is **met** ([results](https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/indirect_reciprocity/ladder/RESULTS.md)): with mutation active throughout, cooperative strategies (mostly discriminators, with about 8% unconditional cooperators present in the late window) met both registered endpoints in 96 of 100 runs from a cooperative start, while the shuffled-reputation control lost every run. In each of the 4 failed runs the population fell below half cooperators once, ended with 98-99% defectors and did not recover within the run. Starting from a population of defectors only, no run reached the cooperation endpoints: this is maintenance, not recovery or spread from rare. The stochastic runs were less favourable than the noise-free screen: runs escaped to the defector-dominated state at mutation rates well below the screen's cliff (10 of 100 runs held at a rate of 0.004, where the screen predicted 90% cooperators). Image scoring, which held without mutation, mostly did not hold with it. These comparisons are descriptive, at one setting.
+
+**Next, under the agreed hard stop for the line** (2026-11-26): on the new setting the ladder may continue to rung 5a (private assessment) and then 5b (gossip) at most, each rung with a theory screen, its own agreement and at most two attempts; two failures at any rung end the line, with no further rebase.
 
 ## Details and References
 
