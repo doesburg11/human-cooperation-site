@@ -147,6 +147,17 @@ The follow-up retained rung 5a's private views and fixed base, but placed one ta
 
 The result is **not met**: 44 passes were below the registered 80-pass bar, and the paired advantage over no gossip was only 23 wins to 16 losses (p = 0.168), below the registered +20 and p < 0.01 criterion. Gossip did beat the sham (41 wins to 8 losses; p < 0.000001), supporting the narrower conclusion that copying the right target mattered in this design. It does not show that gossip generally fails, nor does it extend the model into ecology.
 
+## External Check: the Authors' Own Gossip Model
+
+As a separate external check (not a ladder rung), the authors' own code for Kawakatsu, Kessinger and Plotkin (2024) was run unchanged, with criteria registered in advance: 100 individuals, private views, opinion-copying gossip (an individual adopts another's view of a third party), no mutation, 50 runs per setting.
+
+| Setting | Without gossip | With gossip (τ = 0.4) |
+| --- | --- | --- |
+| Stern judging, three starts predicted to reach discriminators | 0/150 runs fix discriminators | 134/150 runs fix discriminators |
+| Stern judging, all six starts | 300/300 runs fix defectors | 139/300 runs fix discriminators |
+
+The registered replication criteria were **met**: under stern judging, every run without gossip fixed defectors, while with gossip the three predicted starts fixed discriminators in 47, 43 and 44 of 50 runs. A graded dose check also held: from one mixed start, discriminators fixed in 0/50 runs at τ = 0.05 and 35/50 at τ = 0.30. Under simple standing, the bridge to rung 5a, defectors went extinct without gossip in 175 of 200 runs from the four starts predicted to lose them. Mean cooperation was 0.91–0.95 from three of those starts. Because the authors' model differs from the ladder in several ways at once (updating rule, mutation, observation rate, starts and success measure), this cannot say which difference explains the ladder's rung-5a result. Details: [RESULTS](https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/indirect_reciprocity/kawakatsu2024_gossip/RESULTS.md).
+
 ## Details and References
 
 The plan, every pre-registration and all results are in the ladder's [README](https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/indirect_reciprocity/ladder/README.md) and [RESULTS](https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/indirect_reciprocity/ladder/RESULTS.md).
@@ -156,3 +167,4 @@ The plan, every pre-registration and all results are in the ladder's [README](ht
 - Panchanathan, K., and Boyd, R. (2003). *A tale of two defectors: the importance of standing for evolution of indirect reciprocity*. *Journal of Theoretical Biology*, 224, 115–126. https://doi.org/10.1016/S0022-5193(03)00154-1
 - Nowak, M. A., and Sigmund, K. (2005). *Evolution of indirect reciprocity*. *Nature*, 437, 1291–1298. https://doi.org/10.1038/nature04131
 - Hilbe, C., Schmid, L., Tkadlec, J., Chatterjee, K., and Nowak, M. A. (2018). *Indirect reciprocity with private, noisy, and incomplete information*. *PNAS*, 115(48), 12241–12246. https://doi.org/10.1073/pnas.1810565115
+- Kawakatsu, M., Kessinger, T. A., and Plotkin, J. B. (2024). *A mechanistic model of gossip, reputations, and cooperation*. *PNAS*. Preprint: https://arxiv.org/abs/2312.10821
