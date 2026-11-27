@@ -152,10 +152,20 @@ The result is **not met**: 44 passes were below the registered 80-pass bar, and 
 
 As a separate external check (not a ladder rung), the authors' own code for Kawakatsu, Kessinger and Plotkin (2024) was run unchanged, with criteria registered in advance: 100 individuals, private views, opinion-copying gossip (an individual adopts another's view of a third party), no mutation, 50 runs per setting.
 
-| Setting | Without gossip | With gossip (τ = 0.4) |
-| --- | --- | --- |
-| Stern judging, three starts predicted to reach discriminators | 0/150 runs fix discriminators | 134/150 runs fix discriminators |
-| Stern judging, all six starts | 300/300 runs fix defectors | 139/300 runs fix discriminators |
+<figure className="site-table-figure">
+  <div className="site-table-scroll">
+    <table className="site-table site-table--bordered site-table--striped">
+      <thead>
+        <tr><th>Setting</th><th>Without gossip</th><th>With gossip (τ = 0.4)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Stern judging, three starts predicted to reach discriminators</td><td style={{ textAlign: 'center' }}>0/150 runs fix discriminators</td><td style={{ textAlign: 'center' }}><strong>134/150</strong> runs fix discriminators</td></tr>
+        <tr><td>Stern judging, all six starts</td><td style={{ textAlign: 'center' }}>300/300 runs fix defectors</td><td style={{ textAlign: 'center' }}>139/300 runs fix discriminators</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <figcaption className="site-table-caption"><strong>Display 6:</strong> External check of the authors' gossip model (Kawakatsu, Kessinger and Plotkin 2024), run unchanged: 100 individuals, private views, 50 runs per start and gossip level. Counts are runs in which the named strategy took over.</figcaption>
+</figure>
 
 The registered replication criteria were **met**: under stern judging, every run without gossip fixed defectors, while with gossip the three predicted starts fixed discriminators in 47, 43 and 44 of 50 runs. A graded dose check also held: from one mixed start, discriminators fixed in 0/50 runs at τ = 0.05 and 35/50 at τ = 0.30. Under simple standing, the bridge to rung 5a, defectors went extinct without gossip in 175 of 200 runs from the four starts predicted to lose them. Mean cooperation was 0.91–0.95 from three of those starts. Because the authors' model differs from the ladder in several ways at once (updating rule, mutation, observation rate, starts and success measure), this cannot say which difference explains the ladder's rung-5a result. Details: [RESULTS](https://github.com/doesburg11/EvolvedCooperation/blob/main/ecological_models/nowak_mechanisms/indirect_reciprocity/kawakatsu2024_gossip/RESULTS.md).
 
